@@ -12,9 +12,7 @@ a {
 
 /* main */
 .sbn-main {
-    /* width: 80vw; */
     padding-left: 0.7em;
-    margin-left: 20vw;
     min-height: calc(100vh - 8em);
 }
 
@@ -70,6 +68,9 @@ a {
         right: 0px;
         height: 4.5em;
         margin: 5px;
+    }
+    .sbn-main {
+        margin-left: 20vw;
     }
 }
 /* iPad (landscape mode) & wider */
