@@ -18,6 +18,9 @@
     color: #FFF;
     height: 20em;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .sbn-footer-psi-container {
     padding: 1em;
@@ -29,6 +32,6 @@
     width: 12em;
     background: white;
     padding: 0;
-    margin:0;
+    margin: 0 0 1em 0;
     border-radius: 10em;
 }
