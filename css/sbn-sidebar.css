@@ -5,9 +5,9 @@
 }
 .sbn-sidebar-header {
     margin: 0;
-    padding: 0.3em 0.3em;
+    padding: 0.5em 0.5em;
     color: #FF5722;
-    font-size: 1.3em;
+    /* font-size: 1.3em; */
 }
 .sbn-sidebar-header:not(:first-of-type) {
     margin: 0.5em 0 0 0;
@@ -18,7 +18,7 @@
 }
 .sbn-sidebar-li {
     list-style: none;
-    padding: 0.1em 0.3em;
+    padding: 0.3em 0.5em;
     color: #000000;
     background: rgba(255,255,255,0.5);
 }
