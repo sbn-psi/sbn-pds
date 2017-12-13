@@ -23,22 +23,35 @@ a {
 
 /* iPhone 6 & wider */
 @media (min-width: 375px) {
+    .gradient-bar {
+        width: 120px;
+    }
     .sbn-footer-text {
         font-size: 1em;
     }
-    .sbn-title {
-        font-size: 2em;
+    .sbn-subtitle {
+        font-size: 1.2em;
     }
 }
 /* iPhone 6 Plus & wider */
 @media (min-width: 414px) {
+    .gradient-bar {
+        width: 180px;
+    }
     .sbn-main {
         padding: 0 2.5em 0 2.5em;
         width: calc(100vw - 5em);
     }
+    .sbn-subtitle {
+        font-size: 1.2em;
+    }
+
 }
 /* iPad (portrait mode) & wider */
 @media (min-width: 768px) {
+    .gradient-bar {
+        width: 300px;
+    }
     .menu-clickable {
         display: none;
     }
@@ -50,6 +63,23 @@ a {
         position: absolute;
         left: 0;
         top: 5em;
+    }
+    .sbn-title {
+        font-size: 1em;
+    }
+    .sbn-subtitle {
+        font-size: 1.7em;
+    }
+    .pds-logo {
+        top: 0.5em;
+        right: 5.75em;
+        height: 4.5em;
+    }
+    .nasa-logo {
+        top: 0px;
+        right: 0px;
+        height: 4.5em;
+        margin: 5px;
     }
 }
 /* iPad (landscape mode) & wider */
