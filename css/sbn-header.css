@@ -14,14 +14,16 @@
     position: absolute;
     top: 5em;
     padding: 0 0.5em;
-    left: calc(100vw - 65%);
+    right: 0;
     background: #ededed;
-    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
+}
+.sbn-menu-handle a {
+    color: #333;
 }
 .sbn-banner {
     position: relative;
