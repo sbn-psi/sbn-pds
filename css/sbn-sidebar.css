@@ -1,12 +1,27 @@
 .sbn-sidebar {
-    padding: 0.5em;
-    display: none;
-    border-radius: 5px;
     border: 0.05em solid #BDBDBD;
-    align-self: flex-start;
-    min-width: 10em;
+    background: #BDBDBD;
+    color: white;
 }
 .sbn-sidebar-header {
     margin: 0;
+    padding: 0.3em 0.3em;
     color: #FF5722;
+    font-size: 1.3em;
+}
+.sbn-sidebar-header:not(:first-of-type) {
+    margin: 0.5em 0 0 0;
+}
+.sbn-sidebar-ul {
+    margin: 0;
+    padding: 0;
+}
+.sbn-sidebar-li {
+    list-style: none;
+    padding: 0.1em 0.3em;
+    color: #000000;
+    background: rgba(255,255,255,0.5);
+}
+.sbn-sidebar-li:not(:first-child) {
+    border-top: 0.1em solid #BDBDBD;
 }

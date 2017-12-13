@@ -1,6 +1,7 @@
 .sbn-header {
-    padding: 0 0.5em 0 0.5em;
-    width: calc(100vw - 1em);
+    /* padding: 0 0.5em 0 0.5em; */
+    padding: 0;
+    width: 100%;
     background: #616161;
     height: 5em;
     color: #FFFFFF;

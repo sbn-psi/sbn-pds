@@ -26,10 +26,8 @@ a {
 
 /* main */
 .sbn-main {
-    margin: 1em auto;
-    width: calc(100vw - 2em);
-    max-width: 1200px;
-    min-height: calc(100vh - 10.65em);
+    width: 100%;
+    min-height: calc(100vh - 8em);
     display: flex;
     flex-flow: row wrap;
 }
@@ -59,7 +57,10 @@ a {
         display: none;
     }
     .sbn-sidebar {
-        display: inline;
+        max-width: 25vw;
+        position: absolute;
+        left: 0;
+        top: 5em;
     }
 }
 /* iPad (landscape mode) & wider */
