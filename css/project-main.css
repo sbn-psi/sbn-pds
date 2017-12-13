@@ -18,9 +18,6 @@ a {
 
 /* iPhone 6 & wider */
 @media (min-width: 375px) {
-    .gradient-bar {
-        width: 120px;
-    }
     .sbn-footer-text {
         font-size: 1em;
     }
@@ -30,16 +27,10 @@ a {
 }
 /* iPhone 6 Plus & wider */
 @media (min-width: 414px) {
-    .gradient-bar {
-        width: 180px;
-    }
 
 }
 /* iPad (portrait mode) & wider */
 @media (min-width: 768px) {
-    .gradient-bar {
-        width: 300px;
-    }
     .menu-clickable {
         display: none;
     }
