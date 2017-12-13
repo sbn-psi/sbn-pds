@@ -1,0 +1,12 @@
+.sbn-sidebar {
+    padding: 0.5em;
+    display: none;
+    border-radius: 5px;
+    border: 0.05em solid #BDBDBD;
+    align-self: flex-start;
+    min-width: 10em;
+}
+.sbn-sidebar-header {
+    margin: 0;
+    color: #FF5722;
+}
