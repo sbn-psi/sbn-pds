@@ -73,7 +73,7 @@
     padding-left: 10px;
 }
 .gradient-bar {
-    width: 100px;
+    width: 40vw;
     height: 60%%;
     background: linear-gradient(to right, #333, rgba(0,0,0,0))
 }
