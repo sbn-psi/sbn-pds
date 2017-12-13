@@ -5,9 +5,6 @@ body {
 }
 a {
     text-decoration: none;
-    color: inherit;
-}
-.link {
     color: #FF5722;
     letter-spacing: 0.1em;
 }
