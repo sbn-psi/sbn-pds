@@ -15,10 +15,10 @@ a {
 
 /* main */
 .sbn-main {
-    width: 100%;
+    /* width: 80vw; */
+    padding-left: 0.7em;
+    margin-left: 20vw;
     min-height: calc(100vh - 8em);
-    display: flex;
-    flex-flow: row wrap;
 }
 
 /* iPhone 6 & wider */
@@ -52,7 +52,7 @@ a {
         display: none;
     }
     .sbn-sidebar {
-        max-width: 25vw;
+        width: 20vw;
         position: absolute;
         left: 0;
         top: 5em;
