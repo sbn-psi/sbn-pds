@@ -1,13 +1,12 @@
 .sbn-sidebar {
     border: 0.05em solid #BDBDBD;
-    background: #BDBDBD;
+    background: #D5D5D5;
     color: white;
 }
 .sbn-sidebar-header {
     margin: 0;
     padding: 0.5em 0.5em;
     color: #FF5722;
-    /* font-size: 1.3em; */
 }
 .sbn-sidebar-header:not(:first-of-type) {
     margin: 0.5em 0 0 0;
@@ -20,7 +19,7 @@
     list-style: none;
     padding: 0.3em 0.5em;
     color: #000000;
-    background: rgba(255,255,255,0.5);
+    background: #EDEDED;
 }
 .sbn-sidebar-li:not(:first-child) {
     border-top: 0.1em solid #BDBDBD;
