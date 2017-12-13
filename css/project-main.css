@@ -32,10 +32,7 @@ a {
 }
 /* iPhone 6 Plus & wider */
 @media (min-width: 414px) {
-    .sbn-main {
-        padding: 0 2.5em 0 2.5em;
-        width: calc(100vw - 5em);
-    }
+
 }
 /* iPad (portrait mode) & wider */
 @media (min-width: 768px) {
