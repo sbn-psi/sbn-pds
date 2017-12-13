@@ -35,6 +35,9 @@ a {
 }
 /* iPhone 6 Plus & wider */
 @media (min-width: 414px) {
+    .gradient-bar {
+        width: 180px;
+    }
 
 }
 /* iPad (portrait mode) & wider */
