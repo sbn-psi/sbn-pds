@@ -1,14 +1,16 @@
 .sbn-header {
     width: 100%;
-    background: #ededed;
+    background-color: #000;
     height: 5em;
-    color: #333;
+    color: #ededed;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
-    position: relative;
-    border-bottom: 1px solid #dadada;
+    align-items: center;
     box-shadow: 0 1px 2px #dadada;
+    background-image: url("../images/eros-narrow.jpg");
+    background-repeat: no-repeat;
+    background-position-x: 25vw;
+    background-position-y: -40px;
 }
 .sbn-menu-handle {
     position: absolute;
@@ -28,21 +30,14 @@
 .sbn-banner {
     position: relative;
 }
-.pds-logo {
-    position: absolute;
-    top: 1.25em;
-    right: 4em;
-    height: 3em;
-}
 .nasa-logo {
-    position: absolute;
-    top: 0.75em;
-    right: 0px;
     height: 3em;
-    margin: 5px;
+    background-color: #000;
 }
 .sbn-title-container {
-
+    background-color: #000;   
+    height: 100%;     
+    padding-left: 1em;
 }
 .sbn-title {
     height: 40%;
@@ -50,34 +45,21 @@
     font-size: 0.8em;
 }
 .sbn-title span {
-    padding-left: 10px;
     align-self: flex-end;
-}
-
-.bar {
-    display: flex;
-    flex-direction: row;
-    height: 60%;
 }
 .sbn-subtitle {
     margin: 0;
     padding: 0;
     font-size: 0.9em;
-    background-color: #333;
-    color: #ededed;
-
 }
 .sbn-subtitle:hover {
     cursor: pointer;
     color: #FF5722;
 }
-.sbn-subtitle span {
-    padding-left: 10px;
-}
 .gradient-bar {
-    width: 40vw;
-    height: 60%%;
-    background: linear-gradient(to right, #333, rgba(0,0,0,0))
+    width: 20vw;
+    height: 100%;
+    background: linear-gradient(to right, #000, rgba(0,0,0,0))
 }
 .menu-container {
     display: flex;
