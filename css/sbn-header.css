@@ -18,14 +18,15 @@
     padding: 0 0.5em;
     right: 0;
     background: #ededed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
 }
 .sbn-menu-handle a {
     color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .sbn-banner {
     position: relative;
