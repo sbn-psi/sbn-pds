@@ -3,7 +3,7 @@ body {
     padding: 0;
     font-family: 'Noto Sans', sans-serif;
 }
-a {
+a:not(.ignore-a-styling) {
     text-decoration: none;
     color: #FF5722;
     letter-spacing: 0.1em;
@@ -49,16 +49,8 @@ a {
     .sbn-subtitle {
         font-size: 1.7em;
     }
-    .pds-logo {
-        top: 0.5em;
-        right: 5.75em;
-        height: 4.5em;
-    }
     .nasa-logo {
-        top: 0px;
-        right: 0px;
         height: 4.5em;
-        margin: 5px;
     }
     .sbn-main {
         margin-left: 20vw;

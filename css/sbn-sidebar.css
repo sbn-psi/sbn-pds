@@ -17,6 +17,8 @@
     padding: 0;
 }
 .sbn-sidebar-li {
+    display: block;
+    text-decoration: none;
     list-style: none;
     padding: 0.6em 0.6em;
     color: #000000;

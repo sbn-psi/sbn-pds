@@ -28,9 +28,6 @@
     justify-content: center;
     align-items: center;
 }
-.sbn-banner {
-    position: relative;
-}
 .nasa-logo {
     height: 3em;
     background-color: #000;
@@ -45,16 +42,22 @@
     display: flex;
     font-size: 0.8em;
 }
-.sbn-title span {
+.sbn-title a {
     align-self: flex-end;
+    text-decoration: none;
+    color: #ededed;
+}
+.sbn-title a:hover {
+    color: #FF5722;
 }
 .sbn-subtitle {
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    color: #ededed;
     font-size: 0.9em;
 }
 .sbn-subtitle:hover {
-    cursor: pointer;
     color: #FF5722;
 }
 .gradient-bar {
