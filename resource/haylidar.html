@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>
+        Hayabusa LIDAR
+    </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/sbn-header.css">
+    <link rel="stylesheet" href="/css/sbn-sidebar.css">
+    <link rel="stylesheet" href="/css/sbn-footer.css">
+    <link rel="stylesheet" href="/css/project-main.css">
+</head>
+<body>
+
+    <div include-html="/sbn-header.html"></div> 
+
+    <!-- BEGIN main content -->
+    <main class="sbn-main">
+            <center>
+                    <h1> Hayabusa LIDAR </h1>
+                    </center>
+                    
+                    <h3>
+                    <p>
+                    The HAYABUSA spacecraft included a LIght
+                            Detection and Ranging  (LIDAR) altimeter. The primary objective of    
+                            LIDAR was to establish the range between the HAYABUSA spacecraft and  
+                            the asteroid Itokawa for navigation purposes during the surveying and 
+                            collection phases of the mission. It provided excellent estimates of  
+                            the location of the spacecraft relative to the asteroid.  The         
+                            Experiment Data Record (EDR) and Calibrated Data Record (CDR) from the
+                            Hayabusa LIDAR experiment are included in this data set. This updated 
+                            version of the HAYABUSA LIDAR data includes a new CDR where the       
+                            offsets between a high resolution shape model and the LIDAR data were 
+                            minimized by optmizing the spacecraft trajectory.
+                    </h3>
+                    
+                    <table border=1>
+                    <tr><td width=500>HAY-A-LIDAR-3-HAYLIDAR-V2.0
+                        <td width=100> <a href="http://sbn.psi.edu/pds/asteroid/HAY_A_LIDAR_3_HAYLIDAR_V2_0"> Browse </a>
+                        <td width=200> <a href="http://sbn.psi.edu/pds/asteroid/HAY_A_LIDAR_3_HAYLIDAR_V2_0.zip"> Download (284 Mb) </a>
+                    </table>
+                    
+                    <p>
+                    Use the following citation to reference this data set:
+                    
+                    <p>
+                    "Mukai, T., Abe, S., Barnouin, O., Cheng,
+                            A., and Kahn, E., Hayabusa LIDAR V2.0. HAY-A-LIDAR-3-HAYLIDAR-V2.0.   
+                            NASA Planetary Data System, 2012."
+                    
+                    <br><br>
+                    <hr>
+                    
+                    <h3> <font color=red> Superseded </font> versions of this data set: </h3>
+                    <table border=1>
+                    <tr><td width=500>HAY-A-LIDAR-3-HAYLIDAR-V1.0
+                        <td width=100> <a href="http://sbn.psi.edu/pds/asteroid/HAY_A_LIDAR_3_HAYLIDAR_V1_0"> Browse </a>
+                        <td width=200> <a href="http://sbn.psi.edu/pds/asteroid/HAY_A_LIDAR_3_HAYLIDAR_V1_0.zip"> Download (204 Mb) </a>
+                    </table>
+                    
+                    <br> <br>
+    </main>
+    <!-- END main content -->
+
+    <div include-html="/sbn-sidebar.html"></div> 
+
+    <div include-html="/sbn-footer.html"></div> 
+    
+    <script>
+        includeHTML = function(cb) {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("include-html");
+                if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
+                        elmnt.removeAttribute("include-html");
+                        includeHTML(cb);
+                    }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+                }
+            }
+            if (cb) cb();
+            };
+        includeHTML();
+    </script>
+</body>
+</html>
