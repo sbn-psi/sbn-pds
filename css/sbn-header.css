@@ -48,7 +48,7 @@
     color: #ededed;
 }
 .sbn-title a:hover {
-    color: #FF5722;
+    text-decoration: underline;
 }
 .sbn-subtitle {
     margin: 0;
@@ -58,7 +58,7 @@
     font-size: 0.9em;
 }
 .sbn-subtitle:hover {
-    color: #FF5722;
+    text-decoration: underline;
 }
 .gradient-bar {
     width: 20vw;

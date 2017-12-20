@@ -25,8 +25,7 @@
     background: #EDEDED;
 }
 .sbn-sidebar-li:hover {
-    color: #FF5722;
-    cursor: pointer;
+    text-decoration: underline;
 }
 .sbn-sidebar-li:not(:first-child) {
     border-top: 0.1em solid #BDBDBD;

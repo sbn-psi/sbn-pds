@@ -5,7 +5,6 @@ body {
 }
 a:not(.ignore-a-styling) {
     text-decoration: none;
-    color: #FF5722;
     letter-spacing: 0.1em;
 }
 
