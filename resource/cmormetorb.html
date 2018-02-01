@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>
+        
+    </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="/pds-staging/css/sbn-header.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-sidebar.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-footer.css">
+    <link rel="stylesheet" href="/pds-staging/css/project-main.css">
+</head>
+<body>
+
+    <div include-html="/pds-staging/sbn-header.html"></div> 
+
+    <!-- BEGIN main content -->
+    <main class="sbn-main">
+        <center>
+            <h1> CMOR Meteoroid Stream Survey </h1>
+            </center>
+            
+            <h3>
+            <p>
+            A seven-year radar survey of meteor     
+                    showers has been carried out with the Canadian Meteor Orbit Radar     
+                    (CMOR) from 2002-2008 (Brown et al. 2008, 2010).  This survey resulted
+                    in the unambiguous detection and orbital characterization of 109 major
+                    and minor meteor showers.  This data set includes a list of the       
+                    detected meteor showers along with their orbital parameters.
+            
+            <p>
+            Brown, P., R.J. Weryk, D.K. Wong, and J. Jones, A meteoroid stream survey   
+              using the Canadian Meteor Orbit Radar I. Methodology and radiant catalog,   
+              Icarus 195, 317-339, 2008.
+            
+            <p>
+            Brown, P., D.K. Wong, R.J. Weryk, and P. Wiegert, A meteoroid stream      
+                survey using the Canadian Meteor Orbit Radar II:  Identification of minor 
+                showers using a 3D wavelet transform.  Icarus 207, 66-81, 2010.
+            
+            </h3>
+            
+            <table border=1>
+            <tr><td width=500>EAR-A-I0688-5-CMORMETORB-V2.0
+                <td width=100> <a href="http://sbn.psi.edu/pds/asteroid/EAR_A_I0688_5_CMORMETORB_V2_0"> Browse </a>
+                <td width=200> <a href="http://sbn.psi.edu/pds/asteroid/EAR_A_I0688_5_CMORMETORB_V2_0.zip"> Download (35 kb) </a>
+            </table>
+            
+            <p>
+            Use the following citation to reference this data set:
+            
+            <p>
+            "Brown, P., Weryk, R.J., Wong, D.K., and 
+                    Jones, J., CMOR Meteoroid Stream Survey V2.0.                         
+                    EAR-A-I0688-5-CMORMETORB-V2.0. NASA Planetary Data System, 2011."
+            
+            <br><br>
+            
+            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
+            
+            <table border=1>
+            <tr><td width=500>EAR-A-I0688-5-CMORMETORB-V1.0
+                <td width=100> <a href="http://sbn.psi.edu/pds/asteroid/EAR_A_I0688_5_CMORMETORB_V1_0"> Browse </a>
+                <td width=200> <a href="http://sbn.psi.edu/pds/asteroid/EAR_A_I0688_5_CMORMETORB_V1_0.zip"> Download (27 kb) </a>
+            </table>
+            
+            <br> <br>
+    </main>
+    <!-- END main content -->
+
+    <div include-html="/pds-staging/sbn-sidebar.html"></div> 
+
+    <div include-html="/pds-staging/sbn-footer.html"></div> 
+    
+    <script>
+        includeHTML = function(cb) {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("include-html");
+                if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
+                        elmnt.removeAttribute("include-html");
+                        includeHTML(cb);
+                    }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+                }
+            }
+            if (cb) cb();
+            };
+        includeHTML();
+    </script>
+</body>
+</html>

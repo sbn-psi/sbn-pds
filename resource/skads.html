@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>
+        
+    </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="/pds-staging/css/sbn-header.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-sidebar.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-footer.css">
+    <link rel="stylesheet" href="/pds-staging/css/project-main.css">
+</head>
+<body>
+
+    <div include-html="/pds-staging/sbn-header.html"></div> 
+
+    <!-- BEGIN main content -->
+    <main class="sbn-main">
+        <center>
+            <h1> Sub-Kilometer Asteroid Diameter Survey (SKADS) </h1>
+            </center>
+            
+            <h3>
+            <p>
+            The Sub-Kilometer Asteroid Diameter     
+                    Survey (SKADS) (Gladman et al. 2009) acquired good-quality orbital and
+                    absolute magnitude (H) determinations for a sample of small main-belt 
+                    asteroids in order to study the orbital and size distribution beyond H
+                    = 15, down to sub-kilometer sizes (H > 18).  Based on six observing   
+                    nights over an 11-night baseline, SKADS detected, measured photometry 
+                    for, and linked observations of 1087 asteroids which have one-week    
+                    time baselines or more.  This data set contains the astrometry,       
+                    photometry, and orbits of the 1087 asteroids detected by SKADS.
+            </h3>
+            
+            <table border=1>
+            <tr><td width=500> EAR-A-I0655-5-SKADS-V1.0
+                <td width=100> <a href="http://sbn.psi.edu/pds/asteroid/EAR_A_I0655_5_SKADS_V1_0"> Browse </a>
+                <td width=200> <a href="http://sbn.psi.edu/pds/asteroid/EAR_A_I0655_5_SKADS_V1_0.zip"> Download (862  kb) </a>
+            </table>
+            
+            <p>
+            Use the following citation to reference this data set:
+            
+            <p>
+            "Gladman, B.J., Davis, D.R., Neese, C.,  
+                    Jedicke, R., Williams, G., Kavelaars, J.J., Petit, J-M., Scholl, H.,  
+                    Holman, M., Warrington, B., Esquerdo, G., and Tricarico, P.,          
+                    Sub-Kilometer Asteroid Diameter Survey (SKADS) V1.0.                  
+                    EAR-A-I0655-5-SKADS-V1.0. NASA Planetary Data System, 2010."
+            
+            <br><br>
+            
+            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
+            
+            <p>
+            None.
+            
+            <br> <br>
+    </main>
+    <!-- END main content -->
+
+    <div include-html="/pds-staging/sbn-sidebar.html"></div> 
+
+    <div include-html="/pds-staging/sbn-footer.html"></div> 
+    
+    <script>
+        includeHTML = function(cb) {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("include-html");
+                if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
+                        elmnt.removeAttribute("include-html");
+                        includeHTML(cb);
+                    }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+                }
+            }
+            if (cb) cb();
+            };
+        includeHTML();
+    </script>
+</body>
+</html>

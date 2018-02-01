@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>
+        
+    </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="/pds-staging/css/sbn-header.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-sidebar.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-footer.css">
+    <link rel="stylesheet" href="/pds-staging/css/project-main.css">
+</head>
+<body>
+
+    <div include-html="/pds-staging/sbn-header.html"></div> 
+
+    <!-- BEGIN main content -->
+    <main class="sbn-main">
+        <center>
+            <h1> Optical Constants and Lab Spectra of Water Ice </h1>
+            </center>
+            
+            <h3>
+            <p>
+            Transmission spectra of amorphous and   
+                    crystalline H2O-ice at temperatures from 20-150 K for a wavelength    
+                    range from 1.11 to 2.63 microns.  These spectra have not been         
+                    continuum-corrected or had the infrared interference fringes removed. 
+                    Optical constants (n and k values) were derived from these laboratory 
+                    spectra and are included in the data set.
+            
+            <p>
+            Mastrapa, R.M., M.P. Bernstein, S.A. Sandford, T.L. Roush, D.P.           
+                Cruikshank, D. P., and C. M. Dalle Ore, Optical constants of amorphous and
+                crystalline H2O-ice in the near infrared from 1.1 to 2.6 microns, Icarus  
+                197, 307-320, 2008.
+            
+            </h3>
+            
+            <table border=1>
+            <tr><td width=500> EAR-X-I1083-5-ICESPEC-V1.1
+                <td width=100> <a href="http://sbn.psi.edu/pds/asteroid/EAR_X_I1083_5_ICESPEC_V1_1"> Browse </a>
+                <td width=200> <a href="http://sbn.psi.edu/pds/asteroid/EAR_X_I1083_5_ICESPEC_V1_1.zip"> Download (13 Mb ) </a>
+            </table>
+            
+            <p>
+            Use the following citation to reference this data set:
+            
+            <p>
+            Mastrapa, R. M. E., Optical Constants   
+                    and Lab Spectra of Water Ice V1.1. EAR-X-I1083-5-ICESPEC-V1.1. NASA   
+                    Planetary Data System, 2012.
+            
+            <br><br>
+            
+            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
+            
+            <p>
+            <table border=1>
+            <tr><td width=500> EAR-X-I0065-5-ICESPEC-V1.0
+                <td width=100> <a href="http://sbn.psi.edu/pds/asteroid/EAR_X_I0065_5_ICESPEC_V1_0"> Browse </a>
+                <td width=200> <a href="http://sbn.psi.edu/pds/asteroid/EAR_X_I0065_5_ICESPEC_V1_0.zip"> Download (13 Mb ) </a>
+            </table>
+            
+            <br> <br>
+    </main>
+    <!-- END main content -->
+
+    <div include-html="/pds-staging/sbn-sidebar.html"></div> 
+
+    <div include-html="/pds-staging/sbn-footer.html"></div> 
+    
+    <script>
+        includeHTML = function(cb) {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("include-html");
+                if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
+                        elmnt.removeAttribute("include-html");
+                        includeHTML(cb);
+                    }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+                }
+            }
+            if (cb) cb();
+            };
+        includeHTML();
+    </script>
+</body>
+</html>

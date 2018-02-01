@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>
+        
+    </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="/pds-staging/css/sbn-header.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-sidebar.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-footer.css">
+    <link rel="stylesheet" href="/pds-staging/css/project-main.css">
+</head>
+<body>
+
+    <div include-html="/pds-staging/sbn-header.html"></div> 
+
+    <!-- BEGIN main content -->
+    <main class="sbn-main">
+        <center>
+            <h1> SDSS Moving Object Catalog </h1>
+            </center>
+            
+            <h3>
+            <p>
+            The Sloan Digital Sky Survey (SDSS)     
+                    Moving Object Catalog 4th release lists astrometric and photometric   
+                    data for moving objects detected in the SDSS.  The catalog includes   
+                    various identification parameters, SDSS astrometric measurements (five
+                    SDSS magnitudes and their errors), and orbital elements for previously
+                    cataloged asteroids.  The data set also includes a list of the runs   
+                    from which data are included, and filter response curves.
+            </h3>
+            
+            <table border=1>
+            <tr><td width=500> EAR-A-I0035-3-SDSSMOC-V3.0
+                <td width=100> <a href="http://sbn.psi.edu/pds/asteroid/EAR_A_I0035_3_SDSSMOC_V3_0"> Browse </a>
+                <td width=200> <a href="http://sbn.psi.edu/pds/asteroid/EAR_A_I0035_3_SDSSMOC_V3_0.zip"> Download (66 Mb) </a>
+            </table>
+            
+            <p>
+            Use the following citation to reference this data set:
+            
+            <p>
+            "Ivezic, Z., Juric, M., Lupton, R.H.,
+                    Tabachnik, S., Quinn, T., and the SDSS Collaboration, SDSS Moving
+                    Object Catalog V3.0. EAR-A-I0035-3-SDSSMOC-V3.0. NASA Planetary Data
+                    System, 2010."
+            
+            <br><br>
+            
+            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
+            
+            <table border=1>
+            <tr><td width=500> EAR-A-I0035-3-SDSSMOC-V2.0
+                <td width=100> <a href="http://sbn.psi.edu/pds/asteroid/EAR_A_I0035_3_SDSSMOC_V2_0"> Browse </a>
+                <td width=200> <a href="http://sbn.psi.edu/pds/asteroid/EAR_A_I0035_3_SDSSMOC_V2_0.zip"> Download (26.3 Mb) </a>
+            <tr><td width=500> EAR-A-I0035-3-SDSSMOC-V1.0
+                <td width=100> <a href="http://sbn.psi.edu/pds/asteroid/EAR_A_I0035_3_SDSSMOC_V1_0"> Browse </a>
+                <td width=200> <a href="http://sbn.psi.edu/pds/asteroid/EAR_A_I0035_3_SDSSMOC_V1_0.zip"> Download (6.7 kb) </a>
+            </table>
+            
+            <br> <br>
+    </main>
+    <!-- END main content -->
+
+    <div include-html="/pds-staging/sbn-sidebar.html"></div> 
+
+    <div include-html="/pds-staging/sbn-footer.html"></div> 
+    
+    <script>
+        includeHTML = function(cb) {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("include-html");
+                if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
+                        elmnt.removeAttribute("include-html");
+                        includeHTML(cb);
+                    }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+                }
+            }
+            if (cb) cb();
+            };
+        includeHTML();
+    </script>
+</body>
+</html>

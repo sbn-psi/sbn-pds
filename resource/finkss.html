@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>
+        
+    </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="/pds-staging/css/sbn-header.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-sidebar.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-footer.css">
+    <link rel="stylesheet" href="/pds-staging/css/project-main.css">
+</head>
+<body>
+
+    <div include-html="/pds-staging/sbn-header.html"></div> 
+
+    <!-- BEGIN main content -->
+    <main class="sbn-main">
+        <center>
+            <h1> Fink Images and Spectra of Solar System Objects </h1>
+            <h3> Status:  Certified and released with minor liens, April 27, 2017</h3>
+            </center>
+            
+            <p>
+            This data set contains raw images and   
+                    spectra of predominantly solar system objects, standard stars, and    
+                    calibration frames acquired by Uwe Fink and collaborators on Mt.      
+                    Bigelow near Tucson AZ from 1984 to 1998. Also provided are the       
+                    scanned handwritten observing logs and the corresponding generated    
+                    (reviewed) logs with the corrected information. A table with the      
+                    filter information and if available filter curves are also included.
+            
+            <p>
+            <font color=red>Caution:  </font>This data set is in liens resolution and
+            has beeen released with minor liens.  Please review the 
+            <a href="/pds-staging/resource/finkssliens.txt">liens list</a> before using these data.
+            
+            <br><br>
+            
+            <table border=1>
+            <tr><td width=500> EAR-A-I0043/I0060-2-FINKSS-V1.0
+                <td width=100> <a href="https://sbn.psi.edu/pds/asteroid/certified/finkss/"> Browse </a>
+                <td width=200> <a href="https://sbn.psi.edu/pds/asteroid/certified/finkss.zip"> Download (3.5 Gb ) </a>
+            </table>
+            
+            <p>
+            Use the following citation to reference this data set:
+            
+            <p>
+            "Fink, U., Mueller, B.E.A., Buie, M.,    
+                    DiSanti, M., Fevig, R., Grundy, W., Hicks, M., Marcialis, R., Schultz,
+                    A., Goetz, B., Kulkarni, R., Class, C., Honniball, C., and            
+                    Leinenveber, J., Fink Images and Spectra of Solar System Objects      
+                    1984-98 V1.0. EAR-A-I0043/I0060-2-FINKSS-V1.0. NASA Planetary Data    
+                    System, 2017."
+            
+            <br><br>
+            
+            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
+            
+            <p>
+            None.
+            
+            <br> <br>
+    </main>
+    <!-- END main content -->
+
+    <div include-html="/pds-staging/sbn-sidebar.html"></div> 
+
+    <div include-html="/pds-staging/sbn-footer.html"></div> 
+    
+    <script>
+        includeHTML = function(cb) {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("include-html");
+                if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
+                        elmnt.removeAttribute("include-html");
+                        includeHTML(cb);
+                    }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+                }
+            }
+            if (cb) cb();
+            };
+        includeHTML();
+    </script>
+</body>
+</html>

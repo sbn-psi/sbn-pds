@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>
+        
+    </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="/pds-staging/css/sbn-header.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-sidebar.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-footer.css">
+    <link rel="stylesheet" href="/pds-staging/css/project-main.css">
+</head>
+<body>
+
+    <div include-html="/pds-staging/sbn-header.html"></div> 
+
+    <!-- BEGIN main content -->
+    <main class="sbn-main">
+        <center>
+            <h1> Eros MSI Images with Geometry Backplanes </h1>
+            </center>
+            
+            <p>
+            <b>This data set contains data products for 93,397 images obtained by the
+            Multi-Spectral Imager (MSI) of the Near Earth Asteroid Rendezvous (NEAR)
+            mission during the orbital phase at asteroid 433 Eros. The data products
+            include geometric and geophysical information for each pixel. The data
+            products are in the form of backplanes, stored in the FITS image format.
+            There is one backplane file for each MSI image. Each of the MSI backplane
+            files is a 16-band image cube. The bands of the cube contain the following
+            information calculated for the center of each pixel:
+            Pixel values; x, y, and z coordinates of the intercept with the surface
+            of the asteroid; latitude, longitude and radial distance from asteroid center;
+            solar incidence, emission, and phase angles; horizontal and vertical pixel
+            scale; slope; elevation; gravitational acceleration; and gravitational
+            potential.</b>
+            
+            <br><br>
+            
+            <table border=1>
+            <tr><td width=500> urn:nasa:pds:nearmsi.shapebackplane
+                <td width=100> <a href="http://sbn.psi.edu/archive/bundles/nearmsi.shapebackplane/"> Browse </a>
+                <td width=300><a href="https://sbn.psi.edu/archive/downloads/nearmsi.shapebackplane/">Download data by time range (DOY)</a>
+            </table>
+            
+            <p>
+            Because of the size of this data set (721 Gb), it is too large to
+            easily download as a whole.  The data set has been broken down into smaller
+            pieces for download, one gzipped tar file per day.  The filenames have
+            the form "nearmsi.shapebackplane.yyyyDOY.tar.gz" where yyyy is the year and
+            DOY is the day of year.
+            
+            <p>
+            Use the following citation to reference this data set:
+            
+            
+            <p>
+            Blewett, D.T., Barnouin, O.S., Ernst, C.M., Nguyen, L., and Espiritu, R.C.,
+            Eros MSI Images with Geometry Backplanes. urn:nasa:pds:nearmsi.shapebackplane. NASA Planetary Data System, 2017.
+            
+            <br><br>
+            
+            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
+            
+            <p>
+            None.
+            
+            <br> <br>
+    </main>
+    <!-- END main content -->
+
+    <div include-html="/pds-staging/sbn-sidebar.html"></div> 
+
+    <div include-html="/pds-staging/sbn-footer.html"></div> 
+    
+    <script>
+        includeHTML = function(cb) {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("include-html");
+                if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
+                        elmnt.removeAttribute("include-html");
+                        includeHTML(cb);
+                    }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+                }
+            }
+            if (cb) cb();
+            };
+        includeHTML();
+    </script>
+</body>
+</html>

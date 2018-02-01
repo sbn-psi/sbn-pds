@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>
+        
+    </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="/pds-staging/css/sbn-header.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-sidebar.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-footer.css">
+    <link rel="stylesheet" href="/pds-staging/css/project-main.css">
+</head>
+<body>
+
+    <div include-html="/pds-staging/sbn-header.html"></div> 
+
+    <!-- BEGIN main content -->
+    <main class="sbn-main">
+        <center>
+        <h1> NEOWISE Diameters and Albedos </h1>
+        </center>
+        
+        <h3>
+        <p>
+        This PDS data set represents a          
+                compilation of published diameters,                                   
+                optical albedos, near-infrared albedos, and beaming parameters for    
+                minor planets detected by NEOWISE during the fully cryogenic, 3-band  
+                cryo, post-cryo and NEOWISE-Reactivation Year 1 operations.  It       
+                contains data covering near-Earth asteroids, Main Belt asteroids,     
+                active Main Belt objects, Hildas, Jupiter Trojans, Centaurs, and      
+                Jovian and Saturnian irregular satellites.  Methodology for physical  
+                property determination is described in the referenced articles.
+        </h3>
+        
+        <table border=1>
+        <tr><td width=500> EAR_A_COMPIL_5_NEOWISEDIAM_V1_0
+            <td width=100> <a href="http://sbn.psi.edu/pds/asteroid/EAR_A_COMPIL_5_NEOWISEDIAM_V1_0"> Browse </a>
+            <td width=200> <a href="http://sbn.psi.edu/pds/asteroid/EAR_A_COMPIL_5_NEOWISEDIAM_V1_0.zip"> Download (6.0 Mb) </a>
+        </table>
+        
+        <p>
+        Use the following citation to reference this data set:
+        
+        <p>
+        "Mainzer, A.K., Bauer, J.M., Cutri, R.M.,
+                Grav, T., Kramer, E.A., Masiero, J.R., Nugent, C.R., Sonnett, S.M.,   
+                Stevenson, R.A., and Wright, E.L., NEOWISE Diameters and Albedos V1.0.
+                EAR-A-COMPIL-5-NEOWISEDIAM-V1.0. NASA Planetary Data System, 2016."
+        
+        <h3> <font color=red> Superseded </font> versions of this data set: </h3>
+                
+        <p>
+        None.
+                
+        
+    </main>
+    <!-- END main content -->
+
+    <div include-html="/pds-staging/sbn-sidebar.html"></div> 
+
+    <div include-html="/pds-staging/sbn-footer.html"></div> 
+    
+    <script>
+        includeHTML = function(cb) {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("include-html");
+                if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
+                        elmnt.removeAttribute("include-html");
+                        includeHTML(cb);
+                    }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+                }
+            }
+            if (cb) cb();
+            };
+        includeHTML();
+    </script>
+</body>
+</html>

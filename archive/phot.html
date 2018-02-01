@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>
+        
+    </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="/pds-staging/css/sbn-header.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-sidebar.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-footer.css">
+    <link rel="stylesheet" href="/pds-staging/css/project-main.css">
+</head>
+<body>
+
+    <div include-html="/pds-staging/sbn-header.html"></div> 
+
+    <!-- BEGIN main content -->
+    <main class="sbn-main">
+        <center>
+            <h1> Asteroid Photometry and Lightcurves </h1>
+            </center>
+            
+            <h3> Main Belt Asteroids and NEOs </h3>
+            <ul>
+            <li> <a href="/pds-staging/resource/2mass.html"> 2MASS Asteroid and Comet Survey </a>
+            <li> <a href="/pds-staging/resource/apc.html"> Asteroid Photometric Catalog (APC) </a>
+            <li> <a href="/pds-staging/resource/ubvmean.html"> Asteroid UBV Colors </a>
+            <li> <a href="/pds-staging/resource/lc.html"> Lightcurve Derived Parameters </a>
+            <li> <a href="/pds-staging/resource/astdenis.html">  Near-IR Photometry of Asteroids from DENIS </a>
+            <li> <a href="/pds-staging/resource/lcneo.html"> NEO Lightcurves </a>
+            <li> <a href="/pds-staging/resource/sdssmoc.html"> Sloan Digital Sky Survey Moving Object Catalog </a>
+            <li> <a href="/pds-staging/resource/skads.html">Sub-Kilometer Asteroid Diameter Survey (SKADS)</a>
+            <li> <a href="/pds-staging/resource/submmlc.html"> Submillimeter Lightcurves of Asteroids </a>
+            <li> <a href="/pds-staging/resource/whiteley.html"> Whiteley NEO Photometry </a>
+            <li> <a href="/pds-staging/resource/wisast.html"> Wisniewski Asteroid Magnitudes </a>
+            </ul>
+            
+            <h3> Trojans </h3>
+            <ul>
+            <li> <a href="/pds-staging/resource/fornasier.html">Spectroscopy and Photometry of Jupiter Trojans</a>
+            </ul>
+            
+            <h3> TNOs, Centaurs, and Pluto </h3>
+            <ul>
+            <li> <a href="/pds-staging/resource/benecchiocc.html">P445.3 (Pluto) Occultation</a>
+            <li> <a href="/pds-staging/resource/pcme.html"> Pluto-Charon Mutual Events </a>
+            <li><a href="http://pdssbn.astro.umd.edu/holdings/ear-c-compil-5-lightcurves-v1.0/dataset.html">Survey of Comet Lightcurves</a> - This data set also contains asteroids which have cometary properties, namely 2060 Chiron and 4015 Wilson-Harrington.
+            <li> <a href="/pds-staging/resource/tnolc.html"> Transneptunian Lightcurves </a>
+            <li> <a href="/pds-staging/resource/tnocencol.html"> Transneptunian and Centaur Colors </a>
+            <li> <a href="/pds-staging/resource/td10phot.html"> Visual Imaging and Photometry of (29981) 1999 TD10 </a>
+            </ul>
+            
+            <h3> Planetary Satellites </h3>
+            <ul>
+            <li> <a href="/pds-staging/resource/satcol.html"> Planetary Satellite Colors </a>
+            </ul>
+            
+            <h3> Comets</h3>
+            <ul>
+            <li><a href="http://pdssbn.astro.umd.edu/holdings/ear-c-compil-5-lightcurves-v1.0/dataset.html">Survey of Comet Lightcurves</a>
+            </ul>
+    </main>
+    <!-- END main content -->
+
+    <div include-html="/pds-staging/sbn-sidebar.html"></div> 
+
+    <div include-html="/pds-staging/sbn-footer.html"></div> 
+    
+    <script>
+        includeHTML = function(cb) {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("include-html");
+                if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
+                        elmnt.removeAttribute("include-html");
+                        includeHTML(cb);
+                    }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+                }
+            }
+            if (cb) cb();
+            };
+        includeHTML();
+    </script>
+</body>
+</html>

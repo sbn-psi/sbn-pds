@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>
+        
+    </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="/pds-staging/css/sbn-header.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-sidebar.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-footer.css">
+    <link rel="stylesheet" href="/pds-staging/css/project-main.css">
+</head>
+<body>
+
+    <div include-html="/pds-staging/sbn-header.html"></div> 
+
+    <!-- BEGIN main content -->
+    <main class="sbn-main">
+        <center>
+            <h1> Hardersen IRTF Asteroid NIR Reflectance Spectra </h1>
+            </center>
+            
+            <h3>
+            <p>
+            This dataset includes average           
+                    near-infrared (NIR) reflectance spectra for 68 main-belt asteroids    
+                    that were observed at the NASA Infrared Telescope Facility (IRTF),    
+                    Mauna Kea, Hawaii, from April 2001 to January 2015. Raw NIR spectral  
+                    data were obtained under mostly uniform instrumental conditions and   
+                    include observations of the asteroids, extinction stars, and solar    
+                    analog stars that were necessary for data reduction and production of 
+                    the final average asteroid NIR reflectance spectra. SpecPR and        
+                    Spextool were used during data reduction to produce the final spectra 
+                    and both programs utilize similar functions that include sky          
+                    background subtraction, telluric corrections, channel shifting, and   
+                    averaging routines. The set of asteroids observed include a wide      
+                    variety of taxonomic types and include V-, S-, M-, X-types that       
+                    correspond to a wide variety of surface mineralogies, rock types, and 
+                    potential meteorite analogs.
+            </h3>
+            
+            <table border=1>
+            <tr><td width=500> EAR_A_I0046_3_HARDERSENSPEC_V1_0
+                <td width=100> <a href="http://sbn.psi.edu/pds/asteroid/EAR_A_I0046_3_HARDERSENSPEC_V1_0"> Browse </a>
+                <td width=200> <a href="http://sbn.psi.edu/pds/asteroid/EAR_A_I0046_3_HARDERSENSPEC_V1_0.zip"> Download (3.4 Mb) </a>
+            </table>
+            
+            <p>
+            Use the following citation to reference this data set:
+            
+            <p>
+            "Hardersen,P.S., Hardersen IRTF Asteroid 
+                    NIR Reflectance Spectra V1.0. EAR-A-I0046-3-HARDERSENSPEC-V1.0. NASA  
+                    Planetary Data System, 2016."
+            
+            <br><br>
+            
+            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
+            
+            <p>
+            None.
+            
+            <br> <br>
+    </main>
+    <!-- END main content -->
+
+    <div include-html="/pds-staging/sbn-sidebar.html"></div> 
+
+    <div include-html="/pds-staging/sbn-footer.html"></div> 
+    
+    <script>
+        includeHTML = function(cb) {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("include-html");
+                if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
+                        elmnt.removeAttribute("include-html");
+                        includeHTML(cb);
+                    }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+                }
+            }
+            if (cb) cb();
+            };
+        includeHTML();
+    </script>
+</body>
+</html>

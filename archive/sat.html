@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>
+        
+    </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="/pds-staging/css/sbn-header.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-sidebar.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-footer.css">
+    <link rel="stylesheet" href="/pds-staging/css/project-main.css">
+</head>
+<body>
+
+    <div include-html="/pds-staging/sbn-header.html"></div> 
+
+    <!-- BEGIN main content -->
+    <main class="sbn-main">
+            <center>
+                    <h1> Data Sets Containing Planetary Satellite Data </h1>
+                    </center>
+                    
+                    <ul>
+                    <li><a href="/pds-staging/resource/finkss.html">Fink Images and Spectra of Solar System Objects</a>
+                    <li> <a href="/pds-staging/resource/mimasshape.html">Gaskell Mimas Shape Model</a> - derived from Cassini and Voyager 1 data
+                    <li> <a href="/pds-staging/resource/phobosshape.html">Gaskell Phobos Shape Model</a> - derived from Viking and Phobos 2 data
+                    <li> <a href="/pds-staging/resource/phoebeshape.html">Gaskell Phoebe Shape Model</a> - derived from Cassini data
+                    <li> <a href="/pds-staging/resource/neowisediam.html">NEOWISE Diameters and Albedos</a> - contains Jovian and Saturnian satellites
+                    <li><a href="http://pdssbn.astro.umd.edu/data_sb/missions/newhorizons/index.shtml">New Horizons</a> (J1-J4, J6, J7, P1-P5)
+                    <li> <a href="/pds-staging/resource/satcol.html"> Planetary Satellite Colors </a>
+                         <ul><li> 40 different satellites
+                         </ul>
+                    <li> <a href="/pds-staging/resource/satpol.html">Polarimetry of Planetary Satellites</a>
+                    <li> <a href="/pds-staging/resource/rivkin.html"> Rivkin 3-micron Spectrophotometry </a>
+                         <ul><li> M1 Phobos
+                             <li> M2 Deimos
+                         </ul>
+                    <li> <a href="/pds-staging/resource/stkshape.html"> Stooke Shape Models </a> <br>
+                         <ul><li> J5 Amalthea
+                             <li> S10 Janus
+                             <li> S11 Epimetheus
+                             <li> S16 Prometheus
+                             <li> S17 Pandora
+                             <li> N7 Larissa
+                             <li> N8 Proteus
+                         </ul>
+                    <li> <a href="/pds-staging/resource/stookemaps.html"> Stooke Small Bodies Maps </a>
+                         <ul><li> M1 Phobos
+                             <li> M2 Deimos
+                             <li> J5 Amalthea
+                             <li> S7 Hyperion
+                             <li> S11 Epimetheus
+                         </ul>
+                    <li> <a href="/pds-staging/resource/oshape.html">Thomas Shape Models </a> <br>
+                         <ul><li> M1 Phobos
+                             <li> M2 Deimos
+                             <li> S7 Hyperion
+                             <li> S10 Janus
+                             <li> S11 Epimetheus
+                         </ul>
+                    </ul>
+                    
+                    For more PDS data on planetary satellites, see the NASA Planetary Data
+                    System <a href="http://pds.jpl.nasa.gov/"> data access
+                    site. </a>
+                    <p>
+    </main>
+    <!-- END main content -->
+
+    <div include-html="/pds-staging/sbn-sidebar.html"></div> 
+
+    <div include-html="/pds-staging/sbn-footer.html"></div> 
+    
+    <script>
+        includeHTML = function(cb) {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("include-html");
+                if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
+                        elmnt.removeAttribute("include-html");
+                        includeHTML(cb);
+                    }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+                }
+            }
+            if (cb) cb();
+            };
+        includeHTML();
+    </script>
+</body>
+</html>

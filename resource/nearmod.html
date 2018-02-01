@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>
+        
+    </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="/pds-staging/css/sbn-header.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-sidebar.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-footer.css">
+    <link rel="stylesheet" href="/pds-staging/css/project-main.css">
+</head>
+<body>
+
+    <div include-html="/pds-staging/sbn-header.html"></div> 
+
+    <!-- BEGIN main content -->
+    <main class="sbn-main">
+        <center>
+            <h1> NEAR Collected Shape and Gravity Models </h1>
+            </center>
+            
+            <h3>
+            <p>
+            Several instrument teams from the Near Earth Asteroid Rendezvous
+                  (NEAR) mission derived models of the main mission target, 433
+                  Eros. In addition, the Multi-Spectral Imager team also derived
+                  a shape model of the secondary target 253 Mathilde. These models
+                  and their associated data and descriptions have been collected
+                  into this data set for ease of distribution.  In addition to the
+            link to the full data set, here is a <a href="nearbrowse.html"> browse facility </a> to access the models.
+            See the <a href="NEAR_Coordinate_Systems.txt"> NEAR Coordinate Systems document </a> for an explanation of the coordinate systems used and instructions to
+            convert between them.
+            
+            </h3>
+            
+            <table border=1>
+            <tr><td width=500> NEAR-A-5-COLLECTED-MODELS-V1.0
+                <td width=100> <a href="http://sbn.psi.edu/pds/asteroid/NEAR_A_5_COLLECTED_MODELS_V1_0"> Browse </a>
+                <td width=200> <a href="http://sbn.psi.edu/pds/asteroid/NEAR_A_5_COLLECTED_MODELS_V1_0.zip"> Download (26.3 Mb) </a>
+            </table>
+            
+            
+            <br><br>
+            
+            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
+            
+            None.
+            
+            <br> <br>
+    </main>
+    <!-- END main content -->
+
+    <div include-html="/pds-staging/sbn-sidebar.html"></div> 
+
+    <div include-html="/pds-staging/sbn-footer.html"></div> 
+    
+    <script>
+        includeHTML = function(cb) {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("include-html");
+                if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
+                        elmnt.removeAttribute("include-html");
+                        includeHTML(cb);
+                    }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+                }
+            }
+            if (cb) cb();
+            };
+        includeHTML();
+    </script>
+</body>
+</html>

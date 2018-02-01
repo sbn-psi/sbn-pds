@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>
+        
+    </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="/pds-staging/css/sbn-header.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-sidebar.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-footer.css">
+    <link rel="stylesheet" href="/pds-staging/css/project-main.css">
+</head>
+<body>
+
+    <div include-html="/pds-staging/sbn-header.html"></div> 
+
+    <!-- BEGIN main content -->
+    <main class="sbn-main">
+        <center>
+            <h1> Dawn Framing Camera Vesta Image Mosaics </h1>
+            </center>
+            
+            <center>
+            <b>Status: Archived </b>
+            </center>
+            
+            <br><br>
+            
+            <table border=1>
+                <td width=400> Description:
+                <td width=200> Browse:
+                <td width=200> Download:
+            <tr>
+                <td> Vesta Global image mosaics
+                <td><a href="http://sbn.psi.edu/archive/dawn/fc/DWNVFC2_2/">DWNVFC2_2</a> (58 Gb)
+                <td><a href="http://sbn.psi.edu/archive/dawn/fc/DWNVFC2_2.zip">DWNVFC2_2.zip</a> (43 Gb)
+            </table>
+            
+            <p>
+            Use the following citation to reference this data set:
+            
+            <p>
+            "Roatsch, T., E. Kersten, K.-D. Matz, F. Preusker, F. Scholten, S.Elgner,   
+                  S.E. Schroeder, R. Jaumann, C.A. Raymond, C.T.Russell,                  
+                  DAWN FC2 DERIVED VESTA GLOBAL MOSAICS V1.0,                             
+                  DAWN-A-FC2-5-MOSAIC-V1.0, NASA Planetary Data System, 2015."
+            
+            <p>
+            <b>Note:</b>  The mosaics download package is quite large, as are the individual mosaic
+            files.  Make sure you have room on your disk before downloading the package.
+            Individual mosaic files can be downloaded from the browse link.
+            
+            <br><br>
+            
+            <h3>
+            <center>
+            <a href="index.html">Return to Dawn Archive Page</a><br>
+            </center>
+            <br>
+    </main>
+    <!-- END main content -->
+
+    <div include-html="/pds-staging/sbn-sidebar.html"></div> 
+
+    <div include-html="/pds-staging/sbn-footer.html"></div> 
+    
+    <script>
+        includeHTML = function(cb) {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("include-html");
+                if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
+                        elmnt.removeAttribute("include-html");
+                        includeHTML(cb);
+                    }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+                }
+            }
+            if (cb) cb();
+            };
+        includeHTML();
+    </script>
+</body>
+</html>

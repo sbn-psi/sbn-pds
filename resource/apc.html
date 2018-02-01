@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>
+        
+    </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="/pds-staging/css/sbn-header.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-sidebar.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-footer.css">
+    <link rel="stylesheet" href="/pds-staging/css/project-main.css">
+</head>
+<body>
+
+    <div include-html="/pds-staging/sbn-header.html"></div> 
+
+    <!-- BEGIN main content -->
+    <main class="sbn-main">
+        <center>
+            <h1> Asteroid Photometric Catalog (3rd Update) </h1>
+            </center>
+            
+            <h3>
+            <p>
+            The Asteroid Photometric Catalog (3rd   
+                    update), Lagerkvist, et.al., 1993 [LAGERKVISTETAL1993], is a          
+                    compilation of all asteroid lightcurve photometry published up to and 
+                    including the year 1992. The dataset includes the lightcurves in      
+                    digital form and a table of references to all original publications.
+            </h3>
+            
+            <table border=1>
+            <tr><td width=500> EAR-A-3-DDR-APC-LIGHTCURVE-V1.1
+                <td width=100> <a href="http://sbn.psi.edu/pds/asteroid/EAR_A_3_DDR_APC_LIGHTCURVE_V1_1"> Browse </a>
+                <td width=200> <a href="http://sbn.psi.edu/pds/asteroid/EAR_A_3_DDR_APC_LIGHTCURVE_V1_1.zip"> Download (15 Mb) </a>
+            </table>
+            
+            <p>
+            Use the following citation to reference this data set:
+            
+            <p>
+            "Lagerkvist, C.-I. and Magnusson, P.,    
+                    Eds., Asteroid Photometric Catalog V1.1.                              
+                    EAR-A-3-DDR-APC-LIGHTCURVE-V1.1. NASA Planetary Data System, 2011."
+            
+            <br><br>
+            
+            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
+            
+            <table border=1>
+            <tr><td width=500> EAR-A-3-DDR-APC-LIGHTCURVE-V1.0
+                <td width=100> <a href="http://sbn.psi.edu/pds/asteroid/EAR_A_3_DDR_APC_LIGHTCURVE_V1_0"> Browse </a>
+                <td width=200> <a href="http://sbn.psi.edu/pds/asteroid/EAR_A_3_DDR_APC_LIGHTCURVE_V1_0.zip"> Download (1.9 Mb) </a>
+            </table>
+            
+            <br> <br>
+    </main>
+    <!-- END main content -->
+
+    <div include-html="/pds-staging/sbn-sidebar.html"></div> 
+
+    <div include-html="/pds-staging/sbn-footer.html"></div> 
+    
+    <script>
+        includeHTML = function(cb) {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("include-html");
+                if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
+                        elmnt.removeAttribute("include-html");
+                        includeHTML(cb);
+                    }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+                }
+            }
+            if (cb) cb();
+            };
+        includeHTML();
+    </script>
+</body>
+</html>

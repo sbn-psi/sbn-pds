@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>
+        
+    </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="/pds-staging/css/sbn-header.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-sidebar.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-footer.css">
+    <link rel="stylesheet" href="/pds-staging/css/project-main.css">
+</head>
+<body>
+
+    <div include-html="/pds-staging/sbn-header.html"></div> 
+
+    <!-- BEGIN main content -->
+    <main class="sbn-main">
+        <center>
+            <h1> Fieber-Beyer IRTF Mainbelt Asteroid Spectra </h1>
+            </center>
+            
+            <h3>
+            <p>
+            The data set contains observations      
+                    obtained with the NASA IRTF SpeX instrument covering the 0.7 to 2.5   
+                    micron near-infrared portion of the spectrum.  The data set archives  
+                    reduced, calibrated spectra which were obtained and used in Sherry    
+                    Fieber-Beyer's Ph.D. dissertation at the                              
+                    University of North Dakota and archives reduced, calibrated spectra   
+                    subsequent to 2010. The research focused on asteroids in a zone centered 
+                    on the 3:1 resonance. These spectra were used to mineralogically      
+                    characterize asteroids in this zone in an attempt to identify their   
+                    meteorite analogs.
+            </h3>
+            
+            <table border=1>
+            <tr><td width=500> EAR-A-I0046-3-FBIRTFSPEC-V3.0
+                <td width=100> <a href="http://sbn.psi.edu/pds/asteroid/EAR_A_I0046_3_FBIRTFSPEC_V3_0"> Browse </a>
+                <td width=200> <a href="http://sbn.psi.edu/pds/asteroid/EAR_A_I0046_3_FBIRTFSPEC_V3_0.zip"> Download (1.1 Mb) </a>
+            </table>
+            
+            <p>
+            Use the following citation to reference this data set:
+            
+            <p>
+            "Fieber-Beyer, S.K., Fieber-Beyer IRTF   
+                    Mainbelt Asteroid Spectra V3.0. EAR-A-I0046-3-FBIRTFSPEC-V3.0. NASA   
+                    Planetary Data System, 2015."
+            
+            <br><br>
+            
+            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
+            
+            <table border=1>
+            <tr><td width=500> EAR-A-I0046-3-FBIRTFSPEC-V2.0
+                <td width=100> <a href="http://sbn.psi.edu/pds/asteroid/EAR_A_I0046_3_FBIRTFSPEC_V2_0"> Browse </a>
+                <td width=200> <a href="http://sbn.psi.edu/pds/asteroid/EAR_A_I0046_3_FBIRTFSPEC_V2_0.zip"> Download (907 kb) </a>
+            <tr><td width=500> EAR-A-I0046-3-FBIRTFSPEC-V1.0
+                <td width=100> <a href="http://sbn.psi.edu/pds/asteroid/EAR_A_I0046_3_FBIRTFSPEC_V1_0"> Browse </a>
+                <td width=200> <a href="http://sbn.psi.edu/pds/asteroid/EAR_A_I0046_3_FBIRTFSPEC_V1_0.zip"> Download (718 kb) </a>
+            </table>
+            
+            <br> <br>
+    </main>
+    <!-- END main content -->
+
+    <div include-html="/pds-staging/sbn-sidebar.html"></div> 
+
+    <div include-html="/pds-staging/sbn-footer.html"></div> 
+    
+    <script>
+        includeHTML = function(cb) {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("include-html");
+                if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
+                        elmnt.removeAttribute("include-html");
+                        includeHTML(cb);
+                    }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+                }
+            }
+            if (cb) cb();
+            };
+        includeHTML();
+    </script>
+</body>
+</html>

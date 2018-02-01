@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>
+        
+    </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="/pds-staging/css/sbn-header.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-sidebar.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-footer.css">
+    <link rel="stylesheet" href="/pds-staging/css/project-main.css">
+</head>
+<body>
+
+    <div include-html="/pds-staging/sbn-header.html"></div> 
+
+    <!-- BEGIN main content -->
+    <main class="sbn-main">
+        <center>
+            <h1> Stooke Small Body Shape Models </h1>
+            </center>
+            
+            <h3>
+            <p>
+            This data set contains Philip Stooke    
+                    shape models for 243 Ida, 253 Mathilde, 951 Gaspra, comet Halley, J5  
+                    Amalthea, J14 Thebe, N7 Larissa, N8 Proteus, S10 Janus, S11           
+                    Epimetheus, S16 Prometheus, and S17 Pandora, based on optical data    
+                    from the NEAR, Galileo, Giotto, Vega 1, Vega 2, and Voyager missions.
+            
+            </h3>
+            
+            <table border=1>
+            <tr><td width=500> EAR-A-5-DDR-STOOKE-SHAPE-MODELS-V2.0
+                <td width=100> <a href="http://sbn.psi.edu/pds/asteroid/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0"> Browse </a>
+                <td width=200> <a href="http://sbn.psi.edu/pds/asteroid/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0.zip"> Download (381 kb) </a>
+            </table>
+            
+            <p>
+            Use the following citation to reference this data set:
+            
+            <p>
+            "Stooke. P., Stooke Small Body Shape     
+                    Models V2.0. EAR-A-5-DDR-STOOKE-SHAPE-MODELS-V2.0. NASA Planetary Data
+                    System, 2016."
+            
+            <br><br>
+            
+            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
+            
+            <table border=1>
+            <tr><td width=500> EAR-A-5-DDR-STOOKE-SHAPE-MODELS-V1.0
+                <td width=100> <a href="http://sbn.psi.edu/pds/asteroid/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V1_0"> Browse </a>
+                <td width=200> <a href="http://sbn.psi.edu/pds/asteroid/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V1_0.zip"> Download (309 kb) </a>
+            </table>
+            
+            <br> <br>
+    </main>
+    <!-- END main content -->
+
+    <div include-html="/pds-staging/sbn-sidebar.html"></div> 
+
+    <div include-html="/pds-staging/sbn-footer.html"></div> 
+    
+    <script>
+        includeHTML = function(cb) {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("include-html");
+                if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
+                        elmnt.removeAttribute("include-html");
+                        includeHTML(cb);
+                    }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+                }
+            }
+            if (cb) cb();
+            };
+        includeHTML();
+    </script>
+</body>
+</html>

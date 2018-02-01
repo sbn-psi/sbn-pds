@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>
+        
+    </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="/pds-staging/css/sbn-header.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-sidebar.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-footer.css">
+    <link rel="stylesheet" href="/pds-staging/css/project-main.css">
+</head>
+<body>
+
+    <div include-html="/pds-staging/sbn-header.html"></div> 
+
+    <!-- BEGIN main content -->
+    <main class="sbn-main">
+            <center>
+                    <h1> Transneptunian, Centaur, and Pluto Data Sets </h1>
+                    </center>
+                    
+                    <ul>
+                    <li><a href="/pds-staging/resource/finkss.html">Fink Images and Spectra of Solar System Objects</a>
+                    <li> <a href="/pds-staging/resource/kbomags.html"> KBO and Centaur Absolute Magnitudes </a>
+                    <li> <a href="/pds-staging/resource/neowisediam.html">NEOWISE Diameters and Albedos</a>
+                    <li> <a href="http://pdssbn.astro.umd.edu/data_sb/missions/newhorizons/index.shtml"> New Horizons</a> (Pluto, Pluto satellites, 10199 Chariklo, 136108 Haumea, and 136472 Makemake)
+                    <li> <a href="/pds-staging/resource/benecchiocc.html">P445.3 (Pluto) Occultation</a>
+                    <li> <a href="/pds-staging/resource/pcme.html"> Pluto-Charon Mutual Events </a>
+                    <li> <a href="/pds-staging/resource/tnocenalb.html"> TNO and Centaur Diameters, Albedos, and Densities</a>
+                    <li> <a href="/pds-staging/resource/tnocencol.html"> TNO and Centaur Colors </a>
+                    <li><a href="/pds-staging/resource/tnopol.html">TNO and Centaur Polarimetry</a>
+                    <li> <a href="/pds-staging/resource/tnolc.html"> TNO Lightcurves </a>
+                    <li> <a href="/pds-staging/resource/td10phot.html"> Visual Imaging and Photometry of (29981) 1999 TD10 </a>
+                    </ul>
+                    
+                    <p>
+                    For more information on TNO research, see
+                    <a href="http://www.boulder.swri.edu/ekonews/"> The Distant EKOs </a>
+                    Kuiper Belt Electronic Newsletter.
+    </main>
+    <!-- END main content -->
+
+    <div include-html="/pds-staging/sbn-sidebar.html"></div> 
+
+    <div include-html="/pds-staging/sbn-footer.html"></div> 
+    
+    <script>
+        includeHTML = function(cb) {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("include-html");
+                if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
+                        elmnt.removeAttribute("include-html");
+                        includeHTML(cb);
+                    }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+                }
+            }
+            if (cb) cb();
+            };
+        includeHTML();
+    </script>
+</body>
+</html>

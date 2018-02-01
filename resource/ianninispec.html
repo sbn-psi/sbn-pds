@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>
+        
+    </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="/pds-staging/css/sbn-header.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-sidebar.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-footer.css">
+    <link rel="stylesheet" href="/pds-staging/css/project-main.css">
+</head>
+<body>
+
+    <div include-html="/pds-staging/sbn-header.html"></div> 
+
+    <!-- BEGIN main content -->
+    <main class="sbn-main">
+        <center>
+            <h1> Iannini Asteroid Family Spectra </h1>
+            </center>
+            
+            <p>
+            Keck/ESI spectra of 11 Iannini asteroid 
+                    family members were obtained over visual wavelengths.  The data have  
+                    been published in Willman, et al. (2008).  The spectra show family    
+                    likeness and are believed to represent young S class surfaces aged a  
+                    few million years by space weathering, the dynamically estimated      
+                    collisional age of the family.
+            
+            <p>
+            Willman, M., R. Jedicke, D. Nesvorny, N.
+                    Moskovitz, Z. Ivezic, R. Fevig, Redetermination of the space          
+                    weathering rate using spectra of Iannini asteroid family members,     
+                    Icarus 195, 663-673, 2008.
+            
+            <br><br>
+            
+            <table border=1>
+            <tr><td width=500> EAR-A-I0039-4-IANNINISPEC-V1.0
+                <td width=100> <a href="http://sbn.psi.edu/pds/asteroid/EAR_A_I0039_4_IANNINISPEC_V1_0"> Browse </a>
+                <td width=200> <a href="http://sbn.psi.edu/pds/asteroid/EAR_A_I0039_4_IANNINISPEC_V1_0.zip"> Download (765 kb) </a>
+            </table>
+            
+            <p>
+            Use the following citation to reference this data set:
+            
+            <p>
+            "Willman, M., Jedicke, R., and Moskovitz,
+                    N., Iannini Asteroid Family Spectra V1.0.                             
+                    EAR-A-I0039-4-IANNINISPEC-V1.0. NASA Planetary Data System, 2009." 
+            
+            <br><br>
+            
+            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
+            
+            <p>
+            None.
+            
+            <br> <br>
+    </main>
+    <!-- END main content -->
+
+    <div include-html="/pds-staging/sbn-sidebar.html"></div> 
+
+    <div include-html="/pds-staging/sbn-footer.html"></div> 
+    
+    <script>
+        includeHTML = function(cb) {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("include-html");
+                if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
+                        elmnt.removeAttribute("include-html");
+                        includeHTML(cb);
+                    }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+                }
+            }
+            if (cb) cb();
+            };
+        includeHTML();
+    </script>
+</body>
+</html>

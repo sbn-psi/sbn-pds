@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>
+        
+    </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="/pds-staging/css/sbn-header.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-sidebar.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-footer.css">
+    <link rel="stylesheet" href="/pds-staging/css/project-main.css">
+</head>
+<body>
+
+    <div include-html="/pds-staging/sbn-header.html"></div> 
+
+    <!-- BEGIN main content -->
+    <main class="sbn-main">
+        <center>
+            <h2>Dawn Vesta Gravity L0 (Raw Radio Science)</h2>
+            <h3>Status:  Archived</h3>
+            </center>
+            
+            <p>
+            This data set contains archival raw, partially processed, and
+                ancillary/supporting gravity science data acquired during the Dawn
+                mission while the spacecraft was in orbit around the asteroid Vesta.
+                The radio observations were carried out using the Dawn spacecraft and
+                Earth-based receiving stations of the NASA Deep Space Network (DSN).
+                The data set was designed primarily to support generation of
+                high-resolution gravity field models for Vesta.
+            
+            <br><br>
+            
+            <table border=1>
+            <tr><td width=500>DWNVGRS_0
+                <td width=100> <a href="http://sbn.psi.edu/archive/dawn/grav/DWNVGRS_0/"> Browse </a>
+                <td width=200> <a href="http://sbn.psi.edu/archive/dawn/grav/DWNVGRS_0.zip"> Download (14 Mb) </a>
+            </table>
+            
+            <p>
+            Use the following citation to reference this data set:
+            
+            <p>
+            "Buccino, D.R., Konopliv, A.S., Park, R.S., Asmar, S.W.,                   
+                DAWN VESTA RAW GRAVITY SCIENCE V1.0 Data Set,                           
+                DAWN-A-RSS-1-VEGR-V1.0, NASA Planetary Data System, 2014." 
+            
+            <br><br>
+            
+            <h3>
+            <center>
+            <a href="index.html">Return to Dawn Archive Page</a><br>
+            </center>
+            <br>
+    </main>
+    <!-- END main content -->
+
+    <div include-html="/pds-staging/sbn-sidebar.html"></div> 
+
+    <div include-html="/pds-staging/sbn-footer.html"></div> 
+    
+    <script>
+        includeHTML = function(cb) {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("include-html");
+                if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
+                        elmnt.removeAttribute("include-html");
+                        includeHTML(cb);
+                    }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+                }
+            }
+            if (cb) cb();
+            };
+        includeHTML();
+    </script>
+</body>
+</html>

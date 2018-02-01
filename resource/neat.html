@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>
+        
+    </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="/pds-staging/css/sbn-header.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-sidebar.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-footer.css">
+    <link rel="stylesheet" href="/pds-staging/css/project-main.css">
+</head>
+<body>
+
+    <div include-html="/pds-staging/sbn-header.html"></div> 
+
+    <!-- BEGIN main content -->
+    <main class="sbn-main">
+        <center>
+            <h1> Near Earth Asteroid Tracking (NEAT) </h1>
+            </center>
+            
+            <b>
+            <p>
+            The Near-Earth Asteroid Tracking (NEAT) 
+              project began as a collaborative effort with the United States Air
+              Force (USAF) in December 1995.  It concentrated on the discovery and
+              observations of near-Earth asteroids and comets, collectively called  
+              near-Earth objects (NEOs).  NEAT ended its observations in April 2007.
+              Throughout its history, NEAT utilized three 1m class telescopes - two 
+              on the Hawaiian island of Maui (GEODSS and MSSS) and the 1.2m Oschin
+            Schmidt telescope  
+              at Palomar Observatory near San Diego, CA.  Three unique cameras were 
+              developed and used throughout the program.  These data are intended to
+              be usable for photometric analysis of the various objects within the  
+              NEAT data.  Most nights included calibration data, and lists of   
+              photometric standard calibration fields.
+            
+            <p>
+            This dataset contains the NEAT             
+                observations, associated darks, flats, log files and a list               
+                of Landolt standards.
+            
+            <p>
+            To search the available NEAT data for images containing a specified target,
+            and to download the selected images, use the <a href="http://sbntools.psi.edu/neosearch/">Small Bodies NEAT Browser</a>.
+            </b>
+            
+            <br><br>
+            
+            <table border=1>
+            <tr><td width=250> <i>Volume</i>
+                <td width=100> <i>planned delivery date</i>
+                <td width=100> <i>Browse</i>
+                <td width=100> <i>Readme</i>
+                <td width=100> <i>Comment</i>
+            <tr><td> Volume 1 - Maui GEODSS
+                <td> Available now
+                <td><a href="http://sbn.psi.edu/archive/neat/geodss/">Browse vol. 1</a>
+                <td><a href="http://sbn.psi.edu/archive/neat/geodss/aareadme.txt">Readme</a>
+                <td>
+            <tr><td> Volume 2 - Palomar Tri-Cam part 1
+                <td> Available now
+                <td> <a href="http://sbn.psi.edu/archive/neat/tricam/">Browse vol. 2</a>
+                <td><a href="http://sbn.psi.edu/archive/neat/tricam/aareadme.txt">Readme</a>
+                <td>
+            <tr><td> Volume 3 - Palomar Tri-Cam part 2
+                <td> Available now
+                <td> <a href="http://sbn.psi.edu/archive/neat/tricam2/">Browse vol. 3</a>
+                <td><a href="http://sbn.psi.edu/archive/neat/tricam2/aareadme.txt">Readme</a>
+                <td>
+            <tr><td> Volume 4 - Palomar Tri-Cam part 3
+                <td> UNK
+                <td>
+                <td>
+                <td> future project
+            <tr><td> Maui MSSS
+                <td> UNK
+                <td>
+                <td>
+                <td> future project
+            <tr><td> Palomar QUEST
+                <td> UNK
+                <td>
+                <td>
+                <td> future project
+            </table>
+            
+            <p>
+            Use the following citation to reference this data set:
+            
+            <p>
+            Bauer, J. M. and Lawrence, K. J., Eds., 
+                    Near Earth Asteroid Tracking V1.0.                    
+                    EAR-A-I1063-3-NEAT-V1.0. NASA Planetary Data System, 2013.
+            
+            <br><br>
+            
+            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
+            
+            <p>
+            None.
+            
+            <br> <br>
+    </main>
+    <!-- END main content -->
+
+    <div include-html="/pds-staging/sbn-sidebar.html"></div> 
+
+    <div include-html="/pds-staging/sbn-footer.html"></div> 
+    
+    <script>
+        includeHTML = function(cb) {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("include-html");
+                if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
+                        elmnt.removeAttribute("include-html");
+                        includeHTML(cb);
+                    }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+                }
+            }
+            if (cb) cb();
+            };
+        includeHTML();
+    </script>
+</body>
+</html>

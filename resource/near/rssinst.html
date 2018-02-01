@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>
+        
+    </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="/pds-staging/css/sbn-header.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-sidebar.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-footer.css">
+    <link rel="stylesheet" href="/pds-staging/css/project-main.css">
+</head>
+<body>
+
+    <div include-html="/pds-staging/sbn-header.html"></div> 
+
+    <!-- BEGIN main content -->
+    <main class="sbn-main">
+        <center>
+            <h1> NEAR Radio Science Subsystem (RSS) Data </h1>
+            </center>
+            
+            <p>
+            <b>All data (levels 1-5):</b>
+            
+            <table border=1>
+            <tr><td width=400> <i>Data set ID</i>
+                <td width=150> <i>Includes:</i>
+                <td width=100> <i>Browse</i>
+                <td width=100> <i>Download</i>
+            
+            <tr><td>NEAR-A-RSS-1/5-EROS/FLYBY-V1.0
+                <td>Eros Flyby
+                <td><a href="http://sbn.psi.edu/archive/near/NEAR_A_RSS_1_5_EROS_FLYBY_V1_0"> 13 Mb</a>
+                <td><a href="http://sbn.psi.edu/archive/near/NEAR_A_RSS_1_5_EROS_FLYBY_V1_0"> 4 MB</a>
+            
+            <tr><td>NEAR-A-RSS-1/5-EROS/ORBIT-V1.0
+                <td>Eros Orbit
+                <td><a href="http://sbn.psi.edu/archive/near/NEAR_A_RSS_1_5_EROS_ORBIT_V1_0"> 61 Mb</a>
+                <td><a href="http://sbn.psi.edu/archive/near/NEAR_A_RSS_1_5_EROS_ORBIT_V1_0"> 12 Mb</a>
+            
+            <tr><td>NEAR-A-RSS-1/5-MATHILDE-V1.0
+                <td>Mathilde
+                <td><a href="http://sbn.psi.edu/archive/near/NEAR_A_RSS_1_5_MATHILDE_V1_0"> 6.8 Mb</a>
+                <td><a href="http://sbn.psi.edu/archive/near/NEAR_A_RSS_1_5_MATHILDE_V1_0"> 4 Mb</a>
+            
+            <tr><td>NEAR-A-RSS-5-EROS/GRAVITY-V1.0
+                <td>Eros Gravity
+                <td><a href="http://sbn.psi.edu/archive/near/NEAR_A_RSS_5_EROS_GRAVITY_V1_0"> 7.6 Mb</a>
+                <td><a href="http://sbn.psi.edu/archive/near/NEAR_A_RSS_5_EROS_GRAVITY_V1_0"> 4 Mb</a>
+            
+            </table>
+            
+            <br>
+            
+            <center>
+            <a href="/pds-staging/resource/near">Return to NEAR Archive</a>
+            </center>
+            <br>
+    </main>
+    <!-- END main content -->
+
+    <div include-html="/pds-staging/sbn-sidebar.html"></div> 
+
+    <div include-html="/pds-staging/sbn-footer.html"></div> 
+    
+    <script>
+        includeHTML = function(cb) {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("include-html");
+                if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
+                        elmnt.removeAttribute("include-html");
+                        includeHTML(cb);
+                    }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+                }
+            }
+            if (cb) cb();
+            };
+        includeHTML();
+    </script>
+</body>
+</html>

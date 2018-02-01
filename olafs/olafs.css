@@ -1,0 +1,41 @@
+main a {
+    color: inherit;
+}
+.olafs {
+    margin: 45px 0 5px 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.olaf {
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid blue;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 0 blue;
+    height: 250px;
+    width: 250px;
+    text-align: center;
+    cursor: pointer;
+}
+.olaf h2 {
+    text-align: center;
+}
+.olaf h4 {
+    text-align: center;
+    font-variant: small-caps;
+    margin-top: 0;
+    color: green;
+}
+.olaf a {
+    text-align: center;
+}
+.olaf:hover {
+    box-shadow: 0 0 2px 1px blue;
+}
+.description {
+    padding: 20px;
+    text-align: left;
+    font-size: 0.85em;
+}

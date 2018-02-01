@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>
+        
+    </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="/pds-staging/css/sbn-header.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-sidebar.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-footer.css">
+    <link rel="stylesheet" href="/pds-staging/css/project-main.css">
+</head>
+<body>
+
+    <div include-html="/pds-staging/sbn-header.html"></div> 
+
+    <!-- BEGIN main content -->
+    <main class="sbn-main">
+        <center>
+            <h1> Supplemental IRAS Minor Planet Survey (SIMPS) </h1>
+            <h2> and </h2>
+            <h1> IRAS Minor Planet Survey (IMPS) </h1>
+            </center>
+            
+            <h3>
+            <p>
+            The current (V6.0) version of this data set comprises the 2002 Supplemental
+            IRAS Minor Planet Survey (SIMPS) which presents additional and revised
+            diameters and albedos for asteroids detected by the 1983 IRAS mission.
+            This version supersedes versions 1.0 through 5.0, which represent
+                    the original 1992 IRAS Minor Planet Survey (IMPS).
+            </h3>
+            
+            <table border=1>
+            <tr><td width=500> IRAS-A-FPA-3-RDR-IMPS-V6.0
+                <td width=100> <a href="http://sbn.psi.edu/pds/asteroid/IRAS_A_FPA_3_RDR_IMPS_V6_0"> Browse </a>
+                <td width=200> <a href="http://sbn.psi.edu/pds/asteroid/IRAS_A_FPA_3_RDR_IMPS_V6_0.zip"> Download (5.3 Mb) </a>
+            </table>
+            
+            <p>
+            Use the following citation to reference this data set:
+            
+            <p>
+            "Tedesco, E.F., P.V. Noah, M. Noah,
+            and S.D. Price.  IRAS Minor Planet Survey.  IRAS-A-FPA-3-RDR-IMPS-V6.0.
+            NASA Planetary Data System, 2004."
+            
+            <br><br>
+            
+            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
+            
+            <table border=1>
+            <tr><td width=500> IRAS-A-FPA-3-RDR-IMPS-V5.0
+                <td width=100> <a href="http://sbn.psi.edu/pds/asteroid/IRAS_A_FPA_3_RDR_IMPS_V5_0"> Browse </a>
+                <td width=200> <a href="http://sbn.psi.edu/pds/asteroid/IRAS_A_FPA_3_RDR_IMPS_V5_0.zip"> Download (2.5 Mb) </a>
+            <tr><td> IRAS-A-FPA-3-RDR-IMPS-V4.0
+                <td> <a href="http://sbn.psi.edu/pds/asteroid/IRAS_A_FPA_3_RDR_IMPS_V4_0"> Browse </a>
+                <td> <a href="http://sbn.psi.edu/pds/asteroid/IRAS_A_FPA_3_RDR_IMPS_V4_0.zip">  Download (2.5 kb) </a>
+            <tr><td> IRAS-A-FPA-3-RDR-IMPS-V3.0
+                <td> <a href="http://sbn.psi.edu/pds/asteroid/IRAS_A_FPA_3_RDR_IMPS_V3_0"> Browse </a>
+                <td> <a href="http://sbn.psi.edu/pds/asteroid/IRAS_A_FPA_3_RDR_IMPS_V3_0.zip">  Download (2.4 kb) </a>
+            <tr><td> IRAS-A-FPA-3-RDR-IMPS-V2.0
+                <td> <a href="http://sbn.psi.edu/pds/asteroid/IRAS_A_FPA_3_RDR_IMPS_V2_0"> Browse </a>
+                <td> <a href="http://sbn.psi.edu/pds/asteroid/IRAS_A_FPA_3_RDR_IMPS_V2_0.zip">  Download (69 kb) </a>
+            <tr><td> IRAS-A-FPA-3-RDR-IMPS-V1.0
+                <td> <a href="http://sbn.psi.edu/pds/asteroid/IRAS_A_FPA_3_RDR_IMPS_V1_0"> Browse </a>
+                <td> <a href="http://sbn.psi.edu/pds/asteroid/IRAS_A_FPA_3_RDR_IMPS_V1_0.zip">  Download (68 kb) </a>
+            </table>
+            
+            <br> <br>
+    </main>
+    <!-- END main content -->
+
+    <div include-html="/pds-staging/sbn-sidebar.html"></div> 
+
+    <div include-html="/pds-staging/sbn-footer.html"></div> 
+    
+    <script>
+        includeHTML = function(cb) {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("include-html");
+                if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
+                        elmnt.removeAttribute("include-html");
+                        includeHTML(cb);
+                    }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+                }
+            }
+            if (cb) cb();
+            };
+        includeHTML();
+    </script>
+</body>
+</html>

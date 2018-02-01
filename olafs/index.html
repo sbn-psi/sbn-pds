@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>
+      OLAF
+    </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="/pds-staging/css/sbn-header.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-sidebar.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-footer.css">
+    <link rel="stylesheet" href="/pds-staging/css/project-main.css">
+</head>
+<body>
+
+    <div include-html="/pds-staging/sbn-header.html"></div>
+
+    <!-- BEGIN main content -->
+    <link rel="stylesheet" href="olafs.css">
+    <main class="sbn-main">
+        <h1 style="margin-top:0;margin-bottom:0;text-align:center;">On-Line Archiving Facility</h1>
+        <h1 style="margin-top:0;text-align:center;">(OLAF)</h1>
+
+        <p>OLAF is a web site that allows individuals to submit their data to the Planetary Data System so that it can be archived and made available to the public. Submitted data is reviewed for quality and completeness and given a citation when accepted. This software is made available by the Small Bodies Node (SBN) of the PDS.</p>
+
+        <div class="olafs">
+
+            <a href="https://sbnapps.psi.edu/olaf-pds3/" target="_blank">
+                <div class="olaf">
+                    <h2>PDS 3 OLAF</h2>
+                    <p>https://sbnapps.psi.edu/olaf-pds3</p>
+                    <p class="description">This is the OLAF submission site for PDS 3 data products.</p>
+                </div>
+            </a>
+
+            <a href="https://sbnapps.psi.edu/olaf/" target="_blank">
+                <div class="olaf">
+                    <h2>PDS 4 OLAF</h2>
+                    <p>https://sbnapps.psi.edu/olaf</p>
+                    <p class="description">The original (or "classic") update to OLAF. This version of OLAF makes additional PDS 4 data types available to data providers.</p>
+                </div>
+            </a>
+
+            <a href="https://sbnapps.psi.edu/olaf-node" target="_blank">
+                <div class="olaf">
+                    <h2 style="margin-bottom:0;">PDS 4 OLAF</h2>
+                    <h4>* Public Beta</h4>
+                    <p>https://sbnapps.psi.edu/olaf-node</p>
+                    <p class="description">The latest public beta version of the PDS 4 OLAF submission site. While still under development, the application is available to beta users for submitting certain data types to the PDS.</p>
+                </div>
+            </a>
+
+        </div>
+        <p>
+            For questions about OLAF or this web site, contact Conor Kingston (<a href="mailto:ckingston@psi.edu">ckingston@psi.edu</a>).
+        </p>
+    </main>
+    <!-- END main content -->
+
+    <div include-html="/pds-staging/sbn-sidebar.html"></div>
+
+    <div include-html="/pds-staging/sbn-footer.html"></div>
+
+    <script>
+        includeHTML = function(cb) {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("include-html");
+                if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
+                        elmnt.removeAttribute("include-html");
+                        includeHTML(cb);
+                    }
+                }
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+                }
+            }
+            if (cb) cb();
+            };
+        includeHTML();
+    </script>
+</body>
+</html>
