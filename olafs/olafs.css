@@ -8,6 +8,9 @@ main a {
     justify-content: space-around;
     align-items: center;
 }
+.olafs a {
+  text-decoration: none;
+}
 .olaf {
     padding: 5px;
     margin: 5px;
@@ -34,8 +37,10 @@ main a {
 .olaf:hover {
     box-shadow: 0 0 2px 1px blue;
 }
+.olaf p {
+  font-size: 0.85em;
+}
 .description {
-    padding: 20px;
+    padding: 0 1.5em;
     text-align: left;
-    font-size: 0.85em;
 }
