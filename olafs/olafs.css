@@ -17,7 +17,7 @@ main a {
     border: 1px solid blue;
     border-radius: 3px;
     box-shadow: 0 0 2px 0 blue;
-    height: 250px;
+    min-height: 250px;
     width: 250px;
     text-align: center;
     cursor: pointer;
@@ -39,6 +39,9 @@ main a {
 }
 .olaf p {
   font-size: 0.85em;
+}
+.olaf li {
+    text-align: left;
 }
 .description {
     padding: 0 1.5em;
