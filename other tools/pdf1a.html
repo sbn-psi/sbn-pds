@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>PDF-1a-1b</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="/pds-staging/css/sbn-header.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-sidebar.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-footer.css">
+    <link rel="stylesheet" href="/pds-staging/css/project-main.css">
+</head>
+<body>
+
+    <div include-html="/pds-staging/sbn-header.html"></div> 
+
+    <!-- BEGIN main content -->
+    <main class="sbn-main">
+
+        <center><h1>PDF/A Converting and Validation</h1></center>
+
+        <p>
+        PDF is a standard for encoding documents in an "as printed" 
+            form that is portable. PDF/A was developed as an 
+            international standard to define the use of PDF for 
+            archiving. <li><a href="https://en.wikipedia.org/wiki/PDF/A#Background">[1]</a></li>
+        </p>
+        <p>
+        To check if your PDF is conformed correctly, we have some tools below to aid in that process.
+        </p>
+
+        <br><br>
+
+        <center>
+            <h2> PDF/A Validation </h2>
+            <li><a href="http://verapdf.org/software/">Verapdf</a>: Software</li>
+        </center>
+        <br>
+        <p>
+            This webpage is where you can download a validation software
+            package for PDF/A. If you don'y have JAVA, you would need to 
+            download that first. They do have versions for Windows, Mac,
+            and Linux. If you need assistance in installing this package, 
+            they have a link to their GitHub directory on the page.
+        </p>
+        <br>
+        <p>
+            Once the program is installed, you can either run the GUI version
+            or run the program from the command line.
+        </p>
+        <br>
+        <p>
+            For the command line, ./verapdf -f 1b --format text pdf_file 
+        </p>
+        <br>
+        <p>
+            For the GUI, there will be a line of text that appears in the 
+            empty space next to the Execute button. The PDF/A flavour we're
+            looking for is PDF/A-1A, with PDF/A-1B being good enough. If 
+            it's valid, the text will be green. If it's invalid, the text 
+            will be red.
+        </p>
+        <br>
+        <center>
+            <h2> PDF/A Conversion </h2>
+        </center>
+
+        <br>
+        <p>
+            We have a converter to PDF/A for those that have a Mac or Linux system
+        </p>
+        <br>
+        <center>
+        <li><a href="https://www.ghostscript.com/">https://www.ghostscript.com/</a></li>
+        </center>
+        <p>
+            The converter script we have needs Ghostscript to run. This link 
+            will bring you to the Ghostscript website, where you are 
+            able to download it for your system.
+        </p>
+        <br>
+        <center>
+        <li><a href="https://github.com/sbn-psi/data-provider-tools/archive/master.zip">https://github.com/sbn-psi/data-provider-tools/archive/master.zip</a></li>
+        </center>
+        <p>
+            This link will download a zip file with all the files that you
+            would need to convert a PDF to a PDF/A-1B. It will make a copy 
+            of the file you want to convert. The copy file will look like: name.pdfa.pdf
+            From the command line: ./pdf2pda pdf_file
+        </p>
+        <br>
+        <p>
+            If it comes back as a FAIL, then the program couldn't convert the 
+            PDF file. In that situation, you will have to look for other means
+            of converting the file. If it comes back as a PASS, that means the
+            copied file will be conformed to PDF/A-1B standards and you are ready
+            to submit your document to us for archiving.
+        </p>
+
+    </main>
+    <!-- END main content -->
+
+    <div include-html="/pds-staging/sbn-sidebar.html"></div> 
+
+    <div include-html="/pds-staging/sbn-footer.html"></div> 
+    
+    <script>
+        includeHTML = function(cb) {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("include-html");
+                if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
+                        elmnt.removeAttribute("include-html");
+                        includeHTML(cb);
+                    }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+                }
+            }
+            if (cb) cb();
+            };
+        includeHTML();
+    </script>
+</body>
+</html>
