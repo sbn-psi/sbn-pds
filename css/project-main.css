@@ -38,7 +38,6 @@ a:not(.ignore-a-styling) {
     }
     .sbn-sidebar {
         width: 250px;
-        height: 530px;
         position: absolute;
         left: 0;
         top: 5em;
@@ -54,7 +53,7 @@ a:not(.ignore-a-styling) {
     }
     .sbn-main {
         margin-left: 250px;
-        min-height: 530px;
+        min-height: 550px;
     }
 }
 /* iPad (landscape mode) & wider */
