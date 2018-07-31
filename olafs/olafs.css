@@ -20,27 +20,38 @@ main a {
     height: 8em;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .olafs {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     min-height: 30em;
+    max-width: 50em;
 }
 
-.olafs a {
-    text-decoration: none;
+.olaf.primary {
+    flex: 0 0 100%;
+    border-width: medium;
 }
 
 .olaf {
+    box-sizing: border-box;
+    padding: 0.7em;
     margin: 1em;
+    text-decoration: none;
     border: 0.05em solid #0B3D91;
-    width: 15em;
+    flex: 1;
     text-align: center;
     cursor: pointer;
 }
 
 .olaf ul {
-    padding-left: 1.5em;
+    display: inline-block;
 }
 
 .olaf li {
@@ -51,6 +62,7 @@ main a {
 .olaf h2 {
     text-align: center;
     color: #0B3D91;
+    margin: 0 auto;
 }
 
 .olaf h4 {
@@ -60,12 +72,17 @@ main a {
     color: green;
 }
 
-.olaf a {
+.olaf .url {
     text-align: center;
+    color: #0B3D91;
+}
+.olaf .note {
+  color: grey;
+  font-size: 0.8em;
 }
 
 .olaf:hover {
-    box-shadow: 0 0 0.1em 0 #0B3D91;
+    box-shadow: 0 0 0.3em 0 #0B3D91;
 }
 
 .olaf p {
