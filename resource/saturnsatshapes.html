@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Saturn Small Moon Shape Models</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="/pds/css/sbn-header.css">
+    <link rel="stylesheet" href="/pds/css/sbn-sidebar.css">
+    <link rel="stylesheet" href="/pds/css/sbn-footer.css">
+    <link rel="stylesheet" href="/pds/css/project-main.css">
+</head>
+<body>
+
+    <div include-html="/pds/sbn-header.html"></div> 
+
+    <!-- BEGIN main content -->
+    <main class="sbn-main">
+        <center>
+            <h1> Saturn Small Moon Shape Models</h1>
+            </center>
+            
+            <h3>
+            <p>
+            Digital shape models have been constructed from Cassini Imaging Science Subsystem (ISS) data for eleven of the small satellites of Saturn and delivered to the Planetary Data System. These satellites are: Pan, Daphnis, Atlas, Prometheus, Pandora, Epimetheus, Janus, Telesto, Calypso, Helene, and Hyperion. These models typically have uncertainties well under 0.5 km. They are appropriate for global geometric, geologic, and geophysical studies, and regional slope and topography study. They are useful in studying morphologies of only the relatively largest-sized craters. Studies based on early versions of these shape models are in Thomas et al., 2013. 
+            </h3>
+            <br>
+<font color=red> STATUS: Certified and released as of October 1, 2018.</font>
+<br>            
+            <table border=1>
+            <tr><td width=500> urn:nasa:pds:saturn_satellite_shape_models::1.0
+                <td width=100> <a href="http://sbnarchive.psi.edu/pds4/certified/saturn_satellite_shape_models_V1_0"> Browse </a>
+                <td width=200> <a href="http://sbnarchive.psi.edu/pds4/certified/saturn_satellite_shape_models_V1_0.zip"> Download (4.9 Mb) </a>
+            <tr><td width=500> Binary Planetary Constants Kernels
+                <td width=100> <a href="http://sbnarchive.psi.edu/pds4/certified/saturn_sat_shape_bpc"> Browse </a>
+                <td width=200> <a href="http://sbnarchive.psi.edu/pds4/certified/saturn_sat_shape_bpc.zip"> Download (23 Mb) </a>
+            </table>
+            <p>
+            This data set has been certified and released. All liens have been resolved. It is not archived yet, as the Binary Planetary Constants Kernels have not been archived in NAIF yet. These Kernels are provided here in the meantime.
+           <br>
+            
+            <p>
+            Use the following citation to reference this data set:
+            
+            <p>
+           "Thomas, P., Joseph, J., and Ansty, T., Saturn Small Moon Shape Models V1.0. urn:nasa:pds:saturn_satellite_shape_models::1.0. NASA Planetary Data System, 2018." 
+            <br><br>
+            
+            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
+            
+           <p> None. 
+            <br> <br>
+    </main>
+    <!-- END main content -->
+
+    <div include-html="/pds/sbn-sidebar.html"></div> 
+
+    <div include-html="/pds/sbn-footer.html"></div> 
+    
+    <script>
+        includeHTML = function(cb) {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("include-html");
+                if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
+                        elmnt.removeAttribute("include-html");
+                        includeHTML(cb);
+                    }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+                }
+            }
+            if (cb) cb();
+            };
+        includeHTML();
+    </script>
+</body>
+</html>
