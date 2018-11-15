@@ -1,0 +1,19 @@
+.table {
+    display: table;
+    border-collapse: collapse;
+}
+.row {
+    display: table-row;
+}
+.header {
+    background: #D5D5D5;
+}
+.cell {
+    padding: 0.5em;
+    display: table-cell;
+    border: 1px solid black;
+    vertical-align: middle;
+}
+.preview {
+    height: 8em;
+}

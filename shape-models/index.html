@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>PDS Asteroid/Dust Archive</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="/pds/css/sbn-header.css">
+    <link rel="stylesheet" href="/pds/css/sbn-sidebar.css">
+    <link rel="stylesheet" href="/pds/css/sbn-footer.css">
+    <link rel="stylesheet" href="/pds/css/project-main.css">
+    <link rel="stylesheet" href="/pds/css/shape-models-page.css">
+</head>
+<body>
+
+    <div include-html="/pds/sbn-header.html"></div> 
+
+    <!-- BEGIN main content -->
+    <main class="sbn-main">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="objects.js" charset="utf-8"></script>
+        <h1 id="title">Shape Model Archive</h1>
+        
+        <p>The scripts used to generate the following .obj files are available in the <a href="https://github.com/sbn-psi/data-tools/tree/master/shapes" target="_blank">SBN GitHub repo</a>.</p>
+        
+        <div id="error-message">
+            <p>Something went wrong loading the shape models.</p>
+            <p>If this issue persists after refreshing the page, contact Conor Kingston (<a href="mailto:ckingston@psi.edu">ckingston@psi.edu</a>).</p>
+        </div>
+        
+    </main>
+    <!-- END main content -->
+
+    <div include-html="/pds/sbn-sidebar.html"></div> 
+
+    <div include-html="/pds/sbn-footer.html"></div> 
+    
+    <script>
+        includeHTML = function(cb) {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("include-html");
+                if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
+                        elmnt.removeAttribute("include-html");
+                        includeHTML(cb);
+                    }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+                }
+            }
+            if (cb) cb();
+            };
+        includeHTML();
+    </script>
+</body>
+</html>
