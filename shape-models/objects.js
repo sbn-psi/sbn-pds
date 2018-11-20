@@ -10,7 +10,8 @@ const Objects = {
         dataset: radarDataset,
         preview: previews + '1998ky26.png'
     },
-    '67P': {
+    'Churyumov–Gerasimenko': {
+        designation: '67P',
         file: files + '67p/67P-CG.obj',
         dataset: 'https://pdssbn.astro.umd.edu/holdings/ro-c-multi-5-67p-shape-v2.0/dataset.html',
         preview: previews + '67p.png'
@@ -33,14 +34,16 @@ const Objects = {
     'Atlas': {
         file: files + 'SATURN_SMALL_MOONS/atlas_30k_plt.obj',
         dataset: saturnDataset,
-        preview: previews + 'atlas.png'
+        preview: previews + 'atlas_30k_plt.png'
     },
     'Bacchus': {
+        designation: '2063',
         file: files + 'RADAR/2063bacchus.obj',
         dataset: radarDataset,
         preview: previews + '2063bacchus.png'
     },
     'Bennu': {
+        designation: '101955',
         file: files + '101955bennu.obj',
         dataset: 'https://sbn.psi.edu/pds/resource/bennushape.html',
         preview: previews + '101955bennu.png'
@@ -51,6 +54,7 @@ const Objects = {
         preview: previews + 'calypso_30k_plt.png'
     },
     'Castalia': {
+        designation: '4769',
         file: files + 'RADAR/4769castalia.obj',
         dataset: radarDataset,
         preview: previews + '4769castalia.png'
@@ -61,26 +65,31 @@ const Objects = {
         preview: previews + 'daphnis_30k_plt.png'
     },
     'Dione': {
+        designation: '106',
         file: files + 'dione/dione.zip',
         dataset: 'https://sbn.psi.edu/pds/resource/dioneshape.html',
         preview: previews + 'dione.png'
     },
     'Epimetheus': {
+        designation: '1810',
         file: files + 'SATURN_SMALL_MOONS/epimetheus_30k_plt.obj',
         dataset: saturnDataset,
         preview: previews + 'epimetheus_30k_plt.png'
     },
     'Eros': {
+        designation: '433',
         file: files + 'eros/eros.zip',
         dataset: 'https://sbn.psi.edu/pds/resource/erosshape.html',
         preview: previews + 'eros.png'
     },
     'Geographos': {
+        designation: '1620',
         file: files + 'RADAR/1620geographos.obj',
         dataset: radarDataset,
         preview: previews + '1620geographos.png'
     },
     'Golevka': {
+        designation: '6489',
         file: files + 'RADAR/6489golevka.obj',
         dataset: radarDataset,
         preview: previews + '6489golevka.png'
@@ -101,11 +110,13 @@ const Objects = {
         preview: previews + 'hyperion_30k_plt.png'
     },
     'Itokawa': {
+        designation: '25143',
         file: files + 'itokawa/itokawa.zip',
         dataset: 'https://sbn.psi.edu/pds/resource/itokawashape.html',
         preview: previews + 'itokawa.png'
     },
     'Itokawa (Radar)': {
+        designation: '25143',
         file: files + 'RADAR/25143itokawa.obj',
         dataset: radarDataset,
         preview: previews + 'itokawa_radar.png'
@@ -116,11 +127,13 @@ const Objects = {
         preview: previews + 'janus_30k_plt.png'
     },
     'Kleopatra': {
+        designation: '216',
         file: files + 'RADAR/216kleopatra.obj',
         dataset: radarDataset,
         preview: previews + '216kleopatra.png'
     },
     'Lutetia': {
+        designation: '21',
         file: files + 'lutetia/lutetia.zip',
         dataset: 'http://pdssbn.astro.umd.edu/holdings/ro-a-osinac_osiwac-5-lutetia-shape-v1.0/dataset.html',
         preview: previews + 'lutetia.png'
@@ -131,11 +144,13 @@ const Objects = {
         preview: previews + 'mimas.png'
     },
     'Pan': {
+        designation: '4450',
         file: files + 'SATURN_SMALL_MOONS/pan_30k_plt.obj',
         dataset: saturnDataset,
         preview: previews + 'pan_30k_plt.png'
     },
     'Pandora': {
+        designation: '55',
         file: files + 'SATURN_SMALL_MOONS/pandora_30k_plt.obj',
         dataset: saturnDataset,
         preview: previews + 'pandora_30k_plt.png'
@@ -151,11 +166,13 @@ const Objects = {
         preview: previews + 'phoebe.png'
     },
     'Prometheus': {
+        designation: '1809',
         file: files + 'SATURN_SMALL_MOONS/prometheus_30k_plt.obj',
         dataset: saturnDataset,
         preview: previews + 'prometheus_30k_plt.png'
     },
     'Steins': {
+        designation: '2867',
         file: files + 'steins/steins.obj',
         dataset: 'http://pdssbn.astro.umd.edu/holdings/ro-a-osinac_osiwac-5-steins-shape-v1.0/dataset.html',
         preview: previews + 'steins.png'
@@ -166,6 +183,7 @@ const Objects = {
         preview: previews + 'telesto_30k_plt.png'
     },
     'Tempel 1': {
+        designation: '3808',
         file: files + 'tempel1/tempel1_2012_cart.obj',
         dataset: 'https://pdssbn.astro.umd.edu/holdings/dif-c-hriv_its_mri-5-tempel1-shape-v2.0/dataset.html',
         preview: previews + 'tempel1_2012_cart.png'
@@ -176,6 +194,7 @@ const Objects = {
         preview: previews + 'tethys.png'
     },
     'Wild 2': {
+        designation: '1941',
         file: files + 'wild2/wild2_cart_full.obj',
         dataset: 'https://pdssbn.astro.umd.edu/holdings/sdu-c-navcam-5-wild2-shape-model-v2.1/dataset.html',
         preview: previews + 'wild2.png'
@@ -189,6 +208,7 @@ $(document).ready(function() {
     `<div class="table" id="shape-model-table">
         <div class="row header">
             <div class="cell">Object Name</div>
+            <div class="cell">Download Originals</div>
             <div class="cell">Download Shape Models</div>
             <div class="cell">Link to Dataset</div>
             <div class="cell">Preview</div>
@@ -216,7 +236,7 @@ $(document).ready(function() {
         const preview = Objects[name]['preview'];
         const previewElement = newCell(`<img src="${preview}" class="preview">`);
         
-        const row = `<div class="row">${nameElement}${fileElement}${datasetElement}${previewElement}</div>`;
+        const row = `<div class="row">${nameElement}${newCell('')}${fileElement}${datasetElement}${previewElement}</div>`;
         
         table.append(row);
     });
