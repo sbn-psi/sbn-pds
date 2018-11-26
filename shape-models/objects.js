@@ -29,8 +29,7 @@ $(document).ready(function() {
         }
     }
     
-    const newNames = objectNames.sort(sortAlphaNum);
-    newNames.map(name => {
+    objectNames.sort(sortAlphaNum).map(name => {
         const $table = $("#shape-model-table");
         
         const $row = $('<div>', {class: 'row'});
