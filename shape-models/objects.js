@@ -7,7 +7,7 @@ $(document).ready(function() {
         <div class="row header">
             <div class="cell">Object Name</div>
             <div class="cell">Link to Dataset</div>
-            <div class="cell">Files</div>
+            <div class="cell">Downloads</div>
             <div class="cell">Preview</div>
         </div>
     </div>`;
@@ -52,9 +52,9 @@ $(document).ready(function() {
         const $filesCell = $('<div>', {class: 'cell'});
         const $list = $('<ul>');
         const files = bodies[name]['files'];
-        const fileNames = Object.keys(files);
-        fileNames.map(fileName => {
-            $list.append(`<li>${fileName}</li><ul><li><a href="${files[fileName]['archived']}" target="_blank" download>Download Original</a></li><li><a href="${files[fileName]['obj']}">Download .obj</a></li></ul></li>`);
+        const titles = Object.keys(files);
+        titles.map(title => {
+            $list.append(`<li><a href="${files[title]}" target="_blank" download>${title}</a></li>`)
         });
         
         $filesCell.append($list);
