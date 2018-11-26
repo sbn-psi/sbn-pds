@@ -1,9 +1,5 @@
-
-
-const bodies = Bodies;
-console.log(bodies);
-
 $(document).ready(function() {
+    const bodies = Bodies;
     const errorMessage = $('#error-message');
     const objectNames = Object.keys(bodies);
     const table =
@@ -18,15 +14,15 @@ $(document).ready(function() {
     
     errorMessage.replaceWith(table);
     
-    var reA = /[^a-zA-Z]/g;
-    var reN = /[^0-9]/g;
+    const reAlpha = /[^a-zA-Z]/g;
+    const reNum = /[^0-9]/g;
 
     function sortAlphaNum(a, b) {
-        var aA = a.replace(reA, "");
-        var bA = b.replace(reA, "");
+        const aA = a.replace(reAlpha, "");
+        const bA = b.replace(reAlpha, "");
         if (aA === bA) {
-            var aN = parseInt(a.replace(reN, ""), 10);
-            var bN = parseInt(b.replace(reN, ""), 10);
+            const aN = parseInt(a.replace(reNum, ""), 10);
+            const bN = parseInt(b.replace(reNum, ""), 10);
             return aN === bN ? 0 : aN > bN ? 1 : -1;
         } else {
             return aA > bA ? 1 : -1;
@@ -35,7 +31,6 @@ $(document).ready(function() {
     
     const newNames = objectNames.sort(sortAlphaNum);
     newNames.map(name => {
-        console.log(name);
         const $table = $("#shape-model-table");
         
         const $row = $('<div>', {class: 'row'});
