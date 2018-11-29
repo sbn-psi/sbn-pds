@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Shape and Gravity Models</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="/pds/css/sbn-header.css">
+    <link rel="stylesheet" href="/pds/css/sbn-sidebar.css">
+    <link rel="stylesheet" href="/pds/css/sbn-footer.css">
+    <link rel="stylesheet" href="/pds/css/project-main.css">
+</head>
+<body>
+
+    <div include-html="/pds/sbn-header.html"></div> 
+
+    <!-- BEGIN main content -->
+    <main class="sbn-main">
+        <center>
+            <h1>Gravity Models</h1>
+            </center>
+            
+            <ul>
+                <li><a href="/pds/resource/dawn/dwnvgravL2.html">Dawn Vesta Gravity Models</a></li>
+                <li><a href="/pds/resource/dawn/dwncgravL2.html">Dawn Ceres Gravity Models</a></li>
+                <li><a href="/pds/resource/cereshst.html">  HST Images, Albedo Maps, and Shape of 1 Ceres </a></li>
+                <li><a href="/pds/resource/nearmod.html"> NEAR Collected Shape and Gravity Models </a> - contains shape and gravity models of NEAR targets Mathilde and Eros</li>
+                <li><a href="/pds/resource/oshape.html"> Optical Shape Models </a> (Thomas) - contains shape models of asteroids and small planetary satellites</li>
+                <li><a href="/pds/resource/stkshape.html"> Stooke Shape Models </a> - contains shape models of asteroids, planetary satellites, and comet Halley</li>
+            </ul>
+    </main>
+    <!-- END main content -->
+
+    <div include-html="/pds/sbn-sidebar.html"></div> 
+
+    <div include-html="/pds/sbn-footer.html"></div> 
+    
+    <script>
+        includeHTML = function(cb) {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("include-html");
+                if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
+                        elmnt.removeAttribute("include-html");
+                        includeHTML(cb);
+                    }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+                }
+            }
+            if (cb) cb();
+            };
+        includeHTML();
+    </script>
+</body>
+</html>
