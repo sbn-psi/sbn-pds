@@ -1,18 +1,52 @@
+let bodies = Bodies();
+
 $(document).ready(function() {
-    const bodies = Bodies;
-    const errorMessage = $('#error-message');
+    makeTable();
+    // search tool
+    $('#query').on('keyup', function(event) {
+        event.stopPropagation();
+        
+        const str = this.value.toUpperCase();
+        const regex = new RegExp(str,'g');
+        bodies = Bodies();
+        
+        if (!str) {
+            makeTable();
+            return;
+        };
+        
+        let keys = Object.keys(Bodies());
+        let filteredNewBodies = keys.filter(body => {
+            body = body.toUpperCase();
+            const test = regex.test(body);
+            return test;
+        });
+        
+        keys.map(key => {
+            if (filteredNewBodies.indexOf(key) === -1) {
+                delete bodies[key];
+            };
+        });
+        
+        makeTable();
+    });
+});
+
+function makeTable() {
+    const shapeModelTable = $('#shape-model-table');
     const objectNames = Object.keys(bodies);
     const table =
     `<div class="table" id="shape-model-table">
         <div class="row header">
             <div class="cell">Object Name</div>
             <div class="cell">Link to Dataset</div>
+            <div class="cell">Link to Data Ferret Search</div>
             <div class="cell">Downloads</div>
             <div class="cell">Preview</div>
         </div>
     </div>`;
     
-    errorMessage.replaceWith(table);
+    shapeModelTable.replaceWith(table);
     
     const reAlpha = /[^a-zA-Z]/g;
     const reNum = /[^0-9]/g;
@@ -48,6 +82,13 @@ $(document).ready(function() {
         const dataset = bodies[name]['dataset'];
         $row.append(newCell(`<a href="${dataset}" target="_blank">Browse Dataset</a>`));
         
+        // construct data ferret search link cell
+        function querify(qs) {
+            return qs.replace(/ /g,'%20');
+        };
+        const ferretLink = `https://sbnapps.psi.edu/ferret/SimpleSearch/results.action?targetName=${querify(name)}`;
+        $row.append(newCell(`<a href="${ferretLink}" target="_blank">Ferret Search</a>`));
+        
         // construct files cell
         const $filesCell = $('<div>', {class: 'cell'});
         const $list = $('<ul>');
@@ -66,4 +107,4 @@ $(document).ready(function() {
         
         $table.append($row);
     });
-});
+};
