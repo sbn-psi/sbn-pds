@@ -155,7 +155,11 @@ function Bodies() {
                 'Archived Shape Files': 'https://sbnarchive.psi.edu/pds4/certified/saturn_satellite_shape_models_V1_0/data/',
                 '.obj File': path('SATURN_SMALL_MOONS/epimetheus_30k_plt.tab.obj')
             },
-            datasets: [saturnDataset],
+            datasets: [
+                saturnDataset,
+                stookDataset,
+                thomasDataset
+            ],
             preview: previews + 'epimetheus_30k_plt.png'
         },
         '433 Eros': {
@@ -241,7 +245,8 @@ function Bodies() {
             },
             datasets: [
                 saturnDataset,
-                thomasDataset
+                thomasDataset,
+                stookDataset
             ],
             preview: previews + 'janus_30k_plt.png'
         },
@@ -291,7 +296,10 @@ function Bodies() {
                 '.obj File': path('SATURN_SMALL_MOONS/pandora_30k_plt.tab.obj')
             },
             file: files + 'SATURN_SMALL_MOONS/pandora_30k_plt.obj',
-            datasets: [saturnDataset],
+            datasets: [
+                saturnDataset,
+                stookDataset
+            ],
             preview: previews + 'pandora_30k_plt.png'
         },
         'Phobos (Mars I)': {
@@ -326,7 +334,10 @@ function Bodies() {
                 'Archived Shape Files': 'https://sbnarchive.psi.edu/pds4/certified/saturn_satellite_shape_models_V1_0/data/',
                 '.obj File': path('SATURN_SMALL_MOONS/prometheus_30k_plt.tab.obj')
             },
-            datasets: [saturnDataset],
+            datasets: [
+                saturnDataset,
+                stookDataset
+            ],
             preview: previews + 'prometheus_30k_plt.png'
         },
         '2867 Steins': {
@@ -462,37 +473,6 @@ function Bodies() {
             preview: null
         },
         'Proteus (Neptune VIII)': {
-            files: {
-                'Archived Shape File': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/'
-            },
-            datasets: [stookDataset],
-            preview: null
-        },
-        'Janus (Saturn X)': {
-            files: {
-                'Archived Shape File': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/'
-            },
-            datasets: [stookDataset],
-            preview: null
-        },
-        'Epimetheus (Saturn XI)': {
-            files: {
-                'Archived Shape File': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/'
-            },
-            datasets: [
-                stookDataset,
-                thomasDataset
-            ],
-            preview: null
-        },
-        'Prometheus (Saturn XVI)': {
-            files: {
-                'Archived Shape File': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/'
-            },
-            datasets: [stookDataset],
-            preview: null
-        },
-        'Pandora (Saturn XVII)': {
             files: {
                 'Archived Shape File': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/'
             },
