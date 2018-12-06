@@ -8,6 +8,10 @@ const saturnDataset = {
     name: 'Saturn Small Moon Shape Models',
     link: 'https://sbn.psi.edu/pds/resource/saturnsatshapes.html'
 };
+const stookDataset = {
+    name: 'Stooke Small Body Shape Models',
+    link: 'https://sbn.psi.edu/pds/resource/stkshape.html'
+};
 const path = function(path) {
     return `files/${path}`;
 };
@@ -373,6 +377,90 @@ function Bodies() {
                 name: 'Dawn Shape Models of Ceres',
                 link: 'https://sbn.psi.edu/pds/resource/dawn/dwncfcshape.html'
             }],
+            preview: null
+        },
+        '243 Ida': {
+            files: {
+                'Archived Shape File': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/'
+            },
+            datasets: [stookDataset],
+            preview: null
+        },
+        '253 Mathilde': {
+            files: {
+                'Archived Shape File': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/'
+            },
+            datasets: [stookDataset],
+            preview: null
+        },
+        '951 Gaspra': {
+            files: {
+                'Archived Shape File': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/'
+            },
+            datasets: [stookDataset],
+            preview: null
+        },
+        '1P/Halley 1': {
+            files: {
+                'Archived Shape File': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/'
+            },
+            datasets: [stookDataset],
+            preview: null
+        },
+        'Amalthea (Jupiter V)': {
+            files: {
+                'Archived Shape File': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/'
+            },
+            datasets: [stookDataset],
+            preview: null
+        },
+        'Thebe (Jupiter XIV)': {
+            files: {
+                'Archived Shape File': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/'
+            },
+            datasets: [stookDataset],
+            preview: null
+        },
+        'Larissa (Neptune VII)': {
+            files: {
+                'Archived Shape File': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/'
+            },
+            datasets: [stookDataset],
+            preview: null
+        },
+        'Proteus (Neptune VIII)': {
+            files: {
+                'Archived Shape File': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/'
+            },
+            datasets: [stookDataset],
+            preview: null
+        },
+        'Janus (Saturn X)': {
+            files: {
+                'Archived Shape File': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/'
+            },
+            datasets: [stookDataset],
+            preview: null
+        },
+        'Epimetheus (Saturn XI)': {
+            files: {
+                'Archived Shape File': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/'
+            },
+            datasets: [stookDataset],
+            preview: null
+        },
+        'Prometheus (Saturn XVI)': {
+            files: {
+                'Archived Shape File': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/'
+            },
+            datasets: [stookDataset],
+            preview: null
+        },
+        'Pandora (Saturn XVII)': {
+            files: {
+                'Archived Shape File': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/'
+            },
+            datasets: [stookDataset],
             preview: null
         }
     };
