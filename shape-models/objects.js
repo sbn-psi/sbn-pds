@@ -111,7 +111,8 @@ function makeTable() {
         
         // construct preview cell
         const preview = bodies[name]['preview'];
-        $row.append(newCell(`<a href="${'http://localhost:8000/pds/shape-models/' + preview}" target="_blank"><img src="${preview}" class="preview" title="Click to Enlarge"></a>`));
+        if (!preview) $row.append(newCell(''));
+        else $row.append(newCell(`<a href="${'http://localhost:8000/pds/shape-models/' + preview}" target="_blank"><img src="${preview}" class="preview" title="Click to Enlarge"></a>`));
         
         $table.append($row);
     });
