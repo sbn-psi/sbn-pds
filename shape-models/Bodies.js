@@ -354,6 +354,26 @@ function Bodies() {
             },
             datasets: [radarDataset],
             preview: previews + 'toutatis.png'
+        },
+        '4 Vesta': {
+            files: {
+                'Archived Digital Terrain Models': 'https://sbnarchive.psi.edu/pds3/dawn/fc/DWNVSPG_2/DATA/'
+            },
+            datasets: [{
+                name: 'Dawn Shape Models of Vesta',
+                link: 'https://sbn.psi.edu/pds/resource/dawn/dwnvfcshape.html'
+            }],
+            preview: null
+        },
+        '1 Ceres': {
+            files: {
+                'Archived Shape Files': 'https://sbnarchive.psi.edu/pds3/dawn/fc/DWNCSPC_4_01/DATA/ICQ/'
+            },
+            datasets: [{
+                name: 'Dawn Shape Models of Ceres',
+                link: 'https://sbn.psi.edu/pds/resource/dawn/dwncfcshape.html'
+            }],
+            preview: null
         }
     };
 };
