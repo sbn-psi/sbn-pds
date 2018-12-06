@@ -405,12 +405,18 @@ function Bodies() {
         },
         '1 Ceres': {
             files: {
-                'Archived Digital Terrain Models': 'https://sbnarchive.psi.edu/pds3/dawn/fc/DWNCSPC_4_01/DATA/ICQ/'
+                'Archived Digital Terrain Models': 'https://sbnarchive.psi.edu/pds3/dawn/fc/DWNCSPC_4_01/DATA/ICQ/',
+                'Archived Shape Model': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_HSTACS_5_CERESHST_V1_0/data/shape/'
             },
-            datasets: [{
-                name: 'Dawn Shape Models of Ceres',
-                link: 'https://sbn.psi.edu/pds/resource/dawn/dwncfcshape.html'
-            }],
+            datasets: [
+                {
+                    name: 'Dawn Shape Models of Ceres',
+                    link: 'https://sbn.psi.edu/pds/resource/dawn/dwncfcshape.html'
+                },{
+                    name: 'HST Images, Albedo Maps, and Shape of 1 Ceres',
+                    link: 'http://localhost:8000/pds/resource/cereshst.html'
+                }
+            ],
             preview: null
         },
         '243 Ida': {
