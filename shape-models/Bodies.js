@@ -12,6 +12,10 @@ const stookDataset = {
     name: 'Stooke Small Body Shape Models',
     link: 'https://sbn.psi.edu/pds/resource/stkshape.html'
 };
+const thomasDataset = {
+    name: 'Small Body Optical Shape Models',
+    link: 'https://sbn.psi.edu/pds/resource/oshape.html'
+};
 const path = function(path) {
     return `files/${path}`;
 };
@@ -202,7 +206,10 @@ function Bodies() {
                 'Archived Shape Files': 'https://sbnarchive.psi.edu/pds4/certified/saturn_satellite_shape_models_V1_0/data/',
                 '.obj File': path('SATURN_SMALL_MOONS/hyperion_30k_plt.tab.obj')
             },
-            datasets: [saturnDataset],
+            datasets: [
+                saturnDataset,
+                thomasDataset
+            ],
             preview: previews + 'hyperion_30k_plt.png'
         },
         '25143 Itokawa': {
@@ -225,7 +232,10 @@ function Bodies() {
                 'Archived Shape Files': 'https://sbnarchive.psi.edu/pds4/certified/saturn_satellite_shape_models_V1_0/data/',
                 '.obj File': path('SATURN_SMALL_MOONS/janus_30k_plt.tab.obj')
             },
-            datasets: [saturnDataset],
+            datasets: [
+                saturnDataset,
+                thomasDataset
+            ],
             preview: previews + 'janus_30k_plt.png'
         },
         '216 Kleopatra': {
@@ -283,10 +293,13 @@ function Bodies() {
                 '.obj File (Min Resolution)': path('phobos/phobos_ver64q.tab.obj'),
                 '.obj File (Max Resolution)': path('phobos/phobos_ver512q.tab.obj')
             },
-            datasets: [{
-                name: 'Gaskell Phobos Shape Model',
-                link: 'https://sbn.psi.edu/pds/resource/phobosshape.html'
-            }],
+            datasets: [
+                {
+                    name: 'Gaskell Phobos Shape Model',
+                    link: 'https://sbn.psi.edu/pds/resource/phobosshape.html'
+                },
+                thomasDataset
+            ],
             preview: previews + 'phobos.png'
         },
         'Phoebe (Saturn IX)': {
@@ -363,10 +376,13 @@ function Bodies() {
             files: {
                 'Archived Digital Terrain Models': 'https://sbnarchive.psi.edu/pds3/dawn/fc/DWNVSPG_2/DATA/'
             },
-            datasets: [{
-                name: 'Dawn Shape Models of Vesta',
-                link: 'https://sbn.psi.edu/pds/resource/dawn/dwnvfcshape.html'
-            }],
+            datasets: [
+                {
+                    name: 'Dawn Shape Models of Vesta',
+                    link: 'https://sbn.psi.edu/pds/resource/dawn/dwnvfcshape.html'
+                },
+                thomasDataset
+            ],
             preview: null
         },
         '1 Ceres': {
@@ -383,21 +399,30 @@ function Bodies() {
             files: {
                 'Archived Shape File': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/'
             },
-            datasets: [stookDataset],
+            datasets: [
+                stookDataset,
+                thomasDataset
+            ],
             preview: null
         },
         '253 Mathilde': {
             files: {
                 'Archived Shape File': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/'
             },
-            datasets: [stookDataset],
+            datasets: [
+                stookDataset,
+                thomasDataset
+            ],
             preview: null
         },
         '951 Gaspra': {
             files: {
                 'Archived Shape File': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/'
             },
-            datasets: [stookDataset],
+            datasets: [
+                stookDataset,
+                thomasDataset
+            ],
             preview: null
         },
         '1P/Halley 1': {
@@ -446,7 +471,10 @@ function Bodies() {
             files: {
                 'Archived Shape File': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/'
             },
-            datasets: [stookDataset],
+            datasets: [
+                stookDataset,
+                thomasDataset
+            ],
             preview: null
         },
         'Prometheus (Saturn XVI)': {
@@ -462,6 +490,14 @@ function Bodies() {
             },
             datasets: [stookDataset],
             preview: null
-        }
+        },
+        'Deimos (Mars II)': {
+            files: {
+                'Archived Shape File': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_SHAPE_MODELS_V2_1/data/'
+            },
+            datasets: [thomasDataset],
+            preview: null
+        },
+        
     };
 };
