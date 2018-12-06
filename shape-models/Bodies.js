@@ -16,6 +16,10 @@ const thomasDataset = {
     name: 'Small Body Optical Shape Models',
     link: 'https://sbn.psi.edu/pds/resource/oshape.html'
 };
+const nearDataset = {
+    name: 'NEAR Collected Shape and Gravity Models',
+    link: 'https://sbn.psi.edu/pds/resource/nearmod.html'
+};
 const path = function(path) {
     return `files/${path}`;
 };
@@ -160,10 +164,13 @@ function Bodies() {
                 '.obj File (Min Resolution)': path('eros/ver64q.tab.obj'),
                 '.obj File (Max Resolution)': path('eros/ver512q.tab.obj')
             },
-            datasets: [{
-                name: 'Gaskell Eros Shape Model',
-                link: 'https://sbn.psi.edu/pds/resource/erosshape.html'
-            }],
+            datasets: [
+                {
+                    name: 'Gaskell Eros Shape Model',
+                    link: 'https://sbn.psi.edu/pds/resource/erosshape.html'
+                },
+                nearDataset
+            ],
             preview: previews + 'eros.png'
         },
         '1620 Geographos': {
@@ -411,7 +418,8 @@ function Bodies() {
             },
             datasets: [
                 stookDataset,
-                thomasDataset
+                thomasDataset,
+                nearDataset
             ],
             preview: null
         },
