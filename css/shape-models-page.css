@@ -1,0 +1,27 @@
+#title {
+    text-align: center;
+}
+#search {
+    margin: 2em 0 1em 0;
+}
+.table {
+    display: table;
+    border-collapse: collapse;
+    margin: 0 0 1em 0;
+}
+.row {
+    display: table-row;
+}
+.header {
+    background: #D5D5D5;
+}
+.cell {
+    padding: 0.5em;
+    display: table-cell;
+    border: 1px solid black;
+    vertical-align: middle;
+}
+.preview {
+    height: 4em;
+    width: 4em;
+}
