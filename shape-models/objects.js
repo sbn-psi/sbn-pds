@@ -39,7 +39,7 @@ function makeTable() {
     `<div class="table" id="shape-model-table">
         <div class="row header">
             <div class="cell">Object Name</div>
-            <div class="cell">Link to Dataset</div>
+            <div class="cell">Link to Datasets</div>
             <div class="cell">Link to Data Ferret Search</div>
             <div class="cell">Downloads</div>
             <div class="cell">Preview</div>
@@ -75,12 +75,20 @@ function makeTable() {
         };
         
         // construct name cell
-        const $name = newCell(`<p>${name}</p>`);
+        const $name = newCell(`<p><b>${name}</b></p>`);
         $row.append($name);
         
         // construct link to dataset cell
-        const dataset = bodies[name]['dataset'];
-        $row.append(newCell(`<a href="${dataset}" target="_blank">Browse Dataset</a>`));
+        const $datasetDiv = $('<div>',{class: 'cell'});
+        const $datasetList = $('<ul>');
+        
+        $datasetDiv.append($datasetList);
+        
+        const datasets = bodies[name]['datasets'];
+        datasets.map(dataset => {
+            $datasetList.append(`<li><a href="${dataset.link}" target="_blank">${dataset.name}</a></li>`);
+        });
+        $row.append($datasetDiv);
         
         // construct data ferret search link cell
         function querify(qs) {
