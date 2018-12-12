@@ -2,3 +2,4 @@ Header set Access-Control-Allow-Origin "*"
 
 # Redirect /pds/shape_models to /pds/shape-models
 Redirect 301 /pds/shape_models/ /pds/shape-models/
+Redirect 301 /pds/shape_models /pds/shape-models/
