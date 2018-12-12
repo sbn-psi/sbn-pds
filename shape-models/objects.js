@@ -40,8 +40,8 @@ function makeTable() {
         <div class="row header">
             <div class="cell">Object Name</div>
             <div class="cell">Link to Datasets</div>
-            <div class="cell">Link to Data Ferret Search</div>
             <div class="cell">Downloads</div>
+            <div class="cell">Link to Data Ferret Search</div>
             <div class="cell">Preview</div>
         </div>
     </div>`;
@@ -90,13 +90,6 @@ function makeTable() {
         });
         $row.append($datasetDiv);
 
-        // construct data ferret search link cell
-        function querify(qs) {
-            return qs.replace(/ /g,'%20');
-        };
-        const ferretLink = `https://sbnapps.psi.edu/ferret/SimpleSearch/results.action?targetName=${querify(name)}`;
-        $row.append(newCell(`<a href="${ferretLink}" target="_blank">Ferret Search</a>`));
-
         // construct files cell
         const $filesCell = $('<div>', {class: 'cell'});
         const $list = $('<ul>');
@@ -108,6 +101,13 @@ function makeTable() {
 
         $filesCell.append($list);
         $row.append($filesCell);
+
+        // construct data ferret search link cell
+        function querify(qs) {
+            return qs.replace(/ /g,'%20');
+        };
+        const ferretLink = `https://sbnapps.psi.edu/ferret/SimpleSearch/results.action?targetName=${querify(name)}`;
+        $row.append(newCell(`<a href="${ferretLink}" target="_blank">Ferret Search</a>`));
 
         // construct preview cell
         const preview = bodies[name]['preview'];
