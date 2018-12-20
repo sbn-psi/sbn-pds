@@ -39,8 +39,8 @@ function makeTable() {
     `<div class="table" id="shape-model-table">
         <div class="row header">
             <div class="cell">Object Name</div>
-            <div class="cell">Datasets</div>
-            <div class="cell">Downloads</div>
+            <div class="cell">Full Datasets with Documentation</div>
+            <div class="cell">Download Original or .obj</div>
             <div class="cell">Data Ferret Search</div>
             <div class="cell">Preview</div>
         </div>
