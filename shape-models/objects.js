@@ -86,7 +86,7 @@ function makeTable() {
 
         const datasets = bodies[name]['datasets'];
         datasets.map(dataset => {
-            $datasetList.append(`<li><a href="${dataset.link}" target="_blank">${dataset.name}</a></li>`);
+            $datasetList.append(`<li><a href="${dataset.link}">${dataset.name}</a></li>`);
         });
         $row.append($datasetDiv);
 
@@ -96,7 +96,7 @@ function makeTable() {
         const files = bodies[name]['files'];
         const titles = Object.keys(files);
         titles.map(title => {
-            $list.append(`<li><a href="${files[title]}" target="_blank" download>${title}</a></li>`)
+            $list.append(`<li><a href="${files[title]}" download>${title}</a></li>`)
         });
 
         $filesCell.append($list);
@@ -107,12 +107,12 @@ function makeTable() {
             return qs.replace(/ /g,'%20');
         };
         const ferretLink = `https://sbnapps.psi.edu/ferret/SimpleSearch/results.action?targetName=${querify(name)}`;
-        $row.append(newCell(`<a href="${ferretLink}" target="_blank">Ferret Search</a>`));
+        $row.append(newCell(`<a href="${ferretLink}">Ferret Search</a>`));
 
         // construct preview cell
         const preview = bodies[name]['preview'];
         if (!preview) $row.append(newCell(''));
-        else $row.append(newCell(`<a href="${preview}" target="_blank"><img src="${preview}" class="preview" title="Click to Enlarge"></a>`));
+        else $row.append(newCell(`<a href="${preview}"><img src="${preview}" class="preview" title="Click to Enlarge"></a>`));
 
         $table.append($row);
     });
