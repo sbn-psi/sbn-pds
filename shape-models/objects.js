@@ -1,4 +1,6 @@
-let bodies = Bodies();
+let asteroids = Asteroids();
+let comets = Comets();
+let satellites = Satellites();
 
 $(document).ready(function() {
     makeTable();
@@ -8,25 +10,39 @@ $(document).ready(function() {
 
         const str = this.value.toUpperCase();
         const regex = new RegExp(str,'g');
-        bodies = Bodies();
+        asteroids = Asteroids();
+        comets = Comets();
+        satellites = Satellites();
 
         if (!str) {
             makeTable();
             return;
         };
-
-        let keys = Object.keys(Bodies());
-        let filteredNewBodies = keys.filter(body => {
-            body = body.toUpperCase();
-            const test = regex.test(body);
-            return test;
-        });
-
-        keys.map(key => {
-            if (filteredNewBodies.indexOf(key) === -1) {
-                delete bodies[key];
-            };
-        });
+        
+        // FILTER FUNCTION
+        function filterObjects(objs) {
+            let keys = Object.keys(objs);
+            let filteredNewBodies = keys.filter(body => {
+                body = body.toUpperCase();
+                const test = regex.test(body);
+                return test;
+            });
+            
+            keys.map(key => {
+                if (filteredNewBodies.indexOf(key) === -1) {
+                    delete objs[key];
+                };
+            });
+        };
+        
+        // FILTER ASTEROIDS
+        filterObjects(asteroids)
+        
+        // FILTER COMETS
+        filterObjects(comets);
+        
+        // FILTER SATELLITES
+        filterObjects(satellites);
 
         makeTable();
     });
@@ -34,7 +50,6 @@ $(document).ready(function() {
 
 function makeTable() {
     const shapeModelTable = $('#shape-model-table');
-    const objectNames = Object.keys(bodies);
     const table =
     `<div class="table" id="shape-model-table">
         <div class="row header">
@@ -44,14 +59,39 @@ function makeTable() {
             <div class="cell">Data Ferret Search</div>
             <div class="cell">Preview</div>
         </div>
+        <div class="row category" id="asteroids">
+            <div class="cell"><h3>Asteroids <span id="asteroid-count"></span></h3></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+        <div class="row category" id="comets">
+            <div class="cell"><h3>Comets <span id="comet-count"></span></h3></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+        <div class="row category" id="satellites">
+            <div class="cell"><h3>Planetary Satellites <span id="satellite-count"></span></h3></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
     </div>`;
-
+    
     shapeModelTable.replaceWith(table);
-
+    
+    const asteroidNames = Object.keys(asteroids);
+    const cometNames = Object.keys(comets);
+    const satelliteNames = Object.keys(satellites);
+    
     const reAlpha = /[^a-zA-Z]/g;
     const reNum = /[^0-9]/g;
 
-    function sortAlphaNum(a, b) {
+    function sortAlphaNum(b, a) {
         const aA = a.replace(reAlpha, "");
         const bA = b.replace(reAlpha, "");
         if (aA === bA) {
@@ -62,9 +102,9 @@ function makeTable() {
             return aA > bA ? 1 : -1;
         }
     }
-
-    objectNames.sort(sortAlphaNum).map(name => {
-        const $table = $("#shape-model-table");
+    
+    function newRow(id,name,datasets,files,preview) {
+        const $header = $(`#${id}`);
 
         const $row = $('<div>', {class: 'row'});
 
@@ -84,7 +124,7 @@ function makeTable() {
 
         $datasetDiv.append($datasetList);
 
-        const datasets = bodies[name]['datasets'];
+        // const datasets = bodies[name]['datasets'];
         datasets.map(dataset => {
             $datasetList.append(`<li><a href="${dataset.link}">${dataset.name}</a></li>`);
         });
@@ -93,7 +133,7 @@ function makeTable() {
         // construct files cell
         const $filesCell = $('<div>', {class: 'cell'});
         const $list = $('<ul>');
-        const files = bodies[name]['files'];
+        // const files = bodies[name]['files'];
         const titles = Object.keys(files);
         titles.map(title => {
             $list.append(`<li><a href="${files[title]}" download>${title}</a></li>`)
@@ -110,10 +150,43 @@ function makeTable() {
         $row.append(newCell(`<a href="${ferretLink}">Ferret Search</a>`));
 
         // construct preview cell
-        const preview = bodies[name]['preview'];
+        // const preview = bodies[name]['preview'];
         if (!preview) $row.append(newCell(''));
         else $row.append(newCell(`<a href="${preview}"><img src="${preview}" class="preview" title="Click to Enlarge"></a>`));
 
-        $table.append($row);
+        $header.after($row);
+    };
+
+    // PLACE ASTEROIDS
+    asteroidNames.sort(sortAlphaNum).map(function(asteroid) {
+        const datasets = asteroids[asteroid]['datasets'];
+        const files = asteroids[asteroid]['files'];
+        const preview = asteroids[asteroid]['preview'];
+        newRow('asteroids',asteroid,datasets,files,preview);
     });
+    // ASTEROID COUNT
+    $('#asteroid-count').text(`(${Object.keys(asteroids).length})`);
+    
+    // PLACE COMETS
+    cometNames.sort(sortAlphaNum).map(function(comet) {
+        const datasets = comets[comet]['datasets'];
+        const files = comets[comet]['files'];
+        const preview = comets[comet]['preview'];
+        newRow('comets',comet,datasets,files,preview);
+    });
+    // COMET COUNT
+    $('#comet-count').text(`(${Object.keys(comets).length})`);
+    
+    // PLACE SATELLITES
+    satelliteNames.sort(sortAlphaNum).map(function(satellite) {
+        const datasets = satellites[satellite]['datasets'];
+        const files = satellites[satellite]['files'];
+        const preview = satellites[satellite]['preview'];
+        newRow('satellites',satellite,datasets,files,preview);
+    });
+    // SATELLITE COUNT
+    $('#satellite-count').text(`(${Object.keys(satellites).length})`);
+    
+    // APPEND COUNTS
+    
 };

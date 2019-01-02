@@ -18,8 +18,21 @@
 .cell {
     padding: 0.5em;
     display: table-cell;
-    border: 1px solid black;
+    border: 1px solid #BDBDBD;
     vertical-align: middle;
+}
+.cell h3 {
+    margin: 0;
+    text-decoration: underline;
+}
+.category {
+    border-right: 1px solid #BDBDBD;
+    border-left: 1px solid #BDBDBD;
+    border-bottom: 2px solid #BDBDBD;
+}
+.category .cell {
+    border: none;
+    background: #EDEDED;
 }
 .preview {
     height: 4em;
