@@ -152,32 +152,41 @@ const Asteroids = function() {
         },
         '4 Vesta': {
             files: {
-                'Archived Digital Terrain Models': 'https://sbnarchive.psi.edu/pds3/dawn/fc/DWNVSPG_2/DATA/'
+                'Archived Shape Model': 'https://sbnarchive.psi.edu/pds3/dawn/fc/DWNVSPG_2/DATA/',
+                'DAWN Shape Model (.obj)': path('vesta/Vesta-256V.OBJ')
             },
             datasets: [
                 {
                     name: 'Dawn Shape Models of Vesta',
                     link: 'https://sbn.psi.edu/pds/resource/dawn/dwnvfcshape.html'
+                    // ,files: [
+                    //     path('vesta/Vesta-256V.OBJ')
+                    // ]
                 },
                 thomasDataset
             ],
-            preview: null
+            preview: previews + 'vesta.png'
         },
         '1 Ceres': {
             files: {
-                'Archived Digital Terrain Models': 'https://sbnarchive.psi.edu/pds3/dawn/fc/DWNCSPC_4_01/DATA/ICQ/',
+                'Archived DAWN Shape Model': 'https://sbnarchive.psi.edu/pds3/dawn/fc/DWNCSPC_4_01/DATA/ICQ/',
+                'DAWN Shape Model (.obj)': path('ceres/CERES_SPC181019_0128.ICQ.OBJ'),
                 'Archived Shape Model': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_HSTACS_5_CERESHST_V1_0/data/shape/'
             },
             datasets: [
                 {
                     name: 'Dawn Shape Models of Ceres',
                     link: 'https://sbn.psi.edu/pds/resource/dawn/dwncfcshape.html'
+                    // ,files: [
+                    //     path('ceres/CERES_SPC181019_0128.ICQ'),
+                    //     path('ceres/CERES_SPC181019_0128.ICQ.OBJ')
+                    // ]
                 },{
                     name: 'HST Images, Albedo Maps, and Shape of 1 Ceres',
                     link: 'http://localhost:8000/pds/resource/cereshst.html'
                 }
             ],
-            preview: null
+            preview: previews + 'ceres.png'
         },
         '243 Ida': {
             files: {
