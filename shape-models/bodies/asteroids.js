@@ -182,6 +182,9 @@ const Asteroids = function() {
                     //     path('ceres/CERES_SPC181019_0128.ICQ.OBJ')
                     // ]
                 },{
+                    name: 'Ceres LAMO Regional Digital Terrain Model (Occator)',
+                    link: 'https://sbn.psi.edu/pds/resource/dawn/dwncfcshape.html'
+                },{
                     name: 'HST Images, Albedo Maps, and Shape of 1 Ceres',
                     link: 'http://localhost:8000/pds/resource/cereshst.html'
                 }
