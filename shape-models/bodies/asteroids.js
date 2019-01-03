@@ -153,7 +153,7 @@ const Asteroids = function() {
         '4 Vesta': {
             files: {
                 'Archived Shape Model': 'https://sbnarchive.psi.edu/pds3/dawn/fc/DWNVSPG_2/DATA/',
-                'DAWN Shape Model (.obj)': path('vesta/Vesta-256V.OBJ')
+                'Dawn Shape Model (.obj)': path('vesta/Vesta-256V.OBJ')
             },
             datasets: [
                 {
@@ -169,8 +169,8 @@ const Asteroids = function() {
         },
         '1 Ceres': {
             files: {
-                'Archived DAWN Shape Model': 'https://sbnarchive.psi.edu/pds3/dawn/fc/DWNCSPC_4_01/DATA/ICQ/',
-                'DAWN Shape Model (.obj)': path('ceres/CERES_SPC181019_0128.ICQ.OBJ'),
+                'Archived Dawn Shape Model': 'https://sbnarchive.psi.edu/pds3/dawn/fc/DWNCSPC_4_01/DATA/ICQ/',
+                'Dawn Shape Model (.obj)': path('ceres/CERES_SPC181019_0128.ICQ.OBJ'),
                 'Archived Shape Model': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_HSTACS_5_CERESHST_V1_0/data/shape/'
             },
             datasets: [
