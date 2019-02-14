@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>OSIRIS-REx TAGCAMS Bundle </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+
+    <link rel="stylesheet" href="/pds/css/sbn-header.css">
+    <link rel="stylesheet" href="/pds/css/sbn-sidebar.css">
+    <link rel="stylesheet" href="/pds/css/sbn-footer.css">
+    <link rel="stylesheet" href="/pds/css/project-main.css">
+</head>
+<body>
+
+    <div include-html="/pds/sbn-header.html"></div> 
+
+    <!-- BEGIN main content -->
+    <main class="sbn-main">
+        <center>
+            <h1> OSIRIS-REx TAGCAMS Bundle</h1>
+            </center>
+            
+            <h3>
+            <p>
+This bundle collects all the operational data products produced by the OSIRIS-REx Touch-and_Go Camera Suite (TAGCAMS). TAGCAMS is a suite of engineering cameras used for optical navigation (navcam), natural feature tracking (nftcam), and documenting sample stowage (stowcam).
+
+<p>
+The latest release includes data from the Cruise 1, Earth Gravity Assist, and Cruise 2 mission phases.
+
+            </h3>
+
+<p>
+Latest release date:  Initial release, Feb. 15, 2019
+
+            <table border=1>
+            <tr><td width=300> urn:nasa:pds:orex.tagcams (13 Gb)
+                <td width=100> <a href="https:sbn.psi.edu/archive/pds4/orex/orex.tagcams"> Browse </a>
+                <td width=200> <a href="https:sbn.psi.edu/archive/pds4/orex/orex.tagcams.zip"> Download (4.6 Gb) </a>
+            </table>
+            
+            <p>
+            Use the following citation to reference this data set:
+            
+            <p>
+"Bos, B., C. Jackman, and D.S. Lauretta, Origins, Spectral Interpretation, Resource Identification, Security, Regolith Explorer (OSIRIS-REx): Touch-and-Go Camera Suite (TAGCAMS) Bundle, urn:nasa:pds:orex.tagcams, NASA Planetary Data System, 2019."
+
+            <br><br>
+            
+            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
+            
+           <p> None. 
+            <br> <br>
+    </main>
+    <!-- END main content -->
+
+    <div include-html="/pds/sbn-sidebar.html"></div> 
+
+    <div include-html="/pds/sbn-footer.html"></div> 
+    
+    <script>
+        includeHTML = function(cb) {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("include-html");
+                if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
+                        elmnt.removeAttribute("include-html");
+                        includeHTML(cb);
+                    }
+                }      
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+                }
+            }
+            if (cb) cb();
+            };
+        includeHTML();
+    </script>
+</body>
+</html>
