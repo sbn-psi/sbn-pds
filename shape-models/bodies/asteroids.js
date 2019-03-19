@@ -186,7 +186,7 @@ const Asteroids = function() {
                     link: 'https://sbn.psi.edu/pds/resource/dawn/dwncfcshape.html'
                 },{
                     name: 'HST Images, Albedo Maps, and Shape of 1 Ceres',
-                    link: 'http://localhost:8000/pds/resource/cereshst.html'
+                    link: 'https://sbn.psi.edu/pds/resource/cereshst.html'
                 }
             ],
             preview: previews + 'ceres.png'
