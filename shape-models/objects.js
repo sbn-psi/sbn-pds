@@ -9,7 +9,6 @@ $(document).ready(function() {
         event.stopPropagation();
 
         const str = this.value.toUpperCase();
-        const regex = new RegExp(str,'g');
         asteroids = Asteroids();
         comets = Comets();
         satellites = Satellites();
@@ -20,12 +19,12 @@ $(document).ready(function() {
         };
         
         // FILTER FUNCTION
-        function filterObjects(objs) {
+        function filterObjects(str,objs) {
             let keys = Object.keys(objs);
             let filteredNewBodies = keys.filter(body => {
                 body = body.toUpperCase();
-                const test = regex.test(body);
-                return test;
+                const regex = new RegExp(str,'g');
+                return regex.test(body);
             });
             
             keys.map(key => {
@@ -36,13 +35,13 @@ $(document).ready(function() {
         };
         
         // FILTER ASTEROIDS
-        filterObjects(asteroids)
+        filterObjects(str,asteroids)
         
         // FILTER COMETS
-        filterObjects(comets);
+        filterObjects(str,comets);
         
         // FILTER SATELLITES
-        filterObjects(satellites);
+        filterObjects(str,satellites);
 
         makeTable();
     });
