@@ -36,21 +36,19 @@ let Satellites = function() {
         //     }],
         //     preview: previews + 'dione.png'
         // },
-        // 'Epimetheus (Saturn XI)': {
-        //     files: {
-        //         'Archived Shape Files': 'https://sbnarchive.psi.edu/pds4/certified/saturn_satellite_shape_models_V1_0/data/',
-        //         '.obj File': path('SATURN_SMALL_MOONS/epimetheus_30k_plt.tab.obj')
-        //     },
-        //     datasets: [
-        //         saturnDataset,
-        //         stookDataset,
-        //         thomasDataset
-        //     ],
-        //     preview: previews + 'epimetheus_30k_plt.png'
-        // },
 
 
 
+        'Epimetheus (Saturn XI)': {
+            datasets: [
+                saturnDataset({
+                    objPath: path('SATURN_SMALL_MOONS/epimetheus_30k_plt.tab.obj'),
+                    preview: 'previews/epimetheus_30k_plt.png'
+                }),
+                stookDataset(nullset),
+                thomasDataset(nullset)
+            ]
+        },
         'Helene (Saturn XII)': {
             datasets: [
                 saturnDataset({
