@@ -47,6 +47,17 @@ const Asteroids = function() {
                 thomasDataset(nullset)
             ]
         },
+        '21 Lutetia': {
+            datasets: [{
+                name: 'Rosetta Shape Model of Asteroid Lutetia',
+                link: 'http://pdssbn.astro.umd.edu/holdings/ro-a-osinac_osiwac-5-lutetia-shape-v1.0/dataset.html',
+                file: {
+                    archivePath: 'https://pdssbn.astro.umd.edu/holdings/ro-a-osinac_osiwac-5-lutetia-shape-v1.0/data/',
+                    objPath: path('lutetia/lutetia_003k_cart.obj'),
+                    preview: 'previews/lutetia.png'
+                }
+            }]
+        },
         '243 Ida': {
             datasets: [
                 stookDataset(nullset),
@@ -206,18 +217,7 @@ const Asteroids = function() {
             datasets: [radarDataset],
             preview: previews + '216kleopatra.png'
         },
-        '21 Lutetia': {
-            files: {
-                'Archived Shape Files': 'https://pdssbn.astro.umd.edu/holdings/ro-a-osinac_osiwac-5-lutetia-shape-v1.0/data/',
-                '.obj File (Min Resolution)': path('lutetia/lutetia_003k_cart.obj'),
-                '.obj File (Max Resolution)': path('lutetia/lutetia_003m_cart.obj')
-            },
-            datasets: [{
-                name: 'Rosetta Shape Model of Asteroid Lutetia',
-                link: 'http://pdssbn.astro.umd.edu/holdings/ro-a-osinac_osiwac-5-lutetia-shape-v1.0/dataset.html'
-            }],
-            preview: previews + 'lutetia.png'
-        },
+        
         
     
         
