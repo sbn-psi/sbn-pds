@@ -27,6 +27,9 @@ let Satellites = function() {
                 }
             )]
         },
+        'Deimos (Mars II)': {
+            datasets: [thomasDataset(nullset)]
+        },
         'Dione (Saturn IV)': {
             datasets: [{
                 name: 'Gaskell Dione Shape Model',
@@ -164,14 +167,6 @@ let Satellites = function() {
         },
         'Thebe (Jupiter XIV)': {
             datasets: [stookDataset(nullset)]
-        },
-
-        // 'Deimos (Mars II)': {
-        //     files: {
-        //         'Archived Shape File': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_SHAPE_MODELS_V2_1/data/'
-        //     },
-        //     datasets: [thomasDataset],
-        //     preview: null
-        // }
+        }
     };
 };
