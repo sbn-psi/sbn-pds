@@ -1,5 +1,9 @@
 const previews = 'previews/';
 const files = 'files/';
+const nullset = {
+    objPath: null,
+    preview: null
+};
 const radarDataset = {
     name: 'Radar Shape Models (Hudson)',
     link: 'https://sbn.psi.edu/pds/resource/rshape.html'

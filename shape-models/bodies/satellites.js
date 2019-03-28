@@ -67,21 +67,19 @@ let Satellites = function() {
         //     ],
         //     preview: previews + 'hyperion_30k_plt.png'
         // },
-        // 'Janus (Saturn X)': {
-        //     files: {
-        //         'Archived Shape Files': 'https://sbnarchive.psi.edu/pds4/certified/saturn_satellite_shape_models_V1_0/data/',
-        //         '.obj File': path('SATURN_SMALL_MOONS/janus_30k_plt.tab.obj')
-        //     },
-        //     datasets: [
-        //         saturnDataset,
-        //         thomasDataset,
-        //         stookDataset
-        //     ],
-        //     preview: previews + 'janus_30k_plt.png'
-        // },
 
 
 
+        'Janus (Saturn X)': {
+            datasets: [
+                saturnDataset({
+                    objPath: path('SATURN_SMALL_MOONS/janus_30k_plt.tab.obj'),
+                    preview: 'previews/janus_30k_plt.png'
+                }),
+                thomasDataset(nullset),
+                stookDataset(nullset)
+            ]
+        },
         'Mimas (Saturn I)': {
             datasets: [{
                 name: 'Gaskell Mimas Shape Model',
@@ -103,10 +101,7 @@ let Satellites = function() {
         },
         'Pandora (Saturn XVII)': {
             datasets: [
-                stookDataset({
-                    objPath: null,
-                    preview: null
-                }),
+                stookDataset(nullset),
                 saturnDataset({
                     objPath: files + 'SATURN_SMALL_MOONS/pandora_30k_plt.tab.obj',
                     preview: 'previews/pandora_30k_plt.png'
@@ -124,10 +119,7 @@ let Satellites = function() {
                         preview: 'previews/phobos.png'
                     }
                 },
-                thomasDataset({
-                    objPath: null,
-                    preview: null
-                })
+                thomasDataset(nullset)
             ]
         },
         'Phoebe (Saturn IX)': {
@@ -143,10 +135,7 @@ let Satellites = function() {
         },
         'Prometheus (Saturn XVI)': {
             datasets: [
-                saturnDataset({
-                    objPath: null,
-                    preview: null
-                }),
+                saturnDataset(nullset),
                 stookDataset({
                     objPath: path('SATURN_SMALL_MOONS/prometheus_30k_plt.tab.obj'),
                     preview: 'previews/prometheus_30k_plt.png'
