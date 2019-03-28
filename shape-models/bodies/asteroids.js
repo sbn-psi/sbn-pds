@@ -48,15 +48,17 @@ const Asteroids = function() {
             ]
         },
         '21 Lutetia': {
-            datasets: [{
-                name: 'Rosetta Shape Model of Asteroid Lutetia',
-                link: 'http://pdssbn.astro.umd.edu/holdings/ro-a-osinac_osiwac-5-lutetia-shape-v1.0/dataset.html',
-                file: {
-                    archivePath: 'https://pdssbn.astro.umd.edu/holdings/ro-a-osinac_osiwac-5-lutetia-shape-v1.0/data/',
-                    objPath: path('lutetia/lutetia_003k_cart.obj'),
-                    preview: 'previews/lutetia.png'
+            datasets: [
+                {
+                    name: 'Rosetta Shape Model of Asteroid Lutetia',
+                    link: 'http://pdssbn.astro.umd.edu/holdings/ro-a-osinac_osiwac-5-lutetia-shape-v1.0/dataset.html',
+                    file: {
+                        archivePath: 'https://pdssbn.astro.umd.edu/holdings/ro-a-osinac_osiwac-5-lutetia-shape-v1.0/data/',
+                        objPath: path('lutetia/lutetia_003k_cart.obj'),
+                        preview: 'previews/lutetia.png'
+                    }
                 }
-            }]
+            ]
         },
         '216 Kleopatra': {
             datasets: [
@@ -80,15 +82,31 @@ const Asteroids = function() {
             ]
         },
         '2867 Steins': {
-            datasets: [{
-                name: 'Rosetta Shape Model of Asteroid Steins',
-                link: 'https://pdssbn.astro.umd.edu/holdings/ro-a-osinac_osiwac-5-steins-shape-v1.0/dataset.html',
-                file: {
-                    archivePath: 'https://pdssbn.astro.umd.edu/holdings/ro-a-osinac_osiwac-5-steins-shape-v1.0/data/',
-                    objPath: path('steins/steins.obj'),
-                    preview: 'previews/steins.png'
+            datasets: [
+                {
+                    name: 'Rosetta Shape Model of Asteroid Steins',
+                    link: 'https://pdssbn.astro.umd.edu/holdings/ro-a-osinac_osiwac-5-steins-shape-v1.0/dataset.html',
+                    file: {
+                        archivePath: 'https://pdssbn.astro.umd.edu/holdings/ro-a-osinac_osiwac-5-steins-shape-v1.0/data/',
+                        objPath: path('steins/steins.obj'),
+                        preview: 'previews/steins.png'
+                    }
                 }
-            }]
+            ]
+        },
+        '25143 Itokawa': {
+            datasets: [
+                {
+                    name: 'Gaskell Itokawa Shape Model',
+                    link: 'https://sbn.psi.edu/pds/resource/itokawashape.html',
+                    file: {
+                        archivePath: 'https://sbnarchive.psi.edu/pds3/hayabusa/HAY_A_AMICA_5_ITOKAWASHAPE_V1_0/data/quad/',
+                        objPath: path('itokawa/ver64q.tab.obj'),
+                        preview: 'previews/itokawa.png'
+                    }
+                },
+                radarDataset(nullset)
+            ]
         },
         '4179 Toutatis': {
             datasets: [
@@ -202,21 +220,7 @@ const Asteroids = function() {
             datasets: [radarDataset],
             preview: previews + '6489golevka.png'
         },
-        '25143 Itokawa': {
-            files: {
-                'Archived Shape Files': 'https://sbnarchive.psi.edu/pds3/hayabusa/HAY_A_AMICA_5_ITOKAWASHAPE_V1_0/data/quad/',
-                '.obj File (Min Resolution)': path('itokawa/ver64q.tab.obj'),
-                '.obj File (Max Resolution)': path('itokawa/ver512q.tab.obj')
-            },
-            datasets: [
-                radarDataset,
-                {
-                    name: 'Gaskell Itokawa Shape Model',
-                    link: 'https://sbn.psi.edu/pds/resource/itokawashape.html'
-                }
-            ],
-            preview: previews + 'itokawa.png'
-        },
+        
         
         
         
