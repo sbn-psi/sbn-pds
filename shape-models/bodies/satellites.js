@@ -140,6 +140,9 @@ let Satellites = function() {
                 })
             ]
         },
+        'Proteus (Neptune VIII)': {
+            datasets: [stookDataset(nullset)]
+        },
         'Telesto (Saturn XIII)': {
             datasets: [
                 saturnDataset({
@@ -163,13 +166,6 @@ let Satellites = function() {
             datasets: [stookDataset(nullset)]
         },
 
-        // 'Proteus (Neptune VIII)': {
-        //     files: {
-        //         'Archived Shape File': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/'
-        //     },
-        //     datasets: [stookDataset],
-        //     preview: null
-        // },
         // 'Deimos (Mars II)': {
         //     files: {
         //         'Archived Shape File': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_SHAPE_MODELS_V2_1/data/'
