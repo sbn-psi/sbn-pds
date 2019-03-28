@@ -16,17 +16,17 @@ let Satellites = function() {
         //     datasets: [saturnDataset],
         //     preview: previews + 'calypso_30k_plt.png'
         // },
-        // 'Daphnis (Saturn XXXV)': {
-        //     files: {
-        //         'Archived Shape Files': 'https://sbnarchive.psi.edu/pds4/certified/saturn_satellite_shape_models_V1_0/data/',
-        //         '.obj File': path('SATURN_SMALL_MOONS/daphnis_30k_plt.tab.obj')
-        //     },
-        //     datasets: [saturnDataset],
-        //     preview: previews + 'daphnis_30k_plt.png'
-        // },
 
 
 
+        'Daphnis (Saturn XXXV)': {
+            datasets: [
+                saturnDataset({
+                    objpath: path('SATURN_SMALL_MOONS/daphnis_30k_plt.tab.obj'),
+                    preview: 'previews/daphnis_30k_plt.png'
+                }
+            )]
+        },
         'Dione (Saturn IV)': {
             datasets: [{
                 name: 'Gaskell Dione Shape Model',
