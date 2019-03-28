@@ -1,6 +1,47 @@
 const Asteroids = function() {
     return {
-        
+        '1998 KY26': {
+            datasets: [
+                radarDataset({
+                    objPath: path('RADAR/1998ky26.tab.obj'),
+                    preview: 'previews/1998ky26.png'
+                })
+            ]
+        },
+        'Asteroid 153591': {
+            datasets: [
+                {
+                    name: 'Shape Model of Asteroid (153591) 2001 SN263',
+                    link: 'https://sbn.psi.edu/pds/resource/shape153591.html',
+                    file: {
+                        archivePath: 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_I0037_5_SHAPE153591_V1_0/data/',
+                        objPath: path('a153591/a153591alpha.tab.obj'),
+                        preview: 'previews/a153591.png'
+                    }
+                }
+            ]
+        },
+        'Asteroid 52760': {
+            datasets: [
+                radarDataset({
+                    objPath: path('RADAR/52760.tab.obj'),
+                    preview: 'previews/52760.png'
+                })
+            ]
+        },
+        'Asteroid 8567': {
+            datasets: [
+                {
+                    name: 'Shape and Rotation of (8567) 1996 HW1',
+                    link: 'https://sbn.psi.edu/pds/resource/shape8567.html',
+                    file: {
+                        archivePath: 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_I0037_5_SHAPE8567_V1_0/data/',
+                        objPath: path('a8567/a8567.tab.obj'),
+                        preview: 'previews/asteroid_8567.png'
+                    }
+                }
+            ]
+        },
         '1 Ceres': {
             datasets: [
                 {
@@ -181,61 +222,5 @@ const Asteroids = function() {
                 thomasDataset(nullset)
             ]
         }
-    };
-    return {
-        '1998 KY26': {
-            files: {
-                'Archived Shape Files': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_RADARSHAPE_MODELS_V2_0/data/',
-                '.obj File': path('RADAR/1998ky26.tab.obj')
-            },
-            datasets: [radarDataset],
-            preview: previews + '1998ky26.png'
-        },
-        'Asteroid 153591': {
-            files: {
-                'Archived Shape Files': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_I0037_5_SHAPE153591_V1_0/data/',
-                '.obj File': path('a153591/a153591alpha.tab.obj')
-            },
-            datasets: [{
-                name: 'Shape Model of Asteroid (153591) 2001 SN263',
-                link: 'https://sbn.psi.edu/pds/resource/shape153591.html'
-            }],
-            preview: previews + 'a153591.png'
-        },
-        'Asteroid 52760': {
-            files: {
-                'Archived Shape Files': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_RADARSHAPE_MODELS_V2_0/data/',
-                '.obj File': path('RADAR/52760.tab.obj')
-            },
-            datasets: [radarDataset],
-            preview: previews + '52760.png'
-        },
-        'Asteroid 8567': {
-            files: {
-                'Archived Shape Files': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_I0037_5_SHAPE8567_V1_0/data/',
-                '.obj File': path('a8567/a8567.tab.obj')
-            },
-            datasets: [{
-                name: 'Shape and Rotation of (8567) 1996 HW1',
-                link: 'https://sbn.psi.edu/pds/resource/shape8567.html'
-            }],
-            preview: previews + 'asteroid_8567.png'
-        },
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-        
     };
 };
