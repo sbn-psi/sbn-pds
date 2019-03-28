@@ -48,17 +48,17 @@ let Satellites = function() {
         //     ],
         //     preview: previews + 'epimetheus_30k_plt.png'
         // },
-        // 'Helene (Saturn XII)': {
-        //     files: {
-        //         'Archived Shape Files': 'https://sbnarchive.psi.edu/pds4/certified/saturn_satellite_shape_models_V1_0/data/',
-        //         '.obj File': path('SATURN_SMALL_MOONS/helene_30k_plt.tab.obj')
-        //     },
-        //     datasets: [saturnDataset],
-        //     preview: previews + 'helene_30k_plt.png'
-        // },
 
 
 
+        'Helene (Saturn XII)': {
+            datasets: [
+                saturnDataset({
+                    objPath: path('SATURN_SMALL_MOONS/helene_30k_plt.tab.obj'),
+                    preview: 'previews/helene_30k_plt.png'
+                }
+            )]
+        },
         'Hyperion (Saturn VII)': {
             datasets: [
                 saturnDataset({
