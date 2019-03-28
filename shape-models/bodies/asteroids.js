@@ -116,6 +116,20 @@ const Asteroids = function() {
                 thomasDataset(nullset)
             ]
         },
+        '433 Eros': {
+            datasets: [
+                {
+                    name: 'Gaskell Eros Shape Model',
+                    link: 'https://sbn.psi.edu/pds/resource/erosshape.html',
+                    file: {
+                        archivePath: 'https://sbnarchive.psi.edu/pds3/near/NEAR_A_MSI_5_EROSSHAPE_V1_0/data/quad/',
+                        objPath: path('eros/ver64q.tab.obj'),
+                        preview: 'previews/eros.png'
+                    }
+                },
+                nearDataset(nullset)
+            ]
+        },
         '4179 Toutatis': {
             datasets: [
                 radarDataset({
@@ -205,21 +219,7 @@ const Asteroids = function() {
             datasets: [radarDataset],
             preview: previews + '4769castalia.png'
         },
-        '433 Eros': {
-            files: {
-                'Archived Shape Files': 'https://sbnarchive.psi.edu/pds3/near/NEAR_A_MSI_5_EROSSHAPE_V1_0/data/quad/',
-                '.obj File (Min Resolution)': path('eros/ver64q.tab.obj'),
-                '.obj File (Max Resolution)': path('eros/ver512q.tab.obj')
-            },
-            datasets: [
-                {
-                    name: 'Gaskell Eros Shape Model',
-                    link: 'https://sbn.psi.edu/pds/resource/erosshape.html'
-                },
-                nearDataset
-            ],
-            preview: previews + 'eros.png'
-        },
+        
         
         
         
