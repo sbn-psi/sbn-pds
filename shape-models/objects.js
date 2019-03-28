@@ -13,10 +13,10 @@ $(document).ready(function() {
         comets = Comets();
         satellites = Satellites();
 
-        // if (!str) {
-        //     makeTable();
-        //     return;
-        // };
+        if (!str) {
+            makeTable();
+            return;
+        };
         
         // FILTER FUNCTION
         function filterObjects(str,objs) {
@@ -48,6 +48,8 @@ $(document).ready(function() {
 });
 
 function makeTable() {
+    $('.sbn-body').remove();
+    
     const shapeModelTable = $('#shape-model-table');
     const downloadIcon = () => { return $('<i>', {class: 'fas fa-file-download'}); };
     
@@ -107,7 +109,7 @@ function makeTable() {
         rows.map(($row,idx) => {
             // <tr> element to be added to table
                 // this will contain all <td> elements for a single dataset row
-            let row = $('<tr>', {class: 'row'});
+            let row = $('<tr>', {class: 'row sbn-body'});
             
             // conditionally append($row.$name)
             if ($row.$name !== null) row.append($row.$name);
