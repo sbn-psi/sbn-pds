@@ -1,6 +1,12 @@
 const Asteroids = function() {
     return {
         
+        '243 Ida': {
+            datasets: [
+                stookDataset(nullset),
+                thomasDataset(nullset)
+            ]
+        },
         '253 Mathilde': {
             datasets: [
                 stookDataset(nullset),
@@ -207,16 +213,7 @@ const Asteroids = function() {
             ],
             preview: previews + 'ceres.png'
         },
-        '243 Ida': {
-            files: {
-                'Archived Shape File': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/'
-            },
-            datasets: [
-                stookDataset,
-                thomasDataset
-            ],
-            preview: null
-        },
+        
         
         
     };
