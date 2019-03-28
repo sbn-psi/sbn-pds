@@ -12,9 +12,6 @@
 .row {
     display: table-row;
 }
-.row:nth-child(2n) {
-    background: #f6f6f6;
-}
 .header {
     background: #D5D5D5;
 }
