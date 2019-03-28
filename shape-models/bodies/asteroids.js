@@ -60,6 +60,14 @@ const Asteroids = function() {
                 nearDataset(nullset)
             ]
         },
+        '4179 Toutatis': {
+            datasets: [
+                radarDataset({
+                    objPath: path('RADAR/4179toutatis.tab.obj'),
+                    preview: 'previews/toutatis.png'
+                })
+            ]
+        },
         '951 Gaspra': {
             datasets: [
                 stookDataset(nullset),
@@ -210,14 +218,7 @@ const Asteroids = function() {
             }],
             preview: previews + 'steins.png'
         },
-        '4179 Toutatis': {
-            files: {
-                'Archived Shape Files': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_RADARSHAPE_MODELS_V2_0/data/',
-                '.obj File': path('RADAR/4179toutatis.tab.obj')
-            },
-            datasets: [radarDataset],
-            preview: previews + 'toutatis.png'
-        },
+    
         
         
         
