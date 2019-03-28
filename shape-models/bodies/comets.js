@@ -1,5 +1,16 @@
 let Comets = function() {
     return {
+        '81P/Wild 2': {
+            datasets: [{
+                name: 'Satdust NAVCAM 81P/Wild 2 Shape Model',
+                link: 'https://pdssbn.astro.umd.edu/holdings/sdu-c-navcam-5-wild2-shape-model-v2.1/dataset.html',
+                file: {
+                    archivePath: 'https://pdssbn.astro.umd.edu/holdings/sdu-c-navcam-5-wild2-shape-model-v2.1/data/',
+                    objPath: path('wild2/wild2_cart_full.tab.obj'),
+                    preview: 'previews/wild2.png'
+                }
+            }]
+        },
         '103P/Hartley 2': {
             datasets: [{
                 name: 'Shape Model of Hartley 2',
@@ -39,17 +50,7 @@ let Comets = function() {
             }],
             preview: previews + '67p.png'
         },
-        '81P/Wild 2': {
-            files: {
-                'Archived Shape Files': 'https://pdssbn.astro.umd.edu/holdings/sdu-c-navcam-5-wild2-shape-model-v2.1/data/',
-                '.obj File': path('wild2/wild2_cart_full.tab.obj')
-            },
-            datasets: [{
-                name: 'Satdust NAVCAM 81P/Wild 2 Shape Model',
-                link: 'https://pdssbn.astro.umd.edu/holdings/sdu-c-navcam-5-wild2-shape-model-v2.1/dataset.html'
-            }],
-            preview: previews + 'wild2.png'
-        },
+        
         
         
         
