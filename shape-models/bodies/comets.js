@@ -1,5 +1,16 @@
 let Comets = function() {
     return {
+        '103P/Hartley 2': {
+            datasets: [{
+                name: 'Shape Model of Hartley 2',
+                link: 'https://pdssbn.astro.umd.edu/holdings/dif-c-hriv_mri-5-hartley2-shape-v1.0/',
+                file: {
+                    archivePath: 'https://pdssbn.astro.umd.edu/holdings/dif-c-hriv_mri-5-hartley2-shape-v1.0/data/',
+                    objPath: path('hartley2/hartley2_2012_cart.obj'),
+                    preview: 'previews/hartley2_2012_cart.png'
+                }
+            }]
+        },
         '9P/Tempel 1': {
             datasets: [{
                 name: 'Deep Impact/Stardust-NExT Derived Shape Model',
@@ -39,17 +50,7 @@ let Comets = function() {
             }],
             preview: previews + 'wild2.png'
         },
-        '103P/Hartley 2': {
-            files: {
-                'Archived Shape Files': 'https://pdssbn.astro.umd.edu/holdings/dif-c-hriv_mri-5-hartley2-shape-v1.0/data/',
-                '.obj File': path('hartley2/hartley2_2012_cart.obj')
-            },
-            datasets: [{
-                name: 'Shape Model of Hartley 2',
-                link: 'https://pdssbn.astro.umd.edu/holdings/dif-c-hriv_mri-5-hartley2-shape-v1.0/'
-            }],
-            preview: previews + 'hartley2_2012_cart.png',
-        },
+        
         
         
     };
