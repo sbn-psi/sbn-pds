@@ -134,21 +134,20 @@ let Satellites = function() {
                 })
             ]
         },
+        'Tethys (Saturn III)': {
+            datasets: [{
+                name: 'Gaskell Tethys Shape Model',
+                link: 'https://sbn.psi.edu/pds/resource/tethysshape.html',
+                file: {
+                    archivePath: 'https://sbnarchive.psi.edu/pds3/multi_mission/CO_SA_ISSNA_5_TETHYSSHAPE_V1_0/data/',
+                    objPath: path('tethys/tethys_ver64q.tab.obj'),
+                    preview: 'previews/tethys.png'
+                }
+            }]
+        },
 
 
 
-        // 'Tethys (Saturn III)': {
-        //     files: {
-        //         'Archived Shape Files (Min Resolution)': 'https://sbnarchive.psi.edu/pds3/multi_mission/CO_SA_ISSNA_5_TETHYSSHAPE_V1_0/data/',
-        //         '.obj File (Min Resolution)': path('tethys/tethys_ver64q.tab.obj'),
-        //         '.obj File (Max Resolution)': path('tethys/tethys_ver512q.tab.obj')
-        //     },
-        //     datasets: [{
-        //         name: 'Gaskell Tethys Shape Model',
-        //         link: 'https://sbn.psi.edu/pds/resource/tethysshape.html'
-        //     }],
-        //     preview: previews + 'tethys.png'
-        // },
         // 'Telesto (Saturn XIII)': {
         //     datasets: [
         //         saturnDataset({
