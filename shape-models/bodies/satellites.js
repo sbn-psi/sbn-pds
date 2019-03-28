@@ -24,21 +24,20 @@ let Satellites = function() {
         //     datasets: [saturnDataset],
         //     preview: previews + 'daphnis_30k_plt.png'
         // },
-        // 'Dione (Saturn IV)': {
-        //     files: {
-        //         'Archived Shape Files': 'https://sbnarchive.psi.edu/pds3/multi_mission/CO_SA_ISSNA_ISSWA_5_DIONESHAPE_V1_0/data/',
-        //         '.obj File (Min Resolution)': path('dione/dione_ver64q.tab.obj'),
-        //         '.obj File (Max Resolution)': path('dione/dione_ver512q.tab.obj')
-        //     },
-        //     datasets: [{
-        //         name: 'Gaskell Dione Shape Model',
-        //         link: 'https://sbn.psi.edu/pds/resource/dioneshape.html'
-        //     }],
-        //     preview: previews + 'dione.png'
-        // },
 
 
 
+        'Dione (Saturn IV)': {
+            datasets: [{
+                name: 'Gaskell Dione Shape Model',
+                link: 'https://sbn.psi.edu/pds/resource/dioneshape.html',
+                file: {
+                    archivePath: 'https://sbnarchive.psi.edu/pds3/multi_mission/CO_SA_ISSNA_ISSWA_5_DIONESHAPE_V1_0/data/',
+                    objPath: path('dione/dione_ver64q.tab.obj'),
+                    preview: 'previews/dione.png'
+                }
+            }]
+        },
         'Epimetheus (Saturn XI)': {
             datasets: [
                 saturnDataset({
