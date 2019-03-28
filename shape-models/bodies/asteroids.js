@@ -33,18 +33,12 @@ const Asteroids = function() {
             ],
             preview: previews + 'ceres.png'
         },
-        '4 Vesta': {
+        '1620 Geographos': {
             datasets: [
-                {
-                    name: 'Dawn Shape Models of Vesta',
-                    link: 'https://sbn.psi.edu/pds/resource/dawn/dwnvfcshape.html',
-                    file: {
-                        archivePath: 'https://sbnarchive.psi.edu/pds3/dawn/fc/DWNVSPG_2/DATA/',
-                        objPath: path('vesta/Vesta-256V.OBJ'),
-                        preview: 'previews/vesta.png'
-                    }
-                },
-                thomasDataset(nullset)
+                radarDataset({
+                    objPath: path('RADAR/1620geographos.tab.obj'),
+                    preview: 'previews/1620geographos.png'
+                })
             ]
         },
         '21 Lutetia': {
@@ -106,6 +100,20 @@ const Asteroids = function() {
                     }
                 },
                 radarDataset(nullset)
+            ]
+        },
+        '4 Vesta': {
+            datasets: [
+                {
+                    name: 'Dawn Shape Models of Vesta',
+                    link: 'https://sbn.psi.edu/pds/resource/dawn/dwnvfcshape.html',
+                    file: {
+                        archivePath: 'https://sbnarchive.psi.edu/pds3/dawn/fc/DWNVSPG_2/DATA/',
+                        objPath: path('vesta/Vesta-256V.OBJ'),
+                        preview: 'previews/vesta.png'
+                    }
+                },
+                thomasDataset(nullset)
             ]
         },
         '4179 Toutatis': {
@@ -212,14 +220,7 @@ const Asteroids = function() {
             ],
             preview: previews + 'eros.png'
         },
-        '1620 Geographos': {
-            files: {
-                'Archived Shape Files': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_RADARSHAPE_MODELS_V2_0/data/',
-                '.obj File': path('RADAR/1620geographos.tab.obj')
-            },
-            datasets: [radarDataset],
-            preview: previews + '1620geographos.png'
-        },
+        
         
         
         
