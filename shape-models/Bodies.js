@@ -4,9 +4,16 @@ const nullset = {
     objPath: null,
     preview: null
 };
-const radarDataset = {
-    name: 'Radar Shape Models (Hudson)',
-    link: 'https://sbn.psi.edu/pds/resource/rshape.html'
+const radarDataset = function(file) {
+    return {
+        name: 'Radar Shape Models (Hudson)',
+        link: 'https://sbn.psi.edu/pds/resource/rshape.html',
+        file: {
+            archivePath: 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_RADARSHAPE_MODELS_V2_0/data/',
+            objPath: file.objPath,
+            preview: file.preview
+        }
+    };
 };
 const saturnDataset = function(file) {
     return {
