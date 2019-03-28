@@ -58,6 +58,14 @@ const Asteroids = function() {
                 }
             }]
         },
+        '216 Kleopatra': {
+            datasets: [
+                radarDataset({
+                    objPath: path('RADAR/216kleopatra.tab.obj'),
+                    preview: 'previews/216kleopatra.png'
+                })
+            ]
+        },
         '243 Ida': {
             datasets: [
                 stookDataset(nullset),
@@ -209,14 +217,7 @@ const Asteroids = function() {
             ],
             preview: previews + 'itokawa.png'
         },
-        '216 Kleopatra': {
-            files: {
-                'Archived Shape Files': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_RADARSHAPE_MODELS_V2_0/data/',
-                '.obj File': path('RADAR/216kleopatra.tab.obj')
-            },
-            datasets: [radarDataset],
-            preview: previews + '216kleopatra.png'
-        },
+        
         
         
     
