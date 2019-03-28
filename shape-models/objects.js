@@ -120,14 +120,14 @@ function makeTable() {
         });
     };
 
-    // // PLACE ASTEROIDS
-    // asteroidNames.sort(sortAlphaNum).map(function(asteroid) {
-    //     const datasets = asteroids[asteroid]['datasets'];
-    //     const preview = asteroids[asteroid]['preview'];
-    //     newRow('asteroids',asteroid,datasets,preview);
-    // });
-    // // ASTEROID COUNT
-    // $('#asteroid-count').text(`(${Object.keys(asteroids).length})`);
+    // PLACE ASTEROIDS
+    asteroidNames.sort(sortAlphaNum).map(function(asteroid) {
+        const datasets = asteroids[asteroid]['datasets'];
+        const preview = asteroids[asteroid]['preview'];
+        newRow('asteroids',asteroid,datasets,preview);
+    });
+    // ASTEROID COUNT
+    $('#asteroid-count').text(`(${Object.keys(asteroids).length})`);
     
     // PLACE COMETS
     cometNames.sort(sortAlphaNum).map(function(comet) {
