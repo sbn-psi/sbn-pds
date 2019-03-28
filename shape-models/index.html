@@ -6,6 +6,7 @@
     <title>PDS Asteroid/Dust Archive</title>
 
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
     <link rel="stylesheet" href="/pds/css/sbn-header.css">
     <link rel="stylesheet" href="/pds/css/sbn-sidebar.css">
@@ -35,10 +36,24 @@
             <p class="input-text">Enter the name or number of an asteroid, comet, or satellite.</p>
         </div>
 
-        <div id="shape-model-table">
-            <p>Something went wrong loading the shape models.</p>
-            <p>If this issue persists after refreshing the page, contact Conor Kingston (<a href="mailto:ckingston@psi.edu">ckingston@psi.edu</a>).</p>
-        </div>
+        <table class="table" id="shape-model-table">
+            <tr class="row header">
+                <th class="cell">Object Name</th>
+                <th class="cell">Full Datasets with Documentation</th>
+                <th class="cell" colspan="2">Available Downloads</th>
+                <th class="cell">Preview</th>
+                <th class="cell">Data Ferret Search</th>
+            </tr>
+            <tr class="row category" id="asteroids">
+                <th class="cell" colspan="6"><h3>Asteroids <span id="asteroid-count"></span></h3></th>
+            </tr>
+            <tr class="row category" id="comets">
+                <th class="cell" colspan="6"><h3>Comets <span id="comet-count"></span></h3></th>
+            </tr>
+            <tr class="row category" id="satellites">
+                <th class="cell" colspan="6"><h3>Planetary Satellites <span id="satellite-count"></span></h3></th>
+            </tr>
+        </table>
 
     </main>
     <!-- END main content -->

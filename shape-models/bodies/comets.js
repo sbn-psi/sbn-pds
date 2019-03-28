@@ -1,4 +1,5 @@
 let Comets = function() {
+    return {};
     return {
         '67P/Churyumov–Gerasimenko': {
             files: {

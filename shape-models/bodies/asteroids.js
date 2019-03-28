@@ -1,4 +1,5 @@
 const Asteroids = function() {
+    return {};
     return {
         '1998 KY26': {
             files: {
