@@ -1,6 +1,13 @@
 const Asteroids = function() {
     return {
         
+        '253 Mathilde': {
+            datasets: [
+                stookDataset(nullset),
+                thomasDataset(nullset),
+                nearDataset(nullset)
+            ]
+        },
         '951 Gaspra': {
             datasets: [
                 stookDataset(nullset),
@@ -210,17 +217,7 @@ const Asteroids = function() {
             ],
             preview: null
         },
-        '253 Mathilde': {
-            files: {
-                'Archived Shape File': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/'
-            },
-            datasets: [
-                stookDataset,
-                thomasDataset,
-                nearDataset
-            ],
-            preview: null
-        },
+        
         
     };
 };
