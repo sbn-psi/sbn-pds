@@ -1,6 +1,16 @@
 let Comets = function() {
     return {
-        
+        '9P/Tempel 1': {
+            datasets: [{
+                name: 'Deep Impact/Stardust-NExT Derived Shape Model',
+                link: 'https://pdssbn.astro.umd.edu/holdings/dif-c-hriv_its_mri-5-tempel1-shape-v2.0/dataset.html',
+                file: {
+                    archivePath: 'https://pdssbn.astro.umd.edu/holdings/dif-c-hriv_its_mri-5-tempel1-shape-v2.0/data/',
+                    objPath: path('tempel1/tempel1_2012_cart.obj'),
+                    preview: 'previews/tempel1_2012_cart.png'
+                }
+            }]
+        },
         '1P/Halley 1': {
             datasets: [stookDataset(nullset)]
         }
@@ -40,17 +50,7 @@ let Comets = function() {
             }],
             preview: previews + 'hartley2_2012_cart.png',
         },
-        '9P/Tempel 1': {
-            files: {
-                'Archived Shape Files': 'https://pdssbn.astro.umd.edu/holdings/dif-c-hriv_its_mri-5-tempel1-shape-v2.0/data/',
-                '.obj File': path('tempel1/tempel1_2012_cart.obj')
-            },
-            datasets: [{
-                name: 'Deep Impact/Stardust-NExT Derived Shape Model',
-                link: 'https://pdssbn.astro.umd.edu/holdings/dif-c-hriv_its_mri-5-tempel1-shape-v2.0/dataset.html'
-            }],
-            preview: previews + 'tempel1_2012_cart.png'
-        },
+        
         
     };
 };
