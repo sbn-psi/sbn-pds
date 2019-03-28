@@ -79,21 +79,20 @@ let Satellites = function() {
         //     ],
         //     preview: previews + 'janus_30k_plt.png'
         // },
-        // 'Mimas (Saturn I)': {
-        //     files: {
-        //         'Archived Shape Files': 'https://sbnarchive.psi.edu/pds3/multi_mission/CO_SA_ISSNA_5_MIMASSHAPE_V2_0/data/',
-        //         '.obj File (Min Resolution)': path('mimas/mimas_ver64q.tab.obj'),
-        //         '.obj File (Max Resolution)': path('mimas/mimas_ver512q.tab.obj')
-        //     },
-        //     datasets: [{
-        //         name: 'Gaskell Mimas Shape Model',
-        //         link: 'https://sbn.psi.edu/pds/resource/mimasshape.html'
-        //     }],
-        //     preview: previews + 'mimas.png'
-        // },
 
 
 
+        'Mimas (Saturn I)': {
+            datasets: [{
+                name: 'Gaskell Mimas Shape Model',
+                link: 'https://sbn.psi.edu/pds/resource/mimasshape.html',
+                file: {
+                    archivePath: 'https://sbnarchive.psi.edu/pds3/multi_mission/CO_SA_ISSNA_5_MIMASSHAPE_V2_0/data/',
+                    objPath: path('mimas/mimas_ver64q.tab.obj'),
+                    preview: 'previews/mimas.png'
+                }
+            }]
+        },
         'Pan (Saturn XVIII)': {
             datasets: [
                 saturnDataset({
