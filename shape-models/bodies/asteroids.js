@@ -60,6 +60,17 @@ const Asteroids = function() {
                 nearDataset(nullset)
             ]
         },
+        '2867 Steins': {
+            datasets: [{
+                name: 'Rosetta Shape Model of Asteroid Steins',
+                link: 'https://pdssbn.astro.umd.edu/holdings/ro-a-osinac_osiwac-5-steins-shape-v1.0/dataset.html',
+                file: {
+                    archivePath: 'https://pdssbn.astro.umd.edu/holdings/ro-a-osinac_osiwac-5-steins-shape-v1.0/data/',
+                    objPath: path('steins/steins.obj'),
+                    preview: 'previews/steins.png'
+                }
+            }]
+        },
         '4179 Toutatis': {
             datasets: [
                 radarDataset({
@@ -207,17 +218,7 @@ const Asteroids = function() {
             }],
             preview: previews + 'lutetia.png'
         },
-        '2867 Steins': {
-            files: {
-                'Archived Shape Files': 'https://pdssbn.astro.umd.edu/holdings/ro-a-osinac_osiwac-5-steins-shape-v1.0/data/',
-                '.obj File': path('steins/steins.obj')
-            },
-            datasets: [{
-                name: 'Rosetta Shape Model of Asteroid Steins',
-                link: 'https://pdssbn.astro.umd.edu/holdings/ro-a-osinac_osiwac-5-steins-shape-v1.0/dataset.html'
-            }],
-            preview: previews + 'steins.png'
-        },
+        
     
         
         
