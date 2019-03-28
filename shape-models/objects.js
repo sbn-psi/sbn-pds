@@ -123,22 +123,20 @@ function makeTable() {
     // // PLACE ASTEROIDS
     // asteroidNames.sort(sortAlphaNum).map(function(asteroid) {
     //     const datasets = asteroids[asteroid]['datasets'];
-    //     const files = asteroids[asteroid]['files'];
     //     const preview = asteroids[asteroid]['preview'];
-    //     newRow('asteroids',asteroid,datasets,files,preview);
+    //     newRow('asteroids',asteroid,datasets,preview);
     // });
     // // ASTEROID COUNT
     // $('#asteroid-count').text(`(${Object.keys(asteroids).length})`);
     
-    // // PLACE COMETS
-    // cometNames.sort(sortAlphaNum).map(function(comet) {
-    //     const datasets = comets[comet]['datasets'];
-    //     const files = comets[comet]['files'];
-    //     const preview = comets[comet]['preview'];
-    //     newRow('comets',comet,datasets,files,preview);
-    // });
-    // // COMET COUNT
-    // $('#comet-count').text(`(${Object.keys(comets).length})`);
+    // PLACE COMETS
+    cometNames.sort(sortAlphaNum).map(function(comet) {
+        const datasets = comets[comet]['datasets'];
+        const preview = comets[comet]['preview'];
+        newRow('comets',comet,datasets,preview);
+    });
+    // COMET COUNT
+    $('#comet-count').text(`(${Object.keys(comets).length})`);
     
     // PLACE SATELLITES
     satelliteNames.sort(sortAlphaNum).map(function(satellite) {
