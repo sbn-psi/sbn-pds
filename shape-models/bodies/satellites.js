@@ -8,17 +8,17 @@ let Satellites = function() {
         //     datasets: [saturnDataset],
         //     preview: previews + 'atlas_30k_plt.png'
         // },
-        // 'Calypso (Saturn XIV)': {
-        //     files: {
-        //         'Archived Shape Files': 'https://sbnarchive.psi.edu/pds4/certified/saturn_satellite_shape_models_V1_0/data/',
-        //         '.obj File': path('SATURN_SMALL_MOONS/calypso_30k_plt.tab.obj')
-        //     },
-        //     datasets: [saturnDataset],
-        //     preview: previews + 'calypso_30k_plt.png'
-        // },
 
 
 
+        'Calypso (Saturn XIV)': {
+            datasets: [
+                saturnDataset({
+                    objPath: path('SATURN_SMALL_MOONS/calypso_30k_plt.tab.obj'),
+                    preview: 'previews/calypso_30k_plt.png'
+                })
+            ]
+        },
         'Daphnis (Saturn XXXV)': {
             datasets: [
                 saturnDataset({
