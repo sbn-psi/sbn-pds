@@ -56,20 +56,18 @@ let Satellites = function() {
         //     datasets: [saturnDataset],
         //     preview: previews + 'helene_30k_plt.png'
         // },
-        // 'Hyperion (Saturn VII)': {
-        //     files: {
-        //         'Archived Shape Files': 'https://sbnarchive.psi.edu/pds4/certified/saturn_satellite_shape_models_V1_0/data/',
-        //         '.obj File': path('SATURN_SMALL_MOONS/hyperion_30k_plt.tab.obj')
-        //     },
-        //     datasets: [
-        //         saturnDataset,
-        //         thomasDataset
-        //     ],
-        //     preview: previews + 'hyperion_30k_plt.png'
-        // },
 
 
 
+        'Hyperion (Saturn VII)': {
+            datasets: [
+                saturnDataset({
+                    objPath: path('SATURN_SMALL_MOONS/hyperion_30k_plt.tab.obj'),
+                    preview: 'previews/hyperion_30k_plt.png'
+                }),
+                thomasDataset(nullset)
+            ]
+        },
         'Janus (Saturn X)': {
             datasets: [
                 saturnDataset({
