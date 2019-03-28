@@ -88,6 +88,14 @@ const Asteroids = function() {
                 nearDataset(nullset)
             ]
         },
+        '2063 Bacchus': {
+            datasets: [
+                radarDataset({
+                    objPath: path('RADAR/2063bacchus.tab.obj'),
+                    preview: 'previews/2063bacchus.png'
+                })
+            ]
+        },
         '2867 Steins': {
             datasets: [
                 {
@@ -213,14 +221,7 @@ const Asteroids = function() {
             }],
             preview: previews + 'asteroid_8567.png'
         },
-        '2063 Bacchus': {
-            files: {
-                'Archived Shape Files': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_RADARSHAPE_MODELS_V2_0/data/',
-                '.obj File': path('RADAR/2063bacchus.tab.obj')
-            },
-            datasets: [radarDataset],
-            preview: previews + '2063bacchus.png'
-        },
+        
         
         
         
