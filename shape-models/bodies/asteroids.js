@@ -33,6 +33,20 @@ const Asteroids = function() {
             ],
             preview: previews + 'ceres.png'
         },
+        '4 Vesta': {
+            datasets: [
+                {
+                    name: 'Dawn Shape Models of Vesta',
+                    link: 'https://sbn.psi.edu/pds/resource/dawn/dwnvfcshape.html',
+                    file: {
+                        archivePath: 'https://sbnarchive.psi.edu/pds3/dawn/fc/DWNVSPG_2/DATA/',
+                        objPath: path('vesta/Vesta-256V.OBJ'),
+                        preview: 'previews/vesta.png'
+                    }
+                },
+                thomasDataset(nullset)
+            ]
+        },
         '243 Ida': {
             datasets: [
                 stookDataset(nullset),
@@ -204,23 +218,7 @@ const Asteroids = function() {
             datasets: [radarDataset],
             preview: previews + 'toutatis.png'
         },
-        '4 Vesta': {
-            files: {
-                'Archived Shape Model': 'https://sbnarchive.psi.edu/pds3/dawn/fc/DWNVSPG_2/DATA/',
-                'Dawn Shape Model (.obj)': path('vesta/Vesta-256V.OBJ')
-            },
-            datasets: [
-                {
-                    name: 'Dawn Shape Models of Vesta',
-                    link: 'https://sbn.psi.edu/pds/resource/dawn/dwnvfcshape.html'
-                    // ,files: [
-                    //     path('vesta/Vesta-256V.OBJ')
-                    // ]
-                },
-                thomasDataset
-            ],
-            preview: previews + 'vesta.png'
-        },
+        
         
         
         
