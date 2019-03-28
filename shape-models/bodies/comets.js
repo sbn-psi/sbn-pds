@@ -1,5 +1,10 @@
 let Comets = function() {
-    return {};
+    return {
+        
+        '1P/Halley 1': {
+            datasets: [stookDataset(nullset)]
+        }
+    };
     return {
         '67P/Churyumov–Gerasimenko': {
             files: {
@@ -46,12 +51,6 @@ let Comets = function() {
             }],
             preview: previews + 'tempel1_2012_cart.png'
         },
-        '1P/Halley 1': {
-            files: {
-                'Archived Shape File': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/'
-            },
-            datasets: [stookDataset],
-            preview: null
-        }
+        
     };
 };
