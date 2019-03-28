@@ -138,6 +138,14 @@ const Asteroids = function() {
                 })
             ]
         },
+        '4769 Castalia': {
+            datasets: [
+                radarDataset({
+                    objPath: path('RADAR/4769castalia.tab.obj'),
+                    preview: 'previews/4769castalia.png'
+                })
+            ]
+        },
         '6489 Golevka': {
             datasets: [
                 radarDataset({
@@ -211,14 +219,7 @@ const Asteroids = function() {
             }],
             preview: previews + '101955bennu.png'
         },
-        '4769 Castalia': {
-            files: {
-                'Archived Shape Files': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_RADARSHAPE_MODELS_V2_0/data/',
-                '.obj File': path('RADAR/4769castalia.tab.obj')
-            },
-            datasets: [radarDataset],
-            preview: previews + '4769castalia.png'
-        },
+        
         
         
         
