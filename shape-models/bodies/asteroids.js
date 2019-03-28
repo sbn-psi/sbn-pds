@@ -1,6 +1,38 @@
 const Asteroids = function() {
     return {
         
+        '1 Ceres': {
+            datasets: [
+                {
+                    name: 'Dawn Shape Models of Ceres',
+                    link: 'https://sbn.psi.edu/pds/resource/dawn/dwncfcshape.html',
+                    file: {
+                        archivePath: 'https://sbnarchive.psi.edu/pds3/dawn/fc/DWNCSPC_4_01/DATA/ICQ/',
+                        objPath: path('ceres/CERES_SPC181019_0128.ICQ.OBJ'),
+                        preview: 'previews/ceres.png'
+                    }
+                },
+                {
+                    name: 'Ceres LAMO Regional Digital Terrain Model (Occator)',
+                    link: 'https://sbn.psi.edu/pds/resource/dawn/dwncfcshape.html',
+                    file: {
+                        archivePath: 'https://sbnarchive.psi.edu/pds3/dawn/fc/DWNCSPC_4_01/DATA/ICQ/',
+                        objPath: null,
+                        preview: null
+                    }
+                },
+                {
+                    name: 'HST Images, Albedo Maps, and Shape of 1 Ceres',
+                    link: 'https://sbn.psi.edu/pds/resource/cereshst.html',
+                    file: {
+                        archivePath: 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_HSTACS_5_CERESHST_V1_0/data/shape/',
+                        objPath: null,
+                        preview: null
+                    }
+                }
+            ],
+            preview: previews + 'ceres.png'
+        },
         '243 Ida': {
             datasets: [
                 stookDataset(nullset),
@@ -189,30 +221,7 @@ const Asteroids = function() {
             ],
             preview: previews + 'vesta.png'
         },
-        '1 Ceres': {
-            files: {
-                'Archived Dawn Shape Model': 'https://sbnarchive.psi.edu/pds3/dawn/fc/DWNCSPC_4_01/DATA/ICQ/',
-                'Dawn Shape Model (.obj)': path('ceres/CERES_SPC181019_0128.ICQ.OBJ'),
-                'Archived Shape Model': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_HSTACS_5_CERESHST_V1_0/data/shape/'
-            },
-            datasets: [
-                {
-                    name: 'Dawn Shape Models of Ceres',
-                    link: 'https://sbn.psi.edu/pds/resource/dawn/dwncfcshape.html'
-                    // ,files: [
-                    //     path('ceres/CERES_SPC181019_0128.ICQ'),
-                    //     path('ceres/CERES_SPC181019_0128.ICQ.OBJ')
-                    // ]
-                },{
-                    name: 'Ceres LAMO Regional Digital Terrain Model (Occator)',
-                    link: 'https://sbn.psi.edu/pds/resource/dawn/dwncfcshape.html'
-                },{
-                    name: 'HST Images, Albedo Maps, and Shape of 1 Ceres',
-                    link: 'http://localhost:8000/pds/resource/cereshst.html'
-                }
-            ],
-            preview: previews + 'ceres.png'
-        },
+        
         
         
         
