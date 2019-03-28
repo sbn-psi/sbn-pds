@@ -116,6 +116,14 @@ const Asteroids = function() {
                 })
             ]
         },
+        '6489 Golevka': {
+            datasets: [
+                radarDataset({
+                    objPath: path('RADAR/6489golevka.tab.obj'),
+                    preview: 'previews/6489golevka.png'
+                })
+            ]
+        },
         '951 Gaspra': {
             datasets: [
                 stookDataset(nullset),
@@ -212,14 +220,7 @@ const Asteroids = function() {
             datasets: [radarDataset],
             preview: previews + '1620geographos.png'
         },
-        '6489 Golevka': {
-            files: {
-                'Archived Shape Files': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_RADARSHAPE_MODELS_V2_0/data/',
-                '.obj File': path('RADAR/6489golevka.tab.obj')
-            },
-            datasets: [radarDataset],
-            preview: previews + '6489golevka.png'
-        },
+        
         
         
         
