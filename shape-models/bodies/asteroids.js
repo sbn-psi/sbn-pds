@@ -1,5 +1,13 @@
 const Asteroids = function() {
-    return {};
+    return {
+        
+        '951 Gaspra': {
+            datasets: [
+                stookDataset(nullset),
+                thomasDataset(nullset)
+            ]
+        }
+    };
     return {
         '1998 KY26': {
             files: {
@@ -213,15 +221,6 @@ const Asteroids = function() {
             ],
             preview: null
         },
-        '951 Gaspra': {
-            files: {
-                'Archived Shape File': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/'
-            },
-            datasets: [
-                stookDataset,
-                thomasDataset
-            ],
-            preview: null
-        }
+        
     };
 };
