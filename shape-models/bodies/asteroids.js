@@ -41,6 +41,19 @@ const Asteroids = function() {
                 })
             ]
         },
+        '101955 Bennu': {
+            datasets: [
+                {
+                    name: 'Shape Model of Asteroid (101955) Bennu',
+                    link: 'https://sbn.psi.edu/pds/resource/bennushape.html',
+                    file: {
+                        archivePath: 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_I0037_5_BENNUSHAPE_V1_0/data/',
+                        objPath: path('bennu/101955bennu.tab.obj'),
+                        preview: 'previews/101955bennu.png'
+                    }
+                }
+            ]
+        },
         '21 Lutetia': {
             datasets: [
                 {
@@ -208,17 +221,7 @@ const Asteroids = function() {
             datasets: [radarDataset],
             preview: previews + '2063bacchus.png'
         },
-        '101955 Bennu': {
-            files: {
-                'Archived Shape Files': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_I0037_5_BENNUSHAPE_V1_0/data/',
-                '.obj File': path('bennu/101955bennu.tab.obj')
-            },
-            datasets: [{
-                name: 'Shape Model of Asteroid (101955) Bennu',
-                link: 'https://sbn.psi.edu/pds/resource/bennushape.html'
-            }],
-            preview: previews + '101955bennu.png'
-        },
+        
         
         
         
