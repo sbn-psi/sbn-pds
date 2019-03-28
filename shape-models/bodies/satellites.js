@@ -134,6 +134,14 @@ let Satellites = function() {
                 })
             ]
         },
+        'Telesto (Saturn XIII)': {
+            datasets: [
+                saturnDataset({
+                    objPath: path('SATURN_SMALL_MOONS/telesto_30k_plt.tab.obj'),
+                    preview: 'previews/telesto_30k_plt.png'
+                })
+            ]
+        },
         'Tethys (Saturn III)': {
             datasets: [{
                 name: 'Gaskell Tethys Shape Model',
@@ -148,15 +156,6 @@ let Satellites = function() {
 
 
 
-        // 'Telesto (Saturn XIII)': {
-        //     datasets: [
-        //         saturnDataset({
-        //             objPath: path('SATURN_SMALL_MOONS/telesto_30k_plt.tab.obj'),
-        //             archivePath: 'https://sbnarchive.psi.edu/pds4/certified/saturn_satellite_shape_models_V1_0/data/'
-        //         })
-        //     ],
-        //     preview: previews + 'telesto_30k_plt.png'
-        // },
         // 'Amalthea (Jupiter V)': {
         //     files: {
         //         'Archived Shape File': 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/'
