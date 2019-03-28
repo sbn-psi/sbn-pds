@@ -12,9 +12,6 @@
 .row {
     display: table-row;
 }
-.row:nth-child(2n) {
-    background: #f6f6f6;
-}
 .header {
     background: #D5D5D5;
 }
@@ -45,4 +42,11 @@
     margin: 0;
     font-size: 0.8em;
     font-style: italic;
+}
+.download-cell {
+    text-align: center;
+}
+.download-cell p, .download-cell i {
+    cursor: pointer;
+    margin: 0;
 }

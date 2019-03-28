@@ -9,23 +9,22 @@ $(document).ready(function() {
         event.stopPropagation();
 
         const str = this.value.toUpperCase();
-        const regex = new RegExp(str,'g');
         asteroids = Asteroids();
         comets = Comets();
         satellites = Satellites();
 
-        if (!str) {
-            makeTable();
-            return;
-        };
+        // if (!str) {
+        //     makeTable();
+        //     return;
+        // };
         
         // FILTER FUNCTION
-        function filterObjects(objs) {
+        function filterObjects(str,objs) {
             let keys = Object.keys(objs);
             let filteredNewBodies = keys.filter(body => {
                 body = body.toUpperCase();
-                const test = regex.test(body);
-                return test;
+                const regex = new RegExp(str,'g');
+                return regex.test(body);
             });
             
             keys.map(key => {
@@ -36,13 +35,13 @@ $(document).ready(function() {
         };
         
         // FILTER ASTEROIDS
-        filterObjects(asteroids)
+        filterObjects(str,asteroids)
         
         // FILTER COMETS
-        filterObjects(comets);
+        filterObjects(str,comets);
         
         // FILTER SATELLITES
-        filterObjects(satellites);
+        filterObjects(str,satellites);
 
         makeTable();
     });
@@ -50,39 +49,7 @@ $(document).ready(function() {
 
 function makeTable() {
     const shapeModelTable = $('#shape-model-table');
-    const table =
-    `<div class="table" id="shape-model-table">
-        <div class="row header">
-            <div class="cell">Object Name</div>
-            <div class="cell">Full Datasets with Documentation</div>
-            <div class="cell">Download Original or .obj</div>
-            <div class="cell">Data Ferret Search</div>
-            <div class="cell">Preview</div>
-        </div>
-        <div class="row category" id="asteroids">
-            <div class="cell"><h3>Asteroids <span id="asteroid-count"></span></h3></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-        </div>
-        <div class="row category" id="comets">
-            <div class="cell"><h3>Comets <span id="comet-count"></span></h3></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-        </div>
-        <div class="row category" id="satellites">
-            <div class="cell"><h3>Planetary Satellites <span id="satellite-count"></span></h3></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-        </div>
-    </div>`;
-    
-    shapeModelTable.replaceWith(table);
+    const downloadIcon = () => { return $('<i>', {class: 'fas fa-file-download'}); };
     
     const asteroidNames = Object.keys(asteroids);
     const cometNames = Object.keys(comets);
@@ -103,66 +70,61 @@ function makeTable() {
         }
     }
     
-    function newRow(id,name,datasets,files,preview) {
-        const $header = $(`#${id}`);
-
-        const $row = $('<div>', {class: 'row'});
-
-        const newCell = function(element) {
-            const $cell = $('<div>', {class: 'cell'});
-            $cell.append(element);
-            return $cell;
+    function newRow(id,name,datasets,preview) {
+        const rowspan = () => { return datasets.length; };
+        const $row = function(dataset,idx) {
+            let row = {
+                '$name': (function() {
+                    if (idx === 0) return $('<th>', {class:'cell'}).text(name).attr('rowspan',rowspan);
+                    else return null;
+                })(),
+                '$dataset': {
+                    '$name': $('<td>', {class:'cell'}).append($('<a>', {href: dataset.link}).text(dataset.name)),
+                    '$archivedFile': $('<td>', {class: 'cell download-cell'}).append($('<a>', {href: dataset.file.archivePath}).append(downloadIcon()).append($('<p>').text('archive'))),
+                    '$objFile': (function() {
+                        if (dataset.file.objPath === null) return $('<td>', {class: 'cell download-cell'}).text('-');
+                        else return $('<td>', {class:'cell download-cell'}).append($('<a>', {href: dataset.file.objPath}).append(downloadIcon()).append($('<p>').text('obj')));
+                    })()
+                },
+                '$ferretSearch': (function() {
+                    const ferretLink = `https://sbnapps.psi.edu/ferret/SimpleSearch/results.action?targetName=${name.replace(/ /g,'%20')}`;
+                    if (idx === 0) return $('<td>', {class: 'cell'}).append($('<a>', {href: ferretLink}).text('Ferret Search')).attr('rowspan',rowspan);
+                    else return null;
+                })(),
+                '$preview': (function() {
+                    const pview = dataset.file.preview;
+                    if (!pview) return $('<td>', {class: 'cell download-cell'}).text('-');
+                    else return $('<td>', {class: 'cell'}).append($('<a>', {href: pview}).append($('<img>', {src: pview, class: 'preview', title: 'Click to Enlarge'})));
+                })()
+            };
+            return row;
         };
 
-        // construct name cell
-        const $name = newCell(`<p><b>${name}</b></p>`);
-        $row.append($name);
-
-        // construct link to dataset cell
-        const $datasetDiv = $('<div>',{class: 'cell'});
-        const $datasetList = $('<ul>');
-
-        $datasetDiv.append($datasetList);
-
-        // const datasets = bodies[name]['datasets'];
-        datasets.map(dataset => {
-            $datasetList.append(`<li><a href="${dataset.link}">${dataset.name}</a></li>`);
+        let rows = datasets.map((dataset,idx) => {
+            return $row(dataset,idx);
+        }).reverse();
+        
+        rows.map(($row,idx) => {
+            // <tr> element to be added to table
+                // this will contain all <td> elements for a single dataset row
+            let row = $('<tr>', {class: 'row'});
+            
+            // conditionally append($row.$name)
+            if ($row.$name !== null) row.append($row.$name);
+            
+            // then proceed with the rest of the <td>s
+            row.append($row.$dataset.$name).append($row.$dataset.$archivedFile).append($row.$dataset.$objFile).append($row.$preview).append($row.$ferretSearch);
+            
+            $(`#${id}`).after(row);
+            return row;
         });
-        $row.append($datasetDiv);
-
-        // construct files cell
-        const $filesCell = $('<div>', {class: 'cell'});
-        const $list = $('<ul>');
-        // const files = bodies[name]['files'];
-        const titles = Object.keys(files);
-        titles.map(title => {
-            $list.append(`<li><a href="${files[title]}" download>${title}</a></li>`)
-        });
-
-        $filesCell.append($list);
-        $row.append($filesCell);
-
-        // construct data ferret search link cell
-        function querify(qs) {
-            return qs.replace(/ /g,'%20');
-        };
-        const ferretLink = `https://sbnapps.psi.edu/ferret/SimpleSearch/results.action?targetName=${querify(name)}`;
-        $row.append(newCell(`<a href="${ferretLink}">Ferret Search</a>`));
-
-        // construct preview cell
-        // const preview = bodies[name]['preview'];
-        if (!preview) $row.append(newCell(''));
-        else $row.append(newCell(`<a href="${preview}"><img src="${preview}" class="preview" title="Click to Enlarge"></a>`));
-
-        $header.after($row);
     };
 
     // PLACE ASTEROIDS
     asteroidNames.sort(sortAlphaNum).map(function(asteroid) {
         const datasets = asteroids[asteroid]['datasets'];
-        const files = asteroids[asteroid]['files'];
         const preview = asteroids[asteroid]['preview'];
-        newRow('asteroids',asteroid,datasets,files,preview);
+        newRow('asteroids',asteroid,datasets,preview);
     });
     // ASTEROID COUNT
     $('#asteroid-count').text(`(${Object.keys(asteroids).length})`);
@@ -170,9 +132,8 @@ function makeTable() {
     // PLACE COMETS
     cometNames.sort(sortAlphaNum).map(function(comet) {
         const datasets = comets[comet]['datasets'];
-        const files = comets[comet]['files'];
         const preview = comets[comet]['preview'];
-        newRow('comets',comet,datasets,files,preview);
+        newRow('comets',comet,datasets,preview);
     });
     // COMET COUNT
     $('#comet-count').text(`(${Object.keys(comets).length})`);
@@ -180,13 +141,9 @@ function makeTable() {
     // PLACE SATELLITES
     satelliteNames.sort(sortAlphaNum).map(function(satellite) {
         const datasets = satellites[satellite]['datasets'];
-        const files = satellites[satellite]['files'];
         const preview = satellites[satellite]['preview'];
-        newRow('satellites',satellite,datasets,files,preview);
+        newRow('satellites',satellite,datasets,preview);
     });
-    // SATELLITE COUNT
+    // PLACE SATELLITE COUNT
     $('#satellite-count').text(`(${Object.keys(satellites).length})`);
-    
-    // APPEND COUNTS
-    
 };
