@@ -91,17 +91,17 @@ let Satellites = function() {
         //     }],
         //     preview: previews + 'mimas.png'
         // },
-        // 'Pan (Saturn XVIII)': {
-        //     files: {
-        //         'Archived Shape Files': 'https://sbnarchive.psi.edu/pds4/certified/saturn_satellite_shape_models_V1_0/data/',
-        //         '.obj File': path('SATURN_SMALL_MOONS/pan_30k_plt.tab.obj')
-        //     },
-        //     datasets: [saturnDataset],
-        //     preview: previews + 'pan_30k_plt.png'
-        // },
 
 
 
+        'Pan (Saturn XVIII)': {
+            datasets: [
+                saturnDataset({
+                    objPath: path('SATURN_SMALL_MOONS/pan_30k_plt.tab.obj'),
+                    preview: 'previews/pan_30k_plt.png'
+                })
+            ]
+        },
         'Pandora (Saturn XVII)': {
             datasets: [
                 stookDataset({
