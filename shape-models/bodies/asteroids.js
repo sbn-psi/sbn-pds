@@ -1,7 +1,6 @@
 const Asteroids = function() {
     return {
         '1998 KY26': {
-            asteroidNumber: 1998,
             datasets: [
                 radarDataset({
                     objPath: path('RADAR/1998ky26.tab.obj'),
@@ -10,7 +9,6 @@ const Asteroids = function() {
             ]
         },
         'Asteroid 153591': {
-            asteroidNumber: 153591,
             datasets: [
                 {
                     name: 'Shape Model of Asteroid (153591) 2001 SN263',
@@ -24,7 +22,6 @@ const Asteroids = function() {
             ]
         },
         'Asteroid 52760': {
-            asteroidNumber: 52760,
             datasets: [
                 radarDataset({
                     objPath: path('RADAR/52760.tab.obj'),
@@ -33,7 +30,6 @@ const Asteroids = function() {
             ]
         },
         'Asteroid 8567': {
-            asteroidNumber: 8567,
             datasets: [
                 {
                     name: 'Shape and Rotation of (8567) 1996 HW1',
@@ -47,7 +43,6 @@ const Asteroids = function() {
             ]
         },
         '1 Ceres': {
-            asteroidNumber: 1,
             datasets: [
                 {
                     name: 'Dawn Shape Models of Ceres',
@@ -80,7 +75,6 @@ const Asteroids = function() {
             preview: previews + 'ceres.png'
         },
         '1620 Geographos': {
-            asteroidNumber: 1620,
             datasets: [
                 radarDataset({
                     objPath: path('RADAR/1620geographos.tab.obj'),
@@ -89,7 +83,6 @@ const Asteroids = function() {
             ]
         },
         '101955 Bennu': {
-            asteroidNumber: 101955,
             datasets: [
                 {
                     name: 'Shape Model of Asteroid (101955) Bennu',
@@ -103,7 +96,6 @@ const Asteroids = function() {
             ]
         },
         '21 Lutetia': {
-            asteroidNumber: 21,
             datasets: [
                 {
                     name: 'Rosetta Shape Model of Asteroid Lutetia',
@@ -117,7 +109,6 @@ const Asteroids = function() {
             ]
         },
         '216 Kleopatra': {
-            asteroidNumber: 216,
             datasets: [
                 radarDataset({
                     objPath: path('RADAR/216kleopatra.tab.obj'),
@@ -126,14 +117,12 @@ const Asteroids = function() {
             ]
         },
         '243 Ida': {
-            asteroidNumber: 243,
             datasets: [
                 stookDataset(nullset),
                 thomasDataset(nullset)
             ]
         },
         '253 Mathilde': {
-            asteroidNumber: 253,
             datasets: [
                 stookDataset(nullset),
                 thomasDataset(nullset),
@@ -141,7 +130,6 @@ const Asteroids = function() {
             ]
         },
         '2063 Bacchus': {
-            asteroidNumber: 2063,
             datasets: [
                 radarDataset({
                     objPath: path('RADAR/2063bacchus.tab.obj'),
@@ -150,7 +138,6 @@ const Asteroids = function() {
             ]
         },
         '2867 Steins': {
-            asteroidNumber: 2867,
             datasets: [
                 {
                     name: 'Rosetta Shape Model of Asteroid Steins',
@@ -164,7 +151,6 @@ const Asteroids = function() {
             ]
         },
         '25143 Itokawa': {
-            asteroidNumber: 25143,
             datasets: [
                 {
                     name: 'Gaskell Itokawa Shape Model',
@@ -179,7 +165,6 @@ const Asteroids = function() {
             ]
         },
         '4 Vesta': {
-            asteroidNumber: 4,
             datasets: [
                 {
                     name: 'Dawn Shape Models of Vesta',
@@ -194,7 +179,6 @@ const Asteroids = function() {
             ]
         },
         '433 Eros': {
-            asteroidNumber: 433,
             datasets: [
                 {
                     name: 'Gaskell Eros Shape Model',
@@ -209,7 +193,6 @@ const Asteroids = function() {
             ]
         },
         '4179 Toutatis': {
-            asteroidNumber: 4179,
             datasets: [
                 radarDataset({
                     objPath: path('RADAR/4179toutatis.tab.obj'),
@@ -218,7 +201,6 @@ const Asteroids = function() {
             ]
         },
         '4769 Castalia': {
-            asteroidNumber: 4769,
             datasets: [
                 radarDataset({
                     objPath: path('RADAR/4769castalia.tab.obj'),
@@ -227,7 +209,6 @@ const Asteroids = function() {
             ]
         },
         '6489 Golevka': {
-            asteroidNumber: 6489,
             datasets: [
                 radarDataset({
                     objPath: path('RADAR/6489golevka.tab.obj'),
@@ -236,7 +217,6 @@ const Asteroids = function() {
             ]
         },
         '951 Gaspra': {
-            asteroidNumber: 951,
             datasets: [
                 stookDataset(nullset),
                 thomasDataset(nullset)
