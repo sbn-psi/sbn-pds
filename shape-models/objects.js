@@ -53,8 +53,6 @@ function makeTable() {
     const shapeModelTable = $('#shape-model-table');
     const downloadIcon = () => { return $('<i>', {class: 'fas fa-file-download'}); };
     
-    const satelliteNames = Object.keys(satellites);
-    
     const reAlpha = /[^a-zA-Z]/g;
     const reNum = /[^0-9]/g;
 
@@ -90,6 +88,50 @@ function makeTable() {
             const bx = parseInt(b.match(regex));
             
             return ax < bx ? 1 : -1;
+        },
+        satellites: function(a,b) {
+            const planets = [
+                'Mercury',
+                'Venus',
+                'Earth',
+                'Mars',
+                'Jupiter',
+                'Saturn',
+                'Uranus',
+                'Neptune',
+                'Pluto'
+            ];
+            const fromRoman = str => {  
+                // the result is now a number, not a string
+                let result = 0;
+                
+                const decimals = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+                const roman = ["M", "CM","D","CD","C", "XC", "L", "XL", "X","IX","V","IV","I"];
+                
+                decimals.map((decimal,e) => {
+                    while (str.indexOf(roman[e]) === 0){
+                        result += decimal;
+                        str = str.replace(roman[e],'');
+                    };
+                });
+                return result;
+            };
+            
+            const regex = new RegExp(/\((.*)\)/,'g');
+            
+            const ax = a.match(regex)[0].replace(/(\(|\))/g,'').split(/ /);
+            const bx = b.match(regex)[0].replace(/(\(|\))/g,'').split(/ /);
+            
+            const planetA = ax[0];
+            const idxA = planets.indexOf(planetA);
+            const romanA = fromRoman(ax[1]);
+            
+            const planetB = bx[0];
+            const idxB = planets.indexOf(planetB);
+            const romanB = fromRoman(bx[1]);
+            
+            if (idxA !== idxB) return (idxA < idxB) ? 1 : -1;
+            else return (romanA < romanB) ? 1 : -1;
         }
     };
     
@@ -171,8 +213,8 @@ function makeTable() {
     $('#comet-count').text(`(${Object.keys(comets).length})`);
     
     // PLACE SATELLITES
+    const satelliteNames = Object.keys(satellites).sort(sort.satellites);
     satelliteNames
-        .sort(sortAlphaNum)
         .map((satellite,idx) => {
             const datasets = satellites[satellite]['datasets'];
             const preview = satellites[satellite]['preview'];
