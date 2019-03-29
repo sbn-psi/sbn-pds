@@ -53,7 +53,6 @@ function makeTable() {
     const shapeModelTable = $('#shape-model-table');
     const downloadIcon = () => { return $('<i>', {class: 'fas fa-file-download'}); };
     
-    const cometNames = Object.keys(comets);
     const satelliteNames = Object.keys(satellites);
     
     const reAlpha = /[^a-zA-Z]/g;
@@ -74,11 +73,22 @@ function makeTable() {
     const sort = {
         // sort asteroids based on asteroid number
         asteroids: function(a,b) {
+            // extract asteroid number from name
             const regex = new RegExp(/[0-9]+/,'g');
             
             const ax = parseInt(a.match(regex));
             const bx = parseInt(b.match(regex));
-
+            
+            return ax < bx ? 1 : -1;
+        },
+        comets: function(a,b) {
+            // TODO: add positive lookahead for capital 'P' and forward slash
+                // to ensure other numbers in comet names do not cause bugs
+            const regex = new RegExp(/[0-9]+/,'g');
+            
+            const ax = parseInt(a.match(regex));
+            const bx = parseInt(b.match(regex));
+            
             return ax < bx ? 1 : -1;
         }
     };
@@ -148,8 +158,8 @@ function makeTable() {
     $('#asteroid-count').text(`(${Object.keys(asteroids).length})`);
     
     // PLACE COMETS
+    const cometNames = Object.keys(comets).sort(sort.comets);
     cometNames
-        .sort(sortAlphaNum)
         .map((comet,idx) => {
             const datasets = comets[comet]['datasets'];
             const preview = comets[comet]['preview'];
