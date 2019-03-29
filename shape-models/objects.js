@@ -82,9 +82,9 @@ function makeTable() {
             return ax < bx ? 1 : -1;
         },
         comets: function(a,b) {
-            // TODO: add positive lookahead for capital 'P' and forward slash
+            // positive lookahead for capital 'P' and forward slash
                 // to ensure other numbers in comet names do not cause bugs
-            const regex = new RegExp(/[0-9]+/,'g');
+            const regex = new RegExp(/[0-9]+(?=P\/)/,'g');
             
             const ax = parseInt(a.match(regex));
             const bx = parseInt(b.match(regex));
