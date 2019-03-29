@@ -1,5 +1,3 @@
-const previews = 'previews/';
-const files = 'files/';
 const nullset = {
     objPath: null,
     preview: null
@@ -58,7 +56,4 @@ const nearDataset = function(file) {
             preview: file.preview
         }
     }
-};
-const path = function(path) {
-    return `files/${path}`;
 };
