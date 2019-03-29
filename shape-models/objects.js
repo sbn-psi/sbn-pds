@@ -53,7 +53,6 @@ function makeTable() {
     const shapeModelTable = $('#shape-model-table');
     const downloadIcon = () => { return $('<i>', {class: 'fas fa-file-download'}); };
     
-    const asteroidNames = Object.keys(asteroids);
     const cometNames = Object.keys(comets);
     const satelliteNames = Object.keys(satellites);
     
@@ -71,6 +70,18 @@ function makeTable() {
             return aA > bA ? 1 : -1;
         }
     }
+    
+    const sort = {
+        // sort asteroids based on asteroid number
+        asteroids: function(a,b) {
+            const regex = new RegExp(/[0-9]+/,'g');
+            
+            const ax = parseInt(a.match(regex));
+            const bx = parseInt(b.match(regex));
+
+            return ax < bx ? 1 : -1;
+        }
+    };
     
     function newRow(id,name,datasets,preview,odd) {
         const rowspan = () => { return datasets.length; };
@@ -124,8 +135,8 @@ function makeTable() {
     };
 
     // PLACE ASTEROIDS
+    const asteroidNames = Object.keys(asteroids).sort(sort.asteroids);
     asteroidNames
-        .sort(sortAlphaNum)
         .map((asteroid,idx) => {
             const datasets = asteroids[asteroid]['datasets'];
             const preview = asteroids[asteroid]['preview'];
