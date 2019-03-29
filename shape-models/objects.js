@@ -3,6 +3,8 @@ let comets = Comets();
 let satellites = Satellites();
 
 $(document).ready(function() {
+    $('#query').val('');
+    
     makeTable();
     // search tool
     $('#query').on('keyup', function(event) {
