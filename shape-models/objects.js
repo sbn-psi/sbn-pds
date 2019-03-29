@@ -72,7 +72,7 @@ function makeTable() {
         }
     }
     
-    function newRow(id,name,datasets,preview) {
+    function newRow(id,name,datasets,preview,odd) {
         const rowspan = () => { return datasets.length; };
         const $row = function(dataset,idx) {
             let row = {
@@ -107,9 +107,10 @@ function makeTable() {
         }).reverse();
         
         rows.map(($row,idx) => {
+            const rowClass = (() => { return (odd) ? 'odd' : 'even'; })();
             // <tr> element to be added to table
                 // this will contain all <td> elements for a single dataset row
-            let row = $('<tr>', {class: 'row sbn-body'});
+            let row = $('<tr>', {class: 'row sbn-body' + ` ${rowClass}`});
             
             // conditionally append($row.$name)
             if ($row.$name !== null) row.append($row.$name);
@@ -123,29 +124,41 @@ function makeTable() {
     };
 
     // PLACE ASTEROIDS
-    asteroidNames.sort(sortAlphaNum).map(function(asteroid) {
-        const datasets = asteroids[asteroid]['datasets'];
-        const preview = asteroids[asteroid]['preview'];
-        newRow('asteroids',asteroid,datasets,preview);
-    });
+    asteroidNames
+        .sort(sortAlphaNum)
+        .map((asteroid,idx) => {
+            const datasets = asteroids[asteroid]['datasets'];
+            const preview = asteroids[asteroid]['preview'];
+            const odd = idx % 2 === 1;
+            newRow('asteroids',asteroid,datasets,preview,odd);
+        }
+    );
     // ASTEROID COUNT
     $('#asteroid-count').text(`(${Object.keys(asteroids).length})`);
     
     // PLACE COMETS
-    cometNames.sort(sortAlphaNum).map(function(comet) {
-        const datasets = comets[comet]['datasets'];
-        const preview = comets[comet]['preview'];
-        newRow('comets',comet,datasets,preview);
-    });
+    cometNames
+        .sort(sortAlphaNum)
+        .map((comet,idx) => {
+            const datasets = comets[comet]['datasets'];
+            const preview = comets[comet]['preview'];
+            const odd = idx % 2 === 1;
+            newRow('comets',comet,datasets,preview,odd);
+        }
+    );
     // COMET COUNT
     $('#comet-count').text(`(${Object.keys(comets).length})`);
     
     // PLACE SATELLITES
-    satelliteNames.sort(sortAlphaNum).map(function(satellite) {
-        const datasets = satellites[satellite]['datasets'];
-        const preview = satellites[satellite]['preview'];
-        newRow('satellites',satellite,datasets,preview);
-    });
+    satelliteNames
+        .sort(sortAlphaNum)
+        .map((satellite,idx) => {
+            const datasets = satellites[satellite]['datasets'];
+            const preview = satellites[satellite]['preview'];
+            const odd = idx % 2 === 1;
+            newRow('satellites',satellite,datasets,preview,odd);
+        }
+    );
     // PLACE SATELLITE COUNT
     $('#satellite-count').text(`(${Object.keys(satellites).length})`);
 };
