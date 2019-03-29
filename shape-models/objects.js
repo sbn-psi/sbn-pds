@@ -145,21 +145,21 @@ function makeTable() {
                 })(),
                 '$dataset': {
                     '$name': $('<td>', {class:'cell'}).append($('<a>', {href: dataset.link}).text(dataset.name)),
-                    '$archivedFile': $('<td>', {class: 'cell download-cell'}).append($('<a>', {href: dataset.file.archivePath}).append(downloadIcon()).append($('<p>').text('archive'))),
+                    '$archivedFile': $('<td>', {class: 'cell download-cell'}).append($('<a>', {href: dataset.file.archivePath}).append(downloadIcon()).append($('<p>', {class: 'cell-title'}).text('Archived Version'))),
                     '$objFile': (function() {
                         if (dataset.file.objPath === null) return $('<td>', {class: 'cell download-cell'}).text('-');
-                        else return $('<td>', {class:'cell download-cell'}).append($('<a>', {href: dataset.file.objPath}).append(downloadIcon()).append($('<p>').text('obj')));
+                        else return $('<td>', {class:'cell download-cell'}).append($('<a>', {href: dataset.file.objPath}).append(downloadIcon()).append($('<p>', {class: 'cell-title'}).text('.obj')));
                     })()
                 },
-                '$ferretSearch': (function() {
-                    const ferretLink = `https://sbnapps.psi.edu/ferret/SimpleSearch/results.action?targetName=${name.replace(/ /g,'%20')}`;
-                    if (idx === 0) return $('<td>', {class: 'cell'}).append($('<a>', {href: ferretLink}).text('Ferret Search')).attr('rowspan',rowspan);
-                    else return null;
-                })(),
                 '$preview': (function() {
                     const pview = dataset.file.preview;
                     if (!pview) return $('<td>', {class: 'cell download-cell'}).text('-');
-                    else return $('<td>', {class: 'cell'}).append($('<a>', {href: pview}).append($('<img>', {src: pview, class: 'preview', title: 'Click to Enlarge'})));
+                    else return $('<td>', {class: 'cell download-cell'}).append($('<a>', {href: pview, class: 'preview-link'}).append($('<img>', {src: pview, class: 'preview', title: 'Click to Enlarge'})));
+                })(),
+                '$ferretSearch': (function() {
+                    const ferretLink = `https://sbnapps.psi.edu/ferret/SimpleSearch/results.action?targetName=${name.replace(/ /g,'%20')}`;
+                    if (idx === 0) return $('<td>', {class: 'cell download-cell'}).append($('<a>', {href: ferretLink}).text('Ferret Search')).attr('rowspan',rowspan);
+                    else return null;
                 })()
             };
             return row;
