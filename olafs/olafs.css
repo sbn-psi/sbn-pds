@@ -8,7 +8,7 @@ main a {
     padding: 3em 3em 0 3em;
 }
 
-.olaf-title {
+.olaf-description {
     margin: 0 auto;
     max-width: 50em;
     display: flex;
@@ -16,81 +16,48 @@ main a {
     align-items: center;
 }
 
-.olaf-logo {
+.olaf-description .olaf-logo {
     height: 8em;
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.olafs {
     display: flex;
-    flex-flow: row wrap;
     justify-content: center;
-    min-height: 30em;
-    max-width: 50em;
-}
-
-.olaf.primary {
-    flex: 0 0 100%;
-    border-width: medium;
+    width: 100%;
 }
 
 .olaf {
     box-sizing: border-box;
-    padding: 0.7em;
     margin: 1em;
+    min-width: 50%;
+
+    text-align: center;
     text-decoration: none;
+    font-size: 2em;
+    
     border: 0.05em solid #0B3D91;
-    flex: 1;
-    text-align: center;
-    cursor: pointer;
-}
-
-.olaf ul {
-    display: inline-block;
-}
-
-.olaf li {
-    padding-right: 0;
-    margin-left: 0;
-}
-
-.olaf h2 {
-    text-align: center;
+    border-radius: 30px;
+    background: #e0e6f1;
+    box-shadow: 1px 1px 2px #dadada;
     color: #0B3D91;
-    margin: 0 auto;
-}
 
-.olaf h4 {
-    text-align: center;
-    font-variant: small-caps;
-    margin-top: 0;
-    color: green;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
 }
-
-.olaf .url {
-    text-align: center;
-    color: #0B3D91;
-}
-.olaf .note {
-  color: grey;
-  font-size: 0.8em;
-}
-
 .olaf:hover {
+    background: white;
     box-shadow: 0 0 0.3em 0 #0B3D91;
 }
-
-.olaf p {
-    font-size: 0.85em;
+.olaf .olaf-logo {
+    height: 80px;
+    margin: 0.5em;
 }
 
-.olaf li {
-    text-align: left;
+.note {
+  color: grey;
+  font-size: 0.8em;
 }
 
 .description {
