@@ -6,7 +6,8 @@ let Comets = function() {
                 link: 'https://pdssbn.astro.umd.edu/holdings/ro-c-multi-5-67p-shape-v2.0/dataset.html',
                 file: {
                     archivePath: 'https://pdssbn.astro.umd.edu/holdings/ro-c-multi-5-67p-shape-v2.0/data/triplate/mspcd_lam/shap2/',
-                    objPath: path('67P/cg_mspcd_shap2_006k_cart.obj'),
+                    objPath: path('67P/cg_mspcd_shap2_001m_cart.obj'),
+                    usdzPath: path('67P/cg_mspcd_shap2_001m_cart.usdz'),
                     preview: 'previews/67p.png'
                 }
             }]
@@ -18,6 +19,7 @@ let Comets = function() {
                 file: {
                     archivePath: 'https://pdssbn.astro.umd.edu/holdings/sdu-c-navcam-5-wild2-shape-model-v2.1/data/',
                     objPath: path('wild2/wild2_cart_full.tab.obj'),
+                    usdzPath: path('wild2/wild2_cart_full.tab.usdz'),
                     preview: 'previews/wild2.png'
                 }
             }]
@@ -29,6 +31,7 @@ let Comets = function() {
                 file: {
                     archivePath: 'https://pdssbn.astro.umd.edu/holdings/dif-c-hriv_mri-5-hartley2-shape-v1.0/data/',
                     objPath: path('hartley2/hartley2_2012_cart.obj'),
+                    usdzPath: path('hartley2/hartley2_2012_cart.usdz'),
                     preview: 'previews/hartley2_2012_cart.png'
                 }
             }]
@@ -40,6 +43,7 @@ let Comets = function() {
                 file: {
                     archivePath: 'https://pdssbn.astro.umd.edu/holdings/dif-c-hriv_its_mri-5-tempel1-shape-v2.0/data/',
                     objPath: path('tempel1/tempel1_2012_cart.obj'),
+                    usdzPath: path('tempel1/tempel1_2012_cart.usdz'),
                     preview: 'previews/tempel1_2012_cart.png'
                 }
             }]

@@ -35,8 +35,8 @@
     background: #EDEDED;
 }
 .preview {
-    height: 4em;
-    width: 4em;
+    height: 6em;
+    width: auto;
 }
 .input-text {
     margin: 0;
