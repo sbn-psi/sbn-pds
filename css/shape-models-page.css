@@ -38,8 +38,8 @@
     background: #EDEDED;
 }
 .preview {
-    width: 3em;
-    height: auto;
+    height: 6em;
+    width: auto;
 }
 .input-text {
     margin: 0;

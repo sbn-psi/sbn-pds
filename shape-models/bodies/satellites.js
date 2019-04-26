@@ -6,7 +6,8 @@ let Satellites = function() {
         'Atlas (Saturn XV)': {
             datasets: [
                 saturnDataset({
-                    objPath: 'files/SATURN_SMALL_MOONS/atlas_30k_plt.tab.obj',
+                    objPath: path('SATURN_SMALL_MOONS/atlas_30k_plt.tab.obj'),
+                    usdzPath: path('SATURN_SMALL_MOONS/atlas_30k_plt.tab.usdz'),
                     preview: 'previews/atlas_30k_plt.png'
                 })
             ]
@@ -14,7 +15,8 @@ let Satellites = function() {
         'Calypso (Saturn XIV)': {
             datasets: [
                 saturnDataset({
-                    objPath: 'files/SATURN_SMALL_MOONS/calypso_30k_plt.tab.obj',
+                    objPath: path('SATURN_SMALL_MOONS/calypso_30k_plt.tab.obj'),
+                    usdzPath: path('SATURN_SMALL_MOONS/calypso_30k_plt.tab.usdz'),
                     preview: 'previews/calypso_30k_plt.png'
                 })
             ]
@@ -22,7 +24,8 @@ let Satellites = function() {
         'Daphnis (Saturn XXXV)': {
             datasets: [
                 saturnDataset({
-                    objPath: 'files/SATURN_SMALL_MOONS/daphnis_30k_plt.tab.obj',
+                    objPath: path('SATURN_SMALL_MOONS/daphnis_30k_plt.tab.obj'),
+                    usdzPath: path('SATURN_SMALL_MOONS/daphnis_30k_plt.tab.usdz'),
                     preview: 'previews/daphnis_30k_plt.png'
                 }
             )]
@@ -36,7 +39,8 @@ let Satellites = function() {
                 link: 'https://sbn.psi.edu/pds/resource/dioneshape.html',
                 file: {
                     archivePath: 'https://sbnarchive.psi.edu/pds3/multi_mission/CO_SA_ISSNA_ISSWA_5_DIONESHAPE_V1_0/data/',
-                    objPath: 'files/dione/dione_ver64q.tab.obj',
+                    objPath: path('dione/dione_ver64q.tab.obj'),
+                    usdzPath: path('dione/dione_ver64q.tab.usdz'),
                     preview: 'previews/dione.png'
                 }
             }]
@@ -44,7 +48,8 @@ let Satellites = function() {
         'Epimetheus (Saturn XI)': {
             datasets: [
                 saturnDataset({
-                    objPath: 'files/SATURN_SMALL_MOONS/epimetheus_30k_plt.tab.obj',
+                    objPath: path('SATURN_SMALL_MOONS/epimetheus_30k_plt.tab.obj'),
+                    usdzPath: path('SATURN_SMALL_MOONS/epimetheus_30k_plt.tab.usdz'),
                     preview: 'previews/epimetheus_30k_plt.png'
                 }),
                 stookDataset(nullset),
@@ -54,7 +59,8 @@ let Satellites = function() {
         'Helene (Saturn XII)': {
             datasets: [
                 saturnDataset({
-                    objPath: 'files/SATURN_SMALL_MOONS/helene_30k_plt.tab.obj',
+                    objPath: path('SATURN_SMALL_MOONS/helene_30k_plt.tab.obj'),
+                    usdzPath: path('SATURN_SMALL_MOONS/helene_30k_plt.tab.usdz'),
                     preview: 'previews/helene_30k_plt.png'
                 }
             )]
@@ -62,7 +68,8 @@ let Satellites = function() {
         'Hyperion (Saturn VII)': {
             datasets: [
                 saturnDataset({
-                    objPath: 'files/SATURN_SMALL_MOONS/hyperion_30k_plt.tab.obj',
+                    objPath: path('SATURN_SMALL_MOONS/hyperion_30k_plt.tab.obj'),
+                    usdzPath: path('SATURN_SMALL_MOONS/hyperion_30k_plt.tab.usdz'),
                     preview: 'previews/hyperion_30k_plt.png'
                 }),
                 thomasDataset(nullset)
@@ -71,7 +78,8 @@ let Satellites = function() {
         'Janus (Saturn X)': {
             datasets: [
                 saturnDataset({
-                    objPath: 'files/SATURN_SMALL_MOONS/janus_30k_plt.tab.obj',
+                    objPath: path('SATURN_SMALL_MOONS/janus_30k_plt.tab.obj'),
+                    usdzPath: path('SATURN_SMALL_MOONS/janus_30k_plt.tab.usdz'),
                     preview: 'previews/janus_30k_plt.png'
                 }),
                 thomasDataset(nullset),
@@ -87,7 +95,8 @@ let Satellites = function() {
                 link: 'https://sbn.psi.edu/pds/resource/mimasshape.html',
                 file: {
                     archivePath: 'https://sbnarchive.psi.edu/pds3/multi_mission/CO_SA_ISSNA_5_MIMASSHAPE_V2_0/data/',
-                    objPath: 'files/mimas/mimas_ver64q.tab.obj',
+                    objPath: path('mimas/mimas_ver64q.tab.obj'),
+                    usdzPath: path('mimas/mimas_ver64q.tab.usdz'),
                     preview: 'previews/mimas.png'
                 }
             }]
@@ -95,7 +104,8 @@ let Satellites = function() {
         'Pan (Saturn XVIII)': {
             datasets: [
                 saturnDataset({
-                    objPath: 'files/SATURN_SMALL_MOONS/pan_30k_plt.tab.obj',
+                    objPath: path('SATURN_SMALL_MOONS/pan_30k_plt.tab.obj'),
+                    usdzPath: path('SATURN_SMALL_MOONS/pan_30k_plt.tab.usdz'),
                     preview: 'previews/pan_30k_plt.png'
                 })
             ]
@@ -104,7 +114,8 @@ let Satellites = function() {
             datasets: [
                 stookDataset(nullset),
                 saturnDataset({
-                    objPath: 'files/SATURN_SMALL_MOONS/pandora_30k_plt.tab.obj',
+                    objPath: files + 'SATURN_SMALL_MOONS/pandora_30k_plt.tab.obj',
+                    usdzPath: files + 'SATURN_SMALL_MOONS/pandora_30k_plt.tabusdzj',
                     preview: 'previews/pandora_30k_plt.png'
                 })
             ]
@@ -116,7 +127,8 @@ let Satellites = function() {
                     link: 'https://sbn.psi.edu/pds/resource/phobosshape.html',
                     file: {
                         archivePath: 'https://sbnarchive.psi.edu/pds3/multi_mission/VO1_SA_VISA_VISB_5_PHOBOSSHAPE_V1_0/data/',
-                        objPath: 'files/phobos/phobos_ver64q.tab.obj',
+                        objPath: path('phobos/phobos_ver64q.tab.obj'),
+                        usdzPath: path('phobos/phobos_ver64q.tab.usdz'),
                         preview: 'previews/phobos.png'
                     }
                 },
@@ -129,7 +141,8 @@ let Satellites = function() {
                 link: 'https://sbn.psi.edu/pds/resource/phoebeshape.html',
                 file: {
                     archivePath: 'https://sbnarchive.psi.edu/pds3/multi_mission/CO_SA_ISSNA_5_PHOEBESHAPE_V2_0/data/',
-                    objPath: 'files/phoebe/phoebe_ver64q.tab.obj',
+                    objPath: path('phoebe/phoebe_ver64q.tab.obj'),
+                    usdzPath: path('phoebe/phoebe_ver64q.tab.usdz'),
                     preview: 'previews/phoebe.png'
                 }
             }]
@@ -138,7 +151,8 @@ let Satellites = function() {
             datasets: [
                 saturnDataset(nullset),
                 stookDataset({
-                    objPath: 'files/SATURN_SMALL_MOONS/prometheus_30k_plt.tab.obj',
+                    objPath: path('SATURN_SMALL_MOONS/prometheus_30k_plt.tab.obj'),
+                    usdzPath: path('SATURN_SMALL_MOONS/prometheus_30k_plt.tab.usdz'),
                     preview: 'previews/prometheus_30k_plt.png'
                 })
             ]
@@ -149,7 +163,8 @@ let Satellites = function() {
         'Telesto (Saturn XIII)': {
             datasets: [
                 saturnDataset({
-                    objPath: 'files/SATURN_SMALL_MOONS/telesto_30k_plt.tab.obj',
+                    objPath: path('SATURN_SMALL_MOONS/telesto_30k_plt.tab.obj'),
+                    usdzPath: path('SATURN_SMALL_MOONS/telesto_30k_plt.tab.usdz'),
                     preview: 'previews/telesto_30k_plt.png'
                 })
             ]
@@ -160,7 +175,8 @@ let Satellites = function() {
                 link: 'https://sbn.psi.edu/pds/resource/tethysshape.html',
                 file: {
                     archivePath: 'https://sbnarchive.psi.edu/pds3/multi_mission/CO_SA_ISSNA_5_TETHYSSHAPE_V1_0/data/',
-                    objPath: 'files/tethys/tethys_ver64q.tab.obj',
+                    objPath: path('tethys/tethys_ver64q.tab.obj'),
+                    usdzPath: path('tethys/tethys_ver64q.tab.usdz'),
                     preview: 'previews/tethys.png'
                 }
             }]

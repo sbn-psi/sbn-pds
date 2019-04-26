@@ -3,7 +3,8 @@ const Asteroids = function() {
         '1998 KY26': {
             datasets: [
                 radarDataset({
-                    objPath: 'files/RADAR/1998ky26.tab.obj',
+                    objPath: path('RADAR/1998ky26.tab.obj'),
+                    usdzPath: path('RADAR/1998ky26.tab.usdz'),
                     preview: 'previews/1998ky26.png'
                 })
             ]
@@ -15,7 +16,8 @@ const Asteroids = function() {
                     link: 'https://sbn.psi.edu/pds/resource/shape153591.html',
                     file: {
                         archivePath: 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_I0037_5_SHAPE153591_V1_0/data/',
-                        objPath: 'files/a153591/a153591alpha.tab.obj',
+                        objPath: path('a153591/a153591alpha.tab.obj'),
+                        usdzPath: path('a153591/a153591alpha.tab.usdz'),
                         preview: 'previews/a153591.png'
                     }
                 }
@@ -24,7 +26,8 @@ const Asteroids = function() {
         'Asteroid 52760': {
             datasets: [
                 radarDataset({
-                    objPath: 'files/RADAR/52760.tab.obj',
+                    objPath: path('RADAR/52760.tab.obj'),
+                    usdzPath: path('RADAR/52760.tab.usdz'),
                     preview: 'previews/52760.png'
                 })
             ]
@@ -36,7 +39,8 @@ const Asteroids = function() {
                     link: 'https://sbn.psi.edu/pds/resource/shape8567.html',
                     file: {
                         archivePath: 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_I0037_5_SHAPE8567_V1_0/data/',
-                        objPath: 'files/a8567/a8567.tab.obj',
+                        objPath: path('a8567/a8567.tab.obj'),
+                        usdzPath: path('a8567/a8567.tab.usdz'),
                         preview: 'previews/asteroid_8567.png'
                     }
                 }
@@ -49,7 +53,8 @@ const Asteroids = function() {
                     link: 'https://sbn.psi.edu/pds/resource/dawn/dwncfcshape.html',
                     file: {
                         archivePath: 'https://sbnarchive.psi.edu/pds3/dawn/fc/DWNCSPC_4_01/DATA/ICQ/',
-                        objPath: 'files/ceres/CERES_SPC181019_0128.ICQ.OBJ',
+                        objPath: path('ceres/CERES_SPC181019_0128.ICQ.obj'),
+                        usdzPath: path('ceres/CERES_SPC181019_0128.ICQ.usdz'),
                         preview: 'previews/ceres.png'
                     }
                 },
@@ -59,6 +64,7 @@ const Asteroids = function() {
                     file: {
                         archivePath: 'https://sbnarchive.psi.edu/pds3/dawn/fc/DWNCSPC_4_01/DATA/ICQ/',
                         objPath: null,
+                        usdzPath: null,
                         preview: null
                     }
                 },
@@ -68,6 +74,7 @@ const Asteroids = function() {
                     file: {
                         archivePath: 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_HSTACS_5_CERESHST_V1_0/data/shape/',
                         objPath: null,
+                        usdzPath: null,
                         preview: null
                     }
                 }
@@ -76,7 +83,8 @@ const Asteroids = function() {
         '1620 Geographos': {
             datasets: [
                 radarDataset({
-                    objPath: 'files/RADAR/1620geographos.tab.obj',
+                    objPath: path('RADAR/1620geographos.tab.obj'),
+                    usdzPath: path('RADAR/1620geographos.tab.usdz'),
                     preview: 'previews/1620geographos.png'
                 })
             ]
@@ -88,7 +96,8 @@ const Asteroids = function() {
                     link: 'https://sbn.psi.edu/pds/resource/bennushape.html',
                     file: {
                         archivePath: 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_I0037_5_BENNUSHAPE_V1_0/data/',
-                        objPath: 'files/bennu/101955bennu.tab.obj',
+                        objPath: path('bennu/101955bennu.tab.obj'),
+                        usdzPath: path('bennu/101955bennu.tab.usdz'),
                         preview: 'previews/101955bennu.png'
                     }
                 }
@@ -101,7 +110,8 @@ const Asteroids = function() {
                     link: 'http://pdssbn.astro.umd.edu/holdings/ro-a-osinac_osiwac-5-lutetia-shape-v1.0/dataset.html',
                     file: {
                         archivePath: 'https://pdssbn.astro.umd.edu/holdings/ro-a-osinac_osiwac-5-lutetia-shape-v1.0/data/',
-                        objPath: 'files/lutetia/lutetia_003k_cart.obj',
+                        objPath: path('lutetia/lutetia_003k_cart.obj'),
+                        usdzPath: path('lutetia/lutetia_003k_cart.usdz'),
                         preview: 'previews/lutetia.png'
                     }
                 }
@@ -110,7 +120,8 @@ const Asteroids = function() {
         '216 Kleopatra': {
             datasets: [
                 radarDataset({
-                    objPath: 'files/RADAR/216kleopatra.tab.obj',
+                    objPath: path('RADAR/216kleopatra.tab.obj'),
+                    usdzPath: path('RADAR/216kleopatra.tab.usdz'),
                     preview: 'previews/216kleopatra.png'
                 })
             ]
@@ -131,7 +142,8 @@ const Asteroids = function() {
         '2063 Bacchus': {
             datasets: [
                 radarDataset({
-                    objPath: 'files/RADAR/2063bacchus.tab.obj',
+                    objPath: path('RADAR/2063bacchus.tab.obj'),
+                    usdzPath: path('RADAR/2063bacchus.tab.usdz'),
                     preview: 'previews/2063bacchus.png'
                 })
             ]
@@ -143,7 +155,8 @@ const Asteroids = function() {
                     link: 'https://pdssbn.astro.umd.edu/holdings/ro-a-osinac_osiwac-5-steins-shape-v1.0/dataset.html',
                     file: {
                         archivePath: 'https://pdssbn.astro.umd.edu/holdings/ro-a-osinac_osiwac-5-steins-shape-v1.0/data/',
-                        objPath: 'files/steins/steins.obj',
+                        objPath: path('steins/steins.obj'),
+                        usdzPath: path('steins/steins.usdz'),
                         preview: 'previews/steins.png'
                     }
                 }
@@ -156,7 +169,8 @@ const Asteroids = function() {
                     link: 'https://sbn.psi.edu/pds/resource/itokawashape.html',
                     file: {
                         archivePath: 'https://sbnarchive.psi.edu/pds3/hayabusa/HAY_A_AMICA_5_ITOKAWASHAPE_V1_0/data/quad/',
-                        objPath: 'files/itokawa/ver64q.tab.obj',
+                        objPath: path('itokawa/ver64q.tab.obj'),
+                        usdzPath: path('itokawa/ver64q.tab.usdz'),
                         preview: 'previews/itokawa.png'
                     }
                 },
@@ -170,7 +184,8 @@ const Asteroids = function() {
                     link: 'https://sbn.psi.edu/pds/resource/dawn/dwnvfcshape.html',
                     file: {
                         archivePath: 'https://sbnarchive.psi.edu/pds3/dawn/fc/DWNVSPG_2/DATA/',
-                        objPath: 'files/vesta/Vesta-256V.OBJ',
+                        objPath: path('vesta/Vesta-256V.obj'),
+                        usdzPath: path('vesta/Vesta-256V.usdz'),
                         preview: 'previews/vesta.png'
                     }
                 },
@@ -184,7 +199,8 @@ const Asteroids = function() {
                     link: 'https://sbn.psi.edu/pds/resource/erosshape.html',
                     file: {
                         archivePath: 'https://sbnarchive.psi.edu/pds3/near/NEAR_A_MSI_5_EROSSHAPE_V1_0/data/quad/',
-                        objPath: 'files/eros/ver64q.tab.obj',
+                        objPath: path('eros/ver64q.tab.obj'),
+                        usdzPath: path('eros/ver64q.tab.usdz'),
                         preview: 'previews/eros.png'
                     }
                 },
@@ -194,7 +210,8 @@ const Asteroids = function() {
         '4179 Toutatis': {
             datasets: [
                 radarDataset({
-                    objPath: 'files/RADAR/4179toutatis.tab.obj',
+                    objPath: path('RADAR/4179toutatis.tab.obj'),
+                    usdzPath: path('RADAR/4179toutatis.tab.usdz'),
                     preview: 'previews/toutatis.png'
                 })
             ]
@@ -202,7 +219,8 @@ const Asteroids = function() {
         '4769 Castalia': {
             datasets: [
                 radarDataset({
-                    objPath: 'files/RADAR/4769castalia.tab.obj',
+                    objPath: path('RADAR/4769castalia.tab.obj'),
+                    usdzPath: path('RADAR/4769castalia.tab.usdz'),
                     preview: 'previews/4769castalia.png'
                 })
             ]
@@ -210,7 +228,8 @@ const Asteroids = function() {
         '6489 Golevka': {
             datasets: [
                 radarDataset({
-                    objPath: 'files/RADAR/6489golevka.tab.obj',
+                    objPath: path('RADAR/6489golevka.tab.obj'),
+                    usdzPath: path('RADAR/6489golevka.tab.uusdz'),
                     preview: 'previews/6489golevka.png'
                 })
             ]

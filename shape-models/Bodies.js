@@ -1,7 +1,11 @@
 const nullset = {
     objPath: null,
+    usdzPath: null,
     preview: null
 };
+const files = 'files/';
+const previews = 'previews/';
+const path = (path) => `files/${path}`;
 const radarDataset = function(file) {
     return {
         name: 'Radar Shape Models (Hudson)',
@@ -9,6 +13,7 @@ const radarDataset = function(file) {
         file: {
             archivePath: 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_RADARSHAPE_MODELS_V2_0/data/',
             objPath: file.objPath,
+            usdzPath: file.objPath,
             preview: file.preview
         }
     };
@@ -20,6 +25,7 @@ const saturnDataset = function(file) {
         file: {
             archivePath: 'https://sbnarchive.psi.edu/pds4/certified/saturn_satellite_shape_models_V1_0/data/',
             objPath: file.objPath,
+            usdzPath: file.objPath,
             preview: file.preview
         }
     };
@@ -31,6 +37,7 @@ const stookDataset = function(file) {
         file: {
             archivePath: 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/',
             objPath: file.objPath,
+            usdzPath: file.objPath,
             preview: file.preview
         }
     };
@@ -42,6 +49,7 @@ const thomasDataset = function(file) {
         file: {
             archivePath: 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_SHAPE_MODELS_V2_1/data/',
             objPath: file.objPath,
+            usdzPath: file.objPath,
             preview: file.preview
         }
     }
@@ -53,6 +61,7 @@ const nearDataset = function(file) {
         file: {
             archivePath: 'https://sbnarchive.psi.edu/pds3/near/NEAR_A_5_COLLECTED_MODELS_V1_0/data/msi/',
             objPath: file.objPath,
+            usdzPath: file.usdzPath,
             preview: file.preview
         }
     }
