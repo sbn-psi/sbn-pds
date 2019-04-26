@@ -53,10 +53,8 @@ const Asteroids = function() {
                     link: 'https://sbn.psi.edu/pds/resource/dawn/dwncfcshape.html',
                     file: {
                         archivePath: 'https://sbnarchive.psi.edu/pds3/dawn/fc/DWNCSPC_4_01/DATA/ICQ/',
-                        // objPath: path('ceres/CERES_SPC181019_0128.ICQ.OBJ'),
-                        objPath: null,
-                        // usdzPath: path('ceres/CERES_SPC181019_0128.ICQ.usdz'),
-                        usdzPath: null,
+                        objPath: path('ceres/CERES_SPC181019_0128.ICQ.obj'),
+                        usdzPath: path('ceres/CERES_SPC181019_0128.ICQ.usdz'),
                         preview: 'previews/ceres.png'
                     }
                 },
@@ -187,10 +185,8 @@ const Asteroids = function() {
                     link: 'https://sbn.psi.edu/pds/resource/dawn/dwnvfcshape.html',
                     file: {
                         archivePath: 'https://sbnarchive.psi.edu/pds3/dawn/fc/DWNVSPG_2/DATA/',
-                        // objPath: path('vesta/Vesta-256V.OBJ'),
-                        objPath: null,
-                        // usdzPath: path('vesta/Vesta-256V.usdz'),
-                        usdzPath: null,
+                        objPath: path('vesta/Vesta-256V.obj'),
+                        usdzPath: path('vesta/Vesta-256V.usdz'),
                         preview: 'previews/vesta.png'
                     }
                 },
