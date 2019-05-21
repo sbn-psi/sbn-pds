@@ -96,9 +96,19 @@ const Asteroids = function() {
                     link: 'https://sbn.psi.edu/pds/resource/bennushape.html',
                     file: {
                         archivePath: 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_I0037_5_BENNUSHAPE_V1_0/data/',
-                        objPath: path('bennu/101955bennu.tab.obj'),
-                        usdzPath: path('bennu/101955bennu.tab.usdz'),
+                        objPath: path('bennu/radar/101955bennu.tab.obj'),
+                        usdzPath: path('bennu/radar/101955bennu.tab.usdz'),
                         preview: 'previews/101955bennu.png'
+                    }
+                },
+                {
+                    name: 'OSIRIS-REx Data Archive',
+                    link: 'https://naif.jpl.nasa.gov/pub/naif/pds/pds4/orex/',
+                    file: {
+                        archivePath: 'https://naif.jpl.nasa.gov/pub/naif/pds/pds4/orex/orex_spice/spice_kernels/dsk/',
+                        objPath: path('bennu/orex/bennu.orex.obj'),
+                        usdzPath: path('bennu/orex/bennu.orex.usdz'),
+                        preview: 'previews/bennu.orex.png'
                     }
                 }
             ]
