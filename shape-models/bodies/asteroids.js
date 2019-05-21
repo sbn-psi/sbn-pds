@@ -102,7 +102,7 @@ const Asteroids = function() {
                     }
                 },
                 {
-                    name: 'OSIRIS-REx Data Archive',
+                    name: 'OSIRIS-REx SPICE Archive',
                     link: 'https://naif.jpl.nasa.gov/pub/naif/pds/pds4/orex/',
                     file: {
                         archivePath: 'https://naif.jpl.nasa.gov/pub/naif/pds/pds4/orex/orex_spice/spice_kernels/dsk/',
