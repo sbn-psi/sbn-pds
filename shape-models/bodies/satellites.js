@@ -7,6 +7,7 @@ let Satellites = function() {
             datasets: [
                 saturnDataset({
                     objPath: path('SATURN_SMALL_MOONS/atlas_30k_plt.tab.obj'),
+                    usdzPath: path('SATURN_SMALL_MOONS/atlas_30k_plt.tab.usdz'),
                     preview: 'previews/atlas_30k_plt.png'
                 })
             ]
@@ -15,6 +16,7 @@ let Satellites = function() {
             datasets: [
                 saturnDataset({
                     objPath: path('SATURN_SMALL_MOONS/calypso_30k_plt.tab.obj'),
+                    usdzPath: path('SATURN_SMALL_MOONS/calypso_30k_plt.tab.usdz'),
                     preview: 'previews/calypso_30k_plt.png'
                 })
             ]
@@ -23,6 +25,7 @@ let Satellites = function() {
             datasets: [
                 saturnDataset({
                     objPath: path('SATURN_SMALL_MOONS/daphnis_30k_plt.tab.obj'),
+                    usdzPath: path('SATURN_SMALL_MOONS/daphnis_30k_plt.tab.usdz'),
                     preview: 'previews/daphnis_30k_plt.png'
                 }
             )]
@@ -37,6 +40,7 @@ let Satellites = function() {
                 file: {
                     archivePath: 'https://sbnarchive.psi.edu/pds3/multi_mission/CO_SA_ISSNA_ISSWA_5_DIONESHAPE_V1_0/data/',
                     objPath: path('dione/dione_ver64q.tab.obj'),
+                    usdzPath: path('dione/dione_ver64q.tab.usdz'),
                     preview: 'previews/dione.png'
                 }
             }]
@@ -45,6 +49,7 @@ let Satellites = function() {
             datasets: [
                 saturnDataset({
                     objPath: path('SATURN_SMALL_MOONS/epimetheus_30k_plt.tab.obj'),
+                    usdzPath: path('SATURN_SMALL_MOONS/epimetheus_30k_plt.tab.usdz'),
                     preview: 'previews/epimetheus_30k_plt.png'
                 }),
                 stookDataset(nullset),
@@ -55,6 +60,7 @@ let Satellites = function() {
             datasets: [
                 saturnDataset({
                     objPath: path('SATURN_SMALL_MOONS/helene_30k_plt.tab.obj'),
+                    usdzPath: path('SATURN_SMALL_MOONS/helene_30k_plt.tab.usdz'),
                     preview: 'previews/helene_30k_plt.png'
                 }
             )]
@@ -63,6 +69,7 @@ let Satellites = function() {
             datasets: [
                 saturnDataset({
                     objPath: path('SATURN_SMALL_MOONS/hyperion_30k_plt.tab.obj'),
+                    usdzPath: path('SATURN_SMALL_MOONS/hyperion_30k_plt.tab.usdz'),
                     preview: 'previews/hyperion_30k_plt.png'
                 }),
                 thomasDataset(nullset)
@@ -72,6 +79,7 @@ let Satellites = function() {
             datasets: [
                 saturnDataset({
                     objPath: path('SATURN_SMALL_MOONS/janus_30k_plt.tab.obj'),
+                    usdzPath: path('SATURN_SMALL_MOONS/janus_30k_plt.tab.usdz'),
                     preview: 'previews/janus_30k_plt.png'
                 }),
                 thomasDataset(nullset),
@@ -88,6 +96,7 @@ let Satellites = function() {
                 file: {
                     archivePath: 'https://sbnarchive.psi.edu/pds3/multi_mission/CO_SA_ISSNA_5_MIMASSHAPE_V2_0/data/',
                     objPath: path('mimas/mimas_ver64q.tab.obj'),
+                    usdzPath: path('mimas/mimas_ver64q.tab.usdz'),
                     preview: 'previews/mimas.png'
                 }
             }]
@@ -96,6 +105,7 @@ let Satellites = function() {
             datasets: [
                 saturnDataset({
                     objPath: path('SATURN_SMALL_MOONS/pan_30k_plt.tab.obj'),
+                    usdzPath: path('SATURN_SMALL_MOONS/pan_30k_plt.tab.usdz'),
                     preview: 'previews/pan_30k_plt.png'
                 })
             ]
@@ -105,6 +115,7 @@ let Satellites = function() {
                 stookDataset(nullset),
                 saturnDataset({
                     objPath: files + 'SATURN_SMALL_MOONS/pandora_30k_plt.tab.obj',
+                    usdzPath: files + 'SATURN_SMALL_MOONS/pandora_30k_plt.tabusdzj',
                     preview: 'previews/pandora_30k_plt.png'
                 })
             ]
@@ -117,6 +128,7 @@ let Satellites = function() {
                     file: {
                         archivePath: 'https://sbnarchive.psi.edu/pds3/multi_mission/VO1_SA_VISA_VISB_5_PHOBOSSHAPE_V1_0/data/',
                         objPath: path('phobos/phobos_ver64q.tab.obj'),
+                        usdzPath: path('phobos/phobos_ver64q.tab.usdz'),
                         preview: 'previews/phobos.png'
                     }
                 },
@@ -130,6 +142,7 @@ let Satellites = function() {
                 file: {
                     archivePath: 'https://sbnarchive.psi.edu/pds3/multi_mission/CO_SA_ISSNA_5_PHOEBESHAPE_V2_0/data/',
                     objPath: path('phoebe/phoebe_ver64q.tab.obj'),
+                    usdzPath: path('phoebe/phoebe_ver64q.tab.usdz'),
                     preview: 'previews/phoebe.png'
                 }
             }]
@@ -139,6 +152,7 @@ let Satellites = function() {
                 saturnDataset(nullset),
                 stookDataset({
                     objPath: path('SATURN_SMALL_MOONS/prometheus_30k_plt.tab.obj'),
+                    usdzPath: path('SATURN_SMALL_MOONS/prometheus_30k_plt.tab.usdz'),
                     preview: 'previews/prometheus_30k_plt.png'
                 })
             ]
@@ -150,6 +164,7 @@ let Satellites = function() {
             datasets: [
                 saturnDataset({
                     objPath: path('SATURN_SMALL_MOONS/telesto_30k_plt.tab.obj'),
+                    usdzPath: path('SATURN_SMALL_MOONS/telesto_30k_plt.tab.usdz'),
                     preview: 'previews/telesto_30k_plt.png'
                 })
             ]
@@ -161,6 +176,7 @@ let Satellites = function() {
                 file: {
                     archivePath: 'https://sbnarchive.psi.edu/pds3/multi_mission/CO_SA_ISSNA_5_TETHYSSHAPE_V1_0/data/',
                     objPath: path('tethys/tethys_ver64q.tab.obj'),
+                    usdzPath: path('tethys/tethys_ver64q.tab.usdz'),
                     preview: 'previews/tethys.png'
                 }
             }]

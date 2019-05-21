@@ -16,7 +16,7 @@
     background: #D5D5D5;
 }
 .cell {
-    padding: 0.5em;
+    padding: 0.2em;
     display: table-cell;
     border: 1px solid #BDBDBD;
     vertical-align: middle;
@@ -24,6 +24,9 @@
 .cell h3 {
     margin: 0;
     text-decoration: underline;
+}
+.cell-title {
+    font-size: 0.8em;
 }
 .category {
     border-right: 1px solid #BDBDBD;
@@ -35,8 +38,8 @@
     background: #EDEDED;
 }
 .preview {
-    height: 4em;
-    width: 4em;
+    height: 6em;
+    width: auto;
 }
 .input-text {
     margin: 0;
@@ -49,6 +52,11 @@
 .download-cell p, .download-cell i {
     cursor: pointer;
     margin: 0;
+}
+.preview-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .even {
     background: #f6f6f6;
