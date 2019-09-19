@@ -113,6 +113,20 @@ const Asteroids = function() {
                 }
             ]
         },
+        '162173 Ryugu': {
+            datasets: [
+                {
+                    name: '(JAXA) Hayabusa2 observations of the top-shape carbonaceous asteroid 162173 Ryugu',
+                    link: 'https://www.darts.isas.jaxa.jp/pub/hayabusa2/paper/Watanabe_2019/README.html',
+                    file: {
+                        archivePath: 'https://www.darts.isas.jaxa.jp/pub/hayabusa2/paper/Watanabe_2019/SHAPE_SFM_3M_v20180804.obj',
+                        objPath: 'https://www.darts.isas.jaxa.jp/pub/hayabusa2/paper/Watanabe_2019/SHAPE_SFM_3M_v20180804.obj',
+                        usdzPath: null,
+                        preview: null
+                    }
+                }
+            ]
+        },
         '21 Lutetia': {
             datasets: [
                 {
