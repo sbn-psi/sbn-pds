@@ -29,9 +29,9 @@
                  <li><a href="http://pdssbn.astro.umd.edu/holdings/nh-j-sdc-3-jupiter-v2.0/dataset.html">Reduced Jupiter Encounter Data, Version 2</a>
             </ul>
             
-            <h3><font color=red>Superseded versions:</font></h3>
+            <h3 id="pds-superseded-title">Superseded Versions: <a onclick="setShow()" id="pds-superseded-toggle">Show</a></h3>
             
-            <ul>
+            <ul id="pds-superseded">
                  <li><a href="http://pdssbn.astro.umd.edu/holdings/nh-x-sdc-2-launch-v1.0/dataset.html">Raw Post-Launch Checkout Data, Version 1</a>
                  <li><a href="http://pdssbn.astro.umd.edu/holdings/nh-x-sdc-3-launch-v1.0/dataset.html">Reduced Post-Launch Checkout Data, Version 1</a>
                  <li><a href="http://pdssbn.astro.umd.edu/holdings/nh-j-sdc-2-jupiter-v1.0/dataset.html">Raw Jupiter Encounter Data, Version 1</a>
@@ -46,31 +46,6 @@
 
     <div include-html="/pds/sbn-footer.html"></div> 
     
-    <script>
-        includeHTML = function(cb) {
-            var z, i, elmnt, file, xhttp;
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                file = elmnt.getAttribute("include-html");
-                if (file) {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
-                        elmnt.removeAttribute("include-html");
-                        includeHTML(cb);
-                    }
-                }      
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                return;
-                }
-            }
-            if (cb) cb();
-            };
-        includeHTML();
-    </script>
+    <script src="/pds/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

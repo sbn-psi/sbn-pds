@@ -7,7 +7,19 @@ a:not(.ignore-a-styling) {
     text-decoration: none;
     letter-spacing: 0.1em;
 }
-
+#pds-superseded-title {
+    color: red;
+}
+#pds-superseded {
+    display: none;
+}
+#pds-superseded-toggle {
+    color: blue;
+    text-decoration: underline;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    margin-left: 1em;
+}
 
 /* main */
 .sbn-main {
