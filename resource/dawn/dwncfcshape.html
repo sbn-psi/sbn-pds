@@ -91,7 +91,7 @@ Digital Terrain Models and mosaics for seven selected Ceres regions.
 
 <br><br>
 <hr>
-<h3><font color=red>Superseded:</font></h3>
+<h3 id="pds-superseded-title">Superseded Versions: <a onclick="setShow()" id="pds-superseded-toggle">Show</a></h3>
 
 <p>
 The following data set has been superseded by the Ceres Regional DTMs and
@@ -99,7 +99,7 @@ Mosaics for Selected Regions, which includes the Occator DTM and adds
 DTMs of additional regions as well as mosaics.
             
             <p>
-            <table border=1>
+            <table border=1 id="pds-superseded-toggle"> 
             <tr><td width=400> Data set:
                 <td width=200> Browse:
                 <td width=200> Download:
@@ -123,31 +123,7 @@ DTMs of additional regions as well as mosaics.
 
     <div include-html="/pds/sbn-footer.html"></div> 
     
-    <script>
-        includeHTML = function(cb) {
-            var z, i, elmnt, file, xhttp;
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                file = elmnt.getAttribute("include-html");
-                if (file) {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
-                        elmnt.removeAttribute("include-html");
-                        includeHTML(cb);
-                    }
-                }      
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                return;
-                }
-            }
-            if (cb) cb();
-            };
-        includeHTML();
-    </script>
+    
+<script src="/pds/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

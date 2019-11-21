@@ -59,14 +59,14 @@
             
             <br><br>
             
-            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
+            <h3 id="pds-superseded-title">Superseded Versions: <a onclick="setShow()" id="pds-superseded-toggle">Show</a></h3>
             
             <p>
             This volume has been superseded by version 2 posted above.  Version 2 has been updated by the addition of a Bouguet map.
             
             <br><br>
             
-            <table border=1>
+            <table border=1 id="pds-superseded">
             <tr><td width=500>DWNVGRS_2 Version 1
                 <td width=100> <a href="http://sbnarchive.psi.edu/pds3/dawn/grav/superseded/DWNVGRS_2/"> Browse </a>
                 <td width=200> <a href="http://sbnarchive.psi.edu/pds3/dawn/grav/superseded/DWNVGRS_2_version1.zip"> Download (2.3 Mb) </a>
@@ -86,31 +86,7 @@
 
     <div include-html="/pds/sbn-footer.html"></div> 
     
-    <script>
-        includeHTML = function(cb) {
-            var z, i, elmnt, file, xhttp;
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                file = elmnt.getAttribute("include-html");
-                if (file) {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
-                        elmnt.removeAttribute("include-html");
-                        includeHTML(cb);
-                    }
-                }      
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                return;
-                }
-            }
-            if (cb) cb();
-            };
-        includeHTML();
-    </script>
+    
+<script src="/pds/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

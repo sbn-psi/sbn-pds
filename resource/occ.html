@@ -46,9 +46,9 @@ complete through the end of 2017.
             
             <br><br>
             
-            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
+    <h3 id="pds-superseded-title">Superseded Versions: <a onclick="setShow()" id="pds-superseded-toggle">Show</a></h3>
             
-            <table border=1>
+            <table border=1 id="pds-superseded">
             <tr><td width=500> urn:nasa:pds:smallbodiesoccultations::1.0
                 <td width=100> <a href="http://sbnarchive.psi.edu/pds4/non_mission/smallbodiesoccultations"> Browse </a>
                 <td width=200> <a href="http://sbnarchive.psi.edu/pds4/non_mission/smallbodiesoccultations.zip"> Download (14 Mb) </a>
@@ -107,31 +107,7 @@ complete through the end of 2017.
 
     <div include-html="/pds/sbn-footer.html"></div> 
     
-    <script>
-        includeHTML = function(cb) {
-            var z, i, elmnt, file, xhttp;
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                file = elmnt.getAttribute("include-html");
-                if (file) {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
-                        elmnt.removeAttribute("include-html");
-                        includeHTML(cb);
-                    }
-                }      
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                return;
-                }
-            }
-            if (cb) cb();
-            };
-        includeHTML();
-    </script>
+    
+<script src="/pds/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

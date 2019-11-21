@@ -156,7 +156,8 @@
             <br> <br>
             <hr>
             
-            <h2><font color=red>Superseded:</font></h2>
+            <h3 id="pds-superseded-title">Superseded Versions: <a onclick="setShow()" id="pds-superseded-toggle">Show</a></h3>
+            <div id="pds-superseded">
             
             <h3>Raw VIR Vesta Version 1.0, superseded:</h3>
             
@@ -202,9 +203,9 @@
                 <td><a href="http://sbnarchive.psi.edu/pds3/dawn/vir/DWNVVIR_V1B.tar.gz">DWNVVIR_V1B.tar.gz</a> (32 Gb)</td>
                 <td><a href="http://sbnarchive.psi.edu/pds3//dawn/vir/downloads/DWNVVIR_V1B/">Select mission phase</a></td>
             </table>
-            
+            </div>
             <br> <br>
-            
+        
             <h3>
             <center>
             <a href="index.html">Return to Dawn Archive Page</a><br>
@@ -217,31 +218,7 @@
 
     <div include-html="/pds/sbn-footer.html"></div> 
     
-    <script>
-        includeHTML = function(cb) {
-            var z, i, elmnt, file, xhttp;
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                file = elmnt.getAttribute("include-html");
-                if (file) {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
-                        elmnt.removeAttribute("include-html");
-                        includeHTML(cb);
-                    }
-                }      
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                return;
-                }
-            }
-            if (cb) cb();
-            };
-        includeHTML();
-    </script>
+    
+<script src="/pds/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

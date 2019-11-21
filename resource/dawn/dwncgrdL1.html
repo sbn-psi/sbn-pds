@@ -123,16 +123,15 @@ Latest release date for XMO5-XMO7:  May 14, 2019 <br><br>
             <br> <br>
             <hr>
             
-            <font color=red>
-            <h2>Superseded:</h2>
-            </font>
+            
+    <h3 id="pds-superseded-title">Superseded Versions: <a onclick="setShow()" id="pds-superseded-toggle">Show</a></h3>
             
             <p>
             These early deliveries have been superseded by a single volume for the GRaND
             Ceres calibrated data, including the latest documentation and correction of
             minor errors.
             
-            <table border=1>
+            <table border=1 id="pds-superseded">
             <tr><td width=500>Data set:
                 <td width=200>Browse:
                 <td width=200>Download:
@@ -161,31 +160,7 @@ Latest release date for XMO5-XMO7:  May 14, 2019 <br><br>
 
     <div include-html="/pds/sbn-footer.html"></div> 
     
-    <script>
-        includeHTML = function(cb) {
-            var z, i, elmnt, file, xhttp;
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                file = elmnt.getAttribute("include-html");
-                if (file) {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
-                        elmnt.removeAttribute("include-html");
-                        includeHTML(cb);
-                    }
-                }      
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                return;
-                }
-            }
-            if (cb) cb();
-            };
-        includeHTML();
-    </script>
+    
+<script src="/pds/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

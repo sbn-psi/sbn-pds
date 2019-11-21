@@ -69,12 +69,7 @@ data content is unchanged.
                     Marzari, F., Boehnhardt, H., De Luise, F., Barucci, M.A., and de      
                     Bergh, C., Spectroscopy and Photometry of Jupiter Trojans V1.0.       
                     EAR-A-EMMI-3-FORNASIER-V1.0. NASA Planetary Data System, 2008."
-            
-            <br><br>
-            
-            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
-            None.
-            
+
             <br> <br>
     </main>
     <!-- END main content -->
@@ -83,31 +78,7 @@ data content is unchanged.
 
     <div include-html="/pds/sbn-footer.html"></div> 
     
-    <script>
-        includeHTML = function(cb) {
-            var z, i, elmnt, file, xhttp;
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                file = elmnt.getAttribute("include-html");
-                if (file) {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
-                        elmnt.removeAttribute("include-html");
-                        includeHTML(cb);
-                    }
-                }      
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                return;
-                }
-            }
-            if (cb) cb();
-            };
-        includeHTML();
-    </script>
+    
+<script src="/pds/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

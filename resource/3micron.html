@@ -45,10 +45,10 @@
                     EAR-A-3-RDR-THREEMICRON-V1.2. NASA Planetary Data System, 1995."
             
             <br><br>
+
+            <h3 id="pds-superseded-title">Superseded Versions: <a onclick="setShow()" id="pds-superseded-toggle">Show</a></h3>
             
-            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
-            
-            <table border=1>
+            <table border=1 id="pds-superseded">
             <tr><td width=500> EAR-A-3-RDR-THREEMICRON-V1.1
                 <td width=100> <a href="http://sbnarchive.psi.edu/pds3/non_mission/EAR_A_3_RDR_THREEMICRON_V1_1"> Browse </a>
                 <td width=200> <a href="http://sbnarchive.psi.edu/pds3/non_mission/EAR_A_3_RDR_THREEMICRON_V1_1.zip"> Download (34 kb) </a>
@@ -65,31 +65,7 @@
 
     <div include-html="/pds/sbn-footer.html"></div> 
     
-    <script>
-        includeHTML = function(cb) {
-            var z, i, elmnt, file, xhttp;
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                file = elmnt.getAttribute("include-html");
-                if (file) {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
-                        elmnt.removeAttribute("include-html");
-                        includeHTML(cb);
-                    }
-                }      
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                return;
-                }
-            }
-            if (cb) cb();
-            };
-        includeHTML();
-    </script>
+    
+<script src="/pds/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>
