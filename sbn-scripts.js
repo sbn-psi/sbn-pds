@@ -37,7 +37,6 @@ let show = false
 
 // event handler
 const setShow = function(event,el) {
-    console.log(event,el);
     show = !show
     elements.list.style.display = (show === true) ? 'block' : 'none'
     elements.toggle.innerHTML = (show === true) ? 'Hide' : 'Show'
