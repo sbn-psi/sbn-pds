@@ -20,6 +20,15 @@ a:not(.ignore-a-styling) {
 .resource-title {
     text-align: center;
 }
+.pds-button {
+    padding: 0.3em 0.5em;
+    border-radius: 0.3em;
+    background: #ededed;
+    border: 1px solid #d5d5d5;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1em;
+}
 
 /* main */
 .sbn-main {
