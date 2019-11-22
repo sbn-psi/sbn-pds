@@ -14,56 +14,56 @@
 </head>
 <body>
 
-    <div include-html="/pds/sbn-header.html"></div> 
+    <div include-html="/pds/sbn-header.html"></div>
 
     <!-- BEGIN main content -->
     <main class="sbn-main">
         <center>
             <h1> NEAR Data Problems</h1>
             </center>
-            
+
             <p>
             This page describes known and discovered problems with the NEAR data sets
              as of May 2012.
-            
+
             <hr>
-            
+
             <h2>MSI - Multi-Spectral Imager Data</h2>
-            
+
             <h3>Level 1B</h3>
-            
+
             <p>
             No known problems.
-             
+
             <h3>Level 2</h3>
-            
+
             <p>
             Labels in the calib directory for NEAR-A-MSI-3-EDR-EROS/ORBIT-V1.0 are
             missing TARGET_NAME = "CALIBRATION".
-            
+
             <p>
             The index directory for NEAR-A-MSI-3-EDR-EROS/ORBIT-V1.0 includes an
             illegal file, checksum.tab~.
-            
+
             <h3>Level 3</h3>
-            
+
             <p>
             No known problems.
-            
+
             <hr>
-            
+
             <h2>NLR - Laser Rangefinder Data</h2>
-            
+
             <h3>Level 1B</h3>
-            
+
             <p>
             No known problems.
-            
+
             <h3>Levels 2 and 3</h3>
-            
+
             <p>
             No known problems.
-            
+
             <p>
             NOTE:
              The propagation of covariance to incertainties is a complex task
@@ -71,63 +71,63 @@
              archived. When and if the formal uncertainties are calculated
              and submitted to the PDS, they will be incorporated into the
              archive.
-            
+
             <hr>
-            
+
             <h2>NIS - Near-Infrared Spectrometer Data</h2>
-            
+
             <h3>Level 1B</h3>
-            
+
             <p>
             No known problems.
-            
+
             <h3>Levels 2 and 3</h3>
-            
+
             <p>
             No known problems.
-            
+
             <p>
             NOTE: Labels contain non-SI values in some of the UNIT fields (for example, "MILLIAMPERE", "DEGREE CELSIUS").
-            
+
             <p>
             NOTE: Duration times are misleading. Duration includes data spectra, instrument rest, and dark spectra (if darks were interleaved). PDS-SBN calculated the exposure time for data spectra only and added it to new Level 2 data products on the NXCOLL_3001 CD: /NNEROS_2003, the revised NIXEL database, /NNEROS_2004, the NIXEL data split by UTC, and /NNEROS_2005, the NIXEL data split by mission subphase.
-            
+
             <hr>
-            
+
             <h2>MAG - Magnetometer Data</h2>
-            
+
             <h3>Level 1B</h3>
-            
+
             <p>
             No known problems in the data files.
-            
+
             <h3>Level 2</h3>
-            
+
             <p>
             Data set catalog file "magl2ds.cat" on each of the mission phase volumes on /NMCOLL_3001/ contain a typo in a REFERENCE_KEY_ID value: "ANDERSONETAL2001" is erroneously spelled "ANDERS0NETAL2001" (i.e., with a zero rather than an 'O' in the author's name).
-            
+
             <hr>
-            
+
             <h2>XRS/GRS - X-Ray/Gamma-Ray Spectrometer Data</h2>
-            
+
             <h3>Levels 1B, 2, and 3</h3>
-            
+
             <p>
             No known problems in the data files.
-            
+
             <hr>
-            
+
             <h2>Radio Science Data</h2>
-            
+
             <h3>Levels 1B through 5</h3>
-            
+
             <p>
             No known problems in the data files.
-            
+
             <hr>
-            
+
             <h2>SPICE Data</h2>
-            
+
             <p>
             The NEAR SPICE archive was originally structured inconveniently as nine data
             sets divided by mission
@@ -135,25 +135,25 @@
             data set by Boris Semenov of NAIF, and the combined NEAR SPICE data set was
             reviewed internally by SBN.  The combined data set was released by NAIF in
             February 2013 and linked on the SBN NEAR archive site.
-            
+
             <p>
             The original nine data sets, which are now superseded by the combined data set,
             are accessible <a href="/pds/resource/near/spice.html">
             here</a>.
-            
-            
+
+
             <hr>
-            
+
             <h2> General</h2>
-            
+
             <p>
             Inconsistent creation of index/checksum.tab and .lbl files across the data sets.
             Some data sets have these files while others do not.
-            
-            
-            
+
+
+
             <br>
-            
+
             <center>
             <a href="/pds/resource/near">Return to NEAR Archive</a>
             </center>
@@ -161,11 +161,11 @@
     </main>
     <!-- END main content -->
 
-    <div include-html="/pds/sbn-sidebar.html"></div> 
+    <div include-html="/pds/sbn-sidebar.html"></div>
 
-    <div include-html="/pds/sbn-footer.html"></div> 
-    
-    
-<script src="/pds/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
+    <div include-html="/pds/sbn-footer.html"></div>
+
+
+<script src="/pds/js/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>
