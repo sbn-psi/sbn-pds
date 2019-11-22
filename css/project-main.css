@@ -7,9 +7,6 @@ a:not(.ignore-a-styling) {
     text-decoration: none;
     letter-spacing: 0.1em;
 }
-#pds-superseded-title {
-    color: red;
-}
 #pds-superseded {
     display: none;
 }
