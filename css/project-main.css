@@ -17,6 +17,9 @@ a:not(.ignore-a-styling) {
     cursor: pointer;
     margin-left: 1em;
 }
+.resource-title {
+    text-align: center;
+}
 
 /* main */
 .sbn-main {
