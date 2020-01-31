@@ -14,7 +14,7 @@
 </head>
 <body>
 
-    <div include-html="/pds/sbn-header.html"></div> 
+    <div include-html="/pds/sbn-header.html"></div>
 
     <!-- BEGIN main content -->
     <main class="sbn-main">
@@ -22,13 +22,13 @@
         <center><h1>PDF/A Converting and Validation</h1></center>
 
         <p>
-        PDF is a standard for encoding documents in an "as printed" 
-            form that is portable. PDF/A was developed as an 
-            international standard to define the use of PDF for 
+        PDF is a standard for encoding documents in an "as printed"
+            form that is portable. PDF/A was developed as an
+            international standard to define the use of PDF for
             archiving. <a href="https://en.wikipedia.org/wiki/PDF/A#Background">[1]</a>
         </p>
         <p>
-            Visually inspect your PDF before submitting it. 
+            Visually inspect your PDF before submitting it.
         </p>
         <p>
         To check if your PDF is conformed correctly, use the tool below.
@@ -38,42 +38,42 @@
             <h2> PDF/A Validation </h2>
             <a href="http://verapdf.org/software/">http://verapdf.org/software/</a>
         </center>
-        
+
         <p>
             This webpage is where you can download a validation software
-            package for PDF/A. If you do not have JAVA, you would need to 
+            package for PDF/A. If you do not have JAVA, you would need to
             download that first. They have versions for Windows, Mac,
-            and Linux. If you need assistance in installing this package, 
+            and Linux. If you need assistance in installing this package,
             they have a link to their GitHub directory on the page.
         </p>
 
         <p>
             A note about the recent version of Mac computers. When trying to install
             the verapdf program, there will be a security pop up window that prevents
-            one from installing it. To get around this, one has to control-click the 
+            one from installing it. To get around this, one has to control-click the
             installer and select "Open".
         </p>
 
-        
+
         <p>
             Once the program is installed, you can either run the GUI version
             or run the program from the command line.
         </p>
-        
+
         <p>
-            For the command line: ./verapdf -f 1b --format text pdf_file 
+            For the command line: ./verapdf -f 1b --format text pdf_file
         </p>
-        
+
         <p>
-            For the GUI, go into the verapdf folder and double click the verapdf-gui 
-            executable to open up the GUI. A new terminal will open up and a new 
-            window will appear that is the GUI for verapdf. In this window, there 
-            will be a line of text that appears in the empty space next to the 
-            Execute button. For PDS4, we need the file to be valid for PDF/A-1A 
-            or PDF/A-1B. If it is valid, the text will be green. If it is invalid, 
+            For the GUI, go into the verapdf folder and double click the verapdf-gui
+            executable to open up the GUI. A new terminal will open up and a new
+            window will appear that is the GUI for verapdf. In this window, there
+            will be a line of text that appears in the empty space next to the
+            Execute button. For PDS4, we need the file to be valid for PDF/A-1A
+            or PDF/A-1B. If it is valid, the text will be green. If it is invalid,
             the text will be red.
         </p>
-        
+
         <center>
             <h2> PDF/A Conversion </h2>
         </center>
@@ -86,26 +86,26 @@
         <a href="https://www.ghostscript.com/">https://www.ghostscript.com/</a>
         </center>
         <p>
-            The converter script we have needs Ghostscript to run. This link 
-            will bring you to the Ghostscript website where you are 
+            The converter script we have needs Ghostscript to run. This link
+            will bring you to the Ghostscript website where you are
             able to download it for your system.
         </p>
-        
+
         <center>
         <a href="https://github.com/sbn-psi/data-provider-tools/archive/master.zip">https://github.com/sbn-psi/data-provider-tools/archive/master.zip</a>
         </center>
         <p>
             This link will download a zip file with all the files that you
-            would need to convert a PDF to a PDF/A-1B. It will make a copy 
+            would need to convert a PDF to a PDF/A-1B. It will make a copy
             of the file you want to convert. The copy file will look like: name.pdfa.pdf
         </p>
 
         <p>
             For the command line: ./pdf2pdfa pdf_file
         </p>
-        
+
         <p>
-            If it comes back as a FAIL, then the program could not convert the 
+            If it comes back as a FAIL, then the program could not convert the
             PDF file. In that situation, you will have to look for other means
             of converting the file. If it comes back as a PASS, that means the
             copied file will be conformed to PDF/A-1B standards and you are ready
@@ -113,16 +113,16 @@
         </p>
         <center>
             <h3>
-                Microsoft 
+                Microsoft
             </h3>
         </center>
 
         <p>
             Microsoft Word and Excel 2007 have a way of making their PDF compliant.
-            The first step to make this happen is to expand the commands. You have to 
+            The first step to make this happen is to expand the commands. You have to
             show 'All Commands'. You have to find the one that says "Publish as PDF or XPS"
             or "Save as Other Format". For both, once you are at the window that ask where
-            you would like to place the file, there is a More Option near the middle of the 
+            you would like to place the file, there is a More Option near the middle of the
             middle right of the window. At the bottom of the new window, there will be
             two PDF options that you can choose from. Select the one that states:
             'ISO 19005-1 compliant (PDF/A)'.
@@ -138,42 +138,18 @@
         <p>
             The programs: Google Docs, Pages, and TextEdit
             have a way of converting their files into PDF, but it is
-            not PDF/A compliant. 
+            not PDF/A compliant.
         </p>
         <br><br>
 
     </main>
     <!-- END main content -->
 
-    <div include-html="/pds/sbn-sidebar.html"></div> 
+    <div include-html="/pds/sbn-sidebar.html"></div>
 
-    <div include-html="/pds/sbn-footer.html"></div> 
-    
-    <script>
-        includeHTML = function(cb) {
-            var z, i, elmnt, file, xhttp;
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                file = elmnt.getAttribute("include-html");
-                if (file) {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
-                        elmnt.removeAttribute("include-html");
-                        includeHTML(cb);
-                    }
-                }      
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                return;
-                }
-            }
-            if (cb) cb();
-            };
-        includeHTML();
-    </script>
+    <div include-html="/pds/sbn-footer.html"></div>
+
+
+<script src="/pds/js/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

@@ -14,84 +14,84 @@
 </head>
 <body>
 
-    <div include-html="/pds/sbn-header.html"></div> 
+    <div include-html="/pds/sbn-header.html"></div>
 
     <!-- BEGIN main content -->
     <main class="sbn-main">
         <center>
             <h1> NEAR Gamma-Ray Spectrometer (GRS) Data </h1>
             </center>
-            
+
             <p>
             <b>Raw data (level 1b):</b>
-            
+
             <table border=1>
             <tr><td width=400> <i>Data set ID</i>
                 <td width=150> <i>Mission phase</i>
                 <td width=100> <i>Browse</i>
                 <td width=100> <i>Download</i>
-            
+
             <tr><td>NEAR-A-GRS-2-EDR-CRUISE2-V1.0
                 <td>Cruise 2
                 <td><a href="http://sbnarchive.psi.edu/pds3/near/NEAR_A_GRS_2_EDR_CRUISE2_V1_0">299 Mb</a>
                 <td><a href="http://sbnarchive.psi.edu/pds3/near/NEAR_A_GRS_2_EDR_CRUISE2_V1_0.zip">53 Mb</a>
-            
+
             <tr><td>NEAR-A-GRS-2-EDR-EARTH-V1.0
                 <td> Earth Flyby
                 <td><a href="http://sbnarchive.psi.edu/pds3/near/NEAR_A_GRS_2_EDR_EARTH_V1_0">144 Mb</a>
                 <td><a href="http://sbnarchive.psi.edu/pds3/near/NEAR_A_GRS_2_EDR_EARTH_V1_0.zip">15 Mb</a>
-            
+
             <tr><td>NEAR-A-GRS-2-EDR-CRUISE3-V1.0
                 <td>Cruise 3
                 <td><a href="http://sbnarchive.psi.edu/pds3/near/NEAR_A_GRS_2_EDR_CRUISE3_V1_0">269 Mb</a>
                 <td><a href="http://sbnarchive.psi.edu/pds3/near/NEAR_A_GRS_2_EDR_CRUISE3_V1_0.zip">44 Mb</a>
-            
+
             <tr><td>NEAR-A-GRS-2-EDR-CRUISE4-V1.0
                 <td>Cruise 4
                 <td><a href="http://sbnarchive.psi.edu/pds3/near/NEAR_A_GRS_2_EDR_CRUISE4_V1_0">276 Mb</a>
                 <td><a href="http://sbnarchive.psi.edu/pds3/near/NEAR_A_GRS_2_EDR_CRUISE4_V1_0.zip">47 Mb</a>
-            
+
             <tr><td>NEAR-A-GRS-2-EDR-EROS/ORBIT-V1.0
                 <td>Eros Orbit
                 <td><a href="http://sbnarchive.psi.edu/pds3/near/NEAR_A_GRS_2_EDR_EROS_ORBIT_V1_0">719 Mb</a>
                 <td><a href="http://sbnarchive.psi.edu/pds3/near/NEAR_A_GRS_2_EDR_EROS_ORBIT_V1_0.zip">135 Mb</a>
-            
+
             <tr><td>NEAR-A-GRS-2-EDR-EROS/SURFACE-V1.0
                 <td>Eros Surface
                 <td><a href="http://sbnarchive.psi.edu/pds3/near/NEAR_A_GRS_2_EDR_EROS_SURFACE_V1_0">138 Mb</a>
                 <td><a href="http://sbnarchive.psi.edu/pds3/near/NEAR_A_GRS_2_EDR_EROS_SURFACE_V1_0.zip">13 Mb</a>
-            
+
             </table>
-            
+
             <p>
             <b>Calibrated data (levels 2 and 3):</b>
-            
+
             <table border=1>
             <tr><td width=400> <i>Data set ID</i>
                 <td width=150> <i>Mission phase</i>
                 <td width=100> <i>Browse</i>
                 <td width=100> <i>Download</i>
-            
+
             <tr><td>NEAR-A-GRS-3-EDR-EROS/ORBIT-V1.0
                 <td>Eros Orbit
                 <td><a href="http://sbnarchive.psi.edu/pds3/near/NEAR_A_GRS_3_EDR_EROS_ORBIT_V1_0">411 Mb</a>
                 <td><a href="http://sbnarchive.psi.edu/pds3/near/NEAR_A_GRS_3_EDR_EROS_ORBIT_V1_0.zip">296 Mb</a>
-            
+
             <tr><td>NEAR-A-GRS-3-EDR-EROS/SURFACE-V1.0
                 <td>Eros Surface
                 <td><a href="http://sbnarchive.psi.edu/pds3/near/NEAR_A_GRS_3_EDR_EROS_SURFACE_V1_0">18 Mb</a>
                 <td><a href="http://sbnarchive.psi.edu/pds3/near/NEAR_A_GRS_3_EDR_EROS_SURFACE_V1_0.zip">6 Mb</a>
             </table>
-            
+
             <p>
             <b> Highlighted data products from the above volumes:</b>
-            
+
             <ul>
             <li><a href="http://sbnarchive.psi.edu/pds3/near/NEAR_A_GRS_3_EDR_EROS_SURFACE_V1_0/document/level3/grs_results/mapsgrs_results.txt">Eros Abundance Estimates</a>
             </ul>
-            
+
             <br>
-            
+
             <center>
             <a href="/pds/resource/near">Return to NEAR Archive</a>
             </center>
@@ -99,35 +99,11 @@
     </main>
     <!-- END main content -->
 
-    <div include-html="/pds/sbn-sidebar.html"></div> 
+    <div include-html="/pds/sbn-sidebar.html"></div>
 
-    <div include-html="/pds/sbn-footer.html"></div> 
-    
-    <script>
-        includeHTML = function(cb) {
-            var z, i, elmnt, file, xhttp;
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                file = elmnt.getAttribute("include-html");
-                if (file) {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
-                        elmnt.removeAttribute("include-html");
-                        includeHTML(cb);
-                    }
-                }      
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                return;
-                }
-            }
-            if (cb) cb();
-            };
-        includeHTML();
-    </script>
+    <div include-html="/pds/sbn-footer.html"></div>
+
+
+<script src="/pds/js/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

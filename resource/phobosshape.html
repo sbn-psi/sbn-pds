@@ -14,84 +14,52 @@
 </head>
 <body>
 
-    <div include-html="/pds/sbn-header.html"></div> 
+    <div include-html="/pds/sbn-header.html"></div>
 
     <!-- BEGIN main content -->
     <main class="sbn-main">
         <center>
             <h1> Gaskell Phobos Shape Model </h1>
             </center>
-            
+
             <b>
             <p>
-            The shape model of Phobos derived by    
-                    Robert Gaskell from Viking Orbiter 1 and Phobos 2 images.  The model  
-                    is provided in the implicitly connected quadrilateral (ICQ) format.   
-                    This version of the model was prepared on March 11, 2006.             
+            The shape model of Phobos derived by
+                    Robert Gaskell from Viking Orbiter 1 and Phobos 2 images.  The model
+                    is provided in the implicitly connected quadrilateral (ICQ) format.
+                    This version of the model was prepared on March 11, 2006.
                     Vertex-facet versions of the models are also provided.
-            
+
             <p>
-            <a href="phobosview.pdf">Here</a> is a set of browse views of the Phobos shape 
+            <a href="phobosview.pdf">Here</a> is a set of browse views of the Phobos shape
             model, with one view every 45 degrees east longitude starting with 0 at
-            the upper left, plus north and south pole views at the bottom. 
+            the upper left, plus north and south pole views at the bottom.
             </b>
-            
+
             <br><br>
-            
+
             <table border=1>
             <tr><td width=500>VO1-SA-VISA/VISB-5-PHOBOSSHAPE-V1.0
                 <td width=100> <a href="http://sbnarchive.psi.edu/pds3/multi_mission/VO1_SA_VISA_VISB_5_PHOBOSSHAPE_V1_0"> Browse </a>
                 <td width=200> <a href="http://sbnarchive.psi.edu/pds3/multi_mission/VO1_SA_VISA_VISB_5_PHOBOSSHAPE_V1_0.zip"> Download (80 Mb) </a>
             </table>
-            
+
             <p>
             Use the following citation to reference this data set:
-            
+
             <p>
-            "Gaskell, R.W., Gaskell Phobos Shape     
-                    Model V1.0. VO1-SA-VISA/VISB-5-PHOBOSSHAPE-V1.0. NASA Planetary Data  
+            "Gaskell, R.W., Gaskell Phobos Shape
+                    Model V1.0. VO1-SA-VISA/VISB-5-PHOBOSSHAPE-V1.0. NASA Planetary Data
                     System, 2011."
-            
+
             <br><br>
-            
-            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
-            
-            <p>
-            None.
-            
-            <br> <br>
     </main>
     <!-- END main content -->
 
-    <div include-html="/pds/sbn-sidebar.html"></div> 
+    <div include-html="/pds/sbn-sidebar.html"></div>
 
-    <div include-html="/pds/sbn-footer.html"></div> 
-    
-    <script>
-        includeHTML = function(cb) {
-            var z, i, elmnt, file, xhttp;
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                file = elmnt.getAttribute("include-html");
-                if (file) {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
-                        elmnt.removeAttribute("include-html");
-                        includeHTML(cb);
-                    }
-                }      
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                return;
-                }
-            }
-            if (cb) cb();
-            };
-        includeHTML();
-    </script>
+    <div include-html="/pds/sbn-footer.html"></div>
+
+    <script src="/pds/js/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

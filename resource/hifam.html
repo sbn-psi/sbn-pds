@@ -14,25 +14,25 @@
 </head>
 <body>
 
-    <div include-html="/pds/sbn-header.html"></div> 
+    <div include-html="/pds/sbn-header.html"></div>
 
     <!-- BEGIN main content -->
     <main class="sbn-main">
         <center>
             <h1> High-inclination Asteroid Families </h1>
             </center>
-            
+
             <h3>
             <p>
-            This data set contains the              
-                    high-inclination asteroid families of Gil-Hutton (2006).  A data set  
+            This data set contains the
+                    high-inclination asteroid families of Gil-Hutton (2006).  A data set
                     of 3652 high-inclination numbered asteroids was analyzed to search for
-                    dynamical families.  The basic data set was the list of 3697 asteroid 
-                    synthetic proper elements taken from the Asteroid Dynamic Site, March 
-                    2005 version; Knezevic and Milani (2000).  For this analysis, only    
+                    dynamical families.  The basic data set was the list of 3697 asteroid
+                    synthetic proper elements taken from the Asteroid Dynamic Site, March
+                    2005 version; Knezevic and Milani (2000).  For this analysis, only
                     asteroids with sine of proper inclination greater than 0.3 were used.
             </h3>
-            
+
             <table border=1>
             <tr><td width=100> PDS4 version
                 <td width=500> urn:nasa:pds:high-inclination-asteroid-families::1.0
@@ -47,54 +47,26 @@
 <p>
 The PDS4 bundle was migrated from the PDS3 data set in October 2019.  The
 data content is unchanged.
-            
+
             <p>
             Use the following citation to reference this data set:
-            
+
             <p>
-            "Gil-Hutton, R., High-Inclination        
+            "Gil-Hutton, R., High-Inclination
                     Asteroid Families V1.0. EAR-A-COMPIL-5-HIFAM-V1.0. NASA Planetary Data
                     System, 2007."
-            
-            <br><br>
-            
-            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
-            
-            None.
-            
+
             <br> <br>
+
+           <h3><font color="red">Supeseded</font> versions of this data set:<br>None</h3>
     </main>
     <!-- END main content -->
 
-    <div include-html="/pds/sbn-sidebar.html"></div> 
+    <div include-html="/pds/sbn-sidebar.html"></div>
 
-    <div include-html="/pds/sbn-footer.html"></div> 
-    
-    <script>
-        includeHTML = function(cb) {
-            var z, i, elmnt, file, xhttp;
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                file = elmnt.getAttribute("include-html");
-                if (file) {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
-                        elmnt.removeAttribute("include-html");
-                        includeHTML(cb);
-                    }
-                }      
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                return;
-                }
-            }
-            if (cb) cb();
-            };
-        includeHTML();
-    </script>
+    <div include-html="/pds/sbn-footer.html"></div>
+
+
+<script src="/pds/js/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

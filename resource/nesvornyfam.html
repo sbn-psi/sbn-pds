@@ -14,46 +14,46 @@
 </head>
 <body>
 
-    <div include-html="/pds/sbn-header.html"></div> 
+    <div include-html="/pds/sbn-header.html"></div>
 
     <!-- BEGIN main content -->
     <main class="sbn-main">
         <center>
             <h1> Nesvorny HCM Asteroid Families </h1>
             </center>
-            
+
             <h3>
             <p>
-            This data set contains asteroid         
-                    dynamical family memberships for 122 families calculated from         
+            This data set contains asteroid
+                    dynamical family memberships for 122 families calculated from
                     synthetic proper elements, including high-inclination families.  These
-                    families were calculated by David Nesvorny (Nesvorny et al. 2015)     
-                    using his code based on the Hierarchical Clustering Method (HCM)      
-                    described in Zappala et al. (1990, 1994).  The input synthetic proper 
-                    elements for 384,337 numbered asteroids were calculated by Knezevic   
+                    families were calculated by David Nesvorny (Nesvorny et al. 2015)
+                    using his code based on the Hierarchical Clustering Method (HCM)
+                    described in Zappala et al. (1990, 1994).  The input synthetic proper
+                    elements for 384,337 numbered asteroids were calculated by Knezevic
                     and Milani.
-            
+
             </h3>
-            
+
             <table border=1>
             <tr><td width=500> EAR-A-VARGBDET-5-NESVORNYFAM-V3.0
                 <td width=100> <a href="http://sbnarchive.psi.edu/pds3/non_mission/EAR_A_VARGBDET_5_NESVORNYFAM_V3_0"> Browse </a>
                 <td width=200> <a href="http://sbnarchive.psi.edu/pds3/non_mission/EAR_A_VARGBDET_5_NESVORNYFAM_V3_0.zip"> Download (18 Mb) </a>
             </table>
-            
+
             <p>
             Use the following citation to reference this data set:
-            
+
             <p>
-            "Nesvorny, D., Nesvorny HCM Asteroid     
-                    Families V3.0. EAR-A-VARGBDET-5-NESVORNYFAM-V3.0. NASA Planetary Data 
+            "Nesvorny, D., Nesvorny HCM Asteroid
+                    Families V3.0. EAR-A-VARGBDET-5-NESVORNYFAM-V3.0. NASA Planetary Data
                     System, 2015."
-            
+
             <br><br>
-            
-            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
-            
-            <p>
+
+    <h3 id="pds-superseded-title">Superseded Versions: <a onclick="setShow()" id="pds-superseded-toggle">Show</a></h3>
+
+            <div id="pds-superseded">
             <table border=1>
             <tr><td width=500> EAR-A-VARGBDET-5-NESVORNYFAM-V2.0
                 <td width=100> <a href="http://sbnarchive.psi.edu/pds3/non_mission/EAR_A_VARGBDET_5_NESVORNYFAM_V2_0"> Browse </a>
@@ -61,41 +61,17 @@
             <tr><td width=500> EAR-A-VARGBDET-5-NESVORNYFAM-V1.0
                 <td width=100> <a href="http://sbnarchive.psi.edu/pds3/non_mission/EAR_A_VARGBDET_5_NESVORNYFAM_V1_0"> Browse </a>
                 <td width=200> <a href="http://sbnarchive.psi.edu/pds3/non_mission/EAR_A_VARGBDET_5_NESVORNYFAM_V1_0.zip"> Download (9 Mb) </a>
-            </table>
-            
+            </table></div>
+
             <br> <br>
     </main>
     <!-- END main content -->
 
-    <div include-html="/pds/sbn-sidebar.html"></div> 
+    <div include-html="/pds/sbn-sidebar.html"></div>
 
-    <div include-html="/pds/sbn-footer.html"></div> 
-    
-    <script>
-        includeHTML = function(cb) {
-            var z, i, elmnt, file, xhttp;
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                file = elmnt.getAttribute("include-html");
-                if (file) {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
-                        elmnt.removeAttribute("include-html");
-                        includeHTML(cb);
-                    }
-                }      
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                return;
-                }
-            }
-            if (cb) cb();
-            };
-        includeHTML();
-    </script>
+    <div include-html="/pds/sbn-footer.html"></div>
+
+
+<script src="/pds/js/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

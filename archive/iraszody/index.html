@@ -14,7 +14,7 @@
 </head>
 <body>
 
-    <div include-html="/pds/sbn-header.html"></div> 
+    <div include-html="/pds/sbn-header.html"></div>
 
     <!-- BEGIN main content -->
     <main class="sbn-main">
@@ -24,20 +24,20 @@
             <h2>IRAS-D-FPA-3-RDR-ZOHF-LOW-RES-V1.0<br>
             IRAS-D-FPA-3-RDR-ZOHF-MED-RES-V1.0</h2>
             </center>
-            
+
             <hr>
-            
+
             <p>
             The IRAS Zodiacal History data sets are presented on four CD-ROM disk
             images.  Each disk has identical files for catalog objects, calibration
             information, and index information.  The unique data included on each
             disk image are outlined below.  See the aareadme.txt file on each disk
             for further information about its contents.
-            
+
             <p>
             Note that the tar files available for download have file sizes of
             approximately 580 Mbytes each.
-            
+
             <center>
             <p>
             <table border=3 cellspacing=3 cellpadding=3>
@@ -46,73 +46,49 @@
                 <td> SOPs
                 <td> Files
                 <td> Download:
-            <tr><td><a href="https://sbnarchive.psi.edu/pds3/iras/iraszody/ir_0001"> ir_0001 </a> 
+            <tr><td><a href="https://sbnarchive.psi.edu/pds3/iras/iraszody/ir_0001"> ir_0001 </a>
                 <td> The IRAS Low Resolution Dataset
                 <td> 29 - 600
                 <td> 5749 tables
                 <td> <a href="https://sbnarchive.psi.edu/pds3/iras/iraszody/downloads/ir_0001.tar"> ir_0001.tar </a>
             <tr><td> "
-                <td> and Part I of the Medium Resolution Dataset 
+                <td> and Part I of the Medium Resolution Dataset
                 <td> 29 - 179
                 <td> 1448 tables
                 <td> "
-            <tr><td><a href="https://sbnarchive.psi.edu/pds3/iras/iraszody/ir_0002"> ir_0002 </a> 
-                <td> Part II of the IRAS Medium Resolution Dataset 
+            <tr><td><a href="https://sbnarchive.psi.edu/pds3/iras/iraszody/ir_0002"> ir_0002 </a>
+                <td> Part II of the IRAS Medium Resolution Dataset
                 <td> 180 - 399
                 <td> 2225 tables
                 <td> <a href="https://sbnarchive.psi.edu/pds3/iras/iraszody/downloads/ir_0002.tar"> ir_0002.tar </a>
-            <tr><td> <a href="https://sbnarchive.psi.edu/pds3/iras/iraszody/ir_0003"> ir_0003 </a> 
-                <td> Part III of the IRAS Medium Resolution Dataset 
+            <tr><td> <a href="https://sbnarchive.psi.edu/pds3/iras/iraszody/ir_0003"> ir_0003 </a>
+                <td> Part III of the IRAS Medium Resolution Dataset
                 <td> 400 - 600
                 <td> 2076 tables
                 <td> <a href="https://sbnarchive.psi.edu/pds3/iras/iraszody/downloads/ir_0003.tar"> ir_0003.tar </a>
-            <tr><td><a href="https://sbnarchive.psi.edu/pds3/iras/iraszody/ir_0004"> ir_0004 </a> 
-                <td> Binary forms of the IRAS Low and Medium Datasets 
+            <tr><td><a href="https://sbnarchive.psi.edu/pds3/iras/iraszody/ir_0004"> ir_0004 </a>
+                <td> Binary forms of the IRAS Low and Medium Datasets
                 <td> 29 - 600
                 <td> 2 files
                 <td> <a href="https://sbnarchive.psi.edu/pds3/iras/iraszody/downloads/ir_0004.tar"> ir_0004.tar </a>
             </table>
             </center>
-            
+
             <p>
             Here are links to the
             <a href="/pds/resource/fpa.html"> IRAS Focal Plane Array States </a>
             and <a href="/pds/resource/sat.html"> IRAS Satellite Position and Scan History Files </a> data sets.
-            
+
             <hr>
             <center>
     </main>
     <!-- END main content -->
 
-    <div include-html="/pds/sbn-sidebar.html"></div> 
+    <div include-html="/pds/sbn-sidebar.html"></div>
 
-    <div include-html="/pds/sbn-footer.html"></div> 
-    
-    <script>
-        includeHTML = function(cb) {
-            var z, i, elmnt, file, xhttp;
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                file = elmnt.getAttribute("include-html");
-                if (file) {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
-                        elmnt.removeAttribute("include-html");
-                        includeHTML(cb);
-                    }
-                }      
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                return;
-                }
-            }
-            if (cb) cb();
-            };
-        includeHTML();
-    </script>
+    <div include-html="/pds/sbn-footer.html"></div>
+
+
+    <script src="/pds/js/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

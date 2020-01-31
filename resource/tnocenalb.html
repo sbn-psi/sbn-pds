@@ -14,40 +14,41 @@
 </head>
 <body>
 
-    <div include-html="/pds/sbn-header.html"></div> 
+    <div include-html="/pds/sbn-header.html"></div>
 
     <!-- BEGIN main content -->
     <main class="sbn-main">
         <center>
             <h1> TNO and Centaur Diameters, Albedos, and Densities </h1>
             </center>
-            
+
             <h3>
             <p>
            This data set is a compilation of published diameters, albedos, and densities for
 Transneptunian Objects (TNOs) and Centaurs.  A total of 194 objects are listed, many
 with more than one entry.  This version covers published values through 31 March
-2018. 
+2018.
             </h3>
-            
+
             <table border=1>
-            <tr><td width=500>urn:nasa:pds:tno-centaur_diam-albedo-density::1.0 
+            <tr><td width=500>urn:nasa:pds:tno-centaur_diam-albedo-density::1.0
                 <td width=100> <a href="http://sbnarchive.psi.edu/pds4/non_mission/tno-centaur_diam-albedo-density_V1_0"> Browse </a>
                 <td width=200> <a href="http://sbnarchive.psi.edu/pds4/non_mission/tno-centaur_diam-albedo-density_V1_0.zip"> Download (52 kb) </a>
             </table>
-            
+
             <p>
             Use the following citation to reference this data set:
-            
+
             <p>
-            "Johnston, W. R., TNO AND CENTAUR        
-                    DIAMETERS, ALBEDOS, AND DENSITIES V1.0. urn:nasa:pds:tno-centaur_diam-albedo-density::1.0. 
+            "Johnston, W. R., TNO AND CENTAUR
+                    DIAMETERS, ALBEDOS, AND DENSITIES V1.0. urn:nasa:pds:tno-centaur_diam-albedo-density::1.0.
                     NASA Planetary Data System, 2018."
-            
+
             <br><br>
-            
-            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
-            
+
+    <h3 id="pds-superseded-title">Superseded Versions: <a onclick="setShow()" id="pds-superseded-toggle">Show</a></h3>
+
+            <div id="pds-superseded">
             <table border=1>
             <tr><td width=500> EAR-A-COMPIL-5-TNOCENALB-V4.0
                 <td width=100> <a href="http://sbnarchive.psi.edu/pds3/non_mission/EAR_A_COMPIL_5_TNOCENALB_V4_0"> Browse </a>
@@ -61,42 +62,18 @@ with more than one entry.  This version covers published values through 31 March
             <tr><td width=500> EAR-A-COMPIL-5-TNOCENALB-V1.0
                 <td width=100> <a href="http://sbnarchive.psi.edu/pds3/non_mission/EAR_A_COMPIL_5_TNOCENALB_V1_0"> Browse </a>
                 <td width=200> <a href="http://sbnarchive.psi.edu/pds3/non_mission/EAR_A_COMPIL_5_TNOCENALB_V1_0.zip"> Download (37 kb) </a>
-            </table>
-            
-            
+            </table></div>
+
+
             <br> <br>
     </main>
     <!-- END main content -->
 
-    <div include-html="/pds/sbn-sidebar.html"></div> 
+    <div include-html="/pds/sbn-sidebar.html"></div>
 
-    <div include-html="/pds/sbn-footer.html"></div> 
-    
-    <script>
-        includeHTML = function(cb) {
-            var z, i, elmnt, file, xhttp;
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                file = elmnt.getAttribute("include-html");
-                if (file) {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
-                        elmnt.removeAttribute("include-html");
-                        includeHTML(cb);
-                    }
-                }      
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                return;
-                }
-            }
-            if (cb) cb();
-            };
-        includeHTML();
-    </script>
+    <div include-html="/pds/sbn-footer.html"></div>
+
+
+<script src="/pds/js/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

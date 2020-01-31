@@ -14,14 +14,14 @@
 </head>
 <body>
 
-    <div include-html="/pds/sbn-header.html"></div> 
+    <div include-html="/pds/sbn-header.html"></div>
 
     <!-- BEGIN main content -->
     <main class="sbn-main">
         <center>
             <h1> OSIRIS-REx OTES Bundle</h1>
             </center>
-            
+
             <h3>
             <p>
 This bundle collects all the operational data products produced by the OSIRIS-REx Thermal Emission Spectrometer (OTES). OTES is used for the spectral characterization of the surface of (101955) Bennu.
@@ -54,52 +54,23 @@ liens.
 
             <p>
             Use the following citation to reference this data set:
-            
+
             <p>
-Christensen, P., V. Hamilton, S. Anwar, G. Mehall, and 
+Christensen, P., V. Hamilton, S. Anwar, G. Mehall, and
 D.S. Lauretta, Origins, Spectral Interpretation, Resource Identification,
 Security, Regolith Explorer (OSIRIS-REx): OSIRIS-REx Thermal Emission
 Spectrometer
 Bundle, urn:nasa:pds:orex.otes, NASA Planetary Data System, 2019."
 
             <br><br>
-            
-            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
-            
-           <p> None. 
-            <br> <br>
     </main>
     <!-- END main content -->
 
-    <div include-html="/pds/sbn-sidebar.html"></div> 
+    <div include-html="/pds/sbn-sidebar.html"></div>
 
-    <div include-html="/pds/sbn-footer.html"></div> 
-    
-    <script>
-        includeHTML = function(cb) {
-            var z, i, elmnt, file, xhttp;
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                file = elmnt.getAttribute("include-html");
-                if (file) {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
-                        elmnt.removeAttribute("include-html");
-                        includeHTML(cb);
-                    }
-                }      
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                return;
-                }
-            }
-            if (cb) cb();
-            };
-        includeHTML();
-    </script>
+    <div include-html="/pds/sbn-footer.html"></div>
+
+
+    <script src="/pds/js/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

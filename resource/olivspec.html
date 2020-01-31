@@ -14,80 +14,48 @@
 </head>
 <body>
 
-    <div include-html="/pds/sbn-header.html"></div> 
+    <div include-html="/pds/sbn-header.html"></div>
 
     <!-- BEGIN main content -->
     <main class="sbn-main">
         <center>
             <h1> Olivine Laboratory Infrared Absorbance Spectra </h1>
             </center>
-            
+
             <h3>
             <p>
-            Laboratory measurements quantifying the 
-                    effect of Fe substituting for Mg in olivine are necessary to          
+            Laboratory measurements quantifying the
+                    effect of Fe substituting for Mg in olivine are necessary to
                     distinguish compositional from temperature, grain size and grain shape
-                    effects in observational data. This dataset presents room temperature 
-                    (18-19 degrees Celsius) diamond anvil cell thin film absorption       
-                    spectra of a large suite of olivines evenly spaced across Mg and Fe   
+                    effects in observational data. This dataset presents room temperature
+                    (18-19 degrees Celsius) diamond anvil cell thin film absorption
+                    spectra of a large suite of olivines evenly spaced across Mg and Fe
                     compositions at infrared wavelengths.
             </h3>
-            
+
             <table border=1>
             <tr><td width=500>EAR-X-I1485-3-OLIVSPEC-V1.0
                 <td width=100> <a href="http://sbnarchive.psi.edu/pds3/non_mission/EAR_X_I1485_3_OLIVSPEC_V1_0"> Browse </a>
                 <td width=200> <a href="http://sbnarchive.psi.edu/pds3/non_mission/EAR_X_I1485_3_OLIVSPEC_V1_0.zip"> Download (700 kb) </a>
             </table>
-            
+
             <p>
             Use the following citation to reference this data set:
-            
+
             <p>
-            Pitman, K.M., Dijkstra, C., Hofmeister, 
-                    A.M., and Speck, A.K., Olivine Laboratory Infrared Absorbance Spectra 
+            Pitman, K.M., Dijkstra, C., Hofmeister,
+                    A.M., and Speck, A.K., Olivine Laboratory Infrared Absorbance Spectra
                     V1.0. EAR-X-I1485-3-OLIVSPEC-V1.0. NASA Planetary Data System, 2012.
-            
+
             <br><br>
-            <hr>
-            
-            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
-            
-            <p>
-            None.
-            
-            <br> <br>
     </main>
     <!-- END main content -->
 
-    <div include-html="/pds/sbn-sidebar.html"></div> 
+    <div include-html="/pds/sbn-sidebar.html"></div>
 
-    <div include-html="/pds/sbn-footer.html"></div> 
-    
-    <script>
-        includeHTML = function(cb) {
-            var z, i, elmnt, file, xhttp;
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                file = elmnt.getAttribute("include-html");
-                if (file) {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
-                        elmnt.removeAttribute("include-html");
-                        includeHTML(cb);
-                    }
-                }      
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                return;
-                }
-            }
-            if (cb) cb();
-            };
-        includeHTML();
-    </script>
+    <div include-html="/pds/sbn-footer.html"></div>
+
+
+<script src="/pds/js/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

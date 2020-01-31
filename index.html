@@ -14,7 +14,7 @@
 </head>
 <body>
 
-    <div include-html="/pds/sbn-header.html"></div> 
+    <div include-html="/pds/sbn-header.html"></div>
 
     <!-- BEGIN main content -->
     <main class="sbn-main">
@@ -43,7 +43,7 @@
             <li><a href="/pds/archive/spectra.html">Spectrophotometry and Spectra</a></li>
             <li><a href="/pds/archive/other.html">Other</a>, including names and id's, and bibliography</li>
         </ul>
-        
+
         <h2> Select data by target type: </h2>
         <ul>
             <li><a href="/pds/archive/asteroids.html">All Asteroid Data</a></li>
@@ -56,7 +56,7 @@
             <li><a href="/pds/archive/comets.html">Comets</a></li>
             <li><a href="/pds/archive/lab.html">Laboratory Spectra</a></li>
         </ul>
-        
+
         <h2>Select data by mission:</h2>
         <ul>
             <li><a href="http://pdssbn.astro.umd.edu/data_sb/missions/bopps/index.shtml">BOPPS</a>: Ceres</li>
@@ -81,7 +81,7 @@
             <li><a href="/pds/archive/sc.html">Viking Orbiter</a>:  Phobos, Deimos.</li>
             <li><a href="/pds/archive/sc.html">Voyager 1 and 2</a>:  Small planetary satellites.</li>
         </ul>
-        
+
 
         <p>
             For help in navigating the directory structure and file types of PDS data sets, see the Small Bodies Node page <a href="http://pdssbn.astro.umd.edu/howto/understand.shtml">"How to Approach a PDS Data Set"</a>.
@@ -90,35 +90,10 @@
     </main>
     <!-- END main content -->
 
-    <div include-html="/pds/sbn-sidebar.html"></div> 
+    <div include-html="/pds/sbn-sidebar.html"></div>
 
-    <div include-html="/pds/sbn-footer.html"></div> 
-    
-    <script>
-        includeHTML = function(cb) {
-            var z, i, elmnt, file, xhttp;
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                file = elmnt.getAttribute("include-html");
-                if (file) {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
-                        elmnt.removeAttribute("include-html");
-                        includeHTML(cb);
-                    }
-                }      
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                return;
-                }
-            }
-            if (cb) cb();
-            };
-        includeHTML();
-    </script>
+    <div include-html="/pds/sbn-footer.html"></div>
+
+    <script src="/pds/js/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

@@ -14,94 +14,65 @@
 </head>
 <body>
 
-    <div include-html="/pds/sbn-header.html"></div> 
+    <div include-html="/pds/sbn-header.html"></div>
 
     <!-- BEGIN main content -->
     <main class="sbn-main">
         <center>
             <h1> Hayabusa AMICA Images with Geometry Backplanes </h1>
             </center>
-            
+
             <h3>
             <p>
-            The Asteroid Multi-band Imaging Camera  
+            The Asteroid Multi-band Imaging Camera
                     (AMICA) of the Hayabusa mission to the asteroid 25143 Itokawa obtained
-                    1662 images from May 11, 2003, shortly after launch, until November   
-                    19, 2005, after Itokawa encounter.  This data set provides derived    
-                    data products for 1339 of those images that includes geometric        
+                    1662 images from May 11, 2003, shortly after launch, until November
+                    19, 2005, after Itokawa encounter.  This data set provides derived
+                    data products for 1339 of those images that includes geometric
                     information for each pixel.
             </h3>
-            
+
             <table border=1>
             <tr><td width=500> HAY-A-AMICA-3-AMICAGEOM-V1.0
                 <td width=100> <a href="http://sbnarchive.psi.edu/pds3/hayabusa/HAY_A_AMICA_3_AMICAGEOM_V1_0"> Browse </a>
                 <td width=200> (for download, see below)
             </table>
-            
+
             <p>
-            To facilitate downloading of this large data set, it has been divided into 
+            To facilitate downloading of this large data set, it has been divided into
             smaller compressed pieces.  To reconstruct the data set on your machine,
-            download 'amicageom0.zip' and unzip it to create a copy of the data set 
+            download 'amicageom0.zip' and unzip it to create a copy of the data set
             without the data directories.  Download 'ddr_gaskell.tar' and 'ddr_spice.tar',
             place them in the data directory of the data set, and un-tar them to
             populate the data directory.  Within the two data subdirectories, the data
             files themselves are gzipped.  If you unzip them all the full size of the
             data set will be approximately 82 Gbytes.
-            
+
             <ul>
             <li><a href="http://sbnarchive.psi.edu/pds3/hayabusa/downloads/amicageom0.zip">amicageom0.zip (51 Mb)</a>
             <li><a href="http://sbnarchive.psi.edu/pds3/hayabusa/downloads/ddr_gaskell.tar">ddr_gaskell.tar (4.4 Gb)</a>
             <li><a href="http://sbnarchive.psi.edu/pds3/hayabusa/downloads/ddr_spice.tar">ddr_spice.tar (2.4 Gb)</a>
             </ul>
-            
+
             <p>
             Use the following citation to reference this data set:
-            
+
             <p>
-            Barnouin, O. and Kahn, E., Hayabusa     
-                    AMICA Images with Geometry Backplanes V1.0.                           
+            Barnouin, O. and Kahn, E., Hayabusa
+                    AMICA Images with Geometry Backplanes V1.0.
                     HAY-A-AMICA-3-AMICAGEOM-V1.0. NASA Planetary Data System, 2012.
-            
-            <br><br>
-            
-            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
-            
-            <p>
-            None.
-            
+
             <br> <br>
+
+           <h3><font color="red">Supeseded</font> versions of this data set:<br>None</h3>
     </main>
     <!-- END main content -->
 
-    <div include-html="/pds/sbn-sidebar.html"></div> 
+    <div include-html="/pds/sbn-sidebar.html"></div>
 
-    <div include-html="/pds/sbn-footer.html"></div> 
-    
-    <script>
-        includeHTML = function(cb) {
-            var z, i, elmnt, file, xhttp;
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                file = elmnt.getAttribute("include-html");
-                if (file) {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
-                        elmnt.removeAttribute("include-html");
-                        includeHTML(cb);
-                    }
-                }      
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                return;
-                }
-            }
-            if (cb) cb();
-            };
-        includeHTML();
-    </script>
+    <div include-html="/pds/sbn-footer.html"></div>
+
+
+    <script src="/pds/js/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

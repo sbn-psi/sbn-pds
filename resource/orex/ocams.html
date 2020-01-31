@@ -14,14 +14,14 @@
 </head>
 <body>
 
-    <div include-html="/pds/sbn-header.html"></div> 
+    <div include-html="/pds/sbn-header.html"></div>
 
     <!-- BEGIN main content -->
     <main class="sbn-main">
         <center>
             <h1> OSIRIS-REx OCAMS Bundle</h1>
             </center>
-            
+
             <h3>
             <p>
 This bundle collects all the operational data products produced by the OSIRIS-REx Camera Suite (OCAMS). OCAMS is a suite of scientific cameras used for the characterization of the surface of (101955) Bennu.
@@ -32,7 +32,7 @@ The bundle now includes all data through May 17, 2019, nearly to the end of Deta
             </h3>
 
 <p>
-Release dates:  
+Release dates:
 <ul>
 <li>Initial release Feb. 15, 2019 with Cruise 1, EGA, and Cruise 2.
 <li>Second release Aug. 19, 2019 with most but not all of Approach phase.
@@ -57,7 +57,7 @@ containing all documents and metadata.
 
             <p>
             Use the following citation to reference this data set:
-            
+
             <p>
 "Rizk, B., C. Drouet d'Aubigny, D. Golish, D.N. DellaGiustina, and
 D.S. Lauretta, Origins, Spectral Interpretation, Resource Identification,
@@ -65,43 +65,15 @@ Security, Regolith Explorer (OSIRIS-REx): OSIRIS-REx Camera Suite (OCAMS)
 Bundle, urn:nasa:pds:orex.ocams, NASA Planetary Data System, 2019."
 
             <br><br>
-            
-            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
-            
-           <p> None. 
-            <br> <br>
+
     </main>
     <!-- END main content -->
 
-    <div include-html="/pds/sbn-sidebar.html"></div> 
+    <div include-html="/pds/sbn-sidebar.html"></div>
 
-    <div include-html="/pds/sbn-footer.html"></div> 
-    
-    <script>
-        includeHTML = function(cb) {
-            var z, i, elmnt, file, xhttp;
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                file = elmnt.getAttribute("include-html");
-                if (file) {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
-                        elmnt.removeAttribute("include-html");
-                        includeHTML(cb);
-                    }
-                }      
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                return;
-                }
-            }
-            if (cb) cb();
-            };
-        includeHTML();
-    </script>
+    <div include-html="/pds/sbn-footer.html"></div>
+
+
+<script src="/pds/js/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

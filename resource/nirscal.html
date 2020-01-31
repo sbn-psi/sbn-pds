@@ -14,14 +14,14 @@
 </head>
 <body>
 
-    <div include-html="/pds/sbn-header.html"></div> 
+    <div include-html="/pds/sbn-header.html"></div>
 
     <!-- BEGIN main content -->
     <main class="sbn-main">
         <center>
             <h1> Hayabusa NIRS Calibrated Spectra </h1>
             </center>
-            
+
             <h3>
             <p>
             This data set includes the 111,226
@@ -30,61 +30,30 @@
                     The data cover the Itokawa encounter phases of the mission, from Aug.
                     31 through November 24, 2005.
             </h3>
-            
+
             <table border=1>
             <tr><td width=500> HAY-A-NIRS-3-NIRSCAL-V1.0
                 <td width=100> <a href="http://sbnarchive.psi.edu/pds3/hayabusa/HAY_A_NIRS_3_NIRSCAL_V1_0"> Browse </a>
                 <td width=200> <a href="http://sbnarchive.psi.edu/pds3/hayabusa/HAY_A_NIRS_3_NIRSCAL_V1_0.zip"> Download (386 Mb) </a>
             </table>
-            
+
             <p>
             Use the following citation to reference this data set:
-            
+
             <p>
             "Abe, M., Takagi, Y., Abe, S., and
                     Kitazato, K., Hayabusa NIRS Calibrated Spectra V1.0.
                     HAY-A-NIRS-3-NIRSCAL-V1.0. NASA Planetary Data System, 2011."
-            
+
             <br><br>
-           
-            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
-            
-            <p>
-            None.
-            
-            <br> <br>
     </main>
     <!-- END main content -->
 
-    <div include-html="/pds/sbn-sidebar.html"></div> 
+    <div include-html="/pds/sbn-sidebar.html"></div>
 
-    <div include-html="/pds/sbn-footer.html"></div> 
-    
-    <script>
-        includeHTML = function(cb) {
-            var z, i, elmnt, file, xhttp;
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                file = elmnt.getAttribute("include-html");
-                if (file) {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
-                        elmnt.removeAttribute("include-html");
-                        includeHTML(cb);
-                    }
-                }      
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                return;
-                }
-            }
-            if (cb) cb();
-            };
-        includeHTML();
-    </script>
+    <div include-html="/pds/sbn-footer.html"></div>
+
+
+    <script src="/pds/js/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

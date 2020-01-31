@@ -14,68 +14,39 @@
 </head>
 <body>
 
-    <div include-html="/pds/sbn-header.html"></div> 
+    <div include-html="/pds/sbn-header.html"></div>
 
     <!-- BEGIN main content -->
     <main class="sbn-main">
         <center>
             <h1> Earth-Asteroid Close Approaches </h1>
             </center>
-            
+
             <h3>
             <p>
             This table presents a list of predicted close approaches to Earth
                   by Potentially Hazardous Asteroids (PHAs). To be classified as a
                   PHA, an asteroid must physically approach within 0.2AU of Earth
                   and have an absolute magnitude brighter than 22.0.
-            
+
             </h3>
-            
+
             <table border=1>
             <tr><td width=500> LOCAL_PRODUCT-EARTH-APPROACHERS-1999
                 <td width=100> <a href="http://sbnarchive.psi.edu/pds3/non_mission/LOCAL_PRODUCT_EARTH_APPROACHERS_1999"> Browse </a>
                 <td width=200> <a href="http://sbnarchive.psi.edu/pds3/non_mission/LOCAL_PRODUCT_EARTH_APPROACHERS_1999.zip"> Download (21 kb) </a>
             </table>
-            
-            <br><br>
-            
-            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
-            
-            None.
-            
             <br> <br>
+
+           <h3><font color="red">Supeseded</font> versions of this data set:<br>None</h3>
     </main>
     <!-- END main content -->
 
-    <div include-html="/pds/sbn-sidebar.html"></div> 
+    <div include-html="/pds/sbn-sidebar.html"></div>
 
-    <div include-html="/pds/sbn-footer.html"></div> 
-    
-    <script>
-        includeHTML = function(cb) {
-            var z, i, elmnt, file, xhttp;
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                file = elmnt.getAttribute("include-html");
-                if (file) {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
-                        elmnt.removeAttribute("include-html");
-                        includeHTML(cb);
-                    }
-                }      
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                return;
-                }
-            }
-            if (cb) cb();
-            };
-        includeHTML();
-    </script>
+    <div include-html="/pds/sbn-footer.html"></div>
+
+
+<script src="/pds/js/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

@@ -14,14 +14,14 @@
 </head>
 <body>
 
-    <div include-html="/pds/sbn-header.html"></div> 
+    <div include-html="/pds/sbn-header.html"></div>
 
     <!-- BEGIN main content -->
     <main class="sbn-main">
             <center>
                     <h1> Data Sets Containing Comet Data </h1>
                     </center>
-                    
+
                     <ul>
                     <li><a href="/pds/resource/finkss.html">Fink Images and Spectra of Solar System Objects</a>
                     <li> <a href="/pds/resource/neowisediam.html">NEOWISE Diameters and Albedos</a> (contains several comets with Centaur-like orbits)
@@ -34,7 +34,7 @@
                     <li> <a href="/pds/resource/tnocencol.html"> TNO and Centaur Colors </a> (contains broadband colors of several comets with Centaur-like orbits)
                     </ul>
                     <p>
-                    
+
                     For more PDS Comet data, see the PDS
                     <a href="http://pdssbn.astro.umd.edu/data_sb/target_comets.shtml">
                     Small Bodies Node Comet Archive Site </a>.
@@ -42,35 +42,11 @@
     </main>
     <!-- END main content -->
 
-    <div include-html="/pds/sbn-sidebar.html"></div> 
+    <div include-html="/pds/sbn-sidebar.html"></div>
 
-    <div include-html="/pds/sbn-footer.html"></div> 
-    
-    <script>
-        includeHTML = function(cb) {
-            var z, i, elmnt, file, xhttp;
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                file = elmnt.getAttribute("include-html");
-                if (file) {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
-                        elmnt.removeAttribute("include-html");
-                        includeHTML(cb);
-                    }
-                }      
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                return;
-                }
-            }
-            if (cb) cb();
-            };
-        includeHTML();
-    </script>
+    <div include-html="/pds/sbn-footer.html"></div>
+
+
+    <script src="/pds/js/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

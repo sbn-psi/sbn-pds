@@ -7,7 +7,28 @@ a:not(.ignore-a-styling) {
     text-decoration: none;
     letter-spacing: 0.1em;
 }
-
+#pds-superseded {
+    display: none;
+}
+#pds-superseded-toggle {
+    color: blue;
+    text-decoration: underline;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    margin-left: 1em;
+}
+.resource-title {
+    text-align: center;
+}
+.pds-button {
+    padding: 0.3em 0.5em;
+    border-radius: 0.3em;
+    background: #ededed;
+    border: 1px solid #d5d5d5;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1em;
+}
 
 /* main */
 .sbn-main {

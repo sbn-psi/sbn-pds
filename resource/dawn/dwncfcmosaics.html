@@ -14,20 +14,20 @@
 </head>
 <body>
 
-    <div include-html="/pds/sbn-header.html"></div> 
+    <div include-html="/pds/sbn-header.html"></div>
 
     <!-- BEGIN main content -->
     <main class="sbn-main">
         <center>
             <h1> Dawn Framing Camera Ceres Image Mosaics </h1>
             </center>
-            
+
             <center>
             <h3>Status:  Archived</h3>
             </center>
-            
+
             <br><br>
-            
+
             <table border=1>
             <tr><td width=400> Description:</td>
                 <td width=200> Browse:</td>
@@ -48,35 +48,36 @@
                 <td><a href="http://sbnarchive.psi.edu/pds3/dawn/fc/downloads/DWNCLCFC2_2/">Only DATA files</a></td>
             </table>
             </center>
-            
+
             <p>
             Use the following citation to reference this data set:
-            
+
             <p>
-            "Roatsch,T., E. Kersten,K.-D. Matz,F. Preusker, F. Scholten, S. Elgner,  
-                  S.E. Schroeder, R. Jaumann, C.A. Raymond, C.T. Russell,                 
-                  DAWN FC2 DERIVED CERES MOSAICS V1.0,                                    
+            "Roatsch,T., E. Kersten,K.-D. Matz,F. Preusker, F. Scholten, S. Elgner,
+                  S.E. Schroeder, R. Jaumann, C.A. Raymond, C.T. Russell,
+                  DAWN FC2 DERIVED CERES MOSAICS V1.0,
                   DAWN-A-FC2-5-CERESMOSAIC-V1.0, NASA Planetary Data System, 2016."
-            
+
             <p>
             <b>Note:</b>  The Ceres LAMO Clear Filter Mosaics volume has been updated to
             version 2 with the addition of 62 atlas sheets to the document directory.
             Some catalog files have also been updated.  The volume is otherwise
             unchanged.
-            
+
             <p>
             <b>Note:</b>  Color LAMO mosaics were not produced, as there was insufficient
             color data from LAMO phase.
-            
+
             <br><br>
-            
-            <h3><font color=red>Superseded:</font></h3>
-            
+
+            <h3 id="pds-superseded-title">Superseded Versions: <a onclick="setShow()" id="pds-superseded-toggle">Show</a></h3>
+
             <p>
             The Ceres LAMO clear filter mosaics have been updated with the addition of
             62 atlas sheets to the document directory.  The updated version 2 is linked above.  Below is the original version 1.
             <br><br>
-            
+
+            <div id="pds-superseded">
             <table border=1>
             <tr><td width=400> Data set id:</td>
                 <td width=200> Browse:</td>
@@ -87,10 +88,10 @@
                 <td><a href="http://sbnarchive.psi.edu/pds3/dawn/fc/superseded/DWNCLCFC2_2_170227/">DWNCLCFC2_2</a> (21 Gb)</td>
                 <td><a href="http://sbnarchive.psi.edu/pds3/dawn/fc/superseded/DWNCLCFC2_2_170227.zip">DWNCLCFC2_2.zip</a> (15 Gb)</td>
                 <td><a href="http://sbnarchive.psi.edu/pds3/dawn/fc/downloads/DWNCLCFC2_2_170227/">Only DATA files</a></td>
-            </table>
-            
+            </table></div>
+
             <br> <br>
-            
+
             <h3>
             <center>
             <a href="index.html">Return to Dawn Archive Page</a><br>
@@ -99,35 +100,11 @@
     </main>
     <!-- END main content -->
 
-    <div include-html="/pds/sbn-sidebar.html"></div> 
+    <div include-html="/pds/sbn-sidebar.html"></div>
 
-    <div include-html="/pds/sbn-footer.html"></div> 
-    
-    <script>
-        includeHTML = function(cb) {
-            var z, i, elmnt, file, xhttp;
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                file = elmnt.getAttribute("include-html");
-                if (file) {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
-                        elmnt.removeAttribute("include-html");
-                        includeHTML(cb);
-                    }
-                }      
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                return;
-                }
-            }
-            if (cb) cb();
-            };
-        includeHTML();
-    </script>
+    <div include-html="/pds/sbn-footer.html"></div>
+
+
+<script src="/pds/js/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

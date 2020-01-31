@@ -14,14 +14,14 @@
 </head>
 <body>
 
-    <div include-html="/pds/sbn-header.html"></div> 
+    <div include-html="/pds/sbn-header.html"></div>
 
     <!-- BEGIN main content -->
     <main class="sbn-main">
         <center>
             <h1> Colors of Small Planetary Satellites </h1>
             </center>
-            
+
             <h3>
             <p>
             This data set is intended to include
@@ -29,60 +29,30 @@
                     December 2003.  Small planetary satellites are defined as all those
                     except the Moon, the Galilean satellites, Titan, and Triton.
             </h3>
-            
+
             <table border=1>
             <tr><td width=500> EAR-SA-COMPIL-3-SATELLITE-COLOR-V1.0
                 <td width=100> <a href="http://sbnarchive.psi.edu/pds3/non_mission/EAR_SA_COMPIL_3_SATELLITE_COLOR_V1_0"> Browse </a>
                 <td width=200> <a href="http://sbnarchive.psi.edu/pds3/non_mission/EAR_SA_COMPIL_3_SATELLITE_COLOR_V1_0.zip"> Download (9 kb) </a>
             </table>
-            
+
             <p>
             Use the following citation to reference this data set:
-            
+
             <p>
             "Neese, C., Ed.  Small Planetary
             Satellite Colors V1.0.  EAR-SA-COMPIL-3-SATELLITE-COLOR-V1.0, NASA Planetary
             Data System, 2004."
-            
+
             <br><br>
-            
-            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
-            
-            None.
-            
-            <br> <br>
     </main>
     <!-- END main content -->
 
-    <div include-html="/pds/sbn-sidebar.html"></div> 
+    <div include-html="/pds/sbn-sidebar.html"></div>
 
-    <div include-html="/pds/sbn-footer.html"></div> 
-    
-    <script>
-        includeHTML = function(cb) {
-            var z, i, elmnt, file, xhttp;
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                file = elmnt.getAttribute("include-html");
-                if (file) {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
-                        elmnt.removeAttribute("include-html");
-                        includeHTML(cb);
-                    }
-                }      
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                return;
-                }
-            }
-            if (cb) cb();
-            };
-        includeHTML();
-    </script>
+    <div include-html="/pds/sbn-footer.html"></div>
+
+
+    <script src="/pds/js/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

@@ -14,7 +14,7 @@
 </head>
 <body>
 
-    <div include-html="/pds/sbn-header.html"></div> 
+    <div include-html="/pds/sbn-header.html"></div>
 
     <!-- BEGIN main content -->
     <main class="sbn-main">
@@ -22,15 +22,15 @@
             <h1> Dawn Cruise - VIR </h1>
             <h3>Status - Archived</h3>
             </center>
-            
+
             <p>
             These data sets contain the raw and calibrated Dawn VIR IR and VIS
                    data from the
                    cruise phase from launch to Vesta (Sep 2009-May 2011), and Vesta
                    to Ceres (Sep 2012-Dec 2014).
-            
+
             <br><br>
-            
+
             <table border=1>
             <tr><td width=400>VIR IR L1a (raw), all Cruise
                 <td width=200> <a href="http://sbnarchive.psi.edu/pds3/dawn/vir/DWNXVIR_I1A/"> Browse </a>
@@ -45,47 +45,42 @@
                 <td><a href="http://sbnarchive.psi.edu/pds3/dawn/vir/DWNXVIR_V1B/"> Browse </a>
                 <td><a href="http://sbnarchive.psi.edu/pds3/dawn/vir/DWNXVIR_V1B_170825.zip"> Download (700 Mb) </a>
             </table>
-            
+
             <p>
             Use the following citations to reference these data sets:
-            
+
             <p>
-            "De Sanctis, M.C., M.T. Capria, F.       
-                  Carraro, R. Noschese, S. Fonte, A. Coradini,                            
-                  DAWN VIR RAW (EDR) CRUISE CHECKOUT/CALIB IR SPECTRA V1.0,               
-                  DAWN-X-VIR-2-EDR-IR-CRUISE-SPECTRA-V1.0, NASA Planetary Data System,    
+            "De Sanctis, M.C., M.T. Capria, F.
+                  Carraro, R. Noschese, S. Fonte, A. Coradini,
+                  DAWN VIR RAW (EDR) CRUISE CHECKOUT/CALIB IR SPECTRA V1.0,
+                  DAWN-X-VIR-2-EDR-IR-CRUISE-SPECTRA-V1.0, NASA Planetary Data System,
                   2017."
-            
+
             <p>
-            "De Sanctis, M.C., M.T. Capria, F.       
-                  Carraro, R. Noschese, S. Fonte, A. Coradini,                            
-                  DAWN VIR RAW (EDR) CRUISE CHECKOUT/CALIB VIS SPECTRA V1.0,              
-                  DAWN-X-VIR-2-EDR-VIS-CRUISE-SPECTRA-V1.0, NASA Planetary Data System,   
+            "De Sanctis, M.C., M.T. Capria, F.
+                  Carraro, R. Noschese, S. Fonte, A. Coradini,
+                  DAWN VIR RAW (EDR) CRUISE CHECKOUT/CALIB VIS SPECTRA V1.0,
+                  DAWN-X-VIR-2-EDR-VIS-CRUISE-SPECTRA-V1.0, NASA Planetary Data System,
                   2017."
-            
+
             <p>
-            "De Sanctis, M.C., M.T. Capria, M.       
-                  Giardino, R. Noschese, S. Fonte, A. Coradini,                           
-                  DAWN VIR CAL (RDR) CRUISE CHECKOUT/CALIB IR SPECTRA V1.0,               
-                  DAWN-X-VIR-3-RDR-IR-CRUISE-SPECTRA-V1.0, NASA Planetary Data System,    
+            "De Sanctis, M.C., M.T. Capria, M.
+                  Giardino, R. Noschese, S. Fonte, A. Coradini,
+                  DAWN VIR CAL (RDR) CRUISE CHECKOUT/CALIB IR SPECTRA V1.0,
+                  DAWN-X-VIR-3-RDR-IR-CRUISE-SPECTRA-V1.0, NASA Planetary Data System,
                   2015."
-            
+
             <p>
-            "De Sanctis, M.C., M.T. Capria, M.       
-                  Giardino, R. Noschese, S. Fonte, A. Coradini,                           
-                  DAWN VIR CAL (RDR) CRUISE CHECKOUT/CALIB VIS SPECTRA V1.0,              
-                  DAWN-X-VIR-3-RDR-VIS-CRUISE-SPECTRA-V1.0, NASA Planetary Data           
+            "De Sanctis, M.C., M.T. Capria, M.
+                  Giardino, R. Noschese, S. Fonte, A. Coradini,
+                  DAWN VIR CAL (RDR) CRUISE CHECKOUT/CALIB VIS SPECTRA V1.0,
+                  DAWN-X-VIR-3-RDR-VIS-CRUISE-SPECTRA-V1.0, NASA Planetary Data
                   System, 2015."
-            
+
             <br><br>
-            
-            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
-            
-            <p>
-            None.
-            
-            <br> <br>
-            
+
+           <h3><font color="red">Supeseded</font> versions of this data set:<br>None</h3>
+
             <h3>
             <center>
             <a href="index.html">Return to Dawn Archive Page</a><br>
@@ -94,35 +89,11 @@
     </main>
     <!-- END main content -->
 
-    <div include-html="/pds/sbn-sidebar.html"></div> 
+    <div include-html="/pds/sbn-sidebar.html"></div>
 
-    <div include-html="/pds/sbn-footer.html"></div> 
-    
-    <script>
-        includeHTML = function(cb) {
-            var z, i, elmnt, file, xhttp;
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                file = elmnt.getAttribute("include-html");
-                if (file) {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
-                        elmnt.removeAttribute("include-html");
-                        includeHTML(cb);
-                    }
-                }      
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                return;
-                }
-            }
-            if (cb) cb();
-            };
-        includeHTML();
-    </script>
+    <div include-html="/pds/sbn-footer.html"></div>
+
+
+<script src="/pds/js/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

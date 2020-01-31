@@ -14,46 +14,47 @@
 </head>
 <body>
 
-    <div include-html="/pds/sbn-header.html"></div> 
+    <div include-html="/pds/sbn-header.html"></div>
 
     <!-- BEGIN main content -->
     <main class="sbn-main">
         <center>
             <h1> Asteroid Spin Vectors </h1>
             </center>
-            
+
             <h3>
             <p>
-            This is a comprehensive tabulation of   
-                    asteroid spin vector determinations, compiled by Agnieszka            
-                    Kryszczynska and based on the earlier compilation by Per Magnusson.   
-                    This is the Oct. 21, 2007 version of the compilation, containing 863  
+            This is a comprehensive tabulation of
+                    asteroid spin vector determinations, compiled by Agnieszka
+                    Kryszczynska and based on the earlier compilation by Per Magnusson.
+                    This is the Oct. 21, 2007 version of the compilation, containing 863
                     spin vector determinations.
             <p>
             This data set has been superseded by the more recent compilation of spin
             vectors available in the <a href="/pds/resource/lc.html"> Lightcurve-Derived Data</a> collection.
 
             </h3>
-            
+
             <table border=1>
             <tr><td width=500> EAR-A-5-DDR-ASTEROID-SPIN-VECTORS-V5.0
                 <td width=100> <a href="http://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_ASTEROID_SPIN_VECTORS_V5_0"> Browse </a>
                 <td width=200> <a href="http://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_ASTEROID_SPIN_VECTORS_V5_0.zip"> Download (189 kb) </a>
             </table>
-            
+
             <p>
             Use the following citation to reference this data set:
-            
+
             <p>
-            Kryszczynska, A. and Magnussen, P.,     
-                    Asteroid Spin Vector Compilation V5.0.                                
-                    EAR-A-5-DDR-ASTEROID-SPIN-VECTORS-V5.0. NASA Planetary Data System,   
+            Kryszczynska, A. and Magnussen, P.,
+                    Asteroid Spin Vector Compilation V5.0.
+                    EAR-A-5-DDR-ASTEROID-SPIN-VECTORS-V5.0. NASA Planetary Data System,
                     2008.
-            
+
             <br><br>
-            
-            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
-            
+
+    <h3 id="pds-superseded-title">Superseded Versions: <a onclick="setShow()" id="pds-superseded-toggle">Show</a></h3>
+
+            <div id="pds-superseded">
             <table border=1>
             <tr><td width=500> EAR-A-5-DDR-ASTEROID-SPIN-VECTORS-V4.2
                 <td width=100> <a href="http://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_ASTEROID_SPIN_VECTORS_V4_2"> Browse </a>
@@ -76,41 +77,17 @@
             <tr><td> A-5-DDR-POLE-POSITION-V1.0
                 <td> <a href="http://sbnarchive.psi.edu/pds3/non_mission/A_5_DDR_POLE_POSITION_V1_0"> Browse </a>
                 <td> <a href="http://sbnarchive.psi.edu/pds3/non_mission/A_5_DDR_POLE_POSITION_V1_0.zip">  Download (15 kb) </a>
-            </table>
-            
+            </table></div>
+
             <br> <br>
     </main>
     <!-- END main content -->
 
-    <div include-html="/pds/sbn-sidebar.html"></div> 
+    <div include-html="/pds/sbn-sidebar.html"></div>
 
-    <div include-html="/pds/sbn-footer.html"></div> 
-    
-    <script>
-        includeHTML = function(cb) {
-            var z, i, elmnt, file, xhttp;
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                file = elmnt.getAttribute("include-html");
-                if (file) {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
-                        elmnt.removeAttribute("include-html");
-                        includeHTML(cb);
-                    }
-                }      
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                return;
-                }
-            }
-            if (cb) cb();
-            };
-        includeHTML();
-    </script>
+    <div include-html="/pds/sbn-footer.html"></div>
+
+
+    <script src="/pds/js/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

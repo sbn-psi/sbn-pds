@@ -14,45 +14,46 @@
 </head>
 <body>
 
-    <div include-html="/pds/sbn-header.html"></div> 
+    <div include-html="/pds/sbn-header.html"></div>
 
     <!-- BEGIN main content -->
     <main class="sbn-main">
         center>
         <h1> Ulysses Dust Detection System </h1>
         </center>
-        
+
         <h3>
         <p>
         This data set contains the data from the
-                Ulysses dust detector system (UDDS) from start of mission through the 
+                Ulysses dust detector system (UDDS) from start of mission through the
                 end of mission, 1990-2007.  (As the dust detector was turned off after
                 Nov. 30, 2007, this is the last date for which UDDS data is recorded.)
-                Included are the dust impact data, noise data, laboratory calibration 
+                Included are the dust impact data, noise data, laboratory calibration
                 data, and location and orientation of the spacecraft and instrument.
         </h3>
-        
+
         <table border=1>
         <tr><td width=500> ULY-D-UDDS-5-DUST-V3.1
             <td width=100> <a href="http://sbnarchive.psi.edu/pds3/ulysses/ULY_D_UDDS_5_DUST_V3_1/"> Browse </a>
             <td width=200> <a href="http://sbnarchive.psi.edu/pds3/ulysses/ULY_D_UDDS_5_DUST_V3_1.zip"> Download (4.4 Mb) </a>
         </table>
-        
+
         <p>
         Use the following citation to reference this data set:
-        
+
         <p>
-        "Gruen, E., Krueger, H., Landgraf, M.,   
-                Altobelli, N., Anweiler, B., Baguhl, M., Dermott, S.F., Dikarev, V.,  
-                Divine, N., Fechtig, H., Graps, A.L., Gustafson, B.A, Hamilton, D.P., 
-                Hanner, M.S., Horanyi, M., Kissel, J., Lindblad, B.-A., Linkert, D.,  
-                Linkert, G., Mann, I., McDonnell, J.A.M., Morfill, G.E., Polanskey,   
-                C., Riemann, R., Schwehm, G., Siddique, N., Srama, R., Staubach, P.,  
-                and Zook, H.A., Ulysses Dust Detection System V3.1.                   
+        "Gruen, E., Krueger, H., Landgraf, M.,
+                Altobelli, N., Anweiler, B., Baguhl, M., Dermott, S.F., Dikarev, V.,
+                Divine, N., Fechtig, H., Graps, A.L., Gustafson, B.A, Hamilton, D.P.,
+                Hanner, M.S., Horanyi, M., Kissel, J., Lindblad, B.-A., Linkert, D.,
+                Linkert, G., Mann, I., McDonnell, J.A.M., Morfill, G.E., Polanskey,
+                C., Riemann, R., Schwehm, G., Siddique, N., Srama, R., Staubach, P.,
+                and Zook, H.A., Ulysses Dust Detection System V3.1.
                 ULY-D-UDDS-5-DUST-V3.1. NASA Planetary Data System, 2010."
 
-                <h3> <font color=red> Superseded </font> versions of this data set: </h3>
-                
+                <h3 id="pds-superseded-title">Superseded Versions: <a onclick="setShow()" id="pds-superseded-toggle">Show</a></h3>
+
+                <div id="pds-superseded">
                 <table border=1>
                 <tr><td width=500> ULY-D-UDDS-5-DUST-V3.0
                     <td width=100> <a href="http://sbnarchive.psi.edu/pds3/ulysses/ULY_D_UDDS_5_DUST_V3_0/"> Browse </a>
@@ -63,40 +64,16 @@
                 <tr><td> ULY-D-UDDS-5-DUST-V1.0
                     <td> <a href="http://sbnarchive.psi.edu/pds3/ulysses/ULY_D_UDDS_5_DUST_V1_0"> Browse </a>
                     <td> <a href="http://sbnarchive.psi.edu/pds3/ulysses/ULY_D_UDDS_5_DUST_V1_0.zip">Download (70 kb)</a>
-                </table>
-                <br> <br>                
+                </table></div>
+                <br> <br>
     </main>
     <!-- END main content -->
 
-    <div include-html="/pds/sbn-sidebar.html"></div> 
+    <div include-html="/pds/sbn-sidebar.html"></div>
 
-    <div include-html="/pds/sbn-footer.html"></div> 
-    
-    <script>
-        includeHTML = function(cb) {
-            var z, i, elmnt, file, xhttp;
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                file = elmnt.getAttribute("include-html");
-                if (file) {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
-                        elmnt.removeAttribute("include-html");
-                        includeHTML(cb);
-                    }
-                }      
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                return;
-                }
-            }
-            if (cb) cb();
-            };
-        includeHTML();
-    </script>
+    <div include-html="/pds/sbn-footer.html"></div>
+
+
+<script src="/pds/js/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

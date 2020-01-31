@@ -14,83 +14,53 @@
 </head>
 <body>
 
-    <div include-html="/pds/sbn-header.html"></div> 
+    <div include-html="/pds/sbn-header.html"></div>
 
     <!-- BEGIN main content -->
     <main class="sbn-main">
         <center>
             <h1> Bus-DeMeo Asteroid Taxonomy </h1>
             </center>
-            
+
             <h3>
             <p>
-            The Bus-DeMeo asteroid taxonomy         
-                    classification system, described in DeMeo et al. (2009), is based on  
-                    reflectance spectrum characteristics for 371 asteroids measured over  
-                    the wavelength 0.45 to 2.45 microns.  This system of 24 classes is    
+            The Bus-DeMeo asteroid taxonomy
+                    classification system, described in DeMeo et al. (2009), is based on
+                    reflectance spectrum characteristics for 371 asteroids measured over
+                    the wavelength 0.45 to 2.45 microns.  This system of 24 classes is
                     constructed using principal component analysis, following most closely
-                    the visible wavelength taxonomy of Bus (1999), which itself builds    
-                    upon the system of Tholen (1984).  Nearly all of the Bus taxonomy     
+                    the visible wavelength taxonomy of Bus (1999), which itself builds
+                    upon the system of Tholen (1984).  Nearly all of the Bus taxonomy
                     classes are preserved, with one new class (Sv) defined.  This data set
-                    includes a table of classifications in the Bus-DeMeo system for the   
-                    371 asteroids upon which the system is based.  It also includes mean  
+                    includes a table of classifications in the Bus-DeMeo system for the
+                    371 asteroids upon which the system is based.  It also includes mean
                     spectra for each of the classes.
             </h3>
-            
+
             <table border=1>
             <tr><td width=500>EAR-A-VARGBDET-5-BUSDEMEOTAX-V1.0
                 <td width=100> <a href="http://sbnarchive.psi.edu/pds3/non_mission/EAR_A_VARGBDET_5_BUSDEMEOTAX_V1_0"> Browse </a>
                 <td width=200> <a href="http://sbnarchive.psi.edu/pds3/non_mission/EAR_A_VARGBDET_5_BUSDEMEOTAX_V1_0.zip"> Download (53 kb) </a>
             </table>
-            
+
             <p>
             Use the following citation to reference this data set:
-            
+
             <p>
-            "DeMeo, F., Binzel, R.P., Slivan, S.M.,  
-                    and Bus, S.J., Bus-DeMeo Asteroid Taxonomy V1.0.                      
+            "DeMeo, F., Binzel, R.P., Slivan, S.M.,
+                    and Bus, S.J., Bus-DeMeo Asteroid Taxonomy V1.0.
                     EAR-A-VARGBDET-5-BUSDEMEOTAX-V1.0. NASA Planetary Data System, 2009."
-            
-            <br><br>
-            
-            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
-            
-            <p>
-            None.
-            
             <br> <br>
+
+           <h3><font color="red">Supeseded</font> versions of this data set:<br>None</h3>
     </main>
     <!-- END main content -->
 
-    <div include-html="/pds/sbn-sidebar.html"></div> 
+    <div include-html="/pds/sbn-sidebar.html"></div>
 
-    <div include-html="/pds/sbn-footer.html"></div> 
-    
-    <script>
-        includeHTML = function(cb) {
-            var z, i, elmnt, file, xhttp;
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                file = elmnt.getAttribute("include-html");
-                if (file) {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
-                        elmnt.removeAttribute("include-html");
-                        includeHTML(cb);
-                    }
-                }      
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                return;
-                }
-            }
-            if (cb) cb();
-            };
-        includeHTML();
-    </script>
+    <div include-html="/pds/sbn-footer.html"></div>
+
+
+<script src="/pds/js/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

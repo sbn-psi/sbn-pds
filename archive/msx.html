@@ -14,60 +14,36 @@
 </head>
 <body>
 
-    <div include-html="/pds/sbn-header.html"></div> 
+    <div include-html="/pds/sbn-header.html"></div>
 
     <!-- BEGIN main content -->
     <main class="sbn-main">
         <center>
             <h1> Mid-Course Space Experiment (MSX) Data </h1>
             </center>
-            
+
             <ul>
                 <li> <a href="/pds/resource/mimps.html"> MSX Infrared Minor Planet Survey </a> (MIMPS)
                 <li> <a href="/pds/resource/msxsb.html"> MSX Images of Comets and Asteroids </a>
                 <li> <a href="/pds/resource/msxzody.html"> MSX Zodiacal Dust Data </a>
             </ul>
-            
+
             <p>
             Also, on-line at the Geosciences Node,
-            
+
             <ul>
             <li> <a href="http://pds-geosciences.wustl.edu/missions/msx/index.htm">
             MSX Lunar Eclipse Observations </a>
             </ul>
-            
+
     </main>
     <!-- END main content -->
 
-    <div include-html="/pds/sbn-sidebar.html"></div> 
+    <div include-html="/pds/sbn-sidebar.html"></div>
 
-    <div include-html="/pds/sbn-footer.html"></div> 
-    
-    <script>
-        includeHTML = function(cb) {
-            var z, i, elmnt, file, xhttp;
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                file = elmnt.getAttribute("include-html");
-                if (file) {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
-                        elmnt.removeAttribute("include-html");
-                        includeHTML(cb);
-                    }
-                }      
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                return;
-                }
-            }
-            if (cb) cb();
-            };
-        includeHTML();
-    </script>
+    <div include-html="/pds/sbn-footer.html"></div>
+
+
+    <script src="/pds/js/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>

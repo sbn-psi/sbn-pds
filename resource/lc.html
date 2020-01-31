@@ -14,47 +14,48 @@
 </head>
 <body>
 
-    <div include-html="/pds/sbn-header.html"></div> 
+    <div include-html="/pds/sbn-header.html"></div>
 
     <!-- BEGIN main content -->
     <main class="sbn-main">
         <center>
             <h1> Asteroid Lightcurve Data Base (LCDB) </h1>
             </center>
-            
+
             <h3>
             <p>
-           The asteroid lightcurve database (LCDB) is one of the more widely-used research tools
-for those doing research that compares and contrasts physical characteristics of
-asteroid spin axis rates, sizes, pole orientations, and/or taxonomic class - among
-others.
+           The Asteroid Lightcurve Data Base (LCDB) is a set of files generated from a MySQL
+database that includes information directly and indirectly obtained from observations
+made to determine the period and/or amplitude of asteroid lightcurves. The
+information is taken from numerous journals and other sources.
 
-The v3.0 release includes lightcurve photometry results for more than 24500
-targets. Each object has one to several dozen detail records that contain results
-obtained by scanning the literature.
+Its main purpose is to provide a central location for basic information about
+asteroid rotation rates and related information that can be used in statistical
+studies involving a few or many parameters. Some of the data are obtained directly
+from the observations while other data are inferred or calculated based on orbital
+characteristics, assumed class, etc.
             </h3>
- <p>
-Release date: December 9, 2019 
-            <p>
-           
+
             <table border=1>
             <tr><td width=500> urn:nasa:pds:ast-lightcurve-database::3.0
                 <td width=100> <a href="http://sbnarchive.psi.edu/pds4/non_mission/ast-lightcurve-database_V3_0"> Browse </a>
                 <td width=200> <a href="http://sbnarchive.psi.edu/pds4/non_mission/ast-lightcurve-database_V3_0.zip"> Download (12 Mb) </a>
             </table>
-            
+
             <p>
             Use the following citation to reference this data set:
-            
+
             <p>
-            "Warner, B.D., Harris, A.W., and Pravec, P., Eds., Asteroid Lightcurve Data Base (LCDB) V3.0
-                    urn:nasa:pds:ast-lightcurve-database::3.0.
-                    NASA Planetary Data System, 2019."
-            
+            "Warner, B., Pravec, P., and Harris, A.
+                    P., Eds., Asteroid Lightcurve Data Base (LCDB) V2.0
+                    urn:nasa:pds:ast-lightcurve-database::2.0.
+                    NASA Planetary Data System, 2018."
+
             <br><br>
-            
-            <h3> <font color=red> Superseded </font> versions of this data set: </h3>
-            
+
+    <h3 id="pds-superseded-title">Superseded Versions: <a onclick="setShow()" id="pds-superseded-toggle">Show</a></h3>
+
+            <div id="pds-superseded">
             <table border=1>
             <tr><td width=500> urn:nasa:pds:ast-lightcurve-database::2.0
                 <td width=100> <a href="http://sbnarchive.psi.edu/pds4/non_mission/ast-lightcurve-database_V2_0"> Browse </a>
@@ -114,41 +115,17 @@ Release date: December 9, 2019
             <tr><td> EAR-A-5-DDR-DERIVED-LIGHTCURVE-V1.0
                 <td> <a href="http://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_V1_0"> Browse </a>
                 <td> <a href="http://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_DERIVED_LIGHTCURVE_V1_0.zip">  Download (43 kb) </a>
-            </table>
-            
+            </table></div>
+
             <br> <br>
     </main>
     <!-- END main content -->
 
-    <div include-html="/pds/sbn-sidebar.html"></div> 
+    <div include-html="/pds/sbn-sidebar.html"></div>
 
-    <div include-html="/pds/sbn-footer.html"></div> 
-    
-    <script>
-        includeHTML = function(cb) {
-            var z, i, elmnt, file, xhttp;
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                file = elmnt.getAttribute("include-html");
-                if (file) {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                        if (this.status == 404) {elmnt.innerHTML = "Included html not found.";}
-                        elmnt.removeAttribute("include-html");
-                        includeHTML(cb);
-                    }
-                }      
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                return;
-                }
-            }
-            if (cb) cb();
-            };
-        includeHTML();
-    </script>
+    <div include-html="/pds/sbn-footer.html"></div>
+
+
+<script src="/pds/js/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>
