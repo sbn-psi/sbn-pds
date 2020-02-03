@@ -6,3 +6,24 @@ Redirect 301 /pds/shape_models /pds/shape-models/
 
 # Redirect old shape models page
 Redirect 301 /pds/archive/shape.html /pds/shape-models/
+
+# Redirect old Dawn urls
+Redirect 301 /pds/resource/dwnfcmarscruisecal.html /pds/resource/dawn/dwnfcmarscruisecal.html
+Redirect 301 /pds/resource/dwnvfc2.html /pds/resource/dawn/dwnvfcL1.html
+Redirect 301 /pds/resource/dwnxvir.html /pds/resource/dawn/dwnxvir.html
+Redirect 301 /pds/resource/dwnvvir.html /pds/resource/dawn/dwnvvirL1.html
+Redirect 301 /pds/resource/dwncvir.html /pds/resource/dawn/dwncvirL1.html
+Redirect 301 /pds/resource/dwnmgrd_1a.html /pds/resource/dawn/dwngrdmarscruise.html
+Redirect 301 /pds/resource/dwnvgrd.html /pds/resource/dawn/dwnvgrdL1.html
+Redirect 301 /pds/resource/dwncgrd.html /pds/resource/dawn/dwncgrdL1.html
+Redirect 301 /pds/resource/dwnvgrs_0.html /pds/resource/dawn/dwnvgravL0.html
+Redirect 301 /pds/resource/dwncgrs.html /pds/resource/dawn/dwncgravL0.html
+Redirect 301 /pds/resource/dwnvfc2.html /pds/resource/dawn/dwnvfcmosaics.html
+Redirect 301 /pds/resource/dwncfc2.html /pds/resource/dawn/dwncfcmosaics.html
+Redirect 301 /pds/resource/dwnvvir.html /pds/resource/dawn/dwnvvirmaps.html
+Redirect 301 /pds/resource/dwnvgrd.html /pds/resource/dawn/dwnvgrdmaps.html
+Redirect 301 /pds/resource/dwncgrd.html /pds/resource/dawn/dwncgrdmaps.html
+Redirect 301 /pds/resource/dwnvfc2.html /pds/resource/dawn/dwnvfcshape.html
+Redirect 301 /pds/resource/dwncfc2.html /pds/resource/dawn/dwncfcshape.html
+Redirect 301 /pds/resource/dwnvgrs_0.html /pds/resource/dawn/dwnvgravL2.html
+Redirect 301 /pds/resource/dwncgrs.html /pds/resource/dawn/dwncgravL2.html
