@@ -27,7 +27,7 @@ a:not(.ignore-a-styling) {
     border: 1px solid #d5d5d5;
     position: relative;
     display: inline-block;
-    margin-bottom: 1em;
+    margin: 1em 0;
 }
 
 /* main */
