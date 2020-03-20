@@ -263,6 +263,45 @@ const Asteroids = function() {
                 stookDataset(nullset),
                 thomasDataset(nullset)
             ]
+        },
+        '2100 Ra-Shalom': {
+            datasets: [lawrenceRadar(nullset)]
+        },
+        '4486 Mithra': {
+            datasets: [lawrenceRadar(nullset)]
+        },
+        '4660 Nereus': {
+            datasets: [lawrenceRadar(nullset)]
+        },
+        '10115 1992 SK': {
+            datasets: [lawrenceRadar(nullset)]
+        },
+        '29075 1950 DA (Retrograde)': {
+            datasets: [lawrenceRadar(nullset)]
+        },
+        '29075 1950 DA (Prograde)': {
+            datasets: [lawrenceRadar(nullset)]
+        },
+        '33342 1998 WT24': {
+            datasets: [lawrenceRadar(nullset)]
+        },
+        '54509 YORP': {
+            datasets: [lawrenceRadar(nullset)]
+        },
+        '66391 1999 KW4 Alpha': {
+            datasets: [lawrenceRadar(nullset)]
+        },
+        '66391 1999 KW4 Beta': {
+            datasets: [lawrenceRadar(nullset)]
+        },
+        '136617 1994 CC Alpha (276049)': {
+            datasets: [lawrenceRadar(nullset)]
+        },
+        '276049 2002 CE26 Alpha': {
+            datasets: [lawrenceRadar(nullset)]
+        },
+        '341843 2008 EV5': {
+            datasets: [lawrenceRadar(nullset)]
         }
     };
 };
