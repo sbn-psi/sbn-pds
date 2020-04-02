@@ -1,3 +1,10 @@
+class FileList {
+    constructor(obj,usdz,preview) {
+        this.objPath  = obj;
+        this.usdzPath = usdz;
+        this.preview  = preview;
+    };
+};
 const Asteroids = function() {
     return {
         '1998 KY26': {
@@ -265,43 +272,43 @@ const Asteroids = function() {
             ]
         },
         '2100 Ra-Shalom': {
-            datasets: [lawrenceRadar(nullset)]
+            datasets: [lawrenceRadar(new FileList(null,'files/usd/a2100rashalom.usdz','previews/a2100rashalom.png'))]
         },
         '4486 Mithra': {
-            datasets: [lawrenceRadar(nullset)]
+            datasets: [lawrenceRadar(new FileList(null,'files/usd/a4486mithra.usdz','previews/a4486mithra.png'))]
         },
         '4660 Nereus': {
-            datasets: [lawrenceRadar(nullset)]
+            datasets: [lawrenceRadar(new FileList(null,'files/usd/a4660nereus.usdz','previews/a4660nereus.png'))]
         },
         '10115 1992 SK': {
-            datasets: [lawrenceRadar(nullset)]
+            datasets: [lawrenceRadar(new FileList(null,'files/usd/a10115_1992sk.usdz','previews/a10115_1992sk.png'))]
         },
         '29075 1950 DA (Retrograde)': {
-            datasets: [lawrenceRadar(nullset)]
+            datasets: [lawrenceRadar(new FileList(null,'files/usd/a29075_1950da_retrogrademodel.usdz','previews/a29075_1950da_retrogrademodel.png'))]
         },
         '29075 1950 DA (Prograde)': {
-            datasets: [lawrenceRadar(nullset)]
+            datasets: [lawrenceRadar(new FileList(null,'files/usd/a29075_1950da_progrademodel.usdz','previews/a29075_1950da_progrademodel.png'))]
         },
         '33342 1998 WT24': {
-            datasets: [lawrenceRadar(nullset)]
+            datasets: [lawrenceRadar(new FileList(null,'files/usd/a33342_1998wt24.usdz','previews/a33342_1998wt24.png'))]
         },
         '54509 YORP': {
-            datasets: [lawrenceRadar(nullset)]
+            datasets: [lawrenceRadar(new FileList(null,'files/usd/a54509_yorp.usdz','previews/a54509_yorp.png'))]
         },
         '66391 1999 KW4 Alpha': {
-            datasets: [lawrenceRadar(nullset)]
+            datasets: [lawrenceRadar(new FileList(null,'files/usd/a66391_1999kw4_primary.usdz','previews/a66391_1999kw4_primary.png'))]
         },
         '66391 1999 KW4 Beta': {
-            datasets: [lawrenceRadar(nullset)]
+            datasets: [lawrenceRadar(new FileList(null,'files/usd/a66391_1999kw4_secondary.usdz','previews/a66391_1999kw4_secondary.png'))]
         },
         '136617 1994 CC Alpha (276049)': {
-            datasets: [lawrenceRadar(nullset)]
+            datasets: [lawrenceRadar(new FileList(null,'files/usd/a136617_1994cc_primary.usdz','previews/a136617_1994cc_primary.png'))]
         },
         '276049 2002 CE26 Alpha': {
-            datasets: [lawrenceRadar(nullset)]
+            datasets: [lawrenceRadar(new FileList(null,'files/usd/a276046_2002ce26_primary.usdz','previews/a276046_2002ce26_primary.png'))]
         },
         '341843 2008 EV5': {
-            datasets: [lawrenceRadar(nullset)]
+            datasets: [lawrenceRadar(new FileList(null,'files/usd/a341843_2008ev5.usdz','previews/a341843_2008ev5.png'))]
         }
     };
 };

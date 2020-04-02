@@ -66,15 +66,15 @@ const nearDataset = function(file) {
         }
     }
 };
-const lawrenceRadar = function(file) {
+const lawrenceRadar = function(filePaths) {
     return {
         name: 'Radar shape models of asteroids compiled by Lawrence',
         link: 'https://sbn.psi.edu/pds/resource/jplradarshape.html',
         file: {
             archivePath: 'https://sbnarchive.psi.edu/pds4/non_mission/gbo.ast.jpl.radar.shape_models_V1_0/data/',
-            objPath: file.objPath,
-            usdzPath: file.objPath,
-            preview: file.preview
+            objPath: filePaths.objPath,
+            usdzPath: filePaths.usdzPath,
+            preview: filePaths.preview
         }
     };
 };
