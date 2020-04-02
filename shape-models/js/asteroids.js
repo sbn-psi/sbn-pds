@@ -260,7 +260,7 @@ const Asteroids = function() {
             datasets: [
                 radarDataset({
                     objPath: path('RADAR/6489golevka.tab.obj'),
-                    usdzPath: path('RADAR/6489golevka.tab.uusdz'),
+                    usdzPath: path('RADAR/6489golevka.tab.usdz'),
                     preview: 'previews/6489golevka.png'
                 })
             ]
