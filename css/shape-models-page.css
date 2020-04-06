@@ -1,5 +1,8 @@
 #title {
-    text-align: center;
+    /* text-align: center; */
+}
+#shape-models-main {
+    /* max-width: 1200px; */
 }
 #search {
     margin: 2em 0 1em 0;
@@ -16,7 +19,7 @@
     background: #D5D5D5;
 }
 .cell {
-    padding: 0.2em;
+    padding: 0.3em 0.5em;
     display: table-cell;
     border: 1px solid #BDBDBD;
     vertical-align: middle;
@@ -25,9 +28,29 @@
     margin: 0;
     text-decoration: underline;
 }
-.cell-title {
-    font-size: 0.8em;
+.cell.centered {
+    text-align: center;
 }
+
+.cell.cell-sm {
+    max-width: 50px;
+}
+.cell.cell-md {
+    max-width: 130px;
+}
+.cell.cell-lg {
+    max-width: 400px;
+}
+
+.object-name {
+    text-align: left;
+}
+
+.icon {
+    height: 50px;
+    cursor: pointer;
+}
+
 .category {
     border-right: 1px solid #BDBDBD;
     border-left: 1px solid #BDBDBD;
@@ -46,13 +69,7 @@
     font-size: 0.8em;
     font-style: italic;
 }
-.download-cell {
-    text-align: center;
-}
-.download-cell p, .download-cell i {
-    cursor: pointer;
-    margin: 0;
-}
+
 .preview-link {
     display: flex;
     justify-content: center;

@@ -142,15 +142,15 @@ function makeTable() {
         const $row = function(dataset,idx) {
             let row = {
                 '$name': (function() {
-                    if (idx === 0) return $('<th>', {class:'cell'}).text(name).attr('rowspan',rowspan);
+                    if (idx === 0) return $('<th>', {class:'cell cell-md object-name'}).text(name).attr('rowspan',rowspan);
                     else return null;
                 })(),
                 '$dataset': {
-                    '$name': $('<td>', {class:'cell'}).append($('<a>', {href: dataset.link}).text(dataset.name)),
-                    '$archivedFile': $('<td>', {class: 'cell download-cell'}).append($('<a>', {href: dataset.file.archivePath}).append(downloadIcon()).append($('<p>', {class: 'cell-title'}).text('Archived Version'))),
+                    '$name': $('<td>', {class:'cell cell-lg'}).append($('<a>', {href: dataset.link}).text(dataset.name)),
+                    '$archivedFile': $('<td>', {class: 'cell centered'}).append($('<a>', {href: dataset.file.archivePath}).append(downloadIcon())),
                     '$objFile': (function() {
-                        if (dataset.file.objPath === null) return $('<td>', {class: 'cell download-cell'}).text('-');
-                        else return $('<td>', {class:'cell download-cell'}).append($('<a>', {href: dataset.file.objPath}).append(downloadIcon()).append($('<p>', {class: 'cell-title'}).text('.obj')));
+                        if (dataset.file.objPath === null) return $('<td>', {class: 'cell centered'});
+                        else return $('<td>', {class:'cell centered'}).append($('<a>', {href: dataset.file.objPath, class: 'expand'}).append($('<img>', {src: 'img/OBJ.svg', class: 'icon'})));
                     })()
                 },
                 '$preview': (function() {
@@ -185,7 +185,7 @@ function makeTable() {
             if ($row.$name !== null) row.append($row.$name);
 
             // then proceed with the rest of the <td>s
-            row.append($row.$dataset.$name).append($row.$dataset.$archivedFile).append($row.$dataset.$objFile).append($row.$preview).append($row.$ferretSearch);
+            row.append($row.$dataset.$name).append($row.$dataset.$archivedFile).append($row.$dataset.$objFile)/*.append($row.$preview)*/.append($row.$ferretSearch);
 
             $(`#${id}`).after(row);
             return row;

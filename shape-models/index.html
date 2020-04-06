@@ -40,30 +40,32 @@
 
         <p>The scripts used to generate the following .obj files are available in the <a href="https://github.com/sbn-psi/data-tools/tree/master/shapes" target="_blank">SBN GitHub repo</a>.</p>
 
-        <div id="search">
-            <label for="query">Search: </label>
-            <input type="text" name="query" id="query" autofocus>
-            <p class="input-text">Enter the name or number of an asteroid, comet, or satellite.</p>
-        </div>
-
-        <table class="table" id="shape-model-table">
-            <tr class="row header">
-                <th class="cell">Object Name</th>
-                <th class="cell">Full Datasets with Documentation</th>
-                <th class="cell" colspan="2">Downloads</th>
-                <th class="cell">Preview</th>
-                <th class="cell">Data Ferret Search</th>
-            </tr>
-            <tr class="row category" id="asteroids">
-                <th class="cell" colspan="6"><h3>Asteroids <span id="asteroid-count"></span></h3></th>
-            </tr>
-            <tr class="row category" id="comets">
-                <th class="cell" colspan="6"><h3>Comets <span id="comet-count"></span></h3></th>
-            </tr>
-            <tr class="row category" id="satellites">
-                <th class="cell" colspan="6"><h3>Planetary Satellites <span id="satellite-count"></span></h3></th>
-            </tr>
-        </table>
+        <section id="shape-models-main">
+            <div id="search">
+                <label for="query">Search: </label>
+                <input type="text" name="query" id="query" autofocus>
+                <p class="input-text">Enter the name or number of an asteroid, comet, or satellite.</p>
+            </div>
+    
+            <table class="table" id="shape-model-table">
+                <tr class="row header">
+                    <th class="cell cell-md">Object Name</th>
+                    <th class="cell cell-lg">Full Datasets with Documentation</th>
+                    <th class="cell" colspan="2">Available Downloads</th>
+                    <!-- <th class="cell">Preview</th> -->
+                    <th class="cell">Data Ferret Search</th>
+                </tr>
+                <tr class="row category" id="asteroids">
+                    <th class="cell" colspan="6"><h3>Asteroids <span id="asteroid-count"></span></h3></th>
+                </tr>
+                <tr class="row category" id="comets">
+                    <th class="cell" colspan="6"><h3>Comets <span id="comet-count"></span></h3></th>
+                </tr>
+                <tr class="row category" id="satellites">
+                    <th class="cell" colspan="6"><h3>Planetary Satellites <span id="satellite-count"></span></h3></th>
+                </tr>
+            </table>
+        </section>
 
     </main>
     <!-- END main content -->
