@@ -301,7 +301,7 @@ const Asteroids = function() {
         '66391 1999 KW4 Beta': {
             datasets: [lawrenceRadar(new FileList(null,'files/usd/a66391_1999kw4_secondary.usdz','previews/a66391_1999kw4_secondary.png'))]
         },
-        '136617 1994 CC Alpha (276049)': {
+        '136617 1994 CC Alpha': {
             datasets: [lawrenceRadar(new FileList(null,'files/usd/a136617_1994cc_primary.usdz','previews/a136617_1994cc_primary.png'))]
         },
         '276049 2002 CE26 Alpha': {
