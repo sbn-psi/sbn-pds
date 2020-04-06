@@ -1,19 +1,24 @@
-let asteroids = Asteroids();
+// let asteroids = Asteroids();
 let comets = Comets();
-let satellites = Satellites();
+// let satellites = Satellites();
 
 $(document).ready(function() {
+    console.log('loaded');
+    
     $('#query').val('');
     
+    // initialize table on page load
     makeTable();
+    console.log('table loaded');
+    
     // search tool
     $('#query').on('keyup', function(event) {
         event.stopPropagation();
 
         const str = this.value.toUpperCase();
-        asteroids = Asteroids();
+        // asteroids = Asteroids();
         comets = Comets();
-        satellites = Satellites();
+        // satellites = Satellites();
 
         if (!str) {
             makeTable();
@@ -37,19 +42,21 @@ $(document).ready(function() {
         };
 
         // FILTER ASTEROIDS
-        filterObjects(str,asteroids)
+        // filterObjects(str,asteroids)
 
         // FILTER COMETS
         filterObjects(str,comets);
 
         // FILTER SATELLITES
-        filterObjects(str,satellites);
+        // filterObjects(str,satellites);
 
         makeTable();
     });
 });
 
 function makeTable() {
+    console.log('make table');
+    
     $('.sbn-body').remove();
 
     const shapeModelTable = $('#shape-model-table');
@@ -193,16 +200,16 @@ function makeTable() {
     };
 
     // PLACE ASTEROIDS
-    const asteroidNames = Object.keys(asteroids).sort(sort.asteroids);
-    asteroidNames
-        .map((asteroid,idx) => {
-            const datasets = asteroids[asteroid]['datasets'];
-            const odd = idx % 2 === 1;
-            newRow('asteroids',asteroid,datasets,odd);
-        }
-    );
+    // const asteroidNames = Object.keys(asteroids).sort(sort.asteroids);
+    // asteroidNames
+    //     .map((asteroid,idx) => {
+    //         const datasets = asteroids[asteroid]['datasets'];
+    //         const odd = idx % 2 === 1;
+    //         newRow('asteroids',asteroid,datasets,odd);
+    //     }
+    // );
     // ASTEROID COUNT
-    $('#asteroid-count').text(`(${Object.keys(asteroids).length})`);
+    // $('#asteroid-count').text(`(${Object.keys(asteroids).length})`);
 
     // PLACE COMETS
     const cometNames = Object.keys(comets).sort(sort.comets);
@@ -217,14 +224,14 @@ function makeTable() {
     $('#comet-count').text(`(${Object.keys(comets).length})`);
 
     // PLACE SATELLITES
-    const satelliteNames = Object.keys(satellites).sort(sort.satellites);
-    satelliteNames
-        .map((satellite,idx) => {
-            const datasets = satellites[satellite]['datasets'];
-            const odd = idx % 2 === 1;
-            newRow('satellites',satellite,datasets,odd);
-        }
-    );
+    // const satelliteNames = Object.keys(satellites).sort(sort.satellites);
+    // satelliteNames
+    //     .map((satellite,idx) => {
+    //         const datasets = satellites[satellite]['datasets'];
+    //         const odd = idx % 2 === 1;
+    //         newRow('satellites',satellite,datasets,odd);
+    //     }
+    // );
     // PLACE SATELLITE COUNT
-    $('#satellite-count').text(`(${Object.keys(satellites).length})`);
+    // $('#satellite-count').text(`(${Object.keys(satellites).length})`);
 };

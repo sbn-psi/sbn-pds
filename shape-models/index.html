@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="ShapeModelTable">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>PDS Asteroid/Dust Archive</title>
+    <title>PDS Asteroi d/Dust Archive</title>
 
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -29,13 +29,18 @@
     <div include-html="/pds/sbn-header.html"></div>
 
     <!-- BEGIN main content -->
-    <main class="sbn-main">
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <main class="sbn-main" ng-controller="ShapeModels">
+        <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="Bodies.js" charset="utf-8"></script>
         <script src="js/asteroids.js" charset="utf-8"></script>
         <script src="js/comets.js" charset="utf-8"></script>
         <script src="js/satellites.js" charset="utf-8"></script>
-        <script src="app.js" charset="utf-8" async defer></script>
+        <script src="app.js" charset="utf-8" async defer></script> -->
+
+        <script src="/pds/shape-models/js/angular/angular.js"></script>
+        <script src="/pds/shape-models/js/app.ShapeModels.js"></script>
+        <script src="/pds/shape-models/js/app.Data.js"></script>
+
         <h1 id="title">Shape Models of Asteroids, Comets, and Satellites</h1>
 
         <p>The scripts used to generate the following .obj files are available in the <a href="https://github.com/sbn-psi/data-tools/tree/master/shapes" target="_blank">SBN GitHub repo</a>.</p>
@@ -51,16 +56,29 @@
                 <tr class="row header">
                     <th class="cell cell-md">Object Name</th>
                     <th class="cell cell-lg">Full Datasets with Documentation</th>
-                    <th class="cell" colspan="2">Available Downloads</th>
+                    <th class="cell">Available Downloads</th>
                     <!-- <th class="cell">Preview</th> -->
                     <th class="cell">Data Ferret Search</th>
                 </tr>
                 <tr class="row category" id="asteroids">
                     <th class="cell" colspan="6"><h3>Asteroids <span id="asteroid-count"></span></h3></th>
                 </tr>
+                
                 <tr class="row category" id="comets">
                     <th class="cell" colspan="6"><h3>Comets <span id="comet-count"></span></h3></th>
                 </tr>
+                <tr class="row sbn-body" ng-repeat-start="comet in view.comets">
+                    <td class="cell" rowspan='{{comet.datasets.length}}'>{{ comet.name }}</td>
+                    <td class="cell">{{ comet.datasets[0].name }}</td>
+                    <td class="cell">Downloads</td>
+                    <td class="cell">Ferret</td>
+                </tr>
+                <tr class="row sbn-body" ng-repeat-end ng-repeat="dataset in comet.datasets.slice(1)">
+                    <td class="cell">{{ dataset.name }}</td>
+                    <td class="cell">Downloads</td>
+                    <td class="cell">Ferret</td>
+                </tr>
+                
                 <tr class="row category" id="satellites">
                     <th class="cell" colspan="6"><h3>Planetary Satellites <span id="satellite-count"></span></h3></th>
                 </tr>
