@@ -56,7 +56,7 @@
                 <tr class="row header">
                     <th class="cell cell-md">Object Name</th>
                     <th class="cell cell-lg">Full Datasets with Documentation</th>
-                    <th class="cell">Available Downloads</th>
+                    <th class="cell" colspan="2">Available Downloads</th>
                     <!-- <th class="cell">Preview</th> -->
                     <th class="cell">Data Ferret Search</th>
                 </tr>
@@ -69,13 +69,15 @@
                 </tr>
                 <tr class="row sbn-body" ng-repeat-start="comet in view.comets">
                     <td class="cell" rowspan='{{comet.datasets.length}}'>{{ comet.name }}</td>
-                    <td class="cell">{{ comet.datasets[0].name }}</td>
-                    <td class="cell">Downloads</td>
-                    <td class="cell">Ferret</td>
+                    <td class="cell"><a href="{{comet.datasets[0].link}}">{{ comet.datasets[0].name }}</a></td>
+                    <td class="cell centered"><file-download file-to-download="comet.datasets[0]['files']['data']['primary']"></file-download></td>
+                    <td class="cell centered"><file-download file-to-download="comet.datasets[0]['files']['data']['derived']"></file-download></td>
+                    <td class="cell centered"><ferret-link object-name="comet.name"></ferret-link></td>
                 </tr>
                 <tr class="row sbn-body" ng-repeat-end ng-repeat="dataset in comet.datasets.slice(1)">
                     <td class="cell">{{ dataset.name }}</td>
-                    <td class="cell">Downloads</td>
+                    <td class="cell">Primary</td>
+                    <td class="cell">Derived</td>
                     <td class="cell">Ferret</td>
                 </tr>
                 

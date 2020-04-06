@@ -1,37 +1,33 @@
 let Comets = function() {
     return {
-        '67P/Churyumov–Gerasimenko': {
-            datasets: [{
-                name: 'Rosetta Shape Models of Comet 67P/C-G',
-                link: 'https://pdssbn.astro.umd.edu/holdings/ro-c-multi-5-67p-shape-v2.0/dataset.html',
-                files: {
-                    data: {
-                        primary: {
-                            downloadLink: 'https://pdssbn.astro.umd.edu/holdings/ro-c-multi-5-67p-shape-v2.0/data/triplate/mspcd_lam/shap2/cg_mspcd_shap2_001m_cart.wrl',
-                            fileFormat: 'WRL'
-                        },
-                        derived: [{
-                            downloadLink: 'files/67P/cg_mspcd_shap2_001m_cart.obj',
-                            format: 'OBJ'
-                        }]
-                    },
-                    previews: {
-                        default: {
-                            path: 'previews/67p.png',
-                            format: 'PNG'
-                        },
-                        ios: {
-                            path: 'files/67P/cg_mspcd_shap2_001m_cart.usdz',
-                            format: 'USDZ'
-                        }
-                    }
-                }
-            },{
-                name: 'Test Dataset',
-                link: null,
-                files: {}
-            }]
-        },
+        // '67P/Churyumov–Gerasimenko': {
+        //     datasets: [{
+        //         name: 'Rosetta Shape Models of Comet 67P/C-G',
+        //         link: 'https://pdssbn.astro.umd.edu/holdings/ro-c-multi-5-67p-shape-v2.0/dataset.html',
+        //         files: {
+        //             data: {
+        //                 primary: {
+        //                     downloadLink: 'https://pdssbn.astro.umd.edu/holdings/ro-c-multi-5-67p-shape-v2.0/data/triplate/mspcd_lam/shap2/cg_mspcd_shap2_001m_cart.wrl',
+        //                     fileFormat: 'WRL'
+        //                 },
+        //                 derived: [{
+        //                     downloadLink: 'files/67P/cg_mspcd_shap2_001m_cart.obj',
+        //                     format: 'OBJ'
+        //                 }]
+        //             },
+        //             previews: {
+        //                 default: {
+        //                     path: 'previews/67p.png',
+        //                     format: 'PNG'
+        //                 },
+        //                 ios: {
+        //                     path: 'files/67P/cg_mspcd_shap2_001m_cart.usdz',
+        //                     format: 'USDZ'
+        //                 }
+        //             }
+        //         }
+        //     }]
+        // },
         // '81P/Wild 2': {
         //     datasets: [{
         //         name: 'Satdust NAVCAM 81P/Wild 2 Shape Model',
