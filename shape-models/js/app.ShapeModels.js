@@ -1,28 +1,15 @@
 var app = angular.module('ShapeModelTable', []);
 
-app.controller('ShapeModels', ['$scope', 'Comets', function($scope, Comets) {
-    console.log('loaded...');
+app.controller('ShapeModels', ['$scope', 'Comets', 'Asteroids', function($scope, Comets, Asteroids) {
     $scope.view = {
         comets: Comets,
-        
+        asteroids: Asteroids
     };
     console.log($scope.view.comets);
     
 }]);
 
-app.directive('datasetRow', function() {
-    return {
-        templateUrl: 'partials/dataset-row.html',
-        scope: {
-            test: '='
-        },
-        controller: function($scope) {
-            console.log('dataset row');
-            console.log($scope.test);
-        }
-    }
-})
-.directive('fileDownload', function() {
+app.directive('fileDownload', function() {
     return {
         templateUrl: 'partials/file-download.html',
         transclude: true,
@@ -39,10 +26,12 @@ app.directive('datasetRow', function() {
                             return 'img/TAB.svg';
                         case 'OBJ':
                             return 'img/OBJ.svg';
+                        case 'ICQ':
+                            return 'img/default_download.svg';
                         default:
                             console.log($scope.file);
                             console.error('This was unexpected.');
-                            return 'img/default_icon.svg';
+                            return 'img/default_download.svg';
                     };
                 },
                 altText: fileFormat => {
@@ -53,6 +42,8 @@ app.directive('datasetRow', function() {
                             return 'Download .tab file';
                         case 'OBJ':
                             return 'Download .obj file';
+                        case 'ICQ':
+                            return 'Download .icq file';
                         default:
                             console.log(fileFormat);
                             console.error('This was unexpected too.');
@@ -71,14 +62,10 @@ app.directive('datasetRow', function() {
             name: '=objectName'
         },
         controller: function($scope) {
-            console.log($scope.name);
             const ferretUrl = `https://sbnapps.psi.edu/ferret/SimpleSearch/results.action?targetName=`;
-
             $scope.view = {
                 link: ferretUrl + $scope.name.replace(/ /g,'%20')
             };
-            console.log($scope.view.link);
-            
         }
     }
-})
+});

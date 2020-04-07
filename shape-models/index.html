@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>PDS Asteroi d/Dust Archive</title>
+    <title>PDS Asteroid/Dust Archive</title>
 
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -16,12 +16,12 @@
 
     <!-- PDS Feedback Widget -->
     <!-- Only add JQuery if you do not already include a library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
     <link rel="stylesheet" href="/pds/feedback/css/feedback.css"  type="text/css" media="screen" />
     <script src="/pds/feedback/js/modernizr-custom.js"></script>
     <script src="/pds/feedback/js/config.js"></script>
-    <script src="/pds/feedback/js/feedback.js"></script>
+    <script src="/pds/feedback/js/feedback.js"></script> -->
     <!-- -->
 </head>
 <body>
@@ -40,6 +40,7 @@
         <script src="/pds/shape-models/js/angular/angular.js"></script>
         <script src="/pds/shape-models/js/app.ShapeModels.js"></script>
         <script src="/pds/shape-models/js/app.Data.js"></script>
+        <script src="/pds/shape-models/js/app.Datasets.js"></script>
 
         <h1 id="title">Shape Models of Asteroids, Comets, and Satellites</h1>
 
@@ -55,35 +56,49 @@
             <table class="table" id="shape-model-table">
                 <tr class="row header">
                     <th class="cell cell-md">Object Name</th>
+                    <th class="cell">Data Ferret Search</th>
                     <th class="cell cell-lg">Full Datasets with Documentation</th>
                     <th class="cell" colspan="2">Available Downloads</th>
-                    <!-- <th class="cell">Preview</th> -->
-                    <th class="cell">Data Ferret Search</th>
                 </tr>
+
+                <!-- ASTEROIDS -->
                 <tr class="row category" id="asteroids">
-                    <th class="cell" colspan="6"><h3>Asteroids <span id="asteroid-count"></span></h3></th>
+                    <th class="cell" colspan="5"><h3>Asteroids ({{ view.asteroids.length }})</h3></th>
+                </tr>
+                <tr class="row sbn-body" ng-repeat-start="asteroid in view.asteroids" ng-class-even="'even'">
+                    <td class="cell" rowspan='{{asteroid.datasets.length}}'>{{ asteroid.name }}</td>
+                    <td class="cell centered" rowspan='{{asteroid.datasets.length}}'><ferret-link object-name="asteroid.name"></ferret-link></td>
+                    <td class="cell"><a href="{{asteroid.datasets[0].link}}">{{ asteroid.datasets[0]['name']}}</a></td>
+                    <td class="cell centered"><file-download file-to-download="asteroid.datasets[0]['files']['data']['primary']"></file-download></td>
+                    <td class="cell centered"><file-download file-to-download="asteroid.datasets[0]['files']['data']['derived']"></file-download></td>
+                </tr>
+                <tr class="row sbn-body" ng-repeat-end ng-repeat="dataset in asteroid.datasets.slice(1)">
+                    <td class="cell"><a href="{{dataset.link}}">name: {{ dataset.name }}</a></td>
+                    <td class="cell centered"><file-download file-to-download="dataset['files']['data']['primary']"></file-download></td>
+                    <td class="cell centered"><file-download file-to-download="dataset['files']['data']['derived']"></file-download></td>
                 </tr>
                 
+                <!-- COMETS -->
                 <tr class="row category" id="comets">
-                    <th class="cell" colspan="6"><h3>Comets <span id="comet-count"></span></h3></th>
+                    <th class="cell" colspan="5"><h3>Comets ({{ view.comets.length }})</h3></th>
                 </tr>
-                <tr class="row sbn-body" ng-repeat-start="comet in view.comets">
+                <tr class="row sbn-body" ng-repeat-start="comet in view.comets" ng-class-even="'even'">
                     <td class="cell" rowspan='{{comet.datasets.length}}'>{{ comet.name }}</td>
-                    <td class="cell"><a href="{{comet.datasets[0].link}}">{{ comet.datasets[0].name }}</a></td>
+                    <td class="cell centered"><ferret-link object-name="comet.name"></ferret-link></td>
+                    <td class="cell"><a href="{{comet.datasets[0].link}}">{{ comet.datasets[0]['name']}}</a></td>
                     <td class="cell centered"><file-download file-to-download="comet.datasets[0]['files']['data']['primary']"></file-download></td>
                     <td class="cell centered"><file-download file-to-download="comet.datasets[0]['files']['data']['derived']"></file-download></td>
-                    <td class="cell centered"><ferret-link object-name="comet.name"></ferret-link></td>
                 </tr>
                 <tr class="row sbn-body" ng-repeat-end ng-repeat="dataset in comet.datasets.slice(1)">
-                    <td class="cell">{{ dataset.name }}</td>
-                    <td class="cell">Primary</td>
-                    <td class="cell">Derived</td>
-                    <td class="cell">Ferret</td>
+                    <td class="cell"><a href="{{dataset.link}}">{{ dataset.name }}</a></td>
+                    <td class="cell centered"><file-download file-to-download="dataset['files']['data']['primary']"></file-download></td>
+                    <td class="cell centered"><file-download file-to-download="dataset['files']['data']['derived']"></file-download></td>
                 </tr>
                 
-                <tr class="row category" id="satellites">
-                    <th class="cell" colspan="6"><h3>Planetary Satellites <span id="satellite-count"></span></h3></th>
-                </tr>
+                <!-- PLANETARY SATELLITES -->
+                <!-- <tr class="row category" id="satellites">
+                    <th class="cell" colspan="5"><h3>Planetary Satellites <span id="satellite-count"></span></h3></th>
+                </tr> -->
             </table>
         </section>
 
