@@ -1,9 +1,10 @@
 var app = angular.module('ShapeModelTable', []);
 
-app.controller('ShapeModels', ['$scope', 'Comets', 'Asteroids', function($scope, Comets, Asteroids) {
+app.controller('ShapeModels', ['$scope', 'Comets', 'Asteroids', 'Satellites', function($scope, Comets, Asteroids, Satellites) {
     $scope.view = {
         comets: Comets,
-        asteroids: Asteroids
+        asteroids: Asteroids,
+        satellites: Satellites
     };
     console.log($scope.view.comets);
     

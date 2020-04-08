@@ -23,7 +23,12 @@ app.factory('Datasets', function() {
         'Lawrence': {
             name: 'Radar Shape Models of Asteroids Compiled by Lawrence',
             link: 'https://sbn.psi.edu/pds/resource/jplradarshape.html',
-            baespath: 'https://sbnarchive.psi.edu/pds4/non_mission/gbo.ast.jpl.radar.shape_models_V1_0/data/'
+            basepath: 'https://sbnarchive.psi.edu/pds4/non_mission/gbo.ast.jpl.radar.shape_models_V1_0/data/'
+        },
+        'Saturn': {
+            name: 'Saturn Small Moon Shape Models',
+            link: 'https://sbn.psi.edu/pds/resource/saturnsatshapes.html',
+            basepath: 'https://sbnarchive.psi.edu/pds4/certified/saturn_satellite_shape_models_V1_0/data/'
         }
     }
-})
+});

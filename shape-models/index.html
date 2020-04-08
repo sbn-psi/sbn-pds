@@ -96,9 +96,21 @@
                 </tr>
                 
                 <!-- PLANETARY SATELLITES -->
-                <!-- <tr class="row category" id="satellites">
-                    <th class="cell" colspan="5"><h3>Planetary Satellites <span id="satellite-count"></span></h3></th>
-                </tr> -->
+                <tr class="row category" id="satellites">
+                    <th class="cell" colspan="5"><h3>Planetary Satellites ({{ view.satellites.length }})</h3></th>
+                </tr>
+                <tr class="row sbn-body" ng-repeat-start="satellite in view.satellites" ng-class-even="'even'">
+                    <td class="cell" rowspan='{{satellite.datasets.length}}'>{{ satellite.name }}</td>
+                    <td class="cell centered" rowspan='{{satellite.datasets.length}}'><ferret-link object-name="satellite.name"></ferret-link></td>
+                    <td class="cell"><a href="{{satellite.datasets[0].link}}">{{ satellite.datasets[0]['name']}}</a></td>
+                    <td class="cell centered"><file-download file-to-download="satellite.datasets[0]['files']['data']['primary']"></file-download></td>
+                    <td class="cell centered"><file-download file-to-download="satellite.datasets[0]['files']['data']['derived']"></file-download></td>
+                </tr>
+                <tr class="row sbn-body" ng-repeat-end ng-repeat="dataset in satellite.datasets.slice(1)">
+                    <td class="cell"><a href="{{dataset.link}}">name: {{ dataset.name }}</a></td>
+                    <td class="cell centered"><file-download file-to-download="dataset['files']['data']['primary']"></file-download></td>
+                    <td class="cell centered"><file-download file-to-download="dataset['files']['data']['derived']"></file-download></td>
+                </tr>
             </table>
         </section>
 
