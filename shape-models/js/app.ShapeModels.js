@@ -1,21 +1,13 @@
 var app = angular.module('ShapeModelTable', []);
 
-app.controller('ShapeModels', ['$scope', 'Comets', 'Asteroids', 'Satellites', function($scope, Comets, Asteroids, Satellites) {
+app.controller('ShapeModels', ['$scope', 'Comets', 'Asteroids', 'Satellites', 'arDetector', function($scope, Comets, Asteroids, Satellites, arDetector) {
     $scope.view = {
         comets: Comets,
         asteroids: Asteroids,
         satellites: Satellites,
-        webAr: false,
-        isRelAR: false
+        webAr: arDetector.isWebAr,
+        isRelAR: arDetector.isRelAR
     };
-    console.log($scope.view.comets);
-    (function () {
-        var a = document.createElement('a');
-        if (a.relList.supports('ar')) {
-            $scope.view.isRelAR = true;
-        }
-        document.documentElement.classList.add($scope.view.isRelAR ? 'relar' : 'no-relar');
-    })();
 }]);
 
 app.directive('fileDownload', function() {
@@ -77,4 +69,51 @@ app.directive('fileDownload', function() {
             };
         }
     }
-});
+})
+.directive('generatePreview', function() {
+    return {
+        scope: {
+            dataset: '='
+        },
+        controller: function($scope, arDetector) {
+            $scope.preview = {
+                isRelAR: arDetector.isRelAR,
+
+                getPreviewType: dataset => {
+                    const isRelAR = $scope.preview.isRelAR;
+                    // let src = null,
+                    let type = null;
+                    // if iOS AR Kit is enabled,
+                    if (isRelAR) {
+                        // if USDZ preview exists
+                        if (dataset.files.previews.ios != null) {
+                            // display USDZ preview
+                            // src = dataset.files.previews.ios.path;
+                            type = 'ios';
+                        }
+                    // else if default PNG preview exists,
+                    } else if (dataset.files.previews.default != null) {
+                        // display default PNG preview
+                        // src = dataset.files.previews.default.path;
+                        type = 'default';
+                    }
+                    // else display no preview
+                    return type;
+                }
+            };
+        },
+        link: function(scope,elm,attrs,ctrl) {
+            let type = scope.preview.getPreviewType(scope.dataset);
+            let src, newElement;
+            if (type == 'default') {
+                src = scope.dataset.files.previews.default.path;
+                newElement = angular.element(`<img class="preview" src="${src}" alt="Preview" title="Preview">`);    
+            } else if (type == 'ios') {
+                src = scope.dataset.files.previews.default.path;
+                srcAr = scope.dataset.files.previews.ios.path;
+                newElement = angular.element(`<a href="${srcAr}" rel="ar"><img class="preview" src="${src}"></a>`);
+            }
+            elm.append(newElement);
+        }
+    }
+})

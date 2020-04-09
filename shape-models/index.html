@@ -41,30 +41,31 @@
         <script src="/pds/shape-models/js/app.ShapeModels.js"></script>
         <script src="/pds/shape-models/js/app.Data.js"></script>
         <script src="/pds/shape-models/js/app.Datasets.js"></script>
+        <script src="/pds/shape-models/js/app.arDetector.js"></script>
 
         <h1 id="title">Shape Models of Asteroids, Comets, and Satellites</h1>
-        <p>WebAR: {{ view.webAr }}</p>
-        <p>ARKit: {{ view.isRelAR }}</p>
+        <!-- <p>WebAR: {{ view.webAr }}</p>
+        <p>ARKit: {{ view.isRelAR }}</p> -->
 
-        <p>The scripts used to generate the following .obj files are available in the <a href="https://github.com/sbn-psi/data-tools/tree/master/shapes" target="_blank">SBN GitHub repo</a>.</p>
+        <!-- <p>The scripts used to generate the following .obj files are available in the <a href="https://github.com/sbn-psi/data-tools/tree/master/shapes" target="_blank">SBN GitHub repo</a>.</p> -->
 
         <section id="shape-models-main">
-            <div id="search">
+            <!-- <div id="search">
                 <label for="query">Search: </label>
                 <input type="text" name="query" id="query" autofocus>
                 <p class="input-text">Enter the name or number of an asteroid, comet, or satellite.</p>
-            </div>
+            </div> -->
     
             <table class="table" id="shape-model-table">
-                <tr class="row header">
+                <!-- <tr class="row header">
                     <th class="cell cell-md">Object Name</th>
                     <th class="cell">Data Ferret Search</th>
                     <th class="cell cell-lg">Full Datasets with Documentation</th>
                     <th class="cell" colspan="2">Available Downloads</th>
-                </tr>
+                </tr> -->
 
                 <!-- ASTEROIDS -->
-                <tr class="row category" id="asteroids">
+                <!-- <tr class="row category" id="asteroids">
                     <th class="cell" colspan="5"><h3>Asteroids ({{ view.asteroids.length }})</h3></th>
                 </tr>
                 <tr class="row sbn-body" ng-repeat-start="asteroid in view.asteroids" ng-class-even="'even'">
@@ -78,18 +79,21 @@
                     <td class="cell"><a href="{{dataset.link}}">name: {{ dataset.name }}</a></td>
                     <td class="cell centered"><file-download file-to-download="dataset['files']['data']['primary']"></file-download></td>
                     <td class="cell centered"><file-download file-to-download="dataset['files']['data']['derived']"></file-download></td>
-                </tr>
+                </tr> -->
                 
                 <!-- COMETS -->
                 <tr class="row category" id="comets">
                     <th class="cell" colspan="5"><h3>Comets ({{ view.comets.length }})</h3></th>
                 </tr>
-                <tr class="row sbn-body" ng-repeat-start="comet in view.comets" ng-class-even="'even'">
-                    <td class="cell" rowspan='{{comet.datasets.length}}'>{{ comet.name }}</td>
+                <tr class="row sbn-body" ng-repeat-start="comet in view.comets">
+                    <td class="cell" colspan="2">{{ comet.name }}</td>
                     <td class="cell centered"><ferret-link object-name="comet.name"></ferret-link></td>
+                </tr>
+                <tr>
                     <td class="cell"><a href="{{comet.datasets[0].link}}">{{ comet.datasets[0]['name']}}</a></td>
-                    <td class="cell centered"><file-download file-to-download="comet.datasets[0]['files']['data']['primary']"></file-download></td>
-                    <td class="cell centered"><file-download file-to-download="comet.datasets[0]['files']['data']['derived']"></file-download></td>
+                    <!-- <td class="cell"><img ng-src="{{view.generatePreview(comet.datasets[0])}}" alt="" class="preview"></td> -->
+                    <td class="cell"><generate-preview dataset="comet.datasets[0]"></generate-preview></td>
+                    <td class="cell centered icons-container"><file-download file-to-download="comet.datasets[0]['files']['data']['primary']"></file-download><file-download file-to-download="comet.datasets[0]['files']['data']['derived']"></file-download></td>
                 </tr>
                 <tr class="row sbn-body" ng-repeat-end ng-repeat="dataset in comet.datasets.slice(1)">
                     <td class="cell"><a href="{{dataset.link}}">{{ dataset.name }}</a></td>
@@ -98,7 +102,7 @@
                 </tr>
                 
                 <!-- PLANETARY SATELLITES -->
-                <tr class="row category" id="satellites">
+                <!-- <tr class="row category" id="satellites">
                     <th class="cell" colspan="5"><h3>Planetary Satellites ({{ view.satellites.length }})</h3></th>
                 </tr>
                 <tr class="row sbn-body" ng-repeat-start="satellite in view.satellites" ng-class-even="'even'">
@@ -112,7 +116,7 @@
                     <td class="cell"><a href="{{dataset.link}}">name: {{ dataset.name }}</a></td>
                     <td class="cell centered"><file-download file-to-download="dataset['files']['data']['primary']"></file-download></td>
                     <td class="cell centered"><file-download file-to-download="dataset['files']['data']['derived']"></file-download></td>
-                </tr>
+                </tr> -->
             </table>
         </section>
 
