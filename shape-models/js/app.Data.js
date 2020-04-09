@@ -76,12 +76,12 @@ app.factory('Comets',function() {
                 },
                 previews: {
                     default: {
-                        path: 'files/hartley2/hartley_2_2012_cart.usdz',
-                        fileFormat: 'USDZ'
-                    },
-                    ios: {
                         path: 'previews/hartley2_2012_cart.png',
                         fileFormat: 'PNG'
+                    },
+                    ios: {
+                        path: 'files/hartley2/hartley_2_2012_cart.usdz',
+                        fileFormat: 'USDZ'
                     }
                 }
             }
@@ -105,7 +105,7 @@ app.factory('Comets',function() {
                 },
                 previews: {
                     default: {
-                        path: 'previews/previews/tempel1_2012_cart.png',
+                        path: 'previews/tempel1_2012_cart.png',
                         fileFormat: 'PNG'
                     },
                     ios: {
