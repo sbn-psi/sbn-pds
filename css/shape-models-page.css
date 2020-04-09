@@ -5,9 +5,13 @@
     display: table;
     border-collapse: collapse;
     margin: 0 0 1em 0;
+    max-width: 1000px;
 }
 .row {
     display: table-row;
+}
+.row-alt {
+    background: #f6f6f6;
 }
 .header {
     background: #D5D5D5;
@@ -44,7 +48,20 @@
     height: 50px;
     cursor: pointer;
 }
-
+.ferret-link {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+.external-link-icon {
+    height: 14px;
+}
+.download-link-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    border: none;
+}
 .category {
     border-right: 1px solid #BDBDBD;
     border-left: 1px solid #BDBDBD;
@@ -69,6 +86,33 @@
     justify-content: center;
     align-items: center;
 }
-.even {
-    background: #f6f6f6;
+
+/* START RESPONSIVE CSS */
+
+/* iPhone 6 & wider */
+@media (min-width: 375px) {
+    .sbn-main {
+        padding: 0 0.5em;
+    }
+    .cell * {
+        font-size: 0.85em;
+    }
+    .preview {
+        height: 50px;
+        width: 50px;
+    }
 }
+/* iPhone 6 Plus & wider */
+@media (min-width: 414px) {
+    .cell * {
+        font-size: 0.9em;
+    }
+}
+/* iPad (portrait mode) & wider */
+@media (min-width: 768px) {
+    .preview {
+        height: 80px;
+        width: 80px;
+    }
+}
+/* END RESPONSIVE CSS */

@@ -19,38 +19,7 @@ app.directive('fileDownload', function() {
         },
         controller: function($scope) {
             $scope.view = {
-                downloadIcon: fileFormat => {
-                    switch (fileFormat) {
-                        case 'WRL':
-                            return 'img/WRL.svg';
-                        case 'TAB':
-                            return 'img/TAB.svg';
-                        case 'OBJ':
-                            return 'img/OBJ.svg';
-                        case 'ICQ':
-                            return 'img/default_download.svg';
-                        default:
-                            console.log($scope.file);
-                            console.error('This was unexpected.');
-                            return 'img/default_download.svg';
-                    };
-                },
-                altText: fileFormat => {
-                    switch (fileFormat) {
-                        case 'WRL':
-                            return 'Download .wrl file';
-                        case 'TAB':
-                            return 'Download .tab file';
-                        case 'OBJ':
-                            return 'Download .obj file';
-                        case 'ICQ':
-                            return 'Download .icq file';
-                        default:
-                            console.log(fileFormat);
-                            console.error('This was unexpected too.');
-                            return 'Download file';
-                    };
-                }
+                altText: fileFormat => `Download ${fileFormat} file.`
             }
         }
     }
@@ -75,6 +44,7 @@ app.directive('fileDownload', function() {
         scope: {
             dataset: '='
         },
+        transclude: true,
         controller: function($scope, arDetector) {
             $scope.preview = {
                 isRelAR: arDetector.isRelAR,
