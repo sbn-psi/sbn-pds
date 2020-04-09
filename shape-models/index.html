@@ -70,9 +70,13 @@
                 <tr class="row sbn-body" ng-repeat-start="asteroid in view.asteroids" ng-class-even="'even'">
                     <td class="cell" rowspan='{{asteroid.datasets.length}}'>{{ asteroid.name }}</td>
                     <td class="cell centered" rowspan='{{asteroid.datasets.length}}'><ferret-link object-name="asteroid.name"></ferret-link></td>
-                    <td class="cell"><a href="{{asteroid.datasets[0].link}}">{{ asteroid.datasets[0]['name']}}</a></td>
+                    
+                    <!-- THIS SHOULD WORK -->
+                    <sbn-dataset-row sbn-dataset="asteroid.datasets[0]"></sbn-dataset-row>
+
+                    <!-- <td class="cell"><a href="{{asteroid.datasets[0].link}}">{{ asteroid.datasets[0]['name']}}</a></td>
                     <td class="cell centered"><file-download file-to-download="asteroid.datasets[0]['files']['data']['primary']"></file-download></td>
-                    <td class="cell centered"><file-download file-to-download="asteroid.datasets[0]['files']['data']['derived']"></file-download></td>
+                    <td class="cell centered"><file-download file-to-download="asteroid.datasets[0]['files']['data']['derived']"></file-download></td> -->
                 </tr>
                 <tr class="row sbn-body" ng-repeat-end ng-repeat="dataset in asteroid.datasets.slice(1)">
                     <td class="cell"><a href="{{dataset.link}}">name: {{ dataset.name }}</a></td>

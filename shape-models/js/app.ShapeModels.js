@@ -77,4 +77,15 @@ app.directive('fileDownload', function() {
             };
         }
     }
-});
+})
+.directive('sbnDatasetRow', function() {
+    return {
+        templateUrl: 'partials/dataset-row.html',
+        scope: {
+            dataset: '=sbnDataset'
+        },
+        controller: function($scope) {
+            console.log("Dataset: ",$scope.dataset);
+        }
+    }
+})
