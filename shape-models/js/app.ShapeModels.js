@@ -58,13 +58,11 @@ app.directive('fileDownload', function() {
                         // if USDZ preview exists
                         if (dataset.files.previews.ios != null) {
                             // display USDZ preview
-                            // src = dataset.files.previews.ios.path;
                             type = 'ios';
                         }
                     // else if default PNG preview exists,
                     } else if (dataset.files.previews.default != null) {
                         // display default PNG preview
-                        // src = dataset.files.previews.default.path;
                         type = 'default';
                     }
                     // else display no preview
@@ -84,6 +82,24 @@ app.directive('fileDownload', function() {
                 newElement = angular.element(`<a href="${srcAr}" rel="ar"><img class="preview" src="${src}"></a>`);
             }
             elm.append(newElement);
+        }
+    }
+})
+.directive('sbnObjectHeaderRow', function() {
+    return {
+        templateUrl: 'partials/object-header-row.html',
+        restrict: 'A',
+        scope: {
+            object: '=sbnObject'
+        }
+    }
+})
+.directive('sbnDatasetRow', function() {
+    return {
+        templateUrl: 'partials/dataset-row.html',
+        restrict: 'A',
+        scope: {
+            dataset: '=sbnDataset'
         }
     }
 })
