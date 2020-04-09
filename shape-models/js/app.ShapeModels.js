@@ -4,10 +4,18 @@ app.controller('ShapeModels', ['$scope', 'Comets', 'Asteroids', 'Satellites', fu
     $scope.view = {
         comets: Comets,
         asteroids: Asteroids,
-        satellites: Satellites
+        satellites: Satellites,
+        webAr: false,
+        isRelAR: false
     };
     console.log($scope.view.comets);
-    
+    (function () {
+        var a = document.createElement('a');
+        if (a.relList.supports('ar')) {
+            $scope.view.isRelAR = true;
+        }
+        document.documentElement.classList.add($scope.view.isRelAR ? 'relar' : 'no-relar');
+    })();
 }]);
 
 app.directive('fileDownload', function() {
