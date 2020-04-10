@@ -5,8 +5,8 @@ app.controller('ShapeModels', ['$scope', 'Comets', 'Asteroids', 'Satellites', 'a
         comets: Comets,
         asteroids: Asteroids,
         satellites: Satellites,
-        webAr: arDetector.isWebAr,
-        isRelAR: arDetector.isRelAR
+        webAr: arDetector.isWebAr,  // android
+        isRelAR: arDetector.isRelAR // ios
     };
 }]);
 
@@ -102,4 +102,4 @@ app.directive('fileDownload', function() {
             dataset: '=sbnDataset'
         }
     }
-})
+});
