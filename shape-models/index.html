@@ -30,13 +30,6 @@
 
     <!-- BEGIN main content -->
     <main class="sbn-main" ng-controller="ShapeModels">
-        <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-        <script src="Bodies.js" charset="utf-8"></script>
-        <script src="js/asteroids.js" charset="utf-8"></script>
-        <script src="js/comets.js" charset="utf-8"></script>
-        <script src="js/satellites.js" charset="utf-8"></script>
-        <script src="app.js" charset="utf-8" async defer></script> -->
-
         <script src="/pds/shape-models/js/angular/angular.js"></script>
         <script src="/pds/shape-models/js/app.ShapeModels.js"></script>
         <script src="/pds/shape-models/js/app.Data.js"></script>
@@ -44,42 +37,35 @@
         <script src="/pds/shape-models/js/app.arDetector.js"></script>
 
         <h1 id="title">Shape Models of Asteroids, Comets, and Satellites</h1>
-        <!-- <p>WebAR: {{ view.webAr }}</p>
-        <p>ARKit: {{ view.isRelAR }}</p> -->
 
         <!-- <p>The scripts used to generate the following .obj files are available in the <a href="https://github.com/sbn-psi/data-tools/tree/master/shapes" target="_blank">SBN GitHub repo</a>.</p> -->
 
         <section id="shape-models-main">
-            <!-- <div id="search">
+            <div id="search">
                 <label for="query">Search: </label>
-                <input type="text" name="query" id="query" autofocus>
-                <p class="input-text">Enter the name or number of an asteroid, comet, or satellite.</p>
-            </div> -->
+                <input type="text" name="query" id="query" ng-model="view.query" autofocus>
+                <p class="input-text">Search by object name or number.</p>
+            </div>
     
             <table class="table" id="shape-model-table">
-
                 <!-- ASTEROIDS -->
                 <tr class="row category" id="asteroids">
                     <th class="cell" colspan="5"><h3>Asteroids ({{ view.asteroids.length }})</h3></th>
                 </tr>
-                <tr sbn-object-header-row ng-repeat-start="asteroid in view.asteroids" sbn-object="asteroid" class="row row-alt sbn-body" colspan="2"></tr>
+                <tr sbn-object-header-row ng-repeat-start="asteroid in view.asteroids | filter : view.query" sbn-object="asteroid" class="row row-alt sbn-body" colspan="2"></tr>
                 <tr sbn-dataset-row class="row" sbn-dataset="dataset" ng-repeat-end ng-repeat="dataset in asteroid.datasets"></tr>
-
                 <!-- COMETS -->
                 <tr class="row category" id="comets">
                     <th class="cell" colspan="5"><h3>Comets ({{ view.comets.length }})</h3></th>
                 </tr>
-                <tr sbn-object-header-row ng-repeat-start="comet in view.comets" sbn-object="comet" class="row row-alt sbn-body" colspan="2"></tr>
+                <tr sbn-object-header-row ng-repeat-start="comet in view.comets | filter : view.query" sbn-object="comet" class="row row-alt sbn-body" colspan="2"></tr>
                 <tr sbn-dataset-row class="row" sbn-dataset="dataset" ng-repeat-end ng-repeat="dataset in comet.datasets"></tr>
-
                 <!-- PLANETARY SATELLITES -->
                 <tr class="row category" id="satellites">
                     <th class="cell" colspan="5"><h3>Planetary Satellites ({{ view.satellites.length }})</h3></th>
                 </tr>
-                <tr sbn-object-header-row ng-repeat-start="satellite in view.satellites" sbn-object="satellite" class="row row-alt sbn-body" colspan="2"></tr>
+                <tr sbn-object-header-row ng-repeat-start="satellite in view.satellites | filter : view.query" sbn-object="satellite" class="row row-alt sbn-body" colspan="2"></tr>
                 <tr sbn-dataset-row class="row" sbn-dataset="dataset" ng-repeat-end ng-repeat="dataset in satellite.datasets"></tr>
-
-                
             </table>
         </section>
 
