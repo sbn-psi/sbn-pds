@@ -11,10 +11,10 @@ app.factory('Comets', function () {
                                 downloadLink: 'https://pdssbn.astro.umd.edu/holdings/ro-c-multi-5-67p-shape-v2.0/data/triplate/mspcd_lam/shap2/cg_mspcd_shap2_001m_cart.wrl',
                                 fileFormat: 'WRL'
                             },
-                            derived: {
+                            derived: [{
                                 downloadLink: 'files/67P/cg_mspcd_shap2_001m_cart.obj',
                                 fileFormat: 'OBJ'
-                            }
+                            }]
                         },
                         previews: {
                             default: {
@@ -40,10 +40,10 @@ app.factory('Comets', function () {
                                 downloadLink: 'https://pdssbn.astro.umd.edu/holdings/sdu-c-navcam-5-wild2-shape-model-v2.1/data/wild2_cart_full.tab',
                                 fileFormat: 'TAB'
                             },
-                            derived: {
+                            derived: [{
                                 downloadLink: 'files/wild2/wild2_cart_full.tab.obj',
                                 fileFormat: 'OBJ'
-                            }
+                            }]
                         },
                         previews: {
                             default: {
@@ -69,10 +69,10 @@ app.factory('Comets', function () {
                                 downloadLink: 'https://pdssbn.astro.umd.edu/holdings/dif-c-hriv_mri-5-hartley2-shape-v1.0/data/hartley2_2012_cart.wrl',
                                 fileFormat: 'WRL'
                             },
-                            derived: {
+                            derived: [{
                                 downloadLink: 'files/hartley2/hartley_2_2012_cart.obj',
                                 fileFormat: 'OBJ'
-                            }
+                            }]
                         },
                         previews: {
                             default: {
@@ -98,10 +98,10 @@ app.factory('Comets', function () {
                                 downloadLink: 'https://pdssbn.astro.umd.edu/holdings/dif-c-hriv_its_mri-5-tempel1-shape-v2.0/data/tempel1_2012_cart.wrl',
                                 fileFormat: 'WRL'
                             },
-                            derived: {
+                            derived: [{
                                 downloadLink: 'files/tempel1/tempel1_2012_cart.obj',
                                 fileFormat: 'OBJ'
-                            }
+                            }]
                         },
                         previews: {
                             default: {
@@ -160,10 +160,10 @@ app.factory('Comets', function () {
                                 downloadLink: Hudson.basepath + '1998ky26.tab',
                                 fileFormat: 'TAB'
                             },
-                            derived: {
+                            derived: [{
                                 downloadLink: 'files/RADAR/1998ky26.tab.obj',
                                 fileFormat: 'OBJ'
-                            }
+                            }]
                         },
                         previews: {
                             default: {
@@ -189,10 +189,10 @@ app.factory('Comets', function () {
                                 downloadLink: 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_I0037_5_SHAPE153591_V1_0/data/a153591alpha.tab',
                                 fileFormat: 'TAB'
                             },
-                            derived: {
+                            derived: [{
                                 downloadLink: 'files/a153591/a153591alpha.tab.obj',
                                 fileFormat: 'OBJ'
-                            }
+                            }]
                         },
                         previews: {
                             default: {
@@ -218,10 +218,10 @@ app.factory('Comets', function () {
                                 downloadLink: Hudson.basepath + '52760.tab',
                                 fileFormat: 'TAB'
                             },
-                            derived: {
+                            derived: [{
                                 downloadLink: 'files/RADAR/52760.tab.obj',
                                 fileFormat: 'OBJ'
-                            }
+                            }]
                         },
                         previews: {
                             default: {
@@ -247,10 +247,10 @@ app.factory('Comets', function () {
                                 downloadLink: 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_I0037_5_SHAPE8567_V1_0/data/a8567.tab',
                                 fileFormat: 'TAB'
                             },
-                            derived: {
+                            derived: [{
                                 downloadLink: 'files/a8567.tab.obj',
                                 fileFormat: 'OBJ'
-                            }
+                            }]
                         },
                         previews: {
                             default: {
@@ -277,10 +277,10 @@ app.factory('Comets', function () {
                                 downloadLink: 'https://sbnarchive.psi.edu/pds3/dawn/fc/DWNCSPC_4_01/DATA/ICQ/CERES_SPC181019_1024.ICQ',
                                 fileFormat: 'ICQ'
                             },
-                            derived: {
+                            derived: [{
                                 downloadLink: 'files/ceres/CERES_SPC181019_0128.ICQ.obj',
                                 fileFormat: 'OBJ'
-                            }
+                            }]
                         },
                         previews: {
                             default: {
@@ -338,10 +338,10 @@ app.factory('Comets', function () {
                                 downloadLink: Hudson.basepath + '1620geographos.tab',
                                 fileFormat: 'TAB'
                             },
-                            derived: {
+                            derived: [{
                                 downloadLink: Hudson.basepath + '1620geographos.tab.obj',
                                 fileFormat: 'OBJ'
-                            }
+                            }]
                         },
                         previews: {
                             default: {
@@ -367,10 +367,13 @@ app.factory('Comets', function () {
                                 downloadLink: 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_I0037_5_BENNUSHAPE_V1_0/data/101955bennu.tab',
                                 fileFormat: 'TAB'
                             },
-                            derived: {
+                            derived: [{
                                 downloadLink: 'files/bennu/radar/101955bennu.tab.obj',
                                 fileFormat: 'OBJ'
-                            }
+                            },{
+                                downloadLink: 'files/dsk/BENNU_K3_NOL_V01.BDS',
+                                fileFormat: 'DSK'
+                            }]
                         },
                         previews: {
                             default: {
@@ -390,12 +393,12 @@ app.factory('Comets', function () {
                         data: {
                             primary: {
                                 downloadLink: 'https://naif.jpl.nasa.gov/pub/naif/pds/pds4/orex/orex_spice/spice_kernels/dsk/bennu_g_03170mm_spc_obj_0000n00000_v020.bds',
-                                fielFormat: 'DSK'
+                                fileFormat: 'DSK'
                             },
-                            derived: {
+                            derived: [{
                                 downloadLink: 'files/bennu/orex/bennu.orex.obj',
                                 fileFormat: 'OBJ'
-                            }
+                            }]
                         },
                         previews: {
                             default: {
@@ -441,10 +444,13 @@ app.factory('Comets', function () {
                                 downloadLink: 'https://pdssbn.astro.umd.edu/holdings/ro-a-osinac_osiwac-5-lutetia-shape-v1.0/data/lutetia_003m_cart.wrl',
                                 fileFormat: 'WRL'
                             },
-                            derived: {
+                            derived: [{
                                 downloadLink: 'files/lutetia/lutetia_003k_cart.obj',
                                 fileFormat: 'OBJ'
-                            }
+                            },{
+                                downloadLink: 'files/dsk/LUTETIA_K3_FAR_V01.BDS',
+                                fileFormat: 'DSK'
+                            }]
                         },
                         previews: {
                             default: {
@@ -467,13 +473,13 @@ app.factory('Comets', function () {
                     files: {
                         data: {
                             primary: {
-                                donwloadLink: Hudson.basepath + '216kleopatra.tab',
+                                downloadLink: Hudson.basepath + '216kleopatra.tab',
                                 fileFormat: 'TAB'
                             },
-                            derived: {
+                            derived: [{
                                 downloadLink: Hudson.basepath + '216kleopatra.tab.obj',
                                 fileFormat: 'OBJ'
-                            }
+                            }]
                         },
                         previews: {
                             default: {
@@ -499,9 +505,7 @@ app.factory('Comets', function () {
                                 downloadLink: Stooke.basepath + '243ida.tab',
                                 fileFormat: 'TAB'
                             },
-                            derived: {
-                                downloadLink: null
-                            }
+                            derived: null
                         },
                         previews: {
                             default: null,
@@ -586,13 +590,13 @@ app.factory('Comets', function () {
                     files: {
                         data: {
                             primary: {
-                                donwloadLink: Hudson.basepath + '2063bacchus.tab',
+                                downloadLink: Hudson.basepath + '2063bacchus.tab',
                                 fileFormat: 'TAB'
                             },
-                            derived: {
+                            derived: [{
                                 downloadLink: 'files/RADAR/2063bacchus.tab.obj',
                                 fileFormat: 'OBJ'
-                            }
+                            }]
                         },
                         previews: {
                             default: {
@@ -618,10 +622,10 @@ app.factory('Comets', function () {
                                 downloadLink: 'https://pdssbn.astro.umd.edu/holdings/ro-a-osinac_osiwac-5-steins-shape-v1.0/data/steins_cart.wrl',
                                 fileFormat: 'WRL'
                             },
-                            derived: {
+                            derived: [{
                                 downloadLink: 'files/steins/steins.obj',
                                 fileFormat: 'OBJ'
-                            }
+                            }]
                         },
                         previews: {
                             default: {
@@ -635,7 +639,7 @@ app.factory('Comets', function () {
                         }
                     }
                 }]
-            }, {
+            },{
                 name: '25143 Itokawa',
                 type: 'asteroid',
                 datasets: [{
@@ -647,10 +651,13 @@ app.factory('Comets', function () {
                                 downloadLink: 'https://sbnarchive.psi.edu/pds3/hayabusa/HAY_A_AMICA_5_ITOKAWASHAPE_V1_0/data/quad/quad512q.tab',
                                 fileFormat: 'TAB'
                             },
-                            derived: {
+                            derived: [{
                                 downloadLink: 'files/itokawa/ver64q.tab.obj',
                                 fileFormat: 'OBJ'
-                            }
+                            },{
+                                downloadLink: 'files/dsk/ITOKAWA_K50_GAS_V01.BDS',
+                                fileFormat: 'DSK'
+                            }]
                         },
                         previews: {
                             default: {
@@ -672,7 +679,10 @@ app.factory('Comets', function () {
                                 downloadLink: Hudson.basepath + '25143itokawa.tab',
                                 fileFormat: 'TAB'
                             },
-                            derived: null
+                            derived: [{
+                                downloadLink: 'files/dsk/ITOKAWA_K12_NEE_V01.BDS',
+                                fileFormat: 'DSK'
+                            }]
                         },
                         previews: {
                             default: null,
@@ -689,10 +699,10 @@ app.factory('Comets', function () {
                     files: {
                         data: {
                             primary: null,
-                            derived: {
+                            derived: [{
                                 downloadLink: 'files/vesta/Vesta-256V.obj',
                                 fileFormat: 'OBJ'
-                            }
+                            }]
                         },
                         previews: {
                             default: {
@@ -734,10 +744,13 @@ app.factory('Comets', function () {
                                 downloadLink: 'https://sbnarchive.psi.edu/pds3/near/NEAR_A_MSI_5_EROSSHAPE_V1_0/data/vertex/ver512q.tab',
                                 fileFormat: 'TAB'
                             },
-                            derived: {
+                            derived: [{
                                 downloadLink: 'files/eros/ver64q.tab.obj',
                                 fileFormat: 'OBJ'
-                            }
+                            },{
+                                downloadLink: 'files/dsk/EROS_M3_GAS_V01.BDS',
+                                fileFormat: 'DSK'
+                            }]
                         },
                         previews: {
                             default: {
@@ -779,10 +792,10 @@ app.factory('Comets', function () {
                                 downloadLink: Hudson.basepath + '4179toutatis.tab',
                                 fileFormat: 'TAB'
                             },
-                            derived: {
+                            derived: [{
                                 downloadLink: 'files/RADAR/4179toutatis.tab.obj',
                                 fileFormat: 'OBJ'
-                            }
+                            }]
                         },
                         previews: {
                             default: {
@@ -808,10 +821,10 @@ app.factory('Comets', function () {
                                 downloadLink: Hudson.basepath + '4769castalia.tab',
                                 fileFormat: 'TAB'
                             },
-                            derived: {
+                            derived: [{
                                 downloadLink: 'files/RADAR/4769castalia.tab.obj',
                                 fileFormat: 'OBJ'
-                            }
+                            }]
                         },
                         previews: {
                             default: {
@@ -837,10 +850,10 @@ app.factory('Comets', function () {
                                 downloadLink: Hudson.basepath + '6489golevka.tab',
                                 fileFormat: 'TAB'
                             },
-                            derived: {
+                            derived: [{
                                 downloadLink: 'files/RADAR/6489golevka.tab.obj',
                                 fileFormat: 'OBJ'
-                            }
+                            }]
                         },
                         previews: {
                             default: {
@@ -1269,10 +1282,13 @@ app.factory('Satellites', function (Datasets) {
                         downloadLink: Saturn.basepath + 'atlas_30k_plt.tab',
                         fileFormat: 'TAB'
                     },
-                    derived: {
+                    derived: [{
                         downloadLink: 'files/SATURN_SMALL_MOONS/atlas_30k_plt.tab.obj',
                         fileFormat: 'OBJ'
-                    }
+                    },{
+                        downloadLink: 'files/dsk/ATLAS_K30_THO_V01.BDS',
+                        fileFormat: 'DSK'
+                    }]
                 },
                 previews: {
                     default: {
@@ -1298,10 +1314,13 @@ app.factory('Satellites', function (Datasets) {
                         downloadLink: Saturn.basepath + 'calypso_30k_plt.tab',
                         fileFormat: 'TAB'
                     },
-                    derived: {
+                    derived: [{
                         downloadLink: 'files/SATURN_SMALL_MOONS/calypso_30k_plt.tab.obj',
                         fileFormat: 'OBJ'
-                    }
+                    },{
+                        downloadLink: 'files/dsk/CALYPSO_K30_THO_V01.BDS',
+                        fileFormat: 'DSK'
+                    }]
                 },
                 previews: {
                     default: {
@@ -1327,10 +1346,10 @@ app.factory('Satellites', function (Datasets) {
                         downloadLink: Saturn.basepath + 'daphnis_30k_plt.tab',
                         fileFormat: 'TAB'
                     },
-                    derived: {
+                    derived: [{
                         downloadLink: 'files/SATURN_SMALL_MOONS/daphnis_30k_plt.tab.obj',
                         fileFormat: 'OBJ'
-                    }
+                    }]
                 },
                 previews: {
                     default: {
@@ -1376,10 +1395,13 @@ app.factory('Satellites', function (Datasets) {
                         downloadLink: 'https://sbnarchive.psi.edu/pds3/multi_mission/CO_SA_ISSNA_ISSWA_5_DIONESHAPE_V1_0/data/dione_ver512q.tab',
                         fileFormat: 'TAB'
                     },
-                    derived: {
+                    derived: [{
                         downloadLink: 'files/dione/dione_ver64q.tab.obj',
                         fileFormat: 'OBJ'
-                    }
+                    },{
+                        downloadLink: 'files/dsk/DIONE_K50_GAS_V01.BDS',
+                        fileFormat: 'DSK'
+                    }]
                 },
                 previews: {
                     default: {
@@ -1405,10 +1427,13 @@ app.factory('Satellites', function (Datasets) {
                         downloadLink: Saturn.basepath + 'epimetheus_30k_plt.tab',
                         fileFormat: 'TAB'
                     },
-                    derived: {
+                    derived: [{
                         downloadLink: 'files/SATURN_SMALL_MOONS/epimetheus_30k_plt.tab.obj',
                         fileFormat: 'OBJ'
-                    }
+                    },{
+                        downloadLink: 'files/dsk/EPIMETHEUS_K30_THO_V01.BDS',
+                        fileFormat: 'DSK'
+                    }]
                 },
                 previews: {
                     default: {
@@ -1466,10 +1491,13 @@ app.factory('Satellites', function (Datasets) {
                         downloadLink: Saturn.basepath + 'helene_30k_plt.tab',
                         fileFormat: 'TAB'
                     },
-                    derived: {
+                    derived: [{
                         downloadLink: 'files/SATURN_SMALL_MOONS/helene_30k_plt.tab.obj',
                         fileFormat: 'OBJ'
-                    }
+                    },{
+                        downloadLink: 'files/dsk/HELENE_K30_THO_V01.BDS',
+                        fileFormat: 'DSK'
+                    }]
                 },
                 previews: {
                     default: {
@@ -1495,10 +1523,13 @@ app.factory('Satellites', function (Datasets) {
                         downloadLink: Saturn.basepath + 'hyperion_30k_plt.tab',
                         fileFormat: 'TAB'
                     },
-                    derived: {
+                    derived: [{
                         downloadLink: 'files/SATURN_SMALL_MOONS/hyperion_30k_plt.tab.obj',
                         fileFormat: 'OBJ'
-                    }
+                    },{
+                        downloadLink: 'files/dsk/HYPERION_K30_THO_V01.BDS',
+                        fileFormat: 'DSK'
+                    }]
                 },
                 previews: {
                     default: {
@@ -1540,10 +1571,13 @@ app.factory('Satellites', function (Datasets) {
                         downloadLink: Saturn.basepath + 'janus_30k_plt.tab',
                         fileFormat: 'TAB'
                     },
-                    derived: {
+                    derived: [{
                         downloadLink: 'files/SATURN_SMALL_MOONS/janus_30k_plt.tab.obj',
                         fileFormat: 'OBJ'
-                    }
+                    },{
+                        downloadLink: 'files/dsk/JANUS_K30_THO_V01.BDS',
+                        fileFormat: 'DSK'
+                    }]
                 },
                 previews: {
                     default: {
@@ -1621,10 +1655,13 @@ app.factory('Satellites', function (Datasets) {
                         downloadLink: 'https://sbnarchive.psi.edu/pds3/multi_mission/CO_SA_ISSNA_5_MIMASSHAPE_V2_0/data/mimas_ver512q.tab',
                         fileFormat: 'TAB'
                     },
-                    derived: {
+                    derived: [{
                         downloadLink: 'files/mimas/mimas_ver512q.tab.obj',
                         fileFormat: 'OBJ'
-                    }
+                    },{
+                        downloadLink: 'files/dsk/MIMAS_M3_GAS_V01.BDS',
+                        fileFormat: 'DSK'
+                    }]
                 },
                 previews: {
                     default: {
@@ -1650,10 +1687,13 @@ app.factory('Satellites', function (Datasets) {
                         downloadLink: Saturn.basepath + 'pan_30k_plt.tab',
                         fileFormat: 'TAB'
                     },
-                    derived: {
+                    derived: [{
                         downloadLink: 'files/SATURN_SMALL_MOONS/pan_30k_plt.tab.obj',
                         fileFormat: 'OBJ'
-                    }
+                    },{
+                        downloadLink: 'files/dsk/PAN_K30_THO_V01.BDS',
+                        fileFormat: 'DSK'
+                    }]
                 },
                 previews: {
                     default: {
@@ -1679,10 +1719,13 @@ app.factory('Satellites', function (Datasets) {
                         downloadLink: Saturn.basepath + 'pandora_30k_plt.tab',
                         fileFormat: 'TAB'
                     },
-                    derived: {
+                    derived: [{
                         downloadLink: 'files/SATURN_SMALL_MOONS/pandora_30k_plt.tab.obj',
                         fileFormat: 'OBJ'
-                    }
+                    },{
+                        downloadLink: 'files/dsk/PANDORA_K30_THO_V01.BDS',
+                        fileFormat: 'DSK'
+                    }]
                 },
                 previews: {
                     default: {
@@ -1724,10 +1767,13 @@ app.factory('Satellites', function (Datasets) {
                         downloadLink: 'https://sbnarchive.psi.edu/pds3/multi_mission/VO1_SA_VISA_VISB_5_PHOBOSSHAPE_V1_0/data/phobos_ver512q.tab',
                         fileFormat: 'TAB'
                     },
-                    derived: {
+                    derived: [{
                         downloadLink: 'files/phobos/phobos_ver512q.tab.obj',
                         fileFormat: 'OBJ'
-                    }
+                    },{
+                        downloadLink: 'files/dsk/PHOBOS_M3_GAS_V01.BDS',
+                        fileFormat: 'DSK'
+                    }]
                 },
                 previews: {
                     default: {
@@ -1769,10 +1815,13 @@ app.factory('Satellites', function (Datasets) {
                         downloadLink: 'https://sbnarchive.psi.edu/pds3/multi_mission/CO_SA_ISSNA_5_PHOEBESHAPE_V2_0/data/phoebe_ver512q.tab',
                         fileFormat: 'TAB'
                     },
-                    derived: {
+                    derived: [{
                         downloadLink: 'files/phoebe/phoebe_ver512q.tab.obj',
                         fileFormat: 'OBJ'
-                    }
+                    },{
+                        downloadLink: 'files/dsk/PHOEBE_M3_GAS_V01.BDS',
+                        fileFormat: 'DSK'
+                    }]
                 },
                 previews: {
                     default: {
@@ -1798,10 +1847,10 @@ app.factory('Satellites', function (Datasets) {
                         downloadLink: Stooke.basepath + 's16prometheus.tab',
                         fileFormat: 'TAB'
                     },
-                    derived: {
+                    derived: [{
                         downloadLink: 'files/SATURN_SMALL_MOONS/s16prometheus.tab.obj',
                         fileFormat: 'OBJ'
-                    }
+                    }]
                 },
                 previews: {
                     default: {
@@ -1840,7 +1889,7 @@ app.factory('Satellites', function (Datasets) {
             files: {
                 data: {
                     primary: {
-                        donwloadLink: Stooke.basepath + 'n8proteus.tab',
+                        downloadLink: Stooke.basepath + 'n8proteus.tab',
                         fileFormat: 'TAB'
                     },
                     derived: null
@@ -1863,10 +1912,13 @@ app.factory('Satellites', function (Datasets) {
                         downloadLink: Saturn.basepath + 'telesto_30k_plt.tab',
                         fileFormat: 'TAB'
                     },
-                    derived: {
+                    derived: [{
                         downloadLink: 'files/SATURN_SMALL_MOONS/telesto_30k_plt.tab.obj',
                         fileFormat: 'OBJ'
-                    }
+                    },{
+                        downloadLink: 'files/dsk/TELESTO_K30_THO_V01.BDS',
+                        fileFormat: 'DSK'
+                    }]
                 },
                 previews: {
                     default: {
@@ -1892,10 +1944,13 @@ app.factory('Satellites', function (Datasets) {
                         downloadLink: 'https://sbnarchive.psi.edu/pds3/multi_mission/CO_SA_ISSNA_5_TETHYSSHAPE_V1_0/data/tethys_ver512q.tab',
                         fileFormat: 'TAB'
                     },
-                    derived: {
+                    derived: [{
                         downloadLink: 'files/tethys/tethys_ver512q.tab.obj',
                         fileFormat: 'OBJ'
-                    }
+                    },{
+                        downloadLink: 'files/dsk/TETHYS_M3_GAS_V01.BDS',
+                        fileFormat: 'DSK'
+                    }]
                 },
                 previews: {
                     default: {
