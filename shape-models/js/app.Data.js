@@ -427,7 +427,10 @@ app.factory('Comets', function () {
                             derived: null
                         },
                         previews: {
-                            default: null,
+                            default: {
+                                path: 'previews/Ryugu.png',
+                                fileFormat: 'PNG'
+                            },
                             ios: null
                         }
                     }
