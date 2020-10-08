@@ -79,7 +79,7 @@ a:not(.ignore-a-styling) {
 }
 /* iPad (landscape mode) & wider */
 @media (min-width: 1024px) {
-    .sbn-header {
+    #sbn-header {
         background-position-x: right;
     }
 }

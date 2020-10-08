@@ -1,31 +1,64 @@
-includeHTML = function(cb) {
-    var z, i, elmnt, file, xhttp;
-    z = document.getElementsByTagName("*");
-    for (i = 0; i < z.length; i++) {
-        elmnt = z[i];
-        file = elmnt.getAttribute("include-html");
-        if (file) {
-            xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function() {
-                if (this.readyState == 4) {
-                    if (this.status == 200) {
-                        elmnt.innerHTML = this.responseText;
+(function(document, window) {
+    var includeHTML = function() {
+        var elements, i, elmnt, file, xhttp;
+        elements = document.querySelectorAll("div[include-html]");
+        for (elmnt of elements) {
+            file = elmnt.getAttribute("include-html");
+            if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {
+                            elmnt.innerHTML = this.responseText;
+                        }
+                        if (this.status == 404) {
+                            elmnt.innerHTML = "Included html not found.";
+                        }
+                        elmnt.removeAttribute("include-html");
+                        includeHTML()
+                        window.PDSSBN_accountForAppBarHeight()
                     }
-                    if (this.status == 404) {
-                        elmnt.innerHTML = "Included html not found.";
-                    }
-                    elmnt.removeAttribute("include-html");
-                    includeHTML(cb);
                 }
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
             }
-            xhttp.open("GET", file, true);
-            xhttp.send();
-            return;
+        }
+    };
+    includeHTML();
+})(document, window);
+
+/* PDS app bar */
+(function(document, window) {
+    
+    window.PDSSBN_accountForAppBarHeight = function() {
+        var header = document.getElementById('sbn-header')
+        var sidebar = document.getElementById('sbn-sidebar')
+        var appBar = document.getElementById('pds-app-bar')
+        if(header && sidebar && appBar && (sidebar.offsetTop <= header.offsetHeight + header.offsetTop)) {
+            sidebar.style.top = (header.offsetHeight + header.offsetTop) + 'px';
         }
     }
-    if (cb) cb();
-};
-includeHTML();
+    
+    var link = document.createElement('link');
+    link.href = 'https://pds.nasa.gov/pds-app-bar/pds-app-bar.css';
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    document.body.appendChild(link)
+    
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://pds.nasa.gov/pds-app-bar/pds-app-bar.js'
+    script.addEventListener('load', function() {
+        PDS_App_Bar();
+        PDSSBN_accountForAppBarHeight()
+    })
+    document.body.appendChild(script);
+    
+    // var container = document.documentElement || document.body
+    // new MutationObserver(window.PDSSBN_accountForAppBarHeight).observe(container, {subtree: true, childList: true, attributes: false})
+
+})(document, window);
 
 /* Methods to Hide/Show Superseded versions of a data set */
 const elements = {
