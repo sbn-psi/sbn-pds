@@ -30,16 +30,21 @@
 
 /* PDS app bar */
 (function(document, window) {
-    
+    // always make sure sidebar doesn't overlap header
     window.PDSSBN_accountForAppBarHeight = function() {
         var header = document.getElementById('sbn-header')
         var sidebar = document.getElementById('sbn-sidebar')
+        var menuHandle = document.getElementById('sbn-menu-handle')
         var appBar = document.getElementById('pds-app-bar')
         if(header && sidebar && appBar && (sidebar.offsetTop <= header.offsetHeight + header.offsetTop)) {
             sidebar.style.top = (header.offsetHeight + header.offsetTop) + 'px';
         }
+        if(header && menuHandle && appBar && (menuHandle.offsetTop <= header.offsetHeight + header.offsetTop)) {
+            menuHandle.style.top = (header.offsetHeight + header.offsetTop) + 'px';
+        }
     }
     
+    // load app bar from pds.nasa.gov
     var link = document.createElement('link');
     link.href = 'https://pds.nasa.gov/pds-app-bar/pds-app-bar.css';
     link.rel = 'stylesheet';
@@ -55,8 +60,9 @@
     })
     document.body.appendChild(script);
     
-    // var container = document.documentElement || document.body
-    // new MutationObserver(window.PDSSBN_accountForAppBarHeight).observe(container, {subtree: true, childList: true, attributes: false})
+    // as a final measure, run layout code whenever DOM changes
+    var container = document.documentElement || document.body
+    new MutationObserver(window.PDSSBN_accountForAppBarHeight).observe(container, {subtree: true, childList: true, attributes: false})
 
 })(document, window);
 
