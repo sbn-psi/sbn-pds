@@ -26,8 +26,8 @@ app.config(function($urlRouterProvider, $locationProvider, $stateProvider) {
         controller: function($stateParams, $scope, Asteroids, Comets, Satellites) {
             $scope.model = Asteroids.find(x => x.name == $stateParams.modelName);
             if (!$scope.model) $scope.model = Comets.find(x => x.name == $stateParams.modelName);
-            else if (!$scope.model) $scope.model = Satellites.find(x => x.name == $stateParams.modelName);
-            else console.error('Something unexpected happened.');
+            if (!$scope.model) $scope.model = Satellites.find(x => x.name == $stateParams.modelName);
+            if (!$scope.model) console.error('Something unexpected happened.');
         }
     });
 })
