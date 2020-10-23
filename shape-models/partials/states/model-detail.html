@@ -1,14 +1,20 @@
 <h2>{{ model.name }}</h2>
 
 <div class="content" dps-toggle-ar>
-    <div class="qr-code-container" ng-hide="view.arEnabled">
+    <div ng-hide="view.arEnabled" class="qr-code-container">
         <p>Scan this QR code with your phone to view this model in AR!</p>
         <dps-qr-code></dps-qr-code>
+        <h3>Archived Datasets</h3>
+        <div sbn-dataset-row class="row" sbn-dataset="dataset" ng-repeat="dataset in model.datasets"></div>
     </div>
-    <div class="ar-instructions" ng-show="view.arEnabled">
+    
+    <div ng-show="view.arEnabled">
+        <h3>AR Models</h3>
         <p>Tap on the preview of a model to view it in AR.</p>
+        <div class="preview-ar-container">
+            <a href="{{dataset.files.previews.ios.path}}" rel="ar" ng-repeat="dataset in model.datasets" class="preview-ar-link">
+                <img ng-src="{{dataset.files.previews.default.path}}" alt="Link to AR Model" class="preview-ar">
+            </div>
+        </div>
     </div>
-
-    <h3>Archived Datasets</h3>
-    <div sbn-dataset-row class="row" sbn-dataset="dataset" ng-repeat="dataset in model.datasets"></div>
 </div>

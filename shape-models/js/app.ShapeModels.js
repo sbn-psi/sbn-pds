@@ -24,9 +24,7 @@ app.config(function($urlRouterProvider, $locationProvider, $stateProvider) {
         url: '/modelDetail/:modelName',
         templateUrl: 'partials/states/model-detail.html',
         controller: function($stateParams, $scope, Asteroids, Comets, Satellites) {
-            console.log($stateParams.modelName);
             $scope.model = Asteroids.find(x => x.name == $stateParams.modelName);
-            console.log($scope.model);
         }
     });
 })
@@ -140,9 +138,6 @@ app.directive('fileDownload', function() {
         restrict: 'E',
         scope: {
             model: '='
-        },
-        controller: function($scope) {
-            console.log($scope.model);
         }
     }
 })
@@ -162,15 +157,21 @@ app.directive('fileDownload', function() {
     return {
         controller: function($scope, arDetector) {
             $scope.view = {
-                arEnabled: false
+                arEnabled: arDetector.isRelAR || arDetector.isWebAr
             };
-            if (arDetector.isRelAR || arDetector.isWebAr) {
-                console.log('ar kits enabled...');
-            } else {
-                console.log('ar NOT AVAILABLE');
-            };
-            $scope.view.arEnabled = arDetector.isRelAR || arDetector.isWebAr;
-            console.log($scope.view.arEnabled);
+        }
+    }
+})
+.directive('dpsArLink', function() {
+    return {
+        scope: {
+            dataset: '='
+        },
+        restrict: 'A',
+        link: function(scope, element, attrs, controller) {
+            const src = scope.dataset.files.previews.default.path;
+            const srcAr = scope.dataset.files.previews.ios.path;
+            element.append(`<a href="${srcAr}" rel="ar"><img class="preview-ar" src="${src}"></a>`);
         }
     }
 })

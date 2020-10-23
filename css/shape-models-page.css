@@ -84,7 +84,16 @@
     justify-content: center;
     align-items: center;
 }
-
+.preview-ar-container {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.preview-ar {
+    width: 65%;
+    border: 1px solid #BDBDBD;
+}
 .dps-models {
     display: flex;
     flex-flow: row wrap;
