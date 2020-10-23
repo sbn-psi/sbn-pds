@@ -94,6 +94,15 @@
     width: 65%;
     border: 1px solid #BDBDBD;
 }
+.dps-2020-intro {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.dps-2020-intro .pds-button {
+    height: 0;
+}
 .dps-models {
     display: flex;
     flex-flow: row wrap;
