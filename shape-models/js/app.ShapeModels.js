@@ -1,6 +1,37 @@
-var app = angular.module('ShapeModelTable', []);
+var app = angular.module('ShapeModelTable', ['ui.router']);
 
-app.controller('ShapeModels', ['$scope', 'Comets', 'Asteroids', 'Satellites', 'arDetector', function($scope, Comets, Asteroids, Satellites, arDetector) {
+app.config(function($urlRouterProvider, $locationProvider, $stateProvider) {
+    $urlRouterProvider.otherwise('/');
+
+    $locationProvider.html5Mode({
+        enabled: true,
+        requireBase: false,
+        rewriteLinks: false
+    });
+
+    $stateProvider.state({
+        name: 'table',
+        url: '/',
+        templateUrl: 'partials/states/table.html'
+    })
+    .state({
+        name: 'dps2020',
+        url: '/dps-2020',
+        templateUrl: 'partials/states/dps-2020.html'
+    })
+    .state({
+        name: 'modelDetail',
+        url: '/modelDetail/:modelName',
+        templateUrl: 'partials/states/model-detail.html',
+        controller: function($stateParams, $scope, Asteroids, Comets, Satellites) {
+            console.log($stateParams.modelName);
+            $scope.model = Asteroids.find(x => x.name == $stateParams.modelName);
+            console.log($scope.model);
+        }
+    });
+})
+
+app.controller('ShapeModels', ['$scope', '$state', 'Comets', 'Asteroids', 'Satellites', 'arDetector', function($scope, $state, Comets, Asteroids, Satellites, arDetector) {
     $scope.view = {
         comets: Comets,
         asteroids: Asteroids,
@@ -102,4 +133,44 @@ app.directive('fileDownload', function() {
             dataset: '=sbnDataset'
         }
     }
-});
+})
+.directive('dpsModel', function() {
+    return {
+        templateUrl: 'partials/dps-model.html',
+        restrict: 'E',
+        scope: {
+            model: '='
+        },
+        controller: function($scope) {
+            console.log($scope.model);
+        }
+    }
+})
+.directive('dpsQrCode', function() {
+    return {
+        controller: function($scope, $http, $location) {
+            const url = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${$location.absUrl()}&format=svg`;
+            const successCallback = res => $scope.qrCode = res.data;
+            $http.get(url).then(successCallback);
+        },
+        link: function(scope, element) {
+            scope.$watch('qrCode',val => element.append(val));
+        }
+    }
+})
+.directive('dpsToggleAr', function() {
+    return {
+        controller: function($scope, arDetector) {
+            $scope.view = {
+                arEnabled: false
+            };
+            if (arDetector.isRelAR || arDetector.isWebAr) {
+                console.log('ar kits enabled...');
+            } else {
+                console.log('ar NOT AVAILABLE');
+            };
+            $scope.view.arEnabled = arDetector.isRelAR || arDetector.isWebAr;
+            console.log($scope.view.arEnabled);
+        }
+    }
+})

@@ -1,0 +1,14 @@
+<h2>{{ model.name }}</h2>
+
+<div class="content" dps-toggle-ar>
+    <div class="qr-code-container" ng-hide="view.arEnabled">
+        <p>Scan this QR code with your phone to view this model in AR!</p>
+        <dps-qr-code></dps-qr-code>
+    </div>
+    <div class="ar-instructions" ng-show="view.arEnabled">
+        <p>Tap on the preview of a model to view it in AR.</p>
+    </div>
+
+    <h3>Archived Datasets</h3>
+    <div sbn-dataset-row class="row" sbn-dataset="dataset" ng-repeat="dataset in model.datasets"></div>
+</div>
