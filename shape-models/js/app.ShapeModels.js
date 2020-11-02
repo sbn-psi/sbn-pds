@@ -1,6 +1,38 @@
-var app = angular.module('ShapeModelTable', []);
+var app = angular.module('ShapeModelTable', ['ui.router']);
 
-app.controller('ShapeModels', ['$scope', 'Comets', 'Asteroids', 'Satellites', 'arDetector', function($scope, Comets, Asteroids, Satellites, arDetector) {
+app.config(function($urlRouterProvider, $locationProvider, $stateProvider) {
+    $urlRouterProvider.otherwise('/');
+
+    $locationProvider.html5Mode({
+        enabled: true,
+        requireBase: false,
+        rewriteLinks: false
+    });
+
+    $stateProvider.state({
+        name: 'table',
+        url: '/',
+        templateUrl: 'partials/states/table.html'
+    })
+    .state({
+        name: 'dps2020',
+        url: '/dps-2020',
+        templateUrl: 'partials/states/dps-2020.html'
+    })
+    .state({
+        name: 'modelDetail',
+        url: '/modelDetail/:modelName',
+        templateUrl: 'partials/states/model-detail.html',
+        controller: function($stateParams, $scope, Asteroids, Comets, Satellites) {
+            $scope.model = Asteroids.find(x => x.name == $stateParams.modelName);
+            if (!$scope.model) $scope.model = Comets.find(x => x.name == $stateParams.modelName);
+            if (!$scope.model) $scope.model = Satellites.find(x => x.name == $stateParams.modelName);
+            if (!$scope.model) console.error('Something unexpected happened.');
+        }
+    });
+})
+
+app.controller('ShapeModels', ['$scope', '$state', 'Comets', 'Asteroids', 'Satellites', 'arDetector', function($scope, $state, Comets, Asteroids, Satellites, arDetector) {
     $scope.view = {
         comets: Comets,
         asteroids: Asteroids,
@@ -102,4 +134,47 @@ app.directive('fileDownload', function() {
             dataset: '=sbnDataset'
         }
     }
-});
+})
+.directive('dpsModel', function() {
+    return {
+        templateUrl: 'partials/dps-model.html',
+        restrict: 'E',
+        scope: {
+            model: '='
+        }
+    }
+})
+.directive('dpsQrCode', function() {
+    return {
+        controller: function($scope, $http, $location) {
+            const url = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${$location.absUrl()}&format=svg`;
+            const successCallback = res => $scope.qrCode = res.data;
+            $http.get(url).then(successCallback);
+        },
+        link: function(scope, element) {
+            scope.$watch('qrCode',val => element.append(val));
+        }
+    }
+})
+.directive('dpsToggleAr', function() {
+    return {
+        controller: function($scope, arDetector) {
+            $scope.view = {
+                arEnabled: arDetector.isRelAR || arDetector.isWebAr
+            };
+        }
+    }
+})
+.directive('dpsArLink', function() {
+    return {
+        scope: {
+            dataset: '='
+        },
+        restrict: 'A',
+        link: function(scope, element, attrs, controller) {
+            const src = scope.dataset.files.previews.default.path;
+            const srcAr = scope.dataset.files.previews.ios.path;
+            element.append(`<a href="${srcAr}" rel="ar"><img class="preview-ar" src="${src}"></a>`);
+        }
+    }
+})
