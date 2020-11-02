@@ -55,7 +55,6 @@
     script.type = 'text/javascript';
     script.src = 'https://pds.nasa.gov/pds-app-bar/pds-app-bar.js'
     script.addEventListener('load', function() {
-        PDS_App_Bar();
         PDSSBN_accountForAppBarHeight()
     })
     document.body.appendChild(script);
