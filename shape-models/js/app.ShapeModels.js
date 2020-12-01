@@ -20,6 +20,11 @@ app.config(function($urlRouterProvider, $locationProvider, $stateProvider) {
         templateUrl: 'partials/states/dps-2020.html'
     })
     .state({
+        name: 'agu2020',
+        url: '/agu-2020',
+        templateUrl: 'partials/states/agu-2020.html'
+    })
+    .state({
         name: 'modelDetail',
         url: '/modelDetail/:modelName',
         templateUrl: 'partials/states/model-detail.html',
