@@ -6,7 +6,7 @@
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    box-shadow: 0 1px 2px #dadada;
+    /* box-shadow: 0 1px 2px #dadada; */
     background-image: url("../images/eros-narrow.jpg");
     background-repeat: no-repeat;
     background-position-x: 25vw;
