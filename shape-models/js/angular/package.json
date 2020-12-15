@@ -22,7 +22,7 @@
   "_resolved": "https://registry.npmjs.org/angular/-/angular-1.7.9.tgz",
   "_shasum": "e52616e8701c17724c3c238cfe4f9446fd570bc4",
   "_spec": "angular",
-  "_where": "/Users/conorkingston/workspace/pds",
+  "_where": "/Users/conorkingston/workspace/pds-staging",
   "author": {
     "name": "Angular Core Team",
     "email": "angular-core+npm@google.com"
