@@ -1,15 +1,16 @@
 #sbn-header {
     width: 100%;
     background-color: #000;
-    height: 5em;
+    height: 300px;
     color: #ededed;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    /* box-shadow: 0 1px 2px #dadada; */
-    background-image: url("../images/eros-narrow.jpg");
+    /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2), 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12); */
+    background-image: url("../images/bennu.png");
+    background-size: 40%;
     background-repeat: no-repeat;
-    background-position-x: 25vw;
+    position: relative;
 }
 .sbn-menu-handle {
     position: absolute;
@@ -27,22 +28,17 @@
     justify-content: center;
     align-items: center;
 }
-.pds-logo {
-    background: radial-gradient(rgb(116, 166, 223) 0%, transparent 75%);
-    padding: 0.5em;
-}
-.pds-logo img {
-    height: 3em;
-}
 .sbn-title-container {
     background-color: #000;   
-    height: 100%;     
     padding-left: 1em;
+    position: absolute;
+    bottom: 16px;
+    display: flex;
+    flex-direction: column;
 }
 .sbn-title {
-    height: 40%;
-    display: flex;
-    font-size: 0.8em;
+    line-height: initial;
+    font-size: 3em;
 }
 .sbn-title a {
     align-self: flex-end;
@@ -54,6 +50,7 @@
 }
 .sbn-subtitle {
     margin: 0;
+    line-height: initial;
     padding: 0;
     text-decoration: none;
     color: #ededed;
@@ -75,4 +72,29 @@
     margin: 0;
     padding: 0;
     color: white;
+}
+nav {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #282F36;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2), 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12);
+}
+nav div {
+    display: flex;
+    flex-flow: row nowrap;
+}
+nav a, nav span {
+    display: block;
+    line-height: 64px;
+    padding: 0 24px;
+}
+nav a {
+    color: #FDFDFD !important;
+}
+nav span {
+    color: rgba(253,253,253,0.54);
 }

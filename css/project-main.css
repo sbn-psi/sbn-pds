@@ -123,6 +123,9 @@ main {
     margin-left: auto;
     margin-right: auto;
 }
+.sbn-main.index {
+    max-width: 1100px;
+}
 
 /* iPhone 6 & wider */
 @media (min-width: 375px) {
@@ -142,22 +145,23 @@ main {
         display: none;
     }
     .sbn-sidebar {
+        display: none;
         width: 250px;
         position: absolute;
         left: 0;
         top: calc(5em + 32px);
     }
     .sbn-title {
-        font-size: 1em;
+        font-size: 2em;
     }
     .sbn-subtitle {
-        font-size: 1.7em;
+        font-size: 4em;
     }
     .pds-logo img{
         height: 4.5em;
     }
     main {
-        margin-left: 250px;
+        /* margin-left: 250px; */
         /* min-height: 550px; */
         box-sizing: border-box;
     }
@@ -170,11 +174,56 @@ main {
 }
 
 
-.card {
 
-    /* Elevation Overlay / 16dp */
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), #121212;
-    /* 16 dp */
+
+.breadcrumbs {
+    margin: 0;
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+    list-style: none;
+    align-items: center;  
+}
+.breadcrumbs-separator {
+    display: flex;
+    margin-left: 8px;
+    user-select: none;
+    margin-right: 8px;
+}
+.breadcrumbs li:not(:last-child), .breadcrumbs a {
+    color: rgba(253,253,253,0.54) !important
+}
+
+.primary-sections {
+    display: flex;
+    flex-flow: row wrap;
+}
+.primary-sections section {
+    flex: 1;
+    padding: 16px;
+    max-width: 300px;
+    margin: 16px;
+    background: #474C53;
     box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.14), 0px 6px 30px rgba(0, 0, 0, 0.12), 0px 8px 10px rgba(0, 0, 0, 0.2);
 
+}
+.primary-sections section h2 {
+    display: block;
+    margin: -16px -16px 8px -16px;
+    padding: 16px;
+    font-size: 20px;
+    background-color: #282F36;
+}
+.primary-sections ul {
+    list-style: none;
+    padding: 0;
+}
+.primary-sections li {
+    display: block;
+    margin: 0;
+    padding: 12px;
+}
+.primary-sections li:hover {
+    text-decoration: underline;
+    background: #656A6F;
 }

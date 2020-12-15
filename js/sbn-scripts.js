@@ -14,7 +14,12 @@
                         if (this.status == 404) {
                             elmnt.innerHTML = "Included html not found.";
                         }
-                        elmnt.removeAttribute("include-html");
+
+                        // unwrap
+                        var parent = elmnt.parentNode
+                        while (elmnt.firstChild) { parent.insertBefore(elmnt.firstChild, elmnt)}
+                        parent.removeChild(elmnt)
+
                         includeHTML()
                         window.PDSSBN_accountForAppBarHeight()
                     }
