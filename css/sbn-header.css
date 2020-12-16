@@ -79,22 +79,59 @@ nav {
     z-index: 1;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     background-color: #282F36;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2), 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12);
 }
-nav div {
-    display: flex;
-    flex-flow: row nowrap;
-}
-nav a, nav span {
+/* nav div {
+    margin: 16px;
+} */
+/* nav a, nav span {
     display: block;
     line-height: 64px;
     padding: 0 24px;
-}
-nav a {
+} */
+/* nav a {
     color: #FDFDFD !important;
-}
-nav span {
+} */
+/* nav span {
     color: rgba(253,253,253,0.54);
+} */
+.menu-handle > div {
+    display: block;
+    padding: 16px;
+}
+.menu-list {
+    transition: visibility 0, opacity 0.3s ease-in-out;
+    position: absolute;
+    top: 57px;
+    list-style-type:none;
+    margin:0;
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+.menu-handle:hover {
+    background: #474C53;
+    cursor: pointer;
+}
+.menu-handle:hover .menu-list {
+    visibility: visible;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.menu-list li {
+    position:relative;
+    list-style-type:none;
+    display: block;
+    text-decoration: none;
+    margin: 0;
+    padding: 0.6em 0.6em;
+    color: #B5DCFB;
+    background: #474C53;
+}
+.menu-list li:hover {
+    text-decoration: underline;
+    background: #656A6F;
 }
