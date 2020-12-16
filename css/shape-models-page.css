@@ -4,22 +4,29 @@
 .table {
     display: table;
     border-collapse: collapse;
-    margin: 0 0 1em 0;
+    margin: 24px 0;
+
+    background: #474C53;
+
+    border: 1px solid #282F36;
+    box-sizing: border-box;
+
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2), 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
     max-width: 1000px;
 }
 .row {
     display: table-row;
 }
 .row-alt {
-    background: #f6f6f6;
+    background-color: #282F36;
 }
 .header {
-    background: #D5D5D5;
+    background-color: #282F36;
 }
 .cell {
-    padding: 0.3em 0.5em;
+    padding: 16px;
     display: table-cell;
-    border: 1px solid #BDBDBD;
     vertical-align: middle;
 }
 .cell h3 {
@@ -63,11 +70,11 @@
     border: none;
 }
 .category {
-    border: 1px solid #BDBDBD;
+    background-color: #282F36;
 }
 .category .cell {
     border: none;
-    background: #EDEDED;
+    font-size: 1.5em;
 }
 .preview {
     height: 6em;
