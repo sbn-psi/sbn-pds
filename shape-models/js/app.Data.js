@@ -125,7 +125,7 @@ app.factory('Comets', function () {
                     files: {
                         data: {
                             primary: {
-                                downloadLink: 'https://sbnarchive.psi.edu/pds-staging3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/1682q1halley.tab',
+                                downloadLink: 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/1682q1halley.tab',
                                 fileFormat: 'TAB'
                             },
                             derived: null
@@ -186,7 +186,7 @@ app.factory('Comets', function () {
                     files: {
                         data: {
                             primary: {
-                                downloadLink: 'https://sbnarchive.psi.edu/pds-staging3/non_mission/EAR_A_I0037_5_SHAPE153591_V1_0/data/a153591alpha.tab',
+                                downloadLink: 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_I0037_5_SHAPE153591_V1_0/data/a153591alpha.tab',
                                 fileFormat: 'TAB'
                             },
                             derived: [{
@@ -244,7 +244,7 @@ app.factory('Comets', function () {
                     files: {
                         data: {
                             primary: {
-                                downloadLink: 'https://sbnarchive.psi.edu/pds-staging3/non_mission/EAR_A_I0037_5_SHAPE8567_V1_0/data/a8567.tab',
+                                downloadLink: 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_I0037_5_SHAPE8567_V1_0/data/a8567.tab',
                                 fileFormat: 'TAB'
                             },
                             derived: [{
@@ -274,7 +274,7 @@ app.factory('Comets', function () {
                     files: {
                         data: {
                             primary: {
-                                downloadLink: 'https://sbnarchive.psi.edu/pds-staging3/dawn/fc/DWNCSPC_4_01/DATA/ICQ/CERES_SPC181019_1024.ICQ',
+                                downloadLink: 'https://sbnarchive.psi.edu/pds3/dawn/fc/DWNCSPC_4_01/DATA/ICQ/CERES_SPC181019_1024.ICQ',
                                 fileFormat: 'ICQ'
                             },
                             derived: [{
@@ -299,7 +299,7 @@ app.factory('Comets', function () {
                     files: {
                         data: {
                             primary: {
-                                downloadLink: 'https://sbnarchive.psi.edu/pds-staging3/dawn/fc/DWNCSPC_4_01/DATA/ICQ/CERES_SPC181019_1024.ICQ',
+                                downloadLink: 'https://sbnarchive.psi.edu/pds3/dawn/fc/DWNCSPC_4_01/DATA/ICQ/CERES_SPC181019_1024.ICQ',
                                 fileFormat: 'ICQ'
                             },
                             derived: null
@@ -315,7 +315,7 @@ app.factory('Comets', function () {
                     files: {
                         data: {
                             primary: {
-                                downloadLink: 'https://sbnarchive.psi.edu/pds-staging3/non_mission/EAR_A_HSTACS_5_CERESHST_V1_0/data/shape/ceres_shap.tab',
+                                downloadLink: 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_HSTACS_5_CERESHST_V1_0/data/shape/ceres_shap.tab',
                                 fileFormat: 'TAB'
                             },
                             derived: null
@@ -364,7 +364,7 @@ app.factory('Comets', function () {
                     files: {
                         data: {
                             primary: {
-                                downloadLink: 'https://sbnarchive.psi.edu/pds-staging3/non_mission/EAR_A_I0037_5_BENNUSHAPE_V1_0/data/101955bennu.tab',
+                                downloadLink: 'https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_I0037_5_BENNUSHAPE_V1_0/data/101955bennu.tab',
                                 fileFormat: 'TAB'
                             },
                             derived: [{
@@ -388,11 +388,11 @@ app.factory('Comets', function () {
                     }
                 }, {
                     name: 'OSIRIS-REx SPICE Archive',
-                    link: 'https://naif.jpl.nasa.gov/pub/naif/pds-staging/pds-staging4/orex/',
+                    link: 'https://naif.jpl.nasa.gov/pub/naif/pds-staging/pds4/orex/',
                     files: {
                         data: {
                             primary: {
-                                downloadLink: 'https://naif.jpl.nasa.gov/pub/naif/pds-staging/pds-staging4/orex/orex_spice/spice_kernels/dsk/bennu_g_03170mm_spc_obj_0000n00000_v020.bds',
+                                downloadLink: 'https://naif.jpl.nasa.gov/pub/naif/pds-staging/pds4/orex/orex_spice/spice_kernels/dsk/bennu_g_03170mm_spc_obj_0000n00000_v020.bds',
                                 fileFormat: 'DSK'
                             },
                             derived: [{
@@ -651,7 +651,7 @@ app.factory('Comets', function () {
                     files: {
                         data: {
                             primary: {
-                                downloadLink: 'https://sbnarchive.psi.edu/pds-staging3/hayabusa/HAY_A_AMICA_5_ITOKAWASHAPE_V1_0/data/quad/quad512q.tab',
+                                downloadLink: 'https://sbnarchive.psi.edu/pds3/hayabusa/HAY_A_AMICA_5_ITOKAWASHAPE_V1_0/data/quad/quad512q.tab',
                                 fileFormat: 'TAB'
                             },
                             derived: [{
@@ -744,7 +744,7 @@ app.factory('Comets', function () {
                     files: {
                         data: {
                             primary: {
-                                downloadLink: 'https://sbnarchive.psi.edu/pds-staging3/near/NEAR_A_MSI_5_EROSSHAPE_V1_0/data/vertex/ver512q.tab',
+                                downloadLink: 'https://sbnarchive.psi.edu/pds3/near/NEAR_A_MSI_5_EROSSHAPE_V1_0/data/vertex/ver512q.tab',
                                 fileFormat: 'TAB'
                             },
                             derived: [{
@@ -1395,7 +1395,7 @@ app.factory('Satellites', function (Datasets) {
             files: {
                 data: {
                     primary: {
-                        downloadLink: 'https://sbnarchive.psi.edu/pds-staging3/multi_mission/CO_SA_ISSNA_ISSWA_5_DIONESHAPE_V1_0/data/dione_ver512q.tab',
+                        downloadLink: 'https://sbnarchive.psi.edu/pds3/multi_mission/CO_SA_ISSNA_ISSWA_5_DIONESHAPE_V1_0/data/dione_ver512q.tab',
                         fileFormat: 'TAB'
                     },
                     derived: [{
@@ -1655,7 +1655,7 @@ app.factory('Satellites', function (Datasets) {
             files: {
                 data: {
                     primary: {
-                        downloadLink: 'https://sbnarchive.psi.edu/pds-staging3/multi_mission/CO_SA_ISSNA_5_MIMASSHAPE_V2_0/data/mimas_ver512q.tab',
+                        downloadLink: 'https://sbnarchive.psi.edu/pds3/multi_mission/CO_SA_ISSNA_5_MIMASSHAPE_V2_0/data/mimas_ver512q.tab',
                         fileFormat: 'TAB'
                     },
                     derived: [{
@@ -1767,7 +1767,7 @@ app.factory('Satellites', function (Datasets) {
             files: {
                 data: {
                     primary: {
-                        downloadLink: 'https://sbnarchive.psi.edu/pds-staging3/multi_mission/VO1_SA_VISA_VISB_5_PHOBOSSHAPE_V1_0/data/phobos_ver512q.tab',
+                        downloadLink: 'https://sbnarchive.psi.edu/pds3/multi_mission/VO1_SA_VISA_VISB_5_PHOBOSSHAPE_V1_0/data/phobos_ver512q.tab',
                         fileFormat: 'TAB'
                     },
                     derived: [{
@@ -1815,7 +1815,7 @@ app.factory('Satellites', function (Datasets) {
             files: {
                 data: {
                     primary: {
-                        downloadLink: 'https://sbnarchive.psi.edu/pds-staging3/multi_mission/CO_SA_ISSNA_5_PHOEBESHAPE_V2_0/data/phoebe_ver512q.tab',
+                        downloadLink: 'https://sbnarchive.psi.edu/pds3/multi_mission/CO_SA_ISSNA_5_PHOEBESHAPE_V2_0/data/phoebe_ver512q.tab',
                         fileFormat: 'TAB'
                     },
                     derived: [{
@@ -1944,7 +1944,7 @@ app.factory('Satellites', function (Datasets) {
             files: {
                 data: {
                     primary: {
-                        downloadLink: 'https://sbnarchive.psi.edu/pds-staging3/multi_mission/CO_SA_ISSNA_5_TETHYSSHAPE_V1_0/data/tethys_ver512q.tab',
+                        downloadLink: 'https://sbnarchive.psi.edu/pds3/multi_mission/CO_SA_ISSNA_5_TETHYSSHAPE_V1_0/data/tethys_ver512q.tab',
                         fileFormat: 'TAB'
                     },
                     derived: [{
