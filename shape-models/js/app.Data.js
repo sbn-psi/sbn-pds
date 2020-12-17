@@ -388,11 +388,11 @@ app.factory('Comets', function () {
                     }
                 }, {
                     name: 'OSIRIS-REx SPICE Archive',
-                    link: 'https://naif.jpl.nasa.gov/pub/naif/pds-staging/pds4/orex/',
+                    link: 'https://naif.jpl.nasa.gov/pub/naif/pds/pds4/orex/',
                     files: {
                         data: {
                             primary: {
-                                downloadLink: 'https://naif.jpl.nasa.gov/pub/naif/pds-staging/pds4/orex/orex_spice/spice_kernels/dsk/bennu_g_03170mm_spc_obj_0000n00000_v020.bds',
+                                downloadLink: 'https://naif.jpl.nasa.gov/pub/naif/pds/pds4/orex/orex_spice/spice_kernels/dsk/bennu_g_03170mm_spc_obj_0000n00000_v020.bds',
                                 fileFormat: 'DSK'
                             },
                             derived: [{
