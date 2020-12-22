@@ -95,12 +95,23 @@ td, th {
     padding: 16px;
     border: 0;
 }
+td > a:only-child {
+    display: block;
+    margin: -16px;
+    padding: 16px;
+}
+td a:hover {
+    background: #656A6F;
+}
 th, td i {
     font-weight: bold;
     font-style: normal;
 }
 td[rowspan]:not([rowspan="1"]) {
     vertical-align: text-top;
+}
+tr:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 p, li {
@@ -194,7 +205,6 @@ main {
 }
 .primary-sections section {
     flex: 1;
-    padding: 16px;
     max-width: 300px;
     margin: 16px;
     background: #474C53;
@@ -203,7 +213,7 @@ main {
 }
 .primary-sections section h2 {
     display: block;
-    margin: -16px -16px 8px -16px;
+    margin: 0 0 8px 0;
     padding: 16px;
     font-size: 20px;
     background-color: #282F36;
@@ -215,9 +225,20 @@ main {
 .primary-sections li {
     display: block;
     margin: 0;
-    padding: 12px;
+    padding: 0;
 }
-.primary-sections li:hover {
+.primary-sections li a {
+    display: block;
+    padding: 12px 24px;
+    margin: 0;
+}
+.primary-sections .subtitle {
+    color: white;
+    font-size: 0.8em;
+    text-decoration: none !important;
+    padding: 0 0.5em;
+}
+.primary-sections li a:hover {
     text-decoration: underline;
     background: #656A6F;
 }
