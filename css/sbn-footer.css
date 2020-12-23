@@ -1,6 +1,6 @@
 .sbn-footer {
     width: 100%;
-    background: #616161;
+    background: #474C53;
     color: #FFFFFF;
     height: 3em;
     display: flex;
@@ -14,7 +14,7 @@
     text-align: center;
 }
 .sbn-footer-extended {
-    background: #333;
+    background: #282F36;
     color: #FFF;
     height: 20em;
     width: 100%;
