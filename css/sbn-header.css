@@ -117,7 +117,7 @@ nav {
     color: #B5DCFB;
     background: #474C53;
 }
-.menu-list li:hover {
+.menu-list li a:hover {
     text-decoration: underline;
     background: #656A6F;
 }
@@ -126,3 +126,7 @@ nav {
     padding: 16px;
 }
 
+.menu-list .divider {
+    display: block;
+    padding: 8px;
+}
