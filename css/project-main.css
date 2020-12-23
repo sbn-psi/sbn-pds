@@ -232,7 +232,7 @@ main {
     padding: 12px 24px;
     margin: 0;
 }
-.primary-sections .subtitle {
+a .subtitle {
     color: white;
     font-size: 0.8em;
     text-decoration: none !important;
