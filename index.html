@@ -35,6 +35,8 @@
             This archive site provides access to PDS data on asteroids, dust, planetary satellites, meteorites, and selected other small solar system bodies and laboratory data. Use the links below to select data by target type, by data type, or by mission.
         </p>
 
+        <div ng-app="search"><search-app></search-app></div>
+
         <!-- See sbn-data-types.html, sbn-target-types.html, and sbn-missions.html to edit this content -->
         <div class="primary-sections">
             <section>
@@ -49,10 +51,6 @@
 
         </div>
 
-        <p>
-            For help in navigating the directory structure and file types of PDS data sets, see the Small Bodies Node page <a href="http://pdssbn.astro.umd.edu/howto/understand.shtml">"How to Approach a PDS Data Set"</a>.
-        </p>
-
     </div></main>
     <!-- END main content -->
 
@@ -60,6 +58,9 @@
 
     <div include-html="/pds-staging/sbn-footer.html"></div>
 
+    <script src="/pds-staging/js/angular/angular.min.js"></script>
+    <script src="/pds-staging/js/search.js"></script>
+    <script src="/pds-staging/js/search-data.js"></script>
     <script src="/pds-staging/js/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>
