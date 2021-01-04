@@ -21,13 +21,13 @@ searchApp.factory('searchData', function () {
     },{
         name: 'Maps and Mosaics',
         subtitle: '',
-        description: 'A single large image stitched together from numerous smaller images to give a wide field view of an area.  Usually, it is constructed from a series of spacecraft images taken closely together in time so that the Sun angle is consistent throughout the mosaic; however, for global mosaics, that is not possible.  Additionally, the images are frequently photometrically corrected so that the reflected light is normalized to a single emission angle, typically 30°.',
+        description: 'A mosaic is a single large image stitched together from numerous smaller images to give a wide field view of an area.  Usually, it is constructed from a series of spacecraft images taken closely together in time so that the Sun angle is consistent throughout the mosaic; however, for global mosaics, that is not possible.  Additionally, the images are frequently photometrically corrected so that the reflected light is normalized to a single emission angle, typically 30°.',
         url: '/pds-staging/archive/maps.html',
         category: 'Data Types'
     },{
         name: 'NEO Surveys',
         subtitle: '',
-        description: '',
+        description: 'An astronomical survey is a generalized search over all (or most) of the sky and lacks a specific target. For SBN, its goal is to discover comets and asteroids and improve our knowledge of their orbits.  Alternatively, an astronomical survey may comprise a set of many images or spectra of objects that share a common type or feature.',
         url: '/pds-staging/archive/surveys.html',
         category: 'Data Types'
     },{
@@ -51,13 +51,13 @@ searchApp.factory('searchData', function () {
     },{
         name: 'Physical Properties',
         subtitle: 'spin vectors, taxonomic classification, albedos, densities, and diameters',
-        description: '',
+        description: 'These data sets will include observations on the physical properties of asteroids such as spin vectors, taxonomic classifications, albedos, densities and diameters.',
         url: '/pds-staging/archive/physical.html',
         category: 'Data Types'
     },{
         name: 'Polarimetry',
         subtitle: '',
-        description: 'The measurement of polarization of electromagnetic waves such as radio or light waves (the orientation of the light waves). Typically polarimetry is done on electromagnetic waves that have traveled through or have been reflected, refracted or diffracted by some material in order to characterize that object. ',
+        description: 'These datasets will contain the measurement of polarization of electromagnetic waves such as radio or light waves (the orientation of the light waves). Typically polarimetry is done on electromagnetic waves that have traveled through or have been reflected, refracted or diffracted by some material in order to characterize that object. ',
         url: '/pds-staging/archive/polarimetry.html',
         category: 'Data Types'
     },{
