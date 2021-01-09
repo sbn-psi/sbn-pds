@@ -22,6 +22,7 @@
 
                         includeHTML()
                         window.PDSSBN_accountForAppBarHeight()
+                        window.PDSSBN_checkForSearchBar()
                     }
                 }
                 xhttp.open("GET", file, true);
@@ -68,6 +69,19 @@
     var container = document.documentElement || document.body
     new MutationObserver(window.PDSSBN_accountForAppBarHeight).observe(container, {subtree: true, childList: true, attributes: false})
 
+})(document, window);
+
+// Load search bar angular app
+(function(document, window) {
+    window.PDSSBN_checkForSearchBar = function() {
+        if(window.PDSSBN_bootstrappedSearchBar === true ) return;
+        
+        var bar = document.getElementById('search-bar')
+        if(!!bar) {
+            window.PDSSBN_bootstrappedSearchBar = true
+            angular.bootstrap(bar, ['search'])
+        }
+    }
 })(document, window);
 
 /* Methods to Hide/Show Superseded versions of a data set */

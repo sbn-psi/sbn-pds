@@ -33,7 +33,7 @@ searchApp.factory('searchData', function () {
     },{
         name: 'Nuclear',
         subtitle: '',
-        description: 'Nuclear observations are made some speciality spectrometers that detect interactions of highly energetic particles.  These can be an X-ray spectrometer that measures X-rays that are emitted from the surface.  Another one is a neutron spectrometer, which detects different energy states of neutrons that are created when cosmic rays impact the surface.  Detailed analysis can separate particles, atoms, and molecules by their mass, momentum, or energy. Data from these observations can be used to determine chemical composition and abundance. ',
+        description: 'Nuclear observations are made by some speciality spectrometers that detect interactions of highly energetic particles.  These can be an X-ray spectrometer that measures X-rays that are emitted from the surface.  Another one is a neutron spectrometer, which detects different energy states of neutrons that are created when cosmic rays impact the surface.  Detailed analysis can separate particles, atoms, and molecules by their mass, momentum, or energy. Data from these observations can be used to determine chemical composition and abundance. ',
         url: '/pds-staging/archive/xgn.html',
         category: 'Data Types'
     },{
@@ -75,7 +75,7 @@ searchApp.factory('searchData', function () {
     },{
         name: 'Shape Models',
         subtitle: '',
-        description: 'Shape models (or Digital Terrain Models) 3D computer generated models of an object. Shape models can be computed using image data, light curves with inversion techniques or laser altimeter data. ',
+        description: 'Shape models (or Digital Terrain Models) 3D computer generated models of an object. Shape models can be computed using radar, visible image data, light curves with inversion techniques or laser altimeter data. ',
         url: '/pds-staging/shape-models/',
         category: 'Data Types'
     },{
@@ -150,11 +150,13 @@ searchApp.factory('searchData', function () {
     },{
         name: 'Cassini',
         subtitle: 'Interplanetary dust and Small satellite shape models',
+        instruments: ['HRD', 'CDA'],
         url: '/pds-staging/archive/cassini.html',
         category: 'Mission'
     },{
         name: 'Dawn',
         subtitle: '4 Vesta, 1 Ceres',
+        instruments: ['VIR', 'FC', 'GRaND'],
         url: '/pds-staging/resource/dawn',
         category: 'Mission'
     },{
@@ -215,7 +217,8 @@ searchApp.factory('searchData', function () {
     },{
         name: 'OSIRIS-REx',
         subtitle: '101955 Bennu',
-        url: '/pds-staging/resource/orex.html',
+        instruments: ['OCAMS', 'TAGCAMS', 'OVIRS', 'OTES', 'REXIS', 'OLA'],
+        url: '/pds-staging/resource/orex/',
         category: 'Mission'
     },{
         name: 'Rosetta',
