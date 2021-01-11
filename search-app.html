@@ -6,7 +6,7 @@
             </path>
         </svg>
         <div class="input-field">
-            <input placeholder="Find data by keyword..." type="text" aria-label="search by keyword"
+            <input placeholder="Jump to data category..." type="text" aria-label="search by keyword"
                 ng-model="view.query"
                 ng-focus="view.focused = true"
                 ng-blur="view.focused = false">
@@ -14,7 +14,7 @@
     </div>
     <ul class="search-results" ng-if="view.query.length > 0">
         <li class="search-result" ng-repeat="result in filteredResults = (view.searchData | filter: view.query)">
-            <a ng-href="{{result.url}}" title="{{result.description ? result.description : result.subtitle}}">{{result.name}}</a>
+            <a ng-href="{{result.url}}" title="{{result.name}} - {{result.description ? result.description : result.subtitle}}">{{result.name}}</a>
             <!-- <p>{{result.description ? result.description : result.subtitle}}</p> -->
         </li>
         <p class="no-results" ng-if="filteredResults.length === 0">No results</p>
