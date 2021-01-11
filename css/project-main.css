@@ -82,6 +82,15 @@ nav a[href^='http']:not([href*='psi.edu']):after {
     height: 20px;
     content:"";
 }
+strong, b {
+    font-weight: bold;
+}
+em, i {
+    font-style: italic;
+}
+u { 
+    text-decoration: underline;
+}
 
 #pds-superseded {
     display: none;
@@ -122,6 +131,12 @@ nav a[href^='http']:not([href*='psi.edu']):after {
     /* primary / contrast text */
 
     color: #192028;
+}
+.fullwidth {
+    width: 100%;
+}
+table.fullwidth td:first-child {
+    width: 100%;
 }
 
 .pds-button:hover {
