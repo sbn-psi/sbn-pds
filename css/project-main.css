@@ -61,7 +61,7 @@ body {
     color: #FDFDFD;
 }
 
-main a:not(.ignore-a-styling):not(.pds-button), nav a:not(.ignore-a-styling):not(.pds-button) {
+main a:not(.ignore-a-styling):not(.pds-button), nav a:not(.ignore-a-styling):not(.pds-button), footer a:not(.ignore-a-styling):not(.pds-button) {
     color: #B5DCFB;
     text-decoration: none;
 }
