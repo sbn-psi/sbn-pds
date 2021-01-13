@@ -1,21 +1,19 @@
-<div class="search-container">
+<div class="search-container" ng-blur="loseFocus()">
     <div class="search-box" ng-class="{focused: view.focused}">
-        <svg class="search-icon" viewBox="0 0 24 24" fill="#FDFDFD">
-            <path
-                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
-            </path>
+        <svg class="search-icon" viewBox="0 0 100 125" fill="#FDFDFD">
+            <path d="M35.285,8L85,28.228L52.303,70.575l-4.715-17.337C33,59.622,16.45,72.294,43.672,92c0,0-37.15-4.02-26.875-39.512    c0,0,4.692-16.873,23.799-24.958L35.285,8z" />
         </svg>
         <div class="input-field">
-            <input placeholder="Jump to data category..." type="text" aria-label="search by keyword"
+            <input tabindex="0" placeholder="Shortcut to data by keyword..." type="text" aria-label="Shortcut to data by keyword"
                 ng-model="view.query"
-                ng-focus="view.focused = true"
-                ng-blur="view.focused = false">
-            </div>
+                ng-focus="inputFocused()"
+                ng-blur="loseFocus($event)"
+                ng-keyup="keyup($event)">
+        </div>
     </div>
-    <ul class="search-results" ng-if="view.query.length > 0">
-        <li class="search-result" ng-repeat="result in filteredResults = (view.searchData | filter: view.query)">
-            <a ng-href="{{result.url}}" title="{{result.name}} - {{result.description ? result.description : result.subtitle}}">{{result.name}}</a>
-            <!-- <p>{{result.description ? result.description : result.subtitle}}</p> -->
+    <ul class="search-results" ng-if="view.query.length > 0 && view.focused">
+        <li class="search-result" ng-repeat="result in $parent.filteredResults = (view.searchData | filter: view.query)">
+            <a ng-href="{{result.url}}" title="{{result.name}} - {{result.description ? result.description : result.subtitle}}" tabindex="0">{{result.name}}</a>
         </li>
         <p class="no-results" ng-if="filteredResults.length === 0">No results</p>
     </ul>
