@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="ShapeModelTable">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -31,7 +31,7 @@
     <div include-html="/pds-staging/sbn-header.html"></div>
 
     <!-- BEGIN main content -->
-    <main><div class="sbn-main" ng-controller="ShapeModels">
+    <main><div class="sbn-main" ng-app="ShapeModelTable" ng-controller="ShapeModels">
         <script src="/pds-staging/js/angular/angular.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.28/angular-ui-router.min.js" integrity="sha512-2DoNBBUJq5Wr+Uhjgol+uvmHtxOgrtG1QjuDHltKMdtIiVEhujUi0eb/X21P+P0V9zgXKA/lOKCSq7wj5VYc5A==" crossorigin="anonymous"></script>
         <script src="/pds-staging/shape-models/js/app.ShapeModels.js"></script>
