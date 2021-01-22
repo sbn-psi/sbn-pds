@@ -1,3 +1,4 @@
+// HTML fragment loading
 (function(document, window) {
     var includeHTML = function() {
         var elements, i, elmnt, file, xhttp;
@@ -21,8 +22,7 @@
                         parent.removeChild(elmnt)
 
                         includeHTML()
-                        window.PDSSBN_accountForAppBarHeight()
-                        window.PDSSBN_checkForSearchBar()
+                        window.dispatchEvent(new Event("PDSSBN_contentLoaded"))
                     }
                 }
                 xhttp.open("GET", file, true);
@@ -37,7 +37,7 @@
 /* PDS app bar */
 (function(document, window) {
     // always make sure sidebar doesn't overlap header
-    window.PDSSBN_accountForAppBarHeight = function() {
+    function accountForAppBarHeight() {
         var header = document.getElementById('sbn-header')
         var sidebar = document.getElementById('sbn-sidebar')
         var menuHandle = document.getElementById('sbn-menu-handle')
@@ -49,6 +49,7 @@
             menuHandle.style.top = (header.offsetHeight + header.offsetTop) + 'px';
         }
     }
+    window.addEventListener("PDSSBN_contentLoaded", accountForAppBarHeight)
     
     // load app bar from pds.nasa.gov
     var link = document.createElement('link');
@@ -60,20 +61,19 @@
     var script = document.createElement('script');
     script.type = 'text/javascript';
     script.src = 'https://pds.nasa.gov/pds-app-bar/pds-app-bar.js'
-    script.addEventListener('load', function() {
-        PDSSBN_accountForAppBarHeight()
-    })
+    script.addEventListener('load', accountForAppBarHeight)
     document.body.appendChild(script);
     
     // as a final measure, run layout code whenever DOM changes
     var container = document.documentElement || document.body
-    new MutationObserver(window.PDSSBN_accountForAppBarHeight).observe(container, {subtree: true, childList: true, attributes: false})
+    new MutationObserver(accountForAppBarHeight).observe(container, {subtree: true, childList: true, attributes: false})
 
 })(document, window);
 
 // Load search bar angular app
 (function(document, window) {
-    window.PDSSBN_checkForSearchBar = function() {
+    window.addEventListener("PDSSBN_contentLoaded", function() {
+
         if(window.PDSSBN_bootstrappedSearchBar === true ) return;
         
         var bar = document.getElementById('search-bar')
@@ -81,7 +81,41 @@
             window.PDSSBN_bootstrappedSearchBar = true
             angular.bootstrap(bar, ['search'])
         }
-    }
+    })
+})(document, window);
+
+// Theme toggle
+(function(document, window) {
+    window.addEventListener("PDSSBN_contentLoaded", function() {
+        if(window.PDSSBN_bootstrappedThemeToggle === true ) return;
+        
+        const toggle = document.getElementById('theme-switch-checkbox')
+        if(!!toggle) {
+            window.PDSSBN_bootstrappedThemeToggle = true
+            toggle.addEventListener("change", changeTheme, false)
+
+            const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+            if (!!currentTheme) {
+                document.documentElement.setAttribute('data-theme', currentTheme);
+
+                if (currentTheme === 'light') {
+                    toggle.checked = true;
+                }
+            }
+        }
+
+        function changeTheme(event) {
+            if (event.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }
+            else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }    
+        }
+    })
 })(document, window);
 
 /* Methods to Hide/Show Superseded versions of a data set */

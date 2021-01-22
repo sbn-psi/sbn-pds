@@ -6,9 +6,9 @@
     border-collapse: collapse;
     margin: 24px 0;
 
-    background: #474C53;
+    background: var(--raised-content);
 
-    border: 1px solid #282F36;
+    border: 1px solid var(--section-header);
     box-sizing: border-box;
 
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2), 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12);
@@ -19,10 +19,10 @@
     display: table-row;
 }
 .row-alt {
-    background-color: #282F36;
+    background-color: var(--section-header);
 }
 .header {
-    background-color: #282F36;
+    background-color: var(--section-header);
 }
 .cell {
     padding: 16px;
@@ -71,7 +71,7 @@
     border: none;
 }
 .category {
-    background-color: #282F36;
+    background-color: var(--section-header);
 }
 .category .cell {
     border: none;
