@@ -87,28 +87,6 @@ table {
     --hr: rgba(0, 0, 0, 0.25);
 }
 
-/* FFFFFF
-FDFDFD
-EEEEEF
-DEDFE0
-C0C2C4
-
-main:       B5DCFB, 100%
-main dark:  57B4FF, 100%
-main light: D5EBFD, 100% 
-
-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2), 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12); (button)
-
-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2), 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12); (nav)
-
-box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.14), 0px 9px 46px rgba(0, 0, 0, 0.12), 0px 11px 15px rgba(0, 0, 0, 0.2); (focused search)
-
-box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.14), 0px 6px 30px rgba(0, 0, 0, 0.12), 0px 8px 10px rgba(0, 0, 0, 0.2); (section)
-
-*/
-
-
-
 /* === Begin custom CSS === */
 
 body {
@@ -317,17 +295,15 @@ main {
 
 .primary-sections {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+    flex-flow: column wrap;
+    justify-content: stretch;
 }
 .primary-sections section {
     flex: 1;
-    max-width: 300px;
     margin: 16px;
     background: var(--raised-content);
     box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.14), 0px 6px 30px rgba(0, 0, 0, 0.12), 0px 8px 10px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    overflow: hidden;
 }
 .primary-sections section h2 {
     display: block;
@@ -338,6 +314,7 @@ main {
     background-repeat: no-repeat;
     background-position: right 14px center;
     background-size: 30px 30px;
+    border-radius: 4px 4px 0 0;
 }
 .primary-sections #data-type-header {
     background-image: url('/pds-staging/images/data-type.svg');
@@ -394,7 +371,16 @@ a .subtitle {
     main {
         box-sizing: border-box;
     }
+    .primary-sections {
+        flex-flow: row wrap;
+    }
+    .primary-sections section {
+        min-width: 250px;
+    }
 }
 /* iPad (landscape mode) & wider */
 @media (min-width: 1024px) {
+    .primary-sections section {
+        max-width: 300px;
+    }
 }
