@@ -398,7 +398,7 @@ archive, including the earlier data deliveries.
 3.6          Further Information                                              
                                                                               
 An introduction to PDS archiving is available at                              
-http://pds-staging.sbn.astro.umd.edu.  More detailed information on data archiving in 
+http://pds.sbn.astro.umd.edu.  More detailed information on data archiving in 
 the PDS can be found in the PDS Data Preparation Workbook (DPW) and in the    
 PDS Standards Reference (SR).                                                 
                                                                               
