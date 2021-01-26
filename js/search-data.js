@@ -3,7 +3,7 @@ searchApp.factory('searchData', function () {
     return [{
         name: 'Altimetry',
         subtitle: '',
-        description: 'Altimetry data is collected by measuring reflected laser light from the surface of an object. This allows for measurements of height, distance, and altitude. Altimeters can utilize radio waves as well as lasers to measure distance. ',
+        description: ' These data sets will contain altimetry data which is collected by measuring reflected laser light from the surface of an object. This allows for measurements of height, distance, and altitude. Altimeters can utilize radio waves as well as lasers to measure distance.  ',
         url: '/pds-staging/archive/altimetry.html',
         category: 'Data Types'
     },{
@@ -15,37 +15,37 @@ searchApp.factory('searchData', function () {
     },{
         name: 'Image Data',
         subtitle: '',
-        description: 'Photographic image data can be either from ground based telescopes or from a space craft. These data sets will contain images numerous images of an object of group of objects. ',
+        description: ' These data sets will contain Photographic image data, which can be either from ground based telescopes or from a space craft. These data sets will contain numerous images of an object of group of objects.  ',
         url: '/pds-staging/archive/image.html',
         category: 'Data Types'
     },{
         name: 'Maps and Mosaics',
         subtitle: '',
-        description: 'A mosaic is a single large image stitched together from numerous smaller images to give a wide field view of an area.  Usually, it is constructed from a series of spacecraft images taken closely together in time so that the Sun angle is consistent throughout the mosaic; however, for global mosaics, that is not possible.  Additionally, the images are frequently photometrically corrected so that the reflected light is normalized to a single emission angle, typically 30°.',
+        description: 'These data sets will contain Mosaic images which are a single large image stitched together from numerous smaller images to give a wide field view of an area.  Usually, it is constructed from a series of spacecraft images taken closely together in time so that the Sun angle is consistent throughout the mosaic; however, for global mosaics, that is not possible.  Additionally, the images are frequently photometrically corrected so that the reflected light is normalized to a single emission angle, typically 30°.',
         url: '/pds-staging/archive/maps.html',
         category: 'Data Types'
     },{
         name: 'NEO Surveys',
         subtitle: '',
-        description: 'An astronomical survey is a generalized search over all (or most) of the sky and lacks a specific target. For SBN, its goal is to discover comets and asteroids and improve our knowledge of their orbits.  Alternatively, an astronomical survey may comprise a set of many images or spectra of objects that share a common type or feature.',
+        description: ' These data sets will contain Astronomical Survey observations. An astronomical survey is a generalized search over all (or most) of the sky and lacks a specific target. For SBN, its goal is to discover comets and asteroids and improve our knowledge of their orbits.  Alternatively, an astronomical survey may comprise a set of many images or spectra of objects that share a common type or feature. ',
         url: '/pds-staging/archive/surveys.html',
         category: 'Data Types'
     },{
         name: 'Nuclear',
         subtitle: '',
-        description: 'Nuclear observations are made by some speciality spectrometers that detect interactions of highly energetic particles.  These can be an X-ray spectrometer that measures X-rays that are emitted from the surface.  Another one is a neutron spectrometer, which detects different energy states of neutrons that are created when cosmic rays impact the surface.  Detailed analysis can separate particles, atoms, and molecules by their mass, momentum, or energy. Data from these observations can be used to determine chemical composition and abundance. ',
+        description: '  These data sets will contain nuclear observations which are made using some speciality spectrometers that detect interactions of highly energetic particles.  These can be an X-ray spectrometer that measures X-rays that are emitted from the surface.  Another one is a neutron spectrometer, which detects different energy states of neutrons that are created when cosmic rays impact the surface.  Detailed analysis can separate particles, atoms, and molecules by their mass, momentum, or energy. Data from these observations can be used to determine chemical composition and abundance.  ',
         url: '/pds-staging/archive/xgn.html',
         category: 'Data Types'
     },{
         name: 'Orbital data',
         subtitle: 'proper elements and dynamical families',
-        description: 'These data sets will contain the orbital observations of an object or a family of objects. These data sets will include the proper elements and dynamical families. Orbital observations can be ground based or from spacecraft. Orbital data sets are typically collected over a longer time period to allow for a complete observation of an orbital path. ',
+        description: ' These data sets will contain the orbital observations of an object or a family of objects. These data sets will include the proper elements and dynamical families. Orbital observations can be ground based or from spacecraft. Orbital data sets are typically collected over a longer time period to allow for a complete observation of an orbital path.  ',
         url: '/pds-staging/archive/orbital.html',
         category: 'Data Types'
     },{
         name: 'Photometry and Lightcurves',
         subtitle: '',
-        description: 'Photometry is the measurement of the brightness of stars and other celestial objects. These measurements can provide information about an object’s size, distance, temperature, and orbital period.',
+        description: ' These data sets will contain Photometry observations, which are used to measure the brightness of celestial objects. These measurements can provide information about an object’s size, distance, temperature, and rotation period. ',
         url: '/pds-staging/archive/phot.html',
         category: 'Data Types'
     },{
@@ -63,13 +63,13 @@ searchApp.factory('searchData', function () {
     },{
         name: 'Radar',
         subtitle: '',
-        description: 'Radar is a measurement system that uses radio waves (Radar) to determine the range, angle, or velocity of objects. This is done by reflecting radar waves off of a target and analyzing the reflections. Radar data can be used to construct both images and shape models of objects. ',
+        description: ' These data sets will contain radar observations which is a measurement system that uses radio waves (Radar) to determine the range, angle, or velocity of objects. This is done by reflecting radar waves off of a target and analyzing the reflections. Radar data can be used to construct both radar images and shape models of objects.  ',
         url: '/pds-staging/archive/radar.html',
         category: 'Data Types'
     },{
         name: 'Radio Science',
         subtitle: '',
-        description: 'Radio astronomy is conducted using large radio antennas referred to as radio telescopes, that are either used singularly, or with multiple linked telescopes utilizing the techniques of radio interferometry and aperture synthesis. The use of interferometry allows radio astronomy to achieve high angular resolution, as the resolving power of an interferometer is set by the distance between its components, rather than the size of its components. ',
+        description: ' These data sets contain Radio astronomy observations which are conducted using large radio antennas referred to as radio telescopes, that are either used singularly, or with multiple linked telescopes utilizing the techniques of radio interferometry and aperture synthesis. The use of interferometry allows radio astronomy to achieve high angular resolution, as the resolving power of an interferometer is set by the distance between its components, rather than the size of its components.  ',
         url: '/pds-staging/archive/rs.html',
         category: 'Data Types'
     },{
@@ -81,20 +81,19 @@ searchApp.factory('searchData', function () {
     },{
         name: 'Gravity Models',
         subtitle: '',
-        description: 'A gravity model is created using the gravitational observations of an object. Gravity models can be derived from radio observations as well as spacecraft. Gravity models can include spherical harmonic models of the gravity field, radial gravity acceleration maps and internal density data. ',
+        description: ' These data sets contain gravity models which are created using the gravitational observations of an object. Gravity models can be derived from radio observations as well as spacecraft. Gravity models can include spherical harmonic models of the gravity field, radial gravity acceleration maps and internal density data.  ',
         url: '/pds-staging/archive/gravity.html',
         category: 'Data Types'
     },{
         name: 'SPICE Kernels',
         subtitle: '',
-        description: 'SPICE data contains time-series details of the position and pointing of the spacecraft, and the position and rotation state of the planets/small bodies.  It also includes exact definitions of the spacecraft equipment and instruments, to include how they are oriented on the spacecraft. The complete SPICE information provides deterministic information to compute relative and inertial positions, pointing and angles of objects in space. ',
+        description: '  These data sets will include SPICE data, which contains time-series details of the position and pointing of the spacecraft, and the position and rotation state of the planets/small bodies.  It also includes exact definitions of the spacecraft equipment and instruments, to include how they are oriented on the spacecraft. The complete SPICE information provides deterministic information to compute relative and inertial positions, pointing and angles of objects in space.  ',
         url: '/pds-staging/archive/spice.html',
         category: 'Data Types'
     },{
         name: 'Spectrophotometry and Spectra',
         subtitle: '',
-        description: `Spectrophotometry is the quantitative measurement of the reflection or transmission properties of a material as a function of wavelength.
-        This data can also be commonly represented as a chart or a graph that shows the intensity of light being emitted over a range of wavelengths (or wavenumbers).`,
+        description: ` These data sets will contain Spectrophotometry observations which are the quantitative measurement of the reflection or transmission properties of a material as a function of wavelength.This data can also be commonly represented as a chart or a graph that shows the intensity of light being emitted over a range of wavelengths (or wavenumbers). `,
         url: '/pds-staging/archive/spectra.html',
         category: 'Data Types'
     },{
