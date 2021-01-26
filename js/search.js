@@ -3,7 +3,7 @@ var searchApp = angular.module('search', []);
 
 searchApp.directive('searchApp', function() {
     return {
-        templateUrl: '/pds-staging/search-app.html',
+        templateUrl: '/search-app.html',
         controller: function($scope, searchData, $window) {
             $scope.view = {
                 searchData,

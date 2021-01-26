@@ -109,7 +109,7 @@ main a:not(.ignore-a-styling):not(.pds-button):hover {
 }
 main a[href^='http']:not([href*='psi.edu']):after,
 nav a[href^='http']:not([href*='psi.edu']):after {
-    background-image: url('/pds-staging/images/external.svg');
+    background-image: url('/images/external.svg');
     background-size: 16px;
     background-repeat: no-repeat;
     background-position: 4px 4px;
@@ -122,7 +122,7 @@ nav a[href^='http']:not([href*='psi.edu']):after {
 }
 [data-theme="light"] main a[href^='http']:not([href*='psi.edu']):after, 
 [data-theme="light"] nav a[href^='http']:not([href*='psi.edu']):after {
-    background-image: url('/pds-staging/images/external-black.svg');
+    background-image: url('/images/external-black.svg');
 }
 
 strong, b {
@@ -317,22 +317,22 @@ main {
     border-radius: 4px 4px 0 0;
 }
 .primary-sections #data-type-header {
-    background-image: url('/pds-staging/images/data-type.svg');
+    background-image: url('/images/data-type.svg');
 }
 [data-theme="light"] .primary-sections #data-type-header {
-    background-image: url('/pds-staging/images/data-type-black.svg');
+    background-image: url('/images/data-type-black.svg');
 }
 .primary-sections #target-type-header {
-    background-image: url('/pds-staging/images/target-type.svg');
+    background-image: url('/images/target-type.svg');
 }
 [data-theme="light"] .primary-sections #target-type-header {
-    background-image: url('/pds-staging/images/target-type-black.svg');
+    background-image: url('/images/target-type-black.svg');
 }
 .primary-sections #mission-header {
-    background-image: url('/pds-staging/images/mission.svg');
+    background-image: url('/images/mission.svg');
 }
 [data-theme="light"] .primary-sections #mission-header {
-    background-image: url('/pds-staging/images/mission-black.svg');
+    background-image: url('/images/mission-black.svg');
 }
 .primary-sections ul {
     list-style: none;

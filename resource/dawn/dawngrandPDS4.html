@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <base href="/pds-staging/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>Dawn GRaND PDS4 Archive</title>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-    <link rel="stylesheet" href="/pds-staging/css/project-main.css">
-    <link rel="stylesheet" href="/pds-staging/css/sbn-header.css">
-    <link rel="stylesheet" href="/pds-staging/css/sbn-footer.css">
+    <link rel="stylesheet" href="/css/project-main.css">
+    <link rel="stylesheet" href="/css/sbn-header.css">
+    <link rel="stylesheet" href="/css/sbn-footer.css">
 
     <!-- PDS Feedback Widget -->
     <!-- Only add JQuery if you do not already include a library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
-    <link rel="stylesheet" href="/pds-staging/feedback/css/feedback.css"  type="text/css" media="screen" />
-    <script src="/pds-staging/feedback/js/modernizr-custom.js"></script>
-    <script src="/pds-staging/feedback/js/config.js"></script>
-    <script src="/pds-staging/feedback/js/feedback.js"></script>
+    <link rel="stylesheet" href="/feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="/feedback/js/modernizr-custom.js"></script>
+    <script src="/feedback/js/config.js"></script>
+    <script src="/feedback/js/feedback.js"></script>
     <!-- -->
 </head>
 <body>
 
-    <div include-html="/pds-staging/sbn-header.html"></div>
+    <div include-html="/sbn-header.html"></div>
 
     <!-- BEGIN main content -->
     <main><div class="sbn-main">
@@ -40,7 +41,7 @@
 The Dawn Mission's Gamma Ray and Neutron Detector (GRaND) collected data needed to map the elemental composition of the surfaces of Dawn mission targets 4 Vesta and 1 Ceres.  GRaND measured the spectrum of planetary gamma rays and neutrons, which originate from galactic cosmic ray interactions and the decay of radioelements within the regolith, while the spacecraft is in orbit around each body.
 
 <p>
-The Dawn GRaND archive, including raw and calibrated data and maps, has been previously available in the deprecated PDS3 archive standard, and has now been migrated to the current standard, PDS4.  In migrating the GRaND archive to the new PDS4 standard, no changes were made to the data files; however, the metadata and documentation were revised and enhanced.  Please see the GRaND archive description document [link] to understand the organization and content of the GRaND archive.  The original PDS3 GRaND archive is still available at the <a href="https://sbn.psi.edu/pds-staging/resource/dawn/">Dawn Archive Page</a>.
+The Dawn GRaND archive, including raw and calibrated data and maps, has been previously available in the deprecated PDS3 archive standard, and has now been migrated to the current standard, PDS4.  In migrating the GRaND archive to the new PDS4 standard, no changes were made to the data files; however, the metadata and documentation were revised and enhanced.  Please see the GRaND archive description document [link] to understand the organization and content of the GRaND archive.  The original PDS3 GRaND archive is still available at the <a href="https://sbn.psi.edu/resource/dawn/">Dawn Archive Page</a>.
 
 <p>
 Custom IDL software is available for ease of access and processing of raw GRaND data for scientific analyses [link].  However, the IDL software is not necessary to access and use the GRaND data, as all information to do so is available in the PDS4 labels.
@@ -89,12 +90,12 @@ Each bundle contains raw, calibrated, and derived data on the specified target. 
 
     
 
-    <div include-html="/pds-staging/sbn-footer.html"></div>
+    <div include-html="/sbn-footer.html"></div>
 
 
-<script src="/pds-staging/js/angular/angular.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/pds-staging/js/search.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/pds-staging/js/search-data.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/pds-staging/js/sbn-scripts.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/angular/angular.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/sbn-scripts.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

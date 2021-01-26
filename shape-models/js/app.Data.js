@@ -121,7 +121,7 @@ app.factory('Comets', function () {
                 type: 'comet',
                 datasets: [{
                     name: 'Stooke Small Body Shape Models',
-                    link: 'https://sbn.psi.edu/pds-staging/resource/stkshape.html',
+                    link: 'https://sbn.psi.edu/resource/stkshape.html',
                     files: {
                         data: {
                             primary: {
@@ -182,7 +182,7 @@ app.factory('Comets', function () {
                 type: 'asteroid',
                 datasets: [{
                     name: 'Shape Model of Asteroid (153591) 2001 SN263',
-                    link: 'https://sbn.psi.edu/pds-staging/resource/shape153591.html',
+                    link: 'https://sbn.psi.edu/resource/shape153591.html',
                     files: {
                         data: {
                             primary: {
@@ -240,7 +240,7 @@ app.factory('Comets', function () {
                 type: 'asteroid',
                 datasets: [{
                     name: 'Shape and Rotation of (8567) 1996 HW1',
-                    link: 'https://sbn.psi.edu/pds-staging/resource/shape8567.html',
+                    link: 'https://sbn.psi.edu/resource/shape8567.html',
                     files: {
                         data: {
                             primary: {
@@ -270,7 +270,7 @@ app.factory('Comets', function () {
                 type: 'asteroid',
                 datasets: [{
                     name: 'Dawn Shape Models of Ceres',
-                    link: 'https://sbn.psi.edu/pds-staging/resource/dawn/dwncfcshape.html',
+                    link: 'https://sbn.psi.edu/resource/dawn/dwncfcshape.html',
                     files: {
                         data: {
                             primary: {
@@ -295,7 +295,7 @@ app.factory('Comets', function () {
                     }
                 }, {
                     name: 'Ceres LAMO Regional Digital Terrain Model (Occator)',
-                    link: 'https://sbn.psi.edu/pds-staging/resource/dawn/dwncfcshape.html',
+                    link: 'https://sbn.psi.edu/resource/dawn/dwncfcshape.html',
                     files: {
                         data: {
                             primary: {
@@ -311,7 +311,7 @@ app.factory('Comets', function () {
                     }
                 }, {
                     name: 'HST Images, Albedo Maps, and Shape of 1 Ceres',
-                    link: 'https://sbn.psi.edu/pds-staging/resource/cereshst.html',
+                    link: 'https://sbn.psi.edu/resource/cereshst.html',
                     files: {
                         data: {
                             primary: {
@@ -360,7 +360,7 @@ app.factory('Comets', function () {
                 type: 'asteroid',
                 datasets: [{
                     name: 'Shape Model of Asteroid (101955) Bennu',
-                    link: 'https://sbn.psi.edu/pds-staging/resource/bennushape.html',
+                    link: 'https://sbn.psi.edu/resource/bennushape.html',
                     files: {
                         data: {
                             primary: {
@@ -647,7 +647,7 @@ app.factory('Comets', function () {
                 type: 'asteroid',
                 datasets: [{
                     name: 'Gaskell Itokawa Shape Model',
-                    link: 'https://sbn.psi.edu/pds-staging/resource/itokawashape.html',
+                    link: 'https://sbn.psi.edu/resource/itokawashape.html',
                     files: {
                         data: {
                             primary: {
@@ -698,7 +698,7 @@ app.factory('Comets', function () {
                 type: 'asteroid',
                 datasets: [{
                     name: 'Dawn Shape Models of Vesta',
-                    link: 'https://sbn.psi.edu/pds-staging/resource/dawn/dwnvfcshape.html',
+                    link: 'https://sbn.psi.edu/resource/dawn/dwnvfcshape.html',
                     files: {
                         data: {
                             primary: null,
@@ -740,7 +740,7 @@ app.factory('Comets', function () {
                 type: 'asteroid',
                 datasets: [{
                     name: 'Gaskell Eros Shape Model',
-                    link: 'https://sbn.psi.edu/pds-staging/resource/erosshape.html',
+                    link: 'https://sbn.psi.edu/resource/erosshape.html',
                     files: {
                         data: {
                             primary: {
@@ -1391,7 +1391,7 @@ app.factory('Satellites', function (Datasets) {
         type: 'satellite',
         datasets: [{
             name: 'Gaskell Dione Shape Model',
-            link: 'https://sbn.psi.edu/pds-staging/resource/dioneshape.html',
+            link: 'https://sbn.psi.edu/resource/dioneshape.html',
             files: {
                 data: {
                     primary: {
@@ -1651,7 +1651,7 @@ app.factory('Satellites', function (Datasets) {
         type: 'satellite',
         datasets: [{
             name: 'Gaskell Mimas Shape Model',
-            link: 'https://sbn.psi.edu/pds-staging/resource/mimasshape.html',
+            link: 'https://sbn.psi.edu/resource/mimasshape.html',
             files: {
                 data: {
                     primary: {
@@ -1763,7 +1763,7 @@ app.factory('Satellites', function (Datasets) {
         type: 'satellite',
         datasets: [{
             name: 'Gaskell Phobos Shape Model',
-            link: 'https://sbn.psi.edu/pds-staging/resource/phobosshape.html',
+            link: 'https://sbn.psi.edu/resource/phobosshape.html',
             files: {
                 data: {
                     primary: {
@@ -1811,7 +1811,7 @@ app.factory('Satellites', function (Datasets) {
         type: 'satellite',
         datasets: [{
             name: 'Gaskell Phoebe Shape Model',
-            link: 'https://sbn.psi.edu/pds-staging/resource/phoebeshape.html',
+            link: 'https://sbn.psi.edu/resource/phoebeshape.html',
             files: {
                 data: {
                     primary: {
@@ -1940,7 +1940,7 @@ app.factory('Satellites', function (Datasets) {
         type: 'satellite',
         datasets: [{
             name: 'Gaskell Tethys Shape Model',
-            link: 'https://sbn.psi.edu/pds-staging/resource/tethysshape.html',
+            link: 'https://sbn.psi.edu/resource/tethysshape.html',
             files: {
                 data: {
                     primary: {
