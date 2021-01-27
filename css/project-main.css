@@ -141,6 +141,12 @@ hr {
     box-sizing: border-box;
 }
 
+/* ul {
+    max-height: 70vh;
+    display: flex;
+    flex-flow: column wrap;
+} */
+
 #pds-superseded {
     display: none;
 }
