@@ -180,6 +180,7 @@ nav {
 .search-box {
     width: 100%;
     background: var(--background-l1);
+    border-radius: 4px;
     display: flex;
     flex-flow: row nowrap;
     transition: all 0.3s ease-in-out;
@@ -223,7 +224,7 @@ nav {
 .search-results {
     width: 300px;
     position: absolute;
-    top: 57px;
+    top: 107px;
     background: var(--raised-content);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2), 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12);
     overflow-y: scroll;
@@ -251,6 +252,56 @@ nav {
 .search-result a:hover {
     text-decoration: underline;
     background: var(--raised-content-hover);
+}
+
+.search-filter {
+    width: 300px;
+    position: absolute;
+    top: 57px; /* bar height */
+    background: var(--raised-content);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2), 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12);
+    padding: 8px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.search-filter input {
+    display: none;
+}
+
+.search-filter .toggle-option {
+    padding: 0 15px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.02857em;
+    border: 1px solid var(--link);
+    background-color: transparent;
+    color: var(--link);
+    box-sizing: border-box;
+}
+.search-filter .toggle-option.focused{
+    background-color: var(--button);
+    border-color: var(--button);
+    color: var(--button-contrast);
+}
+.search-filter .toggle-option:first-child {
+    border-right-color: transparent;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.search-filter .toggle-option:last-child {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.search-filter .toggle-option:hover {
+    background-color: var(--raised-content-hover);
+    color: var(--link-hover);
+    cursor: pointer;
+}
+.search-filter .toggle-option.focused:hover {
+    background-color: var(--button);
 }
 
 /*Simple css to style it like a toggle switch*/
