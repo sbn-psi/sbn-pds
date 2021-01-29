@@ -5,28 +5,47 @@ var vueApp = {
     data: {
         focused: false,
         query: '',
+        mode: 'asteroid',
         searchData: searchData
     },
     computed: {
         searchResults: function() {
-            return this.searchData.filter(item => {
-                for (let val of Object.values(item)) {
-                    if ((val.constructor === String || typeof val === 'string') && val.toUpperCase().includes(this.query.toUpperCase())) { return true; }
-                    if (Array.isArray(val) && val.some(str => str.toUpperCase().includes(this.query.toUpperCase()))) { return true; }
+            switch (this.mode) {
+                case 'asteroid': 
+                    return this.searchData.filter(item => {
+                        for (let val of Object.values(item)) {
+                            if ((val.constructor === String || typeof val === 'string') && val.toUpperCase().includes(this.query.toUpperCase())) { return true; }
+                            if (Array.isArray(val) && val.some(str => str.toUpperCase().includes(this.query.toUpperCase()))) { return true; }
+                        }
+                        return false;
+                    })
+                case 'pds': {
+                    return [{
+                        name: `Search "${this.query}" on pds.nasa.gov`,
+                        url: `https://pds.nasa.gov/datasearch/keyword-search/search.jsp?q=${this.query}`
+                    }]
                 }
-                return false;
-            })
+            }
         },
     },
     methods: {
         title: function(result) {
             return `${result.name} - ${result.description ? result.description : result.subtitle}`
         },
-        loseFocus: function(event) {
-            let container = event.target.closest('.search-container')
-            if(!container.contains(event.relatedTarget)) {
-                this.focused = false;
+        onFocus: function() {
+            this.focused = true
+
+            // set up listener to remove focus when you click outside
+            const listener = (event) => {
+                if(!event.target.closest('.search-container')) {
+                    this.focused = false
+                    removeListener()
+                }
             }
+            const removeListener = () => {
+                document.removeEventListener('click', listener)
+            }
+            document.addEventListener('click', listener)
         },
         keypress: function(event) {
             switch (event.keyCode) {
