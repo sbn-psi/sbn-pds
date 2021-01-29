@@ -79,7 +79,7 @@
         var bar = document.getElementById('search-bar')
         if(!!bar) {
             window.PDSSBN_bootstrappedSearchBar = true
-            angular.bootstrap(bar, ['search'])
+            var app = new Vue(vueApp)
         }
     })
 })(document, window);
