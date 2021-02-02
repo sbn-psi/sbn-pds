@@ -22,6 +22,7 @@ var vueApp = {
                 case 'pds': {
                     return [{
                         name: `Search "${this.query}" on pds.nasa.gov`,
+                        description: 'Additional data may be available from other PDS nodes',
                         url: `https://pds.nasa.gov/datasearch/keyword-search/search.jsp?q=${this.query}`
                     }]
                 }
