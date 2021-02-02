@@ -1,7 +1,7 @@
 var app = angular.module('ShapeModelTable', ['ui.router']);
 
 app.config(function($urlRouterProvider, $locationProvider, $stateProvider) {
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('/shape-models/');
 
     $locationProvider.html5Mode({
         enabled: true,
@@ -11,23 +11,23 @@ app.config(function($urlRouterProvider, $locationProvider, $stateProvider) {
 
     $stateProvider.state({
         name: 'table',
-        url: '/',
-        templateUrl: 'partials/states/table.html'
+        url: '/shape-models/',
+        templateUrl: 'shape-models/partials/states/table.html'
     })
     .state({
         name: 'dps2020',
-        url: '/dps-2020',
-        templateUrl: 'partials/states/dps-2020.html'
+        url: '/shape-models/dps-2020',
+        templateUrl: 'shape-models/partials/states/dps-2020.html'
     })
     .state({
         name: 'agu2020',
-        url: '/agu-2020',
-        templateUrl: 'partials/states/agu-2020.html'
+        url: '/shape-models/agu-2020',
+        templateUrl: 'shape-models/partials/states/agu-2020.html'
     })
     .state({
         name: 'modelDetail',
-        url: '/modelDetail/:modelName',
-        templateUrl: 'partials/states/model-detail.html',
+        url: '/shape-models/modelDetail/:modelName',
+        templateUrl: 'shape-models/partials/states/model-detail.html',
         controller: function($stateParams, $scope, Asteroids, Comets, Satellites) {
             $scope.model = Asteroids.find(x => x.name == $stateParams.modelName);
             if (!$scope.model) $scope.model = Comets.find(x => x.name == $stateParams.modelName);
@@ -49,7 +49,7 @@ app.controller('ShapeModels', ['$scope', '$state', 'Comets', 'Asteroids', 'Satel
 
 app.directive('fileDownload', function() {
     return {
-        templateUrl: 'partials/file-download.html',
+        templateUrl: 'shape-models/partials/file-download.html',
         transclude: true,
         scope: {
             file: '=fileToDownload'
@@ -63,7 +63,7 @@ app.directive('fileDownload', function() {
 })
 .directive('ferretLink', function() {
     return {
-        templateUrl: 'partials/ferret-link.html',
+        templateUrl: 'shape-models/partials/ferret-link.html',
         transclude: true,
         scope: {
             name: '=objectName'
@@ -124,7 +124,7 @@ app.directive('fileDownload', function() {
 })
 .directive('sbnObjectHeaderRow', function() {
     return {
-        templateUrl: 'partials/object-header-row.html',
+        templateUrl: 'shape-models/partials/object-header-row.html',
         restrict: 'A',
         scope: {
             object: '=sbnObject'
@@ -133,7 +133,7 @@ app.directive('fileDownload', function() {
 })
 .directive('sbnDatasetRow', function() {
     return {
-        templateUrl: 'partials/dataset-row.html',
+        templateUrl: 'shape-models/partials/dataset-row.html',
         restrict: 'A',
         scope: {
             dataset: '=sbnDataset'
@@ -142,7 +142,7 @@ app.directive('fileDownload', function() {
 })
 .directive('dpsModel', function() {
     return {
-        templateUrl: 'partials/dps-model.html',
+        templateUrl: 'shape-models/partials/dps-model.html',
         restrict: 'E',
         scope: {
             model: '='
