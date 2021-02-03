@@ -1,20 +1,6 @@
 #search {
     margin: 2em 0 1em 0;
 }
-.table {
-    display: table;
-    border-collapse: collapse;
-    margin: 24px 0;
-
-    background: var(--raised-content);
-
-    border: 1px solid var(--section-header);
-    box-sizing: border-box;
-
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2), 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
-    max-width: 1000px;
-}
 .row {
     display: table-row;
 }
@@ -55,6 +41,7 @@
     height: 32px;
     padding: 8px;
     cursor: pointer;
+    fill: var(--link);
 }
 .ferret-link {
     display: flex;
