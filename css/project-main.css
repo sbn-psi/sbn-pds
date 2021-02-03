@@ -314,34 +314,20 @@ main {
     box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
 }
+.primary-sections .section-header-img {
+    height: 120px;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px 4px 0 0;
+}
 .primary-sections section h2 {
     display: block;
     margin: 0 0 8px 0;
     padding: 16px;
     font-size: 20px;
     background-color: var(--section-header);
-    background-repeat: no-repeat;
-    background-position: right 14px center;
-    background-size: 30px 30px;
-    border-radius: 4px 4px 0 0;
-}
-.primary-sections #data-type-header {
-    background-image: url('/pds-staging/images/data-type.svg');
-}
-[data-theme="light"] .primary-sections #data-type-header {
-    background-image: url('/pds-staging/images/data-type-black.svg');
-}
-.primary-sections #target-type-header {
-    background-image: url('/pds-staging/images/target-type.svg');
-}
-[data-theme="light"] .primary-sections #target-type-header {
-    background-image: url('/pds-staging/images/target-type-black.svg');
-}
-.primary-sections #mission-header {
-    background-image: url('/pds-staging/images/mission.svg');
-}
-[data-theme="light"] .primary-sections #mission-header {
-    background-image: url('/pds-staging/images/mission-black.svg');
 }
 .primary-sections ul {
     list-style: none;
