@@ -51,7 +51,7 @@ table {
 
 /* === Theme colors === */
 
-/* Light */
+/* Dark - default */
 :root {
     --page-background: #12181D;
     --background-l1: #192028;
@@ -69,7 +69,7 @@ table {
     --hr: rgba(255, 255, 255, 0.25);
 }
 
-/* Dark - default */
+/* Light */
 [data-theme="light"] {
     --page-background: #FFFFFF;
     --background-l1: #FFFFFF;
@@ -195,7 +195,8 @@ table.fullwidth td:first-child {
 }
 
 .pds-button:hover {
-    background: #57B4FF;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    background-color: #57B4FF;
 }
 
 h1 {
@@ -245,6 +246,7 @@ td > a:only-child {
     padding: 16px;
 }
 td a:hover {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     background: var(--raised-content-hover);
 }
 th, td i {
@@ -363,7 +365,8 @@ a .subtitle {
 }
 .primary-sections li a:hover {
     text-decoration: underline;
-    background: var(--raised-content-hover);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    background-color: var(--raised-content-hover);
 }
 
 /* iPhone 6 & wider */
