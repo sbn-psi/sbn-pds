@@ -51,7 +51,7 @@ var vueApp = {
         keypress: function(event) {
             switch (event.keyCode) {
                 case 27: // Escape key
-                    event.target.blur(); break;
+                    this.focused = false; event.target.blur(); break;
                 case 13: // Enter key
                     const filteredResults = this.searchResults
                     if(filteredResults.length === 1) {
