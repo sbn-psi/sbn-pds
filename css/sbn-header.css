@@ -99,8 +99,7 @@
 }
 
 nav {
-    height: 57px;
-    /* nav bar height */
+    height: 57px; /* nav bar height */
     position: sticky;
     top: 0px;
     z-index: 1;
@@ -109,7 +108,7 @@ nav {
     justify-content: flex-start;
     align-items: center;
     background-color: var(--section-header);
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2), 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2), 0px 10px 14px 1px rgba(0, 0, 0, 0.14), 0px 4px 18px 3px rgba(0, 0, 0, 0.12);
 }
 
 .menu-handle>div {
@@ -127,7 +126,7 @@ nav {
     padding: 0;
     opacity: 0;
     visibility: hidden;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2), 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 12px 17px 2px rgba(0, 0, 0, 0.14), 0px 5px 22px 4px rgba(0, 0, 0, 0.12);
 }
 
 .menu-handle:hover {
@@ -139,6 +138,7 @@ nav {
     visibility: visible;
     opacity: 1;
     cursor: pointer;
+    z-index: -1;
 }
 
 .menu-list li {
@@ -227,7 +227,7 @@ nav {
     position: absolute;
     top: 107px;
     background: var(--raised-content);
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2), 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 12px 17px 2px rgba(0, 0, 0, 0.14), 0px 5px 22px 4px rgba(0, 0, 0, 0.12);
     overflow-y: scroll;
     list-style: none;
     padding: 0;
@@ -261,7 +261,7 @@ nav {
     position: absolute;
     top: 57px; /* bar height */
     background: var(--raised-content);
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2), 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 12px 17px 2px rgba(0, 0, 0, 0.14), 0px 5px 22px 4px rgba(0, 0, 0, 0.12);
     padding: 8px;
     box-sizing: border-box;
     display: flex;
