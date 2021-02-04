@@ -19,7 +19,8 @@
             <li class="search-result" >
                 <a v-bind:href="result.url" v-bind:title="title(result)" tabindex="0">{{result.name}}</a>
             </li>
-            <p class="no-results" v-if="searchResults.length === 0">No results</p>
         </template>
+        <p class="no-results" v-if="searchResults.length === 0">No results found</p>
+        <p class="no-results" v-if="searchResults.length === 0">Need help finding something? <a href="contact.html">Contact Us</a></p>
     </ul>
 </div>
