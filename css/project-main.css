@@ -285,6 +285,7 @@ main {
 
 .paper {
     box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
 }
 
 .breadcrumbs {
@@ -314,8 +315,6 @@ main {
     flex: 1;
     margin: 16px;
     background: var(--raised-content);
-    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
 }
 .primary-sections .section-header-img {
     height: 120px;
@@ -372,6 +371,7 @@ a .subtitle {
     }
     .primary-sections {
         flex-flow: row wrap;
+        justify-content: space-between;
     }
     .primary-sections section {
         min-width: 250px;

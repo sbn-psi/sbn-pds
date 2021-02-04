@@ -119,14 +119,15 @@ nav {
 .menu-list {
     transition: visibility 0, opacity 0.3s ease-in-out;
     position: absolute;
-    top: 57px;
-    /* nav bar height */
+    top: 57px; /* nav bar height */
     list-style-type: none;
     margin: 0;
     padding: 0;
     opacity: 0;
     visibility: hidden;
-    box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 12px 17px 2px rgba(0, 0, 0, 0.14), 0px 5px 22px 4px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2), 0px 10px 14px 1px rgba(0, 0, 0, 0.14), 0px 4px 18px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 0 0 4px 4px;
+    overflow: hidden;
 }
 
 .menu-handle:hover {
@@ -194,7 +195,7 @@ nav {
 
 .search-box.focused {
     background: var(--raised-content);
-    box-shadow: 0px 24px 38px rgba(0, 0, 0, 0.14), 0px 9px 46px rgba(0, 0, 0, 0.12), 0px 11px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 12px 17px 2px rgba(0, 0, 0, 0.14), 0px 5px 22px 4px rgba(0, 0, 0, 0.12);
 }
 
 .search-box .search-icon {
@@ -232,6 +233,7 @@ nav {
     list-style: none;
     padding: 0;
     margin: 0;
+    border-radius: 4px;
 }
 
 .search-result {
@@ -266,6 +268,7 @@ nav {
     box-sizing: border-box;
     display: flex;
     justify-content: center;
+    border-radius: 4px;
 }
 
 .search-filter input {
