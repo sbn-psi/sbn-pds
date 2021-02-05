@@ -1,6 +1,4 @@
-'use strict';
-searchApp.factory('searchData', function () {
-    return [{
+searchData.splice(0, 0, {
         name: 'Altimetry',
         subtitle: '',
         description: ' These data sets will contain altimetry data which is collected by measuring reflected laser light from the surface of an object. This allows for measurements of height, distance, and altitude. Altimeters can utilize radio waves as well as lasers to measure distance.  ',
@@ -267,5 +265,5 @@ searchApp.factory('searchData', function () {
         subtitle: 'Small planetary satellites',
         url: '/pds-staging/archive/sc.html',
         category: 'Mission'
-    }]
-});
+    }
+);

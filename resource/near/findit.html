@@ -1,39 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <base href="/pds-staging/" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>FindIt</title>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-    <link rel="stylesheet" href="/pds-staging/css/project-main.css">
-    <link rel="stylesheet" href="/pds-staging/css/sbn-header.css">
-    <link rel="stylesheet" href="/pds-staging/css/sbn-sidebar.css">
-    <link rel="stylesheet" href="/pds-staging/css/sbn-footer.css">
+    <link rel="stylesheet" href="css/project-main.css">
+    <link rel="stylesheet" href="css/sbn-header.css">
+    <link rel="stylesheet" href="css/sbn-footer.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
 
     <!-- PDS Feedback Widget -->
     <!-- Only add JQuery if you do not already include a library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
-    <link rel="stylesheet" href="/pds-staging/feedback/css/feedback.css"  type="text/css" media="screen" />
-    <script src="/pds-staging/feedback/js/modernizr-custom.js"></script>
-    <script src="/pds-staging/feedback/js/config.js"></script>
-    <script src="/pds-staging/feedback/js/feedback.js"></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
     <!-- -->
 </head>
 <body>
 
-    <div include-html="/pds-staging/sbn-header.html"></div>
+    <div include-html="sbn-header.html"></div>
 
     <!-- BEGIN main content -->
     <main><div class="sbn-main">
+        <ol class="breadcrumbs">
+            <li><a href="/pds-staging/">Home</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="archive/missions.html">Missions</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="resource/near">NEAR</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li>Where to Find</li>
+        </ol>
         <h2>Where to Find...</h2>
 
         <hr>
 
         <p>
-        <b>Calibration Files</b>
+        <h3>Calibration Files</h3>
 
         <p>
         Calibration files can be tabular data, images, or spectra and can be taken
@@ -45,12 +58,12 @@
         <hr>
 
         <p>
-        <b> Shape and Gravity Models</b>
+        <h3> Shape and Gravity Models</h3>
 
         <p>
         The original shape and gravity models prepared by the NEAR MSI, NAV,
         NLR, and RSS teams are in the
-        <a href="/pds-staging/resource/nearmod.html">
+        <a href="resource/nearmod.html">
         NEAR Collected Shape and Gravity Models</a> data set.  The same models
         are also available in the individual higher-level data sets for each
         instrument.
@@ -58,13 +71,13 @@
         <p>
         The most recent and detailed Eros shape model, prepared by Robert Gaskell
         from the NEAR data in 2008, is available in the
-        <a href="/pds-staging/resource/erosshape.html">Gaskell Eros Shape
+        <a href="resource/erosshape.html">Gaskell Eros Shape
         Model</a> data set.
 
         <hr>
 
         <p>
-        <b> NEAR Browse Utilities</b>
+        <h3> NEAR Browse Utilities</h3>
 
         <p>
         Browse utilities are located in the "browse" directory of many of the data
@@ -93,18 +106,18 @@
         <hr>
 
         <p>
-        <b>Documentation</b>
+        <h3>Documentation</h3>
 
         <p>
         Documentation is provided in the "document" directory of each data set.
         An html browse utility linking the complete
-        <a href="/pds-staging/resource/near/neardoc.html">
+        <a href="resource/near/neardoc.html">
         Documentation Set</a> for the entire collection is also available.
 
         <hr>
 
         <p>
-        <b> Data on asteroid 253 Mathilde</b>
+        <h3> Data on asteroid 253 Mathilde</h3>
 
         <p>
         The NEAR spacecraft flew by asteroid 253 Mathilde on June 25-27, 1997.
@@ -113,24 +126,24 @@
 
         <p>
         MSI data on Mathilde are located in the MSI Mathilde raw and calibrated
-        data sets available on the <a href="msiinst.html">MSI instrument page</a>.
+        data sets available on the <a href="resource/near/msiinst.html">MSI instrument page</a>.
 
         <p>
         Radio Science data on Mathilde are located in the RSS Mathilde data set
-        available on the <a href="rssinst.html">RSS instrument page</a>.
+        available on the <a href="resource/near/rssinst.html">RSS instrument page</a>.
 
         <p>
         SPICE data for Mathilde are located in the NEAR SPICE Mathilde data set
-        available on the <a href="spice.html">NEAR SPICE page</a>.
+        available on the <a href="resource/near/spice.html">NEAR SPICE page</a>.
 
         <p>
         An incomplete shape model, image mosaic, and list of images used to create
-        the shape model, are included in the <a href="/pds-staging/resource/nearmod.html"> Collected NEAR Mathilde and Eros Shape and Gravity Models</a>.
+        the shape model, are included in the <a href="resource/nearmod.html"> Collected NEAR Mathilde and Eros Shape and Gravity Models</a>.
 
         <hr>
 
         <p>
-        <b>Data on comet C/Hyakutake (1996 B2)</b>
+        <h3>Data on comet C/Hyakutake (1996 B2)</h3>
 
         <p>
         The MSI instrument acquired visual images of comet C/Hyakutake (1996 B2) on
@@ -148,7 +161,7 @@
         <hr>
 
         <p>
-        <b>SPICE data</b>
+        <h3>SPICE data</h3>
 
         <p>
         The NEAR SPICE archive was originally structured inconveniently as nine data
@@ -161,13 +174,13 @@
 
         <p>
         The original nine data sets, which are now superseded by the combined data set,
-        are accessible <a href="/pds-staging/resource/near/spice.html">
+        are accessible <a href="resource/near/spice.html">
         here</a>.
 
         <br>
 
         <center>
-        <a href="/pds-staging/resource/near">Return to NEAR Archive</a>
+        <a href="resource/near">Return to NEAR Archive</a>
         </center>
         <br>
     </div></main>
@@ -175,12 +188,12 @@
 
     
 
-    <div include-html="/pds-staging/sbn-footer.html"></div>
+    <div include-html="sbn-footer.html"></div>
 
 
-<script src="/pds-staging/js/angular/angular.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/pds-staging/js/search.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/pds-staging/js/search-data.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/pds-staging/js/sbn-scripts.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/sbn-scripts.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
