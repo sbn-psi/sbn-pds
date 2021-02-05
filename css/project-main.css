@@ -306,6 +306,16 @@ main {
     color: var(--secondary-text) !important
 }
 
+.breadcrumbs + .breadcrumbs li {
+    margin-top: 0;
+}
+.breadcrumbs + .breadcrumbs:not(:last-of-type) li {
+    margin-bottom: 0;
+}
+.breadcrumbs:not(:only-of-type):first-of-type li {
+    margin-bottom: 0;
+}
+
 .primary-sections {
     display: flex;
     flex-flow: column wrap;
