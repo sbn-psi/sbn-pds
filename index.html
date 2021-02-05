@@ -33,28 +33,54 @@
     <!-- BEGIN main content -->
     <main><div class="sbn-main index">
 
-        <h1 id="title">PDS Asteroid/Dust Archive</h1>
+        <!-- <h1 id="title">PDS Asteroid/Dust Archive</h1> -->
 
-        <p>
-            This archive site provides access to PDS data on asteroids, dust, planetary satellites, meteorites, and selected other small solar system bodies and laboratory data. Use the links below to select data by target type, by data type, or by mission.
-        </p>
+        <h4>
+            This archive site provides access to asteroids, dust, planetary satellites, meteorites, and selected other small solar system bodies and laboratory data from the NASA Planetary Data System
+        </h4>
 
-        <!-- See sbn-data-types.html, sbn-target-types.html, and sbn-missions.html to edit this content -->
         <div class="primary-sections">
-            <section class="paper">
-                <img class="section-header-img" src="images/spectra.png">
-                <div include-html="sbn-data-types.html">
+            <section class="paper card mdc-card" tabindex="0">
+                <a href="archive/data-types.html" class="mdc-card__primary-action ignore-a-styling" >
+                    <img src="images/spectra.png">
+                    <h2>Browse by Data Type</h2>
+                    <p>Images, Radar, Spectra, and others</p>
+                </a>
             </section>
-            <section class="paper">
-                <img class="section-header-img" src="images/eros-narrow.jpg">
-                <div include-html="sbn-target-types.html">
+            <section class="paper card mdc-card" tabindex="0">
+                <a href="archive/target-types.html" class="mdc-card__primary-action ignore-a-styling" >
+                    <img src="images/eros-narrow.jpg">
+                    <h2>Browse by Target Type</h2>
+                    <p>NEOs, Comets, Dust, and others</p>
+                </a>
             </section>
-            <section class="paper">
-                <img class="section-header-img" src="images/dawn.jpg">
-                <div include-html="sbn-missions.html">
+            <section class="paper card mdc-card" tabindex="0">
+                <a href="archive/missions.html" class="mdc-card__primary-action ignore-a-styling" >
+                    <img src="images/dawn.jpg">
+                    <h2>Browse by Mission</h2>
+                    <p>Dawn, NEOWISE, OSIRIS-REx, Surveys, and others</p>
+                </a>
             </section>
-
         </div>
+
+        <div class="primary-sections">
+            <section class="paper card mdc-card" tabindex="0">
+                <a href="olafs/" class="mdc-card__primary-action ignore-a-styling" >
+                    <img src="images/olaf-logo-rasterized.png">
+                    <h2>Archive with OLAF</h2>
+                    <p>Easily upload and archive your data, without the need to learn PDS4</p>
+                </a>
+            </section>
+            <section class="paper card mdc-card" tabindex="0">
+                <a href="archive/target-types.html" class="mdc-card__primary-action ignore-a-styling" >
+                    <img src="images/FerretLogo.png">
+                    <h2>Search with Ferret</h2>
+                    <p>Find datasets by target, or extract and compile data across them all</p>
+                </a>
+            </section>
+        </div>
+
+        <p class="center"><a href="aboutastsubnode.html">Learn more about us here</a>, or <a href="contact.html">get in touch with questions</a></p>
 
     </div></main>
     <!-- END main content -->
