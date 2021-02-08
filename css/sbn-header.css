@@ -150,7 +150,6 @@ nav {
     text-decoration: none;
     margin: 0;
     padding: 0;
-    color: var(--link);
     background: var(--raised-content);
 }
 
@@ -163,6 +162,8 @@ nav {
 .menu-list a {
     display: block;
     padding: 16px;
+    color: var(--text);
+    text-decoration: none;
 }
 
 .menu-list .divider {
@@ -251,6 +252,11 @@ nav {
 
 .search-results .no-results {
     text-align: center;
+}
+
+.search-result a {
+    color: var(--text);
+    text-decoration: none;
 }
 
 .search-result a:hover {

@@ -122,7 +122,6 @@
 (function(document, window) {
     document.querySelectorAll("main a[href$='.pdf']").forEach(link => link.target = '_blank');
     document.querySelectorAll("main a[href$='.cat']").forEach(link => link.target = '_blank');
-    document.querySelectorAll("main a[href*='sbnarchive.psi.edu']").forEach(link => link.target = '_blank');
 })(document, window);
 
 /* Methods to Hide/Show Superseded versions of a data set */
