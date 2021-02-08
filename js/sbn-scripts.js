@@ -1,36 +1,43 @@
 // HTML fragment loading
 (function(document, window) {
-    var includeHTML = function() {
-        var elements, i, elmnt, file, xhttp;
-        elements = document.querySelectorAll("div[include-html]");
+    var includeHTML = function(startingElement) {
+        var elements, elmnt, file, xhttp;
+        var source = startingElement ? startingElement : document;
+        elements = source.querySelectorAll("div[include-html]");
         for (elmnt of elements) {
             file = elmnt.getAttribute("include-html");
             if (file) {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {
-                            elmnt.innerHTML = this.responseText;
-                        }
-                        if (this.status == 404) {
-                            elmnt.innerHTML = "Included html not found.";
-                        }
-
-                        // unwrap
-                        var parent = elmnt.parentNode
-                        while (elmnt.firstChild) { parent.insertBefore(elmnt.firstChild, elmnt)}
-                        parent.removeChild(elmnt)
-
-                        includeHTML()
-                        window.dispatchEvent(new Event("PDSSBN_contentLoaded"))
-                    }
-                }
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                return;
+                makeRequest(file, elmnt);
+                // return;
             }
         }
     };
+
+    var makeRequest = function(url, sourceElement) {
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+                if (this.status == 200) {
+                    sourceElement.innerHTML = this.responseText;
+
+                }
+                if (this.status == 404) {
+                    sourceElement.innerHTML = "Included html not found.";
+                }
+
+                includeHTML(sourceElement)
+
+                // unwrap
+                var parent = sourceElement.parentNode
+                while (sourceElement.firstChild) { parent.insertBefore(sourceElement.firstChild, sourceElement)}
+                parent.removeChild(sourceElement)
+
+                window.dispatchEvent(new Event("PDSSBN_contentLoaded"))
+            }
+        }
+        xhttp.open("GET", url, true);
+        xhttp.send();
+    }
     includeHTML();
 })(document, window);
 

@@ -6,7 +6,7 @@
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    background-image: url("../images/bennu.png");
+    background-image: url("../images/bennu.jpg");
     background-size: 40%;
     background-repeat: no-repeat;
     background-position-x: right;
