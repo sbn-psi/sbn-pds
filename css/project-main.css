@@ -53,38 +53,42 @@ table {
 
 /* Dark - default */
 :root {
-    --page-background: #12181D;
-    --background-l1: #192028;
-    --section-header: #282F36;
-    --raised-content: #474C53;
-    --raised-content-hover: #656A6F;
-    --text: #FDFDFD;
-    --secondary-text: #C0C2C4;
-    --icon: #FDFDFD;
-    --link: #B5DCFB;
-    --link-hover: #D5EBFD;
-    --link-subtitle: #FFFFFF;
-    --button: #57B4FF;
-    --button-contrast: #000000;
-    --hr: rgba(255, 255, 255, 0.25);
+    --page-background: #12181D;  /* Grey 900 */
+    --background-l1: #192028;  /* Grey 800 */
+    --section-header: #282F36;  /* Grey 700 */
+    --raised-content: #474C53;  /* Grey 600 */
+    --raised-content-hover: #656A6F;  /* Grey 500 */
+    --text: #FDFDFD; /* Grey 50 */
+    --secondary-text: #C0C2C4; /* Grey 300 */
+    --icon: #FDFDFD; /* Grey 50 */
+    --link: #B5DCFB; /* Blue 200 */
+    --link-visited: #C39EF2; /* Purple 100 */
+    --link-hover: #D5EBFD;  /* Blue 100 */
+    --link-visited-hover: #DBCBF4;  /* Purple 50 */
+    --link-subtitle: #FFFFFF;  /* Grey 0 */
+    --button: #57B4FF;  /* Grey 400 */
+    --button-contrast: #000000;  /* Grey 1000 */
+    --hr: rgba(255, 255, 255, 0.25);  /* Grey 0 25% */
 }
 
 /* Light */
 [data-theme="light"] {
-    --page-background: #FFFFFF;
-    --background-l1: #FFFFFF;
-    --section-header: #DEDFE0;
-    --raised-content: #FFFFFF;
-    --raised-content-hover: #EEEEEF;
-    --text: #192028;
-    --secondary-text: #192028A0;
-    --icon: #192028;
-    --link: #0A6BB9;
-    --link-hover: #0B7ED9;
-    --link-subtitle: #000000;
-    --button: #0A6BB9;
-    --button-contrast: #FFFFFF;
-    --hr: rgba(0, 0, 0, 0.25);
+    --page-background: #FFFFFF; /* Grey 0 */
+    --background-l1: #FFFFFF; /* Grey 0 */
+    --section-header: #DEDFE0; /* Grey 200 */
+    --raised-content: #FFFFFF; /* Grey 0 */
+    --raised-content-hover: #EEEEEF; /* Grey 100 */
+    --text: #192028; /* Grey 800 */
+    --secondary-text: #192028A0; /* Grey 800 */
+    --icon: #192028; /* Grey 800 */
+    --link: #0A6BB9; /* Blue 800 */
+    --link-visited: #5A1378; /* Purple 800 */
+    --link-hover: #0B7ED9; /* Blue 700 */
+    --link-visited-hover: #741B99; /* Purple 700 */
+    --link-subtitle: #000000; /* Grey 1000 */
+    --button: #0A6BB9; /* Blue 800 */
+    --button-contrast: #FFFFFF; /* Grey 0 */
+    --hr: rgba(0, 0, 0, 0.25); /* Grey 1000 25% */
 }
 
 /* === Begin custom CSS === */
@@ -99,13 +103,21 @@ body {
     color: var(--text);
 }
 
-main a:not(.ignore-a-styling):not(.pds-button), nav a:not(.ignore-a-styling):not(.pds-button), footer a:not(.ignore-a-styling):not(.pds-button) {
+main a:not(.ignore-a-styling):not(.pds-button){
     color: var(--link);
-    text-decoration: none;
+    text-decoration: underline;
+}
+main li > a:not(.ignore-a-styling):not(.pds-button), nav a, main td > a {
+    text-decoration: none !important;
+}
+main a:not(.ignore-a-styling):not(.pds-button):visited {
+    color: var(--link-visited);
 }
 main a:not(.ignore-a-styling):not(.pds-button):hover {
     color: var(--link-hover);
-    /* text-decoration: underline; */
+}
+main a:not(.ignore-a-styling):not(.pds-button):visited:hover {
+    color: var(--link-visited-hover);
 }
 main a[href^='http']:not([href*='psi.edu']):after,
 nav a[href^='http']:not([href*='psi.edu']):after {
@@ -322,7 +334,7 @@ main {
     margin-right: 8px;
 }
 .breadcrumbs li:not(:last-child), .breadcrumbs a {
-    color: var(--secondary-text) !important
+    color: var(--secondary-text) !important;
 }
 
 .breadcrumbs + .breadcrumbs li {
