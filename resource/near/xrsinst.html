@@ -1,33 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <base href="/pds-staging/" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>NEAR XRS Data</title>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-    <link rel="stylesheet" href="/pds-staging/css/project-main.css">
-    <link rel="stylesheet" href="/pds-staging/css/sbn-header.css">
-    <link rel="stylesheet" href="/pds-staging/css/sbn-sidebar.css">
-    <link rel="stylesheet" href="/pds-staging/css/sbn-footer.css">
+    <link rel="stylesheet" href="css/project-main.css">
+    <link rel="stylesheet" href="css/sbn-header.css">
+    <link rel="stylesheet" href="css/sbn-footer.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
 
     <!-- PDS Feedback Widget -->
     <!-- Only add JQuery if you do not already include a library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
-    <link rel="stylesheet" href="/pds-staging/feedback/css/feedback.css"  type="text/css" media="screen" />
-    <script src="/pds-staging/feedback/js/modernizr-custom.js"></script>
-    <script src="/pds-staging/feedback/js/config.js"></script>
-    <script src="/pds-staging/feedback/js/feedback.js"></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
     <!-- -->
 </head>
 <body>
 
-    <div include-html="/pds-staging/sbn-header.html"></div>
+    <div include-html="sbn-header.html"></div>
 
     <!-- BEGIN main content -->
     <main><div class="sbn-main">
+        <ol class="breadcrumbs">
+            <li><a href="/pds-staging/">Home</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="archive/missions.html">Missions</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="resource/near">NEAR</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li>X-Ray Spectrometer (XRS) Data</li>
+        </ol>
+        <ol class="breadcrumbs">
+            <li><a href="/pds-staging/">Home</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="archive/data-types.html">Data Type</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="archive/xgn.html">Nuclear</a></li>
+            <li class="breadcrumbs-separator">/</li>
+        </ol>
+        <ol class="breadcrumbs">
+            <li><a href="/pds-staging/">Home</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="archive/target-types.html">Target Type</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="archive/asteroids.html">All Asteroid Data</a></li>
+            <li class="breadcrumbs-separator">/</li>
+        </ol>
         <center>
             <h1> NEAR X-Ray Spectrometer (XRS) Data </h1>
             </center>
@@ -109,13 +138,13 @@
                    2001-01-02  (002) <br>
 
             <p>
-            <b> Higlighted links:</b>
+            <h3> Higlighted links:</h3>
 
             <ul>
-            <li><a href="/pds-staging/resource/near/xrs_results">XRS Results from the Nittler, 2001 MAPS paper</a>
-            (The file <a href="/pds-staging/resource/near/xrs_results/resinfo.txt">resinfo.txt</a> provides an
+            <li><a href="resource/near/xrs_results">XRS Results from the Nittler, 2001 MAPS paper</a>
+            (The file <a href="resource/near/xrs_results/resinfo.txt">resinfo.txt</a> provides an
             overview of the contents of this directory.)
-            <li><a href="/pds-staging/resource/near/xrs_results/xrsmaps_fluorescence.txt">Elemental ratios for Eros</a>
+            <li><a href="resource/near/xrs_results/xrsmaps_fluorescence.txt">Elemental ratios for Eros</a>
             <li> <a href="https://sbnarchive.psi.edu/pds3/near/NEAR_A_XRS_3_EDR_EROS_ORBIT_V1_0/browse/level2/xgrsbrowse.htm">XRS Daily Images</a>
             <li><a href="https://sbnarchive.psi.edu/pds3/near/NEAR_A_XRS_3_EDR_EROS_ORBIT_V1_0/browse/level3/xgrsbrowse.htm">XRS Images during specific solar flares</a>
 
@@ -124,7 +153,7 @@
             <br>
 
             <center>
-            <a href="/pds-staging/resource/near">Return to NEAR Archive</a>
+            <a href="resource/near">Return to NEAR Archive</a>
             </center>
             <br>
     </div></main>
@@ -132,12 +161,12 @@
 
     
 
-    <div include-html="/pds-staging/sbn-footer.html"></div>
+    <div include-html="sbn-footer.html"></div>
 
 
-<script src="/pds-staging/js/angular/angular.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/pds-staging/js/search.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/pds-staging/js/search-data.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/pds-staging/js/sbn-scripts.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/sbn-scripts.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

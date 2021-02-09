@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <base href="/pds-staging/" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>PDS Asteroid/Dust Subnode</title>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-    <link rel="stylesheet" href="/pds-staging/css/project-main.css">
-    <link rel="stylesheet" href="/pds-staging/css/sbn-header.css">
-    <link rel="stylesheet" href="/pds-staging/css/sbn-sidebar.css">
-    <link rel="stylesheet" href="/pds-staging/css/sbn-footer.css">
+    <link rel="stylesheet" href="css/project-main.css">
+    <link rel="stylesheet" href="css/sbn-header.css">
+    <link rel="stylesheet" href="css/sbn-footer.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
 
     <!-- PDS Feedback Widget -->
     <!-- Only add JQuery if you do not already include a library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
-    <link rel="stylesheet" href="/pds-staging/feedback/css/feedback.css"  type="text/css" media="screen" />
-    <script src="/pds-staging/feedback/js/modernizr-custom.js"></script>
-    <script src="/pds-staging/feedback/js/config.js"></script>
-    <script src="/pds-staging/feedback/js/feedback.js"></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
     <!-- -->
 </head>
 <body>
 
-    <div include-html="/pds-staging/sbn-header.html"></div>
+    <div include-html="sbn-header.html"></div>
 
     <!-- BEGIN main content -->
     <main><div class="sbn-main">
 
         <h1 class="resource-title">Contact Small Bodies Node</h1>
 
-        <p>The The Asteroid/Dust Subnode of the Planetary Data System is located at the Planetary Science Institute in Tucson, AZ<br/>
+        <p>The Asteroid/Dust Subnode of the Planetary Data System is located at the Planetary Science Institute in Tucson, AZ<br/>
         <br/>
         <strong>Planetary Science Institute </strong><br/>
             1700 East Fort Lowell<br/>
@@ -52,7 +56,7 @@
                 <td>General questions about Small Bodies Node</td><td>Ludmilla&nbsp;Kolokolova</td><td><a href="mailto:ludmilla@astro.umd.edu">ludmilla@astro.umd.edu</a></td>
             </tr>
             <tr>
-                <td>SBN Principal Investigator</td><td>James&nbsp;"Gerbs"&nbsp;Bauer</td><td><a href="mailto:gerbsb@%umd.edu">gerbsb@%umd.edu</a></td>
+                <td>SBN Principal Investigator</td><td>James&nbsp;"Gerbs"&nbsp;Bauer</td><td><a href="mailto:gerbsb@astro.umd.edu">gerbsb@astro.umd.edu</a></td>
             </tr>
             <tr>
                 <td>SBN Asteroid/Dust Manager</td><td>Eric&nbsp;Palmer</td><td><a href="mailto:epalmer@psi.edu">epalmer@psi.edu</a></td>
@@ -86,12 +90,12 @@
     </div></main>
     <!-- END main content -->
 
-    <div include-html="/pds-staging/sbn-footer.html"></div>
+    <div include-html="sbn-footer.html"></div>
 
-    <script src="/pds-staging/js/angular/angular.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/pds-staging/js/search.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/pds-staging/js/search-data.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/pds-staging/js/sbn-scripts.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/sbn-scripts.js" type="text/javascript" charset="utf-8"></script>
 
 </body>
 </html>

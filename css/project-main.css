@@ -49,7 +49,45 @@ table {
 	border-spacing: 0;
 }
 
-/* Begin custom CSS */
+/* === Theme colors === */
+
+/* Dark - default */
+:root {
+    --page-background: #12181D;
+    --background-l1: #192028;
+    --section-header: #282F36;
+    --raised-content: #474C53;
+    --raised-content-hover: #656A6F;
+    --text: #FDFDFD;
+    --secondary-text: #C0C2C4;
+    --icon: #FDFDFD;
+    --link: #B5DCFB;
+    --link-hover: #D5EBFD;
+    --link-subtitle: #FFFFFF;
+    --button: #57B4FF;
+    --button-contrast: #000000;
+    --hr: rgba(255, 255, 255, 0.25);
+}
+
+/* Light */
+[data-theme="light"] {
+    --page-background: #FFFFFF;
+    --background-l1: #FFFFFF;
+    --section-header: #DEDFE0;
+    --raised-content: #FFFFFF;
+    --raised-content-hover: #EEEEEF;
+    --text: #192028;
+    --secondary-text: #192028A0;
+    --icon: #192028;
+    --link: #0A6BB9;
+    --link-hover: #0B7ED9;
+    --link-subtitle: #000000;
+    --button: #0A6BB9;
+    --button-contrast: #FFFFFF;
+    --hr: rgba(0, 0, 0, 0.25);
+}
+
+/* === Begin custom CSS === */
 
 body {
     margin: 0;
@@ -57,17 +95,17 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 160%;
-    background-color: #12181D;
-    color: #FDFDFD;
+    background-color: var(--page-background);
+    color: var(--text);
 }
 
 main a:not(.ignore-a-styling):not(.pds-button), nav a:not(.ignore-a-styling):not(.pds-button), footer a:not(.ignore-a-styling):not(.pds-button) {
-    color: #B5DCFB;
+    color: var(--link);
     text-decoration: none;
 }
 main a:not(.ignore-a-styling):not(.pds-button):hover {
-    color: #D5EBFD;
-    text-decoration: underline;
+    color: var(--link-hover);
+    /* text-decoration: underline; */
 }
 main a[href^='http']:not([href*='psi.edu']):after,
 nav a[href^='http']:not([href*='psi.edu']):after {
@@ -82,6 +120,11 @@ nav a[href^='http']:not([href*='psi.edu']):after {
     height: 20px;
     content:"";
 }
+[data-theme="light"] main a[href^='http']:not([href*='psi.edu']):after, 
+[data-theme="light"] nav a[href^='http']:not([href*='psi.edu']):after {
+    background-image: url('/pds-staging/images/external-black.svg');
+}
+
 strong, b {
     font-weight: bold;
 }
@@ -91,6 +134,17 @@ em, i {
 u { 
     text-decoration: underline;
 }
+
+hr {
+    border-color: var(--hr);
+    height: 0px;
+    box-sizing: border-box;
+}
+
+ul li ul {
+    margin-left: 16px;
+}
+
 
 #pds-superseded {
     display: none;
@@ -112,8 +166,8 @@ u {
     align-items: center;
     padding: 6px 16px;
 
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), #2398F4;
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2), 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), var(--button);
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
 
     position: relative;
@@ -130,7 +184,7 @@ u {
 
     /* primary / contrast text */
 
-    color: #192028;
+    color: var(--button-contrast);
 }
 .fullwidth {
     width: 100%;
@@ -140,44 +194,45 @@ table.fullwidth td:first-child {
 }
 
 .pds-button:hover {
-    background: #57B4FF;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    background-color: #57B4FF;
 }
 
 h1 {
     font-size: 48px;
     line-height: initial;
     letter-spacing: 0px;
-    margin: 32px 0;
+    margin: 40px 0;
 }
 h2 {
     font-size: 34px;
     line-height: initial;
     letter-spacing: 0.25px;
-    margin: 28px 0;
+    margin: 40px 0;
 }
 h3 {
     font-size: 24px;
     line-height: initial;
     letter-spacing: 0px;
-    margin: 24px 0;
+    margin: 40px 0;
 }
 h4 {
     font-size: 20px;
     line-height: initial;
     letter-spacing: 0.15px;
-    margin: 20px 0;
+    margin: 32px 0;
 }
 
 table {
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
     margin: 24px 0;
 
-    background: #474C53;
+    background: var(--raised-content);
 
-    border: 1px solid #282F36;
     box-sizing: border-box;
 
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2), 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
 }
 td, th {
@@ -190,7 +245,8 @@ td > a:only-child {
     padding: 16px;
 }
 td a:hover {
-    background: #656A6F;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    background: var(--raised-content-hover);
 }
 th, td i {
     font-weight: bold;
@@ -199,8 +255,8 @@ th, td i {
 td[rowspan]:not([rowspan="1"]) {
     vertical-align: text-top;
 }
-tr:not(:last-child) {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+th, tr:not(:last-child) td{
+    border-bottom: 1px solid var(--hr);
 }
 
 main p, main li {
@@ -224,7 +280,8 @@ main {
 
 
 .paper {
-    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.14), 0px 6px 30px rgba(0, 0, 0, 0.12), 0px 8px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
 }
 
 .breadcrumbs {
@@ -242,39 +299,43 @@ main {
     margin-right: 8px;
 }
 .breadcrumbs li:not(:last-child), .breadcrumbs a {
-    color: rgba(253,253,253,0.54) !important
+    color: var(--secondary-text) !important
+}
+
+.breadcrumbs + .breadcrumbs li {
+    margin-top: 0;
+}
+.breadcrumbs + .breadcrumbs:not(:last-of-type) li {
+    margin-bottom: 0;
+}
+.breadcrumbs:not(:only-of-type):first-of-type li {
+    margin-bottom: 0;
 }
 
 .primary-sections {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+    flex-flow: column wrap;
+    justify-content: stretch;
 }
 .primary-sections section {
     flex: 1;
-    max-width: 300px;
     margin: 16px;
-    background: #474C53;
-    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.14), 0px 6px 30px rgba(0, 0, 0, 0.12), 0px 8px 10px rgba(0, 0, 0, 0.2);
+    background: var(--raised-content);
+}
+.primary-sections .section-header-img {
+    height: 120px;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px 4px 0 0;
 }
 .primary-sections section h2 {
     display: block;
     margin: 0 0 8px 0;
     padding: 16px;
     font-size: 20px;
-    background-color: #282F36;
-    background-repeat: no-repeat;
-    background-position: right 14px center;
-    background-size: 30px 30px;
-}
-.primary-sections #data-type-header {
-    background-image: url('/pds-staging/images/data-type.svg');
-}
-.primary-sections #target-type-header {
-    background-image: url('/pds-staging/images/target-type.svg');
-}
-.primary-sections #mission-header {
-    background-image: url('/pds-staging/images/mission.svg');
+    background-color: var(--section-header);
 }
 .primary-sections ul {
     list-style: none;
@@ -291,14 +352,15 @@ main {
     margin: 0;
 }
 a .subtitle {
-    color: white;
+    color:var(--link-subtitle);
     font-size: 0.8em;
     text-decoration: none !important;
     padding: 0 0.5em;
 }
 .primary-sections li a:hover {
-    text-decoration: underline;
-    background: #656A6F;
+    /* text-decoration: underline; */
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    background-color: var(--raised-content-hover);
 }
 
 /* iPhone 6 & wider */
@@ -313,7 +375,17 @@ a .subtitle {
     main {
         box-sizing: border-box;
     }
+    .primary-sections {
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .primary-sections section {
+        min-width: 250px;
+    }
 }
 /* iPad (landscape mode) & wider */
 @media (min-width: 1024px) {
+    .primary-sections section {
+        max-width: 300px;
+    }
 }
