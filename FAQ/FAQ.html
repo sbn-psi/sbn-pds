@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Frequently Asked Questions</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="/pds-staging/css/project-main.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-header.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-sidebar.css">
+    <link rel="stylesheet" href="/pds-staging/css/sbn-footer.css">
+
+    <!-- PDS Feedback Widget -->
+    <!-- Only add JQuery if you do not already include a library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <link rel="stylesheet" href="/pds-staging/feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="/pds-staging/feedback/js/modernizr-custom.js"></script>
+    <script src="/pds-staging/feedback/js/config.js"></script>
+    <script src="/pds-staging/feedback/js/feedback.js"></script>
+    <!-- -->
+</head>
+<body>
+
+    <div include-html="/pds-staging/sbn-header.html"></div>
+
+    <!-- BEGIN main content -->
+    <main><div class="sbn-main">
+        <ol class="breadcrumbs">
+            <li><a href="/pds-staging/">Home</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="/pds-staging/archive/FAQ.html">FAQ</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li>Cassini</li>
+        </ol>    
+        <center>
+        <h1> Frequently Asked Questions </h1>
+        </center>
+        <br>
+
+        <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+            for (i = 0; i < acc.length; i++) {
+              acc[i].addEventListener("click", function() {
+                /* Toggle between adding and removing the "active" class,
+                to highlight the button that controls the panel */
+                this.classList.toggle("active");
+            
+                /* Toggle between hiding and showing the active panel */
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                  panel.style.display = "none";
+                } else {
+                  panel.style.display = "block";
+                }
+              });
+            }</script>
+
+        <div><button class="accordion">General PDS</button>
+        <div class="panel">
+        <p>Lorem ipsum...</p>
+        </div>
+
+        <div><button class="accordion">Finding Data</button>
+        <div class="panel">
+        <p><ul>
+            <li><b>Q.  How can I find all the data available on a given asteroid or comet?</b>        
+            <li>A.  Try the Ferret (with link)<br>
+            
+            </p>
+        </div>
+
+        <div><button class="accordion">Archiving</button>
+        <div class="panel">
+        <p>Lorem ipsum...</p>
+        </div>
+
+        <button class="accordion">Images</button>
+        <div class="panel">
+        <p>Lorem ipsum...</p>
+        </div>
+
+        <button class="accordion">Data Format</button>
+        <div class="panel">
+        <p>Lorem ipsum...</p>
+        </div>
+
+        <button class="accordion">Use of Data</button>
+        <div class="panel">
+        <p>Lorem ipsum...</p>
+        </div>
+
+        <button class="accordion">OLAF/Ferret/SBIB</button>
+        <div class="panel">
+        <p>Lorem ipsum...</p>
+        </div>
+
+        <button class="accordion">General PDS4</button>
+        <div class="panel">
+        <p>Lorem ipsum...</p>
+        </div>
+        
+
+
+        <b>Finding Archive Data</b>
+        <ul>
+        <li><b>Q.  How can I find all the data available on a given asteroid or comet?</b>
+
+        <li>A.  Try the Ferret (with link)
+        <br>
+        <li><b>Q.  I'm working with an asteroid which was visited by a spacecraft.  How can I select image data on a specific area or crater of the asteroid?</b>
+        <li> A.  Try the Small Bodies Image Browser (SBIB) (with link)
+        <br>
+        <li><b>Q.  I can't find the data I need.  Help! </b>
+        <li>A.  Use the archive front page (link) to find data by mission, by data type, or by target type.  If you still can't find what you need, send a request through the Feedback tab on the side of the page and we will help you.
+        <br>
+        <li><b>Q.  I found the data I need, but it is in a format I don't know how to use.</b>
+        <li> A.  [Maybe we can have a page listing different types of data and suggestions of tools to use for them.]
+        <br>
+        <li><b>Q.  I found the table of data I need but how do I find out what the columns mean or what the units are on the columns?</b>
+        <li> A.  Each data file has a separate label file with the same filename, but with extension either .lbl or .xml.  Open this file to find the column definitions and other information about the data file.
+        <br>
+        <li><b>Q.  I found a broken link or bad data file, how do I report it?</b>
+        <li>A.  Use the "Feedback" tab on the side of the page
+        <br>
+        <li><b>Q.  I want to archive my data with OLAF.  How do I get started?
+        Q.  I'm trying to use OLAF but I am stuck.  Help!</b>
+        <br>
+        <li>A.  [Link to OLAF contact info]
+        </ul>
+
+    </div></main>
+    <!-- END main content -->
+
+    
+
+    <div include-html="/pds-staging/sbn-footer.html"></div>
+
+
+    <script src="/pds-staging/js/angular/angular.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/pds-staging/js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/pds-staging/js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/pds-staging/js/sbn-scripts.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
