@@ -324,6 +324,9 @@ main {
 .card a {
     height: 100%;
 }
+.card img.logo {
+  object-fit: contain;
+}
 
 .breadcrumbs {
     margin: 0;
