@@ -103,13 +103,18 @@ body {
     color: var(--text);
 }
 
-main a:not(.ignore-a-styling):not(.pds-button){
+/* Style all links blue */
+a:not(.ignore-a-styling):not(.pds-button) {
     color: var(--link);
     text-decoration: underline;
 }
+
+/* Hide underline for lists, tables, and nav */
 main li > a:not(.ignore-a-styling):not(.pds-button), nav a, main td > a {
     text-decoration: none !important;
 }
+
+/* Color visited/hovered links differently */
 main a:not(.ignore-a-styling):not(.pds-button):visited {
     color: var(--link-visited);
 }
@@ -119,6 +124,7 @@ main a:not(.ignore-a-styling):not(.pds-button):hover {
 main a:not(.ignore-a-styling):not(.pds-button):visited:hover {
     color: var(--link-visited-hover);
 }
+
 main a[href^='http']:not([href*='psi.edu']):after,
 nav a[href^='http']:not([href*='psi.edu']):after {
     background-image: url('/pds-staging/images/external.svg');
