@@ -91,6 +91,23 @@
     })
 })(document, window);
 
+// Load theme into header bar
+(function(document, window) {
+    window.addEventListener("PDSSBN_contentLoaded", function() {
+
+        if(window.PDSSBN_bootstrappedHeaderTheme === true ) return;
+        
+        var theme = document.querySelector('#page-theme img')
+        var header = document.getElementById('sbn-header')
+        if(!!theme && !!header) {
+            window.PDSSBN_bootstrappedHeaderTheme = true
+            console.log(`url('${theme.src})`)
+            header.style.backgroundImage = `url('${theme.src}')`
+            header.style.backgroundSize = 'auto 100%'
+        }
+    })
+})(document, window);
+
 // Theme toggle
 (function(document, window) {
     window.addEventListener("PDSSBN_contentLoaded", function() {
