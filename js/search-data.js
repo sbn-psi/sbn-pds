@@ -164,12 +164,6 @@ searchData.splice(0, 0, {
         url: '/pds-staging/archive/galileo.html',
         category: 'Mission'
     },{
-        name: 'Giotto',
-        subtitle: '1P/Halley (1682 Q1)',
-        instruments: ['Dust Impact Detector System', 'DID', 'Energetic Particle Analyzer', 'EPA', 'Radio Science Experiment', 'RSE', 'Halley Multicolour Camera', 'HMC', 'Ion Mass Spectrometer', 'IMS', 'Johnstone Plasma Analyzer', 'JPA', 'Magnetometer', 'MAG,', 'Optical Probe Experiment', 'OPE', 'Particle Impact Analyzer', 'PIA','Neutral Mass Spectrometer', 'NMS',],
-        url: 'http://pdssbn.astro.umd.edu/data_sb/missions/giotto/index.shtml',
-        category: 'Mission'
-    },{
         name: 'Hayabusa',
         subtitle: '25143 Itokawa',
         instruments: ['Asteroid Multi-band Imaging Camera', 'AMICA', 'Near-Infrared Spectrometer', 'NIRS', 'X-Ray Spectrometer', 'XRS', 'Light Detection and Ranging', 'LIDAR',],
