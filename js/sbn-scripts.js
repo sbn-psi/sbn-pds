@@ -97,12 +97,11 @@
 
         if(window.PDSSBN_bootstrappedHeaderTheme === true ) return;
         
-        var theme = document.querySelector('#page-theme img')
+        var theme = document.querySelector('.sbn-main').dataset.pageTheme
         var header = document.getElementById('sbn-header')
         if(!!theme && !!header) {
             window.PDSSBN_bootstrappedHeaderTheme = true
-            console.log(`url('${theme.src})`)
-            header.style.backgroundImage = `url('${theme.src}')`
+            header.style.backgroundImage = `url('${theme}')`
             header.style.backgroundSize = 'auto 100%'
         }
     })

@@ -356,10 +356,6 @@ main {
     margin-bottom: 0;
 }
 
-#page-theme {
-    display: none;
-}
-
 .primary-sections {
     display: flex;
     flex-flow: column wrap;
