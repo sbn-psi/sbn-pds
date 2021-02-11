@@ -141,6 +141,42 @@
     })
 })(document, window);
 
+
+// Menu toggle
+(function(document, window) {
+    window.addEventListener("PDSSBN_contentLoaded", function() {
+        if(window.PDSSBN_bootstrappedMenu === true ) return;
+        
+        const toggle = document.getElementById('menu-drawer')
+        if(!!toggle) {
+            window.PDSSBN_bootstrappedMenu = true
+            toggle.addEventListener("click", openMenu, false)
+        }
+
+        function openMenu(event) {
+            document.getElementById("menu").classList.add("open")
+            const backdrop = document.getElementById("menu-backdrop")
+            backdrop.classList.add('on')
+            backdrop.addEventListener('click', backdropClick)
+        }
+        function closeMenu(event) {
+            document.getElementById("menu").classList.remove("open")
+            document.getElementById("menu-backdrop").classList.remove('on')
+        }
+
+        // set up listener to close menu you click outside
+        const backdropClick = (event) => {
+            if(!event.target.closest('#menu') && !event.target.closest('#menu-drawer')) {
+                closeMenu()
+                removeListener()
+            }
+        }
+        const removeListener = () => {
+            document.getElementById("menu-backdrop").removeEventListener('click', backdropClick)
+        }
+    })
+})(document, window);
+
 // Update file links to open in new tab
 (function(document, window) {
     document.querySelectorAll("main a[href$='.pdf']").forEach(link => link.target = '_blank');
