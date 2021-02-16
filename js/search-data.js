@@ -1,97 +1,97 @@
 searchData.splice(0, 0, {
         name: 'Altimetry',
         subtitle: '',
-        description: ' These data sets will contain altimetry data which is collected by measuring reflected laser light from the surface of an object. This allows for measurements of height, distance, and altitude. Altimeters can utilize radio waves as well as lasers to measure distance.  ',
+        description: ' These data sets contain altimetry data which is collected by measuring reflected laser light from the surface of an object. This allows for measurements of height, distance, and altitude. Altimeters can utilize radio waves as well as lasers to measure distance.  ',
         url: '/pds-staging/archive/altimetry.html',
         category: 'Data Types'
     },{
         name: 'Plasma/Particles/Magnetosphere',
-        subtitle: 'NEAR Magnetometer',
-        description: 'A Magnometer is used to collect data about the magnetic forces of an object. These observation sets can contain magnetic field data and well as detected electromagnetic anomalies.',
-        url: '/pds-staging/resource/near/maginst.html',
+        subtitle: '',
+        description: 'These data sets contain data collected by a magnometer. A Magnometer is used to collect data about the magnetic forces of an object. These observation sets can contain magnetic field data and well as detected electromagnetic anomalies.',
+        url: '/pds-staging/archive/plasma.html',
         category: 'Data Types'
     },{
         name: 'Image Data',
         subtitle: '',
-        description: ' These data sets will contain Photographic image data, which can be either from ground based telescopes or from a space craft. These data sets will contain numerous images of an object of group of objects.  ',
+        description: ' These data sets contain Photographic image data, which can be either from ground based telescopes or from a spacecraft. These data sets will contain numerous images of an object or a group of objects. These data sets are mostly asteroid data sets with some comets and other solar system bodies. ',
         url: '/pds-staging/archive/image.html',
         category: 'Data Types'
     },{
         name: 'Maps and Mosaics',
         subtitle: '',
-        description: 'These data sets will contain Mosaic images which are a single large image stitched together from numerous smaller images to give a wide field view of an area.  Usually, it is constructed from a series of spacecraft images taken closely together in time so that the Sun angle is consistent throughout the mosaic; however, for global mosaics, that is not possible.  Additionally, the images are frequently photometrically corrected so that the reflected light is normalized to a single emission angle, typically 30°.',
+        description: 'These data sets contain Mosaic images which are a single large image stitched together from numerous smaller images to give a wide field view of an area.  Usually, it is constructed from a series of spacecraft images taken closely together in time so that the Sun angle is consistent throughout the mosaic; however, for global mosaics, that is not possible.  Additionally, the images are frequently photometrically corrected so that the reflected light is normalized to a single emission angle, typically 30°.',
         url: '/pds-staging/archive/maps.html',
         category: 'Data Types'
     },{
         name: 'NEO Surveys',
         subtitle: '',
-        description: ' These data sets will contain Astronomical Survey observations. An astronomical survey is a generalized search over all (or most) of the sky and lacks a specific target. For SBN, its goal is to discover comets and asteroids and improve our knowledge of their orbits.  Alternatively, an astronomical survey may comprise a set of many images or spectra of objects that share a common type or feature. ',
+        description: ' These data sets contain Astronomical Survey observations. An astronomical survey is a generalized search over all (or most) of the sky and lacks a specific target. For SBN, its goal is to discover comets and asteroids and improve our knowledge of their orbits.  Alternatively, an astronomical survey may comprise a set of many images or spectra of objects that share a common type or feature. ',
         url: '/pds-staging/archive/surveys.html',
         category: 'Data Types'
     },{
         name: 'Nuclear',
         subtitle: '',
-        description: '  These data sets will contain nuclear observations which are made using some speciality spectrometers that detect interactions of highly energetic particles.  These can be an X-ray spectrometer that measures X-rays that are emitted from the surface.  Another one is a neutron spectrometer, which detects different energy states of neutrons that are created when cosmic rays impact the surface.  Detailed analysis can separate particles, atoms, and molecules by their mass, momentum, or energy. Data from these observations can be used to determine chemical composition and abundance.  ',
+        description: '  These data sets contain nuclear observations which are made using some speciality spectrometers that detect interactions of highly energetic particles.  These can be an X-ray spectrometer that measures X-rays that are emitted from the surface.  Another one is a neutron spectrometer, which detects different energy states of neutrons that are created when cosmic rays impact the surface.  Detailed analysis can separate particles, atoms, and molecules by their mass, momentum, or energy. Data from these observations can be used to determine chemical composition and abundance.  ',
         url: '/pds-staging/archive/xgn.html',
         category: 'Data Types'
     },{
         name: 'Orbital data',
         subtitle: 'proper elements and dynamical families',
-        description: ' These data sets will contain the orbital observations of an object or a family of objects. These data sets will include the proper elements and dynamical families. Orbital observations can be ground based or from spacecraft. Orbital data sets are typically collected over a longer time period to allow for a complete observation of an orbital path.  ',
+        description: ' These data sets contain derived data relating to the orbits of objects. These data sets will include the proper elements and dynamical families. Orbital observations can be ground based or from spacecraft. Orbital data sets are typically collected over a longer time period to allow for a complete observation of an orbital path.  ',
         url: '/pds-staging/archive/orbital.html',
         category: 'Data Types'
     },{
         name: 'Photometry and Lightcurves',
         subtitle: '',
-        description: ' These data sets will contain Photometry observations, which are used to measure the brightness of celestial objects. These measurements can provide information about an object’s size, distance, temperature, and rotation period. ',
+        description: ' These data sets contain Photometry observations, which are used to measure the brightness of celestial objects. These measurements can provide information about an object’s size, distance, temperature, and rotational period. These data sets are mostly asteroid data sets with some comets and other solar system bodies.',
         url: '/pds-staging/archive/phot.html',
         category: 'Data Types'
     },{
         name: 'Physical Properties',
         subtitle: 'spin vectors, taxonomic classification, albedos, densities, and diameters',
-        description: 'These data sets will include observations on the physical properties of asteroids such as spin vectors, taxonomic classifications, albedos, densities and diameters.',
+        description: 'These data sets include observations on the physical properties of asteroids such as spin vectors, taxonomic classifications, albedos, densities and diameters.',
         url: '/pds-staging/archive/physical.html',
         category: 'Data Types'
     },{
         name: 'Polarimetry',
         subtitle: '',
-        description: 'These datasets will contain the measurement of polarization of electromagnetic waves such as radio or light waves (the orientation of the light waves). Typically polarimetry is done on electromagnetic waves that have traveled through or have been reflected, refracted or diffracted by some material in order to characterize that object. ',
+        description: 'These datasets contain the measurement of polarization of electromagnetic waves such as radio or light waves (the orientation of the light waves). Typically polarimetry is done on electromagnetic waves that have traveled through or have been reflected, refracted or diffracted by some material in order to characterize that object. ',
         url: '/pds-staging/archive/polarimetry.html',
         category: 'Data Types'
     },{
         name: 'Radar',
         subtitle: '',
-        description: ' These data sets will contain radar observations which is a measurement system that uses radio waves (Radar) to determine the range, angle, or velocity of objects. This is done by reflecting radar waves off of a target and analyzing the reflections. Radar data can be used to construct both radar images and shape models of objects.  ',
+        description: ' These data sets contain radar observations which is a measurement system that uses radio waves (Radar) to determine the range, angle, or velocity of objects. This is done by reflecting radar waves off of a target and analyzing the reflections. Radar data can be used to construct both radar images and shape models of objects.  ',
         url: '/pds-staging/archive/radar.html',
         category: 'Data Types'
     },{
         name: 'Radio Science',
         subtitle: '',
-        description: ' These data sets contain Radio astronomy observations which are conducted using large radio antennas referred to as radio telescopes, that are either used singularly, or with multiple linked telescopes utilizing the techniques of radio interferometry and aperture synthesis. The use of interferometry allows radio astronomy to achieve high angular resolution, as the resolving power of an interferometer is set by the distance between its components, rather than the size of its components.  ',
+        description: ' These data sets contain Radio science data, which makes use of the radio telemetry signal between the spacecraft and radio telescopes on Earth to accurately measure position of the spacecraft.  These measurements can be used to determine the gravity field, mass, and other physical characteristics of a body the spacecraft encounters. ',
         url: '/pds-staging/archive/rs.html',
         category: 'Data Types'
     },{
         name: 'Shape Models',
         subtitle: '',
-        description: 'Shape models (or Digital Terrain Models) 3D computer generated models of an object. Shape models can be computed using radar, visible image data, light curves with inversion techniques or laser altimeter data. ',
+        description: 'These data sets contain Shape models (or Digital Terrain Models) three-dimensional models of the shape of an object. They can be derived using radar data, visible image data, light curves with inversion techniques and/or laser altimeter data. ',
         url: '/pds-staging/shape-models/',
         category: 'Data Types'
     },{
         name: 'Gravity Models',
         subtitle: '',
-        description: ' These data sets contain gravity models which are created using the gravitational observations of an object. Gravity models can be derived from radio observations as well as spacecraft. Gravity models can include spherical harmonic models of the gravity field, radial gravity acceleration maps and internal density data.  ',
+        description: ' These data sets contain gravity models which are a detailed model of the gravitational field of an object, such as spherical harmonics, radial gravity acceleration, or internal density.  Gravity models are derived from radio science data which make use of the radio telemetry signal between the spacecraft and earth to accurately determine the position of the spacecraft ',
         url: '/pds-staging/archive/gravity.html',
         category: 'Data Types'
     },{
         name: 'SPICE Kernels',
         subtitle: '',
-        description: '  These data sets will include SPICE data, which contains time-series details of the position and pointing of the spacecraft, and the position and rotation state of the planets/small bodies.  It also includes exact definitions of the spacecraft equipment and instruments, to include how they are oriented on the spacecraft. The complete SPICE information provides deterministic information to compute relative and inertial positions, pointing and angles of objects in space.  ',
+        description: ' These data sets include SPICE data, which contains time-series details of the position and pointing of the spacecraft, and the position and rotation state of the planets/small bodies.  It also includes exact definitions of the spacecraft equipment and instruments, to include how they are oriented on the spacecraft. The complete SPICE information provides deterministic information to compute relative and inertial positions, pointing and angles of objects in space.',
         url: '/pds-staging/archive/spice.html',
         category: 'Data Types'
     },{
         name: 'Spectrophotometry and Spectra',
         subtitle: '',
-        description: ` These data sets will contain Spectrophotometry observations which are the quantitative measurement of the reflection or transmission properties of a material as a function of wavelength.This data can also be commonly represented as a chart or a graph that shows the intensity of light being emitted over a range of wavelengths (or wavenumbers). `,
+        description: ` These data sets contain Spectrophotometry observations which are the quantitative measurement of the reflection or transmission properties of a material as a function of wavelength.This data can also be commonly represented as a chart or a graph that shows the intensity of light being emitted over a range of wavelengths (or wavenumbers). `,
         url: '/pds-staging/archive/spectra.html',
         category: 'Data Types'
     },{
