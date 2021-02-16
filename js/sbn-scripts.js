@@ -107,6 +107,20 @@
     })
 })(document, window);
 
+// Add button ripples
+(function(document, window) {
+    window.addEventListener("PDSSBN_contentLoaded", function() {
+        document.querySelectorAll('.pds-button').forEach((button) => {
+            console.log(button.firstChild.classList)
+            if(!button.firstChild.classList || !button.firstChild.classList.contains('button-ripple')) {
+                const ripple = document.createElement('div')
+                ripple.className = 'button-ripple'
+                button.prepend(ripple)
+            }
+        })
+    })
+})(document, window);
+
 // Theme toggle
 (function(document, window) {
     window.addEventListener("PDSSBN_contentLoaded", function() {

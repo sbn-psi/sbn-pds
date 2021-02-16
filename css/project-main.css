@@ -176,44 +176,106 @@ ul li ul {
 .resource-title {
     text-align: center;
 }
+
 .pds-button {
-    /* Auto Layout */
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 6px 16px;
-
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), var(--button);
-    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+    padding: 0 16px 0 16px;
+    height: 36px;
     border-radius: 4px;
-
+    min-width: 64px;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
     position: relative;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    vertical-align: middle;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-appearance: none;
+
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: var(--button);
+    color: var(--button-contrast);
 
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 24px;
-
-    letter-spacing: 0.3px;
+    line-height: 2.25rem;
+    letter-spacing: 0.0892857143em;
     text-transform: uppercase;
     text-decoration: none;
-
-    /* primary / contrast text */
-
-    color: var(--button-contrast);
 }
+.pds-button:hover {
+    cursor: pointer;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.pds-button .button-ripple {
+    position: absolute;
+    box-sizing: content-box;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    border-radius: 4px;
+}
+
+.pds-button .button-ripple::before, .pds-button .button-ripple::after {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    content: "";
+    top: calc(50% - 100%);
+    left: calc(50% - 100%);
+    width: 200%;
+    height: 200%;
+    background-color: var(--button);
+}
+.pds-button .button-ripple::before {
+    transition: opacity 15ms linear, background-color 15ms linear;
+    z-index: 1;
+    background-color: white;
+    opacity: 0;
+}
+.pds-button .button-ripple::after {
+    z-index: 0;
+    transition: opacity 150ms linear;
+}
+.pds-button:hover .button-ripple::before, .pds-button .button-ripple::after {
+    opacity: 0.04;
+}
+.pds-button:active .button-ripple::after {
+    transition-duration: 75ms;
+    opacity: 0.12;
+    
+}
+
+.pds-button:active {
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.pds-button:hover .button-ripple::before {
+    opacity: 0.08;
+}
+.pds-button:active .button-ripple::after {
+    transition-duration: 75ms;
+    opacity: 0.24;
+}
+
 .fullwidth {
     width: 100%;
 }
 table.fullwidth td:first-child {
     width: 100%;
-}
-
-.pds-button:hover {
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    background-color: #57B4FF;
 }
 
 h1 {
