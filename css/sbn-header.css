@@ -80,7 +80,7 @@ nav {
     height: 57px; /* nav bar height */
     position: sticky;
     top: 0px;
-    z-index: 99;
+    z-index: 1;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -222,7 +222,7 @@ nav {
 }
 
 .search-result a {
-    color: var(--text);
+    color: var(--text) !important;
     text-decoration: none;
 }
 

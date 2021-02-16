@@ -342,7 +342,7 @@ main {
     user-select: none;
     margin-right: 8px;
 }
-.breadcrumbs li:not(:last-child), .breadcrumbs a {
+.breadcrumbs li:not(:last-child), .breadcrumbs a, .breadcrumbs .breadcrumbs-separator {
     color: var(--secondary-text) !important;
 }
 
