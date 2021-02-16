@@ -142,7 +142,7 @@ searchData.splice(0, 0, {
     },{
         name: 'Bopps',
         subtitle: 'Ceres',
-        instruments: ['Stratospheric Terahertz Observatory', 'STO',],
+        instruments: ['Stratospheric Terahertz Observatory (STO)',],
         url: 'http://pdssbn.astro.umd.edu/data_sb/missions/bopps/index.shtml',
         category: 'Mission'
     },{
@@ -160,13 +160,13 @@ searchData.splice(0, 0, {
     },{
         name: 'Galileo',
         subtitle: '243 Ida, 951 Gaspra, Small planetary satellites, Interplanetary dust',
-        instruments: ['Galileo dust detector system','GDDS',],
+        instruments: ['Galileo dust detector system (GDDS)',],
         url: '/pds-staging/archive/galileo.html',
         category: 'Mission'
     },{
         name: 'Hayabusa',
         subtitle: '25143 Itokawa',
-        instruments: ['Asteroid Multi-band Imaging Camera', 'AMICA', 'Near-Infrared Spectrometer', 'NIRS', 'X-Ray Spectrometer', 'XRS', 'Light Detection and Ranging', 'LIDAR',],
+        instruments: ['Asteroid Multi-band Imaging Camera (AMICA)', 'Near-Infrared Spectrometer (NIRS)', 'X-Ray Spectrometer (XRS)', 'Light Detection and Ranging (LIDAR)',],
         url: '/pds-staging/archive/hayabusa.html',
         category: 'Mission'
     },{
@@ -178,7 +178,7 @@ searchData.splice(0, 0, {
     },{
         name: 'IRAS',
         subtitle: 'Interplanetary dust, Asteroids',
-        instruments: ['SIMPS', 'Supplemental IRAS Minor Planet Survey', 'Focal Plane Array', 'FPA', 'Ritchey-Chretien telescope',],
+        instruments: ['Supplemental IRAS Minor Planet Survey (SIMPS)', 'Focal Plane Array (FPA)', 'Ritchey-Chretien telescope',],
         url: '/pds-staging/archive/iras.html',
         category: 'Mission'
     },{
@@ -196,38 +196,38 @@ searchData.splice(0, 0, {
     },{
         name: 'NEAR',
         subtitle: '433 Eros, 253 Mathilde, C/Hyakutake (1996 B2)',
-        instruments: ['Multi-Spectral Imager', 'MSI', 'Near-Infrared Spectrometer', 'NIRS', 'Gamma-Ray Spectrometer', 'GRS', 'X-ray Spectromter', 'XRS', 'NEAR Magnetometer', 'MAG', 'NEAR Laser Rangefinder', 'NLR', 'Radio Science Subsystem', 'RSS',],
+        instruments: ['Multi-Spectral Imager (MSI)', 'Near-Infrared Spectrometer (NIRS)', 'Gamma-Ray Spectrometer (GRS)', 'X-ray Spectromter (XRS)', 'NEAR Magnetometer (MAG)', 'NEAR Laser Rangefinder (NLR)', 'Radio Science Subsystem (RSS)',],
         url: '/pds-staging/resource/near',
         category: 'Mission'
     },{
         name: 'NEOWISE',
         subtitle: '',
-        instruments: ['Near Earth Asteroid Tracking', 'NEAT',],
+        instruments: ['Near Earth Asteroid Tracking (NEAT)',],
         url: '/pds-staging/resource/neowisediam.html',
         category: 'Mission'
     },{
         name: 'New Horizons',
         subtitle: 'Pluto, and satellites of Pluto and Jupiter',
-        instruments: ['ALICE Ultraviolet Imaging Spectrograph','ALICE', 'Linear Etalon Imaging Spectral Array', 'LEISA', 'RALPH', 'Long Range Reconnaissance Imager', 'LORRI', 'Multispectral Visible Imaging Camera', 'MVIC','Pluto Energetic Particle Spectrometer Science Investigation', 'PEPSSI','Radio Science Experiment', 'REX', 'Student Dust Counter', 'SDC', 'Solar Wind Around Pluto', 'SWAP',],
+        instruments: ['ALICE Ultraviolet Imaging Spectrograph (ALICE)', 'Linear Etalon Imaging Spectral Array (LEISA)', 'RALPH', 'Long Range Reconnaissance Imager (LORRI)', 'Multispectral Visible Imaging Camera (MVIC)','Pluto Energetic Particle Spectrometer Science Investigation (PEPSSI)','Radio Science Experiment (REX)', 'Student Dust Counter (SDC)', 'Solar Wind Around Pluto (SWAP)', ],
         url: 'http://pdssbn.astro.umd.edu/data_sb/missions/newhorizons/index.shtml',
         category: 'Mission'
     },{
         name: 'New Horizons Kuiper Belt Extended Mission',
         subtitle: '486958 Arrokoth (KBO)',
-        instruments: ['ALICE Ultraviolet Imaging Spectrograph','ALICE', 'Linear Etalon Imaging Spectral Array', 'LEISA', 'RALPH', 'Long Range Reconnaissance Imager', 'LORRI', 'Multispectral Visible Imaging Camera', 'MVIC','Pluto Energetic Particle Spectrometer Science Investigation', 'PEPSSI','Radio Science Experiment', 'REX', 'Student Dust Counter', 'SDC', 'Solar Wind Around Pluto', 'SWAP', ],
+        instruments: ['ALICE Ultraviolet Imaging Spectrograph (ALICE)', 'Linear Etalon Imaging Spectral Array (LEISA)', 'RALPH', 'Long Range Reconnaissance Imager (LORRI)', 'Multispectral Visible Imaging Camera (MVIC)','Pluto Energetic Particle Spectrometer Science Investigation (PEPSSI)','Radio Science Experiment (REX)', 'Student Dust Counter (SDC)', 'Solar Wind Around Pluto (SWAP)', ],
         url: 'https://pdssbn.astro.umd.edu/data_sb/missions/nh-kem/index.shtml',
         category: 'Mission'
     },{
         name: 'OSIRIS-REx',
         subtitle: '101955 Bennu',
-        instruments: ['OCAMS', 'TAGCAMS', 'OVIRS', 'OTES', 'REXIS', 'OLA', 'Deep Space Network', 'DSN',],
+        instruments: ['OCAMS', 'TAGCAMS', 'OVIRS', 'OTES', 'REXIS', 'OLA', 'Deep Space Network (DSN)',],
         url: '/pds-staging/resource/orex/',
         category: 'Mission'
     },{
         name: 'Rosetta',
         subtitle: '2867 Steins, 21 Lutetia',
-        instruments: ['ALICE Ultraviolet Imaging Spectrograph', 'ALICE', 'Comet Nucleus Sounding Experiment By Radiowave Transmission', 'CONSERT', 'Cometary Secondary Ion Mass Analyzer', 'COSIMA', 'Grain Impact Analyser and Dust Accumulator', 'GIADA', 'Micro-Imaging Dust Analysis System', 'MIDAS', 'Microwave Spectroscopy ', 'MIRO', 'Rosetta Orbiter Navigation Camera', 'NAVCAM', 'OSIRIS Narrow Angle Camera', 'OSINAC', 'OSIRIS Wide Angle Camera', 'OSIWAC', 'Rosetta Orbiter Spectrometer for Ion and Neutral Analysis', 'ROSINA', 'Rosetta Orbiter Plasma Consortium Ion Composition Analyser', 'RPCICA', 'Rosetta Orbiter Plasma Consortium Ion and Electron Sensor', 'RPCIES', 'Rosetta Orbiter Plasma Consortium Langmuir Probe', 'RPCLAP', 'Rosetta Orbiter Plasma Consortium Fluxgate Magnetometer', 'RPCMAG', 'Rosetta Orbiter Plasma Consortium Mutual Impedance Probe', 'RPCMIP', 'Radio Science', 'RSI', 'Standard Radiation Environment Monitor', 'SREM', 'Visible and Infrared Thermal Imaging Spectrometer', 'VIRTIS', 
-                     'Alpha-Proton-X-ray Spectrometer', 'APXS', 'Rosetta Lander Cometary Infrared and Visible Analyser', 'CIVA', 'Cometary Sampling and Composition Experiment', 'COSAC', 'Methods of Determining and Understanding Light Elements from Unequivocal Stable Isotope Compositions', 'MODULUS', 'Multi-Purpose Sensors For Surface and Sub-Surface Science', 'MUPUS', 'Rosetta Lander Imaging System - Descent and close-up Imager', 'ROLIS', 'RoLand Magnetic field investigation and Plasma monitor', 'ROMAP', 'Drill and Sampling Device', 'SD2', 'Surface Electrical, Seismic and Acoustic Monitoring Experiments', 'SESAME',],
+        instruments: ['ALICE Ultraviolet Imaging Spectrograph (ALICE)', 'Comet Nucleus Sounding Experiment By Radiowave Transmission (CONSERT)', 'Cometary Secondary Ion Mass Analyzer (COSIMA)', 'Grain Impact Analyser and Dust Accumulator (GIADA)', 'Micro-Imaging Dust Analysis System (MIDAS)', 'Microwave Spectroscopy (MIRO)', 'Rosetta Orbiter Navigation Camera (NAVCAM)', 'OSIRIS Narrow Angle Camera (OSINAC)', 'OSIRIS Wide Angle Camera (OSIWAC)', 'Rosetta Orbiter Spectrometer for Ion and Neutral Analysis (ROSINA)', 'Rosetta Orbiter Plasma Consortium Ion Composition Analyser (RPCICA)', 'Rosetta Orbiter Plasma Consortium Ion and Electron Sensor (RPCIES)', 'Rosetta Orbiter Plasma Consortium Langmuir Probe (RPCLAP)', 'Rosetta Orbiter Plasma Consortium Fluxgate Magnetometer (RPCMAG)', 'Rosetta Orbiter Plasma Consortium Mutual Impedance Probe (RPCMIP)', 'Radio Science (RSI)', 'Standard Radiation Environment Monitor (SREM)', 'Visible and Infrared Thermal Imaging Spectrometer (VIRTIS)', 
+                     'Alpha-Proton-X-ray Spectrometer (APXS)', 'Rosetta Lander Cometary Infrared and Visible Analyser (CIVA)', 'Cometary Sampling and Composition Experiment (COSAC)', 'Methods of Determining and Understanding Light Elements from Unequivocal Stable Isotope Compositions (MODULUS)', 'Multi-Purpose Sensors For Surface and Sub-Surface Science (MUPUS)', 'Rosetta Lander Imaging System - Descent and close-up Imager (ROLIS)', 'RoLand Magnetic field investigation and Plasma monitor (ROMAP)', 'Drill and Sampling Device (SD2)', 'Surface Electrical, Seismic and Acoustic Monitoring Experiments (SESAME)',],
         url: 'http://pdssbn.astro.umd.edu/data_sb/missions/rosetta/index.shtml',
         category: 'Mission'
     },{
@@ -239,7 +239,7 @@ searchData.splice(0, 0, {
     },{
         name: 'Ulysses',
         subtitle: 'Interplanetary dust',
-        instruments: ['Ulysses dust detector system', 'UDDS',],
+        instruments: ['Ulysses dust detector system (UDDS)',],
         url: '/pds-staging/resource/udds.html',
         category: 'Mission'
     },{

@@ -37,7 +37,28 @@
             <li class="breadcrumbs-separator">/</li>
             <li>Missions</li>
         </ol>
-        <div include-html="sbn-missions.html"></div>
+
+        <h2>Browse by Mission</h2>
+        <table class="fullwidh">
+            <thead>
+                <tr>
+                    <th>Mission</th><th>Targets</th><th>Instruments</th>
+                </tr>
+            </thead>
+            <tbody id="search-data-table">
+                <script>
+                    ((window, document) => {
+                        window.addEventListener("load", () => {
+                            searchData.filter(item => item.category === 'Mission').forEach(item => {
+                                let tr = document.createElement('tr');
+                                tr.innerHTML = `<td><a href="${item.url}">${item.name}</a></td><td>${item.subtitle}</td><td>${item.instruments.map(instrument => instrument.match(/\((.*?)\)/) ? instrument.match(/\((.*?)\)/)[1] : instrument).join(', ')}</td>`
+                                document.getElementById('search-data-table').appendChild(tr)
+                            })
+                        })
+                    })(window, document);
+                </script>
+            </tbody>
+        </table>
 
     </div></main>
     <!-- END main content -->
