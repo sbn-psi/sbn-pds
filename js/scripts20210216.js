@@ -146,12 +146,12 @@
             if (event.target.checked) {
                 document.documentElement.setAttribute('data-theme', 'light');
                 localStorage.setItem('theme', 'light');
-                document.cookie = "theme=light; domain=psi.edu";
+                document.cookie = "theme=light; domain=.psi.edu";
             }
             else {
                 document.documentElement.setAttribute('data-theme', 'dark');
                 localStorage.setItem('theme', 'dark');
-                document.cookie = "theme=dark; domain=psi.edu";
+                document.cookie = "theme=dark; domain=.psi.edu";
             }    
         }
     })
