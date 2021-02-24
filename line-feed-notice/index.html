@@ -92,6 +92,7 @@ lines = f.read().splitlines()
             <ul>
                 <li>Java's standard library includes <a href="https://docs.oracle.com/javase/8/docs/api/java/io/BufferedReader.html#readLine--"> the <code>readLine</code> method</a>, used as part of a <code>BufferedReader</code> which will assist in traversing the file.</li>
                 <li>In Java 8, you can use <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#lines-java.nio.file.Path-"><code>Files.lines</code> as well</a></li>
+                <li>If you're using Apache Commons, <a href="https://commons.apache.org/proper/commons-io/apidocs/org/apache/commons/io/FileUtils.html#readLines-java.io.File-java.nio.charset.Charset-">you may wish to use <code>FileUtils.readLines()</code></a></li>
             </ul> 
         </ul>
 
