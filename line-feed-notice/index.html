@@ -52,19 +52,20 @@
             <code class="bad">f = open(filename, 'r')
 lines = []
 while True:
-    line = f.read(20)
+    line = f.read(20) # Read twenty characters
     if not line:
         break;
     lines.append(line)
     
-    # skipping CR+LF characters
+    # Skip CR+LF characters
     f.read(2)</code><br/>
 
             <strong><em>Instead</em></strong> do this: 
             <code class="good">f = open(filename, 'r')
 lines = []
 while True:
-    line = f.readline() # Automatically handles line-endings
+    # Read a line with either CR+LF or LF, and remove those characters
+    line = f.readline().strip('\r\n') 
     if not line:
         break;
     lines.append(line)</code><br/>
@@ -76,7 +77,8 @@ lines = f.read().split('\r\n')</code><br/>
 
             <strong><em>Instead</em></strong> do this: 
             <code class="good">f = open(filename, 'r')
-lines = f.read().splitlines() # Automatically handles line-endings</code>
+lines = f.read().splitlines() 
+# Reads the entire file into list of lines (without ending characters)</code>
             </p>
 
         <p>Some examples of methods you can use to handle this automatically:</p>
