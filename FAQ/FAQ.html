@@ -4,7 +4,7 @@
     <base href="/pds-staging/" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>PDS Asteroid/Dust Subnode</title>
+    <title>Frequently Asked Questions | PDS Asteroid/Dust Subnode</title>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
@@ -37,9 +37,7 @@
         <ol class="breadcrumbs">
             <li><a href="/pds-staging/">Home</a></li>
             <li class="breadcrumbs-separator">/</li>
-            <li><a href="/pds-staging/archive/FAQ/FAQ.html">FAQ</a></li>
-            <li class="breadcrumbs-separator">/</li>
-            <li>FAQ</li>
+            <li>Frequently Asked Questions</li>
         </ol>    
         <center>
         <h1> Frequently Asked Questions </h1>
@@ -57,6 +55,7 @@
             #faq {
                 display: flex;
                 flex-flow: row nowrap;
+                align-items: flex-start;
             }
             #questions {
                 flex: 3;
@@ -67,14 +66,26 @@
                 margin-left: 40px;
                 background-color: var(--raised-content);
             }
+            #table-of-contents h4 {
+                padding: 16px;
+                margin: 0;
+            }
 
             #table-of-contents a {
                 display: block;
-                padding: 16px 16px 0 16px;
+                padding: 4px 16px;
+                /* line-height: normal; */
+                text-decoration: none !important;
+                /* color: white !important; */
+            }
+            #table-of-contents a:hover {
+                cursor: pointer;
+                transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+                background-color: var(--raised-content-hover);
             }
             #table-of-contents .subsection {
-                margin-left: 16px;
-                padding: 4px 16px;
+                /* margin-left: 16px; */
+                /* padding: 4px 16px; */
                 font-size: 0.9em;
             }
             .accordion {
@@ -122,6 +133,7 @@
                 list-style-position: outside;
                 margin: 8px 16px;
             }
+
 
       
 
@@ -556,12 +568,12 @@
             let currentLocation = document.URL.replace(/#.*$/, "")
             $('.accordion').each((sectionIndex, el) => {
                 $(el).attr('id', `section${sectionIndex}`)
-                $('#table-of-contents').append($("<a></a>").attr("href", `${currentLocation}#section${sectionIndex}`).text(el.innerText))
+                $('#table-of-contents').append($("<h4></h4>").text(el.innerText))
                 $(el).next().find('h3').each((questionIndex, el) => {
                     $(el).attr('id', `section${sectionIndex}question${questionIndex}`)
                     let link = $("<a></a>").attr("href", `${currentLocation}#section${sectionIndex}question${questionIndex}`).text(el.innerText).addClass("subsection")
                     link.click(() => {
-                        $(`#section${sectionIndex}`).next().addClass('active')
+                        $(`#section${sectionIndex}`).addClass('active').next().addClass('active')
                     })
                     $('#table-of-contents').append(link)
                 })

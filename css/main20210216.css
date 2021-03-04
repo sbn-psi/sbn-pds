@@ -125,8 +125,8 @@ main a:not(.ignore-a-styling):not(.pds-button):visited:hover {
     color: var(--link-visited-hover);
 }
 
-main a[href^='http']:not([href*='psi.edu']):after,
-nav a[href^='http']:not([href*='psi.edu']):after {
+main a[href^='http']:not([href*='psi.edu']):not([href*='localhost']):after,
+nav a[href^='http']:not([href*='psi.edu']):not([href*='localhost']):after {
     background-image: url('/pds-staging/images/external.svg');
     background-size: 16px;
     background-repeat: no-repeat;
@@ -138,8 +138,8 @@ nav a[href^='http']:not([href*='psi.edu']):after {
     height: 20px;
     content:"";
 }
-[data-theme="light"] main a[href^='http']:not([href*='psi.edu']):after, 
-[data-theme="light"] nav a[href^='http']:not([href*='psi.edu']):after {
+[data-theme="light"] main a[href^='http']:not([href*='psi.edu']):not([href*='localhost']):after, 
+[data-theme="light"] nav a[href^='http']:not([href*='psi.edu']):not([href*='localhost']):after {
     background-image: url('/pds-staging/images/external-black.svg');
 }
 
