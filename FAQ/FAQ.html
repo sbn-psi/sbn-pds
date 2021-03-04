@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/pds-staging/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>PDS Asteroid/Dust Subnode</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/project-main.css">
+    <link rel="stylesheet" href="css/sbn-header.css">
+    <link rel="stylesheet" href="css/sbn-footer.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <!-- PDS Feedback Widget -->
+    <!-- Only add JQuery if you do not already include a library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <!-- -->
+</head>
+<body>
+
+    <div include-html="sbn-header.html"></div>
+
+
+    <!-- BEGIN main content -->
+    <main><div class="sbn-main">
+        <ol class="breadcrumbs">
+            <li><a href="/pds-staging/">Home</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="/pds-staging/archive/FAQ/FAQ.html">FAQ</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li>FAQ</li>
+        </ol>    
+        <center>
+        <h1> Frequently Asked Questions </h1>
+        </center>
+        <br>
+
+        <center>
+          <h3> Keywords Definitions page </h3>
+          </center>
+
+        <style>
+            .accordion {
+              background-color: #eee;
+              color: rgb(7, 7, 7);
+              cursor: pointer;
+              padding: 18px;
+              width: 100%;
+              border: none;
+              text-align: left;
+              outline: none;
+              font-size: 15px;
+              transition: 0.4s;
+            }
+            
+            .active, .accordion:hover {
+              background-color: #ccc; 
+            }
+            
+            .panel {
+              padding: 0 18px;
+              display: none;
+              background-color: rgb(10, 10, 10);
+              overflow: hidden;
+            }
+
+            h3 {
+                font-size: 110%;
+
+            }
+
+            .panel h3 {
+              margin-bottom: 8px;
+              font-size: 110%;
+            }
+            .panel p {
+              margin-top: 8px
+            }
+
+            .list-style-type {
+              list-style-type: disc;
+              margin-bottom: 8px;
+            }
+
+      
+
+            </style>
+        
+        <button class="accordion">General PDS</button>
+        <div class="panel">
+        <h3>I found a broken link or bad data file, how do I report it?</h3>
+            <p>Use the "Feedback" tab on the side of the page.</p>
+            
+            <h3>What is FITS? </h3>
+            <p>FITS is a transport format originally designed for moving observational data between different computer architectures. Many FITS files are, structurally at least, compliant with PDS4 data structure requirements, but care must be taken to ensure that the FITS structures are not being abused, or that logically distinct data objects are not being packed into a single data structure, which would negate PDS4 compliance.
+            </p>
+            
+            <h3>If there is both a PDS3 and PDS4 version of the data, which should I use?</h3>
+                <p>We recommend using PDS4 as it might have more meta data available. However, the data themselves are the same in PDS3 and PDS4
+                </p>
+
+            <h3>I need a letter of support for my proposal.</h3>    
+            <p>Link to the proposer’s support page.</p>
+
+            <h3>Why can't I archive in PDS3?</h3>
+              <p>NASA/PDS requires missions confirmed for flight after 1 November 2011 and R&A projects funded after that date to submit data to PDS in the PDS4 standard.  The PDS3 standard is no longer accepted other than for older projects predating November 2011.
+              </p>
+
+            <h3> What is PDS4?</h3>
+            <p> PDS4 is the current archiving standard used by PDS.  PDS3 is the previous standard, used for new data archived since 2011.  The older PDS3 data is being migrated to PDS4, but in the meantime you will see data archived in both standards within the PDS archive.  
+              Both PDS3 and PDS4 data have information about the data files provided in files called labels which have the same filename as the data file but with a different extension.  PDS4 labels have .xml and PDS3 labels have .lbl and they use a different standard to arrange the information, but both kinds of labels contain metadata describing the format and content of the data file.  You can learn more about the PDS4 standard at <a href="https://pds.nasa.gov/datastandards/documents/.">NASA Data Standards Documents</a>
+            </p>  
+        </div>
+
+        <button class="accordion">Finding Data</button>
+        <div class="panel">
+            <h3>How do you search in the PDS? </h3>
+            <p>There are multiple search tools available for PDS, search tools are available on the individual node pages (Atmospheres, Small Bodies etc). On the main PDS page there is a link to <a href="searchhttps://pds.nasa.gov/datasearch/data-search/"> Search all the PDS nodes. </a>
+            </p>
+
+            <h3>How can I find all the data available on a given asteroid or comet?</h3> 
+            <p>Try the <a href="https://sbnapps.psi.edu/ferret/"> Ferret </a>If you do a target-based search, it will give you all data elements that are archived from tables in the SBN archive and links to the specific documents.
+            </p>
+
+            <h3>How do I search the XXXXX Survey?            </h3>
+            <p><a href="https://catch.astro.umd.edu/">Coment Asteroid Telescopic Catalog Hub (CATCH)</a></p>
+
+            <h3>I'm working with an asteroid which was visited by a spacecraft.  How can I select image data on a specific area or crater of the asteroid?</h3>
+            <p>Try the <a href="https://sbib.psi.edu/">Small Bodies Image Browser (SBIB) </a></p>
+            
+            <h3>I can't find the data I need.  Help! </h3>
+            <p>Use the archive <a href="https://sbn.psi.edu/pds-staging/"> front page</a> to find data by mission, by data type, or by target type.  If you still can't find what you need, send a request through the Feedback tab on the side of the page and we will help you.</p>
+            
+            <h3>I found the table of data I need but how do I find out what the columns mean or what the units are on the columns?</h3>
+            <p>Each data file has a separate label file with the same filename, but with extension either .lbl or .xml.  Open this file to find the column definitions and other information about the data file. 
+              Once downloaded you might want to use the <a href="https://sbnwiki.astro.umd.edu/wiki/PDS4_Viewer"> PDS4 Viewer </a>which displays the column headers with the data </p>
+
+            <h3>How do I find out how to use and read PDS Dictionaries            </h3>
+            <p><a href="https://sbnwiki.astro.umd.edu/wiki/SBN_PDS4_Wiki">PDS4 wiki</a>
+              You can use LD3 to view and edit dictionaries.  OLAF will handle the dictionaries for you.  You can use PLAID to help you build a label template that is constrained by the dictionaries.
+              </p>
+        </div>
+
+          
+
+
+
+        <button class="accordion">Archiving</button>
+        <div class="panel">
+          <h3>I'm trying to use OLAF but I am stuck.  Help!          </h3>  
+          <p> OLAF will let you build a dataset that makes a bundle of collections.  You will have a data collection, and most likely, a documents collection.  
+            If you add data via the "Add Data Types" button, you select the type of data you have (images, text, comma delimited (CSV), fixed width tables, binary array, etc) you can. For additional help please contact <a href="https://sbnapps.psi.edu/olaf-node/Support/Contact">OLAF Support</a>  </p>
+
+          <h3>Why can't you archive normal image format like JPG and png?</h3>
+           <p>JPG and PNG are compressed formats, and are therefore not suitable for archiving. JPEG is particularly unsuited for archiving, since it is a lossy format, meaning that data is lost on the first encode, and further processing degrades the image further. </p>
+           
+           <h3>Can I archive video?</h3>
+           <p>Video formats are not currently accepted as data in PDS4,  however, you can archive time series images as a 3D homogeneous array.  
+             Video may also be accepted as documentation, as long as they are only supplements to the other documentation provided. Specific formats must be used in this case.          </p>
+
+          <h3>Can I archive simulations?  </h3>
+          <p>PDS doesn’t archive simulation results.     </p>
+
+          <h3>Can I archive software?          </h3>
+          <p>Processing software is sometimes archived as documentation of the algorithms used to process the data.  Such documentation software is not maintained for use.  Other than this, PDS does not archive software. 
+            Software relevant for NASA data and projects can be provided to the community on NASA GitHub(link). 
+            Software archived at the NASA GitHub must be stewarded by a NASA affiliate. This means that any changes submitted by the community or the author must be vetted by the steward via a pull request. However, this is only for the official archived version of the software. Other users are free to fork the software and maintain their own versions as needed.</p>
+
+           <h3>Can you archive TIFF?  </h3>
+             Some TIFFs can be archived. The TIFF must be uncompressed, among other requirements. 
+              <a href="https://www.adobe.io/content/dam/udp/en/open/standards/tiff/TIFF6.pdf">TIFF Standards Document</a>
+              As TIFF is a proprietary standard, you must be able to describe the data contained in the TIFF file using only PDS concepts, and without taking advantage of any of the metadata in the TIFF file. Some of the restrictions that result from this are:
+                <ul style="list-style-type:disc;">
+                <li>Restrictions
+                <li>Must me uncompressed
+                <li>Ideally a single image: one IFD with a one entry
+                <li>If there are multiple images, they must each be described individually within the label
+                <li>Bilevel, grayscale, or RGB color
+                <li>Palette-color may be possible, but is not recommended
+
+                </ul>
+              
+            
+            <h3>What are the big types of issues with data types that cannot be archived (variable length arrays, compression, proprietary etc.)?            </h3>
+            Compressed images cannot be archived for the following reasons: 
+                <ul style="list-style-type:disc;">
+                <li>The data archived by the PDS happens to be an image in most cases, but is described as a multidimensional array.
+                <li>Lossy images are not suitable for archiving because they destroy data that is part of the observation.
+                <li>Compressed, lossless images are not suitable because they cannot be described as a multidimensional array. Compressed images can easily be uncompressed by a data provider and converted into a suitable format.
+              </ul>
+
+                Multimedia such as compressed video and compressed audio
+              <p><ul style="list-style-type:disc;">
+                <li>These are almost always compressed with lossless compression, and have the same issues as compressed images.
+                <li>However, there may be exceptions for this in the future.
+
+              </ul>
+            </p>
+              
+              Proprietary formats cannot be archived for two main reasons:
+              <ul style="list-style-type:disc;">
+                <li>These formats may be undocumented, or the documentation cannot be published without infringing on the rights of the format owner.
+                <li>A proprietary format is subject to change at any time, based solely on the whims of the format owner. Formats should be stable and freely available for inclusion in an archive.
+                </ul>
+
+              Structured text
+              <ul style="list-style-type:disc;">These cannot be adequately described without reference to an external standard. In the event that data can be held to a standard, it is still difficult to describe the meaning of the data in a consistent manner. This may change in the future with certain formats that have their own schema language.
+              </ul>
+
+              <h3>What types of data does the SBN not normally archive?              </h3>
+              <p> SBN doesn't normally archive data not relevant to small bodies such as asteroids, comets, dust, and small planetary satellites.  It doesn't archive data generated by simulations and modelling, except where the modelling is closely based on instrumental data.  
+                It doesn't archive software, with the exception that software used in the processing producing the archived data may be included in the archive as documentation of the algorithm.  It doesn't archive data which is not compatible with the PDS4 standard.              </p>
+
+              <h3>What kind of formats can you archive?</h3>
+              <p> PDS4 allows four broad data structures: Table, Array, Parsable Byte Stream, and Encoded Byte Stream.  Tables can be ASCII or binary table data with fixed-width fields.  Arrays are homogeneous arrays of scalars with up to 16 dimensions, e.g. images, backplanes, cubes, etc.  
+                Parsable byte stream is ASCII with a parsable record structure, such as CSV (comma separated value).  Encoded byte stream is not allowed for data, it can be used for documents and browse.  It includes formats such as JPG, PNG, and PDF/A.  For more details about PDS4 format requirements, see the PDS Standards Reference at <a href="https://pds.nasa.gov/datastandards/documents/sr/current/StdRef_1.15.0.pdf.">NASA Data Standards Current Document</a>              </p>
+
+              <h3>How can I validate my FITS files?</h3>
+            <p>[Link to validate tools and docs].  In PDS4, we have tools that will read the labels and data files to check to ensure that they are syntactically correct (all <> are closed), follow the PDS4 standards (link), and that the data files match what the labels say they are.  This helps data providers identify errors easily.
+              For fits compliant validation
+                the <a href="https://fits.gsfc.nasa.gov/fits_verify.html">NASA FITS verifier</a> is a useful tool.</p>
+                
+            <h3>How do I check that a label accurately describes my data?            </h3>
+            <p>The PDS4 Viewer will read your label and the source data file and display it in a human readable format.  
+              You can use this to ensure things make sense (column definitions are correct, images are displayed correct, labels make sense). The Download for this is available at the <a href="https://sbnwiki.astro.umd.edu/wiki/PDS4_Viewer">PDS4 Viewer wiki</a>           </p>
+
+            <h3>How can we deliver data to the PDS when not using OLAF?            </h3>
+            <p>OLAF is a tool that can create a PDS4-compliant archive for you, but it has some limitations.  You may have a data type which is not supported by OLAF, or you may want the flexibility to design your own archive and labels.  If not using OLAF to create your archive, first contact your PDS node for help and advice.  (For SBN Asteroid/Dust this would be Carol Neese, neese@psi.edu, and for SBN Comets it would be Ludmilla Kolokolova, ludmilla@astro.umd.edu.  
+              Your node representative can provide you with label templates which you can use as a starting point to create your PDS4 labels.  You can learn more about how to create a PDS4 archive at <a href="https://pds-smallbodies.astro.umd.edu/howto/prepare_PDS4.shtml">PDS4 How to Prepare Documents </a>           </p>
+
+            <h3>What metadata is useful to be put into a Dictionary?</h3>
+            <p>definitions created by a data preparer, an XML Schema file and an XML Schematron file used by software for label validation, a human-readable document in which the definitions, specifications, and constraints have been abstracted to facilitate use by human developers. 
+              The Project Dictionary should describe conditions that are unique to your mission or project. This list should not overlap with definitions already described in the PDS4 Information Model or a Discipline Dictionary. A Project Dictionary should supplement other dictionaries, not replace them.   </p> 
+                
+            <h3>How good must my documentation be? </h3>  
+            <p>We archive for 50 years.  Needs to describe things clear enough to let someone use/validate it without being able to ask questions. 
+              The documentation should describe the data, how it was taken, what has been done to the raw data (calibration, enhancement, etc.), the directory structure, file-naming convention, why the data were taken, references. It should include publications where available.            </p>
+               
+            <h3>How do I create a Project Dictionary? </h3>
+            <p>The PDS provides a tool for creating project dictionaries called LDD Tool (link). Data providers should prepare an Ingest LDD file according to the PDS4 Information Model specification, which will be consumed by LDD Tool to generate a data dictionary. 
+              Data providers can prepare this XML document by hand or with LD3 Tool (link), a graphical tool provided by the PDS for preparing and maintaining data dictionaries.            </p>
+
+            <h3>Where do I find a data dictionary?</h3>
+             <p> Data Dictionaries can be found at <a href="https://pds.nasa.gov/datastandards/dictionaries/index-1.15.0.0.shtml"> NASA PDS Dictionaries Index </a>Dictionaries can be viewed in a graphical (or other easier to read formats) using the LD3 tool (link)</p>
+              
+            <h3>Why can't you archive a normal image format like JPG and png?            </h3>
+            <p>JPG and PNG are compressed formats, and are therefore not suitable for archiving. JPEG is particularly unsuited for archiving, since it is a lossy format, meaning that data is lost on the first encode, and further processing degrades the image further.  JPG, GIF, and PNG files can be used as browse images to enhance the navigation of the data set, but they can’t be used for the primary data.            </p>
+
+        </div>
+
+        <button class="accordion">Images</button>
+        <div class="panel">
+        <h3>I'm working with an asteroid which was visited by a spacecraft.  How can I select image data on a specific area or crater of the asteroid?</h3>
+        <p>Try the <a href="https://sbib.psi.edu/">Small Bodies Image Browser.</a> SBIB is a map-based tool that allows searching for object resolved images (when the object is more than a point source) based upon a physical location on an asteroid.  It has filters for major parameters. 
+           It allows you to download the archived format as well as more common image types (jpg, tif, png).        </p>
+      
+        <h3>What names should I use for asteroids?</h3>
+        <p>Follow the guidelines on the <a href="https://sbnwiki.astro.umd.edu/wiki/Target_Names#Asteroids"> Target Name: Asteroids Document</a> </a>       </p>
+      
+      </div>
+
+      <button class="accordion">Data Format</button>
+        <div class="panel">
+        <h3>How do I describe different data formats?        </h3>
+          <p>All data format standards, and decriptions are available on the <a href="https://sbnwiki.astro.umd.edu/wiki/SBN_PDS4_Wiki">PDS4 wiki page</a> </p>
+
+      </div>
+
+
+      <button class="accordion">Getting Data</button>
+        <div class="panel">
+        <h3>How can I download files XXXX, but not YYYY files?   </h3>
+        The archive supports the transfer of data using the HTTPS protocol. This means that the entire archive is accessible by:
+          <p><ul style="list-style-type:disc;">
+          <li>web browser
+          <li>Browse full directories
+          <li>Download individual files using the browser
+          <li>Download bundle/collection directories (.zip files)</p>
+
+          <p>command-line software like `wget` (link) and `curl` (link), etc.
+          <li>Rich, open-source libraries support a wide range of features for downloading data over the Internet, including:
+          <li>Resuming paused/failed downloads
+          <li>Running as background tasks
+          <li>Proxy tunneling
+          <li>Much more
+          <li>Download specific files and directories
+          <li>Run batches of downloads with shell scripts
+          <li>Available on almost all UNIX-like systems, as well as Windows.</ul></p>
+
+          <p>`wget` and `curl` are non-interactive command-line libraries for downloading data over the most common Internet protocols. This makes them very useful in shell scripts, cron jobs, and other automated services.
+        </p>
+
+        <h3>Can I download a full directory?</h3>
+        <p>The following `wget` command illustrates a simple request for an archive directory:
+          wget --no-parent -r https://sbnarchive.psi.edu/PATH/TO/DIRECTORY
+          Example: The following example demonstrates how to download the Asteroid Photometric Catalog bundle using `wget`:wget --no-parent -r https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_3_DDR_APC_LIGHTCURVE_V1_1/
+          </p>
+
+
+        </div>
+
+
+        <button class="accordion">Use of Data</button>
+        <div class="panel">
+            <h3>If there is both a PDS3 and PDS4 version of the data set, which should I use?            </h3>
+            <p>We recommend using PDS4 as it might have more metadata available. However, the data themselves are the same in PDS3 and PDS4            </p>
+
+            <h3> I found the table of data I need but how do I find out what the columns mean or what the units are on the columns?            </h3>
+            <p>Each data file has a separate label file with the same filename, but with extension either .lbl or .xml.  Open this file to find the column definitions and other information about the data file.
+              Once downloaded you might want to use the <a href="https://sbnwiki.astro.umd.edu/wiki/PDS4_Viewer"> PDS4 Viewer</a> which displays the column headers with the data.</p>
+
+            <h3>When do you use a Mission Dictionary vs. Discipline Dictionary?</h3>
+            <p>A data Dictionary defines the meaning and structure of classes and attributes, i.e. a metadat keyword. When used in the context of XML files, it can also constrain the content within an XML element.  
+              It allows these attributes to have a consistent name for all similar datasets, which makes searching on those attributes possible.  A discipline Dictionary is intended to provide a place for scientists to write definitions for the SBN discipline dictionary attributes.
+            </p>
+
+            <h3>When do you use a Mission Dictionary vs. Discipline Dictionary</h3>
+            <p>A mission Dictionary is a set of metadata attributes that a spaceflight mission has chosen to use -- basically some aspect of metadata is common enough in there dataset that they want it defined as metadata (such as _________________________).  
+              A Discipline Dictionary has been created by the PDS Discipline Nodes to collect common metadata attributes.  Key Discipline Dictionaries are Imaging, Geometry and Display.   By using these Dictionary elements, it ensures there is a common structure and name that allows searching (i.e. If every dataset used a different keyword for image resolution, searching would become harder..             </p>
+
+            <h3>How do you use ISIS?              </h3>
+            <p>ISIS is the <a href="https://isis.astrogeology.usgs.gov">USGS Integrated Software for Imagers and Spectrometers.</a>  It is a suite of software designed to display and analysis spacecraft data (images and mapping spectrometers).  It connects the data to NAIFs (link) SPICE kernels (which provide the 3D geometry) and provides latitude/longitude and geography to the data.  Once installed, you will convert your data into ".cub" format (ISIS's internal format) and then view it using "qview".  
+              It has strong image processing and mosaicing capabilities.  </p>
+
+            <h3>What is Product Native?  Why can't I use it? </h3>
+            <p>Product Native is very limited in its use.  It is used to describe digital objects in the original format returned by the spacecraft or experimental system when that format cannot be described using one of the PDS4 formats specified for observational data.  
+              It is provided as convenience for the current scientific community with the understanding that the data is not formally archived because the specific software that supports it is likely to become obsolete, making those files likely to be unusable many years from now.             </p>
+
+            <h3>How can I read Shape Models?            </h3>
+            <p>Shape models are typically presented in either icq format or plate-and-vertex format. Both of these formats can be converted to Wavefront OBJ format, which is usable in many 3D applications.        </p>
+
+            <h3>How do I read back planes in PDS data?            </h3>
+            <p>Backplanes are generally presented as a secondary image alongside the primary image. They should be described in the PDS4 label as another image. Software such as the PDS4 viewer should be aware of this.            </p>
+
+            <h3>How do I read multi-channel FITS images?</h3>
+            <p>Multi-channel FITS images are typically presented in one of two ways:
+
+              <ul style="list-style-type:disc;"><li>The first is with three separate images: one for the red channel, one for the green channel, and one for the blue channel. These images will look like grayscale images when viewed, but can be combined into a single color image.
+              <li>In order to read the images into your software, you will need to look at the label to determine where each image begins and ends, by looking at the <offset> element. From there, you will also need to determine which image corresponds to each channel. This should be in the description for each image.
+              <li>The second way is to present the entire image as an Array_3D construct. This is like an image that consists of 3 separate layers, one layer for red, one for green, and one for blue. In this case, each channel will begin where the other ends. The images can be matched up with their color channel by using the <Color_Display_Settings> class in the Display Dictionary. This will give the index (layer number) for each channel.</p>
+                </ul>
+
+              <h3>How do I read a fix width table (sample code)?</h3>
+              <p>Python users can use the PDS4 tools library provided at <a href="https://github.com/Small-Bodies-Node/pds4_tools">SBN PDS4 tools</a>           </p>
+
+        </div>
+
+    
+        
+
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+    
+                for (i = 0; i < acc.length; i++) {
+                  acc[i].addEventListener("click", function() {
+                    /* Toggle between adding and removing the "active" class,
+                    to highlight the button that controls the panel */
+                    this.classList.toggle("active");
+                
+                    /* Toggle between hiding and showing the active panel */
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                      panel.style.display = "none";
+                    } else {
+                      panel.style.display = "block";
+                    }
+                  });
+                }</script>
+
+
+    
+    </div></main>
+    <!-- END main content -->
+
+    
+
+    <div include-html="sbn-footer.html"></div>
+
+    <script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/sbn-scripts.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
