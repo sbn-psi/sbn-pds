@@ -1,36 +1,43 @@
 // HTML fragment loading
 (function(document, window) {
-    var includeHTML = function() {
-        var elements, i, elmnt, file, xhttp;
-        elements = document.querySelectorAll("div[include-html]");
+    var includeHTML = function(startingElement) {
+        var elements, elmnt, file, xhttp;
+        var source = startingElement ? startingElement : document;
+        elements = source.querySelectorAll("div[include-html]");
         for (elmnt of elements) {
             file = elmnt.getAttribute("include-html");
             if (file) {
-                xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function() {
-                    if (this.readyState == 4) {
-                        if (this.status == 200) {
-                            elmnt.innerHTML = this.responseText;
-                        }
-                        if (this.status == 404) {
-                            elmnt.innerHTML = "Included html not found.";
-                        }
-
-                        // unwrap
-                        var parent = elmnt.parentNode
-                        while (elmnt.firstChild) { parent.insertBefore(elmnt.firstChild, elmnt)}
-                        parent.removeChild(elmnt)
-
-                        includeHTML()
-                        window.dispatchEvent(new Event("PDSSBN_contentLoaded"))
-                    }
-                }
-                xhttp.open("GET", file, true);
-                xhttp.send();
-                return;
+                makeRequest(file, elmnt);
+                // return;
             }
         }
     };
+
+    var makeRequest = function(url, sourceElement) {
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+                if (this.status == 200) {
+                    sourceElement.innerHTML = this.responseText;
+
+                }
+                if (this.status == 404) {
+                    sourceElement.innerHTML = "Included html not found.";
+                }
+
+                includeHTML(sourceElement)
+
+                // unwrap
+                var parent = sourceElement.parentNode
+                while (sourceElement.firstChild) { parent.insertBefore(sourceElement.firstChild, sourceElement)}
+                parent.removeChild(sourceElement)
+
+                window.dispatchEvent(new Event("PDSSBN_contentLoaded"))
+            }
+        }
+        xhttp.open("GET", url, true);
+        xhttp.send();
+    }
     includeHTML();
 })(document, window);
 
@@ -84,6 +91,36 @@
     })
 })(document, window);
 
+// Load theme into header bar
+(function(document, window) {
+    window.addEventListener("PDSSBN_contentLoaded", function() {
+
+        if(window.PDSSBN_bootstrappedHeaderTheme === true ) return;
+        
+        var theme = document.querySelector('.sbn-main').dataset.pageTheme
+        var header = document.getElementById('sbn-header')
+        if(!!theme && !!header) {
+            window.PDSSBN_bootstrappedHeaderTheme = true
+            header.style.backgroundImage = `url('${theme}')`
+            header.style.backgroundSize = 'auto 100%'
+        }
+    })
+})(document, window);
+
+// Add button ripples
+(function(document, window) {
+    window.addEventListener("PDSSBN_contentLoaded", function() {
+        document.querySelectorAll('.pds-button').forEach((button) => {
+            console.log(button.firstChild.classList)
+            if(!button.firstChild.classList || !button.firstChild.classList.contains('button-ripple')) {
+                const ripple = document.createElement('div')
+                ripple.className = 'button-ripple'
+                button.prepend(ripple)
+            }
+        })
+    })
+})(document, window);
+
 // Theme toggle
 (function(document, window) {
     window.addEventListener("PDSSBN_contentLoaded", function() {
@@ -109,20 +146,59 @@
             if (event.target.checked) {
                 document.documentElement.setAttribute('data-theme', 'light');
                 localStorage.setItem('theme', 'light');
+                document.cookie = "SBNTHEME=light; domain=.psi.edu; path=/; Max-Age=2147483647";
             }
             else {
                 document.documentElement.setAttribute('data-theme', 'dark');
                 localStorage.setItem('theme', 'dark');
+                document.cookie = "SBNTHEME=dark; domain=.psi.edu; path=/; Max-Age=2147483647";
             }    
+        }
+    })
+})(document, window);
+
+
+// Menu toggle
+(function(document, window) {
+    window.addEventListener("PDSSBN_contentLoaded", function() {
+        if(window.PDSSBN_bootstrappedMenu === true ) return;
+        
+        const toggle = document.getElementById('menu-drawer')
+        if(!!toggle) {
+            window.PDSSBN_bootstrappedMenu = true
+            toggle.addEventListener("click", openMenu, false)
+        }
+
+        function openMenu(event) {
+            document.getElementById("menu").classList.add("open")
+            const backdrop = document.getElementById("menu-backdrop")
+            backdrop.classList.add('on')
+            backdrop.addEventListener('click', backdropClick)
+        }
+        function closeMenu(event) {
+            document.getElementById("menu").classList.remove("open")
+            document.getElementById("menu-backdrop").classList.remove('on')
+        }
+
+        // set up listener to close menu you click outside
+        const backdropClick = (event) => {
+            if(!event.target.closest('#menu') && !event.target.closest('#menu-drawer')) {
+                closeMenu()
+                removeListener()
+            }
+        }
+        const removeListener = () => {
+            document.getElementById("menu-backdrop").removeEventListener('click', backdropClick)
         }
     })
 })(document, window);
 
 // Update file links to open in new tab
 (function(document, window) {
-    document.querySelectorAll("main a[href$='.pdf']").forEach(link => link.target = '_blank');
-    document.querySelectorAll("main a[href$='.cat']").forEach(link => link.target = '_blank');
-    document.querySelectorAll("main a[href*='sbnarchive.psi.edu']").forEach(link => link.target = '_blank');
+    document.querySelectorAll( `main a[href$='.pdf'],
+                                main a[href$='.PDF'],
+                                main a[href$='.cat'],
+                                main a[href$='.CAT']`).forEach(link => link.target = '_blank');
 })(document, window);
 
 /* Methods to Hide/Show Superseded versions of a data set */

@@ -8,9 +8,9 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/project-main.css">
-    <link rel="stylesheet" href="css/sbn-header.css">
-    <link rel="stylesheet" href="css/sbn-footer.css">
+    <link rel="stylesheet" href="css/main20210216.css">
+    <link rel="stylesheet" href="css/header20210216.css">
+    <link rel="stylesheet" href="css/footer20210216.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
@@ -31,13 +31,34 @@
     <div include-html="sbn-header.html"></div>
 
     <!-- BEGIN main content -->
-    <main><div class="sbn-main">
+    <main><div class="sbn-main" data-page-theme="images/dawn.jpg">
         <ol class="breadcrumbs">
             <li><a href="/pds-staging/">Home</a></li>
             <li class="breadcrumbs-separator">/</li>
             <li>Missions</li>
         </ol>
-        <div include-html="sbn-missions.html"></div>
+
+        <h2>Browse by Mission</h2>
+        <table class="fullwidh">
+            <thead>
+                <tr>
+                    <th>Mission</th><th>Targets</th><th>Instruments</th>
+                </tr>
+            </thead>
+            <tbody id="search-data-table">
+                <script>
+                    ((window, document) => {
+                        window.addEventListener("load", () => {
+                            searchData.filter(item => item.category === 'Mission').forEach(item => {
+                                let tr = document.createElement('tr');
+                                tr.innerHTML = `<td><a href="${item.url}">${item.name}</a></td><td>${item.subtitle}</td><td>${item.instruments.map(instrument => instrument.match(/\((.*?)\)/) ? instrument.match(/\((.*?)\)/)[1] : instrument).join(', ')}</td>`
+                                document.getElementById('search-data-table').appendChild(tr)
+                            })
+                        })
+                    })(window, document);
+                </script>
+            </tbody>
+        </table>
 
     </div></main>
     <!-- END main content -->
@@ -49,7 +70,7 @@
     <script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/sbn-scripts.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/scripts20210216.js" type="text/javascript" charset="utf-8"></script>
 
 </body>
 </html>
