@@ -4,7 +4,7 @@
     <base href="/pds-staging/" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>Key Terms | PDS Asteroid/Dust Subnode</title>
+    <title> PDS4 Key Terms Definitions</title>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
@@ -31,6 +31,20 @@
     <div include-html="sbn-header.html"></div>
 
     <!-- BEGIN main content -->
+
+    <style>
+        h5 {
+              font-size: 18px;
+              line-height: initial;
+              letter-spacing: 0.15px;
+              margin: 8px 0;
+              margin-bottom: 8px
+              
+            }
+
+    </style>
+
+
     <main><div class="sbn-main">
         <ol class="breadcrumbs">
             <li><a href="/pds-staging/">Home</a></li>
@@ -41,24 +55,32 @@
         <h1> Key PDS4 Terms </h1>
         </center>
 
-        <p><strong><u>FITS:</u></strong> FITS is a data format using an ASCII keyword-value header on a binary or ASCII image or table file.  It is often used in PDS archiving because it can be PDS4 compatible and is a commonly used format in the astronomy and planetary science community.  See https://fits.gsfc.nasa.gov/fits_standard.html for the full FITS specification.        </p>
+        <h5>FITS:</h5>
+            <p> FITS is a data format using an ASCII keyword-value header on a binary or ASCII image or table file.  It is often used in PDS archiving because it can be PDS4 compatible and is a commonly used format in the astronomy and planetary science community.  See https://fits.gsfc.nasa.gov/fits_standard.html for the full FITS specification.        </p>
 
-        <p><strong><u>IMG format:</u></strong>IMG format refers to binary files with the .img filename extension that store raw disk images of floppy disks, hard drives, and optical discs or a bitmap image
+        <h5>IMG format:</h5>
+            <p>IMG format refers to binary files with the .img filename extension that store raw disk images of floppy disks, hard drives, and optical discs or a bitmap image
         </p>
         
-        <p><strong><u>PDS4 dictionary:</u></strong>A PDS4 dictionary defines the meaning and structure of classes and attributes. When used
+        <h5>PDS4 dictionary:</h5>
+            <p>A PDS4 dictionary defines the meaning and structure of classes and attributes. When used
             defines the meaning and structure of classes and attributes. When used in the context of XML files, it can also constrain the content within an XML element.
             </p>
 
-        <p><strong><u>PDS4 Discipline Dictionary:</u></strong> A discipline data dictionaries contain the classes and attributes specific to various disciplines </p>
+        <h5>PDS4 Discipline Dictionary:</h5>
+            <p> A discipline data dictionaries contain the classes and attributes specific to various disciplines </p>
     
-        <p><strong><u>Project Dictionary:</u></strong> Project Dictionary is a dictionary containing classes and attributes specific to data archived for a given mission
+        <h5>Project Dictionary:</h5>
+            <p> Project Dictionary is a dictionary containing classes and attributes specific to data archived for a given mission
         </p>
 
-        <p><strong><u>NAIF, Kernels, SPICE:</u></strong> These data sets contain  time-series details of the position and pointing of the spacecraft, and the position and rotation state of the planets/small bodies.  It also includes exact definitions of the spacecraft equipment and instruments, to include how they are oriented on the spacecraft. The complete SPICE information provides deterministic information to compute relative and inertial positions, pointing and angles of objects in space. For more info, see NAIF at https://naif.jpl.nasa.gov/naif/.
+        <h5>NAIF, Kernels, SPICE:</h5> 
+            <p>These data sets contain  time-series details of the position and pointing of the spacecraft, and the position and rotation state of the planets/small bodies.  It also includes exact definitions of the spacecraft equipment and instruments, to include how they are oriented on the spacecraft. The complete SPICE information provides deterministic information to compute relative and inertial positions, pointing and angles of objects in space. For more info, see NAIF at https://naif.jpl.nasa.gov/naif/.
         </p>
 
-        <strong><u>XML:</u></strong>XML is an Extensible Markup Language (XML) file. These are really just plain text files that use custom tags to describe the structure and other features of the data or document.  In PDS4, each data file or document has an XML label to describe it.
+        <h5>XML:</h5>
+            <p>XML is an Extensible Markup Language (XML) file. These are really just plain text files that use custom tags to describe the structure and other features of the data or document.  In PDS4, each data file or document has an XML label to describe it.
+                </p>
 
     </div></main>
     <!-- END main content -->
