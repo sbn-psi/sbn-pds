@@ -61,8 +61,13 @@
                 flex: 3;
             }
             #table-of-contents {
+                scroll-behavior: smooth;
                 flex: 1;
                 width: 400px;
+                max-height: calc(100vh - 65px);
+                position: sticky;
+                top: 65px;
+                overflow-y: scroll;
                 margin-left: 40px;
                 background-color: var(--raised-content);
             }
@@ -74,18 +79,13 @@
             #table-of-contents a {
                 display: block;
                 padding: 4px 16px;
-                /* line-height: normal; */
                 text-decoration: none !important;
-                /* color: white !important; */
             }
-            #table-of-contents a:hover {
-                cursor: pointer;
+            #table-of-contents a:hover, #table-of-contents a.visible:not(a.visible ~ a.visible) {
                 transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
                 background-color: var(--raised-content-hover);
             }
             #table-of-contents .subsection {
-                /* margin-left: 16px; */
-                /* padding: 4px 16px; */
                 font-size: 0.9em;
             }
             .accordion {
@@ -109,7 +109,7 @@
                 background-color: var(--background-l1);
             }
             .panel {
-                display: none;
+                /* display: none; */
                 padding: 0 18px;
                 /* margin-top: -100%; */
                 transition: margin-top 0.3s ease-in-out;
@@ -465,89 +465,89 @@
             </div>
             
             <button class="accordion">Use of Data</button>
-                <div class="panel-container">
-                    <div class="panel">
-                        <h3>If there is both a PDS3 and PDS4 version of the data set, which should I use? </h3>
-                        <p>We recommend using PDS4 as it might have more metadata available. However, the data themselves are
-                            the same in PDS3 and PDS4 </p>
-        
-                        <h3> I found the table of data I need but how do I find out what the columns mean or what the units are
-                            on the columns? </h3>
-                        <p>Each data file has a separate label file with the same filename, but with extension either .lbl or
-                            .xml. Open this file to find the column definitions and other information about the data file.
-                            Once downloaded you might want to use the <a href="https://sbnwiki.astro.umd.edu/wiki/PDS4_Viewer">
-                                PDS4 Viewer</a> which displays the column headers with the data.</p>
-        
-                        <h3>When do you use a Mission Dictionary vs. Discipline Dictionary?</h3>
-                        <p>A data Dictionary defines the meaning and structure of classes and attributes, i.e. a metadat
-                            keyword. When used in the context of XML files, it can also constrain the content within an XML
-                            element.
-                            It allows these attributes to have a consistent name for all similar datasets, which makes searching
-                            on those attributes possible. A discipline Dictionary is intended to provide a place for scientists
-                            to write definitions for the SBN discipline dictionary attributes.
-                        </p>
-        
-                        <h3>When do you use a Mission Dictionary vs. Discipline Dictionary</h3>
-                        <p>A mission Dictionary is a set of metadata attributes that a spaceflight mission has chosen to use --
-                            basically some aspect of metadata is common enough in there dataset that they want it defined as
-                            metadata (such as _________________________).
-                            A Discipline Dictionary has been created by the PDS Discipline Nodes to collect common metadata
-                            attributes. Key Discipline Dictionaries are Imaging, Geometry and Display. By using these Dictionary
-                            elements, it ensures there is a common structure and name that allows searching (i.e. If every
-                            dataset used a different keyword for image resolution, searching would become harder.. </p>
-        
-                        <h3>How do you use ISIS? </h3>
-                        <p>ISIS is the <a href="https://isis.astrogeology.usgs.gov">USGS Integrated Software for Imagers and
-                                Spectrometers.</a> It is a suite of software designed to display and analysis spacecraft data
-                            (images and mapping spectrometers). It connects the data to NAIFs (link) SPICE kernels (which
-                            provide the 3D geometry) and provides latitude/longitude and geography to the data. Once installed,
-                            you will convert your data into ".cub" format (ISIS's internal format) and then view it using
-                            "qview".
-                            It has strong image processing and mosaicing capabilities. </p>
-        
-                        <h3>What is Product Native? Why can't I use it? </h3>
-                        <p>Product Native is very limited in its use. It is used to describe digital objects in the original
-                            format returned by the spacecraft or experimental system when that format cannot be described using
-                            one of the PDS4 formats specified for observational data.
-                            It is provided as convenience for the current scientific community with the understanding that the
-                            data is not formally archived because the specific software that supports it is likely to become
-                            obsolete, making those files likely to be unusable many years from now. </p>
-        
-                        <h3>How can I read Shape Models? </h3>
-                        <p>Shape models are typically presented in either icq format or plate-and-vertex format. Both of these
-                            formats can be converted to Wavefront OBJ format, which is usable in many 3D applications. </p>
-        
-                        <h3>How do I read back planes in PDS data? </h3>
-                        <p>Backplanes are generally presented as a secondary image alongside the primary image. They should be
-                            described in the PDS4 label as another image. Software such as the PDS4 viewer should be aware of
-                            this. </p>
-        
-                        <h3>How do I read multi-channel FITS images?</h3>
-                        <p>Multi-channel FITS images are typically presented in one of two ways:
-        
-                        <ul style="list-style-type:disc;">
-                            <li>The first is with three separate images: one for the red channel, one for the green channel, and
-                                one for the blue channel. These images will look like grayscale images when viewed, but can be
-                                combined into a single color image.
-                            <li>In order to read the images into your software, you will need to look at the label to determine
-                                where each image begins and ends, by looking at the <offset> element. From there, you will also
-                                    need to determine which image corresponds to each channel. This should be in the description
-                                    for each image.
-                            <li>The second way is to present the entire image as an Array_3D construct. This is like an image
-                                that consists of 3 separate layers, one layer for red, one for green, and one for blue. In this
-                                case, each channel will begin where the other ends. The images can be matched up with their
-                                color channel by using the <Color_Display_Settings> class in the Display Dictionary. This will
-                                    give the index (layer number) for each channel.</p>
-                        </ul>
-        
-                        <h3>How do I read a fix width table (sample code)?</h3>
-                        <p>Python users can use the PDS4 tools library provided at <a
-                                href="https://github.com/Small-Bodies-Node/pds4_tools">SBN PDS4 tools</a> </p>
-        
-                    </div>
+            <div class="panel-container">
+                <div class="panel">
+                    <h3>If there is both a PDS3 and PDS4 version of the data set, which should I use? </h3>
+                    <p>We recommend using PDS4 as it might have more metadata available. However, the data themselves are
+                        the same in PDS3 and PDS4 </p>
+    
+                    <h3> I found the table of data I need but how do I find out what the columns mean or what the units are
+                        on the columns? </h3>
+                    <p>Each data file has a separate label file with the same filename, but with extension either .lbl or
+                        .xml. Open this file to find the column definitions and other information about the data file.
+                        Once downloaded you might want to use the <a href="https://sbnwiki.astro.umd.edu/wiki/PDS4_Viewer">
+                            PDS4 Viewer</a> which displays the column headers with the data.</p>
+    
+                    <h3>When do you use a Mission Dictionary vs. Discipline Dictionary?</h3>
+                    <p>A data Dictionary defines the meaning and structure of classes and attributes, i.e. a metadat
+                        keyword. When used in the context of XML files, it can also constrain the content within an XML
+                        element.
+                        It allows these attributes to have a consistent name for all similar datasets, which makes searching
+                        on those attributes possible. A discipline Dictionary is intended to provide a place for scientists
+                        to write definitions for the SBN discipline dictionary attributes.
+                    </p>
+    
+                    <h3>When do you use a Mission Dictionary vs. Discipline Dictionary</h3>
+                    <p>A mission Dictionary is a set of metadata attributes that a spaceflight mission has chosen to use --
+                        basically some aspect of metadata is common enough in there dataset that they want it defined as
+                        metadata (such as _________________________).
+                        A Discipline Dictionary has been created by the PDS Discipline Nodes to collect common metadata
+                        attributes. Key Discipline Dictionaries are Imaging, Geometry and Display. By using these Dictionary
+                        elements, it ensures there is a common structure and name that allows searching (i.e. If every
+                        dataset used a different keyword for image resolution, searching would become harder.. </p>
+    
+                    <h3>How do you use ISIS? </h3>
+                    <p>ISIS is the <a href="https://isis.astrogeology.usgs.gov">USGS Integrated Software for Imagers and
+                            Spectrometers.</a> It is a suite of software designed to display and analysis spacecraft data
+                        (images and mapping spectrometers). It connects the data to NAIFs (link) SPICE kernels (which
+                        provide the 3D geometry) and provides latitude/longitude and geography to the data. Once installed,
+                        you will convert your data into ".cub" format (ISIS's internal format) and then view it using
+                        "qview".
+                        It has strong image processing and mosaicing capabilities. </p>
+    
+                    <h3>What is Product Native? Why can't I use it? </h3>
+                    <p>Product Native is very limited in its use. It is used to describe digital objects in the original
+                        format returned by the spacecraft or experimental system when that format cannot be described using
+                        one of the PDS4 formats specified for observational data.
+                        It is provided as convenience for the current scientific community with the understanding that the
+                        data is not formally archived because the specific software that supports it is likely to become
+                        obsolete, making those files likely to be unusable many years from now. </p>
+    
+                    <h3>How can I read Shape Models? </h3>
+                    <p>Shape models are typically presented in either icq format or plate-and-vertex format. Both of these
+                        formats can be converted to Wavefront OBJ format, which is usable in many 3D applications. </p>
+    
+                    <h3>How do I read back planes in PDS data? </h3>
+                    <p>Backplanes are generally presented as a secondary image alongside the primary image. They should be
+                        described in the PDS4 label as another image. Software such as the PDS4 viewer should be aware of
+                        this. </p>
+    
+                    <h3>How do I read multi-channel FITS images?</h3>
+                    <p>Multi-channel FITS images are typically presented in one of two ways:
+    
+                    <ul style="list-style-type:disc;">
+                        <li>The first is with three separate images: one for the red channel, one for the green channel, and
+                            one for the blue channel. These images will look like grayscale images when viewed, but can be
+                            combined into a single color image.
+                        <li>In order to read the images into your software, you will need to look at the label to determine
+                            where each image begins and ends, by looking at the <offset> element. From there, you will also
+                                need to determine which image corresponds to each channel. This should be in the description
+                                for each image.
+                        <li>The second way is to present the entire image as an Array_3D construct. This is like an image
+                            that consists of 3 separate layers, one layer for red, one for green, and one for blue. In this
+                            case, each channel will begin where the other ends. The images can be matched up with their
+                            color channel by using the <Color_Display_Settings> class in the Display Dictionary. This will
+                                give the index (layer number) for each channel.</p>
+                    </ul>
+    
+                    <h3>How do I read a fix width table (sample code)?</h3>
+                    <p>Python users can use the PDS4 tools library provided at <a
+                            href="https://github.com/Small-Bodies-Node/pds4_tools">SBN PDS4 tools</a> </p>
+    
                 </div>
             </div>
-            <div id="table-of-contents"></div>
+        </div>
+        <div id="table-of-contents"></div>
         </div>
 
         <script>
@@ -565,11 +565,28 @@
                     panel.classList.toggle("active")
                 });
             }
+
+            const questionObserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    const id = entry.target.getAttribute('id')
+                    if (entry.intersectionRatio > 0) {
+                        $(`#table-of-contents a[href$="${id}"`).addClass('visible')
+                    } else {
+                        $(`#table-of-contents a[href$="${id}"`).removeClass('visible')
+                    }
+                })
+
+                let activeElement = $("#table-of-contents a.visible:not(a.visible ~ a.visible")
+                let container = $("#table-of-contents")
+                container.scrollTop(activeElement.offset().top - container.offset().top + container.scrollTop() - 150)
+            })
+
             let currentLocation = document.URL.replace(/#.*$/, "")
             $('.accordion').each((sectionIndex, el) => {
                 $(el).attr('id', `section${sectionIndex}`)
                 $('#table-of-contents').append($("<h4></h4>").text(el.innerText))
                 $(el).next().find('h3').each((questionIndex, el) => {
+                    questionObserver.observe(el)
                     $(el).attr('id', `section${sectionIndex}question${questionIndex}`)
                     let link = $("<a></a>").attr("href", `${currentLocation}#section${sectionIndex}question${questionIndex}`).text(el.innerText).addClass("subsection")
                     link.click(() => {
