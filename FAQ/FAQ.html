@@ -61,7 +61,6 @@
                 flex: 3;
             }
             #table-of-contents {
-                scroll-behavior: smooth;
                 flex: 1;
                 width: 400px;
                 max-height: calc(100vh - 65px);
@@ -76,12 +75,19 @@
                 margin: 0;
             }
 
+            #table-of-contents .visible {
+                border-left: 3px solid var(--text);
+                transition: border-left cubic-bezier(0.6, -0.28, 0.735, 0.045);
+            } 
+
             #table-of-contents a {
                 display: block;
+                box-sizing: content-box;
                 padding: 4px 16px;
                 text-decoration: none !important;
             }
-            #table-of-contents a:hover, #table-of-contents a.visible:not(a.visible ~ a.visible) {
+            /* #table-of-contents a:hover , #table-of-contents a.visible:not(a.visible ~ a.visible) { */
+            #table-of-contents a:hover {
                 transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
                 background-color: var(--raised-content-hover);
             }
@@ -109,7 +115,7 @@
                 background-color: var(--background-l1);
             }
             .panel {
-                /* display: none; */
+                display: none;
                 padding: 0 18px;
                 /* margin-top: -100%; */
                 transition: margin-top 0.3s ease-in-out;
@@ -570,31 +576,52 @@
                 entries.forEach(entry => {
                     const id = entry.target.getAttribute('id')
                     if (entry.intersectionRatio > 0) {
-                        $(`#table-of-contents a[href$="${id}"`).addClass('visible')
+                        $(`#table-of-contents a[href$="${id}"`).addClass('visible').prev('h4').addClass('visible')
                     } else {
-                        $(`#table-of-contents a[href$="${id}"`).removeClass('visible')
+                        $(`#table-of-contents a[href$="${id}"`).removeClass('visible').prev('h4').removeClass('visible')
                     }
                 })
 
-                let activeElement = $("#table-of-contents a.visible:not(a.visible ~ a.visible")
-                let container = $("#table-of-contents")
-                container.scrollTop(activeElement.offset().top - container.offset().top + container.scrollTop() - 150)
             })
 
+            $('.panel-container').addClass('active')
+            $('.accordion').addClass('active')
+
+            let anchorScrollingDestination = null
             let currentLocation = document.URL.replace(/#.*$/, "")
             $('.accordion').each((sectionIndex, el) => {
                 $(el).attr('id', `section${sectionIndex}`)
                 $('#table-of-contents').append($("<h4></h4>").text(el.innerText))
                 $(el).next().find('h3').each((questionIndex, el) => {
                     questionObserver.observe(el)
-                    $(el).attr('id', `section${sectionIndex}question${questionIndex}`)
-                    let link = $("<a></a>").attr("href", `${currentLocation}#section${sectionIndex}question${questionIndex}`).text(el.innerText).addClass("subsection")
+                    const id = `section${sectionIndex}question${questionIndex}`
+                    $(el).attr('id', id)
+                    let link = $("<a></a>").attr("href", `${currentLocation}#${id}`).text(el.innerText).addClass("subsection")
                     link.click(() => {
+                        anchorScrollingDestination = $('#' + id).offset().top
                         $(`#section${sectionIndex}`).addClass('active').next().addClass('active')
                     })
                     $('#table-of-contents').append(link)
                 })
             })
+
+            const $toc = $("#table-of-contents")
+            const $faq = $("#faq")
+            function onScroll() {
+                if(!anchorScrollingDestination) {
+                    const faqY = window.scrollY - $faq.offset().top
+                    const faqHeight = $faq.height()
+                    const faqHeightRatio = faqY / faqHeight
+    
+                    const tocHeight = $toc.get(0).scrollHeight
+                    $toc.get(0).scrollTop = faqHeightRatio * tocHeight
+                } else if (window.scrollY === anchorScrollingDestination) {
+                    anchorScrollingDestination = null
+                }
+            }
+
+
+            window.addEventListener('scroll', onScroll)
 
         </script>
 
