@@ -73,26 +73,6 @@
             #table-of-contents h4 {
                 padding: 16px;
                 margin: 0;
-                cursor: pointer;
-                background-repeat: no-repeat;
-                background-position: right 14px center;
-                background-image: url('images/expand-more.svg');
-                background-size: 30px 30px;
-            }
-            [data-theme="light"] #table-of-contents h4 {
-                background-image: url('images/expand-more_black.svg');
-            }
-            #table-of-contents h4.active {
-                background-image: url('images/expand-less.svg');
-            }
-            [data-theme="light"] #table-of-contents h4.active {
-                background-image: url('images/expand-less_black.svg');
-            }
-            #table-of-contents div {
-                display: none;
-            }
-            #table-of-contents div.active {
-                display: block;
             }
 
             #table-of-contents .visible {
@@ -106,21 +86,28 @@
                 padding: 4px 16px;
                 text-decoration: none !important;
             }
-            #table-of-contents a:hover, .accordion:hover {
+            /* #table-of-contents a:hover , #table-of-contents a.visible:not(a.visible ~ a.visible) { */
+            #table-of-contents a:hover {
                 transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
                 background-color: var(--raised-content-hover);
             }
             #table-of-contents .subsection {
                 font-size: 0.9em;
             }
-            .section-header {
+            .accordion {
                 background-color: var(--section-header);
                 color: var(--text);
+                cursor: pointer;
                 padding: 18px;
+                width: 100%;
                 border: none;
                 text-align: left;
                 outline: none;
-                margin: 0;
+                font-size: 15px;
+            }
+            
+            .active, .accordion:hover {
+                background-color: var(--raised-content-hover); 
             }
             
             .panel-container {
@@ -129,7 +116,7 @@
             }
             .panel {
                 display: none;
-                padding: 40px 18px 0 18px;
+                padding: 0 18px;
                 /* margin-top: -100%; */
                 transition: margin-top 0.3s ease-in-out;
             }
@@ -158,10 +145,8 @@
 
             </style>
         
-        <div id="faq">
-            <div id="table-of-contents"></div>
-            <div id="questions" class="paper">
-            <h2 class="section-header">General PDS</h2>
+        <div id="faq"><div id="questions" class="paper">
+            <button class="accordion">General PDS</button>
             <div class="panel-container">
                 <div class="panel">
                     <h3>I found a broken link or bad data file, how do I report it?</h3>
@@ -202,7 +187,7 @@
                 </div>
             </div>
         
-            <h2 class="section-header">Finding Data</h2>
+            <button class="accordion">Finding Data</button>
             <div class="panel-container">
                 <div class="panel">
                     <h3>How do you search in the PDS? </h3>
@@ -245,7 +230,7 @@
             </div>
         
         
-            <h2 class="section-header">Archiving</h2>
+            <button class="accordion">Archiving</button>
             <div class="panel-container">
                 <div class="panel">
                     <h3>I'm trying to use OLAF but I am stuck. Help! </h3>
@@ -415,7 +400,7 @@
                 </div>
             </div>
 
-            <h2 class="section-header">Images</h2>
+            <button class="accordion">Images</button>
             <div class="panel-container">
                 <div class="panel">
                     <h3>I'm working with an asteroid which was visited by a spacecraft. How can I select image data on a
@@ -432,7 +417,7 @@
                 </div>
             </div>
         
-            <h2 class="section-header">Data Format</h2>
+            <button class="accordion">Data Format</button>
             <div class="panel-container">
                 <div class="panel">
                     <h3>How do I describe different data formats? </h3>
@@ -442,7 +427,7 @@
                 </div>
             </div>
 
-            <h2 class="section-header">Getting Data</h2>
+            <button class="accordion">Getting Data</button>
             <div class="panel-container">        
                 <div class="panel">
                     <h3>How can I download files XXXX, but not YYYY files? </h3>
@@ -485,7 +470,7 @@
                 </div>
             </div>
             
-            <h2 class="section-header">Use of Data</h2>
+            <button class="accordion">Use of Data</button>
             <div class="panel-container">
                 <div class="panel">
                     <h3>If there is both a PDS3 and PDS4 version of the data set, which should I use? </h3>
@@ -571,18 +556,47 @@
                 </div>
             </div>
         </div>
+        <div id="table-of-contents"></div>
         </div>
 
         <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function () {
+                    /* Toggle between adding and removing the "active" class,
+                    to highlight the button that controls the panel */
+                    this.classList.toggle("active");
+
+                    /* Toggle between hiding and showing the active panel */
+                    var panel = this.nextElementSibling;
+                    panel.classList.toggle("active")
+                });
+            }
+
+            const questionObserver = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    const id = entry.target.getAttribute('id')
+                    if (entry.intersectionRatio > 0) {
+                        $(`#table-of-contents a[href$="${id}"`).addClass('visible').prev('h4').addClass('visible')
+                    } else {
+                        $(`#table-of-contents a[href$="${id}"`).removeClass('visible').prev('h4').removeClass('visible')
+                    }
+                })
+
+            })
+
             $('.panel-container').addClass('active')
             $('.accordion').addClass('active')
 
+            let anchorScrollingDestination = null
             let currentLocation = document.URL.replace(/#.*$/, "")
-            $('.section-header').each((sectionIndex, el) => {
+            $('.accordion').each((sectionIndex, el) => {
                 $(el).attr('id', `section${sectionIndex}`)
-                let tocSection = $('#table-of-contents').append($("<h4></h4>").addClass('accordion').text(el.innerText).click((evt) => {evt.target.classList.toggle('active'); evt.target.nextElementSibling.classList.toggle('active');}))
-                $('#table-of-contents').append($("<div></div>").attr('id', `tocSection${sectionIndex}`))
+                $('#table-of-contents').append($("<h4></h4>").text(el.innerText))
                 $(el).next().find('h3').each((questionIndex, el) => {
+                    questionObserver.observe(el)
                     const id = `section${sectionIndex}question${questionIndex}`
                     $(el).attr('id', id)
                     let link = $("<a></a>").attr("href", `${currentLocation}#${id}`).text(el.innerText).addClass("subsection")
@@ -590,12 +604,27 @@
                         anchorScrollingDestination = $('#' + id).offset().top
                         $(`#section${sectionIndex}`).addClass('active').next().addClass('active')
                     })
-                    $(`#tocSection${sectionIndex}`).append(link)
+                    $('#table-of-contents').append(link)
                 })
             })
 
+            const $toc = $("#table-of-contents")
+            const $faq = $("#faq")
+            function onScroll() {
+                if(!anchorScrollingDestination) {
+                    const faqY = window.scrollY - $faq.offset().top
+                    const faqHeight = $faq.height()
+                    const faqHeightRatio = faqY / faqHeight
+    
+                    const tocHeight = $toc.get(0).scrollHeight
+                    $toc.get(0).scrollTop = faqHeightRatio * tocHeight
+                } else if (window.scrollY === anchorScrollingDestination) {
+                    anchorScrollingDestination = null
+                }
+            }
 
-            
+
+            window.addEventListener('scroll', onScroll)
 
         </script>
 
