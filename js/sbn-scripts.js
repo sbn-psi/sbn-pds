@@ -98,3 +98,48 @@ const setShow = function(event,el) {
     elements.list.style.display = (show === true) ? 'block' : 'none'
     elements.toggle.innerHTML = (show === true) ? 'Hide' : 'Show'
 }
+const typeUrls = {
+    "Data Type": "https://sbn.psi.edu/pds-staging/archive/data-types.html",
+    "Target Type": "https://sbn.psi.edu/pds-staging/archive/target-types.html",
+    "Missions": "https://sbn.psi.edu/pds-staging/archive/missions.html"
+  };
+  
+  document.querySelectorAll(".referral-link").forEach(link => {
+    const originalHref = link.href;
+    const type = link.dataset.type;
+    const pageName = link.dataset.page
+    let params = new URLSearchParams();
+    params.set("refUrl", window.location);
+    params.set("refName", pageName);
+    params.set("type", type);
+    params.set("typeUrl", typeUrls[type]);
+    link.href = originalHref + "?" + params.toString();
+    
+    
+  })
+  
+  document.querySelectorAll(".breadcrumbs").forEach(breadcrumbs => {
+     let params = new URLSearchParams(window.location.search);
+     console.log(params.toString())
+   
+    if(!!params.get("refUrl")) {
+      const finalBreadcrumb = breadcrumbs.lastElementChild
+    console.log(params)
+    
+    let newBreadcrumbs = [{name: "Home", url: "/pds-staging/"}]
+    newBreadcrumbs.push({name: params.get("type"), url: params.get("typeUrl")})
+    newBreadcrumbs.push({name: params.get("refName"), url: params.get("refUrl")})
+    console.log(newBreadcrumbs)
+    breadcrumbs.querySelectorAll("li").forEach(li => breadcrumbs.removeChild(li))
+    newBreadcrumbs.forEach(breadcrumb => {
+      let el = document.createElement("li")
+      el.innerHTML=`<a href="${breadcrumb.url}">${breadcrumb.name}</a>`
+      breadcrumbs.appendChild(el)
+      el = document.createElement("li")
+      el.classList.add("breadcrumbs-separator")
+      el.innerText="/"
+      breadcrumbs.appendChild(el)
+    })
+    breadcrumbs.appendChild(finalBreadcrumb)
+    }
+  })
