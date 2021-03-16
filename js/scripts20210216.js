@@ -91,22 +91,6 @@
     })
 })(document, window);
 
-// Load theme into header bar
-(function(document, window) {
-    window.addEventListener("PDSSBN_contentLoaded", function() {
-
-        if(window.PDSSBN_bootstrappedHeaderTheme === true ) return;
-        
-        var theme = document.querySelector('.sbn-main').dataset.pageTheme
-        var header = document.getElementById('sbn-header')
-        if(!!theme && !!header) {
-            window.PDSSBN_bootstrappedHeaderTheme = true
-            header.style.backgroundImage = `url('${theme}')`
-            header.style.backgroundSize = 'auto 100%'
-        }
-    })
-})(document, window);
-
 // Add button ripples
 (function(document, window) {
     window.addEventListener("PDSSBN_contentLoaded", function() {
@@ -201,6 +185,11 @@
                                 main a[href$='.CAT']`).forEach(link => link.target = '_blank');
 })(document, window);
 
+
+(function(document, window) {
+    
+})(document, window);
+
 // Create breadcrumbs from referral links
 (function(document, window) {
     const typeUrls = {
@@ -208,6 +197,11 @@
         "Target Type": "https://sbn.psi.edu/pds-staging/archive/target-types.html",
         "Missions": "https://sbn.psi.edu/pds-staging/archive/missions.html"
     };
+    const typeThemes = {
+        "Data Type": "images/spectra.png",
+        "Target Type": "images/eros-narrow.jpg",
+        "Missions": "images/dawn.jpg"
+    }
 
     document.querySelectorAll(".referral-link").forEach(link => {
         const originalHref = link.href;
@@ -221,14 +215,16 @@
         link.href = originalHref + "?" + params.toString();
     })
 
+    let currentPageType = null
     document.querySelectorAll(".breadcrumbs").forEach(breadcrumbs => {
         let params = new URLSearchParams(window.location.search);
 
         if (!!params.get("refUrl")) {
+            currentPageType = params.get("type")
             const finalBreadcrumb = breadcrumbs.lastElementChild
 
             let newBreadcrumbs = [{ name: "Home", url: "/pds-staging/" }]
-            newBreadcrumbs.push({ name: params.get("type"), url: params.get("typeUrl") })
+            newBreadcrumbs.push({ name: currentPageType, url: params.get("typeUrl") })
             newBreadcrumbs.push({ name: params.get("refName"), url: params.get("refUrl") })
             breadcrumbs.querySelectorAll("li").forEach(li => breadcrumbs.removeChild(li))
             newBreadcrumbs.forEach(breadcrumb => {
@@ -243,6 +239,22 @@
             breadcrumbs.appendChild(finalBreadcrumb)
         }
     })
+
+    // Load page theme into header bar
+    window.addEventListener("PDSSBN_contentLoaded", function() {
+
+        if(window.PDSSBN_bootstrappedHeaderTheme === true ) return;
+        
+        var theme = document.querySelector('.sbn-main').dataset.pageTheme
+            || typeThemes[currentPageType]
+        var header = document.getElementById('sbn-header')
+        if(!!theme && !!header) {
+            window.PDSSBN_bootstrappedHeaderTheme = true
+            header.style.backgroundImage = `url('${theme}')`
+            header.style.backgroundSize = 'auto 100%'
+        }
+    })
+
 })(document, window);
 
 
