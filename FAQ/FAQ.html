@@ -44,6 +44,10 @@
         </center>
         <br>
 
+        <center>
+            <h4> For a list of helpful keyword definitions please visit our <a href="/pds-staging/FAQ/Keyterms.html">PDS4 keyterms page</a> </h4>
+            </center>
+
         <style>
             html {
                 scroll-behavior: smooth;
@@ -190,14 +194,13 @@
                 <p><a href="https://pds.nasa.gov/home/proposers/">NASA proposers page</a></p>
     
                 <h3>Why can't I archive in PDS3?</h3>
-                <p>NASA/PDS requires missions confirmed for flight after 1 November 2011, and R&A projects funded after that
-                    date to submit data to PDS in the PDS4 standard. The PDS3 standard is no longer accepted other than for
-                    older projects predating November 2011.
+                <p>NASA/PDS requires missions confirmed for flights after 1 November 2011, and R&A projects funded after that
+                    date, to submit data to PDS in the PDS4 standard. The PDS3 standard is no longer accepted other than for
+                    the grandfathered projects predating November 2011.
                 </p>
     
                 <h3> What is PDS4?</h3>
-                <p> PDS4 is the current archiving standard used by PDS. PDS3 is the previous standard, used for new data
-                    archived since 2011. The older PDS3 data is being migrated to PDS4, but in the meantime you will see
+                <p> PDS4 is the current archiving standard used by PDS. The older PDS3 data is being migrated to PDS4, but in the meantime you will see
                     data archived in both standards within the PDS archive.
                     Both PDS3 and PDS4 data have information about the data files provided in files called labels which have
                     the same filename as the data file but with a different extension. PDS4 labels have .xml and PDS3 labels
@@ -250,17 +253,30 @@
         
             <h2 class="section-header">Archiving</h2>
             <div class="section">
+                <h3>What kind of formats can you archive?</h3>
+                <p> PDS4 allows four broad data structures: Table, Array, Parsable Byte Stream, and Encoded Byte Stream.
+                    Tables can be ASCII or binary table data with fixed-width fields. Arrays are homogeneous arrays of
+                    scalars with up to 16 dimensions, e.g. images, backplanes, cubes, etc.
+                    Parsable byte stream is ASCII with a parsable record structure, such as CSV (comma separated value).
+                    Encoded byte stream is not allowed for data, it can be used for documents and browse. It includes
+                    formats such as JPG, PNG, and PDF/A. For more details about PDS4 format requirements, see the PDS
+                    Standards Reference at <a
+                        href="https://pds.nasa.gov/datastandards/documents/sr/current/StdRef_1.15.0.pdf.">NASA Data
+                        Standards Current Document</a> </p>
+
+
                 <h3>I'm trying to use OLAF but I am stuck. Help! </h3>
                 <p> OLAF will let you build a dataset that makes a bundle of collections. You will have a data collection,
-                    and most likely, a documents collection.
+                    and most likely, a documents collection. Please contact Beatrice Mueller (mueller@psi.edu) first before starting OLAF.
                     If you add data via the "Add Data Types" button, you select the type of data you have (images, text,
-                    comma delimited (CSV), fixed width tables, binary array, etc) you can. For additional help please
+                    comma delimited (CSV), fixed width tables, binary array, etc). For additional help please
                     contact <a href="https://sbnapps.psi.edu/olaf-node/Support/Contact">OLAF Support</a> </p>
     
-                <h3>Why can't you archive normal image format like JPG and png?</h3>
+                <h3>Why can't you archive a normal image format like JPG and png? </h3>
                 <p>JPG and PNG are compressed formats, and are therefore not suitable for archiving. JPEG is particularly
                     unsuited for archiving, since it is a lossy format, meaning that data is lost on the first encode, and
-                    further processing degrades the image further. </p>
+                    further processing degrades the image further. JPG, GIF, and PNG files can be used as browse images to
+                    enhance the navigation of the data set, but they can’t be used for the primary data. </p>
     
                 <h3>Can I archive video?</h3>
                 <p>Video formats are not currently accepted as data in PDS4, however, you can archive time series images as
@@ -288,14 +304,17 @@
                 restrictions that result from this are:
                 <ul style="list-style-type:disc;">
                     <li>Must be uncompressed
-                    <li>Ideally a single image: one IFD with a one entry
+                    <li>Ideally a single image: one IFD with one entry
                     <li>If there are multiple images, they must each be described individually within the label
                     <li>Bilevel, grayscale, or RGB color
                     <li>Palette-color may be possible, but is not recommended
     
                 </ul>
     
-    
+                <h3>What names should I use for asteroids?</h3>
+                <p>Follow the guidelines on the <a href="https://sbnwiki.astro.umd.edu/wiki/Target_Names#Asteroids"> Target
+                        Name: Asteroids Document</a> </a> </p>
+
                 <h3>What are the big types of issues with data types that cannot be archived (variable length arrays,
                     compression, proprietary etc.)? </h3>
                 Compressed images cannot be archived for the following reasons:
@@ -340,16 +359,7 @@
                 archived data that may be included in the archive as documentation of the algorithm. It doesn't archive data
                 which is not compatible with the PDS4 standard. </p>
     
-                <h3>What kind of formats can you archive?</h3>
-                <p> PDS4 allows four broad data structures: Table, Array, Parsable Byte Stream, and Encoded Byte Stream.
-                    Tables can be ASCII or binary table data with fixed-width fields. Arrays are homogeneous arrays of
-                    scalars with up to 16 dimensions, e.g. images, backplanes, cubes, etc.
-                    Parsable byte stream is ASCII with a parsable record structure, such as CSV (comma separated value).
-                    Encoded byte stream is not allowed for data, it can be used for documents and browse. It includes
-                    formats such as JPG, PNG, and PDF/A. For more details about PDS4 format requirements, see the PDS
-                    Standards Reference at <a
-                        href="https://pds.nasa.gov/datastandards/documents/sr/current/StdRef_1.15.0.pdf.">NASA Data
-                        Standards Current Document</a> </p>
+            
     
                 <h3>How can I validate my FITS files?</h3>
                 <p>In PDS4, we have tools that will read the labels and data files to
@@ -405,11 +415,7 @@
                         Index </a>Dictionaries can be viewed in a graphical (or other easier to read formats) using the <a href="https://ld3.psi.edu/">LD3 tool</a>LD3
                 </p>
     
-                <h3>Why can't you archive a normal image format like JPG and png? </h3>
-                <p>JPG and PNG are compressed formats, and are therefore not suitable for archiving. JPEG is particularly
-                    unsuited for archiving, since it is a lossy format, meaning that data is lost on the first encode, and
-                    further processing degrades the image further. JPG, GIF, and PNG files can be used as browse images to
-                    enhance the navigation of the data set, but they can’t be used for the primary data. </p>
+                
     
             </div>
 
@@ -422,9 +428,7 @@
                     physical location on an asteroid. It has filters for major parameters.
                     It allows you to download the archived format as well as more common image types (jpg, tif, png). </p>
     
-                <h3>What names should I use for asteroids?</h3>
-                <p>Follow the guidelines on the <a href="https://sbnwiki.astro.umd.edu/wiki/Target_Names#Asteroids"> Target
-                        Name: Asteroids Document</a> </a> </p>
+               
     
             </div>
         
