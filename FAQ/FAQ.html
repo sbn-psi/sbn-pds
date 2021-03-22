@@ -174,22 +174,12 @@
             <div id="questions">
             <h2 class="section-header">General PDS</h2>
             <div class="section">
-                <h3>I found a broken link or bad data file, how do I report it?</h3>
-		        <p>Use the "Need Help?" tab on the side of the page.</p>
-    
-                <h3>What is FITS? </h3>
-                <p>FITS is a transport format originally designed for moving observational data between different computer
-                    architectures. Many FITS files are, structurally at least, compliant with PDS4 data structure
-                    requirements, but care must be taken to ensure that the FITS structures are not being abused, or that
-                    logically distinct data objects are not being packed into a single data structure, which would negate
-                    PDS4 compliance.
-                </p>
-    
-            
                 <h3>I need a letter of support for my proposal.</h3>
                 <p><a href="https://pds.nasa.gov/home/proposers/">NASA proposers page</a></p>
-    
-    
+
+                <h3>I found a broken link or bad data file, how do I report it?</h3>
+                <p>Use the "Need Help?" tab on the side of the page.</p>
+                
                 <h3> What is PDS4?</h3>
                 <p> PDS4 is the current archiving standard used by PDS. The older PDS3 data is being migrated to PDS4, but in the meantime you will see
                     data archived in both standards within the PDS archive.
@@ -199,20 +189,32 @@
                     metadata describing the format and content of the data file. You can learn more about the PDS4 standard
                     at <a href="https://pds.nasa.gov/datastandards/documents/.">NASA Data Standards Documents</a>
                 </p>
+    
+                <h3>What is FITS? </h3>
+                <p>FITS is a transport format originally designed for moving observational data between different computer
+                    architectures. Many FITS files are, structurally at least, compliant with PDS4 data structure
+                    requirements, but care must be taken to ensure that the FITS structures are not being abused, or that
+                    logically distinct data objects are not being packed into a single data structure, which would negate
+                    PDS4 compliance.
+                </p>
+    
+    
+        
             </div>
         
             <h2 class="section-header">Finding Data</h2>
             <div class="section">
+                <h3>I can't find the data I need. Help! </h3>
+                <p>Use the archive <a href="https://sbn.psi.edu/pds-staging/"> front page</a> to find data by mission, by
+                    data type, or by target type. If you still can't find what you need, send a request through the "Need help?"
+                    tab on the side of the page and we will help you.</p>
+
+
                 <h3>How do you search in the PDS? </h3>
                 <p>There are multiple search tools available for PDS. Search tools are available on the individual node
                     pages (Atmospheres, Small Bodies etc). On the main PDS page there is a link to <a
                         href="searchhttps://pds.nasa.gov/datasearch/data-search/"> Search all the PDS nodes. </a>
                 </p>
-    
-            <h3>I can't find the data I need. Help! </h3>
-            <p>Use the archive <a href="https://sbn.psi.edu/pds-staging/"> front page</a> to find data by mission, by
-                    data type, or by target type. If you still can't find what you need, send a request through the "Need help?"
-                    tab on the side of the page and we will help you.</p>
 
 
                 <h3>How can I find all the data available on a given asteroid or comet?</h3>
@@ -364,6 +366,15 @@
                     their own schema language.
                 </ul>
     
+                <h3>When do you use a Mission Dictionary vs. Discipline Dictionary?</h3>
+                <p>A data Dictionary defines the meaning and structure of classes and attributes, i.e. a metadat
+                    keyword. When used in the context of XML files, it can also constrain the content within an XML
+                    element.
+                    It allows these attributes to have a consistent name for all similar datasets, which makes searching
+                    on those attributes possible. A discipline Dictionary is intended to provide a place for scientists
+                    to write definitions for the SBN discipline dictionary attributes.
+                </p>
+
             
     
                 <h3>How can I validate my FITS files?</h3>
@@ -495,15 +506,7 @@
                     Once downloaded you might want to use the <a href="https://sbnwiki.astro.umd.edu/wiki/PDS4_Viewer">
                         PDS4 Viewer</a> which displays the column headers with the data.</p>
 
-                <h3>When do you use a Mission Dictionary vs. Discipline Dictionary?</h3>
-                <p>A data Dictionary defines the meaning and structure of classes and attributes, i.e. a metadat
-                    keyword. When used in the context of XML files, it can also constrain the content within an XML
-                    element.
-                    It allows these attributes to have a consistent name for all similar datasets, which makes searching
-                    on those attributes possible. A discipline Dictionary is intended to provide a place for scientists
-                    to write definitions for the SBN discipline dictionary attributes.
-                </p>
-
+         
                 <h3>How do you use ISIS? </h3>
                 <p>ISIS is the <a href="https://isis.astrogeology.usgs.gov">USGS Integrated Software for Imagers and
                         Spectrometers.</a> It is a suite of software designed to display and analysis spacecraft data
