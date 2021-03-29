@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/pds-staging/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>
+      SBIB | PDS Small Bodies Node
+    </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main20210216.css">
+    <link rel="stylesheet" href="css/header20210216.css">
+    <link rel="stylesheet" href="css/footer20210216.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <!-- PDS Feedback Widget -->
+    <!-- Only add JQuery if you do not already include a library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <!-- -->
+</head>
+<body>
+
+    <div include-html="sbn-header.html"></div>
+
+    <!-- BEGIN main content -->
+    <link rel="stylesheet" href="sbib/css/style.css">
+    <main><div class="sbn-main">
+
+            <a class="return-breadcrumb ignore-a-styling" href="sbib/">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M18.41 16.59L13.82 12l4.59-4.59L17 6l-6 6 6 6zM6 6h2v12H6z"/><path d="M24 24H0V0h24v24z" fill="none"/></svg>
+                <span>Back to SBIB Home</span>
+            </a>
+
+            <!-- Content goes here -->
+
+            <H1> About SBIB - Vesta </H1>
+
+<h2>
+Vesta Mission Phases (from end to beginning) covered in SBIB
+</h2>
+<UL>
+<LI> TransC - Transfer from HAMO2 to Ceres (aka Departure)
+<LI> HAMO2 - A second High Altitude Mapping Orbit 
+<LI> LAMO - Low Altitude Mapping Orbit; about 210 km
+<LI> TransL - Transfer from HAMO to LAMO
+<LI> HAMO - High Altitude Mapping Orbit; about 680 km
+<LI> TransH - Transfer from Survey orbit to HAMO
+<LI> Survey - Consists of a full and complete survey of Vesta; includes all FC filters and expansive VIR observations
+</UL>
+
+<h2>Map Projection and Arc-GIS</h2>
+Data can be imported into ArcMAP 10.1 by downloading the ISIS Map cubes.  
+<BR>
+Most images (PNG and thumbnails) were generated
+with an equirectangular projection.
+Images that are near the poles have been projected with a polar projection.  
+
+
+<h2>Maps</h2>
+We use several different overview maps for the Image Browser.  References for each:
+<UL>
+<LI>Topographic - Gaskell et al., AGU Fall Meeting (2011)
+<LI>Geological - Jaumann et al., Science 336, 687 (2012)
+<LI>Color - Le Corre et al., Icarus 226,1568 (2013)
+<LI>DLR Framing camera mosaic - Roatsch et al., P&SS 85, 293 (2013)
+</UL>
+
+<h2>Data processing</h2>
+We used the USGS software tool <a href=http://isis.astrogeology.usgs.gov>Integrated Software for Imagers and Spectrometers (ISIS)</a>
+as the main tool to process the data.  
+<BR>
+We used Gaskell's shape model and the ISIS
+software routines to convert images into map-based projections.
+
+<h2>Coordinates</h2>
+This software uses the PDS-Vesta-2012 coordinate system, as approved by the IAU (<a href=https://sbnarchive.psi.edu/pds3/dawn/fc/DWNVFC2_1A/DOCUMENT/VESTA_COORDINATES/VESTA_COORDINATES_131018.PDF>details</a>).  
+This system is also known as the "Claudia Double Prime."  
+<BR>
+<UL>
+<LI>Spin Pole of Vesta at RA=309.0 deg, Dec=42.2 deg
+<LI>Rotation period 0.2226 days (Drummond et al., 1998)
+<LI>Prime Meridian parameter W0=285.4 deg and Wdot=1617.33 deg/day
+</UL><BR>
+
+
+
+            <a href="sbib/data/PDS-Vesta/images/Legend.png" target="_blank">
+                <div class="card" style="width: 200px;">
+                    <img src="sbib/data/PDS-Vesta/images/Legend.png">
+                    <div class="card-content">
+
+                        <h2>
+                            Legend for the geologic map
+                        </h2>
+
+                    </div>
+                </div>
+            </a>
+            <!-- Content ends here -->
+        </div>
+    </main>
+
+    <!-- END main content -->
+
+    
+
+    <div include-html="sbn-footer.html"></div>
+
+
+    <script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/scripts20210216.js" type="text/javascript" charset="utf-8"></script>
+    
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/pds-staging/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>
+      SBIB | PDS Small Bodies Node
+    </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main20210216.css">
+    <link rel="stylesheet" href="css/header20210216.css">
+    <link rel="stylesheet" href="css/footer20210216.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <!-- PDS Feedback Widget -->
+    <!-- Only add JQuery if you do not already include a library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <!-- -->
+</head>
+<body>
+
+    <div include-html="sbn-header.html"></div>
+
+    <!-- BEGIN main content -->
+    <link rel="stylesheet" href="sbib/css/style.css">
+    <main><div class="sbn-main">
+
+            <a class="return-breadcrumb ignore-a-styling" href="sbib/">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M18.41 16.59L13.82 12l4.59-4.59L17 6l-6 6 6 6zM6 6h2v12H6z"/><path d="M24 24H0V0h24v24z" fill="none"/></svg>
+                <span>Back to SBIB Home</span>
+            </a>
+
+            <!-- Content goes here -->
+
+            <H1> About SBIB - Rhea </H1>
+
+<p>
+	Cassini ISS raw and calibrated .IMG files were downloaded from the Ring-Moon Systems Node with OPUS. 
+</p>
+<p>Images were restricted to a maximum Body Center resolution of 10 km/pix.</p>
+<p>
+The Rhea data were sorted into the following for easier access: high_res, geodesy, regional_map, regional_color, global_map, global_color, north_pole, bright_ray_crater, limb_topo, zero_phase, low_phase, high_phase, spectrophotometry, eclipse, mutual_event, movie, scientist_day. 
+</p>
+<h2>Data Download</h2>
+Highlight the data you would like to download, click 'Download'. Notes for the download screen: 'raw' and 'calibrated' buttons refer to the fits files. For downloading e.g. jpg files in camera view, click on 'jpg'; for projected view, click on 'Projected' and then again on 'jpg'. Note that the file names are the same for the camera and projected view.
+<BR>
+<h2>Map Projection and ArcGIS</h2>
+Data can be imported into ArcGIS by downloading the ISIS Map cubes. NOTE that wecalibrated the downloaded raw .IMG files with cisscal version 3.9.1 before creating the ISIS cubes and other file formats. The downloaded calibrated data were processed with cisscal version 3.8 by the Ring-Moon Systems Node. 
+<BR>
+Most images (PNG and thumbnails) were generated
+with an equirectangular projection.
+Images that are near the poles have been projected with a polar projection.  
+
+<h2>Maps</h2>
+We use an equatorial overview map (from <a href=https://photojournal.jpl.nasa.gov/catalog/PIA14928>here</a>) for the Image Browser.  
+
+<h2>Data processing</h2>
+We used the USGS software tool <a href=http://isis.astrogeology.usgs.gov>Integrated Software for Imagers and Spectrometers (ISIS)</a>
+as the main tool to process the data.  
+We used the pre-Dawn shape model posted at USGS and the ISIS
+software routines to convert images into map-based projections.
+
+<h2>Coordinates</h2>
+The files list the coordinates in East Longitude. However, the base map is shown in West Longitude with the prime meridian in the middle of the map as it is commonly diplsayed for the Saturnian Satellites.
+<BR>
+The orientation of the map projected images in the pre-view window is consisten with the footprint orientation on the base map while the camera view might be rotated compared to the base map depending on the orientation of the spacecraft at the time. However, the location is always correct.
+
+
+            <!-- Content ends here -->
+        </div>
+    </main>
+
+
+    <!-- END main content -->
+
+    
+
+    <div include-html="sbn-footer.html"></div>
+
+
+    <script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/scripts20210216.js" type="text/javascript" charset="utf-8"></script>
+    
+</body>
+</html>
