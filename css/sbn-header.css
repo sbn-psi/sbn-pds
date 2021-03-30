@@ -76,3 +76,26 @@
     padding: 0;
     color: white;
 }
+
+.header-banner {
+    height: 40px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    /* top: 80px; */
+    left: 0;
+    right: 0;
+}
+.header-banner-container {
+    padding: 0 10px 0 10px;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: rgb(144, 211, 255);
+    border-radius: 0 0 15px 15px;
+}

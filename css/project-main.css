@@ -34,6 +34,7 @@ a:not(.ignore-a-styling) {
 .sbn-main {
     padding-left: 0.7em;
     min-height: calc(100vh - 8em);
+    margin-top: 50px;
 }
 
 /* iPhone 6 & wider */
@@ -62,6 +63,9 @@ a:not(.ignore-a-styling) {
         position: absolute;
         left: 0;
         top: 5em;
+    }
+    .header-banner {
+        left: 250px;
     }
     .sbn-title {
         font-size: 1em;
