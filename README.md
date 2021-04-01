@@ -74,7 +74,7 @@ A smart breadcrumb link looks like this example, from the All Asteroids Data pag
 ```
 
 The three pieces that you need to add to a standard relative link are the following:
-- `class="referral-link`: This exact class should be applied to any link to indicate that it is a smart breadcrumb link
+- `class="referral-link"`: This exact class should be applied to any link to indicate that it is a smart breadcrumb link
 - `data-page`: Set the value of this attribute to the name of the page that it is on (the referrer)
 - `data-type`: Set the value of this attribute to one of the following exactly: `Data Type`, `Target Type`, or `Missions`, depending on the context of the page that the link is on (the referrer)
 
@@ -118,14 +118,14 @@ The results of the Shortcut bar are sourced from the same file as is used to gen
 
 If you've already added an entry to get a page to appear on the browse page, that entry will also appear in the shortcut search results. Those results are filtered by matching the query against any part of an entry's values, including the name, description, and instruments. 
 
-To add additional keywords associated with a given page that a user might search for, simply add a new key with any name, and add your keywords as the value of that key. For example, if you wanted the "TNOs, Centaurs, and Pluto" page to also appear when the user searched "trans newtonian", you could just do the following:
+To add additional keywords associated with a given page that a user might search for, simply add a new key with any name, and add your keywords as the value of that key. For example, if you wanted the "TNOs, Centaurs, and Pluto" page to also appear when the user searched "Trans-Neptunian", you could just do the following:
 ```JS
 {
     name: 'TNOs, Centaurs, and Pluto',
     subtitle: '',
     url: '/pds-staging/archive/tnos.html',
     category: 'Target Types',
-    other: 'trans newtonian'
+    other: 'Trans-Neptunian'
 }
 ```
 
