@@ -123,7 +123,7 @@ To add additional keywords associated with a given page that a user might search
 {
     name: 'TNOs, Centaurs, and Pluto',
     subtitle: '',
-    url: '/pds-staging/archive/tnos.html',
+    url: '/pds/tnos.html',
     category: 'Target Types',
     other: 'Trans-Neptunian'
 }

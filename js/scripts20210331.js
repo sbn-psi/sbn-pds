@@ -193,9 +193,9 @@
 // Create breadcrumbs from referral links
 (function(document, window) {
     const typeUrls = {
-        "Data Type": "https://sbn.psi.edu/pds-staging/archive/data-types.html",
-        "Target Type": "https://sbn.psi.edu/pds-staging/archive/target-types.html",
-        "Missions": "https://sbn.psi.edu/pds-staging/archive/missions.html"
+        "Data Type": "https://sbn.psi.edu/pds/archive/data-types.html",
+        "Target Type": "https://sbn.psi.edu/pds/archive/target-types.html",
+        "Missions": "https://sbn.psi.edu/pds/archive/missions.html"
     };
     const typeThemes = {
         "Data Type": "images/spectra.png",
@@ -223,7 +223,7 @@
             currentPageType = params.get("type")
             const finalBreadcrumb = breadcrumbs.lastElementChild
 
-            let newBreadcrumbs = [{ name: "Home", url: "/pds-staging/" }]
+            let newBreadcrumbs = [{ name: "Home", url: "/pds/" }]
             newBreadcrumbs.push({ name: currentPageType, url: params.get("typeUrl") })
             newBreadcrumbs.push({ name: params.get("refName"), url: params.get("refUrl") })
             breadcrumbs.querySelectorAll("li").forEach(li => breadcrumbs.removeChild(li))
