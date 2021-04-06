@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/pds/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>SBIB | PDS Small Bodies Node</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main20210331.css">
+    <link rel="stylesheet" href="css/header20210331.css">
+    <link rel="stylesheet" href="css/footer20210331.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <!-- PDS Feedback Widget -->
+    <!-- Only add JQuery if you do not already include a library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <!-- -->
+</head>
+<body>
+
+    <div include-html="sbn-header.html"></div>
+
+    <!-- BEGIN main content -->
+    <main><div class="sbn-main">
+
+        <link rel="stylesheet" href="sbib/css/style.css">
+
+        <div class="intro">
+            <div class="intro-text">
+                <h1>Small Bodies Image Browser</h1>
+                <p>
+                    The <strong>Small Bodies Image Browser</strong> (SBIB) is designed to graphically search through 
+                    the large number of images quickly. It takes about 2-5 minutes to download the 
+                    database to your browser depending on your internet connection.  Once done, 
+                    data searches are very fast.
+                    Currently SBIB accesses OSIRIS-REX Bennu, New Horizons Pluto Encounter,
+                    Dawn Vesta, Dawn Ceres, Near Eros, and Cassini Rhea, Iapetus and Enceladus data.  Additional missions and objects will be added as
+                    development continues. <BR/><BR/>
+                    SBIB will display a map and options to search for images.
+                </p>
+            </div>
+
+            <div class="intro-features card">
+                <h2>Key Features</h2>    
+                <UL>
+                <LI>Search by coordinates 
+                <LI>Show an entire sequence
+                <LI>Display image data
+                <LI>Draw image footprint on the map
+                <LI>Show thumbnail images, either map projected or original
+                <LI>Download raw or processed images
+                </UL>
+                <div class="card-actions">
+                    <a class="button ignore-a-styling primary-action" href="sbib/details.html">
+                    <div class="button-ripple"></div>
+                    <span>Read More</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+            
+        <div class="primary-actions">
+            <div class="card">
+                <img src="sbib/images/bennu_shape2.gif">
+                <div class="card-content">
+
+                    <h2>OSIRIS-REx Mission to Bennu</h2>
+
+                    <ul>
+                        <li>OSIRIS-REx Camera Suite (MapCam, Polycam & SamCam)</li>
+                        <li>Raw and I/F (iof) data from Approach to Sample Collection (OpNav)</li>
+                    </ul>
+                </div>
+                <div class="card-actions">
+                    <a class="button ignore-a-styling" href="sbib/data/PDS-Bennu/about.html">
+                      <div class="button-ripple"></div>
+                      <span>About</span>
+                    </a>
+                    <a class="button ignore-a-styling primary-action" href="https://sbib.psi.edu/data/PDS-Bennu/index.html">
+                      <div class="button-ripple"></div>
+                      <span>Launch</span>
+                    </a>
+                  </div>
+            </div>
+            <div class="card">
+                <img src="sbib/images/Pluto.jpg">
+                <div class="card-content">
+
+                    <h2>New Horizons Encounter with Pluto</h2>
+
+                    <ul>
+                        <li>Long Range Reconaissance Imager (LORRI)</li>
+                        <li>Raw and calibrated images for the Encounter</li>
+                        <li>Multispectral Visible Imaging Camera (MVIC)</li>
+                        <li>Raw and calibrated images for the Encounter</li>
+                    </ul>
+                </div>
+                <div class="card-actions">
+                    <a class="button ignore-a-styling" href="sbib/data/PDS-Pluto/about.html">
+                      <div class="button-ripple"></div>
+                      <span>About</span>
+                    </a>
+                    <a class="button ignore-a-styling primary-action" href="https://sbib.psi.edu/data/PDS-Pluto/index.html">
+                      <div class="button-ripple"></div>
+                      <span>Launch</span>
+                    </a>
+                  </div>
+            </div>
+
+            <div class="card">
+                <img src="sbib/images/ceres.jpg">
+                <div class="card-content">
+
+                    <h2>Dawn Mission to Ceres</h2>
+
+                    <ul>
+                        <li>Framing Camera</li>
+                        <li>Levels 1A and 1B through XMO7</li>
+                        <li>Visible and InfraRed Mapping Spectrometer</li>
+                        <li>Level 1B through XMO7</li>
+                    </ul>
+                </div>
+                <div class="card-actions">
+                    <a class="button ignore-a-styling" href="sbib/data/PDS-Ceres/about.html">
+                      <div class="button-ripple"></div>
+                      <span>About</span>
+                    </a>
+                    <a class="button ignore-a-styling primary-action" href="https://sbib.psi.edu/data/PDS-Ceres/pds-ceres.html">
+                      <div class="button-ripple"></div>
+                      <span>Launch</span>
+                    </a>
+                  </div>
+            </div>
+
+            <div class="card">
+                <img src="sbib/images/OpNav19-small.gif">
+                <div class="card-content">
+
+                    <h2>Dawn Mission to Vesta</h2>
+
+                    <ul>
+                        <li>Framing Camera</li>
+                        <li>Levels 1A and 1B (excluding approach)</li>
+                        <li>Visible and InfraRed Mapping Spectrometer</li>
+                        <li>Level 1B (excluding approach & departure)</li>
+                    </ul>
+                </div>
+                <div class="card-actions">
+                    <a class="button ignore-a-styling" href="sbib/data/PDS-Vesta/about.html">
+                      <div class="button-ripple"></div>
+                      <span>About</span>
+                    </a>
+                    <a class="button ignore-a-styling primary-action" href="https://sbib.psi.edu/data/PDS-Vesta/pds-vesta.html">
+                      <div class="button-ripple"></div>
+                      <span>Launch</span>
+                    </a>
+                  </div>
+            </div>
+
+
+            <div class="card">
+                <img src="sbib/images/WholeEros.jpg">
+                <div class="card-content">
+
+                    <h2>
+                        NEAR Shoemaker Mission to 433 Eros
+                    </h2>
+
+                    <ul>
+                        <li>
+                            Multi-Spectral Imager
+                        </li>
+                        <li>
+                            Calibrated Level 2 and 3 data (excluding approach)
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-actions">
+                    
+                    <a class="button ignore-a-styling" href="sbib/data/PDS-Eros/about.html">
+                      <div class="button-ripple"></div>
+                      <span>About</span>
+                    </a>
+                    <a class="button ignore-a-styling primary-action" href="https://sbib.psi.edu/data/PDS-Eros/pds-eros.html">
+                      <div class="button-ripple"></div>
+                      <span>Launch</span>
+                    </a>
+                  </div>
+            </div>
+
+            <div class="card">
+                <img src="sbib/images/rhea_image.jpg">
+                <div class="card-content">
+
+                    <h2>
+                        Cassini Mission: Rhea (Saturn V)
+                    </h2>
+
+                    <ul>
+                        <li>
+                            Imaging Science Subsystem (ISS)
+                        </li>
+                        <li>
+                            Raw and i/f data in multiple orbits <br> (maximum body center resolution of 10 km/pix)
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-actions">
+                    
+                    <a class="button ignore-a-styling" href="sbib/data/PDS-Rhea/about.html">
+                      <div class="button-ripple"></div>
+                      <span>About</span>
+                    </a>
+                    <a class="button ignore-a-styling primary-action" href="https://sbib.psi.edu/data/PDS-Rhea/index.html">
+                      <div class="button-ripple"></div>
+                      <span>Launch</span>
+                    </a>
+                  </div>
+            </div>
+
+            <div class="card">
+                <img src="sbib/images/iapetus.jpg">
+                <div class="card-content">
+
+                    <h2>
+                        Cassini Mission: Iapetus (Saturn VIII)
+                    </h2>
+
+                    <ul>
+                        <li>
+                            Imaging Science Subsystem (ISS)
+                        </li>
+                        <li>
+                            Raw and i/f data in multiple orbits <br> (maximum body center resolution of 10 km/pix)
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-actions">
+                    
+                    <a class="button ignore-a-styling" href="sbib/data/PDS-Iapetus/about.html">
+                      <div class="button-ripple"></div>
+                      <span>About</span>
+                    </a>
+                    <a class="button ignore-a-styling primary-action" href="https://sbib.psi.edu/data/PDS-Iapetus/index.html">
+                      <div class="button-ripple"></div>
+                      <span>Launch</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="sbib/images/enceladus_image.jpg">
+                <div class="card-content">
+
+                    <h2>
+                        Cassini Mission: Enceladus (Saturn II)
+                    </h2>
+
+                    <ul>
+                        <li>
+                            Imaging Science Subsystem (ISS)
+                        </li>
+                        <li>
+                            Raw and i/f data in multiple orbits <br> (maximum body center resolution of 5 km/pix)
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-actions">
+                    
+                    <a class="button ignore-a-styling" href="sbib/data/PDS-Enceladus/about.html">
+                      <div class="button-ripple"></div>
+                      <span>About</span>
+                    </a>
+                    <a class="button ignore-a-styling primary-action" href="https://sbib.psi.edu/data/PDS-Enceladus/index.html">
+                      <div class="button-ripple"></div>
+                      <span>Launch</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+            <!-- 
+
+                ######## TEMPLATE #######
+
+            <div class="card">
+                <img src=" ### IMAGE ADDRESS ### ">
+                <div class="card-content">
+
+                    <h2>
+                        ### TITLE ###
+                    </h2>
+
+                    <ul>
+                        <li>
+                            ### AVAILABLE DATA ITEM ###
+                        </li>
+                        <li>
+                            ### AVAILABLE DATA ITEM ###
+                        </li>
+                        <li>
+                            ### AVAILABLE DATA ITEM ###
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-actions">
+                    
+                    <a class="button ignore-a-styling" href=" ### ABOUT PAGE URL ### ">
+                      <div class="button-ripple"></div>
+                      <span>About</span>
+                    </a>
+                    <a class="button ignore-a-styling primary-action" href=" ### APPLICATION URL ### ">
+                      <div class="button-ripple"></div>
+                      <span>Launch</span>
+                    </a>
+                  </div>
+            </div>
+
+            -->
+
+        </div>
+    </div>
+
+    </div></main>
+    <!-- END main content -->
+
+    
+
+    <div include-html="sbn-footer.html"></div>
+
+    <script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/scripts20210331.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>

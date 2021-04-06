@@ -1,33 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <base href="/pds/" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>Dawn GRaND PDS4 Archive</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-    <link rel="stylesheet" href="/pds/css/sbn-header.css">
-    <link rel="stylesheet" href="/pds/css/sbn-sidebar.css">
-    <link rel="stylesheet" href="/pds/css/sbn-footer.css">
-    <link rel="stylesheet" href="/pds/css/project-main.css">
+    <link rel="stylesheet" href="css/main20210331.css">
+    <link rel="stylesheet" href="css/header20210331.css">
+    <link rel="stylesheet" href="css/footer20210331.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
 
     <!-- PDS Feedback Widget -->
     <!-- Only add JQuery if you do not already include a library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
-    <link rel="stylesheet" href="/pds/feedback/css/feedback.css"  type="text/css" media="screen" />
-    <script src="/pds/feedback/js/modernizr-custom.js"></script>
-    <script src="/pds/feedback/js/config.js"></script>
-    <script src="/pds/feedback/js/feedback.js"></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
     <!-- -->
 </head>
 <body>
 
-    <div include-html="/pds/sbn-header.html"></div>
+    <div include-html="sbn-header.html"></div>
 
     <!-- BEGIN main content -->
-    <main class="sbn-main">
+    <main><div class="sbn-main" data-page-theme="images/dawn-patch.png">
+        <ol class="breadcrumbs">
+            <li><a href="/pds/">Home</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="archive/missions.html">Missions</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="resource/dawn">Dawn</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li>GRaND PDS4 Archive</li>
+        </ol>
+        
         <center>
             <h1> Dawn GRaND PDS4 Archive</h1>
 
@@ -40,7 +54,7 @@
 The Dawn Mission's Gamma Ray and Neutron Detector (GRaND) collected data needed to map the elemental composition of the surfaces of Dawn mission targets 4 Vesta and 1 Ceres.  GRaND measured the spectrum of planetary gamma rays and neutrons, which originate from galactic cosmic ray interactions and the decay of radioelements within the regolith, while the spacecraft is in orbit around each body.
 
 <p>
-The Dawn GRaND archive, including raw and calibrated data and maps, has been previously available in the deprecated PDS3 archive standard, and has now been migrated to the current standard, PDS4.  In migrating the GRaND archive to the new PDS4 standard, no changes were made to the data files; however, the metadata and documentation were revised and enhanced.  Please see the GRaND archive description document [link] to understand the organization and content of the GRaND archive.  The original PDS3 GRaND archive is still available at the <a href="https://sbn.psi.edu/pds/resource/dawn/">Dawn Archive Page</a>.
+The Dawn GRaND archive, including raw and calibrated data and maps, has been previously available in the deprecated PDS3 archive standard, and has now been migrated to the current standard, PDS4.  In migrating the GRaND archive to the new PDS4 standard, no changes were made to the data files; however, the metadata and documentation were revised and enhanced.  Please see the GRaND archive description document [link] to understand the organization and content of the GRaND archive.  The original PDS3 GRaND archive is still available at the <a href="resource/dawn/">Dawn Archive Page</a>.
 
 <p>
 Custom IDL software is available for ease of access and processing of raw GRaND data for scientific analyses, at the <a href="https://github.com/nasa/dawn-grand-toolbox">NASA GitHub Dawn GRaND Toolbox</a> .  However, the IDL software is not necessary to access and use the GRaND data, as all information to do so is available in the PDS4 labels.
@@ -59,23 +73,23 @@ Each bundle contains raw, calibrated, and derived data on the specified target. 
 <tr><td>Ancillary
     <td><a href="https://sbnarchive.psi.edu/pds4/dawn/grand/dawn-grand-ancillary_1.0/">urn:nasa:pds:dawn-grand-ancillary::1.0</a>
     <td><a href="https://sbnarchive.psi.edu/pds4/dawn/grand/dawn-grand-ancillary_1.0.tar.gz">30 MB</a>
-    <td><a href="https://sbn.psi.edu/pds/resource/doi/dawn-grand-ancillary_1.0.html">10.26033/2cqt-at57</a>
+    <td><a href="resource/doi/dawn-grand-ancillary_1.0.html">10.26033/2cqt-at57</a>
 <tr><td>Cruise
     <td><a href="https://sbnarchive.psi.edu/pds4/dawn/grand/dawn-grand-cruise_1.0/">urn:nasa:pds:dawn-grand-cruise::1.0</a>
     <td><a href="https://sbnarchive.psi.edu/pds4/dawn/grand/dawn-grand-cruise_1.0.tar.gz">380  MB</a>
-    <td><a href="https://sbn.psi.edu/pds/resource/doi/dawn-grand-cruise_1.0.html">10.26033/skyr-at92</a>
+    <td><a href="resource/doi/dawn-grand-cruise_1.0.html">10.26033/skyr-at92</a>
 <tr><td>Mars
     <td><a href="https://sbnarchive.psi.edu/pds4/dawn/grand/dawn-grand-mars_1.0/">urn:nasa:pds:dawn-grand-mars::1.0</a>
     <td><a href="https://sbnarchive.psi.edu/pds4/dawn/grand/dawn-grand-mars_1.0.tar.gz">386  MB</a>
-    <td><a href="https://sbn.psi.edu/pds/resource/doi/dawn-grand-mars_1.0.html">10.26033/v138-0v94</a>
+    <td><a href="resource/doi/dawn-grand-mars_1.0.html">10.26033/v138-0v94</a>
 <tr><td>4 Vesta
     <td><a href="https://sbnarchive.psi.edu/pds4/dawn/grand/dawn-grand-vesta_1.0/">urn:nasa:pds:dawn-grand-vesta::1.0</a>
     <td><a href="https://sbnarchive.psi.edu/pds4/dawn/grand/dawn-grand-vesta_1.0.tar.gz">4.5 GB</a>
-    <td><a href="https://sbn.psi.edu/pds/resource/doi/dawn-grand-vesta_1.0.html">10.26033/ypv0-mt21</a>
+    <td><a href="resource/doi/dawn-grand-vesta_1.0.html">10.26033/ypv0-mt21</a>
 <tr><td>1 Ceres
     <td><a href="https://sbnarchive.psi.edu/pds4/dawn/grand/dawn-grand-ceres_1.0/">urn:nasa:pds:dawn-grand-ceres::1.0</a>
     <td><a href="https://sbnarchive.psi.edu/pds4/dawn/grand/dawn-grand-ceres_1.0.tar.gz">10 GB</a>
-    <td><a href="https://sbn.psi.edu/pds/resource/doi/dawn-grand-ceres_1.0.html">10.26033/hf9h-pt31</a>
+    <td><a href="resource/doi/dawn-grand-ceres_1.0.html">10.26033/hf9h-pt31</a>
 </table>
 </center>
 
@@ -84,25 +98,28 @@ Each bundle contains raw, calibrated, and derived data on the specified target. 
 <h3> Key Documents: </h3>
 
 <ul>
-<li><a href="https://sbn.psi.edu/pds/resource/doi/dawn_grand_doc_archive_description.html">Dawn GRaND Archive Description</a> - Start here to understand the GRaND archive
-<li><a href="https://sbn.psi.edu/pds/resource/doi/dawn_grand_doc_instrument_description.html">Dawn GRaND Instrument Description</a> - Essential reading for those wishing to use the GRaND data
-<li><a href="https://sbn.psi.edu/pds/resource/doi/dawn_grand_doc_bgo_data_processing.html">Dawn GRaND BGO Data Processing Document</a> 
-<li><a href="https://sbn.psi.edu/pds/resource/doi/dawn_grand_doc_epg.html">Dawn GRaND Ephemeris, Pointing, and Geometry Document</a> 
-<li><a href="https://sbn.psi.edu/pds/resource/doi/dawn_grand_doc_raw_data_description.html">Dawn GRaND Raw Data Description</a>
+<li><a href="resource/doi/dawn_grand_doc_archive_description.html">Dawn GRaND Archive Description</a> - Start here to understand the GRaND archive
+<li><a href="resource/doi/dawn_grand_doc_instrument_description.html">Dawn GRaND Instrument Description</a> - Essential reading for those wishing to use the GRaND data
+<li><a href="resource/doi/dawn_grand_doc_bgo_data_processing.html">Dawn GRaND BGO Data Processing Document</a> 
+<li><a href="resource/doi/dawn_grand_doc_epg.html">Dawn GRaND Ephemeris, Pointing, and Geometry Document</a> 
+<li><a href="resource/doi/dawn_grand_doc_raw_data_description.html">Dawn GRaND Raw Data Description</a>
 
             <h3>
             <center>
-            <a href="index.html">Return to Dawn Archive Page</a><br>
+            <a href="resource/dawn/index.html">Return to Dawn Archive Page</a><br>
             </center>
             <br>
-    </main>
+    </div></main>
     <!-- END main content -->
 
-    <div include-html="/pds/sbn-sidebar.html"></div>
+    
 
-    <div include-html="/pds/sbn-footer.html"></div>
+    <div include-html="sbn-footer.html"></div>
 
 
-<script src="/pds/js/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
+<script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/scripts20210331.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

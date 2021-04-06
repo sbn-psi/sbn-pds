@@ -1,68 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <base href="/pds/" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>Physical Properties of Asteroid</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-    <link rel="stylesheet" href="/pds/css/sbn-header.css">
-    <link rel="stylesheet" href="/pds/css/sbn-sidebar.css">
-    <link rel="stylesheet" href="/pds/css/sbn-footer.css">
-    <link rel="stylesheet" href="/pds/css/project-main.css">
+    <link rel="stylesheet" href="css/main20210331.css">
+    <link rel="stylesheet" href="css/header20210331.css">
+    <link rel="stylesheet" href="css/footer20210331.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
 
     <!-- PDS Feedback Widget -->
     <!-- Only add JQuery if you do not already include a library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
-    <link rel="stylesheet" href="/pds/feedback/css/feedback.css"  type="text/css" media="screen" />
-    <script src="/pds/feedback/js/modernizr-custom.js"></script>
-    <script src="/pds/feedback/js/config.js"></script>
-    <script src="/pds/feedback/js/feedback.js"></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
     <!-- -->
 </head>
 <body>
 
-    <div include-html="/pds/sbn-header.html"></div>
+    <div include-html="sbn-header.html"></div>
 
     <!-- BEGIN main content -->
-    <main class="sbn-main">
+    <main><div class="sbn-main" data-page-theme="images/spectra.png">
+        <ol class="breadcrumbs">
+            <li><a href="/pds/">Home</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="archive/data-types.html">Data Types</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li>Physical Properties</li>
+        </ol>
         <center>
             <h1> Physical Properties of Asteroids </h1>
             </center>
+            <p>These data sets include observations on the physical properties of asteroids such as spin vectors, taxonomic classifications, albedos, densities and diameters.</p>
 
             <ul>
-            <li> <a href="/pds/resource/astermag.html"> Absolute Magnitudes and Slopes </a>
-            <li> <a href="/pds/resource/albedo.html"> Albedos </a>
-            <li> <a href="/pds/resource/occalb.html"> Albedos from Stellar Occultations </a>
-            <li> <a href="/pds/resource/binmp.html"> Binary Minor Planets Compilation</a>
-            <li> <a href="/pds/resource/binsum.html"> Binary NEOs Summary </a>
-            <li> <a href="/pds/resource/busdemeotax.html">Bus-DeMeo Taxonomy</a>
-            <li> <a href="/pds/resource/delbo.html"> Delbo Thermal Infrared Asteroid Diameters and Albedos </a>
-            <li> <a href="/pds/resource/density.html"> Densities </a>
-            <li> <a href="/pds/resource/imps.html"> IRAS Minor Planet Survey (IMPS) Diameters and Albedos </a>
-            <li> <a href="/pds/resource/kbomags.html"> KBO and Centaur Absolute Magnitudes </a>
-            <li> <a href="/pds/resource/magphase.html">Kharkiv Asteroid Magnitude-Phase Relations</a>
-            <li> <a href="/pds/resource/astmass.html">Masses</a>
-            <li> <a href="/pds/resource/mimps.html"> MSX Infrared Minor Planet Survey (MIMPS) Diameters and Albedos </a>
-            <li> <a href="/pds/resource/neowisediam.html">NEOWISE Diameters and Albedos</a>
-            <li> <a href="/pds/resource/occ.html"> Occultation Timings and Diameters </a>
-            <li> <a href="/pds/resource/erosponds.html"> Roberts Eros Ponds Catalog </a>
-            <li> <a href="/pds/resource/sdsstax.html">SDSS-based Asteroid Taxonomy</a>
-            <li> <a href="/pds/resource/spin.html"> Spin Vectors </a>
-            <li> <a href="/pds/resource/taxonomy.html"> Taxonomic Classifications </a>
-            <li> <a href="/pds/resource/tnocenalb.html"> TNO and Centaur Diameters, Albedos, and Densities</a>
-            <li> <a href="/pds/resource/triadrad.html"> TRIAD Radiometric Diameters and Albedos </a>
+            <li> <a class="referral-link" data-page="Physical Properties" data-type="Data Type" href="resource/astermag.html"> Absolute Magnitudes and Slopes </a>
+            <li> <a class="referral-link" data-page="Physical Properties" data-type="Data Type" href="resource/albedo.html"> Albedos </a>
+            <li> <a class="referral-link" data-page="Physical Properties" data-type="Data Type" href="resource/occalb.html"> Albedos from Stellar Occultations </a>
+            <li> <a class="referral-link" data-page="Physical Properties" data-type="Data Type" href="resource/binmp.html"> Binary Minor Planets Compilation</a>
+            <li> <a class="referral-link" data-page="Physical Properties" data-type="Data Type" href="resource/binsum.html"> Binary NEOs Summary </a>
+            <li> <a class="referral-link" data-page="Physical Properties" data-type="Data Type" href="resource/busdemeotax.html">Bus-DeMeo Taxonomy</a>
+            <li> <a class="referral-link" data-page="Physical Properties" data-type="Data Type" href="resource/delbo.html"> Delbo Thermal Infrared Asteroid Diameters and Albedos </a>
+            <li> <a class="referral-link" data-page="Physical Properties" data-type="Data Type" href="resource/density.html"> Densities </a>
+            <li> <a class="referral-link" data-page="Physical Properties" data-type="Data Type" href="resource/imps.html"> IRAS Minor Planet Survey (IMPS) Diameters and Albedos </a>
+            <li> <a class="referral-link" data-page="Physical Properties" data-type="Data Type" href="resource/kbomags.html"> KBO and Centaur Absolute Magnitudes </a>
+            <li> <a class="referral-link" data-page="Physical Properties" data-type="Data Type" href="resource/magphase.html">Kharkiv Asteroid Magnitude-Phase Relations</a>
+            <li> <a class="referral-link" data-page="Physical Properties" data-type="Data Type" href="resource/astmass.html">Masses</a>
+            <li> <a class="referral-link" data-page="Physical Properties" data-type="Data Type" href="resource/mimps.html"> MSX Infrared Minor Planet Survey (MIMPS) Diameters and Albedos </a>
+            <li> <a class="referral-link" data-page="Physical Properties" data-type="Data Type" href="resource/neowisediam.html">NEOWISE Diameters and Albedos</a>
+            <li> <a class="referral-link" data-page="Physical Properties" data-type="Data Type" href="resource/occ.html"> Occultation Timings and Diameters </a>
+            <li> <a class="referral-link" data-page="Physical Properties" data-type="Data Type" href="resource/erosponds.html"> Roberts Eros Ponds Catalog </a>
+            <li> <a class="referral-link" data-page="Physical Properties" data-type="Data Type" href="resource/sdsstax.html">SDSS-based Asteroid Taxonomy</a>
+            <li> <a class="referral-link" data-page="Physical Properties" data-type="Data Type" href="resource/spin.html"> Spin Vectors </a>
+            <li> <a class="referral-link" data-page="Physical Properties" data-type="Data Type" href="resource/taxonomy.html"> Taxonomic Classifications </a>
+            <li> <a class="referral-link" data-page="Physical Properties" data-type="Data Type" href="resource/tnocenalb.html"> TNO and Centaur Diameters, Albedos, and Densities</a>
+            <li> <a class="referral-link" data-page="Physical Properties" data-type="Data Type" href="resource/triadrad.html"> TRIAD Radiometric Diameters and Albedos </a>
             </ul>
-    </main>
+    </div></main>
     <!-- END main content -->
 
-    <div include-html="/pds/sbn-sidebar.html"></div>
+    
 
-    <div include-html="/pds/sbn-footer.html"></div>
+    <div include-html="sbn-footer.html"></div>
 
 
-<script src="/pds/js/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
+<script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/scripts20210331.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

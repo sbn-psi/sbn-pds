@@ -1,33 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <base href="/pds/" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>Galileo Orbiter Data Archive</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-    <link rel="stylesheet" href="/pds/css/sbn-header.css">
-    <link rel="stylesheet" href="/pds/css/sbn-sidebar.css">
-    <link rel="stylesheet" href="/pds/css/sbn-footer.css">
-    <link rel="stylesheet" href="/pds/css/project-main.css">
+    <link rel="stylesheet" href="css/main20210331.css">
+    <link rel="stylesheet" href="css/header20210331.css">
+    <link rel="stylesheet" href="css/footer20210331.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
 
     <!-- PDS Feedback Widget -->
     <!-- Only add JQuery if you do not already include a library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
-    <link rel="stylesheet" href="/pds/feedback/css/feedback.css"  type="text/css" media="screen" />
-    <script src="/pds/feedback/js/modernizr-custom.js"></script>
-    <script src="/pds/feedback/js/config.js"></script>
-    <script src="/pds/feedback/js/feedback.js"></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
     <!-- -->
 </head>
 <body>
 
-    <div include-html="/pds/sbn-header.html"></div>
+    <div include-html="sbn-header.html"></div>
 
     <!-- BEGIN main content -->
-    <main class="sbn-main">
+    <main><div class="sbn-main" data-page-theme="images/dawn.jpg">
+        <ol class="breadcrumbs">
+            <li><a href="/pds/">Home</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="archive/missions.html">Missions</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li>Galileo</li>
+        </ol>
         <center>
             <h1> Galileo Orbiter Data Archive </h1>
             </center>
@@ -54,7 +65,7 @@
 
             <tr>
             <td>Dust
-            <td><a href="../resource/gdds.html">Galileo Dust Detector Subsystem (GDDS)</a>
+            <td><a class="referral-link" data-page="Galileo" data-type="Missions" href="resource/gdds.html">Galileo Dust Detector Subsystem (GDDS)</a>
             <td>GDDS can detect particles having masses between 10<sup>-16</sup>g<br>
             and 10<sup>-6</sup>g traveling at relative speeds of up to<br>
             70 km/s.  GDDS has detected interplanetary dust from asteroids<br>
@@ -63,7 +74,7 @@
 
             <tr>
             <td>Images
-            <td><a href="../resource/idagaspra.html">Ida/Gaspra Collection</a>
+            <td><a class="referral-link" data-page="Galileo" data-type="Missions" href="resource/idagaspra.html">Ida/Gaspra Collection</a>
             <td>A collection of Galileo and other data specific to Ida<br> and Gaspra, selected from the full data sets.
 
             </table>
@@ -78,38 +89,38 @@
 
             <tr>
             <td rowspan=2>Images
-            <td><a href="../resource/gaspracal.html">Galileo SSI radiometrically calibrated images of Gaspra</a>
+            <td><a class="referral-link" data-page="Galileo" data-type="Missions" href="resource/gaspracal.html">Galileo SSI radiometrically calibrated images of Gaspra</a>
             <td rowspan=2>Prepared by Domingue from SSI instrument data
 
             <tr>
-            <td><a href="../resource/idacalimages.html">Galileo SSI radiometrically calibrated images of Ida</a>
+            <td><a class="referral-link" data-page="Galileo" data-type="Missions" href="resource/idacalimages.html">Galileo SSI radiometrically calibrated images of Ida</a>
 
             <tr>
             <td rowspan=4>Spectra
-            <td><a href="../resource/gaspracube.html">Galileo NIMS Gaspra spectral image cube</a>
+            <td><a class="referral-link" data-page="Galileo" data-type="Missions" href="resource/gaspracube.html">Galileo NIMS Gaspra spectral image cube</a>
             <td rowspan=4> Prepared by Granahan from NIMS instrument data
 
             <tr>
-            <td><a href="../resource/idacube.html">Galileo NIMS Ida spectral image cube</a>
+            <td><a class="referral-link" data-page="Galileo" data-type="Missions" href="resource/idacube.html">Galileo NIMS Ida spectral image cube</a>
 
             <tr>
-            <td><a href="../resource/gaspraspec.html">Galileo NIMS radiance point spectra of Gaspra</a>
+            <td><a class="referral-link" data-page="Galileo" data-type="Missions" href="resource/gaspraspec.html">Galileo NIMS radiance point spectra of Gaspra</a>
 
             <tr>
-            <td><a href="../resource/pointspec.html">Galileo NIMS radiance point spectra of Ida and Dactyl</a>
+            <td><a class="referral-link" data-page="Galileo" data-type="Missions" href="resource/pointspec.html">Galileo NIMS radiance point spectra of Ida and Dactyl</a>
 
             <tr>
             <td>Maps/Mosaics
-            <td><a href="../resource/stookemaps.html">Stooke Small Bodies Maps</a>
+            <td><a class="referral-link" data-page="Galileo" data-type="Missions" href="resource/stookemaps.html">Stooke Small Bodies Maps</a>
             <td>Maps and mosaics of small solar system bodies by Stooke,<br> including Ida and Gaspra
 
             <tr>
             <td rowspan=2>Models
-            <td><a href="../resource/oshape.html">Thomas Shape Models </a>
+            <td><a class="referral-link" data-page="Galileo" data-type="Missions" href="resource/oshape.html">Thomas Shape Models </a>
             <td>Optical shape models by Thomas of small solar system bodies,<br> including Ida and Gaspra models based on Galileo images
 
             <tr>
-            <td><a href="../resource/stkshape.html">Stooke Shape Models </a>
+            <td><a class="referral-link" data-page="Galileo" data-type="Missions" href="resource/stkshape.html">Stooke Shape Models </a>
             <td>Optical shape models by Stooke of small solar system bodies,<br> including Ida and Gaspra models based on Galileo images
 
             </table>
@@ -181,14 +192,17 @@
             <br>
 
 
-    </main>
+    </div></main>
     <!-- END main content -->
 
-    <div include-html="/pds/sbn-sidebar.html"></div>
+    
 
-    <div include-html="/pds/sbn-footer.html"></div>
+    <div include-html="sbn-footer.html"></div>
 
 
-    <script src="/pds/js/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
+    <script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/scripts20210331.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

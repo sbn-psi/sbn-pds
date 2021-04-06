@@ -1,51 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <base href="/pds/" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>Orbital Data</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-    <link rel="stylesheet" href="/pds/css/sbn-header.css">
-    <link rel="stylesheet" href="/pds/css/sbn-sidebar.css">
-    <link rel="stylesheet" href="/pds/css/sbn-footer.css">
-    <link rel="stylesheet" href="/pds/css/project-main.css">
+    <link rel="stylesheet" href="css/main20210331.css">
+    <link rel="stylesheet" href="css/header20210331.css">
+    <link rel="stylesheet" href="css/footer20210331.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
 
     <!-- PDS Feedback Widget -->
     <!-- Only add JQuery if you do not already include a library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
-    <link rel="stylesheet" href="/pds/feedback/css/feedback.css"  type="text/css" media="screen" />
-    <script src="/pds/feedback/js/modernizr-custom.js"></script>
-    <script src="/pds/feedback/js/config.js"></script>
-    <script src="/pds/feedback/js/feedback.js"></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
     <!-- -->
 </head>
 <body>
 
-    <div include-html="/pds/sbn-header.html"></div>
+    <div include-html="sbn-header.html"></div>
 
     <!-- BEGIN main content -->
-    <main class="sbn-main">
+    <main><div class="sbn-main" data-page-theme="images/spectra.png">
+        <ol class="breadcrumbs">
+            <li><a href="/pds/">Home</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="archive/data-types.html">Data Types</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li>Orbital</li>
+        </ol>
         <center>
             <h1> Orbital Data </h1>
             </center>
+            <p>
+                These data sets contain derived data relating to the orbits of objects. <br> These data sets will include the proper elements and dynamical families. Orbital observations can be ground based or from spacecraft. Orbital data sets are typically collected over a longer time period to allow for a complete observation of an orbital path.    
+            </p>
 
             <ul>
-            <li> <a href="/pds/resource/cmormetorb.html">CMOR Meteoroid Streams Survey</a>
-            <li> <a href="/pds/resource/hifam.html"> High-i Asteroid Families </a>
-            <li> <a href="/pds/resource/ianninispec.html">Iannini Asteroid Family Spectra</a>
-            <li> <a href="/pds/resource/mothefam.html"> MRC
+            <li> <a class="referral-link" data-page="Orbital Data" data-type="Data Type" href="resource/cmormetorb.html">CMOR Meteoroid Streams Survey</a>
+            <li> <a class="referral-link" data-page="Orbital Data" data-type="Data Type" href="resource/hifam.html"> High-i Asteroid Families </a>
+            <li> <a class="referral-link" data-page="Orbital Data" data-type="Data Type" href="resource/ianninispec.html">Iannini Asteroid Family Spectra</a>
+            <li> <a class="referral-link" data-page="Orbital Data" data-type="Data Type" href="resource/mothefam.html"> MRC
             (Mothe-Diniz, Roig, and Carvano) Asteroid Families </a>
-            <li> <a href="/pds/resource/nesvornyfam.html">Nesvorny HCM Asteroid Families</a>
-            <li> <a href="/pds/resource/propel.html">Proper Elements </a> - outdated; see AstDys and NEODys sites linked below for more recent asteroid proper elements.
-            <li> <a href="/pds/resource/metorb.html">Steel Meteoroid Orbits
-            <li> <a href="/pds/resource/skads.html">Sub-Kilometer Asteroid
+            <li> <a class="referral-link" data-page="Orbital Data" data-type="Data Type" href="resource/nesvornyfam.html">Nesvorny HCM Asteroid Families</a>
+            <li> <a class="referral-link" data-page="Orbital Data" data-type="Data Type" href="resource/propel.html">Proper Elements </a> - outdated; see AstDys and NEODys sites linked below for more recent asteroid proper elements.
+            <li> <a class="referral-link" data-page="Orbital Data" data-type="Data Type" href="resource/metorb.html">Steel Meteoroid Orbits
+            <li> <a class="referral-link" data-page="Orbital Data" data-type="Data Type" href="resource/skads.html">Sub-Kilometer Asteroid
              Diameter Survey (SKADS)</a>
-            <li> <a href="/pds/resource/family.html"> Zappala Asteroid Families </a>
-            <li> <a href="/pds/resource/earthapp.html"> Asteroids Which Closely Approach Earth's Orbit
-            <li> <a href="/pds/resource/closeapp.html"> Close Approaches between Earth and Asteroids </a>
+            <li> <a class="referral-link" data-page="Orbital Data" data-type="Data Type" href="resource/family.html"> Zappala Asteroid Families </a>
+            <li> <a class="referral-link" data-page="Orbital Data" data-type="Data Type" href="resource/earthapp.html"> Asteroids Which Closely Approach Earth's Orbit
+            <li> <a class="referral-link" data-page="Orbital Data" data-type="Data Type" href="resource/closeapp.html"> Close Approaches between Earth and Asteroids </a>
             </a>
             </ul>
 
@@ -72,15 +86,18 @@
 
             <br>
 
-    </main>
+    </div></main>
     <!-- END main content -->
 
-    <div include-html="/pds/sbn-sidebar.html"></div>
+    
 
-    <div include-html="/pds/sbn-footer.html"></div>
+    <div include-html="sbn-footer.html"></div>
 
 
-    <script src="/pds/js/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
+    <script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/scripts20210331.js" type="text/javascript" charset="utf-8"></script>
 
 </body>
 </html>

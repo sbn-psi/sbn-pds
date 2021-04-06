@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/pds/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>
+      SBIB | PDS Small Bodies Node
+    </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main20210331.css">
+    <link rel="stylesheet" href="css/header20210331.css">
+    <link rel="stylesheet" href="css/footer20210331.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <!-- PDS Feedback Widget -->
+    <!-- Only add JQuery if you do not already include a library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <!-- -->
+</head>
+<body>
+
+    <div include-html="sbn-header.html"></div>
+
+    <!-- BEGIN main content -->
+    <link rel="stylesheet" href="sbib/css/style.css">
+    <main><div class="sbn-main">
+
+            <a class="return-breadcrumb ignore-a-styling" href="sbib/">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M18.41 16.59L13.82 12l4.59-4.59L17 6l-6 6 6 6zM6 6h2v12H6z"/><path d="M24 24H0V0h24v24z" fill="none"/></svg>
+                <span>Back to SBIB Home</span>
+            </a>
+
+            <!-- Content goes here -->
+
+            <H1> About SBIB - Pluto </H1>
+
+<h2>
+Pluto Mission Phase covered in SBIB
+</h2>
+<UL>
+<LI> Encounter - Flyby; varying resolution; LORRI: 2015-07-07 to 2015-07-14; MVIC: 2015-07-13 & 2015-07-14
+</UL>
+
+<h2>Map Projection and Arc-GIS</h2>
+Data can be imported into ArcMAP 10.1 by downloading the ISIS Map cubes.  
+<BR>
+Images (PNG and thumbnails) were generated
+with an equirectangular projection.
+
+<h2>Maps</h2>
+The overview map is a decreased resolution image of this   
+<a href=https://pds-smallbodies.astro.umd.edu/holdings/nh-p_psa-lorri_mvic-5-geophys-v1.0/browse/nh_pluto_mosaic.jpg>Pluto Mosaic</a>. 
+
+<h2>Data processing</h2>
+We used the USGS software tool <a href=http://isis.astrogeology.usgs.gov>Integrated Software for Imagers and Spectrometers (ISIS)</a>
+as the main tool to process the data.  
+We used a sphere with a radius of 1188.3 km for the shape  and the ISIS
+software routines to convert images into map-based projections.
+
+<h2>Coordinates</h2>
+This software uses the coordinate system as defined by the IAU and used by New Horizons with the prime meridian as the longitude facing Charon (which puts the heart at 
+about 180deg).
+<BR>
+
+
+            <!-- Content ends here -->
+        </div>
+    </main>
+
+
+    <!-- END main content -->
+
+    
+
+    <div include-html="sbn-footer.html"></div>
+
+
+    <script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/scripts20210331.js" type="text/javascript" charset="utf-8"></script>
+    
+</body>
+</html>

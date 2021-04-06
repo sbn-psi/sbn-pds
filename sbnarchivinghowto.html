@@ -2,35 +2,39 @@
 <html lang="en">
 
 <head>
+  <base href="/pds/" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
   <title> How to Archive Data in SBN </title>
 
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://sbn.psi.edu/pds/css/sbn-header.css">
-  <link rel="stylesheet" href="https://sbn.psi.edu/pds/css/sbn-sidebar.css">
-  <link rel="stylesheet" href="https://sbn.psi.edu/pds/css/sbn-footer.css">
-  <link rel="stylesheet" href="https://sbn.psi.edu/pds/css/project-main.css">
+  <link rel="stylesheet" href="css/main20210331.css">
+  <link rel="stylesheet" href="css/header20210331.css">
+  <link rel="stylesheet" href="css/footer20210331.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
 
   <!-- PDS Feedback Widget -->
   <!-- Only add JQuery if you do not already include a library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
-  <link rel="stylesheet" href="/pds/feedback/css/feedback.css" type="text/css" media="screen" />
-  <script src="/pds/feedback/js/modernizr-custom.js"></script>
-  <script src="/pds/feedback/js/config.js"></script>
-  <script src="/pds/feedback/js/feedback.js"></script>
+  <link rel="stylesheet" href="feedback/css/feedback.css" type="text/css" media="screen" />
+  <script src="feedback/js/modernizr-custom.js"></script>
+  <script src="feedback/js/config.js"></script>
+  <script src="feedback/js/feedback.js"></script>
   <!-- -->
 </head>
 
 <body>
 
-  <div include-html="https://sbn.psi.edu/pds/sbn-header.html"></div>
+  <div include-html="sbn-header.html"></div>
 
   <!-- BEGIN main content -->
-  <main class="sbn-main">
+  <main><div class="sbn-main">
     <center>
       <h1>How to archive your data in PDS Small Bodies Node (SBN)</h1>
       <h2>In 5 Easy Steps</h2>
@@ -41,17 +45,8 @@
     <h3>SBN Node archiving contacts:</h3>
 
     <p>
-      <b>Comets and comet-related laboratory spectra:</b>
-      Ludmilla Kolokolova <a href="mailto:ludmilla@astro.umd.edu">(ludmilla@astro.umd.edu)</a></p>
+      Beatrice Mueller <a href="mailto:bmueller@psi.edu">(bmueller@psi.edu)</a></p>
 
-    <p>
-      <b>Asteroids, small planetary satellites, dust,
-        and meteorite or mineral laboratory spectra:</b>
-      Carol Neese <a href="mailto:neese@psi.edu">(neese@psi.edu)</a></p>
-
-    <p>
-      <b>Other data:</b> If you're not sure where your data fit into PDS, contact either
-      of the above for help.</p>
 
     <h3>1. How to get started</h3>
 
@@ -75,7 +70,7 @@
     <h3>2. Assembling the PDS volume</h3>
 
     <ul>
-      <li>Most SBN data sets can be prepared using our
+      <li>Most non-mission SBN data sets can be prepared using our
         <a href="https://sbn.psi.edu/pds/olafs/">On-Line Archiving Facility (OLAF)</a>,
         which allows you to upload your data files and enter the
         supporting information into a web form. OLAF assembles the PDS volume with
@@ -92,7 +87,7 @@
         archiving method.</li>
 
       <li><b> -OR- </b>Look at the
-        <a href="http://sbntools.psi.edu/olaf/DataRequirements.html">OLAF file format
+        <a href="https://sbnapps.psi.edu/olaf-node/Support/Contact">OLAF file format
           requirements</a> to determine if your data can be archived using OLAF.
         Regardless of whether you use OLAF, you
         may have to reformat your data slightly to conform with PDS file
@@ -173,13 +168,16 @@
       use OLAF to prepare your data, you will not need to learn about PDS4
       archiving standards.</p>
 
-  </main>
+  </div></main>
   <!-- END main content -->
 
-  <div include-html="https://sbn.psi.edu/pds/sbn-sidebar.html"></div>
-  <div include-html="https://sbn.psi.edu/pds/sbn-footer.html"></div>
+  
+  <div include-html="sbn-footer.html"></div>
 
-  <script src="/pds/js/sbn-scripts.js" type="text/javascript" charset="utf-8" async defer></script>
+  <script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/scripts20210331.js" type="text/javascript" charset="utf-8"></script>
 
 </body>
 

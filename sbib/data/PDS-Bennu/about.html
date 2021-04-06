@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/pds/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>
+      Ferret | PDS Small Bodies Node
+    </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main20210331.css">
+    <link rel="stylesheet" href="css/header20210331.css">
+    <link rel="stylesheet" href="css/footer20210331.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <!-- PDS Feedback Widget -->
+    <!-- Only add JQuery if you do not already include a library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <!-- -->
+</head>
+<body>
+
+    <div include-html="sbn-header.html"></div>
+
+    <!-- BEGIN main content -->
+    <link rel="stylesheet" href="sbib/css/style.css">
+    <main><div class="sbn-main">
+
+            <a class="return-breadcrumb ignore-a-styling" href="sbib/">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M18.41 16.59L13.82 12l4.59-4.59L17 6l-6 6 6 6zM6 6h2v12H6z"/><path d="M24 24H0V0h24v24z" fill="none"/></svg>
+                <span>Back to SBIB Home</span>
+            </a>
+
+            <!-- Content goes here -->
+
+            <H1> About SBIB - Bennu </H1>
+
+            <p>Some images wihtout footprints are not displayed <br />
+            Note: Baseball Diamond 2 refly was done at the beginning of Recon A but it is under Detailed Survey. <br /> <br />
+            </p>
+
+            <h2>Bennu Mission Phases (end to beginning) covered in SBIB so far
+            </h2>
+            <UL>
+                <LI> Sample Collection - various Opnav images; MapCam & SamCam
+                <LI> Recon C - Nightingale, various Opnav images.
+                <LI> Recon B - Nightingale, Osprey, various Opnav images.
+                <LI> Orbit R - 2019-10-28 to 2020-01-06.
+                <LI> Recon A - Nightingale, Kingfisher, Osprey, Sandpiper, various Opnav images.
+                <LI> Orbit C - 2019-08-06 to 2019-08-09.
+                <LI> Orbit B - 2019-06-08 to 2019-08-05; particle monitoring June 25,26,28, and July 1.
+                <LI> Detailed Survey - Baseball Diamond 0 to 7 (BBD-0 to BBD-7); various OpNav Images (BBD-OpNav); <br />
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+                    Equatorial Stations at several local solar times: 3:00pm (Eq-3:00pm), 3:20am (Eq-3:20am), 12:30pm
+                    (Eq-12:30pm, 10:00am (Eq-10:00am), and various OpNav images (Eq-OpNav); <br />
+            
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+                    BBD-2 refly (BBD-2-refly), various refly OpNav images (BBD-OpNav-refly)
+                <LI> Orbit A - 2019-02-18 to 2019-02-21, MapCam only.
+                <LI> Preliminary Survey - North Pole 1, inbound (NP1-inbound); North Pole 1, outbound (NP1-outbound);
+                    North Pole 3, inbound (NP3-inbound); North Pole 3, outbound (NP3-outbound); <br />
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    &nbsp;&nbsp; Equatorial, inbound (Eq-inbound); Equatorial, outbound (Eq-outbound);
+                    South Pole, inbound (SP-inbound); South Pole, outbound (SP-outbound);
+                    various OpNav images (OpNAV).
+                <LI> Approach - 2018-10-18 to 2018-12-02.
+            </UL>
+            <BR>
+            <h2 >Data Download</h2>
+            Highlight the data you would like to download, click 'Download'. Notes for the download screen: 'raw' and 'calibrated'
+            buttons refer to the fits files. For downloading e.g. jpg files in camera view, click on 'jpg'; for projected view,
+            click on 'Projected' and then again on 'jpg'. Note that the file names are the same for the camera and projected view.
+            <BR>
+            <h2>Map Projection and ArcGIS</h2>
+            Data can be imported into ArcGIS by downloading the ISIS Map cubes.
+            <BR>
+            Most images (PNG and thumbnails) were generated
+            with an equirectangular projection.
+            Images that are near the poles have been projected with a polar projection.
+            
+            <h2 >Maps</h2>
+            We use several different overview maps for the Image Browser.
+            <UL>
+                <LI> Equatorial
+                <LI> Equatorial Topographic
+                <LI> North Topographic
+                <LI> South Topographic
+            </UL>
+            
+            <h2>Data processing</h2>
+            We used the USGS software tool <a href=http://isis.astrogeology.usgs.gov>Integrated Software for Imagers and
+                Spectrometers (ISIS)</a>
+            as the main tool to process the data.
+            We used the pre-Dawn shape model posted at USGS and the ISIS
+            software routines to convert images into map-based projections.
+            
+            <h2>Coordinates</h2>
+            This software uses the coordinate system defined by the OSIRIS-REx mission(
+            <a href=https://sbnarchive.psi.edu/pds4/orex/orex.mission/document/Bennu_Coordinate_System_Description.pdf>details</a>).
+            <BR>
+            <UL >
+                <LI>Spin Pole of Bennu at RA=85.46 deg, Dec=-60.36 deg
+                <LI>Prime Meridian Angle W0=135.8156 and rotation rate W1=2011.14645095 deg/day
+                <LI>Rotation period 0.179 days
+            </UL><BR>
+    
+
+            
+        </div>
+    </main>
+
+    <!-- END main content -->
+
+    
+
+    <div include-html="sbn-footer.html"></div>
+
+
+    <script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/scripts20210331.js" type="text/javascript" charset="utf-8"></script>
+    
+</body>
+</html>

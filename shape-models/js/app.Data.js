@@ -12,17 +12,17 @@ app.factory('Comets', function () {
                                 fileFormat: 'WRL'
                             },
                             derived: [{
-                                downloadLink: 'files/67P/cg_mspcd_shap2_001m_cart.obj',
+                                downloadLink: 'shape-models/files/67P/cg_mspcd_shap2_001m_cart.obj',
                                 fileFormat: 'OBJ'
                             }]
                         },
                         previews: {
                             default: {
-                                path: 'previews/67p.png',
+                                path: 'shape-models/previews/67p.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'files/67P/cg_mspcd_shap2_001m_cart.usdz',
+                                path: 'shape-models/files/67P/cg_mspcd_shap2_001m_cart.usdz',
                                 fileFormat: 'USDZ'
                             }
                         }
@@ -41,17 +41,17 @@ app.factory('Comets', function () {
                                 fileFormat: 'TAB'
                             },
                             derived: [{
-                                downloadLink: 'files/wild2/wild2_cart_full.tab.obj',
+                                downloadLink: 'shape-models/files/wild2/wild2_cart_full.tab.obj',
                                 fileFormat: 'OBJ'
                             }]
                         },
                         previews: {
                             default: {
-                                path: 'previews/wild2.png',
+                                path: 'shape-models/previews/wild2.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'files/wild2/wild2_cart_full.tab.usdz',
+                                path: 'shape-models/files/wild2/wild2_cart_full.tab.usdz',
                                 fileFormat: 'USDZ'
                             }
                         }
@@ -70,17 +70,17 @@ app.factory('Comets', function () {
                                 fileFormat: 'WRL'
                             },
                             derived: [{
-                                downloadLink: 'files/hartley2/hartley_2_2012_cart.obj',
+                                downloadLink: 'shape-models/files/hartley2/hartley_2_2012_cart.obj',
                                 fileFormat: 'OBJ'
                             }]
                         },
                         previews: {
                             default: {
-                                path: 'previews/hartley2_2012_cart.png',
+                                path: 'shape-models/previews/hartley2_2012_cart.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'files/hartley2/hartley_2_2012_cart.usdz',
+                                path: 'shape-models/files/hartley2/hartley_2_2012_cart.usdz',
                                 fileFormat: 'USDZ'
                             }
                         }
@@ -99,13 +99,13 @@ app.factory('Comets', function () {
                                 fileFormat: 'WRL'
                             },
                             derived: [{
-                                downloadLink: 'files/tempel1/tempel1_2012_cart.obj',
+                                downloadLink: 'shape-models/files/tempel1/tempel1_2012_cart.obj',
                                 fileFormat: 'OBJ'
                             }]
                         },
                         previews: {
                             default: {
-                                path: 'previews/tempel1_2012_cart.png',
+                                path: 'shape-models/previews/tempel1_2012_cart.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
@@ -161,13 +161,13 @@ app.factory('Comets', function () {
                                 fileFormat: 'TAB'
                             },
                             derived: [{
-                                downloadLink: 'files/RADAR/1998ky26.tab.obj',
+                                downloadLink: 'shape-models/files/RADAR/1998ky26.tab.obj',
                                 fileFormat: 'OBJ'
                             }]
                         },
                         previews: {
                             default: {
-                                path: 'previews/1998ky26.png',
+                                path: 'shape-models/previews/1998ky26.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
@@ -190,13 +190,13 @@ app.factory('Comets', function () {
                                 fileFormat: 'TAB'
                             },
                             derived: [{
-                                downloadLink: 'files/a153591/a153591alpha.tab.obj',
+                                downloadLink: 'shape-models/files/a153591/a153591alpha.tab.obj',
                                 fileFormat: 'OBJ'
                             }]
                         },
                         previews: {
                             default: {
-                                path: 'previews/a153591.png',
+                                path: 'shape-models/previews/a153591.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
@@ -219,17 +219,17 @@ app.factory('Comets', function () {
                                 fileFormat: 'TAB'
                             },
                             derived: [{
-                                downloadLink: 'files/RADAR/52760.tab.obj',
+                                downloadLink: 'shape-models/files/RADAR/52760.tab.obj',
                                 fileFormat: 'OBJ'
                             }]
                         },
                         previews: {
                             default: {
-                                path: 'previews/52760.png',
+                                path: 'shape-models/previews/52760.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'files/RADAR/52760.tab.usdz',
+                                path: 'shape-models/files/RADAR/52760.tab.usdz',
                                 fileFormat: 'USDZ'
                             }
                         }
@@ -248,17 +248,17 @@ app.factory('Comets', function () {
                                 fileFormat: 'TAB'
                             },
                             derived: [{
-                                downloadLink: 'files/a8567.tab.obj',
+                                downloadLink: 'shape-models/files/a8567.tab.obj',
                                 fileFormat: 'OBJ'
                             }]
                         },
                         previews: {
                             default: {
-                                path: 'previews/asteroid_8567.png',
+                                path: 'shape-models/previews/asteroid_8567.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'files/a8567.tab.usdz',
+                                path: 'shape-models/files/a8567.tab.usdz',
                                 fileFormat: 'USDZ'
                             }
                         }
@@ -278,17 +278,17 @@ app.factory('Comets', function () {
                                 fileFormat: 'ICQ'
                             },
                             derived: [{
-                                downloadLink: 'files/ceres/CERES_SPC181019_0128.ICQ.obj',
+                                downloadLink: 'shape-models/files/ceres/CERES_SPC181019_0128.ICQ.obj',
                                 fileFormat: 'OBJ'
                             }]
                         },
                         previews: {
                             default: {
-                                path: 'previews/ceres.png',
+                                path: 'shape-models/previews/ceres.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'files/ceres/CERES_SPC181019_0128.ICQ.usdz',
+                                path: 'shape-models/files/ceres/CERES_SPC181019_0128.ICQ.usdz',
                                 fileFormat: 'USDZ'
                             }
                         }
@@ -345,7 +345,7 @@ app.factory('Comets', function () {
                         },
                         previews: {
                             default: {
-                                path: 'previews/1620geographos.png',
+                                path: 'shape-models/previews/1620geographos.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
@@ -368,20 +368,20 @@ app.factory('Comets', function () {
                                 fileFormat: 'TAB'
                             },
                             derived: [{
-                                downloadLink: 'files/bennu/radar/101955bennu.tab.obj',
+                                downloadLink: 'shape-models/files/bennu/radar/101955bennu.tab.obj',
                                 fileFormat: 'OBJ'
                             },{
-                                downloadLink: 'files/dsk/BENNU_K3_NOL_V01.BDS',
+                                downloadLink: 'shape-models/files/dsk/BENNU_K3_NOL_V01.BDS',
                                 fileFormat: 'DSK'
                             }]
                         },
                         previews: {
                             default: {
-                                path: 'previews/101955bennu.png',
+                                path: 'shape-models/previews/101955bennu.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'files/bennu/radar/101955bennu.tab.usdz',
+                                path: 'shape-models/files/bennu/radar/101955bennu.tab.usdz',
                                 fileFormat: 'USDZ'
                             }
                         }
@@ -396,17 +396,17 @@ app.factory('Comets', function () {
                                 fileFormat: 'DSK'
                             },
                             derived: [{
-                                downloadLink: 'files/bennu/orex/bennu.orex.obj',
+                                downloadLink: 'shape-models/files/bennu/orex/bennu.orex.obj',
                                 fileFormat: 'OBJ'
                             }]
                         },
                         previews: {
                             default: {
-                                path: 'previews/bennu.orex.png',
+                                path: 'shape-models/previews/bennu.orex.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'files/bennu/orex/bennu.orex.usdz',
+                                path: 'shape-models/files/bennu/orex/bennu.orex.usdz',
                                 fileFormat: 'USDZ'
                             }
                         }
@@ -428,7 +428,7 @@ app.factory('Comets', function () {
                         },
                         previews: {
                             default: {
-                                path: 'previews/Ryugu.png',
+                                path: 'shape-models/previews/Ryugu.png',
                                 fileFormat: 'PNG'
                             },
                             ios: null
@@ -448,20 +448,20 @@ app.factory('Comets', function () {
                                 fileFormat: 'WRL'
                             },
                             derived: [{
-                                downloadLink: 'files/lutetia/lutetia_003k_cart.obj',
+                                downloadLink: 'shape-models/files/lutetia/lutetia_003k_cart.obj',
                                 fileFormat: 'OBJ'
                             },{
-                                downloadLink: 'files/dsk/LUTETIA_K3_FAR_V01.BDS',
+                                downloadLink: 'shape-models/files/dsk/LUTETIA_K3_FAR_V01.BDS',
                                 fileFormat: 'DSK'
                             }]
                         },
                         previews: {
                             default: {
-                                path: 'previews/lutetia.png',
+                                path: 'shape-models/previews/lutetia.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'files/lutetia/lutetia_003k_cart.usdz',
+                                path: 'shape-models/files/lutetia/lutetia_003k_cart.usdz',
                                 fileFormat: 'USDZ'
                             }
                         }
@@ -486,7 +486,7 @@ app.factory('Comets', function () {
                         },
                         previews: {
                             default: {
-                                path: 'previews/216kleopatra.png',
+                                path: 'shape-models/previews/216kleopatra.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
@@ -597,17 +597,17 @@ app.factory('Comets', function () {
                                 fileFormat: 'TAB'
                             },
                             derived: [{
-                                downloadLink: 'files/RADAR/2063bacchus.tab.obj',
+                                downloadLink: 'shape-models/files/RADAR/2063bacchus.tab.obj',
                                 fileFormat: 'OBJ'
                             }]
                         },
                         previews: {
                             default: {
-                                path: 'previews/2063bacchus.png',
+                                path: 'shape-models/previews/2063bacchus.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'files/RADAR/2063bacchus.tab.usdz',
+                                path: 'shape-models/files/RADAR/2063bacchus.tab.usdz',
                                 fileFormat: 'USDZ'
                             }
                         }
@@ -626,17 +626,17 @@ app.factory('Comets', function () {
                                 fileFormat: 'WRL'
                             },
                             derived: [{
-                                downloadLink: 'files/steins/steins.obj',
+                                downloadLink: 'shape-models/files/steins/steins.obj',
                                 fileFormat: 'OBJ'
                             }]
                         },
                         previews: {
                             default: {
-                                path: 'previews/steins.png',
+                                path: 'shape-models/previews/steins.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'files/steins/steins.usdz',
+                                path: 'shape-models/files/steins/steins.usdz',
                                 fileFormat: 'USDZ'
                             }
                         }
@@ -655,20 +655,20 @@ app.factory('Comets', function () {
                                 fileFormat: 'TAB'
                             },
                             derived: [{
-                                downloadLink: 'files/itokawa/ver64q.tab.obj',
+                                downloadLink: 'shape-models/files/itokawa/ver64q.tab.obj',
                                 fileFormat: 'OBJ'
                             },{
-                                downloadLink: 'files/dsk/ITOKAWA_K50_GAS_V01.BDS',
+                                downloadLink: 'shape-models/files/dsk/ITOKAWA_K50_GAS_V01.BDS',
                                 fileFormat: 'DSK'
                             }]
                         },
                         previews: {
                             default: {
-                                path: 'previews/itokawa.png',
+                                path: 'shape-models/previews/itokawa.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'files/itokawa/ver64q.tab.usdz',
+                                path: 'shape-models/files/itokawa/ver64q.tab.usdz',
                                 fileFormat: 'USDZ'
                             }
                         }
@@ -683,7 +683,7 @@ app.factory('Comets', function () {
                                 fileFormat: 'TAB'
                             },
                             derived: [{
-                                downloadLink: 'files/dsk/ITOKAWA_K12_NEE_V01.BDS',
+                                downloadLink: 'shape-models/files/dsk/ITOKAWA_K12_NEE_V01.BDS',
                                 fileFormat: 'DSK'
                             }]
                         },
@@ -703,17 +703,17 @@ app.factory('Comets', function () {
                         data: {
                             primary: null,
                             derived: [{
-                                downloadLink: 'files/vesta/Vesta-256V.obj',
+                                downloadLink: 'shape-models/files/vesta/Vesta-256V.obj',
                                 fileFormat: 'OBJ'
                             }]
                         },
                         previews: {
                             default: {
-                                path: 'previews/vesta.png',
+                                path: 'shape-models/previews/vesta.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'files/vesta/Vesta-256V.usdz',
+                                path: 'shape-models/files/vesta/Vesta-256V.usdz',
                                 fileFormat: 'USDZ'
                             }
                         }
@@ -748,20 +748,20 @@ app.factory('Comets', function () {
                                 fileFormat: 'TAB'
                             },
                             derived: [{
-                                downloadLink: 'files/eros/ver64q.tab.obj',
+                                downloadLink: 'shape-models/files/eros/ver64q.tab.obj',
                                 fileFormat: 'OBJ'
                             },{
-                                downloadLink: 'files/dsk/EROS_M3_GAS_V01.BDS',
+                                downloadLink: 'shape-models/files/dsk/EROS_M3_GAS_V01.BDS',
                                 fileFormat: 'DSK'
                             }]
                         },
                         previews: {
                             default: {
-                                path: 'previews/eros.png',
+                                path: 'shape-models/previews/eros.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'files/eros/ver64q.tab.usdz',
+                                path: 'shape-models/files/eros/ver64q.tab.usdz',
                                 fileFormat: 'USDZ'
                             }
                         }
@@ -796,17 +796,17 @@ app.factory('Comets', function () {
                                 fileFormat: 'TAB'
                             },
                             derived: [{
-                                downloadLink: 'files/RADAR/4179toutatis.tab.obj',
+                                downloadLink: 'shape-models/files/RADAR/4179toutatis.tab.obj',
                                 fileFormat: 'OBJ'
                             }]
                         },
                         previews: {
                             default: {
-                                path: 'previews/toutatis.png',
+                                path: 'shape-models/previews/toutatis.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'files/RADAR/4179toutatis.tab.usdz',
+                                path: 'shape-models/files/RADAR/4179toutatis.tab.usdz',
                                 fileFormat: 'USDZ'
                             }
                         }
@@ -825,17 +825,17 @@ app.factory('Comets', function () {
                                 fileFormat: 'TAB'
                             },
                             derived: [{
-                                downloadLink: 'files/RADAR/4769castalia.tab.obj',
+                                downloadLink: 'shape-models/files/RADAR/4769castalia.tab.obj',
                                 fileFormat: 'OBJ'
                             }]
                         },
                         previews: {
                             default: {
-                                path: 'previews/4769castalia.png',
+                                path: 'shape-models/previews/4769castalia.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'files/RADAR/4769castalia.tab.usdz',
+                                path: 'shape-models/files/RADAR/4769castalia.tab.usdz',
                                 fileFormat: 'USDZ'
                             }
                         }
@@ -854,17 +854,17 @@ app.factory('Comets', function () {
                                 fileFormat: 'TAB'
                             },
                             derived: [{
-                                downloadLink: 'files/RADAR/6489golevka.tab.obj',
+                                downloadLink: 'shape-models/files/RADAR/6489golevka.tab.obj',
                                 fileFormat: 'OBJ'
                             }]
                         },
                         previews: {
                             default: {
-                                path: 'previews/6489golevka.png',
+                                path: 'shape-models/previews/6489golevka.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'files/RADAR/6489golevka.tab.usdz',
+                                path: 'shape-models/files/RADAR/6489golevka.tab.usdz',
                                 fileFormat: 'USDZ'
                             }
                         }
@@ -922,11 +922,11 @@ app.factory('Comets', function () {
                         },
                         previews: {
                             default: {
-                                path: 'previews/a2100rashalom.png',
+                                path: 'shape-models/previews/a2100rashalom.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'files/usd/a2100rashalom.usdz',
+                                path: 'shape-models/files/usd/a2100rashalom.usdz',
                                 fileFormat: 'USDZ'
                             }
                         }
@@ -948,11 +948,11 @@ app.factory('Comets', function () {
                         },
                         previews: {
                             default: {
-                                path: 'previews/a4486mithra.png',
+                                path: 'shape-models/previews/a4486mithra.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'files/usd/a4486mithra.usdz',
+                                path: 'shape-models/files/usd/a4486mithra.usdz',
                                 fileFormat: 'USDZ'
                             }
                         }
@@ -974,11 +974,11 @@ app.factory('Comets', function () {
                         },
                         previews: {
                             default: {
-                                path: 'previews/a4660nereus.png',
+                                path: 'shape-models/previews/a4660nereus.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'files/usd/a4660nereus.usdz',
+                                path: 'shape-models/files/usd/a4660nereus.usdz',
                                 fileFormat: 'USDZ'
                             }
                         }
@@ -1000,11 +1000,11 @@ app.factory('Comets', function () {
                         },
                         previews: {
                             default: {
-                                path: 'previews/a10115_1992sk.png',
+                                path: 'shape-models/previews/a10115_1992sk.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'files/usd/a10115_1992sk.usdz',
+                                path: 'shape-models/files/usd/a10115_1992sk.usdz',
                                 fileFormat: 'USDZ'
                             }
                         }
@@ -1026,11 +1026,11 @@ app.factory('Comets', function () {
                         },
                         previews: {
                             default: {
-                                path: 'previews/a29075_1950da_retrogrademodel.png',
+                                path: 'shape-models/previews/a29075_1950da_retrogrademodel.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'files/usd/a29075_1950da_retrogrademodel.usdz',
+                                path: 'shape-models/files/usd/a29075_1950da_retrogrademodel.usdz',
                                 fileFormat: 'USDZ'
                             }
                         }
@@ -1052,11 +1052,11 @@ app.factory('Comets', function () {
                         },
                         previews: {
                             default: {
-                                path: 'previews/a29075_1950da_progrademodel.png',
+                                path: 'shape-models/previews/a29075_1950da_progrademodel.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'files/usd/a29075_1950da_progrademodel.usdz',
+                                path: 'shape-models/files/usd/a29075_1950da_progrademodel.usdz',
                                 fileFormat: 'USDZ'
                             }
                         }
@@ -1078,11 +1078,11 @@ app.factory('Comets', function () {
                         },
                         previews: {
                             default: {
-                                path: 'previews/a33342_1998wt24.png',
+                                path: 'shape-models/previews/a33342_1998wt24.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'files/usd/a33342_1998wt24.usdz',
+                                path: 'shape-models/files/usd/a33342_1998wt24.usdz',
                                 fileFormat: 'USDZ'
                             }
                         }
@@ -1104,11 +1104,11 @@ app.factory('Comets', function () {
                         },
                         previews: {
                             default: {
-                                path: 'previews/a54509_yorp.png',
+                                path: 'shape-models/previews/a54509_yorp.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'files/usd/a54509_yorp.usdz',
+                                path: 'shape-models/files/usd/a54509_yorp.usdz',
                                 fileFormat: 'USDZ'
                             }
                         }
@@ -1130,11 +1130,11 @@ app.factory('Comets', function () {
                         },
                         previews: {
                             default: {
-                                path: 'previews/a66391_1999kw4_primary.png',
+                                path: 'shape-models/previews/a66391_1999kw4_primary.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'files/usd/a66391_1999kw4_primary.usdz',
+                                path: 'shape-models/files/usd/a66391_1999kw4_primary.usdz',
                                 fileFormat: 'USDZ'
                             }
                         }
@@ -1156,11 +1156,11 @@ app.factory('Comets', function () {
                         },
                         previews: {
                             default: {
-                                path: 'previews/a66391_1999kw4_secondary.png',
+                                path: 'shape-models/previews/a66391_1999kw4_secondary.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'files/usd/a66391_1999kw4_secondary.usdz',
+                                path: 'shape-models/files/usd/a66391_1999kw4_secondary.usdz',
                                 fileFormat: 'USDZ'
                             }
                         }
@@ -1182,11 +1182,11 @@ app.factory('Comets', function () {
                         },
                         previews: {
                             default: {
-                                path: 'previews/a136617_1994cc_primary.png',
+                                path: 'shape-models/previews/a136617_1994cc_primary.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'files/usd/a136617_1994cc_primary.usdz',
+                                path: 'shape-models/files/usd/a136617_1994cc_primary.usdz',
                                 fileFormat: 'USDZ'
                             }
                         }
@@ -1208,11 +1208,11 @@ app.factory('Comets', function () {
                         },
                         previews: {
                             default: {
-                                path: 'previews/a276046_2002ce26_primary.png',
+                                path: 'shape-models/previews/a276046_2002ce26_primary.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'files/usd/a276046_2002ce26_primary.usdz',
+                                path: 'shape-models/files/usd/a276046_2002ce26_primary.usdz',
                                 fileFormat: 'USDZ'
                             }
                         }
@@ -1234,11 +1234,11 @@ app.factory('Comets', function () {
                         },
                         previews: {
                             default: {
-                                path: 'previews/a341843_2008ev5.png',
+                                path: 'shape-models/previews/a341843_2008ev5.png',
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'files/usd/a341843_2008ev5.usdz',
+                                path: 'shape-models/files/usd/a341843_2008ev5.usdz',
                                 fileFormat: 'USDZ'
                             }
                         }
@@ -1286,20 +1286,20 @@ app.factory('Satellites', function (Datasets) {
                         fileFormat: 'TAB'
                     },
                     derived: [{
-                        downloadLink: 'files/SATURN_SMALL_MOONS/atlas_30k_plt.tab.obj',
+                        downloadLink: 'shape-models/files/SATURN_SMALL_MOONS/atlas_30k_plt.tab.obj',
                         fileFormat: 'OBJ'
                     },{
-                        downloadLink: 'files/dsk/ATLAS_K30_THO_V01.BDS',
+                        downloadLink: 'shape-models/files/dsk/ATLAS_K30_THO_V01.BDS',
                         fileFormat: 'DSK'
                     }]
                 },
                 previews: {
                     default: {
-                        path: 'previews/atlas_30k_plt.png',
+                        path: 'shape-models/previews/atlas_30k_plt.png',
                         fileFormat: 'PNG'
                     },
                     ios: {
-                        path: 'files/SATURN_SMALL_MOONS/atlas_30k_plt.tab.usdz',
+                        path: 'shape-models/files/SATURN_SMALL_MOONS/atlas_30k_plt.tab.usdz',
                         fileFormat: 'UDSZ'
                     }
                 }
@@ -1318,20 +1318,20 @@ app.factory('Satellites', function (Datasets) {
                         fileFormat: 'TAB'
                     },
                     derived: [{
-                        downloadLink: 'files/SATURN_SMALL_MOONS/calypso_30k_plt.tab.obj',
+                        downloadLink: 'shape-models/files/SATURN_SMALL_MOONS/calypso_30k_plt.tab.obj',
                         fileFormat: 'OBJ'
                     },{
-                        downloadLink: 'files/dsk/CALYPSO_K30_THO_V01.BDS',
+                        downloadLink: 'shape-models/files/dsk/CALYPSO_K30_THO_V01.BDS',
                         fileFormat: 'DSK'
                     }]
                 },
                 previews: {
                     default: {
-                        path: 'previews/calypso_30k_plt.png',
+                        path: 'shape-models/previews/calypso_30k_plt.png',
                         fileFormat: 'PNG'
                     },
                     ios: {
-                        path: 'files/SATURN_SMALL_MOONS/calypso_30k_plt.tab.usdz',
+                        path: 'shape-models/files/SATURN_SMALL_MOONS/calypso_30k_plt.tab.usdz',
                         fileFormat: 'USDZ'
                     }
                 }
@@ -1350,17 +1350,17 @@ app.factory('Satellites', function (Datasets) {
                         fileFormat: 'TAB'
                     },
                     derived: [{
-                        downloadLink: 'files/SATURN_SMALL_MOONS/daphnis_30k_plt.tab.obj',
+                        downloadLink: 'shape-models/files/SATURN_SMALL_MOONS/daphnis_30k_plt.tab.obj',
                         fileFormat: 'OBJ'
                     }]
                 },
                 previews: {
                     default: {
-                        path: 'previews/daphnis_30k_plt.png',
+                        path: 'shape-models/previews/daphnis_30k_plt.png',
                         fileFormat: 'PNG'
                     },
                     ios: {
-                        path: 'files/SATURN_SMALL_MOONS/daphnis_30k_plt.tab.usdz',
+                        path: 'shape-models/files/SATURN_SMALL_MOONS/daphnis_30k_plt.tab.usdz',
                         fileFormat: 'USDZ'
                     }
                 }
@@ -1399,20 +1399,20 @@ app.factory('Satellites', function (Datasets) {
                         fileFormat: 'TAB'
                     },
                     derived: [{
-                        downloadLink: 'files/dione/dione_ver64q.tab.obj',
+                        downloadLink: 'shape-models/files/dione/dione_ver64q.tab.obj',
                         fileFormat: 'OBJ'
                     },{
-                        downloadLink: 'files/dsk/DIONE_K50_GAS_V01.BDS',
+                        downloadLink: 'shape-models/files/dsk/DIONE_K50_GAS_V01.BDS',
                         fileFormat: 'DSK'
                     }]
                 },
                 previews: {
                     default: {
-                        path: 'previews/dione.png',
+                        path: 'shape-models/previews/dione.png',
                         fileFormat: 'PNG'
                     },
                     ios: {
-                        path: 'files/dione/dione_ver64q.tab.usdz',
+                        path: 'shape-models/files/dione/dione_ver64q.tab.usdz',
                         fileFormat: 'USDZ'
                     }
                 }
@@ -1431,20 +1431,20 @@ app.factory('Satellites', function (Datasets) {
                         fileFormat: 'TAB'
                     },
                     derived: [{
-                        downloadLink: 'files/SATURN_SMALL_MOONS/epimetheus_30k_plt.tab.obj',
+                        downloadLink: 'shape-models/files/SATURN_SMALL_MOONS/epimetheus_30k_plt.tab.obj',
                         fileFormat: 'OBJ'
                     },{
-                        downloadLink: 'files/dsk/EPIMETHEUS_K30_THO_V01.BDS',
+                        downloadLink: 'shape-models/files/dsk/EPIMETHEUS_K30_THO_V01.BDS',
                         fileFormat: 'DSK'
                     }]
                 },
                 previews: {
                     default: {
-                        path: 'previews/epimetheus_30k_plt.png',
+                        path: 'shape-models/previews/epimetheus_30k_plt.png',
                         fileFormat: 'PNG'
                     },
                     ios: {
-                        path: 'files/SATURN_SMALL_MOONS/epimetheus_30k_plt.tab.usdz',
+                        path: 'shape-models/files/SATURN_SMALL_MOONS/epimetheus_30k_plt.tab.usdz',
                         fileFormat: 'USDZ'
                     }
                 }
@@ -1495,20 +1495,20 @@ app.factory('Satellites', function (Datasets) {
                         fileFormat: 'TAB'
                     },
                     derived: [{
-                        downloadLink: 'files/SATURN_SMALL_MOONS/helene_30k_plt.tab.obj',
+                        downloadLink: 'shape-models/files/SATURN_SMALL_MOONS/helene_30k_plt.tab.obj',
                         fileFormat: 'OBJ'
                     },{
-                        downloadLink: 'files/dsk/HELENE_K30_THO_V01.BDS',
+                        downloadLink: 'shape-models/files/dsk/HELENE_K30_THO_V01.BDS',
                         fileFormat: 'DSK'
                     }]
                 },
                 previews: {
                     default: {
-                        path: 'previews/helene_30k_plt.png',
+                        path: 'shape-models/previews/helene_30k_plt.png',
                         fileFormat: 'PNG'
                     },
                     ios: {
-                        path: 'files/SATURN_SMALL_MOONS/helene_30k_plt.tab.usdz',
+                        path: 'shape-models/files/SATURN_SMALL_MOONS/helene_30k_plt.tab.usdz',
                         fileFormat: 'USDZ'
                     }
                 }
@@ -1527,20 +1527,20 @@ app.factory('Satellites', function (Datasets) {
                         fileFormat: 'TAB'
                     },
                     derived: [{
-                        downloadLink: 'files/SATURN_SMALL_MOONS/hyperion_30k_plt.tab.obj',
+                        downloadLink: 'shape-models/files/SATURN_SMALL_MOONS/hyperion_30k_plt.tab.obj',
                         fileFormat: 'OBJ'
                     },{
-                        downloadLink: 'files/dsk/HYPERION_K30_THO_V01.BDS',
+                        downloadLink: 'shape-models/files/dsk/HYPERION_K30_THO_V01.BDS',
                         fileFormat: 'DSK'
                     }]
                 },
                 previews: {
                     default: {
-                        path: 'previews/hyperion_30k_plt.png',
+                        path: 'shape-models/previews/hyperion_30k_plt.png',
                         fileFormat: 'PNG'
                     },
                     ios: {
-                        path: 'files/SATURN_SMALL_MOONS/hyperion_30k_plt.tab.usdz',
+                        path: 'shape-models/files/SATURN_SMALL_MOONS/hyperion_30k_plt.tab.usdz',
                         fileFormat: 'USDZ'
                     }
                 }
@@ -1575,20 +1575,20 @@ app.factory('Satellites', function (Datasets) {
                         fileFormat: 'TAB'
                     },
                     derived: [{
-                        downloadLink: 'files/SATURN_SMALL_MOONS/janus_30k_plt.tab.obj',
+                        downloadLink: 'shape-models/files/SATURN_SMALL_MOONS/janus_30k_plt.tab.obj',
                         fileFormat: 'OBJ'
                     },{
-                        downloadLink: 'files/dsk/JANUS_K30_THO_V01.BDS',
+                        downloadLink: 'shape-models/files/dsk/JANUS_K30_THO_V01.BDS',
                         fileFormat: 'DSK'
                     }]
                 },
                 previews: {
                     default: {
-                        path: 'previews/janus_30k_plt.png',
+                        path: 'shape-models/previews/janus_30k_plt.png',
                         fileFormat: 'PNG'
                     },
                     ios: {
-                        path: 'files/SATURN_SMALL_MOONS/janus_30k_plt.tab.usdz',
+                        path: 'shape-models/files/SATURN_SMALL_MOONS/janus_30k_plt.tab.usdz',
                         fileFormat: 'USDZ'
                     }
                 }
@@ -1659,20 +1659,20 @@ app.factory('Satellites', function (Datasets) {
                         fileFormat: 'TAB'
                     },
                     derived: [{
-                        downloadLink: 'files/mimas/mimas_ver512q.tab.obj',
+                        downloadLink: 'shape-models/files/mimas/mimas_ver512q.tab.obj',
                         fileFormat: 'OBJ'
                     },{
-                        downloadLink: 'files/dsk/MIMAS_M3_GAS_V01.BDS',
+                        downloadLink: 'shape-models/files/dsk/MIMAS_M3_GAS_V01.BDS',
                         fileFormat: 'DSK'
                     }]
                 },
                 previews: {
                     default: {
-                        path: 'previews/mimas.png',
+                        path: 'shape-models/previews/mimas.png',
                         fileFormat: 'PNG'
                     },
                     ios: {
-                        path: 'files/mimas/mimas_ver512q.tab.usdz',
+                        path: 'shape-models/files/mimas/mimas_ver512q.tab.usdz',
                         fileFormat: 'USDZ'
                     }
                 }
@@ -1691,20 +1691,20 @@ app.factory('Satellites', function (Datasets) {
                         fileFormat: 'TAB'
                     },
                     derived: [{
-                        downloadLink: 'files/SATURN_SMALL_MOONS/pan_30k_plt.tab.obj',
+                        downloadLink: 'shape-models/files/SATURN_SMALL_MOONS/pan_30k_plt.tab.obj',
                         fileFormat: 'OBJ'
                     },{
-                        downloadLink: 'files/dsk/PAN_K30_THO_V01.BDS',
+                        downloadLink: 'shape-models/files/dsk/PAN_K30_THO_V01.BDS',
                         fileFormat: 'DSK'
                     }]
                 },
                 previews: {
                     default: {
-                        path: 'previews/pan_30k_plt.png',
+                        path: 'shape-models/previews/pan_30k_plt.png',
                         fileFormat: 'PNG'
                     },
                     ios: {
-                        path: 'files/SATURN_SMALL_MOONS/pan_30k_plt.tab.usdz',
+                        path: 'shape-models/files/SATURN_SMALL_MOONS/pan_30k_plt.tab.usdz',
                         fileFormat: 'USDZ'
                     }
                 }
@@ -1723,20 +1723,20 @@ app.factory('Satellites', function (Datasets) {
                         fileFormat: 'TAB'
                     },
                     derived: [{
-                        downloadLink: 'files/SATURN_SMALL_MOONS/pandora_30k_plt.tab.obj',
+                        downloadLink: 'shape-models/files/SATURN_SMALL_MOONS/pandora_30k_plt.tab.obj',
                         fileFormat: 'OBJ'
                     },{
-                        downloadLink: 'files/dsk/PANDORA_K30_THO_V01.BDS',
+                        downloadLink: 'shape-models/files/dsk/PANDORA_K30_THO_V01.BDS',
                         fileFormat: 'DSK'
                     }]
                 },
                 previews: {
                     default: {
-                        path: 'previews/pandora_30k_plt.png',
+                        path: 'shape-models/previews/pandora_30k_plt.png',
                         fileFormat: 'PNG'
                     },
                     ios: {
-                        path: 'files/SATURN_SMALL_MOONS/pandora_30k_plt.tab.usdz',
+                        path: 'shape-models/files/SATURN_SMALL_MOONS/pandora_30k_plt.tab.usdz',
                         fileFormat: 'USDZ'
                     }
                 }
@@ -1771,20 +1771,20 @@ app.factory('Satellites', function (Datasets) {
                         fileFormat: 'TAB'
                     },
                     derived: [{
-                        downloadLink: 'files/phobos/phobos_ver512q.tab.obj',
+                        downloadLink: 'shape-models/files/phobos/phobos_ver512q.tab.obj',
                         fileFormat: 'OBJ'
                     },{
-                        downloadLink: 'files/dsk/PHOBOS_M3_GAS_V01.BDS',
+                        downloadLink: 'shape-models/files/dsk/PHOBOS_M3_GAS_V01.BDS',
                         fileFormat: 'DSK'
                     }]
                 },
                 previews: {
                     default: {
-                        path: 'previews/phobos.png',
+                        path: 'shape-models/previews/phobos.png',
                         fileFormat: 'PNG'
                     },
                     ios: {
-                        path: 'files/phobos/phobos_ver512q.tab.usdz',
+                        path: 'shape-models/files/phobos/phobos_ver512q.tab.usdz',
                         fileFormat: 'USDZ'
                     }
                 }
@@ -1819,20 +1819,20 @@ app.factory('Satellites', function (Datasets) {
                         fileFormat: 'TAB'
                     },
                     derived: [{
-                        downloadLink: 'files/phoebe/phoebe_ver512q.tab.obj',
+                        downloadLink: 'shape-models/files/phoebe/phoebe_ver512q.tab.obj',
                         fileFormat: 'OBJ'
                     },{
-                        downloadLink: 'files/dsk/PHOEBE_M3_GAS_V01.BDS',
+                        downloadLink: 'shape-models/files/dsk/PHOEBE_M3_GAS_V01.BDS',
                         fileFormat: 'DSK'
                     }]
                 },
                 previews: {
                     default: {
-                        path: 'previews/phoebe.png',
+                        path: 'shape-models/previews/phoebe.png',
                         fileFormat: 'PNG'
                     },
                     ios: {
-                        path: 'files/phoebe/phoebe_ver512q.tab.usdz',
+                        path: 'shape-models/files/phoebe/phoebe_ver512q.tab.usdz',
                         fileFormat: 'USDZ'
                     }
                 }
@@ -1851,17 +1851,17 @@ app.factory('Satellites', function (Datasets) {
                         fileFormat: 'TAB'
                     },
                     derived: [{
-                        downloadLink: 'files/SATURN_SMALL_MOONS/s16prometheus.tab.obj',
+                        downloadLink: 'shape-models/files/SATURN_SMALL_MOONS/s16prometheus.tab.obj',
                         fileFormat: 'OBJ'
                     }]
                 },
                 previews: {
                     default: {
-                        path: 'previews/prometheus_30k_plt.png',
+                        path: 'shape-models/previews/prometheus_30k_plt.png',
                         fileFormat: 'PNG'
                     },
                     ios: {
-                        path: 'files/SATURN_SMALL_MOONS/s16prometheus.tab.usdz',
+                        path: 'shape-models/files/SATURN_SMALL_MOONS/s16prometheus.tab.usdz',
                         fileFormat: 'USDZ'
                     }
                 }
@@ -1916,20 +1916,20 @@ app.factory('Satellites', function (Datasets) {
                         fileFormat: 'TAB'
                     },
                     derived: [{
-                        downloadLink: 'files/SATURN_SMALL_MOONS/telesto_30k_plt.tab.obj',
+                        downloadLink: 'shape-models/files/SATURN_SMALL_MOONS/telesto_30k_plt.tab.obj',
                         fileFormat: 'OBJ'
                     },{
-                        downloadLink: 'files/dsk/TELESTO_K30_THO_V01.BDS',
+                        downloadLink: 'shape-models/files/dsk/TELESTO_K30_THO_V01.BDS',
                         fileFormat: 'DSK'
                     }]
                 },
                 previews: {
                     default: {
-                        path: 'previews/telesto_30k_plt.png',
+                        path: 'shape-models/previews/telesto_30k_plt.png',
                         fileFormat: 'PNG'
                     },
                     ios: {
-                        path: 'files/SATURN_SMALL_MOONS/telesto_30k_plt.tab.usdz',
+                        path: 'shape-models/files/SATURN_SMALL_MOONS/telesto_30k_plt.tab.usdz',
                         fileFormat: 'USDZ'
                     }
                 }
@@ -1948,20 +1948,20 @@ app.factory('Satellites', function (Datasets) {
                         fileFormat: 'TAB'
                     },
                     derived: [{
-                        downloadLink: 'files/tethys/tethys_ver512q.tab.obj',
+                        downloadLink: 'shape-models/files/tethys/tethys_ver512q.tab.obj',
                         fileFormat: 'OBJ'
                     },{
-                        downloadLink: 'files/dsk/TETHYS_M3_GAS_V01.BDS',
+                        downloadLink: 'shape-models/files/dsk/TETHYS_M3_GAS_V01.BDS',
                         fileFormat: 'DSK'
                     }]
                 },
                 previews: {
                     default: {
-                        path: 'previews/tethys.png',
+                        path: 'shape-models/previews/tethys.png',
                         fileFormat: 'PNG'
                     },
                     ios: {
-                        path: 'files/tethys/tethys_ver512q.tab.usdz',
+                        path: 'shape-models/files/tethys/tethys_ver512q.tab.usdz',
                         fileFormat: 'USDZ'
                     }
                 }
