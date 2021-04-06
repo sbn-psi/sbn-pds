@@ -10,9 +10,9 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/main20210216.css">
-    <link rel="stylesheet" href="css/header20210216.css">
-    <link rel="stylesheet" href="css/footer20210216.css">
+    <link rel="stylesheet" href="css/main20210331.css">
+    <link rel="stylesheet" href="css/header20210331.css">
+    <link rel="stylesheet" href="css/footer20210331.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
@@ -30,6 +30,11 @@
 </head>
 
 <body>
+
+        <div include-html="sbn-header.html"></div>
+    
+        <!-- BEGIN main content -->
+        <main><div class="sbn-main">
         <ol class="breadcrumbs">
                 <li><a href="/pds-staging/">Home</a></li>
                 <li class="breadcrumbs-separator">/</li>
@@ -343,14 +348,18 @@
                 Label</a>
     </ul>
 
-    <br>
-    <hr>
-    <h3>
-        <center>
-            <a href="/"> Return to Main Archive Page </a>
-        </center>
-    </h3>
+    </div></main>
+    <!-- END main content -->
+
+    
+
+    <div include-html="sbn-footer.html"></div>
+
+    <script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/scripts20210331.js" type="text/javascript" charset="utf-8"></script>
 
 </body>
-
 </html>
+
