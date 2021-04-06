@@ -1,5 +1,15 @@
 Header set Access-Control-Allow-Origin "*"
 
+### Caching
+
+Header set Cache-Control "max-age=60, no-cache"
+
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|swf)$">
+  Header set Cache-Control "max-age=63072000, public"
+</FilesMatch>
+
+### Redirects
+
 # Redirect /pds/shape_models to /pds/shape-models
 Redirect 301 /pds/shape_models/ /pds/shape-models/
 Redirect 301 /pds/shape_models /pds/shape-models/
