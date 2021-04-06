@@ -50,66 +50,62 @@
     <!-- BEGIN main content -->
     <main><div class="sbn-main">
 
-        <main><div class="sbn-main">
-            <ol class="breadcrumbs">
-                <li><a href="/pds-staging/">Home</a></li>
-                <li class="breadcrumbs-separator">/</li>
-                <li><a href="support/">Support</a></li>
-                <li class="breadcrumbs-separator">/</li>
-                <li>Glossary</li>
-            </ol>    
-    
-    
-            <center>
-                <h1> Glossary </h1>
-            </center>
-    
-            <h5>Bundle: </h5>
-                <p> A PDS4 bundle contains a grouping of related PDS4 collections.  For example, the OSIRIS-REx OCAMS bundle contains collections for the raw, reduced, and calibrated data, calibration data, and documents, for the OCAMS instrument.</p>
+        <ol class="breadcrumbs">
+            <li><a href="/pds-staging/">Home</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="support/">Support</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li>Glossary</li>
+        </ol>    
 
-            <h5>Collection:</h5> 
-                <p>A PDS4 collection is a grouping of related data products.  For example, a collection could contain all the calibrated data from a given instrument, or the data from a specified mission phase.</p>
-            
-            <h5>Data Dictionary:</h5> 
-                <p>Defines the meaning and structure of classes and attributes used in the PDS label. Also called a schema.  The PDS4 core dictionary defines the common classes and attributes used across the PDS archive.  More specialized discipline-specific metadata are included in discipline dictionaries.  Metadata specific to a certain mission or project are included in a mission or project dictionary.  Specialized data dictionaries are also called Local Data Dictionaries (LDD).</p>
-            
-            <h5>FERRET: </h5>
-                <p>The Ferret is a tool that allows searchable access to all the Small Bodies Node asteroid, comet, and satellite data sets. Use the links below to access the data.</p>    
-                
-            <h5>FITS:</h5>  
-                <p>FITS is a data format using an ASCII keyword-value header on a binary or ASCII image or table file.  It is often used in PDS archiving because it can be PDS4 compatible and is a commonly used format in the astronomy and planetary science community.  See https://fits.gsfc.nasa.gov/fits_standard.html for the full FITS specification.</p>
-    
-            <h5>IMG:</h5> 
-                <p>IMG refers to binary files with the .img filename extension that store raw disk images of floppy disks, hard drives, and optical discs or a bitmap image. </p>    
-            
-            <h5>Label:</h5> 
-                <p>Each PDS data product has a “label” which describes the structure and content of the data file, and includes “metadata” to facilitate search and analysis.  PDS4 labels are in XML format with extension .xml, and PDS3 labels are in ODL format with extension .lbl.  PDS4 labels are all detached, i.e. a separate file.  PDS3 labels can be detached or attached, i.e. included at the start of the data file.</p>
-    
-            <h5>Metadata:</h5> 
-                <p>Metadata are information about the data, included in the PDS label.  Metadata can be used to facilitate search, examples are the instrument used to take the data or the wavelength range of the data.  Metadata can also be used to facilitate analysis, examples are the time of observation and the instrument settings.  Metadata classes and attributes are defined in data dictionaries.</p>        
-            
-            <h5>OLAF</h5>
-                <p>OLAF is a web application that allows individuals to submit their data to the Planetary Data System so that it can be archived and made available to the public.</p>        
-            
-            <h5>SBIB</h5>
-                <p>The Small Bodies Image Browser (SBIB) is designed to graphically search through the large number of images quickly.</p>
-    
-            <h5>PDS4 and PDS3:</h5>  
-                <p>The current archiving standard used in PDS is called PDS4.  Newer data are in the PDS4 standard, and older data are still in the older PDS3 standard.  The content is very similar but the details of the structure are different.</p>    
-                              
-            <h5>Shape model:</h5>
-                <p>Shape models (or Digital Terrain Models) are three-dimensional models of the shape of an object. They can be derived using radar data, visible image data, light curves with inversion techniques and/or laser altimeter data.</p>    
+        <center>
+            <h1> Glossary </h1>
+        </center>
 
-            <h5>SPICE kernels:</h5> 
-                <p>SPICE kernels contain time-series details of the position and pointing of the spacecraft, and the position and rotation state of the planets/small bodies.  It also includes exact definitions of the spacecraft equipment and instruments, to include how they are oriented on the spacecraft. The complete SPICE information provides deterministic information to compute relative and inertial positions, pointing and angles of objects in space. SPICE kernels are archived at the PDS Navigation and Ancillary Information Facility (NAIF).  For more info, see NAIF at https://naif.jpl.nasa.gov/naif/.</p>
-    
-            <h5>Volume: </h5>
-                <p> A PDS3 volume contains a set of related data in the older PDS3 standard.  PDS3 doesn’t organize data into bundles and collections as PDS4 does, instead it has volumes.</p>    
+        <h5>Bundle: </h5>
+            <p> A PDS4 bundle contains a grouping of related PDS4 collections.  For example, the OSIRIS-REx OCAMS bundle contains collections for the raw, reduced, and calibrated data, calibration data, and documents, for the OCAMS instrument.</p>
 
-            <h5>XML:</h5> 
-                <p>XML is an Extensible Markup Language (XML) file. These are really just plain text files that use custom tags to describe the structure and other features of the data or document.  In PDS4, each data file or document has an XML label to describe it.</p>
-                
-    
+        <h5>Collection:</h5> 
+            <p>A PDS4 collection is a grouping of related data products.  For example, a collection could contain all the calibrated data from a given instrument, or the data from a specified mission phase.</p>
+        
+        <h5>Data Dictionary:</h5> 
+            <p>Defines the meaning and structure of classes and attributes used in the PDS label. Also called a schema.  The PDS4 core dictionary defines the common classes and attributes used across the PDS archive.  More specialized discipline-specific metadata are included in discipline dictionaries.  Metadata specific to a certain mission or project are included in a mission or project dictionary.  Specialized data dictionaries are also called Local Data Dictionaries (LDD).</p>
+        
+        <h5>FERRET: </h5>
+            <p>The Ferret is a tool that allows searchable access to all the Small Bodies Node asteroid, comet, and satellite data sets. Use the links below to access the data.</p>    
+            
+        <h5>FITS:</h5>  
+            <p>FITS is a data format using an ASCII keyword-value header on a binary or ASCII image or table file.  It is often used in PDS archiving because it can be PDS4 compatible and is a commonly used format in the astronomy and planetary science community.  See https://fits.gsfc.nasa.gov/fits_standard.html for the full FITS specification.</p>
+
+        <h5>IMG:</h5> 
+            <p>IMG refers to binary files with the .img filename extension that store raw disk images of floppy disks, hard drives, and optical discs or a bitmap image. </p>    
+        
+        <h5>Label:</h5> 
+            <p>Each PDS data product has a “label” which describes the structure and content of the data file, and includes “metadata” to facilitate search and analysis.  PDS4 labels are in XML format with extension .xml, and PDS3 labels are in ODL format with extension .lbl.  PDS4 labels are all detached, i.e. a separate file.  PDS3 labels can be detached or attached, i.e. included at the start of the data file.</p>
+
+        <h5>Metadata:</h5> 
+            <p>Metadata are information about the data, included in the PDS label.  Metadata can be used to facilitate search, examples are the instrument used to take the data or the wavelength range of the data.  Metadata can also be used to facilitate analysis, examples are the time of observation and the instrument settings.  Metadata classes and attributes are defined in data dictionaries.</p>        
+        
+        <h5>OLAF</h5>
+            <p>OLAF is a web application that allows individuals to submit their data to the Planetary Data System so that it can be archived and made available to the public.</p>        
+        
+        <h5>SBIB</h5>
+            <p>The Small Bodies Image Browser (SBIB) is designed to graphically search through the large number of images quickly.</p>
+
+        <h5>PDS4 and PDS3:</h5>  
+            <p>The current archiving standard used in PDS is called PDS4.  Newer data are in the PDS4 standard, and older data are still in the older PDS3 standard.  The content is very similar but the details of the structure are different.</p>    
+                            
+        <h5>Shape model:</h5>
+            <p>Shape models (or Digital Terrain Models) are three-dimensional models of the shape of an object. They can be derived using radar data, visible image data, light curves with inversion techniques and/or laser altimeter data.</p>    
+
+        <h5>SPICE kernels:</h5> 
+            <p>SPICE kernels contain time-series details of the position and pointing of the spacecraft, and the position and rotation state of the planets/small bodies.  It also includes exact definitions of the spacecraft equipment and instruments, to include how they are oriented on the spacecraft. The complete SPICE information provides deterministic information to compute relative and inertial positions, pointing and angles of objects in space. SPICE kernels are archived at the PDS Navigation and Ancillary Information Facility (NAIF).  For more info, see NAIF at https://naif.jpl.nasa.gov/naif/.</p>
+
+        <h5>Volume: </h5>
+            <p> A PDS3 volume contains a set of related data in the older PDS3 standard.  PDS3 doesn’t organize data into bundles and collections as PDS4 does, instead it has volumes.</p>    
+
+        <h5>XML:</h5> 
+            <p>XML is an Extensible Markup Language (XML) file. These are really just plain text files that use custom tags to describe the structure and other features of the data or document.  In PDS4, each data file or document has an XML label to describe it.</p>
     
     </div></main>
     <!-- END main content -->
