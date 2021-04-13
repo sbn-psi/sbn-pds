@@ -1,3 +1,12 @@
+// Fix document base tag when viewed in new context
+(function(document, window) {
+    var baseElement = document.getElementsByTagName('base')[0]
+    if(!(baseElement.href.includes('sbn.psi.edu') || baseElement.href.includes('localhost'))) {
+        var pathFromDocument = baseElement.getAttribute('href')
+        baseElement.href = `${window.location.protocol}//sbn.psi.edu${pathFromDocument}`
+    }
+})(document, window);
+
 // HTML fragment loading
 (function(document, window) {
     var includeHTML = function(startingElement) {
