@@ -200,9 +200,15 @@ searchData.splice(0, 0, {
         url: '/pds/resource/near',
         category: 'Mission'
     },{
+        name: 'NEO Surveys',
+        subtitle: '',
+        instruments: [],
+        url: '/pds/archive/surveys.html',
+        category: 'Mission'
+    },{
         name: 'NEOWISE',
         subtitle: '',
-        instruments: ['Near Earth Asteroid Tracking (NEAT)',],
+        instruments: [],
         url: '/pds/resource/neowisediam.html',
         category: 'Mission'
     },{
