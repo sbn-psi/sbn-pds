@@ -201,13 +201,13 @@ searchData.splice(0, 0, {
         category: 'Mission'
     },{
         name: 'NEO Surveys',
-        subtitle: '',
+        subtitle: 'Asteroids and Comets',
         instruments: [],
         url: '/pds/archive/surveys.html',
         category: 'Mission'
     },{
         name: 'NEOWISE',
-        subtitle: '',
+        subtitle: 'Asteroids, Satellites of Saturn',
         instruments: [],
         url: '/pds/resource/neowisediam.html',
         category: 'Mission'
