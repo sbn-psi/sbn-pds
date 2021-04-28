@@ -172,7 +172,7 @@ searchData.splice(0, 0, {
     },{
         name: 'Hayabusa2',
         subtitle: '162173 Ryugu',
-        instruments: ['Optical Navigation Cameras (ONC)', 'Thermal Infrared Imager (TIR)', 'Near Infrared Spectrometer (NIRS3)', 'Light Detection and Ranging (LIDAR)',],
+        instruments: ['Optical Navigation Cameras (ONC)', 'Thermal Infrared Imager (TIR)', 'Near Infrared Spectrometer (NIRS3)', 'Light Detection and Ranging (LIDAR)', 'MASCOT lander', 'Minerva landers', 'Deployable Camera (DCAM3)',],
         url: '/pds/resource/hayabusa2',
         category: 'Mission'
     },{
