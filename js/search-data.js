@@ -184,7 +184,7 @@ searchData.splice(0, 0, {
     },{
         name: 'IRAS',
         subtitle: 'Interplanetary dust, Asteroids',
-        instruments: ['Supplemental IRAS Minor Planet Survey (SIMPS)', 'Focal Plane Array (FPA)', 'Ritchey-Chretien telescope',],
+        instruments: ['Focal Plane Array (FPA)',],
         url: '/pds/archive/iras.html',
         category: 'Mission'
     },{
