@@ -170,6 +170,12 @@ searchData.splice(0, 0, {
         url: '/pds/archive/hayabusa.html',
         category: 'Mission'
     },{
+        name: 'Hayabusa2',
+        subtitle: '162173 Ryugu',
+        instruments: ['Optical Navigation Cameras (ONC)', 'Thermal Infrared Imager (TIR)', 'Near Infrared Spectrometer (NIRS3)', 'Light Detection and Ranging (LIDAR)',],
+        url: '/pds/resource/hayabusa2',
+        category: 'Mission'
+    },{
         name: 'Hubble Space Telescope',
         subtitle: '1 Ceres, 4 Vesta',
         instruments: ['Hubble',],
