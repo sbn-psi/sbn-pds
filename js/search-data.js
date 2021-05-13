@@ -146,6 +146,12 @@ searchData.splice(0, 0, {
         url: 'http://pdssbn.astro.umd.edu/data_sb/missions/bopps/index.shtml',
         category: 'Mission'
     },{
+        name: 'BRRISON',
+        subtitle: 'C/2012 S1 (ISON)',
+        instruments: ['BRRISON INFRARED CAMERA (BIRC)', 'ULTRAVIOLET AND VISIBLE IMAGING CAMERA (UVVis)'],
+        url: 'https://pds-smallbodies.astro.umd.edu/data_sb/missions/brrison/index.shtml',
+        category: 'Mission'
+    },{
         name: 'Cassini',
         subtitle: 'Interplanetary dust and Small satellite shape models',
         instruments: ['HRD', 'CDA',],
@@ -158,10 +164,34 @@ searchData.splice(0, 0, {
         url: '/pds/resource/dawn',
         category: 'Mission'
     },{
+        name: 'Deep Impact',
+        subtitle: '9P/Tempel 1, Earth/Moon/Jupiter as calibrators',
+        instruments: ['High Resolution Instrument Infrared Spectrometer (HRI-IR)', 'High Resolution Instrument Visible CCD (HRI-VIS)', 'Medium Resolution Instrument Visible CCD (MRI-VIS)', 'Impactor Targeting Sensor Visible CCD (ITS-VIS)'],
+        url: 'https://pds-smallbodies.astro.umd.edu/data_sb/missions/deepimpact/index.shtml',
+        category: 'Mission'
+    },{
+        name: 'Deep Space 1',
+        subtitle: '9969 Braille, 19P/Borrelly 1, Cometary Dust',
+        instruments: ['Ion Propulsion System Diagnostic System (IDS)', 'Miniature Integrated Camera Spectrometer (MICAS)', 'Plasma Experiment for Planetary Exploration (PEPE)'],
+        url: 'https://pds-smallbodies.astro.umd.edu/data_sb/missions/deepspace1/index.shtml',
+        category: 'Mission'
+    },{
+        name: 'Double Asteroid Redirection Test (DART)',
+        subtitle: 'Near-Earth binary asteroid Didymos, asteroid deflection test',
+        instruments: [,],
+        url: 'https://pds-smallbodies.astro.umd.edu/data_sb/missions/dart/index.shtml',
+        category: 'Mission'
+    },{
         name: 'Galileo',
         subtitle: '243 Ida, 951 Gaspra, Small planetary satellites, Interplanetary dust',
         instruments: ['Galileo dust detector system (GDDS)',],
         url: '/pds/archive/galileo.html',
+        category: 'Mission'
+    },{
+        name: 'Giotto',
+        subtitle: '1P/Halley, Interplanetary dust',
+        instruments: ['Dust Impact Detector System (DID)', 'Energetic Particle Analyzer (EPA)', 'Radio Science Experiment (GRE)', 'Halley Multicolour Camera (HMC)', 'Ion Mass Spectrometer (IMS)', 'Johnstone Plasma Analyzer (JPA)', 'Magnetometer (MAG)', 'Optical Probe Experiment (OPE)', 'Particle Impact Analyzer (PIA)', 'Neutral Mass Spectrometer (NMS)'],
+        url: 'http://pdssbn.astro.umd.edu/data_sb/missions/giotto/index.shtml',
         category: 'Mission'
     },{
         name: 'Hayabusa',
@@ -186,6 +216,12 @@ searchData.splice(0, 0, {
         subtitle: 'Interplanetary dust, Asteroids',
         instruments: ['Focal Plane Array (FPA)',],
         url: '/pds/archive/iras.html',
+        category: 'Mission'
+    },{
+        name: 'LADEE',
+        subtitle: 'Lunar dust',
+        instruments: ['Lunar Dust Experiment (LDEX)', 'Neutral Mass Spectrometer (NMS)', 'UV-Vis Spectrometer (UVS)'],
+        url: '/pds/archive/ladee.html',
         category: 'Mission'
     },{
         name: 'Mariner 9',
