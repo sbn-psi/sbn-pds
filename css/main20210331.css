@@ -163,6 +163,15 @@ ul li ul {
     margin-left: 16px;
 }
 
+ul.bulleted {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+ul.bulleted li ul {
+    list-style-type: circle;
+    padding-left: 32px;
+}
+
 
 #pds-superseded {
     display: none;
