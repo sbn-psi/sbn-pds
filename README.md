@@ -29,7 +29,7 @@ Breadcrumbs should be added to any page that is reached via links in the main hi
 Copy this template:
 ```HTML
 <ol class="breadcrumbs">
-    <li><a href="/pds/">Home</a></li>
+    <li><a href="/pds-staging/">Home</a></li>
     <li class="breadcrumbs-separator">/</li>
     <li>  <!-- Link to parent page -->  </li>
     <li class="breadcrumbs-separator">/</li>
@@ -40,7 +40,7 @@ Copy this template:
 You can add additional levels as needed, like in the context of a mission. See a complete example for the Dawn GRaND Mars Bundle:
 ```HTML
 <ol class="breadcrumbs">
-    <li><a href="/pds/">Home</a></li>
+    <li><a href="/pds-staging/">Home</a></li>
     <li class="breadcrumbs-separator">/</li>
     <li><a href="archive/missions.html">Missions</a></li>
     <li class="breadcrumbs-separator">/</li>
