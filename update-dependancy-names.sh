@@ -1,5 +1,5 @@
-find . -name "*.html" -type f -exec sed -i '' -e 's/main20210216.css/main20210331.css/g' {} \;
-mv css/main20210216.css css/main20210331.css;
+find . -name "*.html" -type f -exec sed -i '' -e 's/main20210216.css/main20210519.css/g' {} \;
+mv css/main20210216.css css/main20210519.css;
 
 find . -name "*.html" -type f -exec sed -i '' -e 's/header20210216.css/header20210331.css/g' {} \;
 mv css/header20210216.css css/header20210331.css;

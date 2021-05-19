@@ -69,6 +69,9 @@ table {
     --button: #57B4FF;  /* Grey 400 */
     --button-contrast: #000000;  /* Grey 1000 */
     --hr: rgba(255, 255, 255, 0.25);  /* Grey 0 25% */
+    --callout: #A5FBE2;
+    --callout-text: #192028;
+    --callout-link: #0A6BB9;
 }
 
 /* Light */
@@ -89,6 +92,9 @@ table {
     --button: #0A6BB9; /* Blue 800 */
     --button-contrast: #FFFFFF; /* Grey 0 */
     --hr: rgba(0, 0, 0, 0.25); /* Grey 1000 25% */
+    --callout: #A5FBE2;
+    --callout-text: #192028;
+    --callout-link: #0A6BB9;
 }
 
 /* === Begin custom CSS === */
@@ -278,6 +284,30 @@ ul.bulleted li ul {
 .pds-button:active .button-ripple::after {
     transition-duration: 75ms;
     opacity: 0.24;
+}
+
+.callout {
+    background-color: var(--callout);
+    color: var(--callout-text);
+    box-sizing: border-box;
+
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+
+    width: 100%;
+    padding: 16px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+.callout svg {
+    fill: var(--callout-text);
+    margin: 8px;
+}
+.callout a {
+    color: var(--callout-link) !important;
 }
 
 .fullwidth {
