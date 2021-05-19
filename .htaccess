@@ -54,3 +54,36 @@ Redirect 301 /pds-staging/resource/hayabusa2/index.html https://arcnav.psi.edu/u
 Redirect 301 /pds-staging/resource/hayabusa2/hyb2_mission.html https://arcnav.psi.edu/urn:jaxa:darts:hyb2
 Redirect 301 /pds-staging/resource/hayabusa2/nirs3.html https://arcnav.psi.edu/urn:jaxa:darts:context:instrument:hyb2.nirs3
 
+# OSIRIS-REx
+
+Redirect 301 "/pds-staging/resource/orex/index.html" "https://arcnav.psi.edu/urn:nasa:pds:context:investigation:mission.orex"
+Redirect 301 "/pds-staging/resource/orex/ocams.html" "https://arcnav.psi.edu/urn:nasa:pds:context:instrument:ocams.orex"
+Redirect 301 "/pds-staging/resource/orex/ola.html" "https://arcnav.psi.edu/urn:nasa:pds:context:instrument:ola.orex"
+Redirect 301 "/pds-staging/resource/orex/orexmission.html" "https://arcnav.psi.edu/urn:nasa:pds:orex.mission"
+Redirect 301 "/pds-staging/resource/orex/otes.html" "https://arcnav.psi.edu/urn:nasa:pds:context:instrument:otes.orex"
+Redirect 301 "/pds-staging/resource/orex/ovirs.html" "https://arcnav.psi.edu/urn:nasa:pds:context:instrument:ovirs.orex"
+Redirect 301 "/pds-staging/resource/orex/tagcams.html" "https://arcnav.psi.edu/urn:nasa:pds:context:instrument:tagcams.orex"
+
+# Dawn
+
+Redirect 301 "/pds-staging/resource/dawn/index.html" "https://arcnav.psi.edu/urn:nasa:pds:context:investigation:mission.dawn_mission_to_vesta_and_ceres"
+Redirect 301 "/pds-staging/resource/dawn/dawngrandPDS4.html" "https://arcnav.psi.edu/urn:nasa:pds:context:instrument:dawn.grand"
+Redirect 301 "/pds-staging/resource/dawn/dwncfcL1.html" "https://arcnav.psi.edu/urn:nasa:pds:context:instrument:dawn.fc2"
+Redirect 301 "/pds-staging/resource/dawn/dwncgrdL1.html" "https://arcnav.psi.edu/urn:nasa:pds:context:instrument:dawn.grand"
+Redirect 301 "/pds-staging/resource/dawn/dwncvirL1.html" "hhttps://arcnav.psi.edu/urn:nasa:pds:context:instrument:dawn.vir"
+Redirect 301 "/pds-staging/resource/dawn/dwngrdmarscruise.html" "https://arcnav.psi.edu/urn:nasa:pds:context:instrument:dawn.grand"
+Redirect 301 "/pds-staging/resource/dawn/dwnvfcL1.html" "https://arcnav.psi.edu/urn:nasa:pds:context:instrument:dawn.fc2"
+Redirect 301 "/pds-staging/resource/dawn/dwnvgrdL1.html" "https://arcnav.psi.edu/urn:nasa:pds:context:instrument:dawn.grand"
+Redirect 301 "/pds-staging/resource/dawn/dwnvvirL1.html" "hhttps://arcnav.psi.edu/urn:nasa:pds:context:instrument:dawn.vir"
+Redirect 301 "/pds-staging/resource/dawn/dwnxvir.html" "hhttps://arcnav.psi.edu/urn:nasa:pds:context:instrument:dawn.vir"
+
+# Near
+
+Redirect 301 "/pds-staging/resource/near/index.html" "https://arcnav.psi.edu/urn:nasa:pds:context:investigation:mission.near_earth_asteroid_rendezvous"
+Redirect 301 "/pds-staging/resource/near/msiinst.html" "https://arcnav.psi.edu/urn:nasa:pds:context:instrument:msi.near"
+Redirect 301 "/pds-staging/resource/near/nisinst.html" "https://arcnav.psi.edu/urn:nasa:pds:context:instrument:nis.near"
+Redirect 301 "/pds-staging/resource/near/grsinst.html" "https://arcnav.psi.edu/urn:nasa:pds:context:instrument:grs.near"
+Redirect 301 "/pds-staging/resource/near/xrsinst.html" "hhttps://arcnav.psi.edu/urn:nasa:pds:context:instrument:xrs.near"
+Redirect 301 "/pds-staging/resource/near/maginst.html" "https://arcnav.psi.edu/urn:nasa:pds:context:instrument:mag.near"
+Redirect 301 "/pds-staging/resource/near/nlrinst.html" "https://arcnav.psi.edu/urn:nasa:pds:context:instrument:nlr.near"
+Redirect 301 "/pds-staging/resource/near/rssinst.html" "https://arcnav.psi.edu/urn:nasa:pds:context:instrument:rss.near"
