@@ -99,6 +99,10 @@ table {
 
 /* === Begin custom CSS === */
 
+#pds-app-bar {
+    border-bottom: none !important;
+}
+
 body {
     margin: 0;
     padding: 0;
