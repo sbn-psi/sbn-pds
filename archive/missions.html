@@ -39,10 +39,10 @@
         </ol>
 
         <h2>Browse by Mission</h2>
-        <table class="fullwidh">
+        <table style="vertical-align:top;">
             <thead>
                 <tr>
-                    <th>Mission</th><th>Targets</th><th>Instruments</th>
+                    <th></th><th>Mission</th><th>Targets</th><th>Instruments</th>
                 </tr>
             </thead>
             <tbody id="search-data-table">
@@ -51,7 +51,7 @@
                         window.addEventListener("load", () => {
                             searchData.filter(item => item.category === 'Mission').forEach(item => {
                                 let tr = document.createElement('tr');
-                                tr.innerHTML = `<td><a href="${item.url}">${item.name}</a></td><td>${item.subtitle}</td><td>${item.instruments.map(instrument => instrument.match(/\((.*?)\)/) ? instrument.match(/\((.*?)\)/)[1] : instrument).join(', ')}</td>`
+                                tr.innerHTML = `<td><img src="${item.images}" style="width:75px;"></td><td><a href="${item.url}">${item.name}</a></td><td>${item.subtitle}</td><td>${item.instruments.map(instrument => instrument.match(/\((.*?)\)/) ? instrument.match(/\((.*?)\)/)[1] : instrument).join(', ')}</td>`
                                 document.getElementById('search-data-table').appendChild(tr)
                             })
                         })

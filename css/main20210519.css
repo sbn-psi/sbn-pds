@@ -357,6 +357,7 @@ table {
 td, th {
     padding: 16px;
     border: 0;
+    vertical-align: top;
 }
 td > a:only-child {
     display: block;
