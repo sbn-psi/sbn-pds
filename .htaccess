@@ -49,3 +49,27 @@ Redirect 301 "/pds/resource/orex/orexmission.html" "https://arcnav.psi.edu/urn:n
 Redirect 301 "/pds/resource/orex/otes.html" "https://arcnav.psi.edu/urn:nasa:pds:context:instrument:otes.orex"
 Redirect 301 "/pds/resource/orex/ovirs.html" "https://arcnav.psi.edu/urn:nasa:pds:context:instrument:ovirs.orex"
 Redirect 301 "/pds/resource/orex/tagcams.html" "https://arcnav.psi.edu/urn:nasa:pds:context:instrument:tagcams.orex"
+
+# Near
+
+Redirect 301 "/pds/resource/near/index.html" "https://arcnav.psi.edu/urn:nasa:pds:context:investigation:mission.near_earth_asteroid_rendezvous"
+Redirect 301 "/pds/resource/near/msiinst.html" "https://arcnav.psi.edu/urn:nasa:pds:context:instrument:msi.near"
+Redirect 301 "/pds/resource/near/nisinst.html" "https://arcnav.psi.edu/urn:nasa:pds:context:instrument:nis.near"
+Redirect 301 "/pds/resource/near/grsinst.html" "https://arcnav.psi.edu/urn:nasa:pds:context:instrument:grs.near"
+Redirect 301 "/pds/resource/near/xrsinst.html" "hhttps://arcnav.psi.edu/urn:nasa:pds:context:instrument:xrs.near"
+Redirect 301 "/pds/resource/near/maginst.html" "https://arcnav.psi.edu/urn:nasa:pds:context:instrument:mag.near"
+Redirect 301 "/pds/resource/near/nlrinst.html" "https://arcnav.psi.edu/urn:nasa:pds:context:instrument:nlr.near"
+Redirect 301 "/pds/resource/near/rssinst.html" "https://arcnav.psi.edu/urn:nasa:pds:context:instrument:rss.near"
+Redirect 301 "/pds/resource/erosbackplane.html" "https://arcnav.psi.edu/urn:nasa:pds:nearmsi.shapebackplane"
+Redirect 301 "/pds/resource/erosponds.html" "https://arcnav.psi.edu/urn:nasa:pds:ast-eros.roberts.ponds-catalog"
+Redirect 301 "/pds/resource/erosshape.html" "https://arcnav.psi.edu/urn:nasa:pds:gaskell.ast-eros.shape-model"
+
+# Hayabusa
+
+Redirect 301 /pds/resource/archive/hayabusa.html https://arcnav.psi.edu/urn:nasa:pds:context:investigation:mission.hayabusa
+Redirect 301 /pds/resource/hayamica.html https://arcnav.psi.edu/urn:nasa:pds:context:instrument:amica.hay
+Redirect 301 /pds/resource/nirsraw.html https://arcnav.psi.edu/urn:nasa:pds:context:instrument:nirs.hay
+Redirect 301 /pds/resource/nirscal.html https://arcnav.psi.edu/urn:nasa:pds:context:instrument:nirs.hay
+Redirect 301 /pds/resource/haylidar.html https://arcnav.psi.edu/urn:nasa:pds:context:instrument:lidar.hay
+Redirect 301 /pds/resource/itokawashape.html https://arcnav.psi.edu/urn:nasa:pds:gaskell.ast-itokawa.shape-model
+Redirect 301 /pds/resource/itokawapol.html https://arcnav.psi.edu/urn:nasa:pds:gbo.ast-itokawa.torino.polarimetry
