@@ -66,7 +66,7 @@ Redirect 301 "/pds/resource/erosshape.html" "https://arcnav.psi.edu/urn:nasa:pds
 
 # Hayabusa
 
-Redirect 301 /pds/resource/archive/hayabusa.html https://arcnav.psi.edu/urn:nasa:pds:context:investigation:mission.hayabusa
+Redirect 301 /pds/archive/hayabusa.html https://arcnav.psi.edu/urn:nasa:pds:context:investigation:mission.hayabusa
 Redirect 301 /pds/resource/hayamica.html https://arcnav.psi.edu/urn:nasa:pds:context:instrument:amica.hay
 Redirect 301 /pds/resource/nirsraw.html https://arcnav.psi.edu/urn:nasa:pds:context:instrument:nirs.hay
 Redirect 301 /pds/resource/nirscal.html https://arcnav.psi.edu/urn:nasa:pds:context:instrument:nirs.hay
