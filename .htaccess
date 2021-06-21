@@ -73,3 +73,15 @@ Redirect 301 /pds/resource/nirscal.html https://arcnav.psi.edu/urn:nasa:pds:cont
 Redirect 301 /pds/resource/haylidar.html https://arcnav.psi.edu/urn:nasa:pds:context:instrument:lidar.hay
 Redirect 301 /pds/resource/itokawashape.html https://arcnav.psi.edu/urn:nasa:pds:gaskell.ast-itokawa.shape-model
 Redirect 301 /pds/resource/itokawapol.html https://arcnav.psi.edu/urn:nasa:pds:gbo.ast-itokawa.torino.polarimetry
+
+# Dawn
+
+Redirect 301 "/pds/resource/dawn/index.html" "https://arcnav.psi.edu/urn:nasa:pds:context:investigation:mission.dawn_mission_to_vesta_and_ceres"
+Redirect 301 "/pds/resource/dawn/dawngrandPDS4.html" "https://arcnav.psi.edu/urn:nasa:pds:context:instrument:dawn.grand"
+Redirect 301 "/pds/resource/dawn/dwnfcmarscruisecal.html" "https://arcnav.psi.edu/urn:nasa:pds:context:instrument:dawn.fc2"
+Redirect 301 "/pds/resource/dawn/dwncfcL1.html" "https://arcnav.psi.edu/urn:nasa:pds:context:instrument:dawn.fc2"
+Redirect 301 "/pds/resource/dawn/dwnvfcL1.html" "https://arcnav.psi.edu/urn:nasa:pds:context:instrument:dawn.fc2"
+Redirect 301 "/pds/resource/dawn/dwngrdmarscruise.html" "https://arcnav.psi.edu/urn:nasa:pds:context:instrument:dawn.grand"
+Redirect 301 "/pds/resource/dawn/dwncvirL1.html" "https://arcnav.psi.edu/urn:nasa:pds:context:instrument:dawn.vir"
+Redirect 301 "/pds/resource/dawn/dwnvvirL1.html" "https://arcnav.psi.edu/urn:nasa:pds:context:instrument:dawn.vir"
+Redirect 301 "/pds/resource/dawn/dwnxvir.html" "https://arcnav.psi.edu/urn:nasa:pds:context:instrument:dawn.vir"
