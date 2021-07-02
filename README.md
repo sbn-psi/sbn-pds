@@ -129,5 +129,29 @@ To add additional keywords associated with a given page that a user might search
 }
 ```
 
+## Creating a new post for Tips and Tricks
 
+The Tips and Tricks section uses Jekyll as a content management system in order to turn markdown files into posts that will then show up on the website. To create a new post:
 
+### 1. Create a new file in `_posts` directory
+The file must be of the format: YYYY-MM-DD-post-title.md
+
+### 2. Add front-matter to the top of the new file
+Copy the following into your new post:
+```
+---
+layout: social
+category: Tips
+title: (Post title here)
+---
+```
+Update the title of the post in the front-matter, and also set a new category if necessary
+
+### 3. Commit and push to GitHub
+`git add`, `git commit`, and `git push` the new content to the `master` branch. This will trigger a build of the site, and you will see a success/failure message in the #pds-ops channel in Slack
+
+### 4. Deploy to staging
+This might happen automatically in the future, but for now you will need to run a script or visit portainer to view the new site. Staging is currently at [http://vger.psi.edu:8080/](http://vger.psi.edu:8080/)
+
+### 5. Deploy to production
+There will be a script soon that will migrate the site from staging to production
