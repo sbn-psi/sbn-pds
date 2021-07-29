@@ -441,9 +441,19 @@ main {
     list-style-type: circle;
     padding-left: 32px;
 }
-.social-post img {
-    width: 80%;
+.social-post figure  {
+    display: flex;
+    width: 100%;
+    flex-flow: column wrap;
+    align-items: center;
+    margin: 40px 0;
+}
+.social-post figure img {
+    max-width: 60%;
     border: 1px solid var(--hr);
+}
+.social-post figcaption {
+    color: var(--secondary-text);
 }
 .post-title {
     margin-bottom: 0;
