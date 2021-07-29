@@ -6,6 +6,8 @@ layout: default
     <li class="breadcrumbs-separator">/</li>
     <li><a href="support/">Support</a></li>
     <li class="breadcrumbs-separator">/</li>
+    <li><a href="support/Tips.html">Tips & Tricks</a></li>
+    <li class="breadcrumbs-separator">/</li>
     <li><a href="support/{{ page.category | downcase | url_encode | replace: '+', '%20'}}/">{{page.category}}</a></li>
     <li class="breadcrumbs-separator">/</li>
     <li>{{page.title}}</li>
@@ -18,6 +20,6 @@ layout: default
 <p class="secondary"><em> Part of a series on <a href="support/{{ page.category | downcase | url_encode | replace: '+', '%20'}}/">{{page.category}}</a> </em></p>
 
 
-<div class="social-post bulleted">
+<div class="social-post">
     {{ content }}
 </div>

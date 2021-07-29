@@ -1,0 +1,26 @@
+---
+layout: default
+title: Tips & Tricks
+---
+
+<ol class="breadcrumbs">
+    <li><a href="/pds/">Home</a></li>
+    <li class="breadcrumbs-separator">/</li>
+    <li><a href="support/">Support</a></li>
+    <li class="breadcrumbs-separator">/</li>
+    <li>Tips & Tricks</li>
+</ol>   
+<h1>Tips & Tricks</h1>
+<p>Welcome to the PDS SBN Asteroid/Dust Subnodes' Tips and Tricks article page. We realize that navigating the world of archiving, multiple search tools, new file formats and detailed data standards can be confusing, and even overwhelming at times. That is why we have created the Tips and Tricks support page. With our weekly posts on various topics, we aim to provide useful information that can be used to facilitate your tasks with the PDS and beyond.</p>
+<div class="primary-sections">
+    <table class="fullwidth">
+        {% for post in site.posts %}
+        <tr>
+            <td><a href="{{ post.url }}">{{ post.title }}</a></td>
+            <td>{{ post.category | replace: ' ', '&nbsp;'}}</td>
+            <td>{{ post.author | replace: ' ', '&nbsp;'}}</td>
+            <td>{{ post.date | date_to_string: "ordinal", "US" | replace: ' ', '&nbsp;'}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>

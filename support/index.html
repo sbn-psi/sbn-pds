@@ -18,6 +18,14 @@ title: Support
         </a>
     </section>
     <section class="paper card mdc-card" tabindex="0">
+        <a href="support/Tips.html" class="mdc-card__primary-action ignore-a-styling" >
+            <h2>Tips & Tricks</h2>
+            <p>Tips on tools and tech, guides on using archived data, and more written by members of the PDS</p>
+        </a>
+    </section>
+</div>
+<div class="primary-sections">
+    <section class="paper card mdc-card" tabindex="0">
         <a href="support/FAQ.html" class="mdc-card__primary-action ignore-a-styling" >
             <h2>FAQ</h2>
             <p>Frequently asked questions from the community</p>
@@ -57,17 +65,4 @@ title: Support
             <p>Quick guide on using data from our archives</p>
         </a>
     </section>
-</div>
-
-<h2>Tips & Tricks</h2>
-<div class="primary-sections">
-    <table class="fullwidth">
-        {% for post in site.posts %}
-        <tr>
-            <td><a href="{{ post.url }}">{{ post.title }}</a></td>
-            <td>{{ post.category | replace: ' ', '&nbsp;'}}</td>
-            <td>{{ post.date | date_to_string: "ordinal", "US" | replace: ' ', '&nbsp;'}}</td>
-        </tr>
-        {% endfor %}
-    </table>
 </div>
