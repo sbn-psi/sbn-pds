@@ -6,8 +6,18 @@ layout: default
     <li class="breadcrumbs-separator">/</li>
     <li><a href="support/">Support</a></li>
     <li class="breadcrumbs-separator">/</li>
+    <li><a href="support/{{ page.category | downcase | url_encode | replace: '+', '%20'}}/">{{page.category}}</a></li>
+    <li class="breadcrumbs-separator">/</li>
     <li>{{page.title}}</li>
 </ol> 
 <br/>
 
-{{ content }}
+<h1 class="post-title">{{ page.title }}</h1>
+<p class="post-subtitle secondary">{{ page.date | date: "%b %d, %Y"}} (by {{ page.author }})</p>
+
+<p class="secondary"><em> Part of a series on <a href="support/{{ page.category | downcase | url_encode | replace: '+', '%20'}}/">{{page.category}}</a> </em></p>
+
+
+<div class="social-post bulleted">
+    {{ content }}
+</div>
