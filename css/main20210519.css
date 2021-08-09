@@ -444,6 +444,10 @@ main {
     list-style-type: circle;
     padding-left: 32px;
 }
+
+.social-post ol{
+    list-style: decimal;
+}
 .social-post figure  {
     display: flex;
     width: 100%;
