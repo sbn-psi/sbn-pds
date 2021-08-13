@@ -72,6 +72,7 @@ table {
     --callout: #A5FBE2;
     --callout-text: #192028;
     --callout-link: #0A6BB9;
+    --callout-icon: #A5FBE2;
 }
 
 /* Light */
@@ -95,6 +96,7 @@ table {
     --callout: #A5FBE2;
     --callout-text: #192028;
     --callout-link: #0A6BB9;
+    --callout-icon: #58B684;
 }
 
 /* === Begin custom CSS === */
@@ -315,6 +317,9 @@ ul.bulleted li ul {
 }
 .callout a {
     color: var(--callout-link) !important;
+}
+.callout-svg-icon {
+    fill: var(--callout-icon);
 }
 
 .fullwidth {
