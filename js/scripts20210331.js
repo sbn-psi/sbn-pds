@@ -227,7 +227,7 @@
             currentPageType = params.get("type")
             const finalBreadcrumb = breadcrumbs.lastElementChild
 
-            let newBreadcrumbs = [{ name: "Home", url: "/pds/" }]
+            let newBreadcrumbs = [{ name: "Home", url: basepath }]
             newBreadcrumbs.push({ name: currentPageType, url: params.get("typeUrl") })
             newBreadcrumbs.push({ name: params.get("refName"), url: params.get("refUrl") })
             breadcrumbs.querySelectorAll("li").forEach(li => breadcrumbs.removeChild(li))
