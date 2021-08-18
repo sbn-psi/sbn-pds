@@ -11,19 +11,19 @@ Most files in our archive, and the bundles and collections that they are grouped
 
 If this is you, you may want to start with the [PDS4 Viewer](https://sbnwiki.astro.umd.edu/wiki/PDS4_Viewer). This tool can read and understand labels and present them in a more visually-palatable way, as well as offer extra features for certain data types like images and tables.
 
-![Label view from PDS4 Viewer](images/social/pds4-viewer-summary.png)
+![Label view from PDS4 Viewer](https://pdsregistryimages.psi.edu/tips/xml-reader/pds4-viewer-summary.png)
 
-![Plot view from PDS4 Viewer](images/social/pds4-viewer-plot.png)
+![Plot view from PDS4 Viewer](https://pdsregistryimages.psi.edu/tips/xml-reader/pds4-viewer-plot.png)
 
 ## 'Give me something simple'
 
 If you're just looking at one label at a time, just use your browser! Most modern PC/Mac browsers will be able to open and display the contents of an XML file, and give you basic features like highlighting the file syntax and allowing sections to be collapsed for free. If you're already browsing the data on the web, just clicking one of the labels will display its contents in this format. You can also just open up an .xml file with the browser directly.
 
-![XML view inside Chrome and Safari](images/social/browser.png)
+![XML view inside Chrome and Safari](https://pdsregistryimages.psi.edu/tips/xml-reader/browser.png)
 
 Another good option is just to use an online viewer/converter, like [this one from CodeBeautify](https://codebeautify.org/xmlviewer). These will usually give you even better readability and navigation, to help you quickly see what's inside a label.
 
-![XML Tree View from CodeBeautify](images/social/converter.png)
+![XML Tree View from CodeBeautify](https://pdsregistryimages.psi.edu/tips/xml-reader/converter.png)
 
 ## 'Give me something powerful'
 
@@ -31,7 +31,7 @@ One reason to favor this option is that, since XML is a schema-based language, t
 
 There are several free code editors that have extensions to handle XML. [Eclipse](https://www.eclipse.org/downloads/) is the classic option, but it has some known bugs dealing with XML and is just generally a bit bloated, so it's not our recommended option. The new hotness is [Visual Studio Code](https://code.visualstudio.com/), which will know how to look at XML files out of the box but has an entire marketplace of [customized](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml)  [extensions](https://marketplace.visualstudio.com/items?itemName=DotJoshJohnson.xml) that will help you work with it.
 
-![An XML file inside Visual Studio Code](images/social/vscode.png)
+![An XML file inside Visual Studio Code](https://pdsregistryimages.psi.edu/tips/xml-reader/vscode.png)
 
 If none of that suits you, you may need to break out the wallet. 
 

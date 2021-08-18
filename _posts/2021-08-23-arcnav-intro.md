@@ -23,7 +23,7 @@ Archive Navigator was once called the Context Browser, and that's because it's a
 
 For example, right from this OSIRIS-REx data collection page, you can see links to explore more about that mission:
 
-![Image of OSIRIS-REx data collection](images/social/OSIRIS-REx.png)
+![Image of OSIRIS-REx data collection](https://pdsregistryimages.psi.edu/tips/arcnav/OSIRIS-REx.png)
 
 Every page related to a mission will show this context. From here, you can navigate to:
 - **Overview**: Descriptions about the mission itself, including dates and mission phases
@@ -36,7 +36,7 @@ Every page related to a mission will show this context. From here, you can navig
 
 For data that has been compiled or derived from other datasets, it's usually thought of as being about one or more planetary bodies, rather than as output from a mission. For this type of data, we also have target information pages:
 
-![Image of Eros data](images/social/Eros.png)
+![Image of Eros data](https://pdsregistryimages.psi.edu/tips/arcnav/Eros.png)
 
 Every target of observation in our archive has a page like this. Here you'll find:
 - **Overview**: Descriptions and characteristics of the planetary body
