@@ -4,7 +4,7 @@ title: Tips & Tricks
 ---
 
 <ol class="breadcrumbs">
-    <li><a href="/pds/">Home</a></li>
+    <li><a href="">Home</a></li>
     <li class="breadcrumbs-separator">/</li>
     <li><a href="support/">Support</a></li>
     <li class="breadcrumbs-separator">/</li>
@@ -16,7 +16,7 @@ title: Tips & Tricks
     <table class="fullwidth">
         {% for post in site.posts %}
         <tr>
-            <td><a href="{{ post.url }}">{{ post.title }}</a></td>
+            <td><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></td>
             <td>{{ post.category | replace: ' ', '&nbsp;'}}</td>
             <td>{{ post.author | replace: ' ', '&nbsp;'}}</td>
             <td>{{ post.date | date_to_string: "ordinal", "US" | replace: ' ', '&nbsp;'}}</td>
