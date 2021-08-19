@@ -1,12 +1,12 @@
 ---
 layout: dependencies
 ---
-<link rel="stylesheet" href="sbib/css/style.css">
+<base href="//sbn.psi.edu/pds/" />
 
 </head>
 <body>
 
-    <div include-html="sbn-header20210813.html"></div>
+    {% include sbn-header.html %}
 
     <main><div class="sbn-main" {% if page.theme %} data-page-theme="{{page.theme}}" {% endif %}>
     <!-- BEGIN main content -->
@@ -16,4 +16,4 @@ layout: dependencies
     <!-- END main content -->
     </div></main>
 
-    <div include-html="sbn-footer.html"></div>
+    {% include sbn-footer.html %}
