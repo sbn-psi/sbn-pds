@@ -1,46 +1,3 @@
-// HTML fragment loading
-(function(document, window) {
-    var includeHTML = function(startingElement) {
-        var elements, elmnt, file, xhttp;
-        var source = startingElement ? startingElement : document;
-        elements = source.querySelectorAll("div[include-html]");
-        for (elmnt of elements) {
-            file = elmnt.getAttribute("include-html");
-            if (file) {
-                makeRequest(file, elmnt);
-                // return;
-            }
-        }
-    };
-
-    var makeRequest = function(url, sourceElement) {
-        xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4) {
-                if (this.status == 200) {
-                    sourceElement.innerHTML = this.responseText;
-
-                }
-                if (this.status == 404) {
-                    sourceElement.innerHTML = "Included html not found.";
-                }
-
-                includeHTML(sourceElement)
-
-                // unwrap
-                var parent = sourceElement.parentNode
-                while (sourceElement.firstChild) { parent.insertBefore(sourceElement.firstChild, sourceElement)}
-                parent.removeChild(sourceElement)
-
-                window.dispatchEvent(new Event("PDSSBN_contentLoaded"))
-            }
-        }
-        xhttp.open("GET", url, true);
-        xhttp.send();
-    }
-    includeHTML();
-})(document, window);
-
 /* PDS app bar */
 (function(document, window) {
     // always make sure sidebar doesn't overlap header
@@ -56,7 +13,6 @@
             menuHandle.style.top = (header.offsetHeight + header.offsetTop) + 'px';
         }
     }
-    window.addEventListener("PDSSBN_contentLoaded", accountForAppBarHeight)
     
     // load app bar from pds.nasa.gov
     var link = document.createElement('link');
@@ -77,42 +33,23 @@
 
 })(document, window);
 
-// Load search bar angular app
-(function(document, window) {
-    window.addEventListener("PDSSBN_contentLoaded", function() {
-
-        if(window.PDSSBN_bootstrappedSearchBar === true ) return;
-        
-        var bar = document.getElementById('search-bar')
-        if(!!bar) {
-            window.PDSSBN_bootstrappedSearchBar = true
-            var app = new Vue(vueApp)
-        }
-    })
-})(document, window);
-
 // Add button ripples
 (function(document, window) {
-    window.addEventListener("PDSSBN_contentLoaded", function() {
-        document.querySelectorAll('.pds-button').forEach((button) => {
-            console.log(button.firstChild.classList)
-            if(!button.firstChild.classList || !button.firstChild.classList.contains('button-ripple')) {
-                const ripple = document.createElement('div')
-                ripple.className = 'button-ripple'
-                button.prepend(ripple)
-            }
-        })
+    document.querySelectorAll('.pds-button').forEach((button) => {
+        console.log(button.firstChild.classList)
+        if(!button.firstChild.classList || !button.firstChild.classList.contains('button-ripple')) {
+            const ripple = document.createElement('div')
+            ripple.className = 'button-ripple'
+            button.prepend(ripple)
+        }
     })
 })(document, window);
 
 // Theme toggle
 (function(document, window) {
-    window.addEventListener("PDSSBN_contentLoaded", function() {
-        if(window.PDSSBN_bootstrappedThemeToggle === true ) return;
         
         const toggle = document.getElementById('theme-switch-checkbox')
         if(!!toggle) {
-            window.PDSSBN_bootstrappedThemeToggle = true
             toggle.addEventListener("change", changeTheme, false)
 
             const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
@@ -138,18 +75,14 @@
                 document.cookie = "SBNTHEME=dark; domain=.psi.edu; path=/; Max-Age=2147483647";
             }    
         }
-    })
 })(document, window);
 
 
 // Menu toggle
 (function(document, window) {
-    window.addEventListener("PDSSBN_contentLoaded", function() {
-        if(window.PDSSBN_bootstrappedMenu === true ) return;
         
         const toggle = document.getElementById('menu-drawer')
         if(!!toggle) {
-            window.PDSSBN_bootstrappedMenu = true
             toggle.addEventListener("click", openMenu, false)
         }
 
@@ -174,7 +107,6 @@
         const removeListener = () => {
             document.getElementById("menu-backdrop").removeEventListener('click', backdropClick)
         }
-    })
 })(document, window);
 
 // Update file links to open in new tab
@@ -244,20 +176,14 @@
         }
     })
 
-    // Load page theme into header bar
-    window.addEventListener("PDSSBN_contentLoaded", function() {
-
-        if(window.PDSSBN_bootstrappedHeaderTheme === true ) return;
         
         var theme = document.querySelector('.sbn-main').dataset.pageTheme
             || typeThemes[currentPageType]
         var header = document.getElementById('sbn-header')
         if(!!theme && !!header) {
-            window.PDSSBN_bootstrappedHeaderTheme = true
             header.style.backgroundImage = `url('${theme}')`
             header.style.backgroundSize = 'auto 100%'
         }
-    })
 
 })(document, window);
 

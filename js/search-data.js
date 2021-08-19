@@ -5,8 +5,7 @@ var basepath = '/pds/'
 {% else %}
 var basepath = '/'
 {% endif %}
-
-searchData.splice(0, 0, {
+var searchData = [{
         name: 'Altimetry',
         subtitle: '',
         description: ' These data sets contain altimetry data which is collected by measuring reflected laser light from the surface of an object. This allows for measurements of height, distance, and altitude. Altimeters can utilize radio waves as well as lasers to measure distance.  ',
@@ -316,4 +315,4 @@ searchData.splice(0, 0, {
         url: basepath + 'archive/sc.html',
         category: 'Mission'
     }
-);
+];
