@@ -462,7 +462,8 @@ main {
 }
 
 .social-post ol{
-    list-style: decimal;
+    list-style-type: decimal;
+    list-style-position: inside;
 }
 .social-post figure  {
     display: flex;
@@ -495,6 +496,9 @@ main {
     margin-top: 50px;
     font-size: 0.9em;
     color: var(--secondary-text);
+}
+.footnotes ol p {
+    display: inline;
 }
 
 .breadcrumbs {
