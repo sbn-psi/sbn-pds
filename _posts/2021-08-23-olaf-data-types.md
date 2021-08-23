@@ -1,11 +1,10 @@
 ---
 layout: social
-title: OLAF: Data Types
+title: OLAF Data Types
 category: Tool Help
 author: Conor Kingston
 ---
 
-# OLAF: Data Types
 
 ## What is OLAF?
 
