@@ -131,11 +131,23 @@ Copy the following into your new post:
 ```YAML
 ---
 layout: social
-category: Tips
-title: (Post title here)
+category: Tool Help 
+title: 
+author: 
 ---
 ```
-Update the title of the post in the header, and also set a new category if necessary. Below this header, add the content of the post. You do **not** need to include the title of the post in the content, this will be added automatically.
+Update the title and author of the post in the header, and also set a new category if necessary. Below this header, add the content of the post. You do **not** need to include the title of the post in the content, this will be added automatically.
+
+This header is called "front-matter", and it is in the language [YAML](https://en.wikipedia.org/wiki/YAML). Some characters (`:`, `-`, `#`) might give you problems if you include them in the post title, so you should surround it with quotes as shown in the below example. They will not appear in the post. If you need to include quotes in the actual title of the post, you may escape it with `\`. For example:
+
+```YAML
+---
+layout: social
+category: Tool Help 
+title: "A name with \"quotes\": and other such things" 
+author: Mike Drum
+---
+```
 
 ### 3. Generate a new category list page (Optional)
 If you are creating a new post with a new category for the first time, you will need to also create a new folder/file for that category so that posts within it will also be displayed there.
