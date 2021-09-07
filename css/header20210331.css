@@ -34,7 +34,9 @@
 }
 
 .sbn-title a:hover::after {
+     
     background-image: url('/pds/images/external.svg');
+    
     background-size: 16px;
     background-repeat: no-repeat;
     background-position: 4px 4px;

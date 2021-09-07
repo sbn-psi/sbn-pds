@@ -72,6 +72,7 @@ table {
     --callout: #A5FBE2;
     --callout-text: #192028;
     --callout-link: #0A6BB9;
+    --callout-icon: #A5FBE2;
 }
 
 /* Light */
@@ -95,6 +96,7 @@ table {
     --callout: #A5FBE2;
     --callout-text: #192028;
     --callout-link: #0A6BB9;
+    --callout-icon: #58B684;
 }
 
 /* === Begin custom CSS === */
@@ -137,20 +139,25 @@ main a:not(.ignore-a-styling):not(.pds-button):visited:hover {
 
 main a[href^='http']:not([href*='psi.edu']):not([href*='localhost']):after,
 nav a[href^='http']:not([href*='psi.edu']):not([href*='localhost']):after {
+     
     background-image: url('/pds/images/external.svg');
+    
     background-size: 16px;
     background-repeat: no-repeat;
     background-position: 4px 4px;
     display: inline-block;
     padding-left: 1em;
     padding-top: 2px;
-    width: 20px;
+    width: 4px;
     height: 20px;
     content:"";
 }
 [data-theme="light"] main a[href^='http']:not([href*='psi.edu']):not([href*='localhost']):after, 
 [data-theme="light"] nav a[href^='http']:not([href*='psi.edu']):not([href*='localhost']):after {
+     
     background-image: url('/pds/images/external-black.svg');
+    
+    
 }
 
 strong, b {
@@ -161,6 +168,9 @@ em, i {
 }
 u { 
     text-decoration: underline;
+}
+code {
+    font-family: monospace;
 }
 
 hr {
@@ -313,6 +323,9 @@ ul.bulleted li ul {
 .callout a {
     color: var(--callout-link) !important;
 }
+.callout-svg-icon {
+    fill: var(--callout-icon);
+}
 
 .fullwidth {
     width: 100%;
@@ -431,6 +444,55 @@ main {
 }
 .card img.logo {
     object-fit: contain;
+}
+
+.social-post ul{
+    list-style-type: disc;
+    list-style-position: inside;
+}
+.social-post ul.bulleted li ul {
+    list-style-type: circle;
+    padding-left: 32px;
+}
+
+.social-post ol{
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+.social-post figure  {
+    display: flex;
+    width: 100%;
+    flex-flow: column wrap;
+    align-items: center;
+    margin: 40px 0;
+}
+.social-post figure img {
+    max-width: 60%;
+    border: 1px solid var(--hr);
+}
+.social-post figcaption {
+    color: var(--secondary-text);
+}
+.post-title {
+    margin-bottom: 0;
+}
+.post-subtitle {
+    margin-top: 0;
+}
+.secondary {
+    color: var(--secondary-text); 
+}
+.footnote {
+    vertical-align: super;
+    font-size: 0.7em;
+}
+.footnotes {
+    margin-top: 50px;
+    font-size: 0.9em;
+    color: var(--secondary-text);
+}
+.footnotes ol p {
+    display: inline;
 }
 
 .breadcrumbs {

@@ -1,5 +1,4 @@
 'use strict';
-var searchData = [];
 var vueApp = {
     el: '#search-bar',
     data: {
@@ -60,4 +59,9 @@ var vueApp = {
             }
         }
     }
+}
+
+var bar = document.getElementById('search-bar')
+if(!!bar) {
+    var app = new Vue(vueApp)
 }
