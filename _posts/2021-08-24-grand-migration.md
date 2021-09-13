@@ -2,7 +2,6 @@
 layout: social
 title: What Changed in the Migration of Dawn GRaND to PDS4?
 category: New Data
-author: Carol Neese
 ---
 
 ## Introduction

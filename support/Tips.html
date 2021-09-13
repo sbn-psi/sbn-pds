@@ -18,7 +18,6 @@ title: Tips & Tricks
         <tr>
             <td><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></td>
             <td><a href="support/{{ post.category | downcase | url_encode | replace: '+', '-'}}/">{{ post.category | replace: ' ', '&nbsp;'}}</a></td>
-            <td>{{ post.author | replace: ' ', '&nbsp;'}}</td>
             <td>{{ post.date | date_to_string: "ordinal", "US" | replace: ' ', '&nbsp;'}}</td>
         </tr>
         {% endfor %}

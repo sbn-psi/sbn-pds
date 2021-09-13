@@ -15,7 +15,11 @@ layout: default
 <br/>
 
 <h1 class="post-title">{{ page.title }}</h1>
-<p class="post-subtitle secondary">{{ page.date | date: "%b %d, %Y"}} (by {{ page.author }})</p>
+<p class="post-subtitle secondary">{{ page.date | date: "%b %d, %Y"}} 
+    {% if page.author %}
+    (by {{ page.author }})
+    {% endif %}
+</p>
 
 <p class="secondary"><em> Part of a series on <a href="support/{{ page.category | downcase | url_encode | replace: '+', '-'}}/">{{page.category}}</a> </em></p>
 
