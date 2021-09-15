@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% if jekyll.environment == "production" %} 
+    {% if layout.absolute %} 
+    <base href="//sbn.psi.edu/pds/" />
+    {% elsif jekyll.environment == "production" %} 
     <base href="/pds/" />
     {% else %}
     <base href="/" />

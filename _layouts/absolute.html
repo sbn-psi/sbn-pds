@@ -1,19 +1,6 @@
 ---
-layout: dependencies
+layout: default
+absolute: true
 ---
-<base href="//sbn.psi.edu/pds/" />
 
-</head>
-<body>
-
-    {% include sbn-header.html %}
-
-    <main><div class="sbn-main" {% if page.theme %} data-page-theme="{{page.theme}}" {% endif %}>
-    <!-- BEGIN main content -->
-
-    {{ content }}
-
-    <!-- END main content -->
-    </div></main>
-
-    {% include sbn-footer.html %}
+{{ content }}
