@@ -2,7 +2,6 @@
 layout: social
 title: LIDs And LIDVIDs
 category: PDS4
-author: Carol Neese
 ---
 
 Have you ever wondered how the PDS tracks and organizes all of the data in the archive?  No?  Well, we have.  In the past, each dataset was tracked by each node and by its title.  However, that didn't allow for focused searching and easily finding data -- thus, we updated our organization system when we created PDS4.
