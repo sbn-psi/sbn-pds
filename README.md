@@ -173,4 +173,4 @@ Leave the rest of the file blank, and Jekyll will generate a page with any artic
 If everything built correctly, a preview of the site will appear automatically at [http://borg.psi.edu:8080/pds/](http://borg.psi.edu:8080/pds/). If you have any posts dated for the future, they will appear on this site so you can preview them, but they will **not** appear once we migrate to the live production site (until that date arrives and the site is regenerated).
 
 ### 6. Deploy to production
-Run the script Mike tells you to
+Run the script Mike tells you to.
