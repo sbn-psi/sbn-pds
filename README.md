@@ -170,7 +170,7 @@ Leave the rest of the file blank, and Jekyll will generate a page with any artic
 `git add`, `git commit`, and `git push` the new content to the `master` branch. This will trigger a build of the site, and you will see a success/failure message in the #pds-ops channel in Slack
 
 ### 5. Deploy to staging
-If everything built correctly, a preview of the site will appear automatically at [http://borg.psi.edu:8080/](http://borg.psi.edu:8080/). If you have any posts dated for the future, they will appear on this site so you can preview them, but they will **not** appear once we migrate to the live production site (until that date arrives and the site is regenerated).
+If everything built correctly, a preview of the site will appear automatically at [http://borg.psi.edu:8080/pds/](http://borg.psi.edu:8080/pds/). If you have any posts dated for the future, they will appear on this site so you can preview them, but they will **not** appear once we migrate to the live production site (until that date arrives and the site is regenerated).
 
 ### 6. Deploy to production
 ...Talk to Mike
