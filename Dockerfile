@@ -1,2 +1,3 @@
 FROM httpd:2.4
-COPY ./_site/ /usr/local/apache2/htdocs/
+RUN mkdir /usr/local/apache2/htdocs/pds
+COPY ./_site/ /usr/local/apache2/htdocs/pds/
