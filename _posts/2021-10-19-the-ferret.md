@@ -1,7 +1,7 @@
 ---
 layout: social
 Title: The Data Ferret
-catagory: tooltips
+category: Tool Tips
 ---
 
 Explore the Data Ferret [here](https://sbnapps.psi.edu/ferret/)
