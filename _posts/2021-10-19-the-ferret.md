@@ -34,7 +34,7 @@ Pick your favorite asteroid or comet!  Type in its name or number, and vola, the
 
 The results of a target name based search will be compiled into one page. In addition to those results it provides links and information on the data sets from which the results have come. The image below shows the search results for the asteroid Bennu. We can see some of the range of the types of data the Data Ferret compiles from discovery information to lightcurve data. 
 
-![](https://pdsregistryimages.psi.edu/tips/the-ferret/BennuResults.png) 
+![An example of the types of results from a target based search](https://pdsregistryimages.psi.edu/tips/the-ferret/BennuResults.png) 
 
 #### Properties Search
 
@@ -43,18 +43,18 @@ Select either Taxonomy, Dynamic Family or Physical Attributes.
 
 In a property search all the objects that fit within the search parameters will be listed on a results page that contains more information about each object. This result list can easily be downloaded as a CSV table using the “Download Results” button on the top right corner of the results list. Additionally, links to more detailed information about each object are available by simply clicking the name of the object on the left most column of the table.  If you wanted to search for any asteroid with a diameter between 100 to 1000 kilometers your search results would appear like this: 
 
-![](https://pdsregistryimages.psi.edu/tips/the-ferret/Asteroiddiameter.png)
+![The properties search will display all relevant objects along with their basic information](https://pdsregistryimages.psi.edu/tips/the-ferret/Asteroiddiameter.png)
 
 #### Advanced Search
  
 The advanced search has many different search parameters. To select a search parameter click “Add to Form”. You can search by one property or multiple. The area is in development to expand sophistication of selecting multiple parameters, so look for more features in the future.
 
-![](https://pdsregistryimages.psi.edu/tips/the-ferret/Searchparameters.png)
+![An example of the types of search parameters available in an advanced search](https://pdsregistryimages.psi.edu/tips/the-ferret/Searchparameters.png)
 
 
 In the example below I have chosen to search for all asteroids with a density between 5.0 and 10.0 grams per cubic centimeter. Much like in the property search, a list is compiled with additional information about all the objects that meet my search parameters. 
 
-![](https://pdsregistryimages.psi.edu/tips/the-ferret/Density.png)
+![The results of an advanced search based on the density parameter](https://pdsregistryimages.psi.edu/tips/the-ferret/Density.png)
 
 
 #### Let the Ferret help your future searches      
