@@ -10,7 +10,7 @@ Before COVID-19, back when conferences were in person, we made, gave out and eve
 
 3D printing, also known as additive manufacturing, is the process of making a 3-dimensional, physical object from a digital file. An object is created by laying down layer upon layer of material until the final object is complete. Each of these layers is a thinly-sliced cross-section of the object.
 
-![image of rows of 67p on printbed](https://pdsregistryimages.psi.edu/tips/how-to-print-shape-models/67p_army.jpg)
+![image of rows of 67p on printbed](https://pdsregistryimages.psi.edu/tips/how-to-print-shape-models/67p_army.JPG)
 
 The most common file type used for 3D printing is the G-code file. G-code files contain coordinate positions and other basic commands that tell the printer where to print and how to move, both horizontally and vertically. They also give the printer instructions for how to deliver the material, including what temperature the material should be and how thick each layer should be.
 
@@ -51,7 +51,7 @@ Now that you have a digital model, you need to create a G-code file that can tel
 
 There are a variety of slicing software available; some open-source, some proprietary. Many 3D printer manufacturers also produce their own slicing software that is specifically tailored for use with the corresponding hardware. Choosing the right slicing software is a personal choice, and often comes down to trial and error. If you’re looking for a recommendation to get started, a popular open-source slicer is [Ultimaker Cura](https://ultimaker.com/software/ultimaker-cura).
 
-![image of slicing software preview](slicer_preview.png)
+![image of slicing software preview](ttps://pdsregistryimages.psi.edu/tips/how-to-print-shape-models/slicer_preview.png)
 
 Since each slicing software is different, you’ll need to learn a bit about the software you’re going to use. However, all slicing software ultimately performs the same task- combining a digital model file and user-configured printer settings (such as printhead temperature, layer height, print speed, etc.) into a set of instructions that a specific model of 3D printer can understand. The output is a G-code file that will be delivered to the 3D printer as the final step in the production of a physical model.
 
