@@ -51,7 +51,7 @@ Now that you have a digital model, you need to create a G-code file that can tel
 
 There are a variety of slicing software available; some open-source, some proprietary. Many 3D printer manufacturers also produce their own slicing software that is specifically tailored for use with the corresponding hardware. Choosing the right slicing software is a personal choice, and often comes down to trial and error. If you’re looking for a recommendation to get started, a popular open-source slicer is [Ultimaker Cura](https://ultimaker.com/software/ultimaker-cura).
 
-![image of slicing software preview](ttps://pdsregistryimages.psi.edu/tips/how-to-print-shape-models/slicer_preview.png)
+![image of slicing software preview](https://pdsregistryimages.psi.edu/tips/how-to-print-shape-models/slicer_preview.png)
 
 Since each slicing software is different, you’ll need to learn a bit about the software you’re going to use. However, all slicing software ultimately performs the same task- combining a digital model file and user-configured printer settings (such as printhead temperature, layer height, print speed, etc.) into a set of instructions that a specific model of 3D printer can understand. The output is a G-code file that will be delivered to the 3D printer as the final step in the production of a physical model.
 
