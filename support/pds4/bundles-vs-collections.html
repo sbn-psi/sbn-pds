@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     
+    <base href="/pds/" />
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>What's the difference between a Bundle, Collection, and Dataset? | PDS SBN Asteroid/Dust Subnode</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main20210813.css">
+    <link rel="stylesheet" href="css/header20210331.css">
+    <link rel="stylesheet" href="css/footer20210331.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <!-- PDS Feedback Widget -->
+    <!-- Only add JQuery if you do not already include a library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <!-- -->
+
+
+    </head>
+<body>
+
+    <!-- BEGIN sbn-header -->
+
+<header>
+    <div id="sbn-header">
+
+        <div class="sbn-title-container">
+            <div class="sbn-title"><a class="ignore-a-styling" href="http://pdssbn.astro.umd.edu/">PDS Small Bodies Node</a></div>
+            <a class="sbn-subtitle ignore-a-styling" href="">Asteroid/Dust Subnode</a>
+        </div>
+        <div class="gradient-bar"></div>
+    </div>
+</header>
+<nav>
+    
+    <div id="menu-backdrop"></div>
+    <div id="menu-drawer">
+        <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+        </svg>
+    </div>
+
+    <div id="theme-switch">
+        <label for="theme-switch-checkbox">
+            <input type="checkbox" id="theme-switch-checkbox" />
+            <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 0 24 24" width="30" title="Change light/dark theme">
+                <title>Change light/dark theme</title>
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                    d="M20 15.31L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69zM12 18V6c3.31 0 6 2.69 6 6s-2.69 6-6 6z" />
+            </svg>
+      </label>
+    </div>
+    <div id="menu">
+        <div class="menu-handle">
+            <div>Find Data</div>
+            <ul class="menu-list">
+                <li><a href="">Archive Home</a></li>
+                <li class="divider"></li>
+                <li><a href="archive/data-types.html"> Browse by Data Type</a></li>
+                <li><a href="archive/target-types.html"> Browse by Target Type</a></li>
+                <li><a href="archive/missions.html"> Browse by Mission</a></li>
+                <li class="divider"></li>
+                <li><a href="ferret/">Ferret - Target Search</a></li>
+                <li><a href="sbib/">SBIB - Image Search</a></li>
+                <li><a href="https://catch.astro.umd.edu/">CATCH - Survey Search</a></li>
+            </ul>
+        </div>
+        <div class="menu-handle">
+            <div>Archive Data</div>
+            <ul class="menu-list">
+                <li><a href="olafs">OLAF - Archive your data</a></li>
+                <li><a href="sbnarchivinghowto.html">How to Archive</a></li>
+                <li><a href="other_tools/pdf1a.html">PDF/A Tools</a></li>
+                <li><a href="https://pds.nasa.gov/datastandards/documents/current-version.shtml">PDS4 Standards</a></li>
+            </ul>
+        </div>
+        <div class="menu-handle">
+            <div>Support</div>
+            <ul class="menu-list">
+                <li><a href="support/">Support Home</a></li>
+                <li class="divider"></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="support/Tips.html">Tips & Tricks Articles <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="24px" class="callout-svg-icon"><title>New!</title><path d="M0 0h24v24H0z" fill="none"/><path d="M23 12l-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68L23 12zm-10 5h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg></a></li>
+                <li><a href="support/FAQ.html">Frequently Asked Questions</a></li>
+                <li><a href="support/Keyterms.html">Key Terms</a></li>
+                <li><a href="support/Glossary.html">Full Glossary</a></li>
+                <li class="divider"></li>
+                <li><a href="https://pds.nasa.gov/home/proposers/">Information for Data Proposers</a></li>
+                <li><a href="https://sbnwiki.astro.umd.edu/wiki/SBN_PDS4_Wiki">PDS4 Tutorials and Quick Ref</a></li>
+                <li><a href="http://pdssbn.astro.umd.edu/howto/understand.shtml">Using PDS Data</a></li>
+            </ul>
+        </div>
+        <div class="menu-handle">
+            <div>PDS Info</div>
+            <ul class="menu-list">
+                <li><a href="aboutastsubnode.html">About SBN Asteroid Subnode</a></li>
+                <li><a href="http://pdssbn.astro.umd.edu/">SBN Comet Subnode</a></li>
+                <li><a href="http://pds.nasa.gov/">PDS Home</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<div id="search-bar" class="search-container">
+    <div class="search-box" v-bind:class="{focused: focused}">
+        <svg class="search-icon" viewBox="0 0 100 125">
+            <path d="M35.285,8L85,28.228L52.303,70.575l-4.715-17.337C33,59.622,16.45,72.294,43.672,92c0,0-37.15-4.02-26.875-39.512    c0,0,4.692-16.873,23.799-24.958L35.285,8z" />
+        </svg>
+        <div class="input-field">
+            <input tabindex="0" placeholder="Shortcut to data by keyword..." type="text" aria-label="Shortcut to data by keyword"
+                v-model="query"
+                v-on:focus="onFocus"
+                v-on:keyup="keypress">
+        </div>
+    </div>
+    <div class="search-filter" v-if="focused">
+        <label class="toggle-option" v-bind:class="{focused: mode === 'asteroid'}">Asteroid/Dust <input type="radio" v-model="mode" value="asteroid"></label>
+        <label class="toggle-option" v-bind:class="{focused: mode === 'pds'}">PDS <input type="radio" v-model="mode" value="pds"></label>
+    </div>
+    <ul class="search-results" v-if="query.length > 0 && focused">
+        <template v-for="result in searchResults">
+            <li class="search-result" >
+                <a v-bind:href="result.url" v-bind:title="title(result)" tabindex="0">{{result.name}}</a>
+            </li>
+        </template>
+        <p class="no-results" v-if="searchResults.length === 0">No results found</p>
+        <p class="no-results" v-if="searchResults.length === 0">Need help finding something? <a href="contact.html">Contact Us</a></p>
+    </ul>
+</div>
+
+</nav>
+
+
+<!-- END sbn-header -->
+
+
+    <main><div class="sbn-main " >
+    <!-- BEGIN main content -->
+
+    <ol class="breadcrumbs">
+    <li><a href="">Home</a></li>
+    <li class="breadcrumbs-separator">/</li>
+    <li><a href="support/">Support</a></li>
+    <li class="breadcrumbs-separator">/</li>
+    <li><a href="support/Tips.html">Tips & Tricks</a></li>
+    <li class="breadcrumbs-separator">/</li>
+    <li><a href="support/pds4/">PDS4</a></li>
+    <li class="breadcrumbs-separator">/</li>
+    <li>What's the difference between a Bundle, Collection, and Dataset?</li>
+</ol> 
+<br/>
+
+<h1 class="post-title">What's the difference between a Bundle, Collection, and Dataset?</h1>
+<p class="post-subtitle secondary">Nov 16, 2021 
+    
+    (by Mike Drum)
+    
+</p>
+
+<p class="secondary"><em> Part of a series on <a href="support/pds4/">PDS4</a> </em></p>
+
+
+<div class="social-post">
+    <p>There seem to be a lot of ways to say “a set of data” in the PDS world. You’ve probably seen some variations of this terminology around: “instrument bundle”, “a calibration collection”, or “shape model dataset”. There are some good reasons for this, and here I hope to cover the various terms and their meanings, as well as why we structured things this way.</p>
+
+<h2 id="1-dataset-a-set-of-data">1. Dataset: a…. set of data</h2>
+
+<p>If you see the word Dataset (sometimes also written as “Data Set”), it might mean one of two things. The first, of course, is just that it’s a generic way of describing a grouping of data and/or documents on a particular subject. No baggage here; we didn’t invent the word, but it is also not a term that is defined in PDS4, the latest version of our archiving label standards.</p>
+
+<p>However, this term did have a specific meaning in PDS3, the previous PDS standard that still make up quite a large chunk of our archived data. So depending on where you’re seeing this word, it may refer specifically to a “PDS3 Data Set”: an aggregation of PDS3 data products with a common origin, history, or application. PDS3 Data Sets have a unique identifier and specific file structure.</p>
+
+<figure><img src="http://pdsregistryimages.psi.edu/tips/bundles-collections/dawn-dataset.png" /><figcaption>The file structure of a PDS3 Data Set</figcaption></figure>
+
+<p>On our archive, if you see something that looks like the above<sup id="fnref:pds3" role="doc-noteref"><a href="#fn:pds3" class="footnote" rel="footnote">1</a></sup>, you’re looking at a PDS3 Data Set. If you’re archiving new data with us, you won’t be archiving in PDS3 anymore, so don’t worry about this too much.</p>
+
+<h2 id="2-collection-a-folder-with-superpowers">2. Collection: a folder with superpowers</h2>
+
+<p>Collections can act more or less the PDS4 version of a Dataset: a grouping of basic products<sup id="fnref:product" role="doc-noteref"><a href="#fn:product" class="footnote" rel="footnote">2</a></sup> by type and content. You may see a collection for calibrated images, instrument documentation, basically a bunch of data or supporting products that are closely related. This is at the discretion of the data preparers, but here are some examples of how some collections are grouped by:</p>
+
+<ul>
+  <li>Processing level
+    <ul>
+      <li>Raw</li>
+      <li>Calibrated</li>
+      <li>I/F</li>
+    </ul>
+  </li>
+  <li>Data type
+    <ul>
+      <li>Image</li>
+      <li>Spectra</li>
+    </ul>
+  </li>
+  <li>Time range/Mission phase
+    <ul>
+      <li>Cruise</li>
+      <li>Approach</li>
+      <li>Encounter</li>
+      <li>Year 1, Year 2</li>
+    </ul>
+  </li>
+  <li>Dataset components
+    <ul>
+      <li>Data</li>
+      <li>Documents</li>
+      <li>Browse<sup id="fnref:browse" role="doc-noteref"><a href="#fn:browse" class="footnote" rel="footnote">3</a></sup></li>
+    </ul>
+  </li>
+</ul>
+
+<figure><img src="http://pdsregistryimages.psi.edu/tips/bundles-collections/collections.png" /><figcaption>A list of collections for the OSIRIS-REx OCAMS instrument</figcaption></figure>
+
+<p>Collections get their real powers by having labels just like individual products do, and with them we track information about the products within that collection. Things like authorship, date range, processing level, or references to the target of observation and the instrument/spacecraft. This is put into place both for usability but also searchability in the future. The individual products are what you actually want, and the collection is a way of keeping them together.</p>
+
+<h2 id="3-bundles-who-collects-the-collections">3. Bundles: who collects the collections??</h2>
+
+<p>Now you might be asking: Mike, that all sounds great, but what if I don’t just need one collection? Why can’t I hold all these collections?</p>
+
+<figure><img src="http://pdsregistryimages.psi.edu/tips/bundles-collections/too-many-collections.jpg" /><figcaption>A man desperately in need of a PDS4 Bundle</figcaption></figure>
+
+<p>Luckily we thought of that. In PDS4, a related group of Collections is called a Bundle. Much like collections, bundles also have their own labels, and the exact reason for grouping together a bunch of collections is up to the data preparer. Some smaller archives may consist of just one bundle; for example, <a href="https://olaf.psi.edu">OLAF</a> typically generates a single bundle with one data collection and one document collection. Missions and larger projects might generate a larger set of related bundles: one bundle per instrument, or per mission phase, for example.</p>
+
+<p>Take a look at the prior example. What if I told you that you were looking at a bundle <em>the whole time</em>?</p>
+
+<figure><img src="http://pdsregistryimages.psi.edu/tips/bundles-collections/bundle.gif" /><figcaption>Bet you never saw that coming</figcaption></figure>
+
+<p>Now you can see the whole picture. Bundles are the highest level of grouping that products are organized into in a PDS4 archive. The OSIRIS-REx mission has one bundle per instrument, as well as a bundle for mission-level documentation (cleverly called the “Mission Bundle”). Each of the instrument bundles then have data collections by processing level, a document collection, and a collection for the calibration files.</p>
+
+<h2 id="why-stop-at-bundles">Why stop at bundles?</h2>
+
+<p>Of course, we still need to be able to group bundles together! So how are we able to tell which bundles are related? That’s where “context objects” come in; they’re special products that represent a mission, instrument, or target of observation, for example:</p>
+
+<ul>
+  <li>Mission
+    <ul>
+      <li>Dawn</li>
+      <li>Hayabusa</li>
+      <li>Cassini</li>
+    </ul>
+  </li>
+  <li>Instrument
+    <ul>
+      <li>OCAMS - OREx Camera Suite</li>
+      <li>VIR - Dawn’s Visual and Infrared Spectrometer</li>
+      <li>ONC - Hayabusa2’s Optical Navigation Camera</li>
+    </ul>
+  </li>
+  <li>Target
+    <ul>
+      <li>Bennu</li>
+      <li>Iapetus</li>
+      <li>Itokawa</li>
+    </ul>
+  </li>
+</ul>
+
+<p>These are all referenced by the bundles (and collections, and basic data products, too). This is the founding principle of the <a href="/pds/support/tool-help/arcnav-intro.html">Archive Navigator</a>: a way to browse the entire PDS and find all the related bundles. But that’s a post for another time.</p>
+
+<hr />
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:pds3" role="doc-endnote">
+      <p>The most obvious markers of a PDS3 Data Set (apart from all the capital letters everywhere) are <code class="language-plaintext highlighter-rouge">AAREADME.TXT</code> and <code class="language-plaintext highlighter-rouge">VOLDESC.CAT</code>. These files exist in most of our legacy archived datasets and are there to describe the PDS3 Data Set that you’re looking at. They will not be present in PDS4 Bundles/Collections. <a href="#fnref:pds3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:product" role="doc-endnote">
+      <p>A “Product” in PDS4 refers to a label as well as the object it describes. Everything is a product– Collections, Bundles (spoilers), individual observational products, etc. The real superpower of a collection is that it’s a product! For this article I’ll usually be using “product” to refer to the most basic type– an individual observational data or document product. <a href="#fnref:product" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:browse" role="doc-endnote">
+      <p>A browse product is usually a copy of another data product but in a more common file format meant to be browsed, but not usable for science: for example, a thumbnail of a FITS image, or a plot of a table. These can be grouped into a type of collection called a Browse Collection. <a href="#fnref:browse" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+</div>
+
+
+    <!-- END main content -->
+    </div></main>
+
+    <!-- BEGIN sbn-footer -->
+
+<footer class="sbn-footer">
+    <p class="sbn-footer-text">
+        For questions about the data sets or this web site, contact Carol Neese (<a href="mailto:neese@psi.edu" class="link">neese@psi.edu</a>).
+    </p>
+</footer>
+
+<div class="sbn-footer-extended">
+    <aside class="sbn-footer-psi-container">
+        <img src="images/PSI_Logo.png" alt="PSI Logo" title="PSI Logo" class="psi-logo">
+        <span>Hosted by the Planetary Science Institute</span>
+    </aside>
+</div>
+
+<!-- END sbn-footer -->
+
+
+    
+
+
+    <script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/scripts20210813.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>
