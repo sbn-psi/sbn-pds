@@ -1,0 +1,38 @@
+---
+layout: default
+title: Superseded Dataset
+---
+
+<h1 id="page-header">Superseded Dataset</h1>
+
+<p>The dataset you're looking for has been replaced by a newer version.</p>
+
+<a id="latest-version" class="pds-button">View latest version</a>
+
+<p>If you need access to this data for replication or other purposes, send us an email and we will provide you with a download.</p>
+
+<a id="contact" class="pds-button">Request data access</a>
+
+<script>
+(function(document, window) {
+    let email = "neese@psi.edu"
+    let subject = "Dataset request"
+
+    let params = new URLSearchParams(window.location.search)
+    const id = params.get("id")
+    if (!!id) {
+        document.getElementById("page-header").innerText = id + " [SUPERSEDED]"
+        subject += ": " + id
+    }
+    const latest = params.get("latest")
+    if (!!latest) {
+        document.getElementById("latest-version").href=latest
+        subject += ": " + id
+    } else {
+        let button = document.getElementById("latest-version")
+        button.parentElement.removeChild(button)
+    }
+    
+    document.getElementById("contact").href = `mailto:${email}?subject=${subject}`
+})(document, window);
+</script>
