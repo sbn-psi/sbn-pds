@@ -21,7 +21,7 @@ Again, this will add a little bit of extra time, so you have to submit the form 
 ### Let's look at the Form
 
 
-![Request Form for a Letter of Support](pdsregistryimages.psi.edu/pds_letter.png)
+![Request Form for a Letter of Support](http://pdsregistryimages.psi.edu/tips/requesting-a-letter/pds_letter.png)
 
 Oh no! The form is a .docx and I don't have the right software. 
 Dont worry, you can just send us a plain text file with all the information requested.
