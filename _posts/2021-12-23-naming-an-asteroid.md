@@ -2,6 +2,7 @@
 layout: social
 title: "Naming An Asteroid"
 category: Archiving Tips
+author: Kristina Lopez 
 ---
 
 “Congrats! You just discovered an asteroid ! How exciting! 
@@ -64,6 +65,5 @@ Names for pets are discouraged and commercial names are disallowed.  You can see
 
 ![An image mosaic of the southern hemisphere of the Asteroid 433 Eros which was the landing site of the Shoemaker spacecraft in 2001](https://pdsregistryimages.psi.edu/tips/naming-an-asteroid/Eros.png)
 
-### One Out Of Two Isn’t Bad
 
 So the good news is you can indeed suggest a name your asteroid.  Asteroid 12345 has not been named yet, but I'm not sure if DeathStar will be accepted.  Hopefully now you understand a little more about what the guidelines are for naming comets and asteroids and why they have come to be that way. 
