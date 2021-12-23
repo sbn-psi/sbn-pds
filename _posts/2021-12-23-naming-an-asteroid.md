@@ -29,7 +29,7 @@ For asteroids, official naming guidelines and procedures have been put into plac
  
 ## There Are Multiple Parts To A Name 
 
-Asteroid naming conventions have changes a few times since the dawn of astronomy. This was driven by the fact that there were so many being discovered they had to find a new naming convention that wasn't based solely on Greek and Roman myths. 
+Asteroid naming conventions have changed a few times since the dawn of astronomy. This was driven by the fact that there were so many being discovered they had to find a new naming convention that wasn't based solely on Greek and Roman myths. 
 
 
 ### Three different names
