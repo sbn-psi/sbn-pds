@@ -7,7 +7,7 @@ category: Archiving Tips
 “Congrats! You just discovered an asteroid ! How exciting! 
 
 ![Image of the detection of 2014 AA, a 2-3 meter asteroid detected 20 hours before it impacted the earth](https://pdsregistryimages.psi.edu/tips/naming-an-asteroid/PIA21712.gif)
-Typical observations of an asteroid detection -- https://photojournal.jpl.nasa.gov/catalog/PIA21712
+
 
 
 What's that? 
