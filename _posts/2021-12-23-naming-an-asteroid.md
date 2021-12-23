@@ -6,7 +6,7 @@ category: Archiving Tips
 
 “Congrats! You just discovered an asteroid ! How exciting! 
 
-![Image of the detection of 2014 AA, a 2-3 meter asteroid detected 20 hours before it impacted the earth](https://pdsregistryimages.psi.edu/tips/naming-an-astrtoid/PIA21712.gif)
+![Image of the detection of 2014 AA, a 2-3 meter asteroid detected 20 hours before it impacted the earth](https://pdsregistryimages.psi.edu/tips/naming-an-asteroid/PIA21712.gif)
 Typical observations of an asteroid detection -- https://photojournal.jpl.nasa.gov/catalog/PIA21712
 
 
@@ -41,7 +41,7 @@ Example
  - 1999 RQ36 -- the target of the [OSIRIS-REx mission](https://www.asteroidmission.org).
  - 2008 TC3 -- Discovered October 6th, 2008 and exploded over the Nubian Desert in the Sudan the next day.  It was the source of the Almahata Sitta meteorite.
 
-![A full roational view of the asteroid 1999 RQ36](https://pdsregistryimages.psi.edu/tips/naming-an-astrtoid/shape2.gif)
+![A full roational view of the asteroid 1999 RQ36](https://pdsregistryimages.psi.edu/tips/naming-an-asteroid/shape2.gif)
 
 
 ####  Permanent Number
@@ -56,13 +56,13 @@ For the first 10 years, the person who discovered an asteroid is allowed to sugg
  - (16) Psyche -- It is an asteroid that may be very high in metal, which is the target of the [Psyche Mission](https://psyche.asu.edu).
  - (7470) Jabberwock -- A very interesting name for an asteroid.
  
- ![An artists illusration of the asteroid (16) Psyche which will be the final destination of the NASA Psyche space craft that is set to launch in August 2022. ](https://pdsregistryimages.psi.edu/tips/naming-an-astrtoid/Psyche.png)
+ ![An artists illusration of the asteroid (16) Psyche which will be the final destination of the NASA Psyche space craft that is set to launch in August 2022. ](https://pdsregistryimages.psi.edu/tips/naming-an-asteroid/Psyche.png)
 
 Under [IAU rules](https://www.iau.org/public/themes/naming/#minorplanets), asteroid names must be pronounceable, preferably one word, although exceptions are possible, and since 1982, names are limited to a maximum of sixteen characters, including spaces and hyphens. 
 
 Names for pets are discouraged and commercial names are disallowed.  You can see the full list [here](https://minorplanetcenter.net//iau/lists/MPNames.html).
 
-![An image mosaic of the southern hemisphere of the Asteroid 433 Eros which was the landing site of the Shoemaker spacecraft in 2001](https://pdsregistryimages.psi.edu/tips/naming-an-astrtoid/Eros.png)
+![An image mosaic of the southern hemisphere of the Asteroid 433 Eros which was the landing site of the Shoemaker spacecraft in 2001](https://pdsregistryimages.psi.edu/tips/naming-an-asteroid/Eros.png)
 
 ### One Out Of Two Isn’t Bad
 
