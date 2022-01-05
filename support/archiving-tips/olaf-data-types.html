@@ -6,7 +6,7 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>Archiving Tips Articles | PDS SBN Asteroid/Dust Subnode</title>
+    <title>OLAF Data Types | PDS SBN Asteroid/Dust Subnode</title>
     
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
@@ -158,45 +158,86 @@
     <li class="breadcrumbs-separator">/</li>
     <li><a href="support/Tips.html">Tips & Tricks</a></li>
     <li class="breadcrumbs-separator">/</li>
-    <li>Archiving Tips Articles</li>
-</ol>   
+    <li><a href="support/archiving-tips/">Archiving Tips</a></li>
+    <li class="breadcrumbs-separator">/</li>
+    <li>OLAF Data Types</li>
+</ol> 
+<br/>
 
-<h1>Archiving Tips Articles</h1>
+<h1 class="post-title">OLAF Data Types</h1>
+<p class="post-subtitle secondary">Jan 05, 2022 
+    
+</p>
 
-<div class="primary-sections">
-    <table class="fullwidth">
-        
-        <tr>
-            <td><a href="/pds/support/archiving-tips/olaf-data-types.html">OLAF Data Types</a></td>
-            <td>Archiving&nbsp;Tips</td>
-            <td>Jan&nbsp;5th,&nbsp;2022</td>
-        </tr>
-        
-        <tr>
-            <td><a href="/pds/support/archiving-tips/naming-an-asteroid.html">Naming An Asteroid</a></td>
-            <td>Archiving&nbsp;Tips</td>
-            <td>Dec&nbsp;23rd,&nbsp;2021</td>
-        </tr>
-        
-        <tr>
-            <td><a href="/pds/support/archiving-tips/requesting-a-letter.html">Requesting A Letter</a></td>
-            <td>Archiving&nbsp;Tips</td>
-            <td>Nov&nbsp;30th,&nbsp;2021</td>
-        </tr>
-        
-        <tr>
-            <td><a href="/pds/support/archiving-tips/citations.html">Gaining Citations</a></td>
-            <td>Archiving&nbsp;Tips</td>
-            <td>Oct&nbsp;5th,&nbsp;2021</td>
-        </tr>
-        
-        <tr>
-            <td><a href="/pds/support/archiving-tips/pdfa.html">PDF/A Stuff</a></td>
-            <td>Archiving&nbsp;Tips</td>
-            <td>Sep&nbsp;7th,&nbsp;2021</td>
-        </tr>
-        
-    </table>
+<p class="secondary"><em> Part of a series on <a href="support/archiving-tips/">Archiving Tips</a> </em></p>
+
+
+<div class="social-post">
+    <h2 id="what-is-olaf">What is OLAF?</h2>
+
+<p>If you have data that you need to submit to the Planetary Data System (PDS), OLAF might be able to help. The On-Line Archive Facility, OLAF for short, is a web application that helps data providers submit their data to the PDS for archiving without having to learn all the tedious details of the PDS4 archive standard. Submitted data is reviewed for accuracy and completeness and is given a citation once it is accepted.</p>
+
+<h2 id="what-types-of-data-does-olaf-support">What types of data does OLAF support?</h2>
+
+<p>OLAF provides support for the data types that are most commonly submitted to the PDS, which includes different types of tables, images, and documents.</p>
+
+<h3 id="tables">Tables</h3>
+
+<h4 id="delimited-csv">Delimited (CSV)</h4>
+
+<p>Comma-Separated Values (CSV) is a simple file format used to store tabular data, such as in a spreadsheet or database. Files in the CSV format (usually with the extension .csv) can be imported to and exported from programs that store data in tables. The data fields are most often separated by a comma.</p>
+
+<h4 id="fixed-width">Fixed-Width</h4>
+
+<p>Fixed-width tables are a simple file format used to store data in rows and columns. Each column or data field in a fixed-width table has the exact same width in each row, regardless of the data in each row. When you view the data in a fixed-width table, all the Column1 data will line up, all the Column2 data will line up, and so on.</p>
+
+<h4 id="binary">Binary</h4>
+
+<p>Binary tables are a simple file format used to store binary data.</p>
+
+<h4 id="multipart-complex">Multipart (Complex)</h4>
+
+<p>Multipart tables, also known as complex tables, are a common type of ASCII data table. A multipart table file is one or more ASCII tables combined into a single file and is a common format for shape model files.</p>
+
+<h3 id="images">Images</h3>
+
+<h4 id="fits">FITS</h4>
+
+<p>Flexible Image Transport System (FITS) is an open standard developed by NASA defining a digital file format useful for storage, transmission and processing of data. FITS is the most commonly used digital file format in astronomy.</p>
+
+<p>FITS files are formatted as N-dimensional arrays (for example, a 2D image) or as tables. The FITS standard also includes special (optional) features for scientific data. For example, it includes many provisions for describing photometric and spatial calibration information as well as image origin metadata. We refer to this section of the FITS file as the “header”.</p>
+
+<p>OLAF is also capable of supporting FITS image files with a backplanes section.</p>
+
+<h4 id="2d-arrays">2D Arrays</h4>
+
+<p>A generic 2D array image is an uncompressed image that consists of an optional header section in any format followed by a data section.</p>
+
+<p>OLAF is also capable of supporting generic 2D array image files with a backplanes section.</p>
+
+<h3 id="documents">Documents</h3>
+
+<p>Documents are typically files that support or provide context to the data files. OLAF supports the following document file types:</p>
+
+<ul>
+  <li>Plain Text (.txt or .asc)</li>
+  <li>PDF/A (.pdf)</li>
+</ul>
+
+<h2 id="what-if-my-data-type-is-not-supported">What if my data type is not supported?</h2>
+
+<p>If you need support for a type of data that isn’t listed, <a href="mailto:olaf@psi.edu">let us know</a>! The OLAF development team continues to add support for new data types as needs arise. Your input could be the difference in what data types OLAF supports next.</p>
+
+<h2 id="more-than-just-submitting-data">More than just submitting data</h2>
+
+<p>While understanding which data types OLAF supports is critical when deciding whether OLAF is the right tool for submitting your data, it’s also important to recognize that OLAF provides a variety of useful features that will help you fully describe your data. The PDS4 information model thrives on rich metadata, so describing data as thoroughly as possible when it’s being submitted is a crucial part of making the data discoverable and useful long into the future.</p>
+
+<p>OLAF can help data providers make connections between their data and mission spacecraft and instruments, observatories, telescopes, and even references to existing publications.</p>
+
+<h2 id="what-if-i-dont-want-to-use-olaf">What if I don’t want to use OLAF?</h2>
+
+<p>It’s true, there are other software programs that can assist you in submitting data to the PDS. And while OLAF is a great way to prepare your data for archiving, it isn’t always the best choice. Still, even in some cases where data providers choose not to use OLAF to submit their data, OLAF can still be a useful tool. For example, if a data provider is submitting a <em>very</em> large quantity of files, uploading them all to a web application might not make sense. In this case, though, the data provider might submit a single file to OLAF and generate a valid PDS4 label file that can be used as a template for the rest of the data files. This would make it easier to create a software pipeline that fills in the template label file for each data file programatically.</p>
+
 </div>
 
 
