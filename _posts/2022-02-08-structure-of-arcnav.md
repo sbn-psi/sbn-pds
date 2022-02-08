@@ -44,4 +44,4 @@ So, you could say that the structure of Archive Navigator is PDS4... but the *re
 
 ---
 
-[pds4]: PDS4 is the latest standard for archiving in PDS. It's the super complicated one with all the XML. You can read more by checking out [our articles on the subject](https://sbn.psi.edu/pds/support/pds4/).
+[^pds4]: PDS4 is the latest standard for archiving in PDS. It's the super complicated one with all the XML. You can read more by checking out [our articles on the subject](https://sbn.psi.edu/pds/support/pds4/).
