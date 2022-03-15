@@ -1,7 +1,7 @@
 ---
 layout: social #This should never change
 title: Data Management Plans 101- Planning the archive (once selected) #This will go in the tab bar title as well as in h1 on the article page
-category: Tech Tips #This will go in the page URL and on the category pages, so make sure it matches
+category: Archiving Tips #This will go in the page URL and on the category pages, so make sure it matches
 author: Beatrice Mueller #This is you!
 ---
 

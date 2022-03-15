@@ -1,7 +1,7 @@
 ---
 layout: social
 title: "OLAF Data Types"
-category: Archiving Tips
+category: Tool Help
 ---
 
 ## What is OLAF?
