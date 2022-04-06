@@ -1,7 +1,7 @@
 ---
 layout: social #This should never change
 title: Archiving Overview from Start to End 101- The Review #This will go in the tab bar title as well as in h1 on the article page
-category: Tech Tips #This will go in the page URL and on the category pages, so make sure it matches
+category: Archiving Tips #This will go in the page URL and on the category pages, so make sure it matches
 author: Beatrice Mueller #This is you!
 ---
 
