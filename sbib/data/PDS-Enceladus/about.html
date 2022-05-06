@@ -26,38 +26,30 @@ title: SBIB | PDS Small Bodies Node
     poles, limb_topo, atmosphere, day_map, night_map, low_phase, high_phase.
     The images in plumes_xx_res are all high phase (>140deg). The images in plumes_xx_phase have encompass all resolutions in the respective phase range.
 
+<br>
+<h2>Filters</h2>
+For greater flexibility two filter wheels were used with a clear filter in each wheel. Filters are listed as filter(wheel1)&filter(wheel2) (e.g. CL1&GRN) in the Image Browser. Detailed information about the filters can be found in Appendix A of the <a href=https://pds-rings.seti.org/cassini/iss/COISS_0011_DOCUMENT/iss_data_user_guide_160929.pdf> ISS Data User Guide</a>
+
 <h2>Data Download</h2>
 Highlight the data you would like to download, click 'Download'. Notes for the download screen: 'raw' and 'calibrated' buttons refer to the fits files. For downloading e.g. jpg files in camera view, click on 'jpg'; for projected view, click on 'Projected' and then again on 'jpg'. Note that the file names are the same for the camera and projected view.
 <BR>
+
 <h2>Map Projection and ArcGIS</h2>
-Data can be imported into ArcGIS by downloading the ISIS Map cubes. NOTE that wecalibrated the downloaded raw .IMG files with cisscal version 3.9.1 before creating the ISIS cubes and other file formats. The downloaded calibrated data were processed with cisscal version 3.8 by the Ring-Moon Systems Node. 
+Data can be imported into ArcGIS by downloading the ISIS Map cubes. NOTE that we calibrated the downloaded raw .IMG files with cisscal version 3.9.1 before creating the ISIS cubes and other file formats. The downloaded calibrated data were processed with cisscal version 3.8 by the Ring-Moon Systems Node. 
 <BR>
 Most images (PNG and thumbnails) were generated
 with an equirectangular projection.
 Images that are near the poles have been projected with a polar projection.  
 
 <h2>Maps</h2>
-We use several different overview maps for the Image Browser.
-            <UL>
-                <LI> Equatorial
-                <LI> Equatorial Color
-                <LI> North Polar Region
-                <LI> South Polar Region
-            </UL>
-The yellowish and magenta tones in the color map are believed to be due to differences in the
- thickness of surface deposits there. In addition, many of the most recently formed
-  fractures on Enceladus have a stronger ultraviolet signature (meaning they are brighter),
-   and they appear bluish in these maps. The famous "tiger stripe" fractures, which are
-    the sources of the plumes venting gas and dust into space have a similar color. 
-    Researchers think this color could be due to large-grained ice exposed on the surface. 
-    Other subtle color markings are related to the moon's local and regional geologic history.
-    For more details, click <a href=https://photojournal.jpl.nasa.gov/beta/catalog/PIA18435>here.
+We use an equatorial overview map for the Image Browser.
+
+<br>
 
 <h2>Data processing</h2>
 We used the USGS software tool <a href=http://isis.astrogeology.usgs.gov>Integrated Software for Imagers and Spectrometers (ISIS)</a>
 as the main tool to process the data.  
-We used the pre-Dawn shape model posted at USGS and the ISIS
-software routines to convert images into map-based projections.
+We used an ellipsoid for the shape to convert images into map-based projections.
 
 <h2>Coordinates</h2>
 The files list the coordinates in East Longitude. However, the base map is shown in West Longitude with the prime meridian in the middle of the map as it is commonly diplsayed for the Saturnian Satellites.
