@@ -19,42 +19,25 @@ title: SBIB | PDS Small Bodies Node
 The Mimas data were sorted into the following for easier access: geo_map, regional_map, limb_topo, global_map, global_color, low_phase, photometry, stereo.
 </h3>
 <BR>
+<h2>Filters</h2>
+For greater flexibility two filter wheels were used with a clear filter in each wheel. Filters are listed as filter(wheel1)&filter(wheel2) (e.g. CL1&GRN) in the Image Browser. Detailed information about the filters can be found in Appendix A of the <a href=https://pds-rings.seti.org/cassini/iss/COISS_0011_DOCUMENT/iss_data_user_guide_160929.pdf> ISS Data User Guide</a>
 <h2>Data Download</h2>
 Highlight the data you would like to download, click 'Download'. Notes for the download screen: 'raw' and 'calibrated' buttons refer to the fits files. For downloading e.g. jpg files in camera view, click on 'jpg'; for projected view, click on 'Projected' and then again on 'jpg'. Note that the file names are the same for the camera and projected view.
 <BR>
 <h2>Map Projection and ArcGIS</h2>
-Data can be imported into ArcGIS by downloading the ISIS Map cubes. NOTE that wecalibrated the downloaded raw .IMG files with cisscal version 3.9.1 before creating the ISIS cubes and other file formats. The downloaded calibrated data were processed with cisscal version 3.8 by the Ring-Moon Systems Node. 
+Data can be imported into ArcGIS by downloading the ISIS Map cubes. NOTE that we calibrated the downloaded raw .IMG files with cisscal version 3.9.1 before creating the ISIS cubes and other file formats. The downloaded calibrated data were processed with cisscal version 3.8 by the Ring-Moon Systems Node. 
 <BR>
 Most images (PNG and thumbnails) were generated
 with an equirectangular projection.
 Images that are near the poles have been projected with a polar projection.  
 
 <h2>Maps</h2>
-We use several different overview maps for the Image Browser.
-            <UL>
-                <LI> Equatorial
-                <LI> Equatorial Color
-                <LI> North Polar Region
-                <LI> South Polar Region
-            </UL>
-            Apart from the moon's enormous impact crater, named Herschel, a dramatic
-             feature on color map is the equatorial band on Mimas' leading hemisphere.
-              Cassini found this band to be significantly brighter in the ultraviolet than
-               surrounding terrains, and it appears somewhat bluish here. This feature,
-                similar to one on Tethys, was found to correlate with the predicted pattern
-                 of bombardment of the moons' surfaces by high-energy electrons trapped in
-                  Saturn's magnetic field. This bombardment is thought to alter the surface
-                   ices on a crystalline scale and change their color. Later thermal
-                    observations by Cassini's Composite Infrared Spectrometer (CIRS)
-                     instrument showed that these features also form thermal anomalies on
-                      the surface, giving rise to the nickname "Pac-Man" features.
-            For more details, click <a href=https://photojournal.jpl.nasa.gov/beta/catalog/PIA18437>here.
+We use an equatorial overview map (from <a href=https://photojournal.jpl.nasa.gov/jpeg/PIA17214.jpg>here</a>) for the Image Browser.
 
 <h2>Data processing</h2>
 We used the USGS software tool <a href=http://isis.astrogeology.usgs.gov>Integrated Software for Imagers and Spectrometers (ISIS)</a>
 as the main tool to process the data.  
-We used the pre-Dawn shape model posted at USGS and the ISIS
-software routines to convert images into map-based projections.
+We used an ellipsoid for the shape to convert images into map-based projections.
 
 <h2>Coordinates</h2>
 The files list the coordinates in East Longitude. However, the base map is shown in West Longitude with the prime meridian in the middle of the map as it is commonly diplsayed for the Saturnian Satellites.
