@@ -13,7 +13,7 @@ Well, today we are going to just step back and briefly explain the method to our
 
 First, some boring but important fundamentals. You probably know computers use binary code to store and compute things. 1's and 0's and all that. Those are bits (and 8 of them is a byte). Well, every file on a computer is still just a series of bytes, and so they look like this:
 
-![A bunch of bytes](https://pdsregistryimages.psi.edu/tips/archiving-jpeg/binary1.png])
+![A bunch of bytes](https://pdsregistryimages.psi.edu/tips/archiving-jpeg/binary1.png)
 
 A hard drive has a bunch of files, so it basically looks like this:
 
