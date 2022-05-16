@@ -6,7 +6,7 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>Archiving Tips Articles | PDS SBN Asteroid/Dust Subnode</title>
+    <title>Why Can't I Archive a JPEG? | PDS SBN Asteroid/Dust Subnode</title>
     
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
@@ -158,57 +158,103 @@
     <li class="breadcrumbs-separator">/</li>
     <li><a href="support/Tips.html">Tips & Tricks</a></li>
     <li class="breadcrumbs-separator">/</li>
-    <li>Archiving Tips Articles</li>
-</ol>   
+    <li><a href="support/archiving-tips/">Archiving Tips</a></li>
+    <li class="breadcrumbs-separator">/</li>
+    <li>Why Can't I Archive a JPEG?</li>
+</ol> 
+<br/>
 
-<h1>Archiving Tips Articles</h1>
+<h1 class="post-title">Why Can't I Archive a JPEG?</h1>
+<p class="post-subtitle secondary">May 16, 2022 
+    
+    (by Mike Drum)
+    
+</p>
 
-<div class="primary-sections">
-    <table class="fullwidth">
-        
-        <tr>
-            <td><a href="/pds/support/archiving-tips/why-cant-i-archive-jpg.html">Why Can't I Archive a JPEG?</a></td>
-            <td>Archiving&nbsp;Tips</td>
-            <td>May&nbsp;16th,&nbsp;2022</td>
-        </tr>
-        
-        <tr>
-            <td><a href="/pds/support/archiving-tips/the-review.html">Archiving Overview from Start to End 101- The Review</a></td>
-            <td>Archiving&nbsp;Tips</td>
-            <td>Apr&nbsp;6th,&nbsp;2022</td>
-        </tr>
-        
-        <tr>
-            <td><a href="/pds/support/archiving-tips/planning-the-archive.html">Data Management Plans 101- Planning the archive (once selected)</a></td>
-            <td>Archiving&nbsp;Tips</td>
-            <td>Mar&nbsp;15th,&nbsp;2022</td>
-        </tr>
-        
-        <tr>
-            <td><a href="/pds/support/archiving-tips/naming-an-asteroid.html">Naming An Asteroid</a></td>
-            <td>Archiving&nbsp;Tips</td>
-            <td>Dec&nbsp;23rd,&nbsp;2021</td>
-        </tr>
-        
-        <tr>
-            <td><a href="/pds/support/archiving-tips/requesting-a-letter.html">Requesting A Letter</a></td>
-            <td>Archiving&nbsp;Tips</td>
-            <td>Nov&nbsp;30th,&nbsp;2021</td>
-        </tr>
-        
-        <tr>
-            <td><a href="/pds/support/archiving-tips/citations.html">Gaining Citations</a></td>
-            <td>Archiving&nbsp;Tips</td>
-            <td>Oct&nbsp;5th,&nbsp;2021</td>
-        </tr>
-        
-        <tr>
-            <td><a href="/pds/support/archiving-tips/pdfa.html">PDF/A Stuff</a></td>
-            <td>Archiving&nbsp;Tips</td>
-            <td>Sep&nbsp;7th,&nbsp;2021</td>
-        </tr>
-        
-    </table>
+<p class="secondary"><em> Part of a series on <a href="support/archiving-tips/">Archiving Tips</a> </em></p>
+
+
+<div class="social-post">
+    <p>Look, we get it. PDS can probably seem kinda difficult sometimes. We have all these complicated requirements, we force people to change their data formats, and it’s hard to see why. You’ve got all these images or PDFs, why can’t we just take them and be happy?? How hard is it to just be a big dropbox for science?</p>
+
+<p>Well, today we are going to just step back and briefly explain the method to our madness. And for the record, this article is not really specifically about JPG, but really all forms of data compression and why it’s inappropriate for an archive.</p>
+
+<h2 id="on-bits-and-bytes">On Bits And Bytes</h2>
+
+<p>First, some boring but important fundamentals. You probably know computers use binary code to store and compute things. 1’s and 0’s and all that. Those are bits (and 8 of them is a byte). Well, every file on a computer is still just a series of bytes, and so they look like this:</p>
+
+<figure><img src="https://pdsregistryimages.psi.edu/tips/archiving-jpeg/binary1.png]" /><figcaption>A bunch of bytes</figcaption></figure>
+
+<p>A hard drive has a bunch of files, so it basically looks like this:</p>
+
+<figure><img src="https://pdsregistryimages.psi.edu/tips/archiving-jpeg/binary2.png" /><figcaption>Even more bytes</figcaption></figure>
+
+<p>Fun stuff.</p>
+
+<p>The only way that a computer knows how to handle any of that is by assuming they are in a specific format, and reading it that way. ASCII is one such format, which translates each byte into a symbol or letter in the latin alphabet. Bytes can also be read as numbers, but there are even lots of different ways of doing that. Then when it comes to files, an example image format could assume that the first twenty bytes describes the name of the file, the next four bytes how wide an image is, the next four how long it is, and the remainder of the file has three 24-bit pixels describing their color values.<sup id="fnref:simple" role="doc-noteref"><a href="#fn:simple" class="footnote" rel="footnote">1</a></sup></p>
+
+<p>If you do just a little bit of math, you can see that even the extremely simple, minimal example we laid out above would get out of hand pretty quickly. A random photo from my camera/phone is 3024 × 4032 pixels, which would make that format use over 100MB of data for just the color values.</p>
+
+<p>So anyway, one day humans invented compression.</p>
+
+<h2 id="on-jpeg-and-the-fickleness-of-humanity">On JPEG and the fickleness of humanity</h2>
+
+<p>So JPEGs (and many other image formats) are a lot more complicated than they would seem because they do a lot of fancy tricks to fit more data into smaller files. Everything starts with a raw image in a format similar to that example above, but then an algorithm translates that to a much smaller format. This can happen <em>losslessly</em> (such that the compressed file can be fully restored to its original file) where patterens are identified, which is the key to compression.  Instead of repeating the same set of bits each time it appears, just include it once and then indicate where those bits should go.  This can typically cut an image file size in half.</p>
+
+<p>However, to get really small files, other techniques will result in minor details being lost.  JPEG is a format that takes advantage of how human visual perception works where it finds patterns in photos and simplify certain blocks of an image down to those patterns. This removes unnoticeable (or barely noticeable) detail and replaces it with averages.</p>
+
+<p>Thing is, it’s a very complicated algorithm. It is also only efficient in specific scenarios, too. So we keep inventing new data formats. You probably know a lot of them:</p>
+
+<ul>
+  <li>JPG</li>
+  <li>TIFF</li>
+  <li>GIF</li>
+  <li>PNG</li>
+  <li>FITS</li>
+  <li>BMP</li>
+</ul>
+
+<p>You probably also don’t know about a lot of them:</p>
+
+<ul>
+  <li>HEIF</li>
+  <li>ICO</li>
+  <li>Nrrd</li>
+  <li>JPEG 2000</li>
+  <li>JPEG XL</li>
+  <li>JPEG XR</li>
+  <li>PICT</li>
+  <li>PGM</li>
+  <li>PPM</li>
+</ul>
+
+<p>Data file formats come and go, because different manufactures have different goals for making images efficient. Each of the obscure formats I mentioned was made because it’s <em>better</em> than all the others for some specific cases<sup id="fnref:gif" role="doc-noteref"><a href="#fn:gif" class="footnote" rel="footnote">2</a></sup>. And we never know which format will win out in the end, and which one computers will be able to render in 50 years time.</p>
+
+<p>The goal of the PDS is to have the data and its usability outlive all of us working on it, and that means that we can’t adopt every file format out there (even uncompressed ones like BMP and some FITS). As much as possible, we want to describe every data file with our labels <em>down to the very byte</em>. This is why we ask for files to be described as arrays or tables most of the time. Those are algorithms that can be fully described in a label.</p>
+
+<p>So, in the end, there are two reasons we can’t archive compressed data:</p>
+<ol>
+  <li>Original observational data might be lost due to lossy compression</li>
+  <li>The actual compression algorithm itself would need to be archived</li>
+</ol>
+
+<h2 id="physics-strikes-back">Physics strikes back</h2>
+
+<p>Now, that all said, the future might hold some exceptions to this policy. Due to reasons of practicality, we are already starting to pull down observational data in compressed formats, because it turns out there’s only one Deep Space Network right now. Transferring raw <em>video</em> would simply be impossible at the current bitrates available to spacecraft, so we’re currently in the process of figuring out how we’re going to archive that data. These are the principles we’re working with though, so rest assured that we intend to make it data both usable now and in the future. Somehow.</p>
+
+<hr />
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:simple" role="doc-endnote">
+      <p>This is all a drastic simplification. File headers are a lot bigger and more complicated, but it’s fine for this example. <a href="#fnref:simple" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:gif" role="doc-endnote">
+      <p>GIFs are basically the worst file format out there, and yet we still use them because they can have animations built in and who doesn’t like moving picture <a href="#fnref:gif" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
 </div>
 
 
