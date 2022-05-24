@@ -165,7 +165,7 @@
             breadcrumbs.querySelectorAll("li").forEach(li => breadcrumbs.removeChild(li))
             newBreadcrumbs.forEach(breadcrumb => {
                 let el = document.createElement("li")
-                el.innerHTML = `<a href="${breadcrumb.url}">${breadcrumb.name}</a>`
+                el.innerHTML = `<a href="${breadcrumb.url}">${breadcrumb.name.replace(/(<([^>]+)>)/gi, "")}</a>`
                 breadcrumbs.appendChild(el)
                 el = document.createElement("li")
                 el.classList.add("breadcrumbs-separator")
