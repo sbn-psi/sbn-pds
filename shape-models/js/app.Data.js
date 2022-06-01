@@ -1851,7 +1851,7 @@ app.factory('Satellites', function (Datasets) {
                         fileFormat: 'TAB'
                     },
                     derived: [{
-                        downloadLink: 'shape-models/files/SATURN_SMALL_MOONS/s16prometheus.tab.obj',
+                        downloadLink: 'shape-models/files/SATURN_SMALL_MOONS/prometheus_30k_plt.tab.obj',
                         fileFormat: 'OBJ'
                     }]
                 },
