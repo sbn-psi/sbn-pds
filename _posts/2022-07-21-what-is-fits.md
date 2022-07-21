@@ -9,7 +9,7 @@ author: Kristina Lopez
 
 In the world of astronomy the adage should be “A picture needs a thousand words”. That is because in order to be able to understand and use an astronomical photo you need to have all the meta-data that comes along with it. 
 
-<span style="font-size:1.5em;"> Spacecraft position, instrument temperature,</span> <span style="font-size:1.2em;"> start time, stop time, pixel scale, <span style="font-size:1em;"> right ascension, declination, coordinate system,</span> <span style="font-size:.8em;"> phase angle, target name, </span><span style="font-size:.6em;"> filter name, sun position,</span> <span style="font-size:.4em;"> processing level, incidence angle …. </span>Its enough to make your head spin! 
+<span style="font-size:2em;"> Spacecraft position, instrument temperature,</span> <span style="font-size:1.5em;"> start time, stop time, pixel scale, <span style="font-size:1em;"> right ascension, declination, coordinate system,</span> <span style="font-size:.8em;"> phase angle, target name, </span><span style="font-size:.6em;"> filter name, sun position,</span> <span style="font-size:.4em;"> processing level, incidence angle …. </span>Its enough to make your head spin! 
 
 Not to mention data is often more complicated when images contain multiple layers of overlaid information such as backplanes.
 
