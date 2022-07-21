@@ -9,7 +9,7 @@ author: Kristina Lopez
 
 In the world of astronomy the adage should be “A picture needs a thousand words”. That is because in order to be able to understand and use an astronomical photo you need to have all the meta-data that comes along with it. 
 
-#Spacecraft position, instrument temperature, ##start time, stop time, pixel scale, ###right ascension, declination, coordinate system, ####phase angle, target name, #####filter name, sun position, ######processing level, incidence angle …. Its enough to make your head spin! 
+# Spacecraft position, instrument temperature, ## start time, stop time, pixel scale, ### right ascension, declination, coordinate system, #### phase angle, target name, ##### filter name, sun position, ###### processing level, incidence angle …. Its enough to make your head spin! 
 
 Not to mention data is often more complicated when images contain multiple layers of overlaid information such as backplanes.
 
@@ -19,11 +19,11 @@ Astronomers realized something needed to be done. Not only did all this metadata
 
 Thankfully the Flexible Image Transport System (FITS) data format was created to solve all these problems! 
 
-###What is FITS?
+### What is FITS?
 
 (FITS) is an open standard defining a digital file format useful for storage, transmission and processing of data that was created specifically for astronomical data. FITS files can be easily identified in a dataset as the file name will always end with “.fits”. FITS format is mostly used for image but can also be used for other data types such as structured data, spectra and data cubes.
 
-###What does it do with all the meta-data?   
+### What does it do with all the meta-data?   
 
 At the beginning of each FITS file there is a human-readable ASCII header. Think of the header as the “Heres what you need to know” introduction to the data file. The header can be organized into multiple blocks (Space craft data, geometry data, coordinates, etc). Each block contains keywords which provide the crucial metadata. An example of a key word and its value could be “Target_Type: = Asteroid.” Which tells us the target of this photo was an asteroid. In more complex data which contains things such as backplanes, there can be multiple headers. 
 
@@ -31,11 +31,11 @@ Headers provide a quick and easy way to parse and read through the large amounts
 
 ![An example of a FITS header](https://pdsregistryimages.psi.edu/tips/What-is-FITS/header.png)
 
-###We love FITS here at the PDS! 
+### We love FITS here at the PDS! 
 
 Not only do we love FITS format because it was designed for astronomical data but it was also designed to be optimal for long term archival storage. Although FITS format standards have been update over the years, FITS format must also be backwards compatible. Ensuring the data can be used for years to come. Once fits, always FITS!
 
-###Mapping FITS to PDS4 
+### Mapping FITS to PDS4 
 
 
 Here at PDS SBN we can use the metadata in a FITS file and map them onto a PDS4 label. By doing this we can created a standardized and searchable file, helping both data users and providers of our archive. While mapping FITS headers into PDS4 labels non standardized keywords will be added to a new data dictionary to meet PDS4 standards. 
