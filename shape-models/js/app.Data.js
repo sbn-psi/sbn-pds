@@ -248,7 +248,7 @@ app.factory('Comets', function () {
                                 fileFormat: 'TAB'
                             },
                             derived: [{
-                                downloadLink: 'shape-models/a8567/a8567.tab.obj',
+                                downloadLink: 'shape-models/files/a8567/a8567.tab.obj',
                                 fileFormat: 'OBJ'
                             }]
                         },
