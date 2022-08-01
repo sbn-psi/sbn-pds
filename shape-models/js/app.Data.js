@@ -248,7 +248,7 @@ app.factory('Comets', function () {
                                 fileFormat: 'TAB'
                             },
                             derived: [{
-                                downloadLink: 'shape-models/files/a8567.tab.obj',
+                                downloadLink: 'shape-models/a8567/a8567.tab.obj',
                                 fileFormat: 'OBJ'
                             }]
                         },
@@ -258,7 +258,7 @@ app.factory('Comets', function () {
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'shape-models/files/a8567.tab.usdz',
+                                path: 'shape-models/files/a8567/a8567.tab.usdz',
                                 fileFormat: 'USDZ'
                             }
                         }
@@ -339,7 +339,7 @@ app.factory('Comets', function () {
                                 fileFormat: 'TAB'
                             },
                             derived: [{
-                                downloadLink: Hudson.basepath + '1620geographos.tab.obj',
+                                downloadLink: 'shape-models/files/RADAR/1620geographos.tab.obj',
                                 fileFormat: 'OBJ'
                             }]
                         },
