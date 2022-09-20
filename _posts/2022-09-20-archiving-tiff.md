@@ -21,7 +21,7 @@ TIFF 6.0 was designed with a lot of capability.  It includes compression as well
 As a result, some of the features that TIFF supports cannot be accepted in the PDS.  ***For example [no compression]({% post_url 2022-04-18-archive-a-jpeg %})**. "Baseline" TIFF itself allows for a few different compression formats, so those must be disabled to make the compatible for the PDS.
 
 
-While some aspects of TIFF images are not compatible with archiving, pretty much any TIFF can be **converted** so that it can be archived
+While some aspects of TIFF images are not compatible with archiving, pretty much any TIFF can be **converted** so that it can be archived.
 
 
 In the end, you're still going to be working with the primary building blocks to describe the images: [`Array_3D_Image`](https://pds.jpl.nasa.gov/datastandards/documents/im/current/index_1I00.html#9.4%C2%A0%C2%A0class_pds_array_3d_image), for RGB or multi-band spectral, or [`Array_2D_Image`](https://pds.jpl.nasa.gov/datastandards/documents/im/current/index_1I00.html#9.4%C2%A0%C2%A0class_pds_array_3d_image) for greyscale mosaic. This structure will be used to define the image's byte offsets, axis sizes, and data types of each byte of the uncompressed image. That means that if it can't be described with those, you can't archive it.
@@ -34,8 +34,8 @@ GeoTIFF is an open source format that includes geospatial information alongside 
 
 
 If you want to make GeoTIFFs for archiving, [GDAL](https://gdal.org/), an open-source translator library for geospatial data, [is able to produce PDS4 labels](https://gdal.org/drivers/raster/pds4.html) and check their compliance.
-
----
+ 
+ ---
 
 [^browse]: Supplemental versions of products that are in more modern, human-friendly formats to make it more readable. These are always submitted as additional copies of the uncompressed, standards-compliant versions of images. We'll have another post about this soon.
 
