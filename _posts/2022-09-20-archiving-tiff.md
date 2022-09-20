@@ -7,7 +7,7 @@ author: Mike Drum
 
 TIFF. It's all the rage these days. All my friends are doing it. Can you?
 
-As with a lot of things in PDS: it's complicated. That's why it's getting a whole blog post. TIFF comes in many shapes and sizes, and we're here to nail down some specifics for you. Unlike [my last post about JPEGs]({% post_url 2022-04-18-archive-a-jpeg %}) though, there's some good news here. Spoiler: **You can archive *most* TIFF images, but not all of them**.
+As with a lot of things in PDS: it's complicated. That's why it's getting a whole blog post. TIFF comes in many shapes and sizes, and we're here to nail down some specifics for you. Unlike [my last post about JPEGs]({% post_url 2022-05-16-why-cant-i-archive-jpg %}) though, there's some good news here. Spoiler: **You can archive *most* TIFF images, but not all of them**.
 
 ## Here's the easy part
 If you just want to provide some supplementary images in your bundle (in other words, the TIFF images are not your primary observations), the answer is almost certainly, yes, you can archive them. TIFF 6.0 images may be submitted as Documents [^Cavate] or Browse Products[^browse], because those have a lot more flexibility when it comes to permitted formats. To be clear: if you're submitting an image as a Document, it must actual documentation, not the actual scientific result. This isn't a cheat code! 
@@ -18,7 +18,7 @@ Now let's discuss submitting your data as a TIFF image.
 
 TIFF 6.0 was designed with a lot of capability.  It includes compression as well as the ability to store both image data and text in the same file.  The key consideration is that for long-term scientific archiving, the PDS requires every single part of a data file to be fully described in ways that won't get lost to time. 
 
-As a result, some of the features that TIFF supports cannot be accepted in the PDS.  ***For example [no compression]({% post_url 2022-04-18-archive-a-jpeg %})**. "Baseline" TIFF itself allows for a few different compression formats, so those must be disabled to make the compatible for the PDS.
+As a result, some of the features that TIFF supports cannot be accepted in the PDS.  ***For example [no compression]({% post_url 2022-05-16-why-cant-i-archive-jpg %})**. "Baseline" TIFF itself allows for a few different compression formats, so those must be disabled to make the compatible for the PDS.
 
 
 While some aspects of TIFF images are not compatible with archiving, pretty much any TIFF can be **converted** so that it can be archived.
