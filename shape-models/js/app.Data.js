@@ -70,7 +70,7 @@ app.factory('Comets', function () {
                                 fileFormat: 'WRL'
                             },
                             derived: [{
-                                downloadLink: 'shape-models/files/hartley2/hartley_2_2012_cart.obj',
+                                downloadLink: 'shape-models/files/hartley2/hartley2_2012_cart.obj',
                                 fileFormat: 'OBJ'
                             }]
                         },
@@ -80,7 +80,7 @@ app.factory('Comets', function () {
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'shape-models/files/hartley2/hartley_2_2012_cart.usdz',
+                                path: 'shape-models/files/hartley2/hartley2_2012_cart.usdz',
                                 fileFormat: 'USDZ'
                             }
                         }
