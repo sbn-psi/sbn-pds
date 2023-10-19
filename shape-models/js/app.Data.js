@@ -178,7 +178,7 @@ app.factory('Comets', function () {
                     }
                 }]
             }, {
-                name: 'Asteroid 153591',
+                name: '153591 (2001 SN263)',
                 type: 'asteroid',
                 datasets: [{
                     name: 'Shape Model of Asteroid (153591) 2001 SN263',
@@ -207,7 +207,7 @@ app.factory('Comets', function () {
                     }
                 }]
             }, {
-                name: 'Asteroid 52760',
+                name: '52760 (1998 ML14)',
                 type: 'asteroid',
                 datasets: [{
                     name: Hudson.name,
@@ -236,7 +236,7 @@ app.factory('Comets', function () {
                     }
                 }]
             }, {
-                name: 'Asteroid 8567',
+                name: '8567 (1996 HW1)',
                 type: 'asteroid',
                 datasets: [{
                     name: 'Shape and Rotation of (8567) 1996 HW1',
@@ -356,7 +356,7 @@ app.factory('Comets', function () {
                     }
                 }]
             }, {
-                name: '101955 Bennu',
+                name: '101955 Bennu (1999 RQ36)',
                 type: 'asteroid',
                 datasets: [{
                     name: 'Shape Model of Asteroid (101955) Bennu',
@@ -413,7 +413,7 @@ app.factory('Comets', function () {
                     }
                 }]
             }, {
-                name: '162173 Ryugu',
+                name: '162173 Ryugu (1999 JU3)',
                 type: 'asteroid',
                 datasets: [{
                     name: '(JAXA) Hayabusa2 observations of the top-shape carbonaceous asteroid 162173 Ryugu',
@@ -480,7 +480,7 @@ app.factory('Comets', function () {
                                 fileFormat: 'TAB'
                             },
                             derived: [{
-                                downloadLink: Hudson.basepath + '216kleopatra.tab.obj',
+                                downloadLink: 'shape-models/files/RADAR/216kleopatra.tab.obj',
                                 fileFormat: 'OBJ'
                             }]
                         },
@@ -490,7 +490,7 @@ app.factory('Comets', function () {
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'Hudson.basepath' + '216kleopatra.tab.usdz',
+                                path: Hudson.basepath + '216kleopatra.tab.usdz',
                                 fileformat: 'USDZ'
                             }
                         }
@@ -643,7 +643,7 @@ app.factory('Comets', function () {
                     }
                 }]
             },{
-                name: '25143 Itokawa',
+                name: '25143 Itokawa (1998 SF36)',
                 type: 'asteroid',
                 datasets: [{
                     name: 'Gaskell Itokawa Shape Model',
@@ -985,7 +985,7 @@ app.factory('Comets', function () {
                     }
                 }]
             }, {
-                name: '10115 1992 SK',
+                name: '10115 (1992 SK)',
                 type: 'asteroid',
                 datasets: [{
                     name: Lawrence.name,
@@ -1011,33 +1011,7 @@ app.factory('Comets', function () {
                     }
                 }]
             }, {
-                name: '29075 1950 DA (Retrograde)',
-                type: 'asteroid',
-                datasets: [{
-                    name: Lawrence.name,
-                    link: Lawrence.link,
-                    files: {
-                        data: {
-                            primary: {
-                                downloadLink: Lawrence.basepath + 'a29075_1950da_retrogrademodel.obj',
-                                fileFormat: 'OBJ'
-                            },
-                            derived: null
-                        },
-                        previews: {
-                            default: {
-                                path: 'shape-models/previews/a29075_1950da_retrogrademodel.png',
-                                fileFormat: 'PNG'
-                            },
-                            ios: {
-                                path: 'shape-models/files/usd/a29075_1950da_retrogrademodel.usdz',
-                                fileFormat: 'USDZ'
-                            }
-                        }
-                    }
-                }]
-            }, {
-                name: '29075 1950 DA (Prograde)',
+                name: '29075 (1950 DA) - Prograde',
                 type: 'asteroid',
                 datasets: [{
                     name: Lawrence.name,
@@ -1063,7 +1037,33 @@ app.factory('Comets', function () {
                     }
                 }]
             }, {
-                name: '33342 1998 WT24',
+                name: '29075 (1950 DA) - Retrograde',
+                type: 'asteroid',
+                datasets: [{
+                    name: Lawrence.name,
+                    link: Lawrence.link,
+                    files: {
+                        data: {
+                            primary: {
+                                downloadLink: Lawrence.basepath + 'a29075_1950da_retrogrademodel.obj',
+                                fileFormat: 'OBJ'
+                            },
+                            derived: null
+                        },
+                        previews: {
+                            default: {
+                                path: 'shape-models/previews/a29075_1950da_retrogrademodel.png',
+                                fileFormat: 'PNG'
+                            },
+                            ios: {
+                                path: 'shape-models/files/usd/a29075_1950da_retrogrademodel.usdz',
+                                fileFormat: 'USDZ'
+                            }
+                        }
+                    }
+                }]
+            }, {
+                name: '33342 (1998 WT24)',
                 type: 'asteroid',
                 datasets: [{
                     name: Lawrence.name,
@@ -1089,7 +1089,7 @@ app.factory('Comets', function () {
                     }
                 }]
             }, {
-                name: '54509 YORP',
+                name: '54509 YORP (2000 PH5)',
                 type: 'asteroid',
                 datasets: [{
                     name: Lawrence.name,
@@ -1115,7 +1115,7 @@ app.factory('Comets', function () {
                     }
                 }]
             }, {
-                name: '66391 1999 KW4 Alpha',
+                name: '66391 Moshup (1999 KW4) - Alpha',
                 type: 'asteroid',
                 datasets: [{
                     name: Lawrence.name,
@@ -1141,7 +1141,7 @@ app.factory('Comets', function () {
                     }
                 }]
             }, {
-                name: '66391 1999 KW4 Beta',
+                name: 'S/2001 (66391) 1 Squannit - Beta',
                 type: 'asteroid',
                 datasets: [{
                     name: Lawrence.name,
@@ -1167,7 +1167,7 @@ app.factory('Comets', function () {
                     }
                 }]
             }, {
-                name: '136617 1994 CC Alpha',
+                name: '136617 (1994 CC) - Primary',
                 type: 'asteroid',
                 datasets: [{
                     name: Lawrence.name,
@@ -1193,7 +1193,7 @@ app.factory('Comets', function () {
                     }
                 }]
             }, {
-                name: '276049 2002 CE26 Alpha',
+                name: '276049 (2002 CE26) - Primary',
                 type: 'asteroid',
                 datasets: [{
                     name: Lawrence.name,
@@ -1201,7 +1201,7 @@ app.factory('Comets', function () {
                     files: {
                         data: {
                             primary: {
-                                downloadLink: Lawrence.basepath + '',
+                                downloadLink: Lawrence.basepath + 'a276049_2002ce26_primary.obj',
                                 fileFormat: 'OBJ'
                             },
                             derived: null
@@ -1219,7 +1219,7 @@ app.factory('Comets', function () {
                     }
                 }]
             }, {
-                name: '341843 2008 EV5',
+                name: '341843 (2008 EV5)',
                 type: 'asteroid',
                 datasets: [{
                     name: Lawrence.name,
@@ -1227,7 +1227,7 @@ app.factory('Comets', function () {
                     files: {
                         data: {
                             primary: {
-                                downloadLink: Lawrence.basepath + '',
+                                downloadLink: Lawrence.basepath + 'a341843_2008ev5.obj',
                                 fileFormat: 'OBJ'
                             },
                             derived: null
@@ -1835,6 +1835,19 @@ app.factory('Satellites', function (Datasets) {
                         path: 'shape-models/files/phoebe/phoebe_ver512q.tab.usdz',
                         fileFormat: 'USDZ'
                     }
+                }
+            }
+        }, {
+            name: 'Phoebe SPC Shape Model and Assessment Products',
+            link: null,
+            files: {
+                data: {
+                    primary: 'https://sbnarchive.psi.edu/pds4/cassini/satellite-phoebe.cassini.shape-models-maps_V1_0/data/phoebe_512_o.obj',
+                    fileFormat: 'OBJ',
+                },
+                previews: {
+                    default: null,
+                    ios: null,
                 }
             }
         }]
