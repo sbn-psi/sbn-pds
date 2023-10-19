@@ -1839,7 +1839,7 @@ app.factory('Satellites', function (Datasets) {
             }
         }, {
             name: 'Phoebe SPC Shape Model and Assessment Products',
-            link: null,
+            link: 'https://sbn.psi.edu/pds/resource/weirichphoebeshape.html',
             files: {
                 data: {
                     primary: 'https://sbnarchive.psi.edu/pds4/cassini/satellite-phoebe.cassini.shape-models-maps_V1_0/data/phoebe_512_o.obj',
