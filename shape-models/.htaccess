@@ -6,3 +6,10 @@ RewriteRule ^ - [L]
 
 # If the requested resource doesn't exist, use index.html
 RewriteRule ^ /pds/shape-models/index.html
+
+# Default behavior for OBJ files is to download to browser
+
+<Files *.obj>
+	ForceType application/octet-stream
+	Header set Content-Disposition attachment
+</Files>
