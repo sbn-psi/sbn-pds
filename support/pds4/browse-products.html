@@ -6,7 +6,7 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>PDS4 Articles | PDS SBN Asteroid/Dust Subnode</title>
+    <title>Where are all the normal file formats you weirdos? | PDS SBN Asteroid/Dust Subnode</title>
     
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
@@ -158,51 +158,69 @@
     <li class="breadcrumbs-separator">/</li>
     <li><a href="support/Tips.html">Tips & Tricks</a></li>
     <li class="breadcrumbs-separator">/</li>
-    <li>PDS4 Articles</li>
-</ol>   
+    <li><a href="support/pds4/">PDS4</a></li>
+    <li class="breadcrumbs-separator">/</li>
+    <li>Where are all the normal file formats you weirdos?</li>
+</ol> 
+<br/>
 
-<h1>PDS4 Articles</h1>
+<h1 class="post-title">Where are all the normal file formats you weirdos?</h1>
+<p class="post-subtitle secondary">Jan 17, 2024 
+    
+    (by Mike Drum)
+    
+</p>
 
-<div class="primary-sections">
-    <table class="fullwidth">
-        
-        <tr>
-            <td><a href="/pds/support/pds4/browse-products.html">Where are all the normal file formats you weirdos?</a></td>
-            <td>PDS4</td>
-            <td>Jan&nbsp;17th,&nbsp;2024</td>
-        </tr>
-        
-        <tr>
-            <td><a href="/pds/support/pds4/what-is-fits.html">What is FITS?</a></td>
-            <td>PDS4</td>
-            <td>Jul&nbsp;21st,&nbsp;2022</td>
-        </tr>
-        
-        <tr>
-            <td><a href="/pds/support/pds4/bundles-vs-collections.html">What's the difference between a Bundle, Collection, and Dataset?</a></td>
-            <td>PDS4</td>
-            <td>Nov&nbsp;16th,&nbsp;2021</td>
-        </tr>
-        
-        <tr>
-            <td><a href="/pds/support/pds4/LIDs-and-LIDVIDs.html">LIDs And LIDVIDs</a></td>
-            <td>PDS4</td>
-            <td>Sep&nbsp;24th,&nbsp;2021</td>
-        </tr>
-        
-        <tr>
-            <td><a href="/pds/support/pds4/why-pds.html">Why PDS?</a></td>
-            <td>PDS4</td>
-            <td>Sep&nbsp;17th,&nbsp;2021</td>
-        </tr>
-        
-        <tr>
-            <td><a href="/pds/support/pds4/bundle-organization.html">How is a PDS 4 Bundle Organized?</a></td>
-            <td>PDS4</td>
-            <td>Aug&nbsp;3rd,&nbsp;2021</td>
-        </tr>
-        
-    </table>
+<p class="secondary"><em> Part of a series on <a href="support/pds4/">PDS4</a> </em></p>
+
+
+<div class="social-post">
+    <p>I know, I know, you want your jpeg!</p>
+
+<p>Here at the PDS, we care a lot about file formats. <a href="/pds/support/archiving-tips/why-cant-i-archive-jpg.html">JPEGs are fickle</a>. <a href="/pds/support/archiving-tips/archiving-tiff.html">TIFFs can get messy</a>. Now, you wanna bring me some 2D Fixed Width Tables or FITS Binary Tables with Backplanes? <em>Yeah</em>, that’s the stuff.</p>
+
+<p>Fine. fine. I know what you really want…</p>
+
+<h2 id="browse-products-for-humans-by-humans">Browse Products: for humans by humans</h2>
+
+<p>Let me introduce you to Browse Products. These are a type of product often archived alongside the more complex, standards-compliant uncompressed files that are useful for <em>science</em>. Browse Products are, as the name suggests, meant for humans browsing the archive to find what they want, while dealing with more familiar file formats. You know the stuff:</p>
+<ul>
+  <li>JPG</li>
+  <li>JPEG 2000!</li>
+  <li>PNG</li>
+  <li>TIFF</li>
+  <li>PDF (doesn’t even have to be <a href="/pds/support/archiving-tips/pdfa.html">PDF/A</a>!!)</li>
+  <li>M4A/AAC</li>
+  <li>WAV</li>
+  <li>And yes, even GIF</li>
+</ul>
+
+<figure><img src="graph.gif" /><figcaption>Look at this graph</figcaption></figure>
+
+<p>Of course, if you <em>want</em> to provide your Browse Products as fully-documented <code class="language-plaintext highlighter-rouge">Array_2D_Image</code>s, you’re also welcome to do that.</p>
+
+<h2 id="more-than-meets-the-eye">More than meets the eye</h2>
+
+<p>Browse Products are used widely in PDS tools to assist in selecting just the observations you’re interested in. Baked inside their PDS4 labels, we make use of internal LIDVID<sup id="fnref:lidvid" role="doc-noteref"><a href="#fn:lidvid" class="footnote" rel="footnote">1</a></sup> references to get the Browse Products point to their relevant Observational Product, and vice-versa. So, from every Browse Product, you can get to the raw data right away. Not every product has a Browse Product, but every Browse Product should have an observational one. And if an Observational Product doesn’t have a Browse Product, we (or you!) can always add them later. Browse Products are meant to be more of a modern convenience tool, and so we also want to make sure that they are always useful if certain browse formats go out of fashion.</p>
+
+<p>This is useful for a lot more than just file <em>conversions</em> though. Say you archive a table and want to quickly be able to show a plot of that data. Hey guess what, just make the graph a Browse Product. Got some spectra and just want to show all those pretty colors off? Do it! We dare you!</p>
+
+<figure><img src="browse.png" /><figcaption>Some nifty Browse Products in OPUS</figcaption></figure>
+
+<h2 id="more-to-come">More to come</h2>
+
+<p>As always, I end with a promise of better things in the future. Because Browse Products are integrated into the PDS4 model, and everything is connected by a registry of identifiers, they will eventually become the default way of browsing the entire archive. As more and more PDS4-aware tools come online, it will become easier and easier to find what you want. Browse Products are a big piece of making the PDS more accessible, and if you archive with us we will encourage you to provide them to help out future weirdos.</p>
+
+<hr />
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:lidvid" role="doc-endnote">
+      <p>The identifier unique to PDS4 that indicates the bundle, collection, product name, and version of a product that’s archived with us. <a href="/pds/support/pds4/LIDs-and-LIDVIDs.html">Read more here</a>. <a href="#fnref:lidvid" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
 </div>
 
 
