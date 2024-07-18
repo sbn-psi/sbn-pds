@@ -29,6 +29,11 @@ app.factory('Datasets', function() {
             name: 'Saturn Small Moon Shape Models',
             link: 'https://sbn.psi.edu/pds/resource/saturnsatshapes.html',
             basepath: 'https://sbnarchive.psi.edu/pds4/certified/saturn_satellite_shape_models_V1_0/data/'
+        },
+        'Weirich': {
+            name: 'Phoebe SPC Shape Model and Assessment Products',
+            link: 'https://sbn.psi.edu/pds/resource/weirichphoebeshape.html',
+            basepath: 'https://sbnarchive.psi.edu/pds4/cassini/satellite-phoebe.cassini.shape-models-maps_V1_0/data/'
         }
     }
 });

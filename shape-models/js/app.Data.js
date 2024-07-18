@@ -1268,8 +1268,11 @@ app.factory('Satellites', function (Datasets) {
     const Stooke = Datasets['Stooke'];
     const Saturn = Datasets['Saturn'];
     const Thomas = Datasets['Thomas'];
+    const Weirich = Datasets['Weirich'];
 
     return [{
+        name: 'Phoebe (Saturn IX)',
+    }, {
         name: 'Amalthea (Jupiter V)',
         type: 'satellite',
         datasets: [{
@@ -1853,6 +1856,22 @@ app.factory('Satellites', function (Datasets) {
                     }
                 }
             }
+        }, {
+            name: Weirich.name,
+            link: Weirich.link,
+            files: {
+                data: {
+                    primary: {
+                        downloadLink: Weirich.basepath + 'phoebe_512_o.obj',
+                        fileFormat: 'OBJ',
+                    },
+                    derived: null,
+                },
+                previews: {
+                    default: null,
+                    ios: null,
+                },
+            },
         }]
     }, {
         name: 'Prometheus (Saturn XVI)',
