@@ -325,6 +325,22 @@ app.factory('Comets', function () {
                             ios: null
                         }
                     }
+                }, {
+                    name: 'Ceres SPC Shape and Regional Models',
+                    link: 'https://sbn.psi.edu/pds/resource/weirichceresshape.html',
+                    files: {
+                        data: {
+                            primary: {
+                                downloadLink: 'https://sbnarchive.psi.edu/pds4/dawn/dwarf_planet-ceres.dawn.shape-models-maps_V1_0/data/global/ceres_512_p.tab',
+                                fileformat: 'TAB',
+                            },
+                            derived: null,
+                        },
+                        previews: {
+                            default: null,
+                            ios: null,
+                        },
+                    }
                 }]
             }, {
                 name: '1620 Geographos',
