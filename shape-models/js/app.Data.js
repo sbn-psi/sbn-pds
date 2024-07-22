@@ -332,7 +332,7 @@ app.factory('Comets', function () {
                         data: {
                             primary: {
                                 downloadLink: 'https://sbnarchive.psi.edu/pds4/dawn/dwarf_planet-ceres.dawn.shape-models-maps_V1_0/data/global/ceres_512_p.tab',
-                                fileformat: 'TAB',
+                                fileFormat: 'TAB',
                             },
                             derived: [{
                                 downloadLink: 'shape-models/files/ceres/ceres_512_p.obj',
