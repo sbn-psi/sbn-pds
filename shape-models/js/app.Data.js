@@ -501,7 +501,7 @@ app.factory('Comets', function () {
                                 fileFormat: 'TAB'
                             },
                             derived: [{
-                                downloadLink: Hudson.basepath + '216kleopatra.tab.obj',
+                                downloadLink: aws_host + '/files/RADAR/216kleopatra.tab.obj',
                                 fileFormat: 'OBJ'
                             }]
                         },
@@ -511,7 +511,7 @@ app.factory('Comets', function () {
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'Hudson.basepath' + '216kleopatra.tab.usdz',
+                                path: aws_host + 'files/RADAR/216kleopatra.tab.usdz',
                                 fileformat: 'USDZ'
                             }
                         }
