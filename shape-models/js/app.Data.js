@@ -1222,7 +1222,7 @@ app.factory('Comets', function () {
                     files: {
                         data: {
                             primary: {
-                                downloadLink: Lawrence.basepath + '',
+                                downloadLink: Lawrence.basepath + 'a276049_2002ce26_primary.obj',
                                 fileFormat: 'OBJ'
                             },
                             derived: null
@@ -1248,7 +1248,7 @@ app.factory('Comets', function () {
                     files: {
                         data: {
                             primary: {
-                                downloadLink: Lawrence.basepath + '',
+                                downloadLink: Lawrence.basepath + 'a341843_2008ev5.obj',
                                 fileFormat: 'OBJ'
                             },
                             derived: null
