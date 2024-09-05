@@ -111,7 +111,7 @@ app.factory('Comets', function () {
                                 fileFormat: 'PNG'
                             },
                             ios: {
-                                path: 'previews/tempel1/tempel1_2012_cart.usdz',
+                                path: aws_host + '/files/tempel1/tempel1_2012_cart.usdz',
                                 fileFormat: 'USDZ'
                             }
                         }
