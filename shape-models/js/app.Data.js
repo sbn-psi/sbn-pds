@@ -178,6 +178,44 @@ app.factory('Comets', function () {
                     }
                 }]
             }, {
+                name: 'Arrokoth',
+                type: 'asteroid',
+                datasets: [{
+                    name: 'New Horizons Porter (2024) Arrokoth Shape Model Collection',
+                    link: 'https://pdssbn.astro.umd.edu/holdings/pds4-nh_derived:arrokoth_shapemodel_porter2024-v1.0/SUPPORT/dataset.shtml',
+                    files: {
+                        data: {
+                            primary: {
+                                downloadLink: 'https://pdssbn.astro.umd.edu/holdings/pds4-nh_derived:arrokoth_shapemodel_porter2024-v1.0/arrokoth_porter_2024_v01.obj',
+                                fileFormat: 'OBJ'
+                            }
+                        },
+                        previews: {
+                            default: {
+                                path: 'shape-models/previews/arrokoth.porter_2024.png',
+                                fileFormat: 'PNG'
+                            }
+                        }
+                    }
+                }, {
+                    name: 'New Horizons Arrokoth Encounter Geology and Geophysical Maps and Shape Models',
+                    link: 'https://pdssbn.astro.umd.edu/holdings/nh-a-lorri_mvic-5-geophys-v1.0/dataset.shtml',
+                    files: {
+                        data: {
+                            primary: {
+                                downloadLink: 'https://pdssbn.astro.umd.edu/holdings/nh-a-lorri_mvic-5-geophys-v1.0/data/shape_models/mu69_merged.obj',
+                                fileFormat: 'OBJ'
+                            }
+                        },
+                        previews: {
+                            default: {
+                                path: 'shape-models/previews/mu69_merged.png',
+                                fileFormat: 'PNG'
+                            }
+                        }
+                    }
+                }]
+            }, {
                 name: 'Asteroid 153591',
                 type: 'asteroid',
                 datasets: [{
