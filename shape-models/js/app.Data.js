@@ -178,7 +178,7 @@ app.factory('Comets', function () {
                     }
                 }]
             }, {
-                name: 'Arrokoth',
+                name: '486958 Arrokoth',
                 type: 'asteroid',
                 datasets: [{
                     name: 'New Horizons Porter (2024) Arrokoth Shape Model Collection',
