@@ -197,6 +197,23 @@ app.factory('Comets', function () {
                             }
                         }
                     }
+                }, {
+                    name: 'New Horizons Arrokoth Encounter Geology and Geophysical Maps and Shape Models',
+                    link: 'https://pdssbn.astro.umd.edu/holdings/nh-a-lorri_mvic-5-geophys-v1.0/dataset.shtml',
+                    files: {
+                        data: {
+                            primary: {
+                                downloadLink: 'https://pdssbn.astro.umd.edu/holdings/nh-a-lorri_mvic-5-geophys-v1.0/data/shape_models/mu69_merged.obj',
+                                fileFormat: 'OBJ'
+                            }
+                        },
+                        previews: {
+                            default: {
+                                path: 'shape-models/previews/mu69_merged.png',
+                                fileFormat: 'PNG'
+                            }
+                        }
+                    }
                 }]
             }, {
                 name: 'Asteroid 153591',
