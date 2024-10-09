@@ -178,6 +178,27 @@ app.factory('Comets', function () {
                     }
                 }]
             }, {
+                name: 'Arrokoth',
+                type: 'asteroid',
+                datasets: [{
+                    name: 'New Horizons Porter (2024) Arrokoth Shape Model Collection',
+                    link: 'https://pdssbn.astro.umd.edu/holdings/pds4-nh_derived:arrokoth_shapemodel_porter2024-v1.0/SUPPORT/dataset.shtml',
+                    files: {
+                        data: {
+                            primary: {
+                                downloadLink: 'https://pdssbn.astro.umd.edu/holdings/pds4-nh_derived:arrokoth_shapemodel_porter2024-v1.0/arrokoth_porter_2024_v01.obj',
+                                fileFormat: 'OBJ'
+                            }
+                        },
+                        previews: {
+                            default: {
+                                path: 'shape-models/previews/arrokoth.porter_2024.png',
+                                fileFormat: 'PNG'
+                            }
+                        }
+                    }
+                }]
+            }, {
                 name: 'Asteroid 153591',
                 type: 'asteroid',
                 datasets: [{
