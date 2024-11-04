@@ -37,7 +37,7 @@ OBJ files contain the position of each vertex, vertex normals, and the faces tha
 
 Yes! PDS SBN archives lots of shape models, and we provide OBJ versions for many of them.
 
-[PDS Small Bodies Node: Shape Models](https://sbn.psi.edu/shape-models/)
+[PDS Small Bodies Node: Shape Models](https://sbn.psi.edu/pds/shape-models/)
 
 NASA also makes available its own repository of 3D models, including spacecraft, solar system bodies, and digital terrain models.
 
