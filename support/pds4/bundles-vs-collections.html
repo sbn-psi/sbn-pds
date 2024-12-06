@@ -185,11 +185,11 @@
 
 <figure><img src="http://pdsregistryimages.psi.edu/tips/bundles-collections/dawn-dataset.png" /><figcaption>The file structure of a PDS3 Data Set</figcaption></figure>
 
-<p>On our archive, if you see something that looks like the above<sup id="fnref:pds3" role="doc-noteref"><a href="#fn:pds3" class="footnote" rel="footnote">1</a></sup>, you’re looking at a PDS3 Data Set. If you’re archiving new data with us, you won’t be archiving in PDS3 anymore, so don’t worry about this too much.</p>
+<p>On our archive, if you see something that looks like the above<sup id="fnref:pds3"><a href="#fn:pds3" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>, you’re looking at a PDS3 Data Set. If you’re archiving new data with us, you won’t be archiving in PDS3 anymore, so don’t worry about this too much.</p>
 
 <h2 id="2-collection-a-folder-with-superpowers">2. Collection: a folder with superpowers</h2>
 
-<p>Collections can act more or less the PDS4 version of a Dataset: a grouping of basic products<sup id="fnref:product" role="doc-noteref"><a href="#fn:product" class="footnote" rel="footnote">2</a></sup> by type and content. You may see a collection for calibrated images, instrument documentation, basically a bunch of data or supporting products that are closely related. This is at the discretion of the data preparers, but here are some examples of how some collections are grouped by:</p>
+<p>Collections can act more or less the PDS4 version of a Dataset: a grouping of basic products<sup id="fnref:product"><a href="#fn:product" class="footnote" rel="footnote" role="doc-noteref">2</a></sup> by type and content. You may see a collection for calibrated images, instrument documentation, basically a bunch of data or supporting products that are closely related. This is at the discretion of the data preparers, but here are some examples of how some collections are grouped by:</p>
 
 <ul>
   <li>Processing level
@@ -217,7 +217,7 @@
     <ul>
       <li>Data</li>
       <li>Documents</li>
-      <li>Browse<sup id="fnref:browse" role="doc-noteref"><a href="#fn:browse" class="footnote" rel="footnote">3</a></sup></li>
+      <li>Browse<sup id="fnref:browse"><a href="#fn:browse" class="footnote" rel="footnote" role="doc-noteref">3</a></sup></li>
     </ul>
   </li>
 </ul>
@@ -274,13 +274,13 @@
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:pds3" role="doc-endnote">
+    <li id="fn:pds3">
       <p>The most obvious markers of a PDS3 Data Set (apart from all the capital letters everywhere) are <code class="language-plaintext highlighter-rouge">AAREADME.TXT</code> and <code class="language-plaintext highlighter-rouge">VOLDESC.CAT</code>. These files exist in most of our legacy archived datasets and are there to describe the PDS3 Data Set that you’re looking at. They will not be present in PDS4 Bundles/Collections. <a href="#fnref:pds3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:product" role="doc-endnote">
+    <li id="fn:product">
       <p>A “Product” in PDS4 refers to a label as well as the object it describes. Everything is a product– Collections, Bundles (spoilers), individual observational products, etc. The real superpower of a collection is that it’s a product! For this article I’ll usually be using “product” to refer to the most basic type– an individual observational data or document product. <a href="#fnref:product" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:browse" role="doc-endnote">
+    <li id="fn:browse">
       <p>A browse product is usually a copy of another data product but in a more common file format meant to be browsed, but not usable for science: for example, a thumbnail of a FITS image, or a plot of a table. These can be grouped into a type of collection called a Browse Collection. <a href="#fnref:browse" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>

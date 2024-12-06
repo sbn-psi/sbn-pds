@@ -191,7 +191,7 @@
 
 <p>Fun stuff.</p>
 
-<p>The only way that a computer knows how to handle any of that is by assuming they are in a specific format, and reading it that way. ASCII is one such format, which translates each byte into a symbol or letter in the latin alphabet. Bytes can also be read as numbers, but there are even lots of different ways of doing that. Then when it comes to files, an example image format could assume that the first twenty bytes describes the name of the file, the next four bytes how wide an image is, the next four how long it is, and the remainder of the file has three 24-bit pixels describing their color values.<sup id="fnref:simple" role="doc-noteref"><a href="#fn:simple" class="footnote" rel="footnote">1</a></sup></p>
+<p>The only way that a computer knows how to handle any of that is by assuming they are in a specific format, and reading it that way. ASCII is one such format, which translates each byte into a symbol or letter in the latin alphabet. Bytes can also be read as numbers, but there are even lots of different ways of doing that. Then when it comes to files, an example image format could assume that the first twenty bytes describes the name of the file, the next four bytes how wide an image is, the next four how long it is, and the remainder of the file has three 24-bit pixels describing their color values.<sup id="fnref:simple"><a href="#fn:simple" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></p>
 
 <p>If you do just a little bit of math, you can see that even the extremely simple, minimal example we laid out above would get out of hand pretty quickly. A random photo from my camera/phone is 3024 × 4032 pixels, which would make that format use over 100MB of data for just the color values.</p>
 
@@ -228,7 +228,7 @@
   <li>PPM</li>
 </ul>
 
-<p>Data file formats come and go, because different manufactures have different goals for making images efficient. Each of the obscure formats I mentioned was made because it’s <em>better</em> than all the others for some specific cases<sup id="fnref:gif" role="doc-noteref"><a href="#fn:gif" class="footnote" rel="footnote">2</a></sup>. And we never know which format will win out in the end, and which one computers will be able to render in 50 years time.</p>
+<p>Data file formats come and go, because different manufactures have different goals for making images efficient. Each of the obscure formats I mentioned was made because it’s <em>better</em> than all the others for some specific cases<sup id="fnref:gif"><a href="#fn:gif" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>. And we never know which format will win out in the end, and which one computers will be able to render in 50 years time.</p>
 
 <p>The goal of the PDS is to have the data and its usability outlive all of us working on it, and that means that we can’t adopt every file format out there (even uncompressed ones like BMP and some FITS). As much as possible, we want to describe every data file with our labels <em>down to the very byte</em>. This is why we ask for files to be described as arrays or tables most of the time. Those are algorithms that can be fully described in a label.</p>
 
@@ -246,10 +246,10 @@
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:simple" role="doc-endnote">
+    <li id="fn:simple">
       <p>This is all a drastic simplification. File headers are a lot bigger and more complicated, but it’s fine for this example. <a href="#fnref:simple" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:gif" role="doc-endnote">
+    <li id="fn:gif">
       <p>GIFs are basically the worst file format out there, and yet we still use them because they can have animations built in and who doesn’t like moving picture <a href="#fnref:gif" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
