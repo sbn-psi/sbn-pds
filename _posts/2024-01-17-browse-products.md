@@ -23,7 +23,7 @@ Let me introduce you to Browse Products. These are a type of product often archi
 * WAV
 * And yes, even GIF
 
-![Look at this graph](graph.gif)
+![Look at this graph](https://pdsregistryimages.psi.edu/tips/browse-products/graph.gif)
 
 Of course, if you _want_ to provide your Browse Products as fully-documented `Array_2D_Image`s, you're also welcome to do that.
 
@@ -33,7 +33,7 @@ Browse Products are used widely in PDS tools to assist in selecting just the obs
 
 This is useful for a lot more than just file _conversions_ though. Say you archive a table and want to quickly be able to show a plot of that data. Hey guess what, just make the graph a Browse Product. Got some spectra and just want to show all those pretty colors off? Do it! We dare you!
 
-![Some nifty Browse Products in OPUS](browse.png)
+![Some nifty Browse Products in OPUS](https://pdsregistryimages.psi.edu/tips/browse-products/browse.png)
 
 ## More to come
 
