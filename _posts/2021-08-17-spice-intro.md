@@ -67,7 +67,7 @@ Third parties have built a few additional interfaces to SPICE libraries in
 
 The NAIF group has provided a significant amount of documentation about SPICE.  
 
-* They have made an entire suite of on-line [training tutorials](https://naif.jpl.nasa.gov/naif/tutorials.html]) and [Self Training](https://naif.jpl.nasa.gov/naif/self_training.html) directions.
+* They have made an entire suite of on-line [training tutorials](https://naif.jpl.nasa.gov/naif/tutorials.html) and [Self Training](https://naif.jpl.nasa.gov/naif/self_training.html) directions.
 * Every function call that SPICE supports has a complete documentation that describes its use and provides examples.  [Documentation](https://naif.jpl.nasa.gov/naif/documentation.html)
 * NAIF hosts in person [training classes](https://naif.jpl.nasa.gov/naif/training.html)
 * There are hands-on [programming lessons](https://naif.jpl.nasa.gov/naif/lessons.html) presenting detailed SPICE-based solutions for a few common observation geometry cases.
