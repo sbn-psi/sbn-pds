@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 	},
 	sendButton,
-	captchaUrl = "/feedback/recaptcha-v3-verify.php",
+	captchaUrl = "https://sbncanary.psi.edu/feedback/recaptcha-v3-verify.php",
 	feedbackUrl = "/email-service/SubmitFeedback",
 	modal = document.createElement("div"),
 	modalBody = document.createElement("div"),
