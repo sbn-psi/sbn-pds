@@ -35,8 +35,12 @@ document.addEventListener("DOMContentLoaded", function(){
 		return;
 	}
 
+	// log proxy function
+	var log = function( msg ) {
+		window.console.log( msg );
+	},
 	// function to remove elements, input as arrays
-	var removeElements = function( remove ) {
+	removeElements = function( remove ) {
 		for (var i = 0, len = remove.length; i < len; i++ ) {
 			var item = Array.prototype.pop.call( remove );
 			if ( item !== undefined ) {
@@ -53,6 +57,9 @@ document.addEventListener("DOMContentLoaded", function(){
 		while (i--) { div.appendChild( document.createElement( "span" )); }
 		return div;
 	},
+	getBounds = function( el ) {
+		return el.getBoundingClientRect();
+	},
 	emptyElements = function( el ) {
 		var item;
 		while( (( item = el.firstChild ) !== null ? el.removeChild( item ) : false) ) {}
@@ -62,8 +69,35 @@ document.addEventListener("DOMContentLoaded", function(){
 		el.appendChild( document.createTextNode( text ) );
 		return el;
 	},
+	// script onload function to provide support for IE as well
+	scriptLoader = function( script, func ){
+		if (script.onload === undefined) {
+			// IE lack of support for script onload
+
+			if( script.onreadystatechange !== undefined ) {
+
+				var intervalFunc = function() {
+					if (script.readyState !== "loaded" && script.readyState !== "complete") {
+						window.setTimeout( intervalFunc, 250 );
+					} else {
+						// it is loaded
+						func();
+					}
+				};
+
+				window.setTimeout( intervalFunc, 250 );
+
+			} else {
+				log("ERROR: We can't track when script is loaded");
+			}
+
+		} else {
+			return func;
+		}
+
+	},
 	sendButton,
-	captchaUrl = "https://sbncanary.psi.edu/feedback/recaptcha-v3-verify.php",
+	captchaUrl = "/feedback/recaptcha-v3-verify.php",
 	feedbackUrl = "/email-service/SubmitFeedback",
 	modal = document.createElement("div"),
 	modalBody = document.createElement("div"),
@@ -255,7 +289,6 @@ document.addEventListener("DOMContentLoaded", function(){
 		glass.className = "feedback-glass";
 
 		var button = document.createElement("button");
-		button.setAttribute("id", "feedback-tab");
 
 		if ( Modernizr.touchevents && window.screen.width < 1025 ) {
 			var $window = $(window),
@@ -347,11 +380,12 @@ document.addEventListener("DOMContentLoaded", function(){
 								el.style.top = offset + "vh";
 							}
 							if ( side === "right" ) {
+								el.setAttribute("class", "feedbackTab");
 								if ( adjust ) {
 									el.style.right = adjustment + "px";
 								}
 							} else  {
-								el.setAttribute("class", "left");
+								el.setAttribute("class", "feedbackTab left");
 								if ( adjust ) {
 									el.style.left = adjustment + "px";
 								}
@@ -365,9 +399,9 @@ document.addEventListener("DOMContentLoaded", function(){
 								el.style.left = offset + "vw";
 							}
 							if ( side === "top" ) {
-								el.setAttribute("class", "top");
+								el.setAttribute("class", "feedbackTab top");
 							} else {
-								el.setAttribute("class", "bottom");
+								el.setAttribute("class", "feedbackTab bottom");
 							}
 						} else {
 							console.log("Invalid value for SIDE of screen to place the tab. The valid options " +
@@ -400,6 +434,9 @@ document.addEventListener("DOMContentLoaded", function(){
 			}
 		}
 
+		if ( !button.classList.contains("feedbackTab") ) {
+			button.className = "feedbackTab";
+		}
 		button.onclick = returnMethods.open;
 
 		if ( options.appendTo !== null ) {
