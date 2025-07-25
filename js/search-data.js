@@ -282,7 +282,7 @@ var searchData = [{
             name: 'Psyche',
         subtitle: '16 Psyche',
         instruments: ['GRS','NS',],
-        url: basepath + 'https://arcnav.psi.edu/urn:nasa:pds:context:investigation:mission.psyche',
+        url: 'https://arcnav.psi.edu/urn:nasa:pds:context:investigation:mission.psyche',
         category: 'Mission'
     },{
         name: 'Rosetta',
