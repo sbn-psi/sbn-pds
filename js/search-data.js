@@ -271,8 +271,14 @@ var searchData = [{
     },{
         name: 'OSIRIS-REx',
         subtitle: '101955 Bennu',
-        instruments: ['OCAMS', 'TAGCAMS', 'OVIRS', 'OTES', 'REXIS', 'OLA', 'Deep Space Network (DSN)',],
+        instruments: ['OCAMS', 'TAGCAMS', 'OVIRS', 'OTES', 'OLA', 'Deep Space Network (DSN)',],
         url: basepath + 'resource/orex/',
+        category: 'Mission'
+    },{
+            name: 'Psyche',
+        subtitle: '16 Psyche',
+        instruments: ['GRS','NS',],
+        url: basepath + 'https://arcnav.psi.edu/urn:nasa:pds:context:investigation:mission.psyche',
         category: 'Mission'
     },{
         name: 'Rosetta',
