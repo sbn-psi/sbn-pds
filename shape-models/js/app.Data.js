@@ -1750,7 +1750,7 @@ app.factory('Satellites', function (Datasets) {
             }
         }, {
             name: 'Mimas SPC Shape Model and Assessment Products',
-            link: 'https://sbn.psi.edu/pds/resource/weirichmimasshape.html',\
+            link: 'https://sbn.psi.edu/pds/resource/weirichmimasshape.html',
             files: {
                 data: {
                     primary: {
