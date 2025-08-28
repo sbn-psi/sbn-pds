@@ -1477,6 +1477,17 @@ app.factory('Satellites', function (Datasets) {
                     }
                 }
             }
+        }, {
+            name: 'Dione SPC Shape Model and Assessment Products',
+            link: 'https://sbn.psi.edu/pds/resource/weirichdioneshape.html',
+            files: {
+                data: {
+                    primary: {
+                        downloadLink: 'https://sbnarchive.psi.edu/pds4/cassini/satellite-dione.cassini.shape-models-maps/data/global/dione_512_o.obj',
+                        fileFormat: 'OBJ'
+                    }
+                }
+            }
         }]
     }, {
         name: 'Epimetheus (Saturn XI)',
@@ -1734,6 +1745,17 @@ app.factory('Satellites', function (Datasets) {
                     ios: {
                         path: 'shape-models/files/mimas/mimas_ver512q.tab.usdz',
                         fileFormat: 'USDZ'
+                    }
+                }
+            }
+        }, {
+            name: 'Mimas SPC Shape Model and Assessment Products',
+            link: 'https://sbn.psi.edu/pds/resource/weirichmimasshape.html',\
+            files: {
+                data: {
+                    primary: {
+                        downloadLink: 'https://sbnarchive.psi.edu/pds4/cassini/satellite-mimas.cassini.shape-models-maps/data/mimas_512_o.obj',
+                        fileFormat: 'OBJ',
                     }
                 }
             }
@@ -2039,6 +2061,33 @@ app.factory('Satellites', function (Datasets) {
                     ios: {
                         path: 'shape-models/files/tethys/tethys_ver512q.tab.usdz',
                         fileFormat: 'USDZ'
+                    }
+                }
+            }
+        }, {
+            name: 'Tethys SPC Shape Model and Assessment Products',
+            link: 'https://sbn.psi.edu/pds/resource/weirichtethysshape.html',
+            files: {
+                data: {
+                    primary: {
+                        downloadLink: 'https://sbnarchive.psi.edu/pds4/cassini/satellite-tethys.cassini.shape-models-maps/data/global/tethys_512_o.obj',
+                        fileFormat: 'OBJ',
+                    }
+                },
+                previews: {}
+            },
+        }]
+    }, {
+        name: 'Rhea (Saturn V)',
+        type: 'satellite',
+        datasets: [{
+            name: 'Rhea SPC Shape Model and Assessment Products',
+            link: 'https://sbn.psi.edu/pds/resource/weirichrheashape.html',
+            files: {
+                data: {
+                    primary: {
+                        downloadLink: 'https://sbnarchive.psi.edu/pds4/cassini/satellite-rhea.cassini.shape-models-maps/data/rhea_512_o.obj',
+                        fileFormat: 'OBJ'
                     }
                 }
             }
