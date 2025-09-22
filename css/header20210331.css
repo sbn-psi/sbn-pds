@@ -416,3 +416,8 @@ nav {
         z-index: -1;
     }
 }
+
+div.notice {
+    background-color: yellow;
+    color: black;
+}
