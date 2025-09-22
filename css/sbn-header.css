@@ -99,3 +99,7 @@
     background-color: rgb(144, 211, 255);
     border-radius: 0 0 15px 15px;
 }
+div.notice {
+    background-color: yellow;
+    color: black;
+}
