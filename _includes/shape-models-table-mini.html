@@ -1,0 +1,115 @@
+<table class="table ng-scope" id="shape-model-table">
+    <!-- ASTEROIDS -->
+    <tbody>
+        <tr class="row category" id="asteroids">
+            <th class="cell" colspan="5">
+                <h3 class="ng-binding">Asteroids (35)</h3>
+            </th>
+        </tr>
+        <!-- ngRepeat: asteroid in view.asteroids | filter : view.query -->
+        <tr sbn-object-header-row="" ng-repeat-start="asteroid in view.asteroids | filter : view.query"
+            sbn-object="asteroid" class="row row-alt sbn-body ng-scope ng-isolate-scope" colspan="2">
+            <td class="cell ng-binding" colspan="2">1998 KY26</td>
+            <td class="cell"><ferret-link object-name="object.name" class="ng-isolate-scope"><a
+                        href="https://sbnapps.psi.edu/ferret/SimpleSearch/results.action?targetName=1998%20KY26"
+                        class="ferret-link">Data Search</a>
+                </ferret-link></td>
+        </tr>
+        <!-- ngRepeat: dataset in asteroid.datasets -->
+        <tr sbn-dataset-row="" class="row ng-scope ng-isolate-scope" sbn-dataset="dataset" ng-repeat-end=""
+            ng-repeat="dataset in asteroid.datasets">
+            <td class="cell"><a href="https://sbn.psi.edu/pds/resource/rshape.html" class="ng-binding">Radar Shape
+                    Models (Hudson)</a></td>
+            <td class="cell">
+                <generate-preview dataset="dataset" class="ng-isolate-scope"><img class="preview"
+                        src="shape-models/previews/1998ky26.png" alt="Preview" title="Preview"></generate-preview>
+            </td>
+            <td class="cell centered icons-container">
+                <file-download file-to-download="dataset['files']['data']['primary']"
+                    class="ng-isolate-scope"><!-- ngIf: file --><a class="download-link-container ng-binding ng-scope"
+                        ng-if="file"
+                        href="https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_RADARSHAPE_MODELS_V2_0/data/1998ky26.tab">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            version="1.1" x="0px" y="0px" height="50px" width="50px" viewBox="0 0 24 24">
+                            <title class="ng-binding">Download TAB file.</title>
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"></path>
+                        </svg>
+                        TAB
+                    </a><!-- end ngIf: file -->
+                </file-download>
+                <!-- ngRepeat: file in dataset['files']['data']['derived'] --><file-download
+                    ng-repeat="file in dataset['files']['data']['derived']" file-to-download="file"
+                    class="ng-scope ng-isolate-scope"><!-- ngIf: file --><a
+                        class="download-link-container ng-binding ng-scope" ng-if="file"
+                        href="shape-models/files/RADAR/1998ky26.tab.obj">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            version="1.1" x="0px" y="0px" height="50px" width="50px" viewBox="0 0 24 24">
+                            <title class="ng-binding">Download OBJ file.</title>
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"></path>
+                        </svg>
+                        OBJ
+                    </a><!-- end ngIf: file -->
+                </file-download><!-- end ngRepeat: file in dataset['files']['data']['derived'] -->
+            </td>
+        </tr>
+        <!-- end ngRepeat: dataset in asteroid.datasets --><!-- end ngRepeat: asteroid in view.asteroids | filter : view.query -->
+        <tr sbn-object-header-row="" ng-repeat-start="asteroid in view.asteroids | filter : view.query"
+            sbn-object="asteroid" class="row row-alt sbn-body ng-scope ng-isolate-scope" colspan="2">
+            <td class="cell ng-binding" colspan="2">486958 Arrokoth</td>
+            <td class="cell"><ferret-link object-name="object.name" class="ng-isolate-scope"><a
+                        href="https://sbnapps.psi.edu/ferret/SimpleSearch/results.action?targetName=486958%20Arrokoth"
+                        class="ferret-link">Data Search</a>
+                </ferret-link></td>
+        </tr>
+        <!-- ngRepeat: dataset in asteroid.datasets -->
+        <tr sbn-dataset-row="" class="row ng-scope ng-isolate-scope" sbn-dataset="dataset" ng-repeat-end=""
+            ng-repeat="dataset in asteroid.datasets">
+            <td class="cell"><a
+                    href="https://pdssbn.astro.umd.edu/holdings/pds4-nh_derived:arrokoth_shapemodel_porter2024-v1.0/SUPPORT/dataset.shtml"
+                    class="ng-binding">New Horizons Porter (2024) Arrokoth Shape Model Collection</a></td>
+            <td class="cell">
+                <generate-preview dataset="dataset" class="ng-isolate-scope"><img class="preview"
+                        src="shape-models/previews/arrokoth.porter_2024.png" alt="Preview"
+                        title="Preview"></generate-preview>
+            </td>
+            <td class="cell centered icons-container">
+                <file-download file-to-download="dataset['files']['data']['primary']"
+                    class="ng-isolate-scope"><!-- ngIf: file --><a class="download-link-container ng-binding ng-scope"
+                        ng-if="file"
+                        href="https://pdssbn.astro.umd.edu/holdings/pds4-nh_derived:arrokoth_shapemodel_porter2024-v1.0/arrokoth_porter_2024_v01.obj">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            version="1.1" x="0px" y="0px" height="50px" width="50px" viewBox="0 0 24 24">
+                            <title class="ng-binding">Download OBJ file.</title>
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"></path>
+                        </svg>
+                        OBJ
+                    </a>
+                </file-download>
+            </td>
+        </tr>
+        <tr sbn-dataset-row="" class="row ng-scope ng-isolate-scope" sbn-dataset="dataset" ng-repeat-end=""
+            ng-repeat="dataset in asteroid.datasets">
+            <td class="cell"><a
+                    href="https://pdssbn.astro.umd.edu/holdings/nh-a-lorri_mvic-5-geophys-v1.0/dataset.shtml"
+                    class="ng-binding">New Horizons Arrokoth Encounter Geology and Geophysical Maps and Shape Models</a>
+            </td>
+            <td class="cell">
+                <generate-preview dataset="dataset" class="ng-isolate-scope"><img class="preview"
+                        src="shape-models/previews/mu69_merged.png" alt="Preview" title="Preview"></generate-preview>
+            </td>
+            <td class="cell centered icons-container">
+                <file-download file-to-download="dataset['files']['data']['primary']"
+                    class="ng-isolate-scope"><a class="download-link-container ng-binding ng-scope"
+                        ng-if="file"
+                        href="https://pdssbn.astro.umd.edu/holdings/nh-a-lorri_mvic-5-geophys-v1.0/data/shape_models/mu69_merged.obj">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            version="1.1" x="0px" y="0px" height="50px" width="50px" viewBox="0 0 24 24">
+                            <title class="ng-binding">Download OBJ file.</title>
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"></path>
+                        </svg>
+                        OBJ
+                </file-download>
+            </td>
+        </tr>
+    </tbody>
+</table>
