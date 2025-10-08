@@ -2,29 +2,20 @@
 layout: default
 title: Shape Models
 ---
+<link rel="stylesheet" href="/css/shape-models-page.css">
 
-    <link rel="stylesheet" href="css/shape-models-page.css">
-    <div ng-app="ShapeModelTable" ng-controller="ShapeModels" data-page-theme="images/spectra.png">
-        <script src="js/angular/angular.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.28/angular-ui-router.min.js" integrity="sha512-2DoNBBUJq5Wr+Uhjgol+uvmHtxOgrtG1QjuDHltKMdtIiVEhujUi0eb/X21P+P0V9zgXKA/lOKCSq7wj5VYc5A==" crossorigin="anonymous"></script>
-        <script src="shape-models/js/app.ShapeModels.js"></script>
-        <script src="shape-models/js/app.Data.js"></script>
-        <script src="shape-models/js/app.Datasets.js"></script>
-        <script src="shape-models/js/app.arDetector.js"></script>
+<h1 id="title">Shape Models of Asteroids, Comets, and Satellites</h1>
+<p> These data sets contain Shape models (or Digital Terrain Models) three-dimensional models of the shape of an object. They can be derived using radar data, visible image data, light curves with inversion techniques and/or laser altimeter data.</p>
 
-        <ol class="breadcrumbs">
-            <li><a href="">Home</a></li>
-            <li class="breadcrumbs-separator">/</li>
-            <li><a href="archive/data-types.html">Data Types</a></li>
-            <li class="breadcrumbs-separator">/</li>
-            <li>Shape Models</li>
-        </ol>
+<ol class="breadcrumbs">
+    <li><a href="">Home</a></li>
+    <li class="breadcrumbs-separator">/</li>
+    <li><a href="archive/data-types.html">Data Types</a></li>
+    <li class="breadcrumbs-separator">/</li>
+<li>Shape Models</li>
+</ol>
 
-        <h1 id="title">Shape Models of Asteroids, Comets, and Satellites</h1>
-        <p> These data sets contain Shape models (or Digital Terrain Models) three-dimensional models of the shape of an object. They can be derived using radar data, visible image data, light curves with inversion techniques and/or laser altimeter data.  </p>
+{% include shape-models-table.html %}
 
-        <!-- <p>The scripts used to generate the following .obj files are available in the <a href="https://github.com/sbn-psi/data-tools/tree/master/shapes" target="_blank">SBN GitHub repo</a>.</p> -->
-
-        <section id="shape-models-main" ui-view></section>
-
-    </div>
+<table class="table">
+</table>
