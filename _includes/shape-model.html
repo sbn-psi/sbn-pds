@@ -1,0 +1,41 @@
+{% for dataset in model.datasets %}
+<tr>
+    <td>
+        <details>
+            <summary>
+                <table style="width:100%;">
+                <tbody>
+                    <tr class="dataset-row">
+                        <td colspan="2">{{ dataset.name }}</td>
+                        <td><a href="{{ dataset.link }}" target="_blank">Visit Resource Page</a></td>
+                        <td><a href="{{ dataset.archive_product.archive_path }}" target="_blank">Download Archived Files</a></td>
+                    </tr>
+                    {% if dataset.related_files %}
+                    <tr class="related">
+                        <td colspan="4">View Related Files</td>
+                    </tr>
+                    {% endif %}
+                </tbody>
+                </table>
+            </summary>
+
+            {% if dataset.related_files %}
+            <table style="width:100%; margin-top:0.5em;" class="related">
+            <thead>
+                <th>Related File Name</th>
+                <th></th>
+            </thead>
+            <tbody>
+                {% for file in dataset.related_files %}
+                <tr>
+                    <td>{{ file.name }}</td>
+                    <td><a href="{{ file.url }}" target="_blank">Download Related File</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            </table>
+            {% endif %}
+        </details>
+    </td>
+</tr>
+{% endfor %}
