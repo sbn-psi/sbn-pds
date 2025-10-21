@@ -10,26 +10,20 @@
     border: 1px solid #ccc;
   }
 
-  details {
-    margin: 0;
-  }
-
   summary {
     cursor: pointer;
-    font-weight: bold;
     list-style: none;
   }
 
-  .preview-img {
-    max-width: 150px;
-    height: auto;
-  }
-
-  .dataset-row {
+  .object-name-row {
     background-color: var(--section-header);
   }
+
+  .target-type-header {
+    margin: 0.5em 0;
+  }
   
-  .related {
+  .dataset-row {
     background-color: var(--hr);
   }
 </style>
@@ -37,11 +31,37 @@
 <table style="width:100%;">
   <thead>
     <tr>
-      <th><h3>Asteroids ({{ site.data.shape_models_sample.asteroids.size }})</h3></th>
+      <th><h3 class="target-type-header">Asteroids ({{ site.data.shape_models_sample.asteroids.size }})</h3></th>
     </tr>
   </thead>
   <tbody>
     {% assign all_objects = site.data.shape_models_sample.asteroids %}
+    {% for model in all_objects %}
+      {% include shape-model.html %}
+    {% endfor %}
+  </tbody>
+</table>
+<table style="width:100%;">
+  <thead>
+    <tr>
+      <th><h3 class="target-type-header">Comets ({{ site.data.shape_models_sample.comets.size }})</h3></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% assign all_objects = site.data.shape_models_sample.comets %}
+    {% for model in all_objects %}
+      {% include shape-model.html %}
+    {% endfor %}
+  </tbody>
+</table>
+<table style="width:100%;">
+  <thead>
+    <tr>
+      <th><h3 class="target-type-header">Satellites ({{ site.data.shape_models_sample.satellites.size }})</h3></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% assign all_objects = site.data.shape_models_sample.satellites %}
     {% for model in all_objects %}
       {% include shape-model.html %}
     {% endfor %}

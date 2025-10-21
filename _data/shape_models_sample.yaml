@@ -5,7 +5,7 @@ comets:
   - name: "Stooke Small Body Shape Models"
     link: "https://sbn.psi.edu/pds/resource/stkshape.html"
     archive_product:
-      archive_path: "https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/1682q1halley.tab"
+      archive_path: "https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/"
       archive_product_preview: ""
     related_files:
 
@@ -19,9 +19,9 @@ asteroids:
       archive_path: "https://sbnarchive.psi.edu/pds3/near/NEAR_A_MSI_5_EROSSHAPE_V1_0/data/vertex/"
       archive_product_preview: "shape-models/previews/eros.png"
     related_files:
-    - name: "ver64q.tab.obj"
+    - name: "OBJ"
       url: "shape-models/files/eros/ver64q.tab.obj"
-    - name: "EROS_M3_GAS_V01.BDS"
+    - name: "DSK (SPICE Kernel)"
       url: "shape-models/files/dsk/EROS_M3_GAS_V01.BDS"
   - name: "NEAR Collected Shape and Gravity Models" # NEAR.name
     link: "https://sbn.psi.edu/pds/resource/nearmod.html" # NEAR.link
@@ -43,7 +43,7 @@ satellites:
     related_files:
     - name: "OBJ"
       url: "shape-models/files/phobos/phobos_ver512q.tab.obj"
-    - name: "DSK"
+    - name: "DSK (SPICE Kernel)"
       url: "shape-models/files/dsk/PHOBOS_M3_GAS_V01.BDS"
   - name: "Small Body Optical Shape Models" #Thomas.name
     link: "https://sbn.psi.edu/pds/resource/oshape.html" # Thomas.link

@@ -1,41 +1,49 @@
+<tr>
+    <td style="padding:0;">
+        <table style="width:100%;margin:0;">
+            <tr class="object-name-row"><td colspan="4">{{model.name}}</td></tr>
+        </table>
+    </td>
+</tr>
+
 {% for dataset in model.datasets %}
 <tr>
     <td>
+        <table style="width:100%;margin-bottom:0;margin-top:0.5em;">
+        <tbody>
+            <tr class="dataset-row">
+                <td colspan="2">{{ dataset.name }}</td>
+                <td><a href="{{ dataset.link }}" target="_blank">Visit Resource Page</a></td>
+                <td><a href="{{ dataset.archive_product.archive_path }}" target="_blank">Browse Archived Files</a></td>
+            </tr>
+        </tbody>
+        </table>
+
+        {% if dataset.related_files %}
         <details>
             <summary>
-                <table style="width:100%;">
-                <tbody>
-                    <tr class="dataset-row">
-                        <td colspan="2">{{ dataset.name }}</td>
-                        <td><a href="{{ dataset.link }}" target="_blank">Visit Resource Page</a></td>
-                        <td><a href="{{ dataset.archive_product.archive_path }}" target="_blank">Download Archived Files</a></td>
+                <table style="width:100%; margin:0 0 0.5em;">
+                    <tr>
+                        <td>Show Related Files</td>
                     </tr>
-                    {% if dataset.related_files %}
-                    <tr class="related">
-                        <td colspan="4">View Related Files</td>
-                    </tr>
-                    {% endif %}
-                </tbody>
                 </table>
             </summary>
-
-            {% if dataset.related_files %}
-            <table style="width:100%; margin-top:0.5em;" class="related">
-            <thead>
-                <th>Related File Name</th>
-                <th></th>
-            </thead>
-            <tbody>
-                {% for file in dataset.related_files %}
-                <tr>
-                    <td>{{ file.name }}</td>
-                    <td><a href="{{ file.url }}" target="_blank">Download Related File</a></td>
-                </tr>
-                {% endfor %}
-            </tbody>
+            <table style="width:100%; margin:0.5em 0;">
+                <thead>
+                    <th>Related File Type</th>
+                    <th></th>
+                </thead>
+                <tbody>
+                    {% for file in dataset.related_files %}
+                    <tr>
+                        <td>{{ file.name }}</td>
+                        <td><a href="{{ file.url }}" target="_blank">Download Related File</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
             </table>
-            {% endif %}
         </details>
+        {% endif %}
     </td>
 </tr>
 {% endfor %}
