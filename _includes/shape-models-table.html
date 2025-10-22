@@ -31,11 +31,11 @@
 <table style="width:100%;">
   <thead>
     <tr>
-      <th><h3 class="target-type-header">Asteroids ({{ site.data.shape_models_sample.asteroids.size }})</h3></th>
+      <th><h3 class="target-type-header">Asteroids ({{ site.data.asteroids.size }})</h3></th>
     </tr>
   </thead>
   <tbody>
-    {% assign all_objects = site.data.shape_models_sample.asteroids %}
+    {% assign all_objects = site.data.asteroids %}
     {% for model in all_objects %}
       {% include shape-model.html %}
     {% endfor %}
@@ -44,11 +44,11 @@
 <table style="width:100%;">
   <thead>
     <tr>
-      <th><h3 class="target-type-header">Comets ({{ site.data.shape_models_sample.comets.size }})</h3></th>
+      <th><h3 class="target-type-header">Comets ({{ site.data.comets.size }})</h3></th>
     </tr>
   </thead>
   <tbody>
-    {% assign all_objects = site.data.shape_models_sample.comets %}
+    {% assign all_objects = site.data.comets %}
     {% for model in all_objects %}
       {% include shape-model.html %}
     {% endfor %}
@@ -57,11 +57,11 @@
 <table style="width:100%;">
   <thead>
     <tr>
-      <th><h3 class="target-type-header">Satellites ({{ site.data.shape_models_sample.satellites.size }})</h3></th>
+      <th><h3 class="target-type-header">Satellites ({{ site.data.satellites.size }})</h3></th>
     </tr>
   </thead>
   <tbody>
-    {% assign all_objects = site.data.shape_models_sample.satellites %}
+    {% assign all_objects = site.data.satellites %}
     {% for model in all_objects %}
       {% include shape-model.html %}
     {% endfor %}
