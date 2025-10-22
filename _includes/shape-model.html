@@ -1,15 +1,15 @@
 <tr>
     <td style="padding:0;">
-        <table style="width:100%;margin:0;">
-            <tr class="object-name-row"><td colspan="4">{{model.name}}</td></tr>
+        <table style="width:100%;margin:0;border:none;">
+            <tr class="object-name-row"><td colspan="4" style="border-top:none;border-bottom:none;">{{model.name}}</td></tr>
         </table>
     </td>
 </tr>
 
 {% for dataset in model.datasets %}
 <tr>
-    <td>
-        <table style="width:100%;margin-bottom:0;margin-top:0.5em;">
+    <td style="border-top:none;border-bottom:none;">
+        <table style="width:90%;margin:0.5em auto 0;">
         <tbody>
             <tr class="dataset-row">
                 <td colspan="2">{{ dataset.name }}</td>
@@ -22,13 +22,13 @@
         {% if dataset.related_files %}
         <details>
             <summary>
-                <table style="width:100%; margin:0 0 0.5em;">
+                <table style="width:90%; margin:0 auto 0.5em;">
                     <tr>
                         <td>Show Related Files</td>
                     </tr>
                 </table>
             </summary>
-            <table style="width:100%; margin:0.5em 0;">
+            <table style="width:90%; margin:0.5em auto;">
                 <thead>
                     <th>Related File Type</th>
                     <th></th>
