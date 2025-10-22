@@ -1,0 +1,276 @@
+- name: Amalthea (Jupiter V)
+  type: satellite
+  datasets:
+  - name: Stooke Small Body Shape Models
+    link: https://sbn.psi.edu/pds/resource/stkshape.html
+    archive_data_path: https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/
+- name: Atlas (Saturn XV)
+  type: satellite
+  virtual_reality_ios: shape-models/files/SATURN_SMALL_MOONS/atlas_30k_plt.tab.usdz
+  datasets:
+  - name: Saturn Small Moon Shape Models
+    link: https://sbn.psi.edu/pds/resource/saturnsatshapes.html
+    archive_data_path: https://sbnarchive.psi.edu/pds4/certified/saturn_satellite_shape_models_V1_0/data/
+    archive_product_preview: shape-models/previews/atlas_30k_plt.png
+    related_files:
+    - name: OBJ
+      url: shape-models/files/SATURN_SMALL_MOONS/atlas_30k_plt.tab.obj
+    - name: DSK
+      url: shape-models/files/dsk/ATLAS_K30_THO_V01.BDS
+- name: Calypso (Saturn XIV)
+  type: satellite
+  virtual_reality_ios: shape-models/files/SATURN_SMALL_MOONS/calypso_30k_plt.tab.usdz
+  datasets:
+  - name: Saturn Small Moon Shape Models
+    link: https://sbn.psi.edu/pds/resource/saturnsatshapes.html
+    archive_data_path: https://sbnarchive.psi.edu/pds4/certified/saturn_satellite_shape_models_V1_0/data/
+    archive_product_preview: shape-models/previews/calypso_30k_plt.png
+    related_files:
+    - name: OBJ
+      url: shape-models/files/SATURN_SMALL_MOONS/calypso_30k_plt.tab.obj
+    - name: DSK
+      url: shape-models/files/dsk/CALYPSO_K30_THO_V01.BDS
+- name: Daphnis (Saturn XXXV)
+  type: satellite
+  virtual_reality_ios: shape-models/files/SATURN_SMALL_MOONS/daphnis_30k_plt.tab.usdz
+  datasets:
+  - name: Saturn Small Moon Shape Models
+    link: https://sbn.psi.edu/pds/resource/saturnsatshapes.html
+    archive_data_path: https://sbnarchive.psi.edu/pds4/certified/saturn_satellite_shape_models_V1_0/data/
+    archive_product_preview: shape-models/previews/daphnis_30k_plt.png
+    related_files:
+    - name: OBJ
+      url: shape-models/files/SATURN_SMALL_MOONS/daphnis_30k_plt.tab.obj
+- name: Deimos (Mars II)
+  type: satellite
+  datasets:
+  - name: Small Body Optical Shape Models
+    link: https://sbn.psi.edu/pds/resource/oshape.html
+    archive_data_path: https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_SHAPE_MODELS_V2_1/data/
+- name: Dione (Saturn IV)
+  type: satellite
+  virtual_reality_ios: shape-models/files/dione/dione_ver64q.tab.usdz
+  datasets:
+  - name: Gaskell Dione Shape Model
+    link: https://sbn.psi.edu/pds/resource/dioneshape.html
+    archive_data_path: https://sbnarchive.psi.edu/pds3/multi_mission/CO_SA_ISSNA_ISSWA_5_DIONESHAPE_V1_0/data/
+    archive_product_preview: shape-models/previews/dione.png
+    related_files:
+    - name: OBJ
+      url: shape-models/files/dione/dione_ver64q.tab.obj
+    - name: DSK
+      url: shape-models/files/dsk/DIONE_K50_GAS_V01.BDS
+  - name: Dione SPC Shape Model and Assessment Products
+    link: https://sbn.psi.edu/pds/resource/weirichdioneshape.html
+    archive_data_path: https://sbnarchive.psi.edu/pds4/cassini/satellite-dione.cassini.shape-models-maps/data/global/
+- name: Epimetheus (Saturn XI)
+  type: satellite
+  virtual_reality_ios: shape-models/files/SATURN_SMALL_MOONS/epimetheus_30k_plt.tab.usdz
+  datasets:
+  - name: Saturn Small Moon Shape Models
+    link: https://sbn.psi.edu/pds/resource/saturnsatshapes.html
+    archive_data_path: https://sbnarchive.psi.edu/pds4/certified/saturn_satellite_shape_models_V1_0/data/
+    archive_product_preview: shape-models/previews/epimetheus_30k_plt.png
+    related_files:
+    - name: OBJ
+      url: shape-models/files/SATURN_SMALL_MOONS/epimetheus_30k_plt.tab.obj
+    - name: DSK
+      url: shape-models/files/dsk/EPIMETHEUS_K30_THO_V01.BDS
+  - name: Stooke Small Body Shape Models
+    link: https://sbn.psi.edu/pds/resource/stkshape.html
+    archive_data_path: https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/
+  - name: Small Body Optical Shape Models
+    link: https://sbn.psi.edu/pds/resource/oshape.html
+    archive_data_path: https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_SHAPE_MODELS_V2_1/data/
+- name: Helene (Saturn XII)
+  type: satellite
+  virtual_reality_ios: shape-models/files/SATURN_SMALL_MOONS/helene_30k_plt.tab.usdz
+  datasets:
+  - name: Saturn Small Moon Shape Models
+    link: https://sbn.psi.edu/pds/resource/saturnsatshapes.html
+    archive_data_path: https://sbnarchive.psi.edu/pds4/certified/saturn_satellite_shape_models_V1_0/data/
+    archive_product_preview: shape-models/previews/helene_30k_plt.png
+    related_files:
+    - name: OBJ
+      url: shape-models/files/SATURN_SMALL_MOONS/helene_30k_plt.tab.obj
+    - name: DSK
+      url: shape-models/files/dsk/HELENE_K30_THO_V01.BDS
+- name: Hyperion (Saturn VII)
+  type: satellite
+  virtual_reality_ios: shape-models/files/SATURN_SMALL_MOONS/hyperion_30k_plt.tab.usdz
+  datasets:
+  - name: Saturn Small Moon Shape Models
+    link: https://sbn.psi.edu/pds/resource/saturnsatshapes.html
+    archive_data_path: https://sbnarchive.psi.edu/pds4/certified/saturn_satellite_shape_models_V1_0/data/
+    archive_product_preview: shape-models/previews/hyperion_30k_plt.png
+    related_files:
+    - name: OBJ
+      url: shape-models/files/SATURN_SMALL_MOONS/hyperion_30k_plt.tab.obj
+    - name: DSK
+      url: shape-models/files/dsk/HYPERION_K30_THO_V01.BDS
+  - name: Small Body Optical Shape Models
+    link: https://sbn.psi.edu/pds/resource/oshape.html
+    archive_data_path: https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_SHAPE_MODELS_V2_1/data/
+- name: Janus (Saturn X)
+  type: satellite
+  virtual_reality_ios: shape-models/files/SATURN_SMALL_MOONS/janus_30k_plt.tab.usdz
+  datasets:
+  - name: Saturn Small Moon Shape Models
+    link: https://sbn.psi.edu/pds/resource/saturnsatshapes.html
+    archive_data_path: https://sbnarchive.psi.edu/pds4/certified/saturn_satellite_shape_models_V1_0/data/
+    archive_product_preview: shape-models/previews/janus_30k_plt.png
+    related_files:
+    - name: OBJ
+      url: shape-models/files/SATURN_SMALL_MOONS/janus_30k_plt.tab.obj
+    - name: DSK
+      url: shape-models/files/dsk/JANUS_K30_THO_V01.BDS
+  - name: Small Body Optical Shape Models
+    link: https://sbn.psi.edu/pds/resource/oshape.html
+    archive_data_path: https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_SHAPE_MODELS_V2_1/data/
+  - name: Stooke Small Body Shape Models
+    link: https://sbn.psi.edu/pds/resource/stkshape.html
+    archive_data_path: https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/
+- name: Larissa (Neptune VII)
+  type: satellite
+  datasets:
+  - name: Stooke Small Body Shape Models
+    link: https://sbn.psi.edu/pds/resource/stkshape.html
+    archive_data_path: https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/
+- name: Mimas (Saturn I)
+  type: satellite
+  virtual_reality_ios: shape-models/files/mimas/mimas_ver512q.tab.usdz
+  datasets:
+  - name: Gaskell Mimas Shape Model
+    link: https://sbn.psi.edu/pds/resource/mimasshape.html
+    archive_data_path: https://sbnarchive.psi.edu/pds3/multi_mission/CO_SA_ISSNA_5_MIMASSHAPE_V2_0/data/
+    archive_product_preview: shape-models/previews/mimas.png
+    related_files:
+    - name: OBJ
+      url: shape-models/files/mimas/mimas_ver512q.tab.obj
+    - name: DSK
+      url: shape-models/files/dsk/MIMAS_M3_GAS_V01.BDS
+  - name: Mimas SPC Shape Model and Assessment Products
+    link: https://sbn.psi.edu/pds/resource/weirichmimasshape.html
+    archive_data_path: https://sbnarchive.psi.edu/pds4/cassini/satellite-mimas.cassini.shape-models-maps/data/
+- name: Pan (Saturn XVIII)
+  type: satellite
+  virtual_reality_ios: shape-models/files/SATURN_SMALL_MOONS/pan_30k_plt.tab.usdz
+  datasets:
+  - name: Saturn Small Moon Shape Models
+    link: https://sbn.psi.edu/pds/resource/saturnsatshapes.html
+    archive_data_path: https://sbnarchive.psi.edu/pds4/certified/saturn_satellite_shape_models_V1_0/data/
+    archive_product_preview: shape-models/previews/pan_30k_plt.png
+    related_files:
+    - name: OBJ
+      url: shape-models/files/SATURN_SMALL_MOONS/pan_30k_plt.tab.obj
+    - name: DSK
+      url: shape-models/files/dsk/PAN_K30_THO_V01.BDS
+- name: Pandora (Saturn XVII)
+  type: satellite
+  virtual_reality_ios: shape-models/files/SATURN_SMALL_MOONS/pandora_30k_plt.tab.usdz
+  datasets:
+  - name: Saturn Small Moon Shape Models
+    link: https://sbn.psi.edu/pds/resource/saturnsatshapes.html
+    archive_data_path: https://sbnarchive.psi.edu/pds4/certified/saturn_satellite_shape_models_V1_0/data/
+    archive_product_preview: shape-models/previews/pandora_30k_plt.png
+    related_files:
+    - name: OBJ
+      url: shape-models/files/SATURN_SMALL_MOONS/pandora_30k_plt.tab.obj
+    - name: DSK
+      url: shape-models/files/dsk/PANDORA_K30_THO_V01.BDS
+  - name: Stooke Small Body Shape Models
+    link: https://sbn.psi.edu/pds/resource/stkshape.html
+    archive_data_path: https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/
+- name: Phobos (Mars I)
+  type: satellite
+  virtual_reality_ios: shape-models/files/phobos/phobos_ver512q.tab.usdz
+  datasets:
+  - name: Gaskell Phobos Shape Model
+    link: https://sbn.psi.edu/pds/resource/phobosshape.html
+    archive_data_path: https://sbnarchive.psi.edu/pds3/multi_mission/VO1_SA_VISA_VISB_5_PHOBOSSHAPE_V1_0/data/
+    archive_product_preview: shape-models/previews/phobos.png
+    related_files:
+    - name: OBJ
+      url: shape-models/files/phobos/phobos_ver512q.tab.obj
+    - name: DSK
+      url: shape-models/files/dsk/PHOBOS_M3_GAS_V01.BDS
+  - name: Small Body Optical Shape Models
+    link: https://sbn.psi.edu/pds/resource/oshape.html
+    archive_data_path: https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_SHAPE_MODELS_V2_1/data/
+- name: Phoebe (Saturn IX)
+  type: satellite
+  virtual_reality_ios: shape-models/files/phoebe/phoebe_ver512q.tab.usdz
+  datasets:
+  - name: Gaskell Phoebe Shape Model
+    link: https://sbn.psi.edu/pds/resource/phoebeshape.html
+    archive_data_path: https://sbnarchive.psi.edu/pds3/multi_mission/CO_SA_ISSNA_5_PHOEBESHAPE_V2_0/data/
+    archive_product_preview: shape-models/previews/phoebe.png
+    related_files:
+    - name: OBJ
+      url: shape-models/files/phoebe/phoebe_ver512q.tab.obj
+    - name: DSK
+      url: shape-models/files/dsk/PHOEBE_M3_GAS_V01.BDS
+  - name: Phoebe SPC Shape Model and Assessment Products
+    link: https://sbn.psi.edu/pds/resource/weirichphoebeshape.html
+    archive_data_path: https://sbnarchive.psi.edu/pds4/cassini/satellite-phoebe.cassini.shape-models-maps_V1_0/data/
+- name: Prometheus (Saturn XVI)
+  type: satellite
+  virtual_reality_ios: shape-models/files/SATURN_SMALL_MOONS/s16prometheus.tab.usdz
+  datasets:
+  - name: Stooke Small Body Shape Models
+    link: https://sbn.psi.edu/pds/resource/stkshape.html
+    archive_data_path: https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/
+    archive_product_preview: shape-models/previews/prometheus_30k_plt.png
+    related_files:
+    - name: OBJ
+      url: shape-models/files/SATURN_SMALL_MOONS/prometheus_30k_plt.tab.obj
+  - name: Saturn Small Moon Shape Models
+    link: https://sbn.psi.edu/pds/resource/saturnsatshapes.html
+    archive_data_path: https://sbnarchive.psi.edu/pds4/certified/saturn_satellite_shape_models_V1_0/data/
+- name: Proteus (Neptune VIII)
+  type: satellite
+  datasets:
+  - name: Stooke Small Body Shape Models
+    link: https://sbn.psi.edu/pds/resource/stkshape.html
+    archive_data_path: https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/
+- name: Rhea (Saturn V)
+  type: satellite
+  datasets:
+  - name: Rhea SPC Shape Model and Assessment Products
+    link: https://sbn.psi.edu/pds/resource/weirichrheashape.html
+    archive_data_path: https://sbnarchive.psi.edu/pds4/cassini/satellite-rhea.cassini.shape-models-maps/data/
+- name: Telesto (Saturn XIII)
+  type: satellite
+  virtual_reality_ios: shape-models/files/SATURN_SMALL_MOONS/telesto_30k_plt.tab.usdz
+  datasets:
+  - name: Saturn Small Moon Shape Models
+    link: https://sbn.psi.edu/pds/resource/saturnsatshapes.html
+    archive_data_path: https://sbnarchive.psi.edu/pds4/certified/saturn_satellite_shape_models_V1_0/data/
+    archive_product_preview: shape-models/previews/telesto_30k_plt.png
+    related_files:
+    - name: OBJ
+      url: shape-models/files/SATURN_SMALL_MOONS/telesto_30k_plt.tab.obj
+    - name: DSK
+      url: shape-models/files/dsk/TELESTO_K30_THO_V01.BDS
+- name: Tethys (Saturn III)
+  type: satellite
+  virtual_reality_ios: shape-models/files/tethys/tethys_ver512q.tab.usdz
+  datasets:
+  - name: Gaskell Tethys Shape Model
+    link: https://sbn.psi.edu/pds/resource/tethysshape.html
+    archive_data_path: https://sbnarchive.psi.edu/pds3/multi_mission/CO_SA_ISSNA_5_TETHYSSHAPE_V1_0/data/
+    archive_product_preview: shape-models/previews/tethys.png
+    related_files:
+    - name: OBJ
+      url: shape-models/files/tethys/tethys_ver512q.tab.obj
+    - name: DSK
+      url: shape-models/files/dsk/TETHYS_M3_GAS_V01.BDS
+  - name: Tethys SPC Shape Model and Assessment Products
+    link: https://sbn.psi.edu/pds/resource/weirichtethysshape.html
+    archive_data_path: https://sbnarchive.psi.edu/pds4/cassini/satellite-tethys.cassini.shape-models-maps/data/global/
+- name: Thebe (Jupiter XIV)
+  type: satellite
+  datasets:
+  - name: Stooke Small Body Shape Models
+    link: https://sbn.psi.edu/pds/resource/stkshape.html
+    archive_data_path: https://sbnarchive.psi.edu/pds3/non_mission/EAR_A_5_DDR_STOOKE_SHAPE_MODELS_V2_0/data/
