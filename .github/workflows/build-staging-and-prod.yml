@@ -1,0 +1,157 @@
+name: Jekyll (staging → Pages, prod → branch)
+
+on:
+  push:
+    branches: [ master ]   
+
+  workflow_dispatch:           # allow manual runs from the Actions tab
+
+# Needed for Pages + pushing branches
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+env:
+  PROD_PUBLISH_BRANCH: build/latest  # where prod build is committed
+  STAGING_CONFIG: _config.yml,_config_staging.yml
+  PROD_CONFIG: _config.yml,_config_production.yml
+  RUBY_VERSION: "3.2"
+
+jobs:
+  build:
+    name: Build staging & prod
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ env.RUBY_VERSION }}
+          bundler-cache: true
+
+      - name: Install gems
+        run: bundle install --without development test
+
+      # ----- STAGING (goes to GitHub Pages) -----
+      - name: Build staging
+        run: bundle exec jekyll build --config "${{ env.STAGING_CONFIG }}" --destination _site_staging
+        env:
+          JEKYLL_ENV: staging
+
+      # ----- PROD (committed to branch) -----
+      - name: Build prod
+        run: bundle exec jekyll build --config "${{ env.PROD_CONFIG }}" --destination _site_prod
+        env:
+          JEKYLL_ENV: production
+
+      # Upload staging site for Pages deploy
+      - name: Upload staging artifact for Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site_staging
+
+      # Upload prod site as a CI artifact for the branch-commit job
+      - name: Upload prod artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: prod-site
+          path: _site_prod
+
+  deploy_staging:
+    name: Deploy staging to GitHub Pages
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        name: Deploy to Pages
+        uses: actions/deploy-pages@v4
+
+  commit_prod_branch:
+    name: Commit prod build to branch
+    runs-on: ubuntu-latest
+    needs: build
+    env:
+      GIT_LFS_SKIP_SMUDGE: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          lfs: false
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Download prod artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: prod-site
+          path: prod
+
+      - name: Ensure target branch exists
+        env:
+          TARGET: ${{ env.PROD_PUBLISH_BRANCH }}
+        run: |
+          set -euo pipefail
+      
+          # Remember where we started (branch name or SHA if detached)
+          ORIG_REF="$(git symbolic-ref -q --short HEAD || echo HEAD)"
+          ORIG_SHA="$(git rev-parse HEAD)"
+      
+          # Needed for any commits we make
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      
+          if ! git ls-remote --exit-code --heads origin "$TARGET" >/dev/null 2>&1; then
+            # Create the branch without depending on the current branch history
+            git switch --orphan "$TARGET"
+            git reset --hard
+            git commit --allow-empty -m "init $TARGET"
+            git push origin "$TARGET"
+            # Go back safely (branch if we had one, else detach to the original SHA)
+            if [ "$ORIG_REF" = "HEAD" ]; then
+              git switch --detach "$ORIG_SHA"
+            else
+              git switch "$ORIG_REF"
+            fi
+          fi
+
+      - name: Publish prod build
+        run: |
+          set -euo pipefail
+          TARGET="${{ env.PROD_PUBLISH_BRANCH }}"
+
+          # Use a clean worktree for the target branch
+          rm -rf publish
+          git fetch origin "$TARGET" || true
+          START_REF="origin/$TARGET"
+          if ! git rev-parse --verify -q "$START_REF"; then
+            START_REF="$TARGET"
+          fi
+          git worktree add --force -B "$TARGET" publish "$START_REF"
+
+          # Replace contents with the new build
+          pushd publish > /dev/null
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          find . -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
+          cp -R ../prod/. .
+          touch .nojekyll
+          echo "Built from ${GITHUB_REPOSITORY}@${GITHUB_SHA} on $(date -u +'%Y-%m-%dT%H:%M:%SZ')" > BUILD_INFO
+
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Deploy prod site for ${GITHUB_SHA::7}"
+            git push --force-with-lease origin "$TARGET"
+          fi
+          popd > /dev/null

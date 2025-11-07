@@ -5,6 +5,8 @@
     <base href="//sbn.psi.edu/pds/" />
     {% elsif jekyll.environment == "production" %} 
     <base href="/pds/" />
+    {% elsif jekyll.environment == "staging" %}
+    <base href="/sbn-pds/" />
     {% else %}
     <base href="/" />
     {% endif %}
