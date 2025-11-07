@@ -1,0 +1,128 @@
+name: Jekyll (staging → Pages, prod → branch)
+
+on:
+  push:
+    branches: [ pages-test ]   
+
+  workflow_dispatch:           # allow manual runs from the Actions tab
+
+# Needed for Pages + pushing branches
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+env:
+  PROD_PUBLISH_BRANCH: build/test  # where prod build is committed
+  STAGING_CONFIG: _config.yml,_config_staging.yml
+  PROD_CONFIG: _config.yml,_config_production.yml
+  RUBY_VERSION: "3.2"
+
+jobs:
+  build:
+    name: Build staging & prod
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ env.RUBY_VERSION }}
+          bundler-cache: true
+
+      - name: Install gems
+        run: bundle install --without development test
+
+      # ----- STAGING (goes to GitHub Pages) -----
+      - name: Build staging
+        run: bundle exec jekyll build --config "${{ env.STAGING_CONFIG }}" --destination _site_staging
+        env:
+          JEKYLL_ENV: production
+
+      # ----- PROD (committed to branch) -----
+      - name: Build prod
+        run: bundle exec jekyll build --config "${{ env.PROD_CONFIG }}" --destination _site_prod
+        env:
+          JEKYLL_ENV: production
+
+      # Upload staging site for Pages deploy
+      - name: Upload staging artifact for Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site_staging
+
+      # Upload prod site as a CI artifact for the branch-commit job
+      - name: Upload prod artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: prod-site
+          path: _site_prod
+
+  deploy_staging:
+    name: Deploy staging to GitHub Pages
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        name: Deploy to Pages
+        uses: actions/deploy-pages@v4
+
+  commit_prod_branch:
+    name: Commit prod build to branch
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Download prod artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: prod-site
+          path: prod
+
+      - name: Ensure target branch exists
+        run: |
+          if ! git ls-remote --exit-code --heads origin "${{ env.PROD_PUBLISH_BRANCH }}" >/dev/null 2>&1; then
+            git switch --orphan "${{ env.PROD_PUBLISH_BRANCH }}"
+            git commit --allow-empty -m "init ${{ env.PROD_PUBLISH_BRANCH }}"
+            git push origin "${{ env.PROD_PUBLISH_BRANCH }}"
+            git switch -
+          fi
+
+      - name: Publish prod build
+        run: |
+          TARGET="${{ env.PROD_PUBLISH_BRANCH }}"
+
+          # Use a clean worktree for the target branch
+          rm -rf publish
+          git worktree add --force publish "$TARGET"
+
+          # Replace contents with the new build
+          rm -rf publish/* publish/.[!.]* publish/..?* || true
+          cp -R prod/. publish/
+          touch publish/.nojekyll
+          echo "Built from ${GITHUB_REPOSITORY}@${GITHUB_SHA} on $(date -u +'%Y-%m-%dT%H:%M:%SZ')" > publish/BUILD_INFO
+
+          pushd publish
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Deploy prod site for ${GITHUB_SHA::7}"
+            git push origin HEAD:"$TARGET"
+          fi
+          popd
