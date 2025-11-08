@@ -43,7 +43,7 @@ jobs:
       - name: Build staging
         run: bundle exec jekyll build --config "${{ env.STAGING_CONFIG }}" --destination _site_staging
         env:
-          JEKYLL_ENV: production
+          JEKYLL_ENV: staging
 
       # ----- PROD (committed to branch) -----
       - name: Build prod
@@ -94,6 +94,8 @@ jobs:
 
       - name: Ensure target branch exists
         run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if ! git ls-remote --exit-code --heads origin "${{ env.PROD_PUBLISH_BRANCH }}" >/dev/null 2>&1; then
             git switch --orphan "${{ env.PROD_PUBLISH_BRANCH }}"
             git commit --allow-empty -m "init ${{ env.PROD_PUBLISH_BRANCH }}"
@@ -116,8 +118,6 @@ jobs:
           echo "Built from ${GITHUB_REPOSITORY}@${GITHUB_SHA} on $(date -u +'%Y-%m-%dT%H:%M:%SZ')" > publish/BUILD_INFO
 
           pushd publish
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
 
           if git diff --cached --quiet; then

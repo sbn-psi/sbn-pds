@@ -2,6 +2,8 @@
 ---
 {% if jekyll.environment == "production" %} 
 var basepath = '/pds/'
+{% elsif jekyll.environment == "staging" %}
+var basepath = '/sbn-pds/'
 {% else %}
 var basepath = '/'
 {% endif %}

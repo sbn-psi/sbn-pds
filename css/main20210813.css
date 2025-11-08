@@ -143,6 +143,8 @@ main a[href^='http']:not([href*='psi.edu']):not([href*='localhost']):after,
 nav a[href^='http']:not([href*='psi.edu']):not([href*='localhost']):after {
     {% if jekyll.environment == "production" %} 
     background-image: url('/pds/images/external.svg');
+    {% elsif jekyll.environment == "staging" %}
+    background-image: url('/sbn-pds/images/external.svg');
     {% else %}
     background-image: url('/images/external.svg');
     {% endif %}
@@ -160,6 +162,8 @@ nav a[href^='http']:not([href*='psi.edu']):not([href*='localhost']):after {
 [data-theme="light"] nav a[href^='http']:not([href*='psi.edu']):not([href*='localhost']):after {
     {% if jekyll.environment == "production" %} 
     background-image: url('/pds/images/external-black.svg');
+    {% elsif jekyll.environment == "staging" %}
+    background-image: url('/sbn-pds/images/external-black.svg');
     {% else %}
     background-image: url('/images/external-black.svg');
     {% endif %}
