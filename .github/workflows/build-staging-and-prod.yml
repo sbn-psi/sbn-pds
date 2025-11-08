@@ -93,14 +93,31 @@ jobs:
           path: prod
 
       - name: Ensure target branch exists
+        env:
+          TARGET: ${{ env.PROD_PUBLISH_BRANCH }}
         run: |
-          git config user.name "github-actions[bot]"
+          set -euo pipefail
+      
+          # Remember where we started (branch name or SHA if detached)
+          ORIG_REF="$(git symbolic-ref -q --short HEAD || echo HEAD)"
+          ORIG_SHA="$(git rev-parse HEAD)"
+      
+          # Needed for any commits we make
+          git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if ! git ls-remote --exit-code --heads origin "${{ env.PROD_PUBLISH_BRANCH }}" >/dev/null 2>&1; then
-            git switch --orphan "${{ env.PROD_PUBLISH_BRANCH }}"
-            git commit --allow-empty -m "init ${{ env.PROD_PUBLISH_BRANCH }}"
-            git push origin "${{ env.PROD_PUBLISH_BRANCH }}"
-            git switch -
+      
+          if ! git ls-remote --exit-code --heads origin "$TARGET" >/dev/null 2>&1; then
+            # Create the branch without depending on the current branch history
+            git switch --orphan "$TARGET"
+            git reset --hard
+            git commit --allow-empty -m "init $TARGET"
+            git push origin "$TARGET"
+            # Go back safely (branch if we had one, else detach to the original SHA)
+            if [ "$ORIG_REF" = "HEAD" ]; then
+              git switch --detach "$ORIG_SHA"
+            else
+              git switch "$ORIG_REF"
+            fi
           fi
 
       - name: Publish prod build
