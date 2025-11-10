@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     
+    <base href="/pds/" />
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>How to Archive Data in SBN | PDS SBN Asteroid/Dust Subnode</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main20210813.css">
+    <link rel="stylesheet" href="css/header20210331.css">
+    <link rel="stylesheet" href="css/footer20210331.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <!-- PDS Feedback Widget -->
+    <!-- Only add JQuery if you do not already include a library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <!-- -->
+
+
+    </head>
+<body>
+
+    <!-- BEGIN sbn-header -->
+
+<header>
+    <div id="sbn-notices">
+        <!--
+        <div class="notice">
+            PUT ANY DOWNTIME NOTICES HERE
+        </div>
+        -->
+    </div>
+    <div id="sbn-header">
+
+        <div class="sbn-title-container">
+            <div class="sbn-title"><a class="ignore-a-styling" href="http://pdssbn.astro.umd.edu/">PDS Small Bodies Node</a></div>
+            <a class="sbn-subtitle ignore-a-styling" href="">Asteroid/Dust Subnode</a>
+        </div>
+        <div class="gradient-bar"></div>
+    </div>
+</header>
+<nav>
+    
+    <div id="menu-backdrop"></div>
+    <div id="menu-drawer">
+        <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+        </svg>
+    </div>
+
+    <div id="theme-switch">
+        <label for="theme-switch-checkbox">
+            <input type="checkbox" id="theme-switch-checkbox" />
+            <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 0 24 24" width="30" title="Change light/dark theme">
+                <title>Change light/dark theme</title>
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                    d="M20 15.31L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69zM12 18V6c3.31 0 6 2.69 6 6s-2.69 6-6 6z" />
+            </svg>
+      </label>
+    </div>
+    <div id="menu">
+        <div class="menu-handle">
+            <div>Find Data</div>
+            <ul class="menu-list">
+                <li><a href="">Archive Home</a></li>
+                <li class="divider"></li>
+                <li><a href="archive/data-types.html"> Browse by Data Type</a></li>
+                <li><a href="archive/target-types.html"> Browse by Target Type</a></li>
+                <li><a href="archive/missions.html"> Browse by Mission</a></li>
+                <li class="divider"></li>
+                <li><a href="ferret/">Ferret - Target Search</a></li>
+                <li><a href="sbib/">SBIB - Image Search</a></li>
+                <li><a href="https://catch.astro.umd.edu/">CATCH - Survey Search</a></li>
+            </ul>
+        </div>
+        <div class="menu-handle">
+            <div>Archive Data</div>
+            <ul class="menu-list">
+                <li><a href="olafs">OLAF - Archive your data</a></li>
+                <li><a href="sbnarchivinghowto.html">How to Archive</a></li>
+                <li><a href="other_tools/pdf1a.html">PDF/A Tools</a></li>
+                <li><a href="https://pds.nasa.gov/datastandards/documents/current-version.shtml">PDS4 Standards</a></li>
+            </ul>
+        </div>
+        <div class="menu-handle">
+            <div>Support</div>
+            <ul class="menu-list">
+                <li><a href="support/">Support Home</a></li>
+                <li class="divider"></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="support/Tips.html">Tips & Tricks Articles <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="24px" class="callout-svg-icon"><title>New!</title><path d="M0 0h24v24H0z" fill="none"/><path d="M23 12l-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68L23 12zm-10 5h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg></a></li>
+                <li><a href="support/FAQ.html">Frequently Asked Questions</a></li>
+                <li><a href="support/Keyterms.html">Key Terms</a></li>
+                <li><a href="support/Glossary.html">Full Glossary</a></li>
+                <li class="divider"></li>
+                <li><a href="https://pds.nasa.gov/home/proposers/">Information for Data Proposers</a></li>
+                <li><a href="https://sbnwiki.astro.umd.edu/wiki/SBN_PDS4_Wiki">PDS4 Tutorials and Quick Ref</a></li>
+                <li><a href="http://pdssbn.astro.umd.edu/howto/understand.shtml">Using PDS Data</a></li>
+            </ul>
+        </div>
+        <div class="menu-handle">
+            <div>PDS Info</div>
+            <ul class="menu-list">
+                <li><a href="aboutastsubnode.html">About SBN Asteroid Subnode</a></li>
+                <li><a href="http://pdssbn.astro.umd.edu/">SBN Comet Subnode</a></li>
+                <li><a href="http://pds.nasa.gov/">PDS Home</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<div id="search-bar" class="search-container">
+    <div class="search-box" v-bind:class="{focused: focused}">
+        <svg class="search-icon" viewBox="0 0 100 125">
+            <path d="M35.285,8L85,28.228L52.303,70.575l-4.715-17.337C33,59.622,16.45,72.294,43.672,92c0,0-37.15-4.02-26.875-39.512    c0,0,4.692-16.873,23.799-24.958L35.285,8z" />
+        </svg>
+        <div class="input-field">
+            <input tabindex="0" placeholder="Shortcut to data by keyword..." type="text" aria-label="Shortcut to data by keyword"
+                v-model="query"
+                v-on:focus="onFocus"
+                v-on:keyup="keypress">
+        </div>
+    </div>
+    <div class="search-filter" v-if="focused">
+        <label class="toggle-option" v-bind:class="{focused: mode === 'asteroid'}">Asteroid/Dust <input type="radio" v-model="mode" value="asteroid"></label>
+        <label class="toggle-option" v-bind:class="{focused: mode === 'pds'}">PDS <input type="radio" v-model="mode" value="pds"></label>
+    </div>
+    <ul class="search-results" v-if="query.length > 0 && focused">
+        <template v-for="result in searchResults">
+            <li class="search-result" >
+                <a v-bind:href="result.url" v-bind:title="title(result)" tabindex="0">{{result.name}}</a>
+            </li>
+        </template>
+        <p class="no-results" v-if="searchResults.length === 0">No results found</p>
+        <p class="no-results" v-if="searchResults.length === 0">Need help finding something? <a href="contact.html">Contact Us</a></p>
+    </ul>
+</div>
+
+</nav>
+
+
+<!-- END sbn-header -->
+
+
+    <main><div class="sbn-main " >
+    <!-- BEGIN main content -->
+
+        <center>
+      <h1>How to archive your data in PDS Small Bodies Node (SBN)</h1>
+      <h2>In 5 Easy Steps</h2>
+    </center>
+
+    <hr>
+
+    <h3>SBN Node archiving contacts:</h3>
+
+    <p>
+      Beatrice Mueller <a href="mailto:bmueller@psi.edu">(bmueller@psi.edu)</a></p>
+
+
+    <h3>1. How to get started</h3>
+
+    <ul>
+      <li>If you are <b>preparing a proposal</b> that involves archiving data in PDS,
+        email the SBN contact (above) while your proposal is in preparation. We
+        can provide information to help with the archiving section of your proposal,
+        and/or provide an SBN letter of support for the proposal. Also see the
+        <a href="http://pds.nasa.gov/pds4/propose/proposing.shtml">
+          PDS Information for Proposers</a> for additional resources.</li>
+
+      <li>If your <b>proposal is successful</b>, let us know so we can add your
+        project to our task list and allocate resources to help you and support your
+        data.</li>
+
+      <li>If you <b>already have data</b> you would like to archive in PDS, email
+        the SBN contact (above) to inform us of your project and to start the process.
+        You will be assigned an SBN helper to guide you through the process.</li>
+    </ul>
+
+    <h3>2. Assembling the PDS volume</h3>
+
+    <ul>
+      <li>Most non-mission SBN data sets can be prepared using our
+        <a href="https://sbn.psi.edu/pds/olafs/">On-Line Archiving Facility (OLAF)</a>,
+        which allows you to upload your data files and enter the
+        supporting information into a web form. OLAF assembles the PDS volume with
+        all labels and other PDS-required files, ready for review and archiving.
+        You don't need to learn PDS4 archiving standards to do this!</li>
+
+      <li>For some SBN data sets, OLAF is not appropriate, or can be used only in
+        part. In this case,
+        the SBN contact person will work with you to help you prepare your data
+        in the PDS-required structure for archiving. You might have to learn about
+        PDS4 archiving standards.</li>
+
+      <li>Send a sample of your data to SBN for evaluation of the best
+        archiving method.</li>
+
+      <li><b> -OR- </b>Look at the
+        <a href="https://sbnapps.psi.edu/olaf-node/#/support/contact">OLAF file format
+          requirements</a> to determine if your data can be archived using OLAF.
+        Regardless of whether you use OLAF, you
+        may have to reformat your data slightly to conform with PDS file
+        standards.</li>
+
+      <li>With the help of your SBN contact, use OLAF or another method to
+        assemble your data and supporting information into a PDS-ready volume.</li>
+    </ul>
+
+    <h3>3. Peer review</h3>
+
+    <ul>
+      <li>PDS requires <b>external peer review</b> on all data before archiving.
+        This is somewhat similar to a paper review, in that the data volume is
+        reviewed by a panel of non-PDS planetary scientists to find any deficiencies
+        or problems that need to be corrected before archiving. These deficiencies
+        are called "liens".</li>
+
+      <li>In most cases, the external peer review process takes about six weeks.
+        It ends with a meeting (usually a telecon) of the review panel, SBN
+        representatives, and you, to finalize the liens.</li>
+    </ul>
+
+    <h3>4. Liens Resolution</h3>
+
+    <ul>
+      <li>The data provider (you) is responsible for correcting the liens. For
+        OLAF data sets, this can be done in OLAF.</li>
+
+      <li>Once the liens are corrected, SBN will check the data volume against the
+        liens to insure that all have been resolved.</li>
+    </ul>
+
+    <h3>5. Archiving</h3>
+
+    <ul>
+      <li>The data set will then be ingested into the PDS archive.</li>
+
+      <li>The data set is given a <b>citation as an electronic publication</b> which
+        is listed in ADS and which researchers who use the data can cite in their
+        papers.</li>
+    </ul>
+
+    <h3>Updates</h3>
+
+    <ul>
+      <li>For ongoing projects, you may wish to submit regular updates with
+        additional data. Updates ordinarily go through the same preparation and
+        peer review process described above.</li>
+      <li>For mission data and other large ongoing data
+        projects, the use of a peer-reviewed
+        configuration-controlled data pipeline can obviate the need for peer review
+        for subsequent data submissions.</li>
+    </ul>
+
+    <h3>Resources</h3>
+
+    <p>
+      To see the asteroid and dust data already archived in the PDS, see the
+      <a href="http://sbn.psi.edu/pds/">SBN Asteroid and Dust Archive</a>.</p>
+
+    <p>
+      To see the comet data already archived in the PDS, see the
+      <a href="http://pdssbn.astro.umd.edu/data_sb/target_comets.shtml">
+        SBN Comet Archive</a>.</p>
+
+    <p>
+      <a href="https://sbn.psi.edu/pds/olafs/">
+        On-Line Archiving Facility (OLAF)</a></p>
+
+    <p>
+      <a href="http://pds.nasa.gov/pds4/propose/proposing.shtml">
+        PDS Information for Proposers</a></p>
+
+    <p>
+      More resources to help data providers and proposers are available on the
+      <a href="http://pds.nasa.gov">PDS front page</a>. Be aware that if you
+      use OLAF to prepare your data, you will not need to learn about PDS4
+      archiving standards.</p>
+
+
+
+    <!-- END main content -->
+    </div></main>
+
+    <!-- BEGIN sbn-footer -->
+
+<footer class="sbn-footer">
+    <p class="sbn-footer-text">
+        For questions about the data sets or this web site, contact Carol Neese (<a href="mailto:neese@psi.edu" class="link">neese@psi.edu</a>).
+    </p>
+</footer>
+
+<div class="sbn-footer-extended">
+    <aside class="sbn-footer-psi-container">
+        <img src="images/PSI_Logo.png" alt="PSI Logo" title="PSI Logo" class="psi-logo">
+        <span>Hosted by the Planetary Science Institute</span>
+    </aside>
+</div>
+
+<!-- END sbn-footer -->
+
+
+    
+
+
+    <script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/scripts20210813.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>

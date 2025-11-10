@@ -1,0 +1,228 @@
+
+.button {
+    padding: 0 16px 0 16px;
+    height: 36px;
+    border-radius: 4px;
+    min-width: 64px;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    vertical-align: middle;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    color: var(--button);
+
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 24px;
+    line-height: 2.25rem;
+    letter-spacing: 0.0892857143em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.button:hover {
+    cursor: pointer;
+}
+
+.button .button-ripple {
+    position: absolute;
+    box-sizing: content-box;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    border-radius: 4px;
+}
+
+.button .button-ripple::before, .button .button-ripple::after {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    content: "";
+    top: calc(50% - 100%);
+    left: calc(50% - 100%);
+    width: 200%;
+    height: 200%;
+    background-color: var(--button);
+}
+.button .button-ripple::before {
+    transition: opacity 15ms linear, background-color 15ms linear;
+    z-index: 1;
+}
+.button .button-ripple::after {
+    z-index: 0;
+    transition: opacity 150ms linear;
+}
+.button:hover .button-ripple::before, .button .button-ripple::after {
+    opacity: 0.04;
+}
+.button:active .button-ripple::after {
+    transition-duration: 75ms;
+    opacity: 0.12;
+    
+}
+
+
+.primary-action {
+
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+    background-color: var(--button);
+    color: var(--button-contrast);
+}
+.primary-action:hover {
+    cursor: pointer;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.primary-action:active {
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.primary-action .button-ripple {
+    border-radius: 4px;
+}
+.primary-action .button-ripple::before {
+    background-color: white;
+    opacity: 0;
+}
+.primary-action:hover .button-ripple::before {
+    opacity: 0.08;
+}
+.primary-action .button-ripple::after {
+    transition: opacity 150ms linear;
+}
+.primary-action:active .button-ripple::after {
+    transition-duration: 75ms;
+    opacity: 0.24;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: initial;
+    letter-spacing: 0px;
+    margin: 40px 0 24px 0;
+}
+h2 {
+    font-size: 34px;
+    line-height: initial;
+    letter-spacing: 0.25px;
+    margin: 40px 0 24px 0;
+}
+h3 {
+    font-size: 24px;
+    line-height: initial;
+    letter-spacing: 0px;
+    margin: 40px 0 24px 0;
+}
+h4 {
+    font-size: 20px;
+    line-height: initial;
+    letter-spacing: 0.15px;
+    margin: 32px 0 24px 0;
+}
+
+.intro {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+}
+.intro-features {
+    flex: 1;
+    margin: 32px;
+    min-width: 300px;
+}
+.intro-text {
+    flex: 2;
+    min-width: 500px;
+}
+
+.intro-features li {
+    color: var(--text) !important;
+}
+
+.return-breadcrumb {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    margin: 32px 0;
+    text-decoration: none;
+    color: var(--secondary-text);
+}
+.return-breadcrumb:hover {
+    color: var(--text);
+}
+.return-breadcrumb svg {
+    fill: var(--secondary-text);
+    margin-right: 8px;
+}
+.return-breadcrumb:hover svg{
+    fill: var(--icon);
+}
+
+.card {
+    background: var(--raised-content);
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    display: flex;
+    flex-flow: column;
+}
+.card-content {
+    flex-grow: 1;
+}
+.card h1, .card h2, .card h3, .card h4, .card h5 {
+    font-size: 20px;
+    display: block;
+    margin: 0;
+    padding: 16px;
+}
+.card p, .card li {
+    color: var(--secondary-text);
+    padding: 0 16px 16px 16px;
+    margin: 0;
+}
+.card img {
+    height: 300px;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px 4px 0 0;
+    background-color: white;
+}
+.card-actions {
+    padding: 8px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+}
+.card-actions .button {
+    margin-left: 8px;
+}
+
+.primary-actions {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.primary-actions .card {
+    flex: 1;
+    margin: 16px;
+    min-width: 400px;
+}
+

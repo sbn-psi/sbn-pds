@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     
+    <base href="/pds/" />
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>PDS4 Viewer | PDS SBN Asteroid/Dust Subnode</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main20210813.css">
+    <link rel="stylesheet" href="css/header20210331.css">
+    <link rel="stylesheet" href="css/footer20210331.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <!-- PDS Feedback Widget -->
+    <!-- Only add JQuery if you do not already include a library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <!-- -->
+
+
+    </head>
+<body>
+
+    <!-- BEGIN sbn-header -->
+
+<header>
+    <div id="sbn-notices">
+        <!--
+        <div class="notice">
+            PUT ANY DOWNTIME NOTICES HERE
+        </div>
+        -->
+    </div>
+    <div id="sbn-header">
+
+        <div class="sbn-title-container">
+            <div class="sbn-title"><a class="ignore-a-styling" href="http://pdssbn.astro.umd.edu/">PDS Small Bodies Node</a></div>
+            <a class="sbn-subtitle ignore-a-styling" href="">Asteroid/Dust Subnode</a>
+        </div>
+        <div class="gradient-bar"></div>
+    </div>
+</header>
+<nav>
+    
+    <div id="menu-backdrop"></div>
+    <div id="menu-drawer">
+        <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+        </svg>
+    </div>
+
+    <div id="theme-switch">
+        <label for="theme-switch-checkbox">
+            <input type="checkbox" id="theme-switch-checkbox" />
+            <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 0 24 24" width="30" title="Change light/dark theme">
+                <title>Change light/dark theme</title>
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                    d="M20 15.31L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69zM12 18V6c3.31 0 6 2.69 6 6s-2.69 6-6 6z" />
+            </svg>
+      </label>
+    </div>
+    <div id="menu">
+        <div class="menu-handle">
+            <div>Find Data</div>
+            <ul class="menu-list">
+                <li><a href="">Archive Home</a></li>
+                <li class="divider"></li>
+                <li><a href="archive/data-types.html"> Browse by Data Type</a></li>
+                <li><a href="archive/target-types.html"> Browse by Target Type</a></li>
+                <li><a href="archive/missions.html"> Browse by Mission</a></li>
+                <li class="divider"></li>
+                <li><a href="ferret/">Ferret - Target Search</a></li>
+                <li><a href="sbib/">SBIB - Image Search</a></li>
+                <li><a href="https://catch.astro.umd.edu/">CATCH - Survey Search</a></li>
+            </ul>
+        </div>
+        <div class="menu-handle">
+            <div>Archive Data</div>
+            <ul class="menu-list">
+                <li><a href="olafs">OLAF - Archive your data</a></li>
+                <li><a href="sbnarchivinghowto.html">How to Archive</a></li>
+                <li><a href="other_tools/pdf1a.html">PDF/A Tools</a></li>
+                <li><a href="https://pds.nasa.gov/datastandards/documents/current-version.shtml">PDS4 Standards</a></li>
+            </ul>
+        </div>
+        <div class="menu-handle">
+            <div>Support</div>
+            <ul class="menu-list">
+                <li><a href="support/">Support Home</a></li>
+                <li class="divider"></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="support/Tips.html">Tips & Tricks Articles <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="24px" class="callout-svg-icon"><title>New!</title><path d="M0 0h24v24H0z" fill="none"/><path d="M23 12l-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68L23 12zm-10 5h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg></a></li>
+                <li><a href="support/FAQ.html">Frequently Asked Questions</a></li>
+                <li><a href="support/Keyterms.html">Key Terms</a></li>
+                <li><a href="support/Glossary.html">Full Glossary</a></li>
+                <li class="divider"></li>
+                <li><a href="https://pds.nasa.gov/home/proposers/">Information for Data Proposers</a></li>
+                <li><a href="https://sbnwiki.astro.umd.edu/wiki/SBN_PDS4_Wiki">PDS4 Tutorials and Quick Ref</a></li>
+                <li><a href="http://pdssbn.astro.umd.edu/howto/understand.shtml">Using PDS Data</a></li>
+            </ul>
+        </div>
+        <div class="menu-handle">
+            <div>PDS Info</div>
+            <ul class="menu-list">
+                <li><a href="aboutastsubnode.html">About SBN Asteroid Subnode</a></li>
+                <li><a href="http://pdssbn.astro.umd.edu/">SBN Comet Subnode</a></li>
+                <li><a href="http://pds.nasa.gov/">PDS Home</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<div id="search-bar" class="search-container">
+    <div class="search-box" v-bind:class="{focused: focused}">
+        <svg class="search-icon" viewBox="0 0 100 125">
+            <path d="M35.285,8L85,28.228L52.303,70.575l-4.715-17.337C33,59.622,16.45,72.294,43.672,92c0,0-37.15-4.02-26.875-39.512    c0,0,4.692-16.873,23.799-24.958L35.285,8z" />
+        </svg>
+        <div class="input-field">
+            <input tabindex="0" placeholder="Shortcut to data by keyword..." type="text" aria-label="Shortcut to data by keyword"
+                v-model="query"
+                v-on:focus="onFocus"
+                v-on:keyup="keypress">
+        </div>
+    </div>
+    <div class="search-filter" v-if="focused">
+        <label class="toggle-option" v-bind:class="{focused: mode === 'asteroid'}">Asteroid/Dust <input type="radio" v-model="mode" value="asteroid"></label>
+        <label class="toggle-option" v-bind:class="{focused: mode === 'pds'}">PDS <input type="radio" v-model="mode" value="pds"></label>
+    </div>
+    <ul class="search-results" v-if="query.length > 0 && focused">
+        <template v-for="result in searchResults">
+            <li class="search-result" >
+                <a v-bind:href="result.url" v-bind:title="title(result)" tabindex="0">{{result.name}}</a>
+            </li>
+        </template>
+        <p class="no-results" v-if="searchResults.length === 0">No results found</p>
+        <p class="no-results" v-if="searchResults.length === 0">Need help finding something? <a href="contact.html">Contact Us</a></p>
+    </ul>
+</div>
+
+</nav>
+
+
+<!-- END sbn-header -->
+
+
+    <main><div class="sbn-main " >
+    <!-- BEGIN main content -->
+
+    <ol class="breadcrumbs">
+    <li><a href="">Home</a></li>
+    <li class="breadcrumbs-separator">/</li>
+    <li><a href="support/">Support</a></li>
+    <li class="breadcrumbs-separator">/</li>
+    <li><a href="support/Tips.html">Tips & Tricks</a></li>
+    <li class="breadcrumbs-separator">/</li>
+    <li><a href="support/tool-help/">Tool Help</a></li>
+    <li class="breadcrumbs-separator">/</li>
+    <li>PDS4 Viewer</li>
+</ol> 
+<br/>
+
+<h1 class="post-title">PDS4 Viewer</h1>
+<p class="post-subtitle secondary">Mar 01, 2022 
+    
+</p>
+
+<p class="secondary"><em> Part of a series on <a href="support/tool-help/">Tool Help</a> </em></p>
+
+
+<div class="social-post">
+    <h2 id="the-pds4-viewer-too-good-to-be-true">The PDS4 viewer, Too Good to be True?</h2>
+
+<p>Has this ever happened to you?</p>
+
+<p>- You are looking through a PDS4 data set and you realize you’ve had to open multiple confusing software programs just to be able to view all the different data file formats. What a headache!</p>
+
+<p>- Or that you just want a quick view of the data to see if it is what you need?</p>
+
+<p>- Or worse yet, someone needs to access the data and they don’t have the key software used for that type of data (ArcGIS, ISIS, ENVI, IRAF, etc.)  Then, <em>shudder</em>, you have to help them install and learn said program….</p>
+
+<figure><img src="https://pdsregistryimages.psi.edu/tips/PDS4-Viewer/headache.jpg" /><figcaption>Figuring out how to view data can be a headache</figcaption></figure>
+
+<p>If only there was a single tool that allowed you to view tables, images, spectra, arrays all in one place. Well we are here to happily inform you there is! The <strong>PDS4 Viewer</strong> was created to view/browse <strong>ALL</strong> archived PDS4 data. Not only is this the only tool you will need, but it also was designed with PDS4 data formats (and labels) in mind. The days of scrambling through multiple software programs to view data are over!</p>
+
+<h3 id="where-is-it"><strong>Where is it?!</strong></h3>
+
+<p>The PDS4 viewer tool is conveniently available for download on the <a href="https://sbnwiki.asteroiddata.org/PDS4_Viewer.html">PDS4 wiki</a>. As adverstived the PDS4 viewer supports all PDS4 data types (images, spectra, arrays, tables).</p>
+
+<figure><img src="https://pdsregistryimages.psi.edu/tips/PDS4-Viewer/supporteddata.png" /><figcaption>The data types supported in PDS4 viewer</figcaption></figure>
+
+<h3 id="what-does-it-even-do-though"><strong>What Does it Even Do Though?!</strong></h3>
+
+<p>It does alot! The PDS4 viewer is equipped with multiple view modes with are each tailored to assist with viewing specific data types. There are a total of five different view settings:</p>
+<ul>
+  <li>Summary view</li>
+  <li>Image view</li>
+  <li>Table view</li>
+  <li>Label view</li>
+  <li>Plot view.</li>
+</ul>
+
+<p>Each view mode includes special features that can help you analyze everything you could possibly need from the data. It’s like 5 downloads for the price of one!</p>
+
+<h3 id="sounds-exciting-but-how-do-i-even-get-started"><strong>Sounds Exciting But How Do I Even Get Started?!</strong></h3>
+<p>(To follow along we will be using an image from the OSIRIS REx Mission).  Download both:</p>
+
+<ul>
+  <li>Image  <a href="https://sbnarchive.psi.edu/pds4/orex/orex.ocams/data_reduced/preliminary_survey/20181212T060658S533_map_L1pan.fits">20181212t060658s533_map_l1pan.fits</a></li>
+  <li>Label  <a href="https://sbnarchive.psi.edu/pds4/orex/orex.ocams/data_reduced/preliminary_survey/20181212T060658S533_map_L1pan.xml">20181212T060658S533_map_L1pan.xml</a> – (You might need to right click and save as)</li>
+</ul>
+
+<p>Let’s open it <sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup></p>
+
+<ul>
+  <li>Select the <em>file</em> menu on the top left hand corner of your screen</li>
+  <li>Select the <em>“</em>Open…*  menu and choose the <em>xml</em> file  - In this example, since I want to view 20191116T235508S046_map_L1pan.fits I will select 20191116T235508S046_map_L1pan.xml.  The label knows about the product it describes, so all you have to do is open the label file and it figures out the rest.</li>
+</ul>
+
+<h3 id="okay-but-what-is-this-first-page-im-looking-at"><strong>Okay But What is This First Page I’m Looking At?</strong></h3>
+
+<p>The first page you will be looking at will be the “Summary View” of the file. The summary view displays a summary of the available data structures in the label such as the dimensions, data format type and name. Along with the summary information, the PDS4 viewer also provides access to the other data view modes.</p>
+
+<figure><img src="https://pdsregistryimages.psi.edu/tips/PDS4-Viewer/summaryview.png" /><figcaption>An example of the summary view</figcaption></figure>
+
+<p>Now, click the “Image” button – poof, here is your image.</p>
+
+<h3 id="what-about-my-image-file-can-this-help-me-brighten-features-that-i-cant-normally-see-clearly"><strong>What About My Image File? Can This Help Me Brighten Features That I Can’t Normally See Clearly?</strong></h3>
+<p>(To Follow along we will be using file <a href="https://sbnarchive.psi.edu/pds4/orex/orex.ocams/data_calibrated/approach/">20181202T101924S744_map_iofL2v.fits</a> from the OSIRIS REx Mission)</p>
+
+<p>So glad you asked, the PDS4 viewer can sure help you with that as well! The the color control features let you manipulate the color scales of the image. To access the color control features click on the image view option on the summary screen. Once you are in image view mode you can use the color tab located on the top left side of your screen to choose a color manipulation scale that works the best for the given photo. <sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup>
+In addition to color manipulatioin you can also use the zoom feature to allow you to get a closer view of a specific area on a target. Zoom has numerous options to allow you to do things such as pan, invert the axis and of course zoom in and out.</p>
+
+<figure><img src="https://pdsregistryimages.psi.edu/tips/PDS4-Viewer/Colornormal.png" /><figcaption>An image before color manipulations have been done</figcaption></figure>
+<figure><img src="https://pdsregistryimages.psi.edu/tips/PDS4-Viewer/Colormani.png" /><figcaption>An image after color manipulations have been done</figcaption></figure>
+
+<h3 id="what-about-my-table-data-file-can-this-be-displayed-clearly-in-the-pds4-viewer"><strong>What about my table data file? Can This Be Displayed Clearly in The PDS4 Viewer?</strong></h3>
+
+<p>Absolutely! Table View was created to handle all table files and will clearly display tables and arrays,  even including arbitrarily nested GROUP fields</p>
+
+<figure><img src="https://pdsregistryimages.psi.edu/tips/PDS4-Viewer/tableview.png" /><figcaption>An example of the table view</figcaption></figure>
+
+<h3 id="im-only-interested-in-viewing-the-data-files-label-information-does-the-pds4-viewer-make-that-easy-to-access"><strong>I’m Only Interested In Viewing The Data Files Label Information, Does The PDS4 Viewer Make That Easy To Access?</strong></h3>
+
+<p>You bet it does! You just have to use the “Label View” which allows for easy, human-readable, access to meta-data (such as structure labels, display settings and spectral characteristics, etc.) To view the full file label select the view option in the upper left hand corner and click full label.</p>
+
+<figure><img src="https://pdsregistryimages.psi.edu/tips/PDS4-Viewer/labelview.png" /><figcaption>An example of the label view</figcaption></figure>
+
+<h3 id="i-have-a-table-data-set-but-i-sure-wish-there-was-a-way-i-could-see-my-data-visualized-as-a-plot"><strong>I Have A Table Data Set But I Sure Wish There Was A Way I Could See My Data Visualized As A Plot…</strong></h3>
+<p>(To Follow along we will be using file <a href="https://sbnarchive.psi.edu/pds4/orex/orex.ola/data_reduced/orbit_a/">20190213_ola_scil1id02100.dat</a> from the OSIRIS REx Mission)</p>
+
+<p>Look through a survey for a good table</p>
+
+<p>Well today is your lucky day because the PDS4 viewer can also do that as well! Plot View helps to visualize table data by plotting columns against each other. Once you are in plot view it will present you with options for your data, such as line or point, error bars and the labels of the axises. Once you have selected all the componenets for your plot simply click “plot” and Presto! You now have a custom generated plot for your data! How effortless was that? Once you are ready to save, plots can easily be exported to images.</p>
+
+<figure><img src="https://pdsregistryimages.psi.edu/tips/PDS4-Viewer/PlotSetup.png" /><figcaption>The plot setup window</figcaption></figure>
+<figure><img src="https://pdsregistryimages.psi.edu/tips/PDS4-Viewer/FinishedPlot.png" /><figcaption>A finished plot example</figcaption></figure>
+
+<h3 id="the-last-tool-youll-need-for-pds4">The Last Tool You’ll Need for PDS4</h3>
+
+<p>The PDS4 viewer was designed specifically for PDS4, and because of that it makes interacting with all PDS4 data types much easier. Whether you are looking at images, spectra, or tables, the PDS4 viewer has the features to make viewing data a breeze. Happy viewing!</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1">
+      <p>You can also open a file from the file url, which saves you having to download the file just to view it. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>Additionally in image view you can use your cursor to find the X,Y coordinates of a specific feature in the image. The image view also lets you see the actual pixel values of arrays. When you hover over a pixel, it shows the actual stored number. There’s also a legend at the bottom. This is useful for derived products like elevation maps, etc. Additionally in the upper left hand corner there are more helpful tools. Frame allows you to move back and forth through image frames easily. Scale allows for manipulation of the scale of the image and can display a histogram of the image. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+</div>
+
+
+    <!-- END main content -->
+    </div></main>
+
+    <!-- BEGIN sbn-footer -->
+
+<footer class="sbn-footer">
+    <p class="sbn-footer-text">
+        For questions about the data sets or this web site, contact Carol Neese (<a href="mailto:neese@psi.edu" class="link">neese@psi.edu</a>).
+    </p>
+</footer>
+
+<div class="sbn-footer-extended">
+    <aside class="sbn-footer-psi-container">
+        <img src="images/PSI_Logo.png" alt="PSI Logo" title="PSI Logo" class="psi-logo">
+        <span>Hosted by the Planetary Science Institute</span>
+    </aside>
+</div>
+
+<!-- END sbn-footer -->
+
+
+    
+
+
+    <script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/scripts20210813.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>

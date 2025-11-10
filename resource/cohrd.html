@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     
+    <base href="/pds/" />
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Cassini HRD | PDS SBN Asteroid/Dust Subnode</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main20210813.css">
+    <link rel="stylesheet" href="css/header20210331.css">
+    <link rel="stylesheet" href="css/footer20210331.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <!-- PDS Feedback Widget -->
+    <!-- Only add JQuery if you do not already include a library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <!-- -->
+
+
+    </head>
+<body>
+
+    <!-- BEGIN sbn-header -->
+
+<header>
+    <div id="sbn-notices">
+        <!--
+        <div class="notice">
+            PUT ANY DOWNTIME NOTICES HERE
+        </div>
+        -->
+    </div>
+    <div id="sbn-header">
+
+        <div class="sbn-title-container">
+            <div class="sbn-title"><a class="ignore-a-styling" href="http://pdssbn.astro.umd.edu/">PDS Small Bodies Node</a></div>
+            <a class="sbn-subtitle ignore-a-styling" href="">Asteroid/Dust Subnode</a>
+        </div>
+        <div class="gradient-bar"></div>
+    </div>
+</header>
+<nav>
+    
+    <div id="menu-backdrop"></div>
+    <div id="menu-drawer">
+        <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+        </svg>
+    </div>
+
+    <div id="theme-switch">
+        <label for="theme-switch-checkbox">
+            <input type="checkbox" id="theme-switch-checkbox" />
+            <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 0 24 24" width="30" title="Change light/dark theme">
+                <title>Change light/dark theme</title>
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                    d="M20 15.31L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69zM12 18V6c3.31 0 6 2.69 6 6s-2.69 6-6 6z" />
+            </svg>
+      </label>
+    </div>
+    <div id="menu">
+        <div class="menu-handle">
+            <div>Find Data</div>
+            <ul class="menu-list">
+                <li><a href="">Archive Home</a></li>
+                <li class="divider"></li>
+                <li><a href="archive/data-types.html"> Browse by Data Type</a></li>
+                <li><a href="archive/target-types.html"> Browse by Target Type</a></li>
+                <li><a href="archive/missions.html"> Browse by Mission</a></li>
+                <li class="divider"></li>
+                <li><a href="ferret/">Ferret - Target Search</a></li>
+                <li><a href="sbib/">SBIB - Image Search</a></li>
+                <li><a href="https://catch.astro.umd.edu/">CATCH - Survey Search</a></li>
+            </ul>
+        </div>
+        <div class="menu-handle">
+            <div>Archive Data</div>
+            <ul class="menu-list">
+                <li><a href="olafs">OLAF - Archive your data</a></li>
+                <li><a href="sbnarchivinghowto.html">How to Archive</a></li>
+                <li><a href="other_tools/pdf1a.html">PDF/A Tools</a></li>
+                <li><a href="https://pds.nasa.gov/datastandards/documents/current-version.shtml">PDS4 Standards</a></li>
+            </ul>
+        </div>
+        <div class="menu-handle">
+            <div>Support</div>
+            <ul class="menu-list">
+                <li><a href="support/">Support Home</a></li>
+                <li class="divider"></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="support/Tips.html">Tips & Tricks Articles <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="24px" class="callout-svg-icon"><title>New!</title><path d="M0 0h24v24H0z" fill="none"/><path d="M23 12l-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68L23 12zm-10 5h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg></a></li>
+                <li><a href="support/FAQ.html">Frequently Asked Questions</a></li>
+                <li><a href="support/Keyterms.html">Key Terms</a></li>
+                <li><a href="support/Glossary.html">Full Glossary</a></li>
+                <li class="divider"></li>
+                <li><a href="https://pds.nasa.gov/home/proposers/">Information for Data Proposers</a></li>
+                <li><a href="https://sbnwiki.astro.umd.edu/wiki/SBN_PDS4_Wiki">PDS4 Tutorials and Quick Ref</a></li>
+                <li><a href="http://pdssbn.astro.umd.edu/howto/understand.shtml">Using PDS Data</a></li>
+            </ul>
+        </div>
+        <div class="menu-handle">
+            <div>PDS Info</div>
+            <ul class="menu-list">
+                <li><a href="aboutastsubnode.html">About SBN Asteroid Subnode</a></li>
+                <li><a href="http://pdssbn.astro.umd.edu/">SBN Comet Subnode</a></li>
+                <li><a href="http://pds.nasa.gov/">PDS Home</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<div id="search-bar" class="search-container">
+    <div class="search-box" v-bind:class="{focused: focused}">
+        <svg class="search-icon" viewBox="0 0 100 125">
+            <path d="M35.285,8L85,28.228L52.303,70.575l-4.715-17.337C33,59.622,16.45,72.294,43.672,92c0,0-37.15-4.02-26.875-39.512    c0,0,4.692-16.873,23.799-24.958L35.285,8z" />
+        </svg>
+        <div class="input-field">
+            <input tabindex="0" placeholder="Shortcut to data by keyword..." type="text" aria-label="Shortcut to data by keyword"
+                v-model="query"
+                v-on:focus="onFocus"
+                v-on:keyup="keypress">
+        </div>
+    </div>
+    <div class="search-filter" v-if="focused">
+        <label class="toggle-option" v-bind:class="{focused: mode === 'asteroid'}">Asteroid/Dust <input type="radio" v-model="mode" value="asteroid"></label>
+        <label class="toggle-option" v-bind:class="{focused: mode === 'pds'}">PDS <input type="radio" v-model="mode" value="pds"></label>
+    </div>
+    <ul class="search-results" v-if="query.length > 0 && focused">
+        <template v-for="result in searchResults">
+            <li class="search-result" >
+                <a v-bind:href="result.url" v-bind:title="title(result)" tabindex="0">{{result.name}}</a>
+            </li>
+        </template>
+        <p class="no-results" v-if="searchResults.length === 0">No results found</p>
+        <p class="no-results" v-if="searchResults.length === 0">Need help finding something? <a href="contact.html">Contact Us</a></p>
+    </ul>
+</div>
+
+</nav>
+
+
+<!-- END sbn-header -->
+
+
+    <main><div class="sbn-main " >
+    <!-- BEGIN main content -->
+
+            <ol class="breadcrumbs">
+            <li><a href="">Home</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="archive/missions.html">Missions</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="archive/cassini.html">Cassini</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li>High Rate Detector (HRD)</li>
+        </ol>
+        
+        <center>
+            <h2> Cassini High Rate Detector (HRD)</h2>
+            </center>
+
+<p>
+The High Rate Detector (HRD) from the
+        University of Chicago is an independent part of the CDA instrument on
+        the Cassini Orbiter that measures the dust flux and particle mass
+        distribution of dust particles hitting the HRD detectors.  This data
+        set includes all data from the HRD through the end of the mission.
+
+            <p>
+            The Cassini CDA data are
+            also available, and can be accessed at <a href="resource/cocda.html">this link</a>.
+
+            <br><br>
+            <b>Release Date:</b> 2020-06-28
+             <br><br>
+            <a
+            href="https://sbnarchive.psi.edu/pds4/cassini/cassini_high_rate_detector/document/bundle_description.txt"
+            class="pds-button">
+            Data Set Info
+        </a>
+            <p>
+            <table border=1>
+            <tr><td>
+                <td> Browse:
+                <td> Download size:
+                <td> Download:
+<tr><td> PDS4 version
+    <td> <a href="https://sbnarchive.psi.edu/pds4/cassini/cassini_high_rate_detector">urn:nasa:pds:cassini_high_rate_detector::1.0</a>
+    <td> 111 MBytes
+    <td> <a href="https://sbnarchive.psi.edu/pds4/cassini/cassini_high_rate_detector.zip">cassini_high_rate_detector.zip</a>
+<tr><td>PDS3 version
+    <td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd18/"> CO-D-HRD-3-COHRD-V18.0 </a>
+    <td> 113 MBytes
+    <td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd18.zip">cohrd18.zip </a>
+            </table>
+
+<p>
+The PDS4 bundle was migrated from the PDS3 data set CO-D-HRD-3-COHRD-V18.0 in
+June 2018.  The data content is unchanged.
+
+            <p>
+            Please use this citation when using these data:
+
+            <p>
+            "Economou, T. and DiDonna, P. (2018). Cassini
+                    High Rate Detector V1.0, urn:nasa:pds:cassini_high_rate_detector::1.0. NASA Planetary Data System; https://doi.org/10.26033/yyp7-dq27."
+
+    <h3 id="pds-superseded-title">Superseded Versions: <a onclick="setShow()" id="pds-superseded-toggle">Show</a></h3>
+
+
+            <table border=1 id="pds-superseded">
+            <tr><td> Browse:
+                <td> Start time:
+                <td> Stop time:
+                <td> Download size:
+                <td> Download:
+<tr><td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd17/"> CO-D-HRD-3-COHRD-V17.0 </a>
+    <td> 1999-084
+    <td> 2016-366
+    <td> 103 MBytes
+                <td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd17.zip">cohrd17.zip </a>
+            <tr><td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd16/"> CO-D-HRD-3-COHRD-V16.0 </a>
+                <td> 1999-084
+                <td> 2015-365
+                <td> 101 MBytes
+                <td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd16.zip">cohrd16.zip </a>
+            <tr><td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd15/"> CO-D-HRD-3-COHRD-V15.0 </a>
+                <td> 1999-084
+                <td> 2014-365
+                <td> 99 MBytes
+                <td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd15.zip">cohrd15.zip </a>
+            <tr><td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd14/"> CO-D-HRD-3-COHRD-V14.0 </a>
+                <td> 1999-084
+                <td> 2013-365
+                <td> 98 MBytes
+                <td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd14.zip">cohrd14.zip </a>
+            <tr><td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd13/"> CO-D-HRD-3-COHRD-V13.0 </a>
+                <td> 1999-084
+                <td> 2013-269
+                <td> 97 MBytes
+                <td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd13.zip">cohrd13.zip </a>
+            <tr><td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd12/"> CO-D-HRD-3-COHRD-V12.0 </a>
+                <td> 1999-084
+                <td> 2012-365
+                <td> 97 MBytes
+                <td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd12.zip"> cohrd12.zip </a>
+            <tr><td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd11/"> CO-D-HRD-3-COHRD-V11.0 </a>
+                <td> 1999-084
+                <td> 2011-365
+                <td> 96 MBytes
+                <td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd11.zip"> cohrd11.zip </a>
+            <tr><td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd10/"> CO-D-HRD-3-COHRD-V10.0 </a>
+                <td> 1999-084
+                <td> 2011-199
+                <td> 90 MBytes
+                <td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd10.zip"> cohrd10.zip </a>
+            <tr><td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd9/"> CO-D-HRD-3-COHRD-V9.0 </a>
+                <td> 1999-084
+                <td> 2010-365
+                <td> 90 MBytes
+                <td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd9.zip"> cohrd9.zip </a>
+            <tr><td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd8/"> CO-D-HRD-3-COHRD-V8.0 </a>
+                <td> 1999-084
+                <td> 2010-181
+                <td> 88 MBytes
+                <td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd8.zip"> cohrd8.zip </a>
+            <tr><td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd7/"> CO-D-HRD-3-COHRD-V7.0 </a>
+                <td> 1999-084
+                <td> 2009-365
+                <td> 87 MBytes
+                <td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd7.zip"> cohrd7.zip </a>
+            <tr><td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd6/"> CO-D-HRD-3-COHRD-V6.0 </a>
+                <td> 1999-084
+                <td> 2009-279
+                <td> 87 MBytes
+                <td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd6.zip"> cohrd6.zip </a>
+            <tr><td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd5/"> CO-D-HRD-3-COHRD-V5.0 </a>
+                <td> 1999-084
+                <td> 2008-366
+                <td> 78 MBytes
+                <td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd5.zip"> cohrd5.zip </a>
+            <tr><td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd4/"> CO-D-HRD-3-COHRD-V4.0 </a>
+                <td> 1999-084
+                <td> 2008-210
+                <td> 65 MBytes
+                <td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd4.zip"> cohrd4.zip </a>
+            <tr><td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd3/"> CO-D-HRD-3-COHRD-V3.0 </a>
+                <td> 1999-084
+                <td> 2007-365
+                <td> 50 MBytes
+                <td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd3.zip"> cohrd3.zip </a>
+            <tr><td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd2/"> CO-D-HRD-3-COHRD-V2.0 </a>
+                <td> 1999-084
+                <td> 2007-228
+                <td> 38 MBytes
+                <td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd2.zip"> cohrd2.zip </a>
+            <tr><td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd1/"> CO-D-HRD-3-COHRD-V1.0 </a>
+                <td> 1999-084
+                <td> 2006-365
+                <td> 33 MBytes
+                <td> <a href="https://sbnarchive.psi.edu/pds3/cassini/hrd/cohrd1.zip"> cohrd1.zip </a>
+            </table>
+            </center>
+
+            <br>
+
+
+    <!-- END main content -->
+    </div></main>
+
+    <!-- BEGIN sbn-footer -->
+
+<footer class="sbn-footer">
+    <p class="sbn-footer-text">
+        For questions about the data sets or this web site, contact Carol Neese (<a href="mailto:neese@psi.edu" class="link">neese@psi.edu</a>).
+    </p>
+</footer>
+
+<div class="sbn-footer-extended">
+    <aside class="sbn-footer-psi-container">
+        <img src="images/PSI_Logo.png" alt="PSI Logo" title="PSI Logo" class="psi-logo">
+        <span>Hosted by the Planetary Science Institute</span>
+    </aside>
+</div>
+
+<!-- END sbn-footer -->
+
+
+    
+
+
+    <script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/scripts20210813.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>

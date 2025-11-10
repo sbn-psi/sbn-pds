@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     
+    <base href="/pds/" />
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>How To Print A 3D Shape Model | PDS SBN Asteroid/Dust Subnode</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main20210813.css">
+    <link rel="stylesheet" href="css/header20210331.css">
+    <link rel="stylesheet" href="css/footer20210331.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <!-- PDS Feedback Widget -->
+    <!-- Only add JQuery if you do not already include a library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <!-- -->
+
+
+    </head>
+<body>
+
+    <!-- BEGIN sbn-header -->
+
+<header>
+    <div id="sbn-notices">
+        <!--
+        <div class="notice">
+            PUT ANY DOWNTIME NOTICES HERE
+        </div>
+        -->
+    </div>
+    <div id="sbn-header">
+
+        <div class="sbn-title-container">
+            <div class="sbn-title"><a class="ignore-a-styling" href="http://pdssbn.astro.umd.edu/">PDS Small Bodies Node</a></div>
+            <a class="sbn-subtitle ignore-a-styling" href="">Asteroid/Dust Subnode</a>
+        </div>
+        <div class="gradient-bar"></div>
+    </div>
+</header>
+<nav>
+    
+    <div id="menu-backdrop"></div>
+    <div id="menu-drawer">
+        <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+        </svg>
+    </div>
+
+    <div id="theme-switch">
+        <label for="theme-switch-checkbox">
+            <input type="checkbox" id="theme-switch-checkbox" />
+            <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 0 24 24" width="30" title="Change light/dark theme">
+                <title>Change light/dark theme</title>
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                    d="M20 15.31L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69zM12 18V6c3.31 0 6 2.69 6 6s-2.69 6-6 6z" />
+            </svg>
+      </label>
+    </div>
+    <div id="menu">
+        <div class="menu-handle">
+            <div>Find Data</div>
+            <ul class="menu-list">
+                <li><a href="">Archive Home</a></li>
+                <li class="divider"></li>
+                <li><a href="archive/data-types.html"> Browse by Data Type</a></li>
+                <li><a href="archive/target-types.html"> Browse by Target Type</a></li>
+                <li><a href="archive/missions.html"> Browse by Mission</a></li>
+                <li class="divider"></li>
+                <li><a href="ferret/">Ferret - Target Search</a></li>
+                <li><a href="sbib/">SBIB - Image Search</a></li>
+                <li><a href="https://catch.astro.umd.edu/">CATCH - Survey Search</a></li>
+            </ul>
+        </div>
+        <div class="menu-handle">
+            <div>Archive Data</div>
+            <ul class="menu-list">
+                <li><a href="olafs">OLAF - Archive your data</a></li>
+                <li><a href="sbnarchivinghowto.html">How to Archive</a></li>
+                <li><a href="other_tools/pdf1a.html">PDF/A Tools</a></li>
+                <li><a href="https://pds.nasa.gov/datastandards/documents/current-version.shtml">PDS4 Standards</a></li>
+            </ul>
+        </div>
+        <div class="menu-handle">
+            <div>Support</div>
+            <ul class="menu-list">
+                <li><a href="support/">Support Home</a></li>
+                <li class="divider"></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="support/Tips.html">Tips & Tricks Articles <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="24px" class="callout-svg-icon"><title>New!</title><path d="M0 0h24v24H0z" fill="none"/><path d="M23 12l-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68L23 12zm-10 5h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg></a></li>
+                <li><a href="support/FAQ.html">Frequently Asked Questions</a></li>
+                <li><a href="support/Keyterms.html">Key Terms</a></li>
+                <li><a href="support/Glossary.html">Full Glossary</a></li>
+                <li class="divider"></li>
+                <li><a href="https://pds.nasa.gov/home/proposers/">Information for Data Proposers</a></li>
+                <li><a href="https://sbnwiki.astro.umd.edu/wiki/SBN_PDS4_Wiki">PDS4 Tutorials and Quick Ref</a></li>
+                <li><a href="http://pdssbn.astro.umd.edu/howto/understand.shtml">Using PDS Data</a></li>
+            </ul>
+        </div>
+        <div class="menu-handle">
+            <div>PDS Info</div>
+            <ul class="menu-list">
+                <li><a href="aboutastsubnode.html">About SBN Asteroid Subnode</a></li>
+                <li><a href="http://pdssbn.astro.umd.edu/">SBN Comet Subnode</a></li>
+                <li><a href="http://pds.nasa.gov/">PDS Home</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<div id="search-bar" class="search-container">
+    <div class="search-box" v-bind:class="{focused: focused}">
+        <svg class="search-icon" viewBox="0 0 100 125">
+            <path d="M35.285,8L85,28.228L52.303,70.575l-4.715-17.337C33,59.622,16.45,72.294,43.672,92c0,0-37.15-4.02-26.875-39.512    c0,0,4.692-16.873,23.799-24.958L35.285,8z" />
+        </svg>
+        <div class="input-field">
+            <input tabindex="0" placeholder="Shortcut to data by keyword..." type="text" aria-label="Shortcut to data by keyword"
+                v-model="query"
+                v-on:focus="onFocus"
+                v-on:keyup="keypress">
+        </div>
+    </div>
+    <div class="search-filter" v-if="focused">
+        <label class="toggle-option" v-bind:class="{focused: mode === 'asteroid'}">Asteroid/Dust <input type="radio" v-model="mode" value="asteroid"></label>
+        <label class="toggle-option" v-bind:class="{focused: mode === 'pds'}">PDS <input type="radio" v-model="mode" value="pds"></label>
+    </div>
+    <ul class="search-results" v-if="query.length > 0 && focused">
+        <template v-for="result in searchResults">
+            <li class="search-result" >
+                <a v-bind:href="result.url" v-bind:title="title(result)" tabindex="0">{{result.name}}</a>
+            </li>
+        </template>
+        <p class="no-results" v-if="searchResults.length === 0">No results found</p>
+        <p class="no-results" v-if="searchResults.length === 0">Need help finding something? <a href="contact.html">Contact Us</a></p>
+    </ul>
+</div>
+
+</nav>
+
+
+<!-- END sbn-header -->
+
+
+    <main><div class="sbn-main " >
+    <!-- BEGIN main content -->
+
+    <ol class="breadcrumbs">
+    <li><a href="">Home</a></li>
+    <li class="breadcrumbs-separator">/</li>
+    <li><a href="support/">Support</a></li>
+    <li class="breadcrumbs-separator">/</li>
+    <li><a href="support/Tips.html">Tips & Tricks</a></li>
+    <li class="breadcrumbs-separator">/</li>
+    <li><a href="support/tool-help/">Tool Help</a></li>
+    <li class="breadcrumbs-separator">/</li>
+    <li>How To Print A 3D Shape Model</li>
+</ol> 
+<br/>
+
+<h1 class="post-title">How To Print A 3D Shape Model</h1>
+<p class="post-subtitle secondary">Nov 02, 2021 
+    
+</p>
+
+<p class="secondary"><em> Part of a series on <a href="support/tool-help/">Tool Help</a> </em></p>
+
+
+<div class="social-post">
+    <p>Before COVID-19, back when conferences were in person, we made, gave out and even printed 3D shape models of asteroids and comets for our customers.  Many times, we’ve gotten the request to print models for a variety of reasons.  While this is outside of our charter, we are happy to let people know how to print there own.  Not only are their companies that will print things for you, many university libraries will print 3D objects.</p>
+
+<h2 id="what-is-3d-printing">What is 3D printing?</h2>
+
+<p>3D printing, also known as additive manufacturing, is the process of making a 3-dimensional, physical object from a digital file. An object is created by laying down layer upon layer of material until the final object is complete. Each of these layers is a thinly-sliced cross-section of the object.</p>
+
+<figure><img src="https://pdsregistryimages.psi.edu/tips/how-to-print-shape-models/67p_army.JPG" /><figcaption>image of rows of 67p on printbed</figcaption></figure>
+
+<p>The most common file type used for 3D printing is the G-code file. G-code files contain coordinate positions and other basic commands that tell the printer where to print and how to move, both horizontally and vertically. They also give the printer instructions for how to deliver the material, including what temperature the material should be and how thick each layer should be.</p>
+
+<p>Layer thickness, also called layer height, is similar to pixel resolution on a digital display. Increasing the number of layers in a model will make each layer thinner, resulting in a higher “resolution” model with a better-looking result. On the other hand, more layers take longer to print and can lead to significant increases in print times.</p>
+
+<h2 id="what-materials-are-used-for-3d-printing">What materials are used for 3D printing?</h2>
+
+<p>The most widely used material used in 3D printing is PLA, or polylactic acid. PLA is a type of polymer with a comparably low melting point that is made from fermented plant starch. PLA is popular due to its ease-of-use, dimensional accuracy, and low cost.</p>
+
+<p>Another common material is ABS, or acrylonitrile butadiene styrene. It was one of the first plastics to be used with industrial 3D printers. It boasts toughness and impact resistance that result in durable parts that will hold up to extra usage and wear. LEGO building blocks are made from this material!</p>
+
+<p>There are lots of other materials used for 3D printing, including: PETG, nylon, carbon fiber, ASA, polycarbonate, polypropylene, PVA, and even material blends that include metal and wood. Not all printers are compatible with these materials, so it’s essential to check that the material is compatible with your printer before you start!</p>
+
+<h2 id="what-is-a-shape-model">What is a shape model?</h2>
+
+<p>A shape model is a digital file that describes 3D geometry. The most common file format for shape models, and the one we will discuss in this article, is OBJ; but other common formats exist, such as STL.</p>
+
+<p>OBJ files contain the position of each vertex, vertex normals, and the faces that make each polygon defined as a list of vertices. Most 3D graphics and animation software are compatible with OBJ, so viewing and modifying the models graphically is easy and it’s uncommon to ever have to interact with OBJ files in their “raw” form.</p>
+<figure><img src="https://pdsregistryimages.psi.edu/tips/how-to-print-shape-models/itokawa.gif" /><figcaption>Animated GIF of Itokawa</figcaption></figure>
+
+<h2 id="does-pds-have-printable-shape-models">Does PDS have printable shape models?</h2>
+
+<p>Yes! PDS SBN archives lots of shape models, and we provide OBJ versions for many of them.</p>
+
+<p><a href="https://sbn.psi.edu/pds/shape-models/">PDS Small Bodies Node: Shape Models</a></p>
+
+<p>NASA also makes available its own repository of 3D models, including spacecraft, solar system bodies, and digital terrain models.</p>
+
+<p><a href="​​https://nasa3d.arc.nasa.gov/models">NASA 3D Resources</a></p>
+
+<h2 id="i-have-the-obj-files-now-what">I have the OBJ files, now what?</h2>
+
+<h3 id="slicing-software">Slicing Software</h3>
+
+<p>Now that you have a digital model, you need to create a G-code file that can tell a 3D printer how to print it. This is where *slicing** software comes in. As we discussed previously, a 3D printer works by adding layer upon layer of material until a model is complete. These layers are cross-sections of the digital model, and slicing software is what performs this conversion from cross-sections to layers.</p>
+
+<p>There are a variety of slicing software available; some open-source, some proprietary. Many 3D printer manufacturers also produce their own slicing software that is specifically tailored for use with the corresponding hardware. Choosing the right slicing software is a personal choice, and often comes down to trial and error. If you’re looking for a recommendation to get started, a popular open-source slicer is <a href="https://ultimaker.com/software/ultimaker-cura">Ultimaker Cura</a>.</p>
+
+<figure><img src="https://pdsregistryimages.psi.edu/tips/how-to-print-shape-models/slicer_preview.png" /><figcaption>image of slicing software preview</figcaption></figure>
+
+<p>Since each slicing software is different, you’ll need to learn a bit about the software you’re going to use. However, all slicing software ultimately performs the same task- combining a digital model file and user-configured printer settings (such as printhead temperature, layer height, print speed, etc.) into a set of instructions that a specific model of 3D printer can understand. The output is a G-code file that will be delivered to the 3D printer as the final step in the production of a physical model.</p>
+
+<h3 id="time-to-print">Time to print!</h3>
+
+<p>The last step is to deliver the G-code file to the 3D printer and let the printer do its job. While this might seem like a simple step, the printing process can itself be time consuming and highly iterative. While slicing software tries to minimize the risk of print failures, every person prints spaghetti from time to time. Be patient and try not to get discouraged. Each failure is an opportunity to learn and modify the printer settings. Once your prints begin to complete reliably, you’ll be able to produce other models with much more confidence. And your impressive new models of space objects are sure to be out of this world!</p>
+
+</div>
+
+
+    <!-- END main content -->
+    </div></main>
+
+    <!-- BEGIN sbn-footer -->
+
+<footer class="sbn-footer">
+    <p class="sbn-footer-text">
+        For questions about the data sets or this web site, contact Carol Neese (<a href="mailto:neese@psi.edu" class="link">neese@psi.edu</a>).
+    </p>
+</footer>
+
+<div class="sbn-footer-extended">
+    <aside class="sbn-footer-psi-container">
+        <img src="images/PSI_Logo.png" alt="PSI Logo" title="PSI Logo" class="psi-logo">
+        <span>Hosted by the Planetary Science Institute</span>
+    </aside>
+</div>
+
+<!-- END sbn-footer -->
+
+
+    
+
+
+    <script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/scripts20210813.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>

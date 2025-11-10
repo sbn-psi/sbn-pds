@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     
+    <base href="/pds/" />
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Asteriod Data Sets | PDS SBN Asteroid/Dust Subnode</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main20210813.css">
+    <link rel="stylesheet" href="css/header20210331.css">
+    <link rel="stylesheet" href="css/footer20210331.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <!-- PDS Feedback Widget -->
+    <!-- Only add JQuery if you do not already include a library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <!-- -->
+
+
+    </head>
+<body>
+
+    <!-- BEGIN sbn-header -->
+
+<header>
+    <div id="sbn-notices">
+        <!--
+        <div class="notice">
+            PUT ANY DOWNTIME NOTICES HERE
+        </div>
+        -->
+    </div>
+    <div id="sbn-header">
+
+        <div class="sbn-title-container">
+            <div class="sbn-title"><a class="ignore-a-styling" href="http://pdssbn.astro.umd.edu/">PDS Small Bodies Node</a></div>
+            <a class="sbn-subtitle ignore-a-styling" href="">Asteroid/Dust Subnode</a>
+        </div>
+        <div class="gradient-bar"></div>
+    </div>
+</header>
+<nav>
+    
+    <div id="menu-backdrop"></div>
+    <div id="menu-drawer">
+        <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+        </svg>
+    </div>
+
+    <div id="theme-switch">
+        <label for="theme-switch-checkbox">
+            <input type="checkbox" id="theme-switch-checkbox" />
+            <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 0 24 24" width="30" title="Change light/dark theme">
+                <title>Change light/dark theme</title>
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                    d="M20 15.31L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69zM12 18V6c3.31 0 6 2.69 6 6s-2.69 6-6 6z" />
+            </svg>
+      </label>
+    </div>
+    <div id="menu">
+        <div class="menu-handle">
+            <div>Find Data</div>
+            <ul class="menu-list">
+                <li><a href="">Archive Home</a></li>
+                <li class="divider"></li>
+                <li><a href="archive/data-types.html"> Browse by Data Type</a></li>
+                <li><a href="archive/target-types.html"> Browse by Target Type</a></li>
+                <li><a href="archive/missions.html"> Browse by Mission</a></li>
+                <li class="divider"></li>
+                <li><a href="ferret/">Ferret - Target Search</a></li>
+                <li><a href="sbib/">SBIB - Image Search</a></li>
+                <li><a href="https://catch.astro.umd.edu/">CATCH - Survey Search</a></li>
+            </ul>
+        </div>
+        <div class="menu-handle">
+            <div>Archive Data</div>
+            <ul class="menu-list">
+                <li><a href="olafs">OLAF - Archive your data</a></li>
+                <li><a href="sbnarchivinghowto.html">How to Archive</a></li>
+                <li><a href="other_tools/pdf1a.html">PDF/A Tools</a></li>
+                <li><a href="https://pds.nasa.gov/datastandards/documents/current-version.shtml">PDS4 Standards</a></li>
+            </ul>
+        </div>
+        <div class="menu-handle">
+            <div>Support</div>
+            <ul class="menu-list">
+                <li><a href="support/">Support Home</a></li>
+                <li class="divider"></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="support/Tips.html">Tips & Tricks Articles <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="24px" class="callout-svg-icon"><title>New!</title><path d="M0 0h24v24H0z" fill="none"/><path d="M23 12l-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68L23 12zm-10 5h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg></a></li>
+                <li><a href="support/FAQ.html">Frequently Asked Questions</a></li>
+                <li><a href="support/Keyterms.html">Key Terms</a></li>
+                <li><a href="support/Glossary.html">Full Glossary</a></li>
+                <li class="divider"></li>
+                <li><a href="https://pds.nasa.gov/home/proposers/">Information for Data Proposers</a></li>
+                <li><a href="https://sbnwiki.astro.umd.edu/wiki/SBN_PDS4_Wiki">PDS4 Tutorials and Quick Ref</a></li>
+                <li><a href="http://pdssbn.astro.umd.edu/howto/understand.shtml">Using PDS Data</a></li>
+            </ul>
+        </div>
+        <div class="menu-handle">
+            <div>PDS Info</div>
+            <ul class="menu-list">
+                <li><a href="aboutastsubnode.html">About SBN Asteroid Subnode</a></li>
+                <li><a href="http://pdssbn.astro.umd.edu/">SBN Comet Subnode</a></li>
+                <li><a href="http://pds.nasa.gov/">PDS Home</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<div id="search-bar" class="search-container">
+    <div class="search-box" v-bind:class="{focused: focused}">
+        <svg class="search-icon" viewBox="0 0 100 125">
+            <path d="M35.285,8L85,28.228L52.303,70.575l-4.715-17.337C33,59.622,16.45,72.294,43.672,92c0,0-37.15-4.02-26.875-39.512    c0,0,4.692-16.873,23.799-24.958L35.285,8z" />
+        </svg>
+        <div class="input-field">
+            <input tabindex="0" placeholder="Shortcut to data by keyword..." type="text" aria-label="Shortcut to data by keyword"
+                v-model="query"
+                v-on:focus="onFocus"
+                v-on:keyup="keypress">
+        </div>
+    </div>
+    <div class="search-filter" v-if="focused">
+        <label class="toggle-option" v-bind:class="{focused: mode === 'asteroid'}">Asteroid/Dust <input type="radio" v-model="mode" value="asteroid"></label>
+        <label class="toggle-option" v-bind:class="{focused: mode === 'pds'}">PDS <input type="radio" v-model="mode" value="pds"></label>
+    </div>
+    <ul class="search-results" v-if="query.length > 0 && focused">
+        <template v-for="result in searchResults">
+            <li class="search-result" >
+                <a v-bind:href="result.url" v-bind:title="title(result)" tabindex="0">{{result.name}}</a>
+            </li>
+        </template>
+        <p class="no-results" v-if="searchResults.length === 0">No results found</p>
+        <p class="no-results" v-if="searchResults.length === 0">Need help finding something? <a href="contact.html">Contact Us</a></p>
+    </ul>
+</div>
+
+</nav>
+
+
+<!-- END sbn-header -->
+
+
+    <main><div class="sbn-main "  data-page-theme="images/eros-narrow.jpg" >
+    <!-- BEGIN main content -->
+
+            <ol class="breadcrumbs">
+            <li><a href="">Home</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li><a href="archive/target-types.html">Target Types</a></li>
+            <li class="breadcrumbs-separator">/</li>
+            <li>Asteroids</li>
+        </ol>
+        <center>
+            <h1> Asteroid Data Sets </h1>
+            </center>
+
+            <h2> Altimetry </h2>
+
+            <ul>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/haylidar.html">Hayabusa LIDAR</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/near/nlrinst.html">NEAR Laser Rangefinder (NLR)</a>
+            <li><a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/orex/ola.html">OSIRIS-REx OLA</a>
+            <li><a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/hayabusa2/lidar.html">Hayabusa2 LIDAR</a>
+            </a>
+            </ul>
+
+            <h2> Image Data </h2>
+
+            <ul>
+            <li> <a href="http://pdssbn.astro.umd.edu/holdings/pds4-bopps2014-v1.0/SUPPORT/dataset.html">Balloon Observation Platform for Planetary Science (BOPPS) 2014 Observations</a></li><!-- urn:nasa:pds:bopps2014::1.0 -->
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/css.html">Catalina Sky Survey (CSS)</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/dawn/dwnfcmarscruisecal.html">Dawn Framing Camera Mars and Cruise raw and calibrated images</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/dawn/dwnvfcL1.html">Dawn Framing Camera Vesta raw and calibrated images</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/dawn/dwncfcL1.html">Dawn Framing Camera Ceres raw and calibrated images</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/dawn/dwnfcmarscruisecal.html">Dawn Framing Camera image calibration files</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/erosbackplane.html">Eros MSI Images with Geometry Backplanes</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/finkss.html">Fink Images and Spectra of Solar System Objects</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/gaspracal.html">Galileo SSI Gaspra Radiometrically Calibrated Images</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/idacalimages.html">Galileo SSI Ida Radiometrically Calibrated Images</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/gaspracube.html">Galileo NIMS Gaspra Spectral Image Cube</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/hayamica.html">Hayabusa AMICA</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/amicageom.html">Hayabusa AMICA with Geometry Backplanes</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/hayabusa2/mascot_mascam.html">Hayabusa2 MASCOT Camera (MASCAM)</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/hayabusa2/tir.html">Hayabusa2 Thermal Infrared Imager (TIR)</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/hayabusa2/onc.html">Hayabusa2 Optical Navigation Cameras (ONC)</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/cereshst.html">  HST Images, Albedo Maps, and Shape of 1 Ceres </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/idagaspra.html">
+            The Ida/Gaspra Collection</a>, including Galileo SSI images of Ida and Gaspra
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/msxsb.html"> MSX Small Bodies Images </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/near/msiinst.html"> NEAR MSI </a>
+            images of Mathilde and Eros
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/neat.html">Near Earth Asteroid Tracking (NEAT) Survey</a>
+            <li><a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/orexlc.html">OSIRIS-REx Mt. Bigelow Ground Based Bennu Observations</a>
+            <li><a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/orex/ocams.html">OSIRIS-REx OCAMS</a>
+            <li><a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/orex/tagcams.html">OSIRIS-REx TAGCAMS</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/benecchiocc.html">P445.3 (Pluto) Occultation</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/sw.html"> Spacewatch 0.9m Mosaic Camera Survey</a>
+            <li> <a href="http://pdssbn.astro.umd.edu/holdings/sdu-a-navcam-2-edr-annefrank-v1.0/dataset.html"> Stardust NAVCAM Annefrank Images </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/td10phot.html"> Visual Imaging and Photometry of (29981) 1999 TD10 </a>
+            </ul>
+
+            <h2>Maps and Mosaics</h2>
+
+            <ul>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/ceres_urvara.html">Ceres Urvara Dawn FC C2E mosaics</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/dawn/dwnvfcmosaics.html">Dawn Global Image Mosaics of Vesta</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/dawn/dwncfcmosaics.html">Dawn Global Image Mosaics of Ceres</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/dawn/dwnvgrdmaps.html">Dawn GRaND Abundance Maps of Vesta</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/dawn/dwncgrdmaps.html">Dawn GRaND Abundance Maps of Ceres</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/dawn/dwnvvirmaps.html">Dawn VIR Spectral Maps of Vesta</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/dawn/dwncvirmaps.html">Dawn VIR Spectral Maps of Ceres</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/near/msiinst.html">NEAR MSI Eros Image Maps</a>
+<li><a href="https://pdssbn.astro.umd.edu/holdings/nh-a-lorri_mvic-5-geophys-v1.0/dataset.shtml">New Horizons Arrokoth Encounter Geology and Geophysical Maps and Shape Models</a></li><!-- NH-A-LORRI/MVIC-5-GEOPHYS-V1.0 -->
+<li><a href="https://pdssbn.astro.umd.edu/holdings/nh-a-leisa_mvic-5-comp-v1.0/dataset.shtml">New Horizons Arrokoth Encounter Surface Composition Maps</a></li><!-- NH-A-LEISA/MVIC-5-COMP-V1.0 -->
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/stookemaps.html"> Stooke Small Bodies Maps </a> - maps and mosaics of asteroids and small solar system bodies, by Philip Stooke
+            </ul>
+
+            <h2>Nuclear or X-ray/Gamma-Ray/Neutron</h2>
+
+            <ul>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/dawn/dawngrandPDS4.html">Complete PDS4 GRaND Archive</a> - Same data as the PDS3 version, with enhanced meta data and documentation
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/dawn/dwngrdmarscruise.html">Dawn GRaND Mars and Cruise raw and calibrated (PDS3)</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/dawn/dwnvgrdL1.html">Dawn GRaND Vesta raw and calibrated (PDS3)</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/dawn/dwncgrdL1.html">Dawn GRaND Ceres raw and calibrated (PDS3)</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/dawn/dwnvgrdmaps.html">Dawn GRaND Abundance Maps of Vesta (PDS3)</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/dawn/dwncgrdmaps.html">Dawn GRaND Abundance Maps of Ceres (PDS3)</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/near/grsinst.html">NEAR Gamma-ray Spectrometer</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/near/xrsinst.html">NEAR X-ray Spectrometer</a>
+            </ul>
+
+            <h2> Orbital Data </h2>
+
+            <ul>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/hifam.html"> High-i Asteroid Families </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/ianninispec.html">Iannini Asteroid Family Spectra</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/mothefam.html"> MRC
+            (Mothe-Diniz, Roig, and Carvano) Asteroid Families </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/nesvornyfam.html">Nesvorny HCM Asteroid Families</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/skads.html">Sub-Kilometer Asteroid
+             Diameter Survey (SKADS)</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/family.html"> Zappala Asteroid Families </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/earthapp.html"> Asteroids Which Closely Approach Earth's Orbit
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/closeapp.html"> Close Approaches between Earth and Asteroids </a>
+
+
+            </ul>
+
+            <h2> Photometry and Lightcurves </h2>
+
+            <ul>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/2mass.html"> 2MASS Asteroid and Comet Survey </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/lc.html"> Asteroid Lightcurve Data Base (LCDB) </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/alcdef.html"> Asteroid Lightcurve Data Exchange Format (ALCDEF) Database </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/apc.html"> Asteroid Photometric Catalog (APC) </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/ubvmean.html"> Asteroid UBV Colors </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/astdenis.html">  Near-IR Photometry of Asteroids from DENIS </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/lcneo.html"> NEO Lightcurves </a>
+            <li><a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/orexlc.html">OSIRIS-REx Mt. Bigelow Ground Based Bennu Observations</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/benecchiocc.html">P445.3 (Pluto) Occultation</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/pcme.html"> Pluto-Charon Mutual Events </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/sdssmoc.html"> Sloan Digital Sky Survey Moving Object Catalog </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/fornasier.html">Spectroscopy and Photometry of Jupiter Trojans</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/skads.html">Sub-Kilometer Asteroid Diameter Survey (SKADS)</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/submmlc.html"> Submillimeter Lightcurves of Asteroids </a>
+            <li> <a href="https://pdssbn.astro.umd.edu/holdings/pds4-compil-comet:lightcurves-v1.0/SUPPORT/dataset.html">Survey of Comet Lightcurves</a> - This data set also contains asteroids which have cometary properties, namely 2060 Chiron and 4015 Wilson-Harrington.
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/tnolc.html"> Transneptunian Lightcurves </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/tnocencol.html"> Transneptunian and Centaur Colors </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/td10phot.html"> Visual Imaging and Photometry of (29981) 1999 TD10 </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/whiteley.html"> Whiteley NEO Photometry </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/wisast.html"> Wisniewski Asteroid Magnitudes </a>
+            </ul>
+
+            <h2> Physical Properties </h2>
+
+            <ul>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/astermag.html"> Absolute Magnitudes and Slopes </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/albedo.html"> Albedos </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/occalb.html"> Albedos from Stellar Occultations </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/binmp.html"> Binary Minor Planets Summary </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/binsum.html"> Binary NEOs Summary </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/busdemeotax.html">Bus-DeMeo Taxonomy</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/delbo.html"> Delbo Thermal Infrared Asteroid Diameters and Albedos </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/density.html"> Densities </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/imps.html"> IRAS Minor Planet Survey (IMPS) Diameters and Albedos </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/kbomags.html"> KBO and Centaur Absolute Magnitudes </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/magphase.html">Kharkiv Asteroid Magnitude-Phase Relations</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/astmass.html">Masses</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/mimps.html"> MSX Infrared Minor Planet Survey (MIMPS) Diameters and Albedos </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/neowisediam.html">NEOWISE Diameters and Albedos</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/occ.html"> Occultation Timings and Diameters </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/erosponds.html"> Roberts Eros Ponds Catalog </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/sdsstax.html">SDSS-based Asteroid Taxonomy</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/spin.html"> Spin Vectors </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/taxonomy.html"> Taxonomic Classifications </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/destaxonomy.html">Taxonomy, colors, and slope parameters for asteroids from the Dark Energy Survey </a>            
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/tnocenalb.html"> TNO and Centaur Diameters, Albedos, and Densities</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/triadrad.html"> TRIAD Radiometric Diameters and Albedos </a>
+            </ul>
+
+            <h2> Plasma/Particles/Magnetospheres </h2>
+
+            <ul>
+            <li><a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/near/maginst.html">NEAR Magnetometer (MAG) data</a>
+            </ul>
+
+            <h2> Polarimetry </h2>
+
+            <ul>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/apd.html"> Asteroid Polarimetric Database (APD) </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/belskayapol.html">Belskaya Asteroid Polarimetry</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/tnopol.html">TNO and Centaur Polarimetry</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/torinopol.html"> Torino Asteroid Polarimetry </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/itokawapol.html"> Torino Polarimetry of 25143 Itokawa </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/polar.html"> TRIAD Asteroid Polarimetry </a> (superseded by Asteroid Polarimetric Database)
+            </ul>
+
+            <h2> Radar </h2>
+
+            <ul>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/cwradar_arecibo.html">Arecibo Radar Doppler Spectra of Asteroids</a>            
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/radar.html">Asteroid Radar Detections </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/geograph.html">Goldstone Radar Observations of 1620 Geographos
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/rshape.html"> Radar Shape Models </a> (Hudson) - contains asteroid shape models
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/jplradarshape.html"> Radar Shape Models of 11 asteroids </a> (Lawrence) - contains asteroid shape models
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/shape8567.html"> Radar Shape Model of Asteroid 8567</a> (Nolan)
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/shape153591.html"> Radar Shape Model of Asteroid 153591</a> (Nolan)
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/bennushape.html"> Radar Shape Model of Asteroid (101955) Bennu</a> (Nolan et al.)
+
+            </a>
+
+            </ul>
+
+            <h2> Radio Science </h2>
+
+            <ul>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/dawn/dwncgravL0.html">Dawn Ceres Raw Gravity (Radio Science)</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/dawn/dwncgravL2.html">Dawn Ceres Gravity Models</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/dawn/dwnvgravL0.html">Dawn Vesta Raw Gravity (Radio Science)</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/dawn/dwnvgravL2.html">Dawn Vesta Gravity Models</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/near/rssinst.html">NEAR Radio Science Subsystem Data</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/orex/rs.html">OSIRIS-REx Raw Radio Science Data</a>
+            </a>
+            </ul>
+
+            <h2> Shape and Gravity Models </h2>
+
+<p>
+Thumbnail images and .obj versions of the archived shape models are available <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="shape-models/">here</a>.
+
+            <ul>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/bennushape.html">Asteroid (101955) Bennu Shape Model</a> - derived from radar observations and lightcurves
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/dawn/dwnvfcshape.html">Dawn Vesta Digital Terrain Model</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/dawn/dwncfcshape.html">Dawn Ceres SPC Shape Model</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/dawn/dwncfcshape.html">Dawn Ceres HAMO Digital Terrain Model</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/dawn/dwncfcshape.html">Dawn Ceres LAMO Regional Digital Terrain Model (Occator)</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/dawn/dwnvgravL2.html">Dawn Vesta Gravity Models</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/dawn/dwncgravL2.html">Dawn Ceres Gravity Models</a>
+            <li><a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/dioneshape.html">Gaskell Dione Shape Model </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/erosshape.html">Gaskell Eros Shape Model</a> - derived from NEAR data
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/itokawashape.html">Gaskell Itokawa Shape Model</a> - derived from Hayabusa data
+            <li><a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/mimasshape.html">Gaskell Mimas Shape Model </a>
+            <li><a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/phobosshape.html">Gaskell Phobos Shape Model </a>
+            <li><a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/phoebeshape.html">
+Gaskell Phoebe Shape Model </a>
+            <li><a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/tethysshape.html">
+Gaskell Tethys Shape Model </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/cereshst.html">  HST Images, Albedo Maps, and Shape of 1 Ceres </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/nearmod.html"> NEAR Collected Shape and Gravity Models </a> - contains shape and gravity models of NEAR targets Mathilde and Eros
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/near/nlrinst.html">
+NEAR Laser Rangefinder Shape and Gravity Models </a>
+<li><a href="https://pdssbn.astro.umd.edu/holdings/nh-a-lorri_mvic-5-geophys-v1.0/dataset.shtml">New Horizons Arrokoth Encounter Geology and Geophysical Maps and Shape Models</a></li><!-- NH-A-LORRI/MVIC-5-GEOPHYS-V1.0 -->
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/oshape.html"> Optical Shape Models </a> (Thomas) - contains shape models of asteroids and small planetary satellites
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/rshape.html"> Radar Shape Models </a> (Hudson) - contains asteroid shape models
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/jplradarshape.html"> Radar Shape Models of 11 asteroids </a> (Lawrence) - contains asteroid shape models
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/shape8567.html"> Radar Shape Model of Asteroid 8567</a> (Nolan)
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/shape153591.html"> Radar Shape Model of Asteroid 153591</a> (Nolan)
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/bennushape.html"> Radar Shape Model of Asteroid (101955) Bennu</a> (Nolan et al.)
+            <li> <a href="http://pdssbn.astro.umd.edu/holdings/ro-a-osinac_osiwac-5-lutetia-shape-v1.0/dataset.html">Rosetta Shape Model of Asteroid Lutetia</a>
+            <li> <a href="http://pdssbn.astro.umd.edu/holdings/ro-a-osinac_osiwac-5-steins-shape-v1.0/dataset.html">Rosetta Shape Model of Asteroid Steins</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/saturnsatshapes.html">
+Saturn Satellite Shape Models </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/stkshape.html"> Stooke Shape Models </a> - contains shape models of asteroids, planetary satellites, and comet Halley
+            </ul>
+
+            <h2> SPICE Kernels </h2>
+
+            <ul>
+            <li><a href="https://naif.jpl.nasa.gov/pub/naif/pds/data/dawn-m_a-spice-6-v1.0/dawnsp_1000">Dawn SPICE Archive</a>
+            <li><a href="https://naif.jpl.nasa.gov/pub/naif/pds/data/near-a-spice-6-v1.0/nearsp_1000/">Near-Earth Asteroid Rendezvous (NEAR) SPICE</a>
+            </ul>
+
+            <h2> Spectrophotometry </h2>
+
+            <ul>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/24color.html"> 24-Color Asteroid Spectrophotometry </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type"  href="resource/52color.html"> 52-Color Asteroid Spectrophotometry </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/ecas.html"> Eight-Color Asteroid Survey (ECAS) </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/3micron.html"> Lebofsky et al. 3-micron Asteroid Spectrophotometry </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/rivkin.html"> Rivkin 3-micron Asteroid Spectrophotometry </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/scas.html"> Seven-Color Asteroid Spectrophotometry (SCAS) </a>
+            </ul>
+
+            <h2> Spectra </h2>
+
+            <ul>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/dawn/dwnvvirL1.html">Dawn VIR Vesta raw and calibrated spectral data</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/dawn/dwncvirL1.html">Dawn VIR Ceres raw and calibrated spectral data</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/dawn/dwnxvir.html">Dawn VIR Cruise raw and calibrated spectral data</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/fbirtfspec.html">Fieber-Beyer IRTF Asteroid Spectra</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/finkss.html">Fink Images and Spectra of Solar System Objects</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/mspectra.html">Fornasier Spectra of M Asteroids</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/gaspracube.html">Galileo NIMS Gaspra Spectral Image Cube</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/idacube.html">Galileo NIMS Ida Spectral Image Cube</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/gaspraspec.html">Galileo NIMS Radiance Point Spectra of Gaspra</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/pointspec.html">Galileo NIMS Radiance Point Spectra of Ida and Dactyl</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/girtfspec.html">Gartrelle et al. IRTF Asteroid Spectra</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/hardersenspec.html">Hardersen IRTF NIR Asteroid Spectra</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/nirsraw.html">Hayabusa NIRS Raw Spectra of Itokawa </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/nirscal.html">Hayabusa NIRS Calibrated Spectra of Itokawa </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/hayabusa2/nirs3.html">Hayabusa2 NIRS3 Spectra of Ryugu </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/iuespec.html">Hendrix IUE asteroid reflectance spectra </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/hstuvspec.html">HST UV Slitless Reflectance Spectra of (1) Ceres </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/ianninispec.html">Iannini Asteroid Family Spectra</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/irtfspec.html">IRTF Near-IR Spectroscopy of Asteroids</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/larsonfts.html"> Larson FTS Spectra </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/mithneos.html"> MITHNEOS IRTF Spectra of Asteroids from 2000 to 2021</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/near/nisinst.html">NEAR Eros Near-Infrared Spectrometer (NIS)</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type"             
+href="resource/sanchez-reddy_neospec.html">Near-Infrared Spectra of Small NEOs by Sanchez and Reddy</a> 
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/orex/ovirs.html">OSIRIS-REx OVIRS</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/orex/otes.html">OSIRIS-REx OTES</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/primassl.html">PRIMASS-L Spectra</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/reddyspec.html">Reddy IRTF Near Earth Asteroid Spectra</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/reddymarscross.html">Reddy IRTF Near Earth and Mars-Crossing Asteroid Spectra</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/reddymbspec.html">Reddy IRTF Main Belt Asteroid Spectra</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/reddyvesta.html">Reddy Vesta Rotationally-Resolved Near-IR Spectra</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/sawyer.html"> Sawyer Asteroid Spectra </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/s3os2.html"> Small Solar System Objects Spectroscopic Survey </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/smass1.html"> Small Mainbelt Asteroid Spectroscopic Survey (SMASS) </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/smass2.html"> Small Mainbelt Asteroid Spectroscopic Survey II (SMASSII) </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/sdssmocvspec.html">Spectra of V-Type Candidates from the SDSS MOC</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/fornasier.html">Spectroscopy and Photometry of Jupiter Trojans</a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/vilas.html"> Vilas Asteroid Spectra </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/uvspec.html">The Repository for UV Spectral Data of Small Bodies</a>
+            </ul>
+
+            <h2> Other </h2>
+
+            <ul>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/discover.html"> Asteroid Names and Discovery Circumstances </a>
+            <li> <a class="referral-link" data-page="Asteroid" data-type="Target Type" href="resource/mpisp.html"> Minor Planet Index to Scientific Papers </a>
+
+            </ul>
+
+
+    <!-- END main content -->
+    </div></main>
+
+    <!-- BEGIN sbn-footer -->
+
+<footer class="sbn-footer">
+    <p class="sbn-footer-text">
+        For questions about the data sets or this web site, contact Carol Neese (<a href="mailto:neese@psi.edu" class="link">neese@psi.edu</a>).
+    </p>
+</footer>
+
+<div class="sbn-footer-extended">
+    <aside class="sbn-footer-psi-container">
+        <img src="images/PSI_Logo.png" alt="PSI Logo" title="PSI Logo" class="psi-logo">
+        <span>Hosted by the Planetary Science Institute</span>
+    </aside>
+</div>
+
+<!-- END sbn-footer -->
+
+
+    
+
+
+    <script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/scripts20210813.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>

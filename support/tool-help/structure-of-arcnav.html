@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     
+    <base href="/pds/" />
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>How Archive Navigator is Structured | PDS SBN Asteroid/Dust Subnode</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/main20210813.css">
+    <link rel="stylesheet" href="css/header20210331.css">
+    <link rel="stylesheet" href="css/footer20210331.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <!-- PDS Feedback Widget -->
+    <!-- Only add JQuery if you do not already include a library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
+    <link rel="stylesheet" href="feedback/css/feedback.css"  type="text/css" media="screen" />
+    <script src="feedback/js/modernizr-custom.js"></script>
+    <script src="feedback/js/config.js"></script>
+    <script src="feedback/js/feedback.js"></script>
+    <!-- -->
+
+
+    </head>
+<body>
+
+    <!-- BEGIN sbn-header -->
+
+<header>
+    <div id="sbn-notices">
+        <!--
+        <div class="notice">
+            PUT ANY DOWNTIME NOTICES HERE
+        </div>
+        -->
+    </div>
+    <div id="sbn-header">
+
+        <div class="sbn-title-container">
+            <div class="sbn-title"><a class="ignore-a-styling" href="http://pdssbn.astro.umd.edu/">PDS Small Bodies Node</a></div>
+            <a class="sbn-subtitle ignore-a-styling" href="">Asteroid/Dust Subnode</a>
+        </div>
+        <div class="gradient-bar"></div>
+    </div>
+</header>
+<nav>
+    
+    <div id="menu-backdrop"></div>
+    <div id="menu-drawer">
+        <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+        </svg>
+    </div>
+
+    <div id="theme-switch">
+        <label for="theme-switch-checkbox">
+            <input type="checkbox" id="theme-switch-checkbox" />
+            <svg xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 0 24 24" width="30" title="Change light/dark theme">
+                <title>Change light/dark theme</title>
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                    d="M20 15.31L23.31 12 20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69zM12 18V6c3.31 0 6 2.69 6 6s-2.69 6-6 6z" />
+            </svg>
+      </label>
+    </div>
+    <div id="menu">
+        <div class="menu-handle">
+            <div>Find Data</div>
+            <ul class="menu-list">
+                <li><a href="">Archive Home</a></li>
+                <li class="divider"></li>
+                <li><a href="archive/data-types.html"> Browse by Data Type</a></li>
+                <li><a href="archive/target-types.html"> Browse by Target Type</a></li>
+                <li><a href="archive/missions.html"> Browse by Mission</a></li>
+                <li class="divider"></li>
+                <li><a href="ferret/">Ferret - Target Search</a></li>
+                <li><a href="sbib/">SBIB - Image Search</a></li>
+                <li><a href="https://catch.astro.umd.edu/">CATCH - Survey Search</a></li>
+            </ul>
+        </div>
+        <div class="menu-handle">
+            <div>Archive Data</div>
+            <ul class="menu-list">
+                <li><a href="olafs">OLAF - Archive your data</a></li>
+                <li><a href="sbnarchivinghowto.html">How to Archive</a></li>
+                <li><a href="other_tools/pdf1a.html">PDF/A Tools</a></li>
+                <li><a href="https://pds.nasa.gov/datastandards/documents/current-version.shtml">PDS4 Standards</a></li>
+            </ul>
+        </div>
+        <div class="menu-handle">
+            <div>Support</div>
+            <ul class="menu-list">
+                <li><a href="support/">Support Home</a></li>
+                <li class="divider"></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="support/Tips.html">Tips & Tricks Articles <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="24px" class="callout-svg-icon"><title>New!</title><path d="M0 0h24v24H0z" fill="none"/><path d="M23 12l-2.44-2.78.34-3.68-3.61-.82-1.89-3.18L12 3 8.6 1.54 6.71 4.72l-3.61.81.34 3.68L1 12l2.44 2.78-.34 3.69 3.61.82 1.89 3.18L12 21l3.4 1.46 1.89-3.18 3.61-.82-.34-3.68L23 12zm-10 5h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg></a></li>
+                <li><a href="support/FAQ.html">Frequently Asked Questions</a></li>
+                <li><a href="support/Keyterms.html">Key Terms</a></li>
+                <li><a href="support/Glossary.html">Full Glossary</a></li>
+                <li class="divider"></li>
+                <li><a href="https://pds.nasa.gov/home/proposers/">Information for Data Proposers</a></li>
+                <li><a href="https://sbnwiki.astro.umd.edu/wiki/SBN_PDS4_Wiki">PDS4 Tutorials and Quick Ref</a></li>
+                <li><a href="http://pdssbn.astro.umd.edu/howto/understand.shtml">Using PDS Data</a></li>
+            </ul>
+        </div>
+        <div class="menu-handle">
+            <div>PDS Info</div>
+            <ul class="menu-list">
+                <li><a href="aboutastsubnode.html">About SBN Asteroid Subnode</a></li>
+                <li><a href="http://pdssbn.astro.umd.edu/">SBN Comet Subnode</a></li>
+                <li><a href="http://pds.nasa.gov/">PDS Home</a></li>
+            </ul>
+        </div>
+    </div>
+    
+<div id="search-bar" class="search-container">
+    <div class="search-box" v-bind:class="{focused: focused}">
+        <svg class="search-icon" viewBox="0 0 100 125">
+            <path d="M35.285,8L85,28.228L52.303,70.575l-4.715-17.337C33,59.622,16.45,72.294,43.672,92c0,0-37.15-4.02-26.875-39.512    c0,0,4.692-16.873,23.799-24.958L35.285,8z" />
+        </svg>
+        <div class="input-field">
+            <input tabindex="0" placeholder="Shortcut to data by keyword..." type="text" aria-label="Shortcut to data by keyword"
+                v-model="query"
+                v-on:focus="onFocus"
+                v-on:keyup="keypress">
+        </div>
+    </div>
+    <div class="search-filter" v-if="focused">
+        <label class="toggle-option" v-bind:class="{focused: mode === 'asteroid'}">Asteroid/Dust <input type="radio" v-model="mode" value="asteroid"></label>
+        <label class="toggle-option" v-bind:class="{focused: mode === 'pds'}">PDS <input type="radio" v-model="mode" value="pds"></label>
+    </div>
+    <ul class="search-results" v-if="query.length > 0 && focused">
+        <template v-for="result in searchResults">
+            <li class="search-result" >
+                <a v-bind:href="result.url" v-bind:title="title(result)" tabindex="0">{{result.name}}</a>
+            </li>
+        </template>
+        <p class="no-results" v-if="searchResults.length === 0">No results found</p>
+        <p class="no-results" v-if="searchResults.length === 0">Need help finding something? <a href="contact.html">Contact Us</a></p>
+    </ul>
+</div>
+
+</nav>
+
+
+<!-- END sbn-header -->
+
+
+    <main><div class="sbn-main " >
+    <!-- BEGIN main content -->
+
+    <ol class="breadcrumbs">
+    <li><a href="">Home</a></li>
+    <li class="breadcrumbs-separator">/</li>
+    <li><a href="support/">Support</a></li>
+    <li class="breadcrumbs-separator">/</li>
+    <li><a href="support/Tips.html">Tips & Tricks</a></li>
+    <li class="breadcrumbs-separator">/</li>
+    <li><a href="support/tool-help/">Tool Help</a></li>
+    <li class="breadcrumbs-separator">/</li>
+    <li>How Archive Navigator is Structured</li>
+</ol> 
+<br/>
+
+<h1 class="post-title">How Archive Navigator is Structured</h1>
+<p class="post-subtitle secondary">Feb 08, 2022 
+    
+    (by Mike Drum)
+    
+</p>
+
+<p class="secondary"><em> Part of a series on <a href="support/tool-help/">Tool Help</a> </em></p>
+
+
+<div class="social-post">
+    <p>Earlier in this series I introduced our new dynamic data browser Archive Navigator. If you haven’t read up on that yet, <a href="/pds/support/tool-help/arcnav-intro.html">check that out first</a>. In it I described the motivation behind creating the service and an intro to the main types of pages on the site. This post will be a deeper dive into the structure of the site, and what goes into building each page. You’ll learn more about all the features available to discover on the datasets.</p>
+
+<h2 id="cool-lets-get-to-it">Cool let’s get to it</h2>
+
+<p>There are two main “contexts” you can exist in on the site: <strong>Mission</strong> and <strong>Target</strong>.</p>
+
+<figure><img src="https://pdsregistryimages.psi.edu/tips/Structure-of-Arcnav/MissionHeader.png.png" /><figcaption>The mission context header</figcaption></figure>
+
+<p>If you’re in a Mission-related area, you will see a blue banner with the name of the related mission, as well as individual tabs describing the different features and datasets of that mission. The first section has background information on the mission and links out to related targets and tools. The second section is where you’ll find any observational data that is directly sourced from mission teams, and other supporting datasets and documentation. As mentioned in the last post, you can view information on the overall mission, spacecraft, individual instruments, or other related datasets like SPICE kernels, or any ground-based support datasets.</p>
+
+<p>This first section is there to help you get oriented with the mission, and help you navigate to other areas of interest. The tools tab will take you to a curated list of software that directly searches or interacts with with mission data. This was one of the primary reasons we created Archive Navigator: to direct scientists to tools they might not be aware of, by building a connecting web between those services and a browsable archive. In many cases, the links in here will take you to a specific area of a tool dedicated to that mission.</p>
+
+<p>The Targets tab will direct you to an information page dedicated to the celestial body you’ve selected.</p>
+
+<figure><img src="https://pdsregistryimages.psi.edu/tips/Structure-of-Arcnav/TargetHeader.png" /><figcaption>The target context header</figcaption></figure>
+
+<p>Like Missions, this is divided into support/navigational information and data. However, in the case of targets, we link out to other related targets in their gravitational family (if any). In the case of complex systems like Saturn or Jupiter, this can be especially helpful to see which bodies we have data for, and also just get any extra classification information about those objects. The data side is divided into “Mission Data” and “Derived data”; the former just takes you back to the related missions that have observed that target, but the latter is where things get interesting. Many datasets, while possibly derivative of data from a spacecraft, have been further processed or combined with other data to form what we call “Derived” data. Think of things like mosaic images, digital terrain models, tables of multiple asteroids that compare physical properties, etc. These datasets are better thought of as being “about a target” than “from a mission”, and so that data goes here! We hand-tag each bundle that we think deserves to go here, and you’ll find a wide variety of high quality data archived in PDS by R&amp;A or other independent programs.</p>
+
+<h2 id="take-me-down-to-data-town">Take me down to data town</h2>
+
+<p>The thing to remember about Archive Navigator is that we’re all about landing pages here. So what gets a little confusing is that there’s a landing page for each instrument, but then there’s usually an entirely separate page for each bundle of data. Even in the case like you see with OSIRIS-REx, where there’s just one archived bundle for each instrument, we put those on separate pages because they are registered with different identifiers in PDS4<sup id="fnref:pds4"><a href="#fn:pds4" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>. More importantly, many instruments have more than one bundle, so we want a consistent website that people can learn to understand works in the same way across missions.</p>
+
+<p>For mission instrument data that we have in PDS4, the path to finding that data will generally look like this:</p>
+<figure><img src="https://pdsregistryimages.psi.edu/tips/Structure-of-Arcnav/Hierarchy.png" /><figcaption>How to find mission instrument data</figcaption></figure>
+
+<p>We also have separate pages for each PDS4 Bundle and Collection. If you need a refresher on what those are, check out <a href="/pds/support/pds4/bundles-vs-collections.html">Bundles vs Collections</a>. The Bundle page is primarily there to categorize and direct you to the Collections, but we also directly link to browse the bundle files if you just want to view that highest level first. Bundle pages have an icon next to their name indicating that it’s somewhat of a “box”, and collections get a “folder”. Once you’ve found your way all the way to a collection page, we offer links to browse the collection files, and in many cases also offer a link to smaller download packages (divided by mission phase, for example). And with that, you’ll have finally made it all the way to the data!</p>
+
+<h2 id="wait-whats-all-this-other-stuff">Wait what’s all this other stuff</h2>
+
+<p>Now, as much as we’d like it to, not all data or metadata is inside of PDS4<sup id="fnref:pds4:1"><a href="#fn:pds4" class="footnote" rel="footnote" role="doc-noteref">1</a></sup> just yet. So, Archive Navigator was designed to allows us to display supplemental information about missions, targets, and really just anything else we think you should see on those pages. This includes PDS3 data that has not yet migrated over to the new standard. We built a custom content management system that allows us to include arbitrary HTML content inside the pages, and what this results in is the flexibility to include other links to data that you’ll surely see a lot of.</p>
+
+<figure><img src="https://pdsregistryimages.psi.edu/tips/Structure-of-Arcnav/DawnFC.png" /><figcaption>Dawn's Framing camera still exists in PDS3 format</figcaption></figure>
+
+<p>As you can see, it fits <em>somewhat</em> naturally into the rest of the website. We’ve added these big tables of links to PDS3 datasets for most of the missions hosted at SBN Asteroid/Dust subnode, and will likely add more over time until it gets migrated. This flexibility was added because we know imposing the strict structure of PDS4 onto all of the data would only really make things more confusing to most people.</p>
+
+<p>So, you could say that the structure of Archive Navigator is PDS4… but the <em>real</em> structure is you 🤗</p>
+
+<hr />
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:pds4">
+      <p>PDS4 is the latest standard for archiving in PDS. It’s the super complicated one with all the XML. You can read more by checking out <a href="https://sbn.psi.edu/pds/support/pds4/">our articles on the subject</a>. <a href="#fnref:pds4" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:pds4:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+    </li>
+  </ol>
+</div>
+
+</div>
+
+
+    <!-- END main content -->
+    </div></main>
+
+    <!-- BEGIN sbn-footer -->
+
+<footer class="sbn-footer">
+    <p class="sbn-footer-text">
+        For questions about the data sets or this web site, contact Carol Neese (<a href="mailto:neese@psi.edu" class="link">neese@psi.edu</a>).
+    </p>
+</footer>
+
+<div class="sbn-footer-extended">
+    <aside class="sbn-footer-psi-container">
+        <img src="images/PSI_Logo.png" alt="PSI Logo" title="PSI Logo" class="psi-logo">
+        <span>Hosted by the Planetary Science Institute</span>
+    </aside>
+</div>
+
+<!-- END sbn-footer -->
+
+
+    
+
+
+    <script src="js/vue/vue.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search-data.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/scripts20210813.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>

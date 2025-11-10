@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+a:not(.ignore-a-styling) {
+    text-decoration: none;
+    letter-spacing: 0.1em;
+}
+#pds-superseded {
+    display: none;
+}
+#pds-superseded-toggle {
+    color: blue;
+    text-decoration: underline;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    margin-left: 1em;
+}
+.resource-title {
+    text-align: center;
+}
+.pds-button {
+    padding: 0.3em 0.5em;
+    border-radius: 0.3em;
+    background: #ededed;
+    border: 1px solid #d5d5d5;
+    position: relative;
+    display: inline-block;
+    margin: 1em 0;
+}
+
+/* main */
+.sbn-main {
+    padding-left: 0.7em;
+    min-height: calc(100vh - 8em);
+    margin-top: 50px;
+}
+
+/* iPhone 6 & wider */
+@media (min-width: 375px) {
+    .sbn-footer-text {
+        font-size: 1em;
+    }
+    .sbn-subtitle {
+        font-size: 1.2em;
+    }
+}
+/* iPhone 6 Plus & wider */
+@media (min-width: 414px) {
+
+}
+/* iPad (portrait mode) & wider */
+@media (min-width: 768px) {
+    .menu-clickable {
+        display: none;
+    }
+    .sbn-menu-handle {
+        display: none;
+    }
+    .sbn-sidebar {
+        width: 250px;
+        position: absolute;
+        left: 0;
+        top: 5em;
+    }
+    .header-banner {
+        left: 250px;
+    }
+    .sbn-title {
+        font-size: 1em;
+    }
+    .sbn-subtitle {
+        font-size: 1.7em;
+    }
+    .pds-logo img{
+        height: 4.5em;
+    }
+    .sbn-main {
+        margin-left: 250px;
+        min-height: 550px;
+    }
+}
+/* iPad (landscape mode) & wider */
+@media (min-width: 1024px) {
+    #sbn-header {
+        background-position-x: right;
+    }
+}
