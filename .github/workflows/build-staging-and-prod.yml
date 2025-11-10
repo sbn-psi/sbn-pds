@@ -125,26 +125,33 @@ jobs:
 
       - name: Publish prod build
         run: |
+          set -euo pipefail
           TARGET="${{ env.PROD_PUBLISH_BRANCH }}"
 
           # Use a clean worktree for the target branch
           rm -rf publish
-          git fetch origin "$TARGET"
-          git worktree add --force -B "$TARGET" publish "origin/$TARGET"
+          git fetch origin "$TARGET" || true
+          START_REF="origin/$TARGET"
+          if ! git rev-parse --verify -q "$START_REF"; then
+            START_REF="$TARGET"
+          fi
+          git worktree add --force -B "$TARGET" publish "$START_REF"
 
           # Replace contents with the new build
-          rm -rf publish/* publish/.[!.]* publish/..?* || true
-          cp -R prod/. publish/
-          touch publish/.nojekyll
-          echo "Built from ${GITHUB_REPOSITORY}@${GITHUB_SHA} on $(date -u +'%Y-%m-%dT%H:%M:%SZ')" > publish/BUILD_INFO
+          pushd publish > /dev/null
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          find . -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
+          cp -R ../prod/. .
+          touch .nojekyll
+          echo "Built from ${GITHUB_REPOSITORY}@${GITHUB_SHA} on $(date -u +'%Y-%m-%dT%H:%M:%SZ')" > BUILD_INFO
 
-          pushd publish
           git add -A
 
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
             git commit -m "Deploy prod site for ${GITHUB_SHA::7}"
-            git push origin HEAD:"$TARGET"
+            git push --force-with-lease origin "$TARGET"
           fi
-          popd
+          popd > /dev/null
