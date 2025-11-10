@@ -126,7 +126,8 @@ jobs:
 
           # Use a clean worktree for the target branch
           rm -rf publish
-          git worktree add --force publish "$TARGET"
+          git fetch origin "$TARGET"
+          git worktree add --force -B "$TARGET" publish "origin/$TARGET"
 
           # Replace contents with the new build
           rm -rf publish/* publish/.[!.]* publish/..?* || true
