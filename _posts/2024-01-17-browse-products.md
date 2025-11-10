@@ -9,7 +9,7 @@ I know, I know, you want your jpeg!
 
 Here at the PDS, we care a lot about file formats. [JPEGs are fickle]({% post_url 2022-05-16-why-cant-i-archive-jpg %}). [TIFFs can get messy]({% post_url 2022-09-20-archiving-tiff %}). Now, you wanna bring me some 2D Fixed Width Tables or FITS Binary Tables with Backplanes? _Yeah_, that's the stuff.
 
-Fine. fine. I know what you really want... 
+Fine, fine. I know what you really want... 
 
 ## Browse Products: for humans by humans
 
