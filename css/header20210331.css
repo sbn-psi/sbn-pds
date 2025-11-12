@@ -38,6 +38,8 @@
 .sbn-title a:hover::after {
     {% if jekyll.environment == "production" %} 
     background-image: url('/pds/images/external.svg');
+    {% elsif jekyll.environment == "staging" %}
+    background-image: url('/sbn-pds/images/external.svg');
     {% else %}
     background-image: url('/images/external.svg');
     {% endif %}
