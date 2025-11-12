@@ -1,2 +1,5 @@
 baseurl: /pds
 future: false
+include:
+  - .htaccess
+  - shape-models/.htaccess
