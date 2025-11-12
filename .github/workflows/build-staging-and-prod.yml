@@ -63,6 +63,7 @@ jobs:
         with:
           name: prod-site
           path: _site_prod
+          include-hidden-files: true
 
   deploy_staging:
     name: Deploy staging to GitHub Pages
