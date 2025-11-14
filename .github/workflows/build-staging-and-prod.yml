@@ -184,7 +184,7 @@ jobs:
         if: steps.status.outputs.is_success == 'true'
         uses: slackapi/slack-github-action@v1
         with:
-          webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
+          webhookUrl: ${{ secrets.SLACK_WEBHOOK_URL }}
           payload: |
             {
               "text": "✅ Archive Site updated successfully",
@@ -203,7 +203,7 @@ jobs:
         if: steps.status.outputs.is_success == 'false'
         uses: slackapi/slack-github-action@v1
         with:
-          webhook-url: ${{ secrets.SLACK_WEBHOOK_URL }}
+          webhookUrl: ${{ secrets.SLACK_WEBHOOK_URL }}
           payload: |
             {
               "text": "❌ Build & Deploy Failed",
