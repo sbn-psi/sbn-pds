@@ -182,64 +182,40 @@ jobs:
       
       - name: Send Slack notification (success)
         if: steps.status.outputs.is_success == 'true'
-        uses: slackapi/slack-github-action@v1
+        uses: slackapi/slack-github-action@v2.1.1
         with:
-          webhookUrl: ${{ secrets.SLACK_WEBHOOK_URL }}
+          webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+          webhook-type: incoming-webhook
           payload: |
-            {
-              "text": "✅ Archive Site updated successfully",
-              "blocks": [
-                {
-                  "type": "section",
-                  "text": {
-                    "type": "mrkdwn",
-                    "text": "✅ *Archive Site updated successfully*\n\nYour changes have been deployed to the staging site:\n<${{ steps.pages_url.outputs.url }}|View staging site>"
-                  }
-                }
-              ]
-            }
+            text: "✅ Site updated successfully"
+            blocks:
+              - type: section
+                text:
+                  type: mrkdwn
+                  text: "✅ *Site updated successfully*\n\nYour changes have been deployed to the staging site:\n<${{ steps.pages_url.outputs.url }}|View staging site>"
       
       - name: Send Slack notification (failure)
         if: steps.status.outputs.is_success == 'false'
-        uses: slackapi/slack-github-action@v1
+        uses: slackapi/slack-github-action@v2.1.1
         with:
-          webhookUrl: ${{ secrets.SLACK_WEBHOOK_URL }}
+          webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+          webhook-type: incoming-webhook
           payload: |
-            {
-              "text": "❌ Build & Deploy Failed",
-              "blocks": [
-                {
-                  "type": "header",
-                  "text": {
-                    "type": "plain_text",
-                    "text": "❌ Build & Deploy Failed"
-                  }
-                },
-                {
-                  "type": "section",
-                  "fields": [
-                    {
-                      "type": "mrkdwn",
-                      "text": "*Repository:*\n${{ github.repository }}"
-                    },
-                    {
-                      "type": "mrkdwn",
-                      "text": "*Branch:*\n${{ github.ref_name }}"
-                    },
-                    {
-                      "type": "mrkdwn",
-                      "text": "*Commit:*\n<${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}|${{ github.sha }}>"
-                    }
-                  ]
-                },
-                {
-                  "type": "context",
-                  "elements": [
-                    {
-                      "type": "mrkdwn",
-                      "text": "<${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View workflow run for details>"
-                    }
-                  ]
-                }
-              ]
-            }
+            text: "❌ Build & Deploy Failed"
+            blocks:
+              - type: header
+                text:
+                  type: plain_text
+                  text: "❌ Build & Deploy Failed"
+              - type: section
+                fields:
+                  - type: mrkdwn
+                    text: "*Repository:*\n${{ github.repository }}"
+                  - type: mrkdwn
+                    text: "*Branch:*\n${{ github.ref_name }}"
+                  - type: mrkdwn
+                    text: "*Commit:*\n<${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}|${{ github.sha }}>"
+              - type: context
+                elements:
+                  - type: mrkdwn
+                    text: "<${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|View workflow run for details>"
