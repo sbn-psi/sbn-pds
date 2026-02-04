@@ -191,6 +191,12 @@ var searchData = [{
         url: 'https://pds-smallbodies.astro.umd.edu/data_sb/missions/dart/index.shtml',
         category: 'Mission'
     },{
+        name: 'Europa Clipper',
+        subtitle: 'Europa',
+        instruments: ['SUDA'],
+        url: basepath + 'resource/clipper',
+        category: 'Mission'
+    },{
         name: 'Galileo',
         subtitle: '243 Ida, 951 Gaspra, Small planetary satellites, Interplanetary dust',
         instruments: ['Galileo dust detector system (GDDS)',],
