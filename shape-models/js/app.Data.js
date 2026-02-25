@@ -178,6 +178,27 @@ app.factory('Comets', function () {
                     }
                 }]
             }, {
+                name: '99942 Apophis',
+                type: 'asteroid',
+                datasets: [{
+                    name: 'Radar shape model of asteroid (99942) Apophis',
+                    link: 'https://sbn.psi.edu/pds/resource/apophis_shape.html',
+                    files: {
+                        data: {
+                            primary: {
+                                downloadLink: 'https://sbnarchive.psi.edu/pds4/non_mission/gbo.ast-apophis.jpl.radar.shape_model_v1.0/data/apophis_v233s7.obj',
+                                fileFormat: 'OBJ'
+                            }
+                        },
+                        previews: {
+                            default: {
+                                path: 'shape-models/previews/99942apophis.png',
+                                fileFormat: 'PNG'
+                            }
+                        }
+                    }
+                }]
+            }, {
                 name: '486958 Arrokoth',
                 type: 'asteroid',
                 datasets: [{
